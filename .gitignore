@@ -1,0 +1,12 @@
+# Conserva i PDF compilati; escludi gli altri prodotti della compilazione.
+**/build/*
+!**/build/*.pdf
+
+*.synctex.gz
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+.DS_Store

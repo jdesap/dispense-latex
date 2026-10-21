@@ -1,0 +1,267 @@
+% !TeX root = ../main.tex
+% Lezione 4.pdf, pp. 6--14. Le prove dei criteri operativi e della
+% proprietà duale dell'infimo rendono espliciti i passaggi della fonte.
+\section{Intervalli e retta reale estesa}
+% Fonte: Lezione 4, pp.~6--8
+
+\begin{definizione}[Intervallo]
+Un sottoinsieme non vuoto $I\subseteq\R$ è un \emph{intervallo} se,
+ogni volta che $x,y\in I$ e $x<z<y$, anche $z$ appartiene a $I$.
+\end{definizione}
+
+In un intervallo si trovano quindi tutti i punti compresi fra due
+suoi elementi. Per estremi finiti $a<b$ le principali possibilità sono
+\begin{align*}
+  [a,b]&=\{x\in\R:a\le x\le b\},&
+  (a,b)&=\{x\in\R:a<x<b\},\\
+  [a,b)&=\{x\in\R:a\le x<b\},&
+  (a,b]&=\{x\in\R:a<x\le b\}.
+\end{align*}
+I primi due sono detti rispettivamente intervallo \emph{chiuso} e
+\emph{aperto}; negli altri due è incluso un solo estremo. Anche
+$[a,a]=\{a\}$ è un intervallo.\footnote{La definizione richiede
+che un intervallo sia non vuoto. Altre convenzioni ammettono anche
+l'insieme vuoto come intervallo.}
+
+Per $I=[a,b]$, i numeri $a,b$ sono gli \emph{estremi}, $b-a$ è
+l'\emph{ampiezza}, $(b-a)/2$ il \emph{raggio} e $(a+b)/2$ il
+\emph{centro}. Le stesse espressioni individuano ampiezza e centro
+anche se uno o entrambi gli estremi non sono inclusi.
+
+Per descrivere intervalli illimitati introduciamo i simboli
+$-\infty$ e $+\infty$, ordinati in modo che
+\[
+  -\infty<x<+\infty\qquad\forall x\in\R.
+\]
+La \emph{retta reale estesa} è
+$\overline\R=\R\cup\{-\infty,+\infty\}$. Le semirette della retta
+reale si scrivono, per esempio,
+\begin{align*}
+  (-\infty,c]&=\{x\in\R:x\le c\},&
+  (-\infty,c)&=\{x\in\R:x<c\},\\
+  [a,+\infty)&=\{x\in\R:x\ge a\},&
+  (a,+\infty)&=\{x\in\R:x>a\}.
+\end{align*}
+In queste scritture $\pm\infty$ non appartengono agli intervalli,
+che sono sottoinsiemi di $\R$; anche tutta $\R=(-\infty,+\infty)$
+è un intervallo.
+
+\section{Limitatezza, maggioranti e minoranti}
+% Fonte: Lezione 4, pp.~8--10
+
+\begin{definizione}
+Un insieme non vuoto $A\subseteq\R$ è \emph{superiormente limitato}
+se esiste $M\in\R$ tale che $a\le M$ per ogni $a\in A$.
+Un tale numero è un \emph{maggiorante} di $A$.
+È \emph{inferiormente limitato} se esiste $m\in\R$ tale che
+$m\le a$ per ogni $a\in A$; un tale numero è un \emph{minorante}.
+\end{definizione}
+
+L'insieme è \emph{limitato} se lo è sia superiormente sia inferiormente:
+\[
+  \exists m,M\in\R:\quad m\le a\le M\quad\forall a\in A.
+\]
+Equivalentemente, esiste $N\ge0$ per cui $|a|\le N$ per ogni
+$a\in A$. Infatti, da due estremi $m,M$ basta scegliere
+$N=\max\{|m|,|M|\}$; viceversa, $|a|\le N$ equivale a
+$-N\le a\le N$. Un insieme che non è limitato si dice
+\emph{illimitato}; si può anche specificare la direzione in cui
+manca un limite, parlando di insieme superiormente o inferiormente
+illimitato.
+
+Maggioranti e minoranti non devono appartenere all'insieme e non
+sono determinati in modo univoco. Per esempio, sono possibili scelte
+anche molto lontane dagli estremi:
+\begin{itemize}
+  \item per $A=[0,1)$ si possono prendere $m=-38$ e $M=251$;
+  \item per $B=\{1/n:n\in\N^*\}$ si possono prendere
+    $m=-1719{,}3$ e $M=16$, perché $0<1/n\le1$;
+  \item per $C=\N$, $0$ è un minorante ma non esistono maggioranti,
+    come seguirà dal principio di Archimede
+    (teorema~\ref{teo:archimede-reali}).
+\end{itemize}
+
+Per $A=[0,3)$, in particolare, sono maggioranti $3$, $5$, $11$,
+$197$ e, più in generale, tutti e soli i reali $M\ge3$.
+Sono minoranti $0$, $-13$, $-\pi$, $-171$ e, in generale, tutti e soli
+i reali $m\le0$. La condizione vale per ogni elemento di $A$,
+anche se $3\notin A$.
+
+\section{Massimo e minimo}
+% Fonte: Lezione 4, p.~11
+
+\begin{definizione}
+Un \emph{massimo} di un insieme non vuoto $A\subseteq\R$ è un
+maggiorante che appartiene ad $A$; un \emph{minimo} è un minorante
+che appartiene ad $A$. Si scrive
+\begin{align*}
+  M=\max A&\quad\Longleftrightarrow\quad
+    M\in A\text{ e }a\le M\ \forall a\in A,\\
+  m=\min A&\quad\Longleftrightarrow\quad
+    m\in A\text{ e }m\le a\ \forall a\in A.
+\end{align*}
+\end{definizione}
+
+Se esistono, massimo e minimo sono unici. Per esempio, se $M_1$ e
+$M_2$ fossero entrambi massimi, l'appartenenza di ciascuno ad $A$
+imporrebbe $M_1\le M_2$ e $M_2\le M_1$, quindi $M_1=M_2$.
+Per il minimo si ragiona allo stesso modo.
+
+L'intervallo $[0,3)$ ha minimo $0$ e non ha massimo: per ogni
+$a\in[0,3)$ il punto $(a+3)/2$ è ancora nell'intervallo ed è
+strettamente maggiore di $a$. Quindi l'essere limitato non assicura
+che un insieme possieda un massimo o un minimo.
+
+\section{Estremo superiore ed estremo inferiore}
+% Fonte: Lezione 4, p.~12
+
+\begin{definizione}[Supremo e infimo]
+Il numero $S\in\R$ è l'\emph{estremo superiore}, o \emph{supremo},
+di $A$ se è il più piccolo dei suoi maggioranti. Il numero $s\in\R$
+è l'\emph{estremo inferiore}, o \emph{infimo}, se è il più grande
+dei suoi minoranti. In formule,
+\begin{align*}
+  S=\sup A&=\min\{M\in\R:a\le M\ \forall a\in A\},\\
+  s=\inf A&=\max\{m\in\R:m\le a\ \forall a\in A\},
+\end{align*}
+quando tali estremi esistono.
+\end{definizione}
+
+Anche questi valori, quando esistono, sono unici. A differenza del
+massimo e del minimo, possono non appartenere ad $A$. Se un massimo
+esiste, è anche il più piccolo maggiorante: essendo un elemento di
+$A$, è minore o uguale a qualunque altro maggiorante. Pertanto
+\[
+  \max A=\sup A\quad\text{se il massimo esiste},\qquad
+  \min A=\inf A\quad\text{se il minimo esiste}.
+\]
+Viceversa, se $\sup A\in A$ esso è il massimo, e se $\inf A\in A$
+esso è il minimo.
+
+\subsection{Il teorema di esistenza degli estremi}
+% Fonte: Lezione 4, pp.~13--14
+
+\begin{teorema}[Esistenza del supremo e dell'infimo]
+\label{teo:esistenza-estremi}
+Ogni sottoinsieme non vuoto di $\R$ superiormente limitato ha
+un estremo superiore reale. Ogni sottoinsieme non vuoto di $\R$
+inferiormente limitato ha un estremo inferiore reale.
+\end{teorema}
+\begin{proof}
+Sia $A\subseteq\R$ non vuoto e superiormente limitato. L'insieme
+dei suoi maggioranti
+\[
+  \mathcal M_A=\{M\in\R:a\le M\ \forall a\in A\}
+\]
+è non vuoto. Per definizione, ogni elemento di $A$ è minore o
+uguale a ogni elemento di $\mathcal M_A$. Applichiamo l'assioma
+di Dedekind ai due insiemi $A$ e $\mathcal M_A$: esiste $S\in\R$
+tale che
+\[
+  a\le S\le M\qquad\forall a\in A,\ \forall M\in\mathcal M_A.
+\]
+La prima disuguaglianza dice che $S$ è un maggiorante di $A$;
+la seconda che è minore o uguale a ogni maggiorante. Dunque
+$S=\min\mathcal M_A=\sup A$.
+
+Per l'infimo si può applicare lo stesso ragionamento all'insieme
+$-A=\{-a:a\in A\}$. Se $A$ è inferiormente limitato, $-A$ è
+superiormente limitato e ha supremo $T$. Cambiando segno alle
+disuguaglianze si ottiene che $-T$ è il più grande minorante di
+$A$, ossia $\inf A=-\sup(-A)$.
+\end{proof}
+
+Il teorema è una conseguenza della completezza. Sostituendo $\R$
+con $\Q$ l'enunciato diventa falso: l'insieme
+\[
+  A=\{x\in\Q:x\ge0,\ x^2\le2\}
+\]
+è non vuoto e superiormente limitato, ma non ha supremo in $\Q$.
+Un eventuale minimo maggiorante razionale sarebbe infatti un
+separatore razionale fra gli insiemi $A$ e $B$ già considerati
+nell'esempio sull'assioma di Dedekind. Considerando lo stesso
+insieme come sottoinsieme di $\R$, il suo supremo è $\sqrt2$;
+il suo infimo è $0$, che è anche minimo.
+
+\subsection{Estremi infiniti}
+
+Per gli insiemi non vuoti si estende la notazione ponendo
+$\sup A=+\infty$ quando $A$ è superiormente illimitato e
+$\inf A=-\infty$ quando è inferiormente illimitato.
+Si tratta di valori nella retta estesa, non di massimi o minimi
+reali. Per esempio, $\sup\N=+\infty$ e $\inf\N=\min\N=0$.
+
+\section{La caratterizzazione operativa di supremo e infimo}
+% Fonte: Lezione 4, p.~14; lezione 5, p.~2
+
+\begin{proposizione}
+\label{prop:criterio-estremi}
+Sia $A\subseteq\R$ non vuoto. Un numero $S\in\R$ è il suo supremo
+se e solo se valgono entrambe le condizioni
+\[
+  \begin{cases}
+    a\le S&\forall a\in A,\\
+    \forall\varepsilon>0\ \exists a\in A:\ a>S-\varepsilon.
+  \end{cases}
+\]
+Analogamente, $s\in\R$ è l'infimo se e solo se
+\[
+  \begin{cases}
+    s\le a&\forall a\in A,\\
+    \forall\varepsilon>0\ \exists a\in A:\ a<s+\varepsilon.
+  \end{cases}
+\]
+\end{proposizione}
+\begin{proof}
+Se $S=\sup A$, esso è un maggiorante. Se per qualche
+$\varepsilon>0$ non esistesse $a\in A$ con $a>S-\varepsilon$,
+tutti gli elementi sarebbero minori o uguali a $S-\varepsilon$:
+quest'ultimo sarebbe un maggiorante più piccolo di $S$, assurdo.
+
+Viceversa, supponiamo che le due condizioni valgano. $S$ è un
+maggiorante e ogni $M<S$ non può esserlo: scegliendo
+$\varepsilon=S-M>0$ si trova $a\in A$ con $a>M$. Quindi $S$ è
+il più piccolo dei maggioranti.
+
+Per l'infimo, se $s=\inf A$ e mancassero elementi sotto
+$s+\varepsilon$, quest'ultimo sarebbe un minorante più grande.
+Viceversa, se le due condizioni per $s$ valgono, ogni $m>s$ viene
+escluso dai minoranti scegliendo $\varepsilon=m-s$ e trovando
+$a\in A$ con $a<m$. Dunque $s$ è il più grande minorante.
+\end{proof}
+
+Il criterio traduce il ruolo di estremo in due verifiche separate:
+essere un limite per tutti gli elementi e poter essere avvicinato
+arbitrariamente dall'insieme. L'elemento $a$ può dipendere da
+$\varepsilon$. Se l'estremo appartiene ad $A$, lo si può scegliere
+per ogni $\varepsilon$; il criterio è particolarmente utile quando
+l'estremo non è raggiunto.
+
+\begin{schema}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[coloreschema!12] (4.3,.52) rectangle (6.8,.78);
+  \fill[coloreschema!12] (1.2,-.98) rectangle (3.7,-.72);
+  \foreach \quota in {.65,-.85} {
+    \draw[asse] (0,\quota) -- (8,\quota);
+  }
+  \node[anchor=east] at (-.2,.65) {$S=\sup A$};
+  \node[anchor=east] at (-.2,-.85) {$s=\inf A$};
+  \foreach \pos/\testo in {4.3/{S-\varepsilon},6.8/S} {
+    \draw (\pos,.55) -- (\pos,.75);
+    \node[below=6pt] at (\pos,.65) {$\testo$};
+  }
+  \foreach \pos/\testo in {1.2/s,3.7/{s+\varepsilon}} {
+    \draw (\pos,-.95) -- (\pos,-.75);
+    \node[below=6pt] at (\pos,-.85) {$\testo$};
+  }
+  \fill[coloreschema] (6.1,.65) circle[radius=2pt];
+  \node[above=6pt,coloreschema] at (6.1,.65) {$a\in A$};
+  \fill[coloreschema] (2.1,-.85) circle[radius=2pt];
+  \node[above=6pt,coloreschema] at (2.1,-.85) {$a\in A$};
+\end{tikzpicture}
+\par\smallskip
+Per ogni $\varepsilon>0$, la fascia $(S-\varepsilon,S]$ deve
+contenere almeno un punto di $A$; analogamente per $[s,s+\varepsilon)$.
+Il colore evidenzia la fascia di ricerca, senza affermare che tutti
+i suoi punti appartengano ad $A$.
+\end{schema}

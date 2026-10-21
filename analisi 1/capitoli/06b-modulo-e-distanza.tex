@@ -1,0 +1,101 @@
+% !TeX root = ../main.tex
+\section{Valore assoluto e proprietà fondamentali}
+% Fonte: Lezione 6, pp.~18--19
+
+\begin{definizione}
+Il \emph{valore assoluto}, o \emph{modulo}, di $x\in\R$ è
+\[
+|x|=\max\{x,-x\}=\begin{cases}
+x,&x\ge0,\\
+-x,&x<0.
+\end{cases}
+\]
+\end{definizione}
+
+La funzione $x\mapsto|x|$ ha dominio $\R$ e immagine $[0,+\infty)$,
+è pari, decresce su $(-\infty,0]$ e cresce su $[0,+\infty)$.
+
+\begin{schema}
+\begin{tikzpicture}[x=1cm,y=.8cm]
+  \draw[asse] (-3.2,0) -- (3.3,0) node[right] {$x$};
+  \draw[asse] (0,-.3) -- (0,3.4) node[above] {$y$};
+  \draw[intervallo] (-2.8,2.8) -- (0,0) -- (2.8,2.8);
+  \node[coloreschema,above left] at (2.7,2.7) {$y=|x|$};
+\end{tikzpicture}
+\end{schema}
+
+Per il modulo di una funzione la scelta del ramo dipende dal segno
+di \emph{$f(x)$}, non dal segno di $x$:
+\[
+|f(x)|=\begin{cases}
+f(x),&f(x)\ge0,\\
+-f(x),&f(x)<0.
+\end{cases}
+\]
+Graficamente si conserva la parte del grafico sopra l'asse $x$ e si
+riflette rispetto a tale asse la parte che sta sotto.
+
+\begin{proposizione}
+Per ogni $a\in\R$ e ogni $b\ge0$ valgono
+\begin{gather*}
+a\le|a|,\qquad |a|=0\ \Longleftrightarrow\ a=0,\\
+|a|\le b\ \Longleftrightarrow\ -b\le a\le b,\\
+|a|\ge b\ \Longleftrightarrow\ a\ge b\ \text{ oppure }\ a\le-b.
+\end{gather*}
+Per ogni $a,b\in\R$ vale inoltre la \emph{disuguaglianza triangolare}
+\[
+|a+b|\le|a|+|b|.
+\]
+\end{proposizione}
+\begin{proof}
+Poiché $|a|=\max\{a,-a\}$, si ha sia $a\le|a|$ sia $-a\le|a|$;
+il massimo è zero esattamente quando $a=0$.
+La condizione $|a|\le b$ significa contemporaneamente $a\le b$ e
+$-a\le b$, cioè $-b\le a\le b$. La condizione $|a|\ge b$ significa
+che almeno uno tra $a$ e $-a$ è maggiore o uguale a $b$, dando la
+seconda equivalenza.
+
+Infine $-|a|\le a\le|a|$ e $-|b|\le b\le|b|$; sommando si ottiene
+\[
+-(|a|+|b|)\le a+b\le|a|+|b|.
+\]
+La prima equivalenza, con soglia non negativa $|a|+|b|$, conclude
+la prova della disuguaglianza triangolare.
+\end{proof}
+
+Le versioni strette sono $|a|<b\iff-b<a<b$ e
+$|a|>b\iff a>b\text{ oppure }a<-b$, per $b\ge0$.
+Nelle disequazioni è essenziale distinguere l'intersezione delle due
+condizioni nel primo caso dall'unione nel secondo.
+
+\section{Distanza sulla retta e nozione di metrica}
+% Fonte: Lezione 6, pp.~19--20
+
+La distanza usuale fra due numeri reali è
+\[
+d(x,y)=|x-y|.
+\]
+È la lunghezza del segmento che li separa e non dipende dall'ordine
+in cui si considerano i punti.
+
+\begin{definizione}
+Una \emph{distanza}, o \emph{metrica}, su un insieme $E$ (in
+particolare su un sottoinsieme di $\R$) è una funzione
+$d\colon E\times E\to[0,+\infty)$ tale che, per ogni $x,y,z\in E$,
+\begin{enumerate}
+  \item $d(x,y)\ge0$;
+  \item $d(x,y)=0$ se e solo se $x=y$;
+  \item $d(x,y)=d(y,x)$ \emph{(simmetria)};
+  \item $d(x,y)\le d(x,z)+d(z,y)$ \emph{(disuguaglianza triangolare)}.
+\end{enumerate}
+\end{definizione}
+
+\begin{proof}[Verifica per la distanza usuale]
+Il modulo è non negativo e si annulla soltanto in zero: quindi
+$|x-y|\ge0$ e $|x-y|=0\iff x=y$. Inoltre
+$|x-y|=|-(y-x)|=|y-x|$, che dà la simmetria. Infine
+\[
+|x-y|=|(x-z)+(z-y)|\le|x-z|+|z-y|.
+\]
+Sono verificate tutte le proprietà della definizione.
+\end{proof}

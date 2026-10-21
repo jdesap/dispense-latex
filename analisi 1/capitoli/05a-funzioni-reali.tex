@@ -1,0 +1,227 @@
+% !TeX root = ../main.tex
+\section{Funzioni reali e dominio naturale}
+% Fonte: Lezione 6, p.~3
+
+Una \emph{funzione reale di variabile reale} ha dominio e codominio
+contenuti in $\R$: $f\colon X\to Y$, con $X,Y\subseteq\R$.
+Quando è assegnata mediante una formula, il suo \emph{dominio naturale}
+è il più grande sottoinsieme di $\R$ in cui tutte le operazioni della
+formula hanno significato reale.
+
+\begin{esempio}
+Per $f(x)=1/(x^2-4)$ occorre $x^2-4\ne0$. Dunque
+\[
+\operatorname{dom}(f)=\R\setminus\{-2,2\}.
+\]
+I punti esclusi dal dominio non tornano a farne parte per una semplice
+manipolazione algebrica della formula.
+\end{esempio}
+
+\section{Operazioni tra funzioni}
+% Fonte: Lezione 6, p.~4
+
+Date $f,g\colon D\subseteq\R\to\R$, le operazioni sono definite
+\emph{punto per punto}:
+\[
+\begin{aligned}
+(f+g)(x)&=f(x)+g(x), & (f-g)(x)&=f(x)-g(x),\\
+(fg)(x)&=f(x)g(x), & \left(\frac fg\right)(x)&=\frac{f(x)}{g(x)}.
+\end{aligned}
+\]
+Somma, differenza e prodotto hanno dominio $D$; il quoziente è definito
+soltanto in $\{x\in D:g(x)\ne0\}$. Se i domini iniziali sono diversi,
+si lavora sulla loro intersezione, escludendo inoltre gli zeri del
+denominatore per il quoziente. Il prodotto $fg$ e la composizione
+$f\circ g$ sono operazioni diverse.
+
+\section{Monotonia e composizione}
+% Fonte: Lezione 6, pp.~5--7
+
+\begin{definizione}
+Una funzione $f\colon D\subseteq\R\to\R$ è \emph{crescente}, o
+\emph{non decrescente}, se
+\[
+\forall x_1,x_2\in D,\quad x_1<x_2\ \Longrightarrow\ f(x_1)\le f(x_2).
+\]
+È \emph{strettamente crescente} se, sotto la stessa ipotesi,
+$f(x_1)<f(x_2)$. È \emph{decrescente}, o \emph{non crescente}, se
+\[
+x_1<x_2\ \Longrightarrow\ f(x_1)\ge f(x_2),
+\]
+ed è \emph{strettamente decrescente} se vale $f(x_1)>f(x_2)$.
+Si dice \emph{monotona} se è crescente oppure decrescente.
+\end{definizione}
+
+La monotonia confronta tutte le coppie ordinate di punti del dominio.
+Una funzione costante è sia crescente sia decrescente nel senso non
+stretto; su un dominio con almeno due punti non è strettamente monotona.
+
+\begin{schema}
+\begin{tikzpicture}[x=1.5cm,y=.85cm]
+  \draw[asse] (-.2,0) -- (4.6,0) node[right] {$x$};
+  \draw[asse] (0,-.2) -- (0,3.7) node[above] {$y$};
+  \draw[intervallo] (.2,.4) -- (4.1,2.9);
+  \draw[thick,orange!80!black] (.2,3.2) -- (4.1,.6);
+  \draw[thick,black!55] (.2,3.4) -- (4.1,3.4);
+  \node[coloreschema,right] at (4.1,2.9) {crescente};
+  \node[orange!80!black,right] at (4.1,.6) {decrescente};
+  \node[black!65,right] at (4.1,3.4) {costante};
+\end{tikzpicture}
+\end{schema}
+
+\begin{proposizione}
+La composizione di due funzioni monotone è monotona: se hanno lo stesso
+verso è crescente, se hanno versi opposti è decrescente. Se entrambe
+sono strettamente monotone, anche la composta è strettamente monotona.
+\end{proposizione}
+\begin{proof}
+Scriviamo la composta come $g\circ f$ e scegliamo $x_1<x_2$ nel suo
+dominio. Se $f$ e $g$ sono crescenti,
+$f(x_1)\le f(x_2)$ implica $g(f(x_1))\le g(f(x_2))$.
+Se entrambe sono decrescenti, $f(x_1)\ge f(x_2)$ e, applicando $g$,
+si ottiene ancora $g(f(x_1))\le g(f(x_2))$.
+Se soltanto una è decrescente, l'ordine viene invertito una sola volta
+e si ottiene $g(f(x_1))\ge g(f(x_2))$. Quando entrambe le funzioni
+sono strettamente monotone, tutte le disuguaglianze corrispondenti sono
+strette.
+\end{proof}
+
+\section{Stretta monotonia e invertibilità}
+% Fonte: Lezione 6, pp.~7--8
+
+\begin{proposizione}
+Ogni funzione strettamente monotona è iniettiva. Se una funzione
+monotona è iniettiva, è strettamente monotona e la sua inversa
+sull'immagine ha lo stesso verso di monotonia.
+\end{proposizione}
+\begin{proof}
+Per $x_1\ne x_2$, uno dei due punti è minore dell'altro. La stretta
+monotonia impone valori distinti: questo prova l'iniettività.
+Viceversa, in una funzione monotona iniettiva, l'uguaglianza fra due
+valori in punti distinti è esclusa, quindi le disuguaglianze diventano
+strette.
+
+Supponiamo ora $f$ strettamente crescente e siano $y_1<y_2$ nella sua
+immagine. Posti $x_i=f^{-1}(y_i)$, non può essere $x_1\ge x_2$:
+si avrebbe $y_1=f(x_1)\ge f(x_2)=y_2$. Dunque $x_1<x_2$ e l'inversa
+è strettamente crescente. Se $f$ è strettamente decrescente, lo stesso
+ragionamento dà $x_1>x_2$, quindi l'inversa è strettamente decrescente.
+\end{proof}
+
+\begin{osservazione}
+L'iniettività da sola non impone la monotonia. La funzione $f(x)=1/x$
+su $\R\setminus\{0\}$ è iniettiva, perché $1/x_1=1/x_2$ implica
+$x_1=x_2$, ma è decrescente soltanto su ciascuna delle due semirette
+separatamente. Non è decrescente su tutto il dominio: $-1<1$ ma
+$f(-1)=-1<1=f(1)$. Non è neppure crescente, perché
+$1<2$ ma $f(1)>f(2)$.
+\end{osservazione}
+
+\begin{schema}
+\begin{tikzpicture}[scale=.85]
+  \draw[asse] (-3.5,0) -- (3.5,0) node[right] {$x$};
+  \draw[asse] (0,-3.1) -- (0,3.2) node[above] {$y$};
+  \draw[intervallo,domain=.35:3.2,samples=80] plot (\x,{1/\x});
+  \draw[intervallo,domain=-3.2:-.35,samples=80] plot (\x,{1/\x});
+  \node[coloreschema,right] at (1.2,1.4) {$y=1/x$};
+\end{tikzpicture}
+\end{schema}
+
+\section{Simmetrie: funzioni pari e dispari}
+% Fonte: Lezione 6, p.~9
+
+Per parlare di parità o disparità richiediamo che il dominio sia
+\emph{simmetrico rispetto a zero}: $x\in D$ implica $-x\in D$.
+
+\begin{definizione}
+La funzione $f\colon D\to\R$ è \emph{pari} se
+$f(-x)=f(x)$ per ogni $x\in D$; è \emph{dispari} se
+$f(-x)=-f(x)$ per ogni $x\in D$.
+\end{definizione}
+
+Per una funzione pari, da $(x,f(x))$ sul grafico si ottiene anche
+$(-x,f(x))$: il grafico è simmetrico rispetto all'asse $y$.
+Per una funzione dispari si ottiene $(-x,-f(x))$: la simmetria è
+rispetto all'origine. Se $0\in D$ e $f$ è dispari, necessariamente
+$f(0)=0$, perché $f(0)=-f(0)$.
+Gli esempi fondamentali sono $x^2$, pari, e $x^3$, dispari; i grafici
+sono riportati nel capitolo sulle funzioni elementari.
+
+\section{Periodicità}
+% Fonte: Lezione 6, p.~10
+
+\begin{definizione}
+Una funzione non costante $f\colon D\subseteq\R\to\R$ si dice
+\emph{periodica}\footnote{Si escludono qui le funzioni costanti.
+Per una funzione costante su $\R$, ogni $T>0$ sarebbe un periodo,
+senza un minimo positivo.} se esiste $T>0$ tale che, per ogni $x\in D$,
+\[
+x+T\in D,\quad x-T\in D,\qquad f(x+T)=f(x).
+\]
+Ogni tale $T$ è un \emph{periodo}. Se esiste il più piccolo periodo
+positivo, esso si chiama \emph{periodo principale} o fondamentale.
+\end{definizione}
+
+Il dominio deve ripetersi insieme ai valori. Applicando la proprietà
+più volte, $x+kT\in D$ e $f(x+kT)=f(x)$ per ogni $k\in\Z$.
+In particolare ogni multiplo intero positivo di un periodo è ancora
+un periodo. Una funzione periodica non costante non può essere
+iniettiva, perché $x$ e $x+T$ sono punti distinti con la stessa immagine.
+Seno e coseno hanno periodo principale $2\pi$, la tangente $\pi$.
+
+
+\section{Limitatezza ed estremi di una funzione}
+% Fonte: Lezione 6, pp.~11--13
+
+Per parlare degli estremi consideriamo un dominio $D$ non vuoto.
+
+\begin{definizione}
+Una funzione $f\colon D\to\R$ è \emph{limitata} se il suo insieme
+immagine è limitato; equivalentemente, esistono $m,M\in\R$ tali che
+\[
+m\le f(x)\le M\qquad\forall x\in D.
+\]
+Si definiscono gli estremi attraverso l'immagine:
+\[
+\sup_D f=\sup f(D),\qquad \inf_D f=\inf f(D).
+\]
+Quando esistono, $\max_D f=\max f(D)$ e $\min_D f=\min f(D)$.
+\end{definizione}
+
+Un numero $M=\max_D f$ è un \emph{valore massimo}; un punto
+$x_M\in D$ con $f(x_M)=M$ è un \emph{punto di massimo}.
+Analogamente $m=\min_D f$ è un valore minimo e un punto $x_m\in D$
+con $f(x_m)=m$ è un \emph{punto di minimo}. Si tratta qui di estremi
+\emph{assoluti}, confrontati con tutti i valori sul dominio.
+Il valore massimo o minimo, se esiste, è unico; i punti in cui viene
+raggiunto possono essere più di uno, anche agli estremi del dominio.
+
+\begin{schema}
+\begin{tikzpicture}[x=1.65cm,y=.85cm]
+  \draw[asse] (-.2,0) -- (6,0) node[right] {$x$};
+  \draw[asse] (0,-1.6) -- (0,2.9) node[above] {$y$};
+  \draw[dashed,black!45] (0,2.3) node[left] {$M$} -- (5.7,2.3);
+  \draw[dashed,black!45] (0,-1.1) node[left] {$m$} -- (5.7,-1.1);
+  \draw[intervallo] (.8,2.3) .. controls (1.1,1.2) and (2,1.2) .. (3,2.3)
+    .. controls (3.6,2.3) and (3.9,-1.1) .. (4.5,-1.1)
+    .. controls (4.9,-1.1) and (5.3,-.5) .. (5.6,0);
+  \foreach \x/\y in {.8/2.3,3/2.3,4.5/-1.1,5.6/0}
+    \fill[coloreschema] (\x,\y) circle (1.8pt);
+  \draw[dotted] (.8,0) -- (.8,2.3);
+  \draw[dotted] (3,0) -- (3,2.3);
+  \draw[dotted] (4.5,0) -- (4.5,-1.1);
+  \node[below] at (.8,0) {$a=x_M^{(1)}$};
+  \node[below] at (3,0) {$x_M^{(2)}$};
+  \node[above] at (4.5,0) {$x_m$};
+  \node[below] at (5.6,0) {$b$};
+\end{tikzpicture}
+
+Grafico schematico su $[a,b]$: due punti di massimo e un punto di minimo;
+ogni valore resta nella fascia $m\le y\le M$.
+\end{schema}
+
+\begin{esempio}
+La funzione $f(x)=x$ su $[0,1)$ è limitata, ha minimo $0$ nel punto
+$x=0$ e supremo $1$, ma non ha massimo. La limitatezza non garantisce
+quindi che entrambi gli estremi siano raggiunti.
+\end{esempio}

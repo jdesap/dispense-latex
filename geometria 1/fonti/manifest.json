@@ -1,0 +1,41 @@
+{
+  "data_inventario": "2026-10-21",
+  "fonti": [
+    {
+      "lezione": "5",
+      "file": "fonti/Lezione 5.pdf",
+      "pagine": 6,
+      "sha256": "221834f365264c0cbad1aee7028175debd2dea07202673a4a0d2825a82459715"
+    },
+    {
+      "lezione": "6",
+      "file": "fonti/Lezione 6.pdf",
+      "pagine": 2,
+      "sha256": "d97c6141a6708ba6f354786fd04a676ca7c5b8d978ccca061b4e9c1d0d3fa74d"
+    },
+    {
+      "lezione": "8",
+      "file": "fonti/Lezione 8.pdf",
+      "pagine": 3,
+      "sha256": "7580cc9f477465ece0eb6135d43f45e2758a3cd2f0d72386697967690b468550"
+    },
+    {
+      "lezione": "9",
+      "file": "fonti/Lezione 9.pdf",
+      "pagine": 4,
+      "sha256": "ff2ec6f8e4bec33bbb3f4862e420b53c56d7b1914725146bd3a958e47ed973f0"
+    },
+    {
+      "lezione": "10",
+      "file": "fonti/Lezione 10.pdf",
+      "pagine": 5,
+      "sha256": "ddd3b992b7da6c366cb38d154c1f2c792707cb1a955ec9d2135afe101578a8de"
+    },
+    {
+      "lezione": "11-12",
+      "file": "fonti/Lezione 11_12.pdf",
+      "pagine": 6,
+      "sha256": "4e685e2cce71d38119b0505239e6a6514b18b655ee730a8ac01626f0648e331a"
+    }
+  ]
+}

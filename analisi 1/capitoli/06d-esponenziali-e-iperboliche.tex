@@ -1,0 +1,260 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 7.pdf, pp. 2--9. La costruzione delle potenze reali
+% è rinviata nella fonte; la nota ne dà una possibile definizione.
+\section{Esponenziali e logaritmi}
+\label{sec:exp-log}
+
+\subsection{La funzione esponenziale}
+
+Per una base $a>0$, le potenze razionali si estendono all'esponente
+zero ponendo $a^0=1$ e agli esponenti negativi ponendo
+$a^{-r}=1/a^r$ per $r>0$ razionale.
+La funzione $x\mapsto a^x$ estende poi a tutti
+gli esponenti reali le potenze già definite per esponenti
+razionali.\footnote{Per $a>1$ si può porre
+$a^x=\sup\{a^r:r\in\Q,\ r\le x\}$; per $0<a<1$ si pone
+$a^x=(1/a)^{-x}$, mentre $1^x=1$. Le proprietà qui utilizzate sono
+quelle dell'esponenziale reale così ottenuto.}
+Ha dominio $\R$, assume soltanto valori strettamente positivi e
+passa per $(0,1)$, perché $a^0=1$.
+\begin{itemize}
+  \item Se $a>1$, è strettamente crescente e biettiva da $\R$ a
+  $(0,+\infty)$.
+  \item Se $0<a<1$, è strettamente decrescente e ancora biettiva da
+  $\R$ a $(0,+\infty)$.
+  \item Se $a=1$, è la funzione costante $1$ e non è invertibile su $\R$.
+\end{itemize}
+Al crescere dell'argomento, nel primo caso i valori diventano
+arbitrariamente grandi; nel secondo si avvicinano a zero senza mai
+raggiungerlo. Per argomenti molto negativi i due comportamenti si
+scambiano. Perciò, quando $a\ne1$, l'infimo è $0$ senza minimo,
+mentre non esiste un maggiorante reale.
+
+Le regole fondamentali delle potenze sono
+\[
+a^{x+y}=a^xa^y,\qquad a^{-x}=\frac1{a^x},\qquad a^0=1.
+\]
+Una base particolarmente importante è il \emph{numero di Nepero}
+$e=2{,}718281828\ldots$. Con la scrittura \emph{funzione esponenziale},
+senza precisare la base, si indica di solito
+\[
+\exp\colon\R\longrightarrow(0,+\infty),\qquad \exp(x)=e^x,
+\]
+che è strettamente crescente e biettiva.
+
+\begin{schema}
+\begin{tikzpicture}[x=1cm,y=.65cm]
+  \draw[asse] (-2.5,0) -- (2.6,0) node[right] {$x$};
+  \draw[asse] (0,-.3) -- (0,5.2) node[above] {$y$};
+  \draw[intervallo,domain=-2.2:2.2,samples=70] plot (\x,{pow(2,\x)});
+  \draw[thick,orange!80!black,domain=-2.2:2.2,samples=70]
+    plot (\x,{pow(2,-\x)});
+  \fill[coloreschema] (0,1) circle (1.6pt) node[above right] {$1$};
+  \node[coloreschema,right] at (1.6,3.1) {$2^x$};
+  \node[orange!80!black,left] at (-1.6,3.1) {$(1/2)^x$};
+\end{tikzpicture}
+\hspace{.6cm}
+\begin{tikzpicture}[x=1cm,y=.85cm]
+  \draw[asse] (-.3,0) -- (4.8,0) node[right] {$x$};
+  \draw[asse] (0,-2) -- (0,2.15) node[above] {$y$};
+  \draw[intervallo,domain=.17:4.5,samples=80] plot (\x,{ln(\x)/ln(2)});
+  \draw[thick,orange!80!black,domain=.17:4.5,samples=80]
+    plot (\x,{-ln(\x)/ln(2)});
+  \fill[coloreschema] (1,0) circle (1.6pt) node[below left] {$1$};
+  \node[coloreschema,above left] at (4.4,2.1) {$\log_2x$};
+  \node[orange!80!black,below left] at (4.4,-1.9) {$\log_{1/2}x$};
+\end{tikzpicture}
+
+Esponenziali con basi maggiore e minore di $1$, e rispettivi logaritmi.
+\end{schema}
+
+\subsection{Il logaritmo come funzione inversa}
+
+Per $a>0$, $a\ne1$, si definisce il \emph{logaritmo in base $a$}
+come l'inversa dell'esponenziale:
+\[
+\log_a\colon(0,+\infty)\longrightarrow\R,\qquad
+\log_a x=y\ \Longleftrightarrow\ a^y=x.
+\]
+Il dominio contiene soltanto numeri positivi; l'immagine è tutta $\R$.
+Il logaritmo è strettamente crescente se $a>1$, strettamente
+decrescente se $0<a<1$, perché l'inversa conserva il verso della
+monotonia. Per ogni base ammissibile,
+\[
+\log_a1=0,\qquad \log_a a=1,\qquad
+\log_a(a^y)=y\ (y\in\R),\qquad a^{\log_a x}=x\ (x>0).
+\]
+Se la base è $e$, si parla di \emph{logaritmo naturale} e si scrive
+$\ln x=\log_e x$. In particolare $\ln\colon(0,+\infty)\to\R$ è
+strettamente crescente e inversa di $\exp$.
+
+\section{Funzioni iperboliche}
+\label{sec:iperboliche}
+
+\subsection{Definizioni, identità e grafici}
+% Fonte: Lezione 7.pdf, pp. 5--7.
+
+Si definiscono \emph{seno iperbolico}, \emph{coseno iperbolico} e
+\emph{tangente iperbolica} mediante
+\[
+\sinh x=\frac{e^x-e^{-x}}2,\qquad
+\cosh x=\frac{e^x+e^{-x}}2,\qquad
+\tanh x=\frac{\sinh x}{\cosh x}.
+\]
+Sono tutte definite su $\R$: infatti $\cosh x>0$ e il quoziente non
+ha denominatore nullo. La tangente iperbolica si indica anche con
+$\operatorname{tgh}$.
+
+Il seno iperbolico è dispari, strettamente crescente e ha immagine
+$\R$. Il coseno iperbolico è pari, strettamente decrescente su
+$(-\infty,0]$ e strettamente crescente su $[0,+\infty)$; ha minimo
+$1$ nel punto $0$ e immagine $[1,+\infty)$. La tangente iperbolica
+è dispari, strettamente crescente e ha immagine $(-1,1)$: è limitata,
+ma non ha né massimo né minimo.
+
+\begin{proposizione}[Identità iperbolica fondamentale]
+Per ogni $t\in\R$ si ha
+\[
+\boxed{\cosh^2t-\sinh^2t=1}.
+\]
+\end{proposizione}
+\begin{proof}
+Sostituendo le definizioni e usando $e^te^{-t}=1$ si ottiene
+\[
+\cosh^2t-\sinh^2t
+=\frac{(e^t+e^{-t})^2-(e^t-e^{-t})^2}{4}
+=\frac{4e^te^{-t}}4=1.
+\]
+\end{proof}
+
+Il nome richiama una costruzione geometrica: mentre
+$P(t)=(\cos t,\sin t)$ percorre la circonferenza $u^2+v^2=1$,
+il punto $Q(t)=(\cosh t,\sinh t)$ percorre il \emph{ramo destro}
+dell'iperbole $u^2-v^2=1$, quello con $u\ge1$.
+
+\begin{schema}
+\begin{tikzpicture}[scale=1.45]
+  \draw[asse] (-1.3,0) -- (1.45,0) node[right] {$u$};
+  \draw[asse] (0,-1.25) -- (0,1.4) node[above] {$v$};
+  \draw[intervallo] (0,0) circle (1);
+  \draw[dotted] (0,0) -- ({cos(40)},{sin(40)});
+  \fill[coloreschema] ({cos(40)},{sin(40)}) circle (1pt)
+    node[above right] {$P(t)$};
+  \node[below] at (0,-1.5) {$u^2+v^2=1$};
+\end{tikzpicture}
+\hspace{1.3cm}
+\begin{tikzpicture}[scale=1.45]
+  \draw[asse] (-.3,0) -- (2.25,0) node[right] {$u$};
+  \draw[asse] (0,-1.8) -- (0,1.8) node[above] {$v$};
+  \draw[intervallo,domain=-1.2:1.2,samples=90]
+    plot ({(exp(\x)+exp(-\x))/2},{(exp(\x)-exp(-\x))/2});
+  \fill[coloreschema] (1,0) circle (1pt) node[below left] {$1$};
+  \fill[coloreschema] ({(exp(.8)+exp(-.8))/2},{(exp(.8)-exp(-.8))/2})
+    circle (1pt) node[above left] {$Q(t)$};
+  \node[below] at (1,-1.99) {$u^2-v^2=1,\quad u\ge1$};
+\end{tikzpicture}
+\end{schema}
+
+\begin{proof}[Verifica delle proprietà]
+La parità di $\cosh$ e la disparità di $\sinh$ seguono scambiando
+$t$ con $-t$. Se $u<v$, si ha $e^u<e^v$ ed $e^{-u}>e^{-v}$:
+dalla differenza delle due quantità segue $\sinh u<\sinh v$.
+Inoltre
+\[
+\cosh x-1=\frac{(e^{x/2}-e^{-x/2})^2}{2}\ge0,
+\]
+con uguaglianza soltanto in $x=0$. Per $0\le u<v$, sviluppando
+le definizioni si verifica
+\[
+\cosh v-\cosh u
+=2\sinh\frac{u+v}2\,\sinh\frac{v-u}2>0.
+\]
+La parità dà poi la decrescenza sulla semiretta negativa.
+
+Per la tangente iperbolica è utile scrivere
+$\tanh x=(e^{2x}-1)/(e^{2x}+1)$. Per $0<s<t$,
+\[
+\frac{t-1}{t+1}-\frac{s-1}{s+1}
+=\frac{2(t-s)}{(t+1)(s+1)}>0;
+\]
+quindi $\tanh$ è strettamente crescente. Il rapporto è sempre
+compreso fra $-1$ e $1$ e, sostituendo $-x$, cambia segno.
+Le immagini esatte delle tre funzioni seguono anche dalle formule
+inverse ricavate qui sotto.
+\end{proof}
+
+\begin{schema}
+\begin{tikzpicture}[x=.8cm,y=.65cm]
+  \draw[asse] (-2.3,0) -- (2.4,0) node[right] {$x$};
+  \draw[asse] (0,-3.4) -- (0,3.6) node[above] {$y$};
+  \draw[intervallo,domain=-1.9:1.9,samples=80]
+    plot (\x,{(exp(\x)-exp(-\x))/2});
+  \node[below] at (0,-3.7) {$\sinh x$};
+\end{tikzpicture}
+\hspace{.3cm}
+\begin{tikzpicture}[x=.8cm,y=.65cm]
+  \draw[asse] (-2.3,0) -- (2.4,0) node[right] {$x$};
+  \draw[asse] (0,-.4) -- (0,3.8) node[above] {$y$};
+  \draw[dashed,black!40] (-2.1,1) -- (2.1,1);
+  \draw[intervallo,domain=-1.9:1.9,samples=80]
+    plot (\x,{(exp(\x)+exp(-\x))/2});
+  \node[below right] at (0,1) {$1$};
+  \node[below] at (0,-.7) {$\cosh x$};
+\end{tikzpicture}
+\hspace{.3cm}
+\begin{tikzpicture}[x=.8cm,y=1.15cm]
+  \draw[asse] (-2.3,0) -- (2.4,0) node[right] {$x$};
+  \draw[asse] (0,-1.5) -- (0,1.5) node[above] {$y$};
+  \foreach \y in {-1,1} \draw[dashed,black!40] (-2.2,\y) -- (2.2,\y);
+  \draw[intervallo,domain=-2.2:2.2,samples=80]
+    plot (\x,{(exp(2*\x)-1)/(exp(2*\x)+1)});
+  \node[above right] at (0,1) {$1$};
+  \node[below right] at (0,-1) {$-1$};
+  \node[below] at (0,-1.75) {$\tanh x$};
+\end{tikzpicture}
+\end{schema}
+
+\subsection{Funzioni iperboliche inverse}
+% Fonte: Lezione 7.pdf, pp. 8--9.
+
+Il seno iperbolico è biettivo da $\R$ a $\R$. La sua inversa è il
+\emph{settore seno iperbolico}, indicato con $\operatorname{arsinh}$
+o $\operatorname{settsinh}$, e si esprime mediante il logaritmo:
+\[
+\operatorname{arsinh}x=\ln\!\left(x+\sqrt{x^2+1}\right),
+\qquad \operatorname{arsinh}\colon\R\longrightarrow\R.
+\]
+Per ricavare la formula risolviamo $x=\sinh y$ e poniamo $t=e^y>0$:
+\begin{align*}
+x=\frac{e^y-e^{-y}}2
+&\ \Longleftrightarrow\ 2x=t-\frac1t\\
+&\ \Longleftrightarrow\ t^2-2xt-1=0\\
+&\ \Longleftrightarrow\ t=x\pm\sqrt{x^2+1}.
+\end{align*}
+Poiché $\sqrt{x^2+1}>|x|$, il segno meno darebbe $t<0$ e va
+scartato; il segno più dà un valore strettamente positivo per ogni
+reale $x$. Dunque $e^y=x+\sqrt{x^2+1}$ e si applica $\ln$.
+
+Il coseno iperbolico è invertibile dopo averne ristretto il dominio
+a $[0,+\infty)$. L'inversa è il \emph{settore coseno iperbolico}:
+\[
+\operatorname{arcosh}x=\ln\!\left(x+\sqrt{x^2-1}\right),
+\qquad \operatorname{arcosh}\colon[1,+\infty)\longrightarrow[0,+\infty).
+\]
+La notazione alternativa è $\operatorname{settcosh}$. Infatti,
+da $x=\cosh y$ e $t=e^y$ segue $t^2-2xt+1=0$, con soluzioni
+$t=x\pm\sqrt{x^2-1}$. Per $x>1$ il segno più dà $t>1$, dunque
+$y>0$; il segno meno dà $0<t<1$, dunque $y<0$, escluso dalla
+restrizione scelta. Per $x=1$ le due soluzioni coincidono in $t=1$,
+cioè $y=0$.
+
+Infine la tangente iperbolica è biettiva da $\R$ a $(-1,1)$.
+La sua inversa, il \emph{settore tangente iperbolica}, è
+\[
+\operatorname{artanh}x=\frac12\ln\!\left(\frac{1+x}{1-x}\right),
+\qquad \operatorname{artanh}\colon(-1,1)\longrightarrow\R,
+\]
+indicata anche con $\operatorname{setttgh}$. Per verificarla,
+$x=(e^{2y}-1)/(e^{2y}+1)$ equivale a
+$e^{2y}=(1+x)/(1-x)$. Per $-1<x<1$ il rapporto è positivo,
+quindi si può applicare il logaritmo e dividere per $2$.

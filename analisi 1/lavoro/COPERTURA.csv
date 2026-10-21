@@ -1,0 +1,80 @@
+lezione,pagine_pdf,argomento,file_destinazione,stato
+1,2–3,Proposizioni e connettivi,capitoli/01-logica.tex,trascritta e revisionata
+1,3,Contronominale e ragionamento per assurdo,capitoli/01-logica.tex,trascritta e revisionata
+1,4–5,"Quantificatori universale, esistenziale, esistenza unica",capitoli/01-logica.tex,trascritta e revisionata
+1,6,Negazione dei quantificatori,capitoli/01-logica.tex,trascritta e revisionata
+1,7–8,"Insiemi, rappresentazione e insieme vuoto",capitoli/02-insiemi-e-relazioni.tex,trascritta e revisionata
+1,9,Sottoinsiemi e insieme delle parti,capitoli/02-insiemi-e-relazioni.tex,trascritta e revisionata
+1,10–11,"Unione, intersezione, differenza, complementare, De Morgan",capitoli/02-insiemi-e-relazioni.tex,trascritta e revisionata
+1,12,Prodotto cartesiano e relazioni,capitoli/02-insiemi-e-relazioni.tex,trascritta e revisionata
+1,13,Ordini parziali e totali,capitoli/02-insiemi-e-relazioni.tex,trascritta e revisionata
+2,2,"Catena degli insiemi numerici, naturali, ordine e principio del minimo intero",capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+2,3 e 8,Induzione nelle due forme e prova per minimo controesempio,capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+2,4–6,"Somma da 1 a 100, somma dei primi n naturali e prova per induzione",capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+2,6–7,Disuguaglianza di Bernoulli e prova completa,capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+2,9–10,"Permutazioni, disposizioni, combinazioni e coefficiente binomiale",capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+2,11,"Quattro proprietà dei coefficienti binomiali, inclusa relazione di Pascal",capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+3,2,Dimostrazione algebrica della relazione di Pascal,capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+3,3,Triangolo di Tartaglia,capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+3,4,Formula del binomio di Newton,capitoli/03-numeri-naturali-e-combinatoria.tex,trascritta e revisionata
+3,5,Interi e struttura di gruppo abeliano,capitoli/04-numeri-reali-e-completezza.tex,trascritta e revisionata
+3,6,"Razionali, campo ordinato e proprietà di Archimede",capitoli/04-numeri-reali-e-completezza.tex,trascritta e revisionata
+3,7,"Densità fra razionali, numerabilità e lista diagonale",capitoli/04-numeri-reali-e-completezza.tex,trascritta e revisionata
+4,2,Irrazionalità di radice di due e dimostrazione,capitoli/04a-reali-e-completezza.tex,trascritta e revisionata
+4,3,Numeri reali: assiomi di campo ordinato,capitoli/04a-reali-e-completezza.tex,trascritta e revisionata
+4,4,Assioma di Dedekind e fallimento nei razionali,capitoli/04a-reali-e-completezza.tex,trascritta e revisionata
+4,5,Sezioni di Dedekind e normalizzazione della parte inferiore,capitoli/04a-reali-e-completezza.tex,trascritta e revisionata
+4,6–7,"Intervalli limitati, centro, raggio e retta reale estesa",capitoli/04b-intervalli-ed-estremi.tex,trascritta e revisionata
+4,8,Semirette e definizioni di limitatezza,capitoli/04b-intervalli-ed-estremi.tex,trascritta e revisionata
+4,9,Esempi di insiemi limitati e illimitati,capitoli/04b-intervalli-ed-estremi.tex,trascritta e revisionata
+4,10,"Maggioranti e minoranti; esempio [0,3)",capitoli/04b-intervalli-ed-estremi.tex,trascritta e revisionata
+4,11,"Massimo e minimo, unicità ed esempi",capitoli/04b-intervalli-ed-estremi.tex,trascritta e revisionata
+4,12,"Estremo superiore e inferiore, relazione con massimo e minimo",capitoli/04b-intervalli-ed-estremi.tex,trascritta e revisionata
+4,13,Esistenza degli estremi mediante Dedekind,capitoli/04b-intervalli-ed-estremi.tex,trascritta e revisionata
+4,14,Mancata completezza dei razionali e caratterizzazione con epsilon,capitoli/04b-intervalli-ed-estremi.tex,trascritta e revisionata
+5,2,Caratterizzazione degli estremi ed esempi con intervalli e massimo isolato,capitoli/04c-archimede-ed-esempi.tex,trascritta e revisionata
+5,3–4,Estremi della successione dei reciproci e verifiche,capitoli/04c-archimede-ed-esempi.tex,trascritta e revisionata
+5,5–6,Esclusione dei candidati errati per estremo inferiore,capitoli/04c-archimede-ed-esempi.tex,trascritta e revisionata
+5,7,Esercizi: cubi meno uno e unione di intervallo con punto isolato,capitoli/04c-archimede-ed-esempi.tex,trascritta e revisionata
+5,8–9,Proprietà di Archimede nei reali e dimostrazione,capitoli/04c-archimede-ed-esempi.tex,trascritta e revisionata
+5,10–11,Densità dei razionali nei reali e dimostrazione,capitoli/04c-archimede-ed-esempi.tex,trascritta e revisionata
+5,12,"Funzione, dominio, codominio e immagine",capitoli/05-funzioni.tex,trascritta e revisionata
+5,13,"Iniettività, suriettività e biettività",capitoli/05-funzioni.tex,trascritta e revisionata
+5,14–15,Composizione con dominio ristretto; esempio non commutativo con quadrato e radice,capitoli/05-funzioni.tex,trascritta e revisionata
+5,16,"Grafico, controimmagine o fibra, unicità per funzioni iniettive",capitoli/05-funzioni.tex,trascritta e revisionata
+6,2,"Funzione inversa, identità e relazioni di inversione",capitoli/05-funzioni.tex,trascritta e revisionata
+6,3,"Funzioni reali, dominio naturale ed esempio 1/(x^2-4)",capitoli/05a-funzioni-reali.tex,trascritta e revisionata
+6,4,"Somma, differenza, prodotto e quoziente di funzioni",capitoli/05a-funzioni-reali.tex,trascritta e revisionata
+6,5–6,"Monotonia stretta e non stretta; grafici crescenti, decrescenti e costanti",capitoli/05a-funzioni-reali.tex,trascritta e revisionata
+6,7,Composizione di funzioni monotone; iniettività e grafico dei reciproci,capitoli/05a-funzioni-reali.tex,trascritta e revisionata
+6,8,Monotonia dell’inversa e simmetria dei grafici,capitoli/05a-funzioni-reali.tex,trascritta e revisionata
+6,9,"Funzioni pari e dispari, simmetrie ed esempi con potenze",capitoli/05a-funzioni-reali.tex,trascritta e revisionata
+6,10,"Periodicità, invarianza del dominio e periodo principale",capitoli/05a-funzioni-reali.tex,trascritta e revisionata
+6,11–13,"Limitatezza, estremi, punti di massimo e minimo, grafico con due massimi",capitoli/05a-funzioni-reali.tex,trascritta e revisionata
+6,14–15,"Potenze pari e dispari: segno, monotonia, immagine e grafici",capitoli/06a-potenze-e-radici.tex,trascritta e revisionata
+6,16–17,"Radici pari e dispari, esistenza, potenze razionali e grafici",capitoli/06a-potenze-e-radici.tex,trascritta e revisionata
+6,18,"Modulo di un numero e di una funzione, definizione a tratti e grafico",capitoli/06b-modulo-e-distanza.tex,trascritta e revisionata
+6,19,"Proprietà del modulo, disequazioni, disuguaglianza triangolare e distanza",capitoli/06b-modulo-e-distanza.tex,trascritta e revisionata
+6,20,Quattro assiomi di distanza e verifica per il modulo della differenza,capitoli/06b-modulo-e-distanza.tex,trascritta e revisionata
+6,21,"Circonferenza goniometrica, seno, coseno, tangente e proprietà",capitoli/06c-trigonometria.tex,trascritta e revisionata
+6,22,"Restrizione invertibile del seno, arcoseno e grafici",capitoli/06c-trigonometria.tex,trascritta e revisionata
+6,23,"Restrizione invertibile del coseno, arcocoseno e grafici",capitoli/06c-trigonometria.tex,trascritta e revisionata
+6,24,"Ramo principale della tangente, arcotangente e grafici",capitoli/06c-trigonometria.tex,trascritta e revisionata
+7,2–4,"Esponenziali e logaritmi: domini, immagini, basi, numero e, inverse e grafici",capitoli/06d-esponenziali-e-iperboliche.tex,trascritta e revisionata
+7,5–7,"Funzioni iperboliche, identità, circonferenza e iperbole, tre grafici",capitoli/06d-esponenziali-e-iperboliche.tex,trascritta e revisionata
+7,8,Inversione del seno iperbolico con sostituzione t=exp(y),capitoli/06d-esponenziali-e-iperboliche.tex,trascritta e revisionata
+7,9,"Inverse del coseno e della tangente iperbolici, domini e immagini",capitoli/06d-esponenziali-e-iperboliche.tex,trascritta e revisionata
+7,10,"Parti positiva e negativa, identità con x e modulo, grafici",capitoli/06e-funzioni-a-tratti-e-grafici.tex,trascritta e revisionata
+7,11–12,"Parte intera e parte frazionaria, intervalli e grafici",capitoli/06e-funzioni-a-tratti-e-grafici.tex,trascritta e revisionata
+7,13,"Traslazioni verticali e orizzontali, riflessione dei grafici",capitoli/06e-funzioni-a-tratti-e-grafici.tex,trascritta e revisionata
+7,14–15,Esercizio con arcoseno e logaritmo: testo e dominio,capitoli/06e-funzioni-a-tratti-e-grafici.tex,trascritta e revisionata
+7,16,Esercizio: prova della stretta decrescenza,capitoli/06e-funzioni-a-tratti-e-grafici.tex,trascritta e revisionata
+7,17–18,"Esercizio: immagine, equazione, inversa e grafico",capitoli/06e-funzioni-a-tratti-e-grafici.tex,trascritta e revisionata
+7,19,"Definizione di aperto, esempi e topologia usuale",capitoli/07a-introduzione.tex,trascritta e revisionata
+7,20,Definizione di chiuso e tutti gli esempi mediante complementare,capitoli/07a-introduzione.tex,trascritta e revisionata
+7,21,"Criterio locale di apertura e controesempio [0,1)",capitoli/07a-introduzione.tex,trascritta e revisionata
+8,2–3,Proprietà degli aperti e intersezione infinita,capitoli/07-topologia.tex,trascritta e revisionata
+8,4,Proprietà dei chiusi,capitoli/07-topologia.tex,trascritta e revisionata
+8,5–9,"Esempi N, Z, Q, X={1/n}, Y=X∪{0}",capitoli/07-topologia.tex,trascritta e revisionata
+8,10–11,"Intorni, intorni sferici e intorni degli infiniti",capitoli/07-topologia.tex,trascritta e revisionata
+8,12,Intorni laterali,capitoli/07-topologia.tex,trascritta e revisionata

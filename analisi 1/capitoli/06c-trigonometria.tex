@@ -1,0 +1,224 @@
+% !TeX root = ../main.tex
+\section{Seno, coseno e tangente}
+% Fonte: Lezione 6, pp.~10 e 21
+
+Gli angoli sono misurati in \emph{radianti}: un giro completo misura
+$2\pi$. Sulla circonferenza di centro l'origine e raggio $1$, il punto
+individuato dall'angolo orientato $x$ ha coordinate
+\[
+P=(\cos x,\sin x).
+\]
+Il coseno è dunque l'ascissa e il seno l'ordinata del punto.
+
+\begin{schema}
+\begin{tikzpicture}[scale=2.1]
+  \draw[asse] (-1.25,0) -- (1.55,0) node[right] {$u$};
+  \draw[asse] (0,-1.15) -- (0,1.25) node[above] {$v$};
+  \draw[black!55] (0,0) circle (1);
+  \draw[orange!80!black,thick] (0,0) -- (1,{tan(35)});
+  \draw[coloreschema,thick] (0,0) -- ({cos(35)},{sin(35)});
+  \draw[black!45] (1,-.15) -- (1,1.05);
+  \draw[dotted] ({cos(35)},0) -- ({cos(35)},{sin(35)})
+    -- (0,{sin(35)});
+  \draw[->] (.3,0) arc[start angle=0,end angle=35,radius=.3];
+  \node at (.41,.12) {$x$};
+  \fill[coloreschema] ({cos(35)},{sin(35)}) circle (.8pt)
+    node[above left] {$P$};
+  \fill[orange!80!black] (1,{tan(35)}) circle (.8pt);
+  \node[below] at ({cos(35)},0) {$\cos x$};
+  \node[left] at (0,{sin(35)}) {$\sin x$};
+  \node[right] at (1.03,.35) {$\tan x$};
+  \node[below left] at (0,0) {$O$};
+  \node[below right] at (1,-.12) {$1$};
+\end{tikzpicture}
+
+Nel disegno $0<x<\pi/2$. La retta di pendenza $\tan x$ incontra
+la tangente verticale $u=1$ all'altezza $\tan x$.
+\end{schema}
+
+Le funzioni seno e coseno sono definite su tutto $\R$, hanno immagine
+$[-1,1]$ e periodo principale $2\pi$. Riflettendo il punto della
+circonferenza rispetto all'asse orizzontale si ottiene
+\[
+\sin(-x)=-\sin x,\qquad \cos(-x)=\cos x:
+\]
+il seno è dispari, il coseno è pari. Dall'equazione della circonferenza
+unitaria, o dal teorema di Pitagora, segue l'identità fondamentale
+\[
+\boxed{\sin^2x+\cos^2x=1}\qquad\forall x\in\R.
+\]
+La periodicità esprime il ritorno allo stesso punto dopo un giro
+completo. I valori $\pm1$ sono raggiunti, quindi sono anche minimo e
+massimo delle due funzioni.
+
+La \emph{tangente}, indicata anche con $\operatorname{tg}$, è
+\[
+\tan x=\frac{\sin x}{\cos x},\qquad
+\operatorname{dom}(\tan)=\R\setminus
+\left\{\frac\pi2+k\pi:k\in\Z\right\}.
+\]
+Sono esclusi esattamente gli zeri del denominatore. È dispari, ha
+periodo principale $\pi$ e immagine $\R$, quindi non è limitata.
+Infatti seno e coseno cambiano entrambi segno dopo mezzo giro,
+lasciando invariato il loro rapporto. Su ogni intervallo
+$(-\pi/2+k\pi,\pi/2+k\pi)$ la tangente è strettamente crescente e
+assume tutti i valori reali; non è monotona sull'intero dominio,
+che contiene più rami distinti.
+
+\section{Restrizioni invertibili e arcoseno}
+% Fonte: Lezione 6, p.~22
+
+Seno e coseno sono periodici e perciò non sono iniettivi su $\R$.
+Per costruirne le inverse si sceglie un intervallo in cui ciascuna
+funzione sia strettamente monotona e assuma l'intera immagine $[-1,1]$.
+
+Il seno è strettamente crescente da $-1$ a $1$ su
+$[-\pi/2,\pi/2]$. Sulla semicirconferenza destra, infatti, l'ordinata
+del punto aumenta al crescere dell'angolo in tale intervallo.
+L'inversa della restrizione è l'\emph{arcoseno}:
+\[
+\arcsin\colon[-1,1]\longrightarrow
+\left[-\frac\pi2,\frac\pi2\right],
+\qquad \arcsin y=\text{l'unico }x\in[-\pi/2,\pi/2]\text{ con }\sin x=y.
+\]
+È strettamente crescente e dispari; il suo grafico è quello del ramo
+scelto del seno riflesso rispetto a $y=x$.
+
+\begin{schema}
+\begin{tikzpicture}[x=.85cm,y=1.15cm]
+  \draw[asse] (-3.6,0) -- (3.6,0) node[right] {$x$};
+  \draw[asse] (0,-1.4) -- (0,1.5) node[above] {$y$};
+  \draw[black!40,domain=-3.4:3.4,samples=100] plot (\x,{sin(\x r)});
+  \draw[intervallo,domain=-pi/2:pi/2,samples=70] plot (\x,{sin(\x r)});
+  \draw[dotted] (-1.571,0) -- (-1.571,-1) -- (0,-1);
+  \draw[dotted] (1.571,0) -- (1.571,1) -- (0,1);
+  \fill[coloreschema] (-1.571,-1) circle (1.4pt);
+  \fill[coloreschema] (1.571,1) circle (1.4pt);
+  \node[above] at (-1.571,0) {$-\frac\pi2$};
+  \node[below] at (1.571,0) {$\frac\pi2$};
+  \node[above right] at (0,1) {$1$};
+  \node[below right] at (0,-1) {$-1$};
+  \node[below] at (0,-1.8) {Seno; in colore il ramo invertibile};
+\end{tikzpicture}
+\hspace{.6cm}
+\begin{tikzpicture}[x=1.75cm,y=1cm]
+  \draw[asse] (-1.35,0) -- (1.4,0) node[right] {$x$};
+  \draw[asse] (0,-1.9) -- (0,1.95) node[above] {$y$};
+  \draw[intervallo,domain=-pi/2:pi/2,samples=100] plot ({sin(\x r)},\x);
+  \draw[dotted] (-1,0) -- (-1,-1.571) -- (0,-1.571);
+  \draw[dotted] (1,0) -- (1,1.571) -- (0,1.571);
+  \fill[coloreschema] (-1,-1.571) circle (1.4pt);
+  \fill[coloreschema] (1,1.571) circle (1.4pt);
+  \node[above] at (-1,0) {$-1$};
+  \node[below] at (1,0) {$1$};
+  \node[left] at (0,1.571) {$\frac\pi2$};
+  \node[right] at (0,-1.571) {$-\frac\pi2$};
+  \node[below] at (0,-2.07) {Arcoseno};
+\end{tikzpicture}
+\end{schema}
+
+Le identità di inversione vanno lette con i loro domini:
+\[
+\sin(\arcsin y)=y\quad(y\in[-1,1]),\qquad
+\arcsin(\sin x)=x\quad(x\in[-\pi/2,\pi/2]).
+\]
+La seconda non vale per ogni reale: ad esempio
+$\arcsin(\sin\pi)=\arcsin0=0\ne\pi$.
+
+\section{Arcocoseno}
+% Fonte: Lezione 6, p.~23
+
+Il coseno è strettamente decrescente da $1$ a $-1$ su $[0,\pi]$:
+percorrendo la semicirconferenza superiore in senso antiorario,
+l'ascissa diminuisce. Si definisce l'\emph{arcocoseno} come l'inversa
+di questa restrizione:
+\[
+\arccos\colon[-1,1]\longrightarrow[0,\pi],\qquad
+\arccos y=\text{l'unico }x\in[0,\pi]\text{ con }\cos x=y.
+\]
+È strettamente decrescente e soddisfa
+\[
+\cos(\arccos y)=y\quad(y\in[-1,1]),\qquad
+\arccos(\cos x)=x\quad(x\in[0,\pi]).
+\]
+In particolare $\arccos1=0$, $\arccos0=\pi/2$ e $\arccos(-1)=\pi$.
+
+\begin{schema}
+\begin{tikzpicture}[x=.85cm,y=1.15cm]
+  \draw[asse] (-1.9,0) -- (4.5,0) node[right] {$x$};
+  \draw[asse] (0,-1.4) -- (0,1.5) node[above] {$y$};
+  \draw[black!40,domain=-1.7:4.3,samples=100] plot (\x,{cos(\x r)});
+  \draw[intervallo,domain=0:pi,samples=70] plot (\x,{cos(\x r)});
+  \draw[dotted] (3.142,0) -- (3.142,-1) -- (0,-1);
+  \fill[coloreschema] (0,1) circle (1.4pt);
+  \fill[coloreschema] (3.142,-1) circle (1.4pt);
+  \node[above] at (3.142,0) {$\pi$};
+  \node[left] at (0,1) {$1$};
+  \node[left] at (0,-1) {$-1$};
+  \node[below] at (1.2,-1.8) {Coseno; in colore il ramo invertibile};
+\end{tikzpicture}
+\hspace{.6cm}
+\begin{tikzpicture}[x=1.75cm,y=1cm]
+  \draw[asse] (-1.35,0) -- (1.4,0) node[right] {$x$};
+  \draw[asse] (0,-.3) -- (0,3.55) node[above] {$y$};
+  \draw[intervallo,domain=0:pi,samples=100] plot ({cos(\x r)},\x);
+  \draw[dotted] (-1,0) -- (-1,3.142) -- (0,3.142);
+  \fill[coloreschema] (-1,3.142) circle (1.4pt);
+  \fill[coloreschema] (1,0) circle (1.4pt);
+  \node[below] at (-1,0) {$-1$};
+  \node[below] at (1,0) {$1$};
+  \node[right] at (0,3.142) {$\pi$};
+  \node[left] at (0,1.571) {$\frac\pi2$};
+  \node[below] at (0,-.92) {Arcocoseno};
+\end{tikzpicture}
+\end{schema}
+
+\Needspace{31\baselineskip}
+\section{Arcotangente}
+% Fonte: Lezione 6, p.~24
+
+La restrizione $\tan\colon(-\pi/2,\pi/2)\to\R$ è biettiva.
+Geometricamente, mentre il punto percorre la semicirconferenza destra,
+la retta che passa per l'origine incontra la verticale $u=1$ a
+un'altezza che cresce da valori negativi arbitrariamente grandi in
+modulo a valori positivi arbitrariamente grandi. Ogni altezza reale
+è raggiunta una sola volta. Si definisce così l'\emph{arcotangente}:
+\[
+\arctan\colon\R\longrightarrow\left(-\frac\pi2,\frac\pi2\right),
+\qquad \arctan y=\text{l'unico }x\in(-\pi/2,\pi/2)\text{ con }\tan x=y.
+\]
+È strettamente crescente, dispari e limitata. Vale
+\[
+\tan(\arctan y)=y\quad(y\in\R),\qquad
+\arctan(\tan x)=x\quad(x\in(-\pi/2,\pi/2)).
+\]
+Il suo supremo è $\pi/2$ e il suo infimo è $-\pi/2$, ma non ha né
+massimo né minimo: gli estremi dell'intervallo immagine sono esclusi.
+Le rette $y=\pm\pi/2$ indicano le altezze a cui il grafico si avvicina
+per argomenti rispettivamente molto grandi positivi e negativi.
+
+\begin{schema}
+\begin{tikzpicture}[x=.85cm,y=.65cm]
+  \draw[asse] (-2.3,0) -- (4.9,0) node[right] {$x$};
+  \draw[asse] (0,-3) -- (0,3.2) node[above] {$y$};
+  \foreach \a in {-1.571,1.571,4.712}
+    \draw[dashed,black!40] (\a,-2.8) -- (\a,2.8);
+  \draw[intervallo,domain=-1.22:1.22,samples=90] plot (\x,{tan(\x r)});
+  \draw[black!45,domain=1.93:4.36,samples=90] plot (\x,{tan(\x r)});
+  \node[below left] at (-1.571,0) {$-\frac\pi2$};
+  \node[below right] at (1.571,0) {$\frac\pi2$};
+  \node[below] at (4.712,0) {$\frac{3\pi}2$};
+  \node[below] at (1.2,-3.5) {Tangente; in colore il ramo invertibile};
+\end{tikzpicture}
+\hspace{.6cm}
+\begin{tikzpicture}[x=.65cm,y=1.1cm]
+  \draw[asse] (-3.4,0) -- (3.5,0) node[right] {$x$};
+  \draw[asse] (0,-1.95) -- (0,1.95) node[above] {$y$};
+  \draw[dashed,black!45] (-3.2,1.571) -- (3.2,1.571);
+  \draw[dashed,black!45] (-3.2,-1.571) -- (3.2,-1.571);
+  \draw[intervallo,domain=-3.2:3.2,samples=100] plot (\x,{atan(\x)*pi/180});
+  \node[above right] at (0,1.571) {$\frac\pi2$};
+  \node[below right] at (0,-1.571) {$-\frac\pi2$};
+  \node[below] at (0,-2.17) {Arcotangente};
+\end{tikzpicture}
+\end{schema}

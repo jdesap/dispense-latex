@@ -1,0 +1,169 @@
+% !TeX root = ../main.tex
+% Fonti lette sulle immagini: Lezione 3.pdf, pp. 5--7;
+% Lezione 4.pdf, pp. 2--14; Lezione 5.pdf, pp. 2--11.
+% Precisazione rispetto alla formulazione sintetica del manoscritto:
+% il gruppo moltiplicativo dei razionali esclude lo zero.
+\chapter{Sistemi numerici e completezza}
+\label{cap:sistemi-numerici}
+\fonti{Lezioni 3, 4 e 5}
+
+\section{Gli interi e la struttura di gruppo}
+% Fonte: Lezione 3, p.~5
+
+Gli interi estendono i naturali aggiungendo i numeri negativi:
+\[
+  \Z=\{0,\pm1,\pm2,\pm3,\ldots\}.
+\]
+Il vantaggio fondamentale è che ogni elemento ammette un opposto.
+Nei naturali, per esempio, non esiste una soluzione di $1+y=0$;
+negli interi la soluzione è $y=-1$.
+
+La somma è un'operazione interna a $\Z$, cioè sommando due interi
+si ottiene ancora un intero, e soddisfa:
+\begin{enumerate}
+  \item \emph{associatività}: $(x+y)+z=x+(y+z)$ per ogni $x,y,z\in\Z$;
+  \item \emph{esistenza dell'elemento neutro}: $x+0=0+x=x$ per ogni $x\in\Z$;
+  \item \emph{esistenza dell'opposto}: per ogni $x\in\Z$ esiste $-x\in\Z$
+    tale che $x+(-x)=(-x)+x=0$.
+\end{enumerate}
+Queste proprietà esprimono che $(\Z,+)$ è un \emph{gruppo}.
+Poiché vale anche la commutatività $x+y=y+x$, si tratta di un
+gruppo \emph{commutativo}, detto anche \emph{abeliano}.
+
+\section{I razionali come campo ordinato}
+% Fonte: Lezione 3, p.~6
+
+I numeri razionali sono quelli rappresentabili mediante una frazione
+di interi con denominatore non nullo:
+\[
+  \Q=\left\{\frac pq:p,q\in\Z,\ q\ne0\right\}.
+\]
+Frazioni diverse possono rappresentare lo stesso numero:
+$p/q=r/s$ se e solo se $ps=rq$, con $q,s\ne0$. Questo distingue
+il numero razionale dalla particolare scrittura usata per esprimerlo.
+
+La somma e il prodotto di razionali sono ancora razionali.
+La somma rende $(\Q,+)$ un gruppo abeliano, come accade per gli interi.
+Il prodotto rende invece $(\Q\setminus\{0\},\cdot)$ un gruppo abeliano:
+l'elemento neutro è $1$ e l'inverso moltiplicativo di un razionale
+non nullo $p/q$ è $q/p$. Lo zero è escluso dal gruppo moltiplicativo
+perché non ha inverso. Inoltre il prodotto è distributivo rispetto
+alla somma:
+\[
+  x(y+z)=xy+xz.
+\]
+Queste proprietà fanno di $(\Q,+,\cdot)$ un \emph{campo}.
+
+L'ordine usuale $\le$ è totale anche su $\Q$ ed è compatibile con
+le operazioni: sommare lo stesso numero conserva le disuguaglianze,
+e il prodotto di due numeri non negativi è non negativo. Perciò
+si parla di \emph{campo ordinato}.
+
+\section{La proprietà di Archimede nei razionali}
+% Fonte: Lezione 3, p.~6
+
+Per ogni coppia di razionali $x,y>0$ esiste un naturale $n$ tale che
+\[
+  nx>y.
+\]
+Questa è la \emph{proprietà di Archimede}: per quanto piccolo sia
+$x>0$ rispetto a $y$, un multiplo intero di $x$ riesce a superare $y$.
+
+Nei razionali la proprietà si può verificare direttamente. Scriviamo
+$y/x=p/q$, con $p,q$ interi positivi. Poiché $q\ge1$, si ha
+$p/q\le p<p+1$. Basta allora scegliere il naturale $n=p+1$:
+$n>y/x$ e, moltiplicando per $x>0$, si ottiene $nx>y$.
+
+\section{La densità fra razionali}
+% Fonte: Lezione 3, p.~7
+
+Fra due razionali distinti esistono infiniti altri razionali:
+\[
+  \forall x,y\in\Q,\quad x<y
+  \quad\Longrightarrow\quad
+  \text{esistono infiniti }z\in\Q\text{ con }x<z<y.
+\]
+Per trovare un primo esempio basta la media $(x+y)/2$, che è ancora
+razionale e si trova strettamente fra $x$ e $y$. Per verificare anche
+che i valori possibili sono infiniti, consideriamo
+\[
+  z_m=x+\frac{y-x}{m+1},\qquad m\in\N^*.
+\]
+Sono tutti razionali, tutti distinti e tutti interni a $(x,y)$:
+infatti $0<(y-x)/(m+1)<y-x$. A differenza dei naturali o degli interi,
+i razionali non hanno quindi due elementi consecutivi.
+
+\section{La numerabilità dei razionali}
+% Fonte: Lezione 3, p.~7
+
+Un insieme infinito si dice \emph{numerabile} quando i suoi elementi
+si possono mettere in corrispondenza biunivoca con i naturali:
+equivalentemente, si possono elencare senza omissioni e senza
+ripetizioni in una lista indicizzata da $\N$.
+Nonostante la densità appena vista, $\Q$ è numerabile.
+
+Per costruire una lista cominciamo dai razionali positivi. Disponiamo
+le frazioni $p/q$, con $p,q\in\N^*$, in una griglia: il numeratore
+cambia lungo le colonne e il denominatore lungo le righe.
+Percorriamo le diagonali di somma $p+q$ costante, partendo da $p+q=2$,
+poi $3$, poi $4$, e così via. Su ciascuna diagonale prendiamo i
+numeratori in ordine crescente.
+
+\begin{schema}
+\begin{tikzpicture}[x=1.45cm,y=.9cm]
+  \foreach \numeratore in {1,...,4} {
+    \node[black!65] at ({\numeratore-1},.7) {$p=\numeratore$};
+    \foreach \denominatore in {1,...,4} {
+      \node[fill=white,inner sep=4pt] (f-\numeratore-\denominatore)
+        at ({\numeratore-1},{1-\denominatore})
+        {$\dfrac{\numeratore}{\denominatore}$};
+    }
+  }
+  \foreach \denominatore in {1,...,4} {
+    \node[anchor=east,black!65] at (-.55,{1-\denominatore}) {$q=\denominatore$};
+  }
+  \foreach \somma in {3,4,5} {
+    \pgfmathtruncatemacro{\massimo}{\somma-2}
+    \foreach \numeratore in {1,...,\massimo} {
+      \pgfmathtruncatemacro{\denominatore}{\somma-\numeratore}
+      \pgfmathtruncatemacro{\successivo}{\numeratore+1}
+      \pgfmathtruncatemacro{\precedente}{\denominatore-1}
+      \draw[coloreschema,-{Stealth[length=1.7mm]},shorten <=2pt,shorten >=2pt]
+        (f-\numeratore-\denominatore) -- (f-\successivo-\precedente);
+    }
+  }
+  \draw[coloreschema,line width=.9pt] (.86,-1.21) -- (1.14,-.79);
+\end{tikzpicture}
+\par\smallskip
+Le frecce percorrono le prime diagonali. La frazione $2/2$ si scarta,
+perché rappresenta lo stesso numero di $1/1$, già incontrato.
+\end{schema}
+
+La lettura comincia quindi con
+\[
+  \frac11,\quad\frac12,\quad\frac21,\quad\frac13,\quad
+  \frac22,\quad\frac31,\quad\frac14,\quad\ldots
+\]
+e si eliminano ogni volta i numeri già comparsi. Dopo questa
+eliminazione, l'inizio della lista è
+\[
+  1,\quad\frac12,\quad2,\quad\frac13,\quad3,\quad
+  \frac14,\quad\frac23,\quad\frac32,\quad4,\quad\ldots
+\]
+Ogni razionale positivo compare, perché una sua rappresentazione
+$p/q$ si trova sulla diagonale $p+q$, raggiunta dopo un numero finito
+di passi. Il procedimento non si esaurisce, dato che i razionali
+positivi comprendono tutti i naturali positivi. Chiamando la lista
+ottenuta $r_1,r_2,r_3,\ldots$, otteniamo infine una lista di tutti
+i razionali, senza ripetizioni, nell'ordine
+\[
+  0,\ r_1,\ -r_1,\ r_2,\ -r_2,\ r_3,\ -r_3,\ldots
+\]
+e quindi una corrispondenza biunivoca con $\N$. Densità e numerabilità
+descrivono dunque due aspetti differenti: la prima riguarda ciò che
+si trova fra due numeri, la seconda la possibilità di elencare
+tutti gli elementi dell'insieme.
+
+\input{capitoli/04a-reali-e-completezza}
+\input{capitoli/04b-intervalli-ed-estremi}
+\input{capitoli/04c-archimede-ed-esempi}

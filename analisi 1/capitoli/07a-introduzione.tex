@@ -1,0 +1,92 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 7.pdf, pp. 19--21.
+\section{Insiemi aperti e insiemi chiusi}
+
+\begin{definizione}[Insieme aperto]
+Un insieme $A\subseteq\R$ si dice \emph{aperto} se è un'unione
+di intervalli aperti: esiste una famiglia $(I_\alpha)_{\alpha\in J}$
+di intervalli aperti tale che
+\[
+A=\bigcup_{\alpha\in J}I_\alpha.
+\]
+\end{definizione}
+
+La famiglia può avere un numero finito o infinito di elementi;
+si ammette anche la famiglia vuota, la cui unione è $\varnothing$.
+Ecco alcuni esempi fondamentali:
+\begin{itemize}
+  \item $\R=(-\infty,+\infty)$ è aperto;
+  \item $\varnothing$ è aperto, come unione della famiglia vuota;
+  \item $\R\setminus\Z=\bigcup_{n\in\Z}(n,n+1)$ è aperto;
+  \item $\R^*=\R\setminus\{0\}=(-\infty,0)\cup(0,+\infty)$ è aperto.
+\end{itemize}
+L'insieme di tutti gli aperti si chiama \emph{topologia usuale} di $\R$.
+
+\begin{definizione}[Insieme chiuso]
+Un insieme $B\subseteq\R$ si dice \emph{chiuso} se il complemento
+$B^c=\R\setminus B$ è aperto.
+\end{definizione}
+
+Per verificare che un insieme è chiuso basta quindi descrivere il
+complemento come unione di intervalli aperti:
+\begin{itemize}
+  \item $\R$ è chiuso, perché $\R^c=\varnothing$ è aperto;
+  \item $\varnothing$ è chiuso, perché $\varnothing^c=\R$ è aperto;
+  \item per $a\le b$, $[a,b]$ è chiuso, perché
+  $[a,b]^c=(-\infty,a)\cup(b,+\infty)$;
+  \item $\{0\}$ è chiuso, perché il suo complemento è
+  $(-\infty,0)\cup(0,+\infty)$;
+  \item $[a,+\infty)$ è chiuso, perché ha complemento $(-\infty,a)$.
+\end{itemize}
+Aperto e chiuso non sono proprietà mutuamente esclusive:
+$\varnothing$ e $\R$ le possiedono entrambe. Esistono anche insiemi
+che non possiedono nessuna delle due, come vedremo per $[0,1)$.
+
+\section{Il criterio locale di apertura}
+
+\begin{proposizione}[Caratterizzazione degli aperti]
+\label{prop:aperti-criterio}
+Un insieme $A\subseteq\R$ è aperto se e solo se
+\[
+\forall x\in A\ \exists\varepsilon>0:
+\quad (x-\varepsilon,x+\varepsilon)\subseteq A.
+\]
+\end{proposizione}
+\begin{proof}
+Se $A$ è un'unione di intervalli aperti e $x\in A$, allora $x$
+appartiene a uno di tali intervalli, diciamo $I$. Poiché $x$ non è
+un estremo di $I$, si può scegliere $\varepsilon>0$ abbastanza
+piccolo affinché $(x-\varepsilon,x+\varepsilon)\subseteq I\subseteq A$.
+Per $I=(a,b)$ con estremi finiti basta, per esempio,
+$\varepsilon=\min\{x-a,b-x\}/2$; per una semiretta basta considerare
+la distanza dall'unico estremo finito, e per $I=\R$ ogni raggio va bene.
+
+Viceversa, per ogni $x\in A$ scegliamo un intervallo
+$I_x=(x-\varepsilon_x,x+\varepsilon_x)\subseteq A$ come nell'ipotesi.
+Allora
+\[
+A=\bigcup_{x\in A}I_x:
+\]
+ogni punto $x\in A$ appartiene al proprio $I_x$, e tutti gli $I_x$
+sono contenuti in $A$. È una rappresentazione di $A$ come unione di
+intervalli aperti. Se $A=\varnothing$, entrambi i criteri valgono
+con la convenzione della famiglia vuota.
+\end{proof}
+
+La proprietà è locale: intorno a ogni punto di $A$ si deve poter
+ritagliare un piccolo intervallo che resti interamente in $A$.
+Il raggio può dipendere dal punto; non serve un unico raggio valido
+per tutti.
+
+\begin{esempio}
+L'insieme $A=[0,1)$ non è aperto: $0\in A$, ma ogni intervallo
+$(-\varepsilon,\varepsilon)$ contiene punti negativi, esterni ad $A$.
+Non è neppure chiuso, perché
+\[
+A^c=(-\infty,0)\cup[1,+\infty)
+\]
+non è aperto: contiene $1$, ma nessun intervallo aperto centrato in
+$1$ è contenuto nel complemento. Basta infatti scegliere, per ogni
+$\varepsilon>0$, il punto
+$1-\min\{\varepsilon/2,1/2\}\in A\cap(1-\varepsilon,1+\varepsilon)$.
+\end{esempio}

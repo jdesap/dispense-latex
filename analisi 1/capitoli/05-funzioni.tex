@@ -1,0 +1,179 @@
+% !TeX root = ../main.tex
+\chapter{Funzioni: definizioni e proprietà generali}
+\label{cap:funzioni}
+\fonti{Lezioni 5 e 6}
+
+\section{Dominio, codominio e immagine}
+% Fonte: Lezione 5, p.~12
+
+\begin{definizione}
+Una \emph{funzione} $f\colon X\to Y$ è una legge che associa a ogni
+elemento $x\in X$ uno e un solo elemento $y\in Y$. Scriviamo
+\[
+f\colon X\longrightarrow Y,\qquad x\longmapsto y=f(x).
+\]
+L'insieme $X$ è il \emph{dominio}, $Y$ il \emph{codominio}; $f(x)$ è
+l'\emph{immagine di $x$ tramite $f$}. L'\emph{insieme immagine} è
+\[
+\operatorname{Im}(f)=f(X)=\{f(x):x\in X\}\subseteq Y.
+\]
+\end{definizione}
+
+La condizione «uno e un solo» riguarda il valore associato a ciascun
+elemento del dominio. Elementi distinti possono avere la stessa immagine;
+inoltre un elemento del codominio può non essere raggiunto. Perciò
+codominio e immagine non coincidono necessariamente.
+
+\section{Iniettività, suriettività e biettività}
+% Fonte: Lezione 5, p.~13
+
+\begin{definizione}
+Una funzione $f\colon X\to Y$ si dice:
+\begin{itemize}
+  \item \emph{iniettiva} se elementi distinti hanno immagini distinte:
+  \[
+  \forall x_1,x_2\in X,\quad
+  x_1\ne x_2\ \Longrightarrow\ f(x_1)\ne f(x_2);
+  \]
+  equivalentemente, $f(x_1)=f(x_2)$ implica $x_1=x_2$;
+  \item \emph{suriettiva} se ogni elemento del codominio è raggiunto:
+  \[
+  \forall y\in Y\ \exists x\in X:\ f(x)=y,
+  \qquad\text{ossia }\operatorname{Im}(f)=Y;
+  \]
+  \item \emph{biettiva} se è sia iniettiva sia suriettiva.
+\end{itemize}
+\end{definizione}
+
+Per una biezione, dunque, l'equazione $f(x)=y$ ha esattamente una
+soluzione $x\in X$ per ogni $y\in Y$: la suriettività dà l'esistenza,
+l'iniettività dà l'unicità.
+
+\begin{esempio}
+La funzione $f\colon\R\to\R$, $f(x)=x^2$, non è iniettiva perché
+$f(1)=f(-1)=1$, e non è suriettiva perché non assume valori negativi.
+Se il codominio diventa $[0,+\infty)$, la funzione è suriettiva.
+Restringendo anche il dominio a $[0,+\infty)$ diventa biettiva.
+Dominio e codominio sono quindi parte essenziale della descrizione di
+una funzione.
+\end{esempio}
+
+\section{Composizione e suo dominio}
+% Fonte: Lezione 5, pp.~14--15
+
+Siano $f\colon X\to Y$ e $g\colon V\to Z$. Per calcolare $g(f(x))$
+occorre che il risultato della prima funzione appartenga al dominio
+della seconda. Poniamo pertanto
+\[
+X'=\{x\in X:f(x)\in V\}.
+\]
+La \emph{funzione composta} è
+\[
+g\circ f\colon X'\longrightarrow Z,\qquad
+(g\circ f)(x)=g(f(x)).
+\]
+Se $f(X)\subseteq V$, il dominio della composta è tutto $X$; se c'è
+soltanto un'intersezione non vuota fra $f(X)$ e $V$, la composta è
+definita sul sottoinsieme $X'$. In assenza di intersezione, $X'$ è vuoto.
+L'ordine di lettura è da destra verso sinistra: si applica prima $f$ e
+poi $g$.
+
+\begin{schema}
+\begin{tikzpicture}[>=Stealth]
+  \node (X) at (0,0) {$X'$};
+  \node (V) at (4,0) {$V$};
+  \node (Z) at (8,0) {$Z$};
+  \draw[->,coloreschema] (X) -- node[above] {$f|_{X'}$} (V);
+  \draw[->,coloreschema] (V) -- node[above] {$g$} (Z);
+  \draw[->] (X) to[bend right=22] node[below] {$g\circ f$} (Z);
+\end{tikzpicture}
+\end{schema}
+
+\begin{esempio}
+Prendiamo $f(x)=1+x^2$, con dominio $\R$, e $g(y)=\sqrt y$, con
+dominio $[0,+\infty)$. Si ottiene
+\[
+(f\circ g)(x)=1+(\sqrt x)^2=1+x,
+\qquad \operatorname{dom}(f\circ g)=[0,+\infty),
+\]
+mentre
+\[
+(g\circ f)(x)=\sqrt{1+x^2},
+\qquad \operatorname{dom}(g\circ f)=\R.
+\]
+La composizione, in generale, non è commutativa: qui differiscono sia
+le formule sia i domini. Anche quando una formula si semplifica, il
+dominio della composta resta quello imposto dalle operazioni originarie.
+\end{esempio}
+
+\section{Grafico, controimmagini e funzione inversa}
+% Fonte: Lezione 5, p.~16; lezione 6, p.~2
+
+\begin{definizione}
+Il \emph{grafico} di $f\colon X\to Y$ è l'insieme
+\[
+\operatorname{graf}(f)=\{(x,f(x)):x\in X\}\subseteq X\times Y.
+\]
+La \emph{controimmagine}, o \emph{fibra}, di $y\in Y$ è
+\[
+f^{-1}(\{y\})=\{x\in X:f(x)=y\}.
+\]
+Più in generale, per $B\subseteq Y$ si pone
+$f^{-1}(B)=\{x\in X:f(x)\in B\}$.
+\end{definizione}
+
+La controimmagine è un insieme ed è definita per ogni funzione. Se $f$
+è iniettiva, la fibra di un elemento $y\in\operatorname{Im}(f)$ contiene
+esattamente un elemento: non è vuota perché $y$ appartiene all'immagine,
+e non ne può contenere due per l'iniettività. Questo consente di
+definire una nuova funzione.
+
+\begin{definizione}
+Se $f\colon X\to Y$ è iniettiva, la \emph{funzione inversa} è
+\[
+f^{-1}\colon\operatorname{Im}(f)\longrightarrow X,
+\qquad f^{-1}(y)=\text{l'unico }x\in X\text{ tale che }f(x)=y.
+\]
+\end{definizione}
+
+La scrittura $f^{-1}(y)$ indica qui un elemento, mentre
+$f^{-1}(\{y\})=\{f^{-1}(y)\}$ indica il corrispondente insieme con un
+solo elemento. Inoltre $f^{-1}$ non indica il reciproco $1/f$.
+L'inversa è definita sull'intero codominio $Y$ se $f$ è biettiva.
+
+\begin{proposizione}
+L'inversa di una funzione iniettiva soddisfa
+\[
+f^{-1}\circ f=\operatorname{Id}_X,
+\qquad f\circ f^{-1}=\operatorname{Id}_{\operatorname{Im}(f)},
+\]
+dove $\operatorname{Id}_A\colon A\to A$, $a\mapsto a$, è la funzione
+identità su $A$.
+\end{proposizione}
+\begin{proof}
+Per $x\in X$, l'unico elemento che $f$ manda in $f(x)$ è $x$ stesso;
+quindi $f^{-1}(f(x))=x$. Per $y\in\operatorname{Im}(f)$, la definizione
+di $f^{-1}(y)$ dà direttamente $f(f^{-1}(y))=y$.
+\end{proof}
+
+Quando $X,Y\subseteq\R$, il punto $(x,y)$ appartiene al grafico di $f$
+se e solo se $(y,x)$ appartiene al grafico dell'inversa: i due grafici
+sono simmetrici rispetto alla bisettrice $y=x$.
+
+\begin{schema}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[asse] (-.3,0) -- (4.7,0) node[right] {$x$};
+  \draw[asse] (0,-.3) -- (0,4.7) node[above] {$y$};
+  \draw[dashed,black!45] (0,0) -- (4.4,4.4) node[above right] {$y=x$};
+  \draw[intervallo,domain=0:2.05,samples=60] plot (\x,{\x*\x});
+  \draw[thick,orange!80!black,domain=0:2.05,samples=60]
+    plot ({\x*\x},\x);
+  \node[coloreschema,left] at (1.8,3.7) {$y=x^2,\ x\ge0$};
+  \node[orange!80!black,below] at (3.4,1.7) {$y=\sqrt x$};
+  \fill[coloreschema] (1.5,2.25) circle (1.5pt);
+  \fill[orange!80!black] (2.25,1.5) circle (1.5pt);
+  \draw[dotted] (1.5,2.25) -- (2.25,1.5);
+\end{tikzpicture}
+\end{schema}
+
+\input{capitoli/05a-funzioni-reali}

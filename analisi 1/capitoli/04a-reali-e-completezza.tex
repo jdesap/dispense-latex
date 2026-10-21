@@ -1,0 +1,125 @@
+% !TeX root = ../main.tex
+% Lezione 4.pdf, pp. 2--5. Le precisazioni sulle sezioni e sui quantificatori
+% completano la formulazione sintetica del manoscritto.
+\section{I limiti dei razionali: l'irrazionalità della radice di due}
+% Fonte: Lezione 4, p.~2
+
+I razionali permettono di eseguire le quattro operazioni, con la sola
+esclusione della divisione per zero, ma non risolvono ogni equazione
+algebrica. L'esempio fondamentale è $x^2=2$: la sua soluzione positiva,
+indicata con $\sqrt2$, non è razionale.
+
+\begin{proposizione}
+Non esiste $d\in\Q$ tale che $d^2=2$; in particolare $\sqrt2\notin\Q$.
+\end{proposizione}
+\begin{proof}
+Supponiamo per assurdo che $d=p/q$, con $p,q\in\Z$, $q\ne0$ e
+la frazione ridotta ai minimi termini, soddisfi $d^2=2$. Si avrebbe
+\[
+  p^2=2q^2.
+\]
+Quindi $p^2$ è pari e anche $p$ deve essere pari: infatti il quadrato
+di un dispari $2h+1$ è $4h(h+1)+1$, che è dispari. Scriviamo allora
+$p=2k$. Sostituendo nella relazione precedente otteniamo
+\[
+  4k^2=2q^2,\qquad q^2=2k^2.
+\]
+Anche $q^2$, e dunque $q$, è pari. Ma allora $p$ e $q$ sono entrambi
+divisibili per $2$, in contraddizione con la scelta di una frazione
+ridotta ai minimi termini.
+\end{proof}
+
+\section{I reali e l'assioma di Dedekind}
+% Fonte: Lezione 4, pp.~3--4
+
+Per descrivere la retta numerica si introduce il campo dei numeri reali
+$\R$, che contiene $\Q$. La somma e il prodotto sono operazioni interne
+e l'ordine $\le$ è totale. Le proprietà algebriche e di compatibilità
+con l'ordine sono le seguenti:
+\begin{enumerate}
+  \item la somma è associativa e commutativa e ha elemento neutro $0$;
+  \item ogni $x\in\R$ ha un opposto $-x$, con $x+(-x)=0$;
+  \item il prodotto è associativo e commutativo e ha elemento neutro $1$,
+    con $1\ne0$;
+  \item ogni $x\ne0$ ha un reciproco $x^{-1}$, con $xx^{-1}=1$;
+  \item il prodotto è distributivo rispetto alla somma:
+    $x(y+z)=xy+xz$;
+  \item se $a\le b$, allora $a+c\le b+c$ per ogni $c\in\R$;
+  \item se $a\le b$ e $c\ge0$, allora $ac\le bc$.
+\end{enumerate}
+Queste proprietà fanno di $\R$ un campo ordinato. La proprietà che lo
+distingue da $\Q$ è la \emph{completezza}, espressa qui dall'assioma
+di Dedekind.
+
+\begin{assioma}[Dedekind]
+\label{ass:dedekind}
+Siano $A,B\subseteq\R$ non vuoti e tali che $a\le b$ per ogni
+$a\in A$ e ogni $b\in B$. Allora esiste $c\in\R$ per cui
+\[
+  a\le c\le b\qquad\text{per ogni }a\in A\text{ e ogni }b\in B.
+\]
+\end{assioma}
+
+Il numero $c$ separa i due insiemi: si trova a destra di tutti gli
+elementi di $A$ e a sinistra di tutti quelli di $B$. L'ordine dei
+quantificatori richiede un valore di $c$ che funzioni
+contemporaneamente per tutte le coppie:
+\[
+  \exists c\in\R\ \forall a\in A\ \forall b\in B:\ a\le c\le b.
+\]
+L'assioma afferma l'esistenza, senza richiedere che il separatore
+sia determinato in modo univoco. Per esempio,
+se $A=\{0\}$ e $B=\{1\}$, ogni $c\in[0,1]$ è un separatore.
+
+\subsection{Perché l'assioma fallisce nei razionali}
+
+Consideriamo gli insiemi
+\[
+  A=\{x\in\Q:x\ge0,\ x^2\le2\},\qquad
+  B=\{x\in\Q:x\ge0,\ x^2\ge2\}.
+\]
+Sono entrambi non vuoti: $1\in A$ e $2\in B$. Inoltre $a\le b$
+per ogni $a\in A$ e $b\in B$, perché sono non negativi e
+$a^2\le2\le b^2$. Tuttavia nessun razionale può separare $A$ e $B$.
+
+Per verificarlo, un eventuale separatore razionale $c$ dovrebbe
+soddisfare $1\le c\le2$. Se $c^2<2$, scegliamo un razionale
+\[
+  0<h<\min\left\{1,\frac{2-c^2}{2c+1}\right\}.
+\]
+Allora $(c+h)^2<c^2+(2c+1)h<2$, quindi $c+h\in A$ ma $c+h>c$:
+il separatore non sarebbe a destra di tutti gli elementi di $A$.
+Se invece $c^2>2$, scegliamo un razionale
+\[
+  0<h<\min\left\{1,\frac{c^2-2}{2c}\right\}.
+\]
+Si ha $c-h>0$ e $(c-h)^2>c^2-2ch>2$, perciò $c-h\in B$ ma
+$c-h<c$, ancora una contraddizione. Rimane soltanto la possibilità
+$c^2=2$, esclusa dall'irrazionalità appena dimostrata. In $\R$ il
+separatore è il punto $\sqrt2$ che manca a $\Q$.
+
+\subsection{L'idea delle sezioni di Dedekind}
+% Fonte: Lezione 4, p.~5
+
+È possibile costruire i reali a partire dai razionali mediante le
+\emph{sezioni di Dedekind}. Si considera una coppia $(A,B)$ di sottoinsiemi non vuoti
+di $\Q$ che soddisfi
+\[
+  A\cap B=\varnothing,\qquad A\cup B=\Q,\qquad
+  a\le b\quad\forall a\in A,\ \forall b\in B.
+\]
+La coppia descrive un \emph{taglio} della retta razionale in una parte
+inferiore e una superiore. Poiché le due parti sono disgiunte,
+in realtà $a<b$ per ogni $a\in A$, $b\in B$.
+
+Per rendere la rappresentazione univoca occorre fissare una convenzione
+sull'estremo: scegliamo che $A$ non abbia massimo. Infatti, per un
+razionale $r$, sia la coppia
+$\bigl(\{q:q<r\},\{q:q\ge r\}\bigr)$ sia la coppia
+$\bigl(\{q:q\le r\},\{q:q>r\}\bigr)$ soddisfano le tre condizioni
+precedenti, pur descrivendo lo stesso punto. La convenzione sceglie
+la prima. Con questa precisazione, tali sezioni possono essere usate,
+con opportune operazioni e ordine, per costruire un modello di $\R$.
+Un taglio può rappresentare anche un punto irrazionale: in quel caso
+nessuna delle due parti contiene un estremo razionale nel punto
+di separazione.

@@ -1,0 +1,33 @@
+\documentclass[11pt,a4paper,oneside]{report}
+\input{preambolo}
+
+\title{Appunti di geometria 1\\[.8em]\large Prof. Francesco Bottacin}
+\author{Jude De Sa'Pinto}
+\date{}
+
+\begin{document}
+\pagenumbering{roman}
+\hypersetup{pageanchor=false}
+\maketitle
+\hypersetup{pageanchor=true}
+\tableofcontents
+\clearpage
+
+\chapter*{Convenzioni e notazioni}
+\addcontentsline{toc}{chapter}{Convenzioni e notazioni}
+La lettera $K$ indica un campo; gli esempi useranno soprattutto $\Q$ e
+$\R$. Le operazioni in uno spazio vettoriale su $K$ sono indicate con $+$
+e con la giustapposizione $\lambda v$. Scriviamo $0_V$ per il vettore nullo
+e $0_K$ per lo scalare nullo, omettendo il pedice quando il contesto è
+chiaro. Con $\langle S\rangle$ indichiamo il sottospazio generato da $S$.
+Tutte le combinazioni lineari considerate sono finite, anche se $S$ è
+infinito. Per il polinomio nullo non fissiamo un grado; quando occorre una
+convenzione, scriviamo $\deg 0=-\infty$.
+
+\clearpage
+\pagenumbering{arabic}
+\input{capitoli/01-spazi-e-sottospazi}
+\input{capitoli/02-generatori-basi-dimensione}
+\input{capitoli/03-equazioni-prodotti-quozienti}
+\input{capitoli/04-somme-e-complementi}
+\end{document}

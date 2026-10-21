@@ -1,0 +1,237 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 7.pdf, pp. 10--18.
+\section{Funzioni definite a tratti}
+
+\subsection{Parte positiva e parte negativa}
+
+Per ogni reale $x$ si definiscono la \emph{parte positiva} e la
+\emph{parte negativa} mediante
+\[
+x^+=\max\{x,0\}=\begin{cases}x,&x\ge0,\\0,&x<0,\end{cases}
+\qquad
+x^-=-\min\{x,0\}=\begin{cases}-x,&x\le0,\\0,&x>0.\end{cases}
+\]
+Entrambe sono non negative: la parte negativa misura il modulo della
+componente negativa e non è un numero negativo. Distinguendo i casi
+$x\ge0$ e $x<0$ si verificano le identità
+\[
+\boxed{x=x^+-x^-,\qquad |x|=x^++x^-}.
+\]
+Le stesse definizioni si applicano punto per punto a una funzione:
+$f^+(x)=\max\{f(x),0\}$ e $f^-(x)=\max\{-f(x),0\}$, con
+$f=f^+-f^-$ e $|f|=f^++f^-$.
+
+\begin{schema}
+\begin{tikzpicture}[x=1cm,y=.85cm]
+  \draw[asse] (-2.4,0) -- (2.5,0) node[right] {$x$};
+  \draw[asse] (0,-.3) -- (0,2.6) node[above] {$y$};
+  \draw[intervallo] (-2.1,0) -- (0,0) -- (2.1,2.1);
+  \node[above left] at (2.1,2.1) {$x^+$};
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[x=1cm,y=.85cm]
+  \draw[asse] (-2.4,0) -- (2.5,0) node[right] {$x$};
+  \draw[asse] (0,-.3) -- (0,2.6) node[above] {$y$};
+  \draw[intervallo] (-2.1,2.1) -- (0,0) -- (2.1,0);
+  \node[above right] at (-2.1,2.1) {$x^-$};
+\end{tikzpicture}
+\end{schema}
+
+\subsection{Parte intera e parte frazionaria}
+\enlargethispage{2pt}
+
+\begin{definizione}
+La \emph{parte intera} di $x\in\R$, o \emph{floor}, è l'unico
+intero $m$ tale che $m\le x<m+1$. Si indica con $\lfloor x\rfloor$.\footnote{Si
+usano anche $[x]$ per la parte intera e $(x)$ per la parte frazionaria;
+qui preferiamo $\lfloor x\rfloor$ e $\{x\}$ per distinguere chiaramente
+le due funzioni dalle altre parentesi.}
+La \emph{parte frazionaria} è $\{x\}=x-\lfloor x\rfloor$.
+\end{definizione}
+
+L'esistenza dell'intero richiesto segue dalla proprietà di Archimede
+e dal principio del minimo intero, come nel passaggio usato per
+dimostrare la densità dei razionali. L'unicità segue dal fatto che
+due interi distinti distano almeno $1$.
+Per ogni reale $x$ si ha $0\le\{x\}<1$; dunque
+\[
+\lfloor\,\cdot\,\rfloor\colon\R\to\Z,\qquad
+\{\,\cdot\,\}\colon\R\to[0,1).
+\]
+Il grafico della parte intera ha gradini orizzontali: per
+$m\le x<m+1$ il valore è $m$. Quello della parte frazionaria ha
+segmenti di pendenza $1$: sullo stesso intervallo vale $x-m$.
+Nel primo punto di ogni tratto l'estremo è incluso, nell'ultimo è
+escluso. Inoltre la parte frazionaria è periodica di periodo principale
+$1$, perché $\lfloor x+1\rfloor=\lfloor x\rfloor+1$.
+
+\begin{esempio}
+Si ha $\lfloor2{,}7\rfloor=2$ e $\{2{,}7\}=0{,}7$, ma
+$\lfloor-1{,}3\rfloor=-2$ e $\{-1{,}3\}=0{,}7$.
+La parte intera arrotonda verso il basso, anche per i negativi;
+non coincide con l'eliminazione delle cifre dopo la virgola.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=.8cm,y=.65cm]
+  \draw[asse] (-2.3,0) -- (3.4,0) node[right] {$x$};
+  \draw[asse] (0,-2.4) -- (0,3.4) node[above] {$y$};
+  \foreach \m in {-2,-1,0,1,2} {
+    \draw[intervallo] (\m,\m) -- ({\m+1},\m);
+    \fill[coloreschema] (\m,\m) circle (1.7pt);
+    \draw[estremo] ({\m+1},\m) circle (1.7pt);
+  }
+  \draw[intervallo] (3,3) -- (3.25,3);
+  \fill[coloreschema] (3,3) circle (1.7pt);
+  \foreach \m in {-2,-1,1,2,3} \node[below=4pt] at (\m,0) {$\m$};
+  \node[below] at (.5,-2.9) {$y=\lfloor x\rfloor$};
+\end{tikzpicture}
+\hspace{.6cm}
+\begin{tikzpicture}[x=.8cm,y=1.3cm]
+  \draw[asse] (-2.3,0) -- (3.4,0) node[right] {$x$};
+  \draw[asse] (0,-.4) -- (0,1.6) node[above] {$y$};
+  \draw[dotted,black!40] (-2.1,1) -- (3.1,1);
+  \foreach \m in {-2,-1,0,1,2} {
+    \draw[intervallo] (\m,0) -- ({\m+1},1);
+    \fill[coloreschema] (\m,0) circle (1.7pt);
+    \draw[estremo] ({\m+1},1) circle (1.7pt);
+  }
+  \draw[intervallo] (3,0) -- (3.25,.25);
+  \fill[coloreschema] (3,0) circle (1.7pt);
+  \foreach \m in {-2,-1,1,2,3} \node[below=4pt] at (\m,0) {$\m$};
+  \node[above left] at (0,1) {$1$};
+  \node[below] at (.5,-.8) {$y=\{x\}$};
+\end{tikzpicture}
+\end{schema}
+
+\section{Trasformazioni dei grafici}
+% Fonte: Lezione 7.pdf, p. 13.
+
+Dal grafico di $y=f(x)$ si possono ottenere altri grafici seguendo
+come cambia un suo punto $(x,f(x))$:
+\begin{itemize}
+  \item $y=f(x)+a$: ogni punto diventa $(x,f(x)+a)$; il grafico si
+  trasla verticalmente di $a$, verso l'alto se $a>0$ e verso il basso
+  se $a<0$;
+  \item $y=f(x-b)$: ogni punto $(u,f(u))$ diventa $(u+b,f(u))$;
+  la traslazione è orizzontale, verso destra se $b>0$ e verso sinistra
+  se $b<0$. Il dominio diventa $D+b=\{u+b:u\in D\}$;
+  \item $y=-f(x)$: ogni punto diventa $(x,-f(x))$; il grafico viene
+  riflesso rispetto all'asse $x$.
+\end{itemize}
+In particolare, il segno meno \emph{dentro} l'argomento di $f(x-b)$
+non indica uno spostamento verso sinistra: per conservare lo stesso
+argomento bisogna aumentare $x$ di $b$.
+
+\begin{schema}
+\begin{tikzpicture}[x=.8cm,y=.55cm]
+  \draw[asse] (-.7,0) -- (3.5,0) node[right] {$x$};
+  \draw[asse] (0,-2.3) -- (0,4.2) node[above] {$y$};
+  \draw[black!45,domain=-.4:3.05,samples=90] plot (\x,{\x*(\x-2)^2});
+  \draw[intervallo,domain=-.4:3.05,samples=90] plot (\x,{\x*(\x-2)^2+1});
+  \node[below] at (1.3,-2.9) {$f(x)+1$};
+\end{tikzpicture}
+\hspace{.35cm}
+\begin{tikzpicture}[x=.8cm,y=.55cm]
+  \draw[asse] (-.7,0) -- (4.5,0) node[right] {$x$};
+  \draw[asse] (0,-2.3) -- (0,4.2) node[above] {$y$};
+  \draw[black!45,domain=-.4:3.05,samples=90] plot (\x,{\x*(\x-2)^2});
+  \draw[intervallo,domain=.6:4.05,samples=90] plot (\x,{(\x-1)*(\x-3)^2});
+  \node[below] at (1.8,-2.9) {$f(x-1)$};
+\end{tikzpicture}
+\hspace{.35cm}
+\begin{tikzpicture}[x=.8cm,y=.55cm]
+  \draw[asse] (-.7,0) -- (3.5,0) node[right] {$x$};
+  \draw[asse] (0,-3.6) -- (0,3.5) node[above] {$y$};
+  \draw[black!45,domain=-.4:3.05,samples=90] plot (\x,{\x*(\x-2)^2});
+  \draw[intervallo,domain=-.4:3.05,samples=90] plot (\x,{-\x*(\x-2)^2});
+  \node[below] at (1.3,-4.1) {$-f(x)$};
+\end{tikzpicture}
+
+In grigio il grafico iniziale; in colore la trasformazione indicata.
+\end{schema}
+
+\section{Un esercizio su dominio, monotonia e inversa}
+% Fonte: Lezione 7.pdf, pp. 14--18. Corretto il titolo «non decr.»
+% della p. 16, incompatibile con il calcolo decrescente svolto sotto.
+
+Studiamo la funzione
+\[
+f(x)=4\arcsin\!\bigl(1-\ln(x-1)\bigr).
+\]
+Cerchiamo il dominio naturale, il verso di monotonia e l'insieme dei
+valori $y\in\R$ per i quali $f(x)=y$ ammette una soluzione.
+
+\subsection{Determinazione del dominio}
+
+Il logaritmo richiede $x-1>0$; l'arcoseno richiede che il proprio
+argomento sia in $[-1,1]$. Quindi
+\begin{align*}
+x\in D
+&\ \Longleftrightarrow\
+\begin{cases}x>1,\\-1\le1-\ln(x-1)\le1\end{cases}\\
+&\ \Longleftrightarrow\
+\begin{cases}x>1,\\0\le\ln(x-1)\le2\end{cases}\\
+&\ \Longleftrightarrow\
+\begin{cases}x>1,\\1\le x-1\le e^2.\end{cases}
+\end{align*}
+L'ultima doppia disuguaglianza equivale a $2\le x\le1+e^2$ e
+implica già $x>1$. Pertanto
+\[
+\boxed{D=[2,1+e^2]}.
+\]
+
+\subsection{Monotonia}
+
+Siano $x_1,x_2\in D$ con $x_1<x_2$. Il logaritmo è strettamente
+crescente, perciò
+\[
+x_1-1<x_2-1
+\ \Longrightarrow\ \ln(x_1-1)<\ln(x_2-1)
+\ \Longrightarrow\ 1-\ln(x_1-1)>1-\ln(x_2-1).
+\]
+L'arcoseno è strettamente crescente e moltiplicare per $4>0$
+conserva il verso: ne segue $f(x_1)>f(x_2)$. Dunque $f$ è
+\emph{strettamente decrescente}, quindi iniettiva sul proprio dominio.
+
+\subsection{Immagine, equazione e inversa}
+
+Poiché l'arcoseno assume valori in $[-\pi/2,\pi/2]$, una condizione
+necessaria per $f(x)=y$ è $-2\pi\le y\le2\pi$. Sotto questa
+condizione $y/4$ appartiene proprio all'intervallo in cui seno e
+arcoseno sono inversi, e possiamo procedere mediante equivalenze:
+\begin{align*}
+4\arcsin\!\bigl(1-\ln(x-1)\bigr)=y
+&\ \Longleftrightarrow\ 1-\ln(x-1)=\sin(y/4)\\
+&\ \Longleftrightarrow\ \ln(x-1)=1-\sin(y/4)\\
+&\ \Longleftrightarrow\ x=1+e^{\,1-\sin(y/4)}.
+\end{align*}
+Per ogni $y\in[-2\pi,2\pi]$ il valore $1-\sin(y/4)$ è in $[0,2]$;
+quindi la soluzione trovata appartiene a $[2,1+e^2]$ ed è valida.
+Per i valori di $y$ esterni all'intervallo non ci sono soluzioni.
+In conclusione,
+\[
+\operatorname{Im}(f)=[-2\pi,2\pi],\qquad
+f^{-1}(y)=1+e^{\,1-\sin(y/4)}\quad(-2\pi\le y\le2\pi).
+\]
+La soluzione è unica per l'iniettività. Gli estremi sono raggiunti:
+$f(2)=2\pi$ è il massimo e $f(1+e^2)=-2\pi$ è il minimo.
+
+\begin{schema}
+\begin{tikzpicture}[x=.85cm,y=.4cm]
+  \draw[asse] (-.4,0) -- (9.2,0) node[right] {$x$};
+  \draw[asse] (0,-7.5) -- (0,7.6) node[above] {$y$};
+  \draw[intervallo,domain=-pi/2:pi/2,samples=100]
+    plot ({1+exp(1-sin(\x r))},{4*\x});
+  \draw[dotted] (2,0) -- (2,{2*pi}) -- (0,{2*pi});
+  \draw[dotted] ({1+exp(2)},0) -- ({1+exp(2)},{-2*pi}) -- (0,{-2*pi});
+  \fill[coloreschema] (2,{2*pi}) circle (1.8pt);
+  \fill[coloreschema] ({1+exp(2)},{-2*pi}) circle (1.8pt);
+  \node[below] at (2,0) {$2$};
+  \node[above] at ({1+exp(2)},0) {$1+e^2$};
+  \node[left] at (0,{2*pi}) {$2\pi$};
+  \node[left] at (0,{-2*pi}) {$-2\pi$};
+\end{tikzpicture}
+
+Il grafico collega gli estremi inclusi $(2,2\pi)$ e $(1+e^2,-2\pi)$.
+\end{schema}

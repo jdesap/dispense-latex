@@ -1,0 +1,30 @@
+{
+  "data": "2026-10-20",
+  "stato": "completo e revisionato",
+  "pagine_pdf": 52,
+  "lezioni": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "pagine_contenuto_fonti": 110,
+  "provenienza_pdf": [
+    "Lezione 1",
+    "Lezione 1",
+    "Lezioni 2 e 3",
+    "Lezioni 3, 4 e 5",
+    "Lezioni 5 e 6",
+    "Lezioni 6 e 7",
+    "Lezioni 7 e 8"
+  ],
+  "errori_compilazione": [],
+  "formule_display_precedenti_conservate": true,
+  "tikz_precedenti_conservati": true,
+  "fonti_originali_integre": true,
+  "pdf_sha256": "005139a067148ac54aca9b38e51832254e3c4500daa3a8fc2986763f5c2f32d4"
+}

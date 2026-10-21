@@ -1,0 +1,69 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[a4paper,margin=27mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{needspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\definecolor{coloreschema}{RGB}{30,77,112}
+\hypersetup{
+  unicode=true,
+  hidelinks,
+  pdftitle={Appunti di geometria 1},
+  pdfauthor={Jude De Sa'Pinto},
+  pdfsubject={Geometria 1 -- Prof. Francesco Bottacin},
+  bookmarksnumbered=true
+}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+\setlist[enumerate]{itemsep=.35em,topsep=.4em}
+\setlist[itemize]{itemsep=.25em,topsep=.4em}
+\raggedbottom
+\emergencystretch=1.5em
+\AddToHook{cmd/section/before}{\Needspace{9\baselineskip}}
+\AddToHook{cmd/subsection/before}{\Needspace{7\baselineskip}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{.3pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{proposizione}[teorema]{Proposizione}
+\newtheorem{corollario}[teorema]{Corollario}
+\theoremstyle{definition}
+\newtheorem{definizione}[teorema]{Definizione}
+\newtheorem*{esempio}{Esempio}
+\newtheorem*{esercizio}{Esercizio}
+\theoremstyle{remark}
+\newtheorem*{osservazione}{Osservazione}
+\AddToHook{env/proposizione/before}{\Needspace{6\baselineskip}}
+\AddToHook{env/teorema/before}{\Needspace{6\baselineskip}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\fonti}[1]{\par\nobreak\noindent{\small\itshape #1.}\par\medskip}
+\newenvironment{schema}
+  {\par\medskip\noindent\begin{minipage}{\linewidth}\centering\small}
+  {\end{minipage}\par\medskip}
+\tikzset{
+  asse/.style={-{Stealth[length=2mm]},draw=black!55,line width=.5pt},
+  vettore/.style={-{Stealth[length=2.5mm]},draw=coloreschema,line width=1pt},
+  spazio/.style={draw=coloreschema,line width=.9pt,fill=coloreschema!5}
+}
