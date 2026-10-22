@@ -1,0 +1,32 @@
+{
+  "data": "2026-10-22",
+  "sessione": 1,
+  "conservazione_formule_display": true,
+  "label_e_ambienti_numerati_conservati": true,
+  "tabella_verita_28_celle_corrette": true,
+  "materie": {
+    "analisi 1": {
+      "pagine_pdf": 52,
+      "capitoli_estratti": 7,
+      "indice_solo_capitoli_e_sezioni": true,
+      "segnalibri_con_sottosezioni": true,
+      "pagine_estratti_identiche_al_volume": true,
+      "avvisi_latex": [],
+      "collegamenti_rimanenti_validi": 6
+    },
+    "geometria 1": {
+      "pagine_pdf": 28,
+      "capitoli_estratti": 1,
+      "indice_solo_capitoli_e_sezioni": true,
+      "segnalibri_con_sottosezioni": true,
+      "pagine_estratti_identiche_al_volume": true,
+      "avvisi_latex": [],
+      "collegamenti_rimanenti_validi": 7
+    }
+  },
+  "sorgenti_analisi_modificati": [
+    "analisi 1/preambolo.tex",
+    "analisi 1/capitoli/01-logica.tex"
+  ],
+  "controllo_visivo": "Tre pagine del capitolo Logica e tutti gli indici stampati di entrambe le materie"
+}

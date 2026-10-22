@@ -1,0 +1,170 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 10, pp. 3--5.
+% Esempio geometrico, figura e casi estremi aggiunti per chiarire la costruzione.
+
+\section{Spazio vettoriale quoziente}
+
+\subsection{Equivalenza modulo un sottospazio}
+
+Sia $W$ un sottospazio di $V$ sul campo $K$.
+\begin{definizione}
+Due vettori $v_1,v_2\in V$ sono \emph{equivalenti modulo $W$} se
+\[
+  v_1\sim v_2\quad\Longleftrightarrow\quad v_1-v_2\in W.
+\]
+\end{definizione}
+
+\textbf{Relazione di equivalenza.}
+\begin{itemize}
+  \item \emph{Riflessività:} $v-v=0_V\in W$.
+  \item \emph{Simmetria:} se $v_1-v_2\in W$, allora $v_2-v_1=-(v_1-v_2)\in W$.
+  \item \emph{Transitività:} se $v_1-v_2,v_2-v_3\in W$, allora $v_1-v_3=(v_1-v_2)+(v_2-v_3)\in W$.
+\end{itemize}
+Le verifiche usano che $W$ contiene lo zero ed è chiuso per opposti e somme.
+
+\begin{definizione}
+La \emph{classe di equivalenza} di $v\in V$ è
+\[
+  [v]=\{v'\in V:v'\sim v\}=v+W=\{v+w:w\in W\}.
+\]
+Il vettore $v$ è un \emph{rappresentante} della classe. L'\emph{insieme quoziente} è
+\[
+  V/W=V/{\sim}=\{[v]:v\in V\}.
+\]
+\end{definizione}
+
+L'identità $[v]=v+W$ segue da $v'\sim v\iff v'-v\in W\iff v'=v+w$ per un $w\in W$.
+
+\textbf{Uguaglianza delle classi.} Si ha
+\[
+  [v_1]=[v_2]\quad\Longleftrightarrow\quad v_1-v_2\in W,
+  \qquad [v]=[0_V]\quad\Longleftrightarrow\quad v\in W.
+\]
+\begin{proof}
+\passomath{\Rightarrow} Se le classi coincidono, $v_1\in[v_2]$, dunque $v_1-v_2\in W$.
+
+\passomath{\Leftarrow} Supponiamo $v_1-v_2\in W$ e verifichiamo le inclusioni.
+
+\passomath{[v_1]\subseteq[v_2]} Ogni $v_1+w$ si riscrive come $v_2+(v_1-v_2+w)\in v_2+W$.
+
+\passomath{[v_2]\subseteq[v_1]} Anche $v_2-v_1\in W$, quindi lo stesso argomento con i ruoli scambiati dà l'inclusione opposta.
+
+La seconda equivalenza è il caso $v_2=0_V$.
+\end{proof}
+
+\subsection{Operazioni sulle classi e loro buona definizione}
+
+Poniamo
+\[
+  [v_1]+[v_2]=[v_1+v_2],\qquad \lambda[v]=[\lambda v],\qquad\lambda\in K.
+\]
+Le operazioni sono \emph{ben definite} se il risultato dipende soltanto dalle classi, non dai rappresentanti scelti.
+
+\begin{proof}[Indipendenza dai rappresentanti]
+\textbf{Somma.} Siano $v_1',v_1''\in[v_1]$ e $v_2',v_2''\in[v_2]$. Posti $w_1=v_1'-v_1''\in W$ e $w_2=v_2'-v_2''\in W$, si ha
+\[
+  (v_1'+v_2')-(v_1''+v_2'')
+  =(v_1'-v_1'')+(v_2'-v_2'')=w_1+w_2\in W.
+\]
+Quindi $[v_1'+v_2']=[v_1''+v_2'']$.
+
+\textbf{Prodotto per scalari.} Per $v',v''\in[v]$ si ha $w=v'-v''\in W$, dunque
+\[
+  \lambda v'-\lambda v''=\lambda(v'-v'')=\lambda w\in W.
+\]
+Ne segue $[\lambda v']=[\lambda v'']$.
+\end{proof}
+
+\begin{proposizione}
+Con queste operazioni $V/W$ è uno spazio vettoriale su $K$, detto \emph{spazio vettoriale quoziente} di $V$ modulo $W$.
+\end{proposizione}
+\begin{proof}
+\textbf{Struttura additiva.} Le identità in $V$ passano alle classi:
+\begin{align*}
+  [u]+[v]&=[u+v]=[v+u]=[v]+[u],\\
+  ([u]+[v])+[z]&=[(u+v)+z]=[u+(v+z)]=[u]+([v]+[z]).
+\end{align*}
+Il neutro è $[0_V]=W$, perché $[v]+[0_V]=[v]$; l'opposto di $[v]$ è $[-v]$, perché $[v]+[-v]=[0_V]$.
+
+\textbf{Assiomi del prodotto per scalari.} Per $\lambda,\mu\in K$,
+\begin{align*}
+  \lambda([u]+[v])&=[\lambda(u+v)]=[\lambda u+\lambda v]=\lambda[u]+\lambda[v],\\
+  (\lambda+\mu)[v]&=[(\lambda+\mu)v]=[\lambda v+\mu v]=\lambda[v]+\mu[v],\\
+  \lambda(\mu[v])&=[\lambda(\mu v)]=[(\lambda\mu)v]=(\lambda\mu)[v],\\
+  1_K[v]&=[1_Kv]=[v].\qedhere
+\end{align*}
+\end{proof}
+
+Tutti i vettori di $W$ rappresentano il vettore nullo del quoziente.\footnote{Una classe $[v]$ è un sottoinsieme di $V$ e un singolo elemento di $V/W$: $[0_V]=W$ è quindi un vettore del quoziente, benché $W$ sia un intero sottospazio di $V$.} In generale, si identificano i vettori che differiscono per un elemento di $W$.
+
+\subsection{Interpretazione geometrica delle classi}
+
+\begin{esempio}
+Per $V=\R^2$ e $W=\{(x,0):x\in\R\}$, due vettori $(x,y)$ e $(x',y')$ sono equivalenti se e solo se $y=y'$. La classe è la retta orizzontale
+\[
+  [(x,y)]=\{(t,y):t\in\R\},
+\]
+con unico rappresentante $(0,y)$ sull'asse verticale. Le operazioni diventano
+\[
+  [(0,y)]+[(0,y')]=[(0,y+y')],\qquad\lambda[(0,y)]=[(0,\lambda y)].
+\]
+Il quoziente conserva la sola coordinata verticale.
+\end{esempio}
+\begin{schema}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[asse] (-3.1,0)--(3.2,0) node[right] {$x$};
+  \draw[asse] (0,-.65)--(0,2.6) node[above] {$y$};
+  \draw[spazio] (-2.8,0)--(2.8,0);
+  \node[below] at (2.1,0) {$W=[0_V]$};
+  \draw[draw=black!35] (-2.8,.8)--(2.8,.8);
+  \draw[draw=coloreschema,line width=.9pt] (-2.8,1.8)--(2.8,1.8);
+  \fill[coloreschema] (-1.8,1.8) circle (2pt) node[above] {$v$};
+  \fill[coloreschema] (1.3,1.8) circle (2pt) node[above] {$v'$};
+  \fill[coloreschema] (0,1.8) circle (2pt);
+  \node[above right] at (0,1.8) {$(0,y)$};
+  \node[right] at (2.8,1.8) {$[v]=[v']$};
+\end{tikzpicture}
+
+La stessa retta è un solo elemento del quoziente; l'asse $W$ ne rappresenta l'elemento nullo.
+\end{schema}
+
+\Needspace{15\baselineskip}
+\subsection{Base e dimensione del quoziente}
+
+\begin{teorema}
+Sia $V$ di dimensione finita e sia $W\subseteq V$ un sottospazio. Se una base $(w_1,\ldots,w_r)$ di $W$ viene completata alla base
+\[
+  (w_1,\ldots,w_r,v_1,\ldots,v_s)
+\]
+di $V$, allora $([v_1],\ldots,[v_s])$ è una base di $V/W$. In particolare,
+\[
+  \dim(V/W)=\dim V-\dim W.
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Scelta e completamento della base di $W$.} Partendo dalla famiglia vuota, aggiungiamo vettori di $W$ esterni al sottospazio già generato. La famiglia resta indipendente in $V$ e, per lo scambio, non può superare $\dim V$ elementi: si ottiene quindi una base finita di $W$. Il completamento fornisce poi la base di $V$ dell'enunciato.
+
+\textbf{Generazione del quoziente.} Per ogni $v\in V$ scriviamo
+\[
+  v=\sum_{i=1}^r a_iw_i+\sum_{j=1}^s b_jv_j.
+\]
+La prima somma appartiene a $W$, dunque $v-\sum_j b_jv_j\in W$. Passando alle classi,
+\[
+  [v]=\left[\sum_{j=1}^s b_jv_j\right]=\sum_{j=1}^s b_j[v_j].
+\]
+Ogni classe ha un rappresentante in $V$, quindi le classi proposte generano $V/W$.
+
+\textbf{Indipendenza delle classi.} Se $\sum_j b_j[v_j]=[0_V]$, allora $[\sum_j b_jv_j]=[0_V]$, ossia $\sum_j b_jv_j\in W$. Esistono quindi scalari $a_i$ tali che
+\[
+  \sum_{j=1}^s b_jv_j-\sum_{i=1}^r a_iw_i=0_V.
+\]
+L'indipendenza della base completata annulla tutti i $b_j$ e gli $a_i$. Le classi sono dunque indipendenti.
+
+\textbf{Dimensione.} La base del quoziente ha $s$ elementi, mentre $\dim V=r+s$ e $\dim W=r$: segue $\dim(V/W)=\dim V-\dim W$.
+\end{proof}
+
+\textbf{Casi estremi.}
+\begin{itemize}
+  \item Per $W=\{0_V\}$, ogni classe è il singoletto $\{v\}$ e $V/W$ ha la stessa dimensione di $V$.
+  \item Per $W=V$, esiste un'unica classe: $V/V$ è lo spazio nullo e ha dimensione zero.
+\end{itemize}

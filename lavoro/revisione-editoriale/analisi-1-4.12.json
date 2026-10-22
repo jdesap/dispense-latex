@@ -1,0 +1,37 @@
+{
+  "data": "2026-10-22",
+  "materia": "analisi 1",
+  "sezione": "4.12",
+  "titolo": "4.12 La caratterizzazione operativa di supremo e infimo",
+  "stato": "completata; verifica matematica e visiva eseguite",
+  "nota": "Verificati e distinti i quattro versi dei criteri: supremo e infimo, necessità e sufficienza. Conservati quantificatori, disuguaglianze strette, possibilità di scegliere l’estremo e disegno delle fasce.",
+  "pagine_volume": 53,
+  "pagine_fisiche_ispezione": [
+    24,
+    25
+  ],
+  "avvisi_latex": [],
+  "estratti_identici_al_volume": true,
+  "pdf_sha256": "07a726d7f0d584a9ef5bf05626da8598cec8e973fbfba6f1267c2606721fb8be",
+  "sorgenti_sha256": {
+    "main.tex": "d7005f8985f4a6bb7ba62e87d2fbdf1b94e01d644df7c96590a11be4ca9113b1",
+    "preambolo.tex": "ead5f5487e3fb644173565378c4d58f2e30caac12f39118c343abda32db75d66",
+    "capitoli/01-logica.tex": "4b3b55b075816877556fb022cc2b63b6b4c213f9679cabfcdb14e7f24e7bc376",
+    "capitoli/02-insiemi-e-relazioni.tex": "a1c8c20957ff2970a847b3a63cca629e65679597df0863b453d47b0e8e0c60c4",
+    "capitoli/03-numeri-naturali-e-combinatoria.tex": "ac0c9f5749fbe4275c4478140df652e42226d1cc2eaa9e7e9ef6930a6ddbd354",
+    "capitoli/04-numeri-reali-e-completezza.tex": "4c1cdbfd8e61a6b0353e6a92473df3dfbc96bac35630c2121fa5baf4d7f9d1e6",
+    "capitoli/04a-reali-e-completezza.tex": "d15f68db9f47f7525627ac613e5313f7ca4f70054bec9d2f54a0d19f1a7af8c1",
+    "capitoli/04b-intervalli-ed-estremi.tex": "2837a80c2957c60482fcb5583ec318bfe66d10958df055aae402cba06725bd9e",
+    "capitoli/04c-archimede-ed-esempi.tex": "97572d9d93f2f5242f3f01a52a50e5012a3bf7450a5da78a241b895336397a3a",
+    "capitoli/05-funzioni.tex": "a4e68173b018e8dae0a14cd8901274aa1bf0da9b7053ccf0f28877b0e518c053",
+    "capitoli/05a-funzioni-reali.tex": "20635bf1d303637db4eb09f15a0bdcf3b612333365e1f7313be5ef9fdd0bba16",
+    "capitoli/06-funzioni-elementari.tex": "53631c18d7c0dbc3879a1936a4ade9e422c920f80078b2499caee26b11144c13",
+    "capitoli/06a-potenze-e-radici.tex": "6bf209c70c25e40ced643642a3ee5b6d7f5fa34bcbddbb5fc57518a9be9f6c36",
+    "capitoli/06b-modulo-e-distanza.tex": "db5d08426c115c762c84784761708adbc1643a17614dc33c7ee9630caeb61407",
+    "capitoli/06c-trigonometria.tex": "a2e16ed0901a67070a5c057c75806df3d2d9b078edf8f0a851c5102d49e14ba9",
+    "capitoli/06d-esponenziali-e-iperboliche.tex": "de7716947680c7e61477f98c883c8f96646e2d7d35511d266e5d4471de839b44",
+    "capitoli/06e-funzioni-a-tratti-e-grafici.tex": "d686210c5f0b393fb1833c009373e89a380167c307451c6eb1aa20ded179220a",
+    "capitoli/07-topologia.tex": "c856193fe2e367fa9f7d4f864e39bcc1186eb665baf55f3673cb2af0695fd33f",
+    "capitoli/07a-introduzione.tex": "35433b3df6259dbed116a2f9ea12ea80fb86b63cfedba675ca50542f0d063490"
+  }
+}

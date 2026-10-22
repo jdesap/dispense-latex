@@ -1,6 +1,9 @@
 # Conserva i PDF compilati; escludi gli altri prodotti della compilazione.
 **/build/*
 !**/build/*.pdf
+!**/build/capitoli/
+**/build/capitoli/*
+!**/build/capitoli/*.pdf
 
 *.synctex.gz
 *.aux

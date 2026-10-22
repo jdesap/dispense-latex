@@ -2,9 +2,7 @@
 \section{Seno, coseno e tangente}
 % Fonte: Lezione 6, pp.~10 e 21
 
-Gli angoli sono misurati in \emph{radianti}: un giro completo misura
-$2\pi$. Sulla circonferenza di centro l'origine e raggio $1$, il punto
-individuato dall'angolo orientato $x$ ha coordinate
+Gli angoli sono misurati in \emph{radianti}: un giro completo misura $2\pi$. Sulla circonferenza di centro l'origine e raggio $1$, il punto individuato dall'angolo orientato $x$ ha coordinate
 \[
 P=(\cos x,\sin x).
 \]
@@ -32,57 +30,51 @@ Il coseno è dunque l'ascissa e il seno l'ordinata del punto.
   \node[below right] at (1,-.12) {$1$};
 \end{tikzpicture}
 
-Nel disegno $0<x<\pi/2$. La retta di pendenza $\tan x$ incontra
-la tangente verticale $u=1$ all'altezza $\tan x$.
+Nel disegno $0<x<\pi/2$. La retta di pendenza $\tan x$ incontra la tangente verticale $u=1$ all'altezza $\tan x$.
 \end{schema}
 
-Le funzioni seno e coseno sono definite su tutto $\R$, hanno immagine
-$[-1,1]$ e periodo principale $2\pi$. Riflettendo il punto della
-circonferenza rispetto all'asse orizzontale si ottiene
+\textbf{Dominio, immagine e periodicità.} Seno e coseno sono definiti su tutto $\R$, hanno immagine $[-1,1]$ e periodo principale $2\pi$. La periodicità esprime il ritorno allo stesso punto dopo un giro completo.
+
+\textbf{Parità.} Riflettendo il punto della circonferenza rispetto all'asse orizzontale si ottiene
 \[
 \sin(-x)=-\sin x,\qquad \cos(-x)=\cos x:
 \]
-il seno è dispari, il coseno è pari. Dall'equazione della circonferenza
-unitaria, o dal teorema di Pitagora, segue l'identità fondamentale
+il seno è dispari, il coseno è pari.
+
+\textbf{Identità fondamentale.} Dall'equazione della circonferenza unitaria, o dal teorema di Pitagora, segue l'identità fondamentale
 \[
 \boxed{\sin^2x+\cos^2x=1}\qquad\forall x\in\R.
 \]
-La periodicità esprime il ritorno allo stesso punto dopo un giro
-completo. I valori $\pm1$ sono raggiunti, quindi sono anche minimo e
-massimo delle due funzioni.
 
-La \emph{tangente}, indicata anche con $\operatorname{tg}$, è
+
+\textbf{Estremi.} I valori $\pm1$ sono raggiunti, quindi sono anche minimo e massimo delle due funzioni.
+
+\textbf{Tangente.} La \emph{tangente}, indicata anche con $\operatorname{tg}$, è
 \[
 \tan x=\frac{\sin x}{\cos x},\qquad
 \operatorname{dom}(\tan)=\R\setminus
 \left\{\frac\pi2+k\pi:k\in\Z\right\}.
 \]
-Sono esclusi esattamente gli zeri del denominatore. È dispari, ha
-periodo principale $\pi$ e immagine $\R$, quindi non è limitata.
-Infatti seno e coseno cambiano entrambi segno dopo mezzo giro,
-lasciando invariato il loro rapporto. Su ogni intervallo
-$(-\pi/2+k\pi,\pi/2+k\pi)$ la tangente è strettamente crescente e
-assume tutti i valori reali; non è monotona sull'intero dominio,
-che contiene più rami distinti.
+Sono esclusi esattamente gli zeri del denominatore.
+
+\textbf{Parità e periodo.} La tangente è dispari e ha periodo principale $\pi$: seno e coseno cambiano entrambi segno dopo mezzo giro, lasciando invariato il loro rapporto.
+
+\textbf{Immagine e monotonia.} La sua immagine è $\R$, quindi non è limitata. Su ogni intervallo $(-\pi/2+k\pi,\pi/2+k\pi)$ è strettamente crescente e assume tutti i valori reali; non è monotona sull'intero dominio, che contiene più rami distinti.
 
 \section{Restrizioni invertibili e arcoseno}
 % Fonte: Lezione 6, p.~22
 
-Seno e coseno sono periodici e perciò non sono iniettivi su $\R$.
-Per costruirne le inverse si sceglie un intervallo in cui ciascuna
-funzione sia strettamente monotona e assuma l'intera immagine $[-1,1]$.
+Seno e coseno sono periodici e perciò non sono iniettivi su $\R$. Per costruirne le inverse si sceglie un intervallo in cui ciascuna funzione sia strettamente monotona e assuma l'intera immagine $[-1,1]$.
 
-Il seno è strettamente crescente da $-1$ a $1$ su
-$[-\pi/2,\pi/2]$. Sulla semicirconferenza destra, infatti, l'ordinata
-del punto aumenta al crescere dell'angolo in tale intervallo.
-L'inversa della restrizione è l'\emph{arcoseno}:
+\textbf{Ramo invertibile del seno.} Il seno è strettamente crescente da $-1$ a $1$ su $[-\pi/2,\pi/2]$. Sulla semicirconferenza destra, infatti, l'ordinata del punto aumenta al crescere dell'angolo in tale intervallo.
+
+\textbf{Arcoseno.} L'inversa della restrizione è l'\emph{arcoseno}:
 \[
 \arcsin\colon[-1,1]\longrightarrow
 \left[-\frac\pi2,\frac\pi2\right],
 \qquad \arcsin y=\text{l'unico }x\in[-\pi/2,\pi/2]\text{ con }\sin x=y.
 \]
-È strettamente crescente e dispari; il suo grafico è quello del ramo
-scelto del seno riflesso rispetto a $y=x$.
+È strettamente crescente e dispari; il suo grafico è quello del ramo scelto del seno riflesso rispetto a $y=x$.
 
 \begin{schema}
 \begin{tikzpicture}[x=.85cm,y=1.15cm]
@@ -117,31 +109,31 @@ scelto del seno riflesso rispetto a $y=x$.
 \end{tikzpicture}
 \end{schema}
 
-Le identità di inversione vanno lette con i loro domini:
+\textbf{Identità di inversione e domini.} Si ha
 \[
 \sin(\arcsin y)=y\quad(y\in[-1,1]),\qquad
 \arcsin(\sin x)=x\quad(x\in[-\pi/2,\pi/2]).
 \]
-La seconda non vale per ogni reale: ad esempio
-$\arcsin(\sin\pi)=\arcsin0=0\ne\pi$.
+\begin{esempio}
+La seconda identità non vale per ogni reale: $\arcsin(\sin\pi)=\arcsin0=0\ne\pi$.
+\end{esempio}
 
 \section{Arcocoseno}
 % Fonte: Lezione 6, p.~23
 
-Il coseno è strettamente decrescente da $1$ a $-1$ su $[0,\pi]$:
-percorrendo la semicirconferenza superiore in senso antiorario,
-l'ascissa diminuisce. Si definisce l'\emph{arcocoseno} come l'inversa
-di questa restrizione:
+\textbf{Ramo invertibile del coseno.} Il coseno è strettamente decrescente da $1$ a $-1$ su $[0,\pi]$: percorrendo la semicirconferenza superiore in senso antiorario, l'ascissa diminuisce.
+
+\textbf{Arcocoseno.} Si definisce l'\emph{arcocoseno} come l'inversa di questa restrizione:
 \[
 \arccos\colon[-1,1]\longrightarrow[0,\pi],\qquad
 \arccos y=\text{l'unico }x\in[0,\pi]\text{ con }\cos x=y.
 \]
-È strettamente decrescente e soddisfa
+\textbf{Monotonia e identità di inversione.} È strettamente decrescente e soddisfa
 \[
 \cos(\arccos y)=y\quad(y\in[-1,1]),\qquad
 \arccos(\cos x)=x\quad(x\in[0,\pi]).
 \]
-In particolare $\arccos1=0$, $\arccos0=\pi/2$ e $\arccos(-1)=\pi$.
+\textbf{Valori notevoli.} Si ha $\arccos1=0$, $\arccos0=\pi/2$ e $\arccos(-1)=\pi$.
 
 \begin{schema}
 \begin{tikzpicture}[x=.85cm,y=1.15cm]
@@ -177,25 +169,19 @@ In particolare $\arccos1=0$, $\arccos0=\pi/2$ e $\arccos(-1)=\pi$.
 \section{Arcotangente}
 % Fonte: Lezione 6, p.~24
 
-La restrizione $\tan\colon(-\pi/2,\pi/2)\to\R$ è biettiva.
-Geometricamente, mentre il punto percorre la semicirconferenza destra,
-la retta che passa per l'origine incontra la verticale $u=1$ a
-un'altezza che cresce da valori negativi arbitrariamente grandi in
-modulo a valori positivi arbitrariamente grandi. Ogni altezza reale
-è raggiunta una sola volta. Si definisce così l'\emph{arcotangente}:
+\textbf{Ramo invertibile della tangente.} La restrizione $\tan\colon(-\pi/2,\pi/2)\to\R$ è biettiva. Geometricamente, mentre il punto percorre la semicirconferenza destra, la retta che passa per l'origine incontra la verticale $u=1$ a un'altezza che cresce da valori negativi arbitrariamente grandi in modulo a valori positivi arbitrariamente grandi. Ogni altezza reale è raggiunta una sola volta.
+
+\textbf{Arcotangente.} Si definisce l'\emph{arcotangente}:
 \[
 \arctan\colon\R\longrightarrow\left(-\frac\pi2,\frac\pi2\right),
 \qquad \arctan y=\text{l'unico }x\in(-\pi/2,\pi/2)\text{ con }\tan x=y.
 \]
-È strettamente crescente, dispari e limitata. Vale
+\textbf{Proprietà e identità di inversione.} È strettamente crescente, dispari e limitata. Vale
 \[
 \tan(\arctan y)=y\quad(y\in\R),\qquad
 \arctan(\tan x)=x\quad(x\in(-\pi/2,\pi/2)).
 \]
-Il suo supremo è $\pi/2$ e il suo infimo è $-\pi/2$, ma non ha né
-massimo né minimo: gli estremi dell'intervallo immagine sono esclusi.
-Le rette $y=\pm\pi/2$ indicano le altezze a cui il grafico si avvicina
-per argomenti rispettivamente molto grandi positivi e negativi.
+\textbf{Estremi non raggiunti.} Il suo supremo è $\pi/2$ e il suo infimo è $-\pi/2$, ma non ha né massimo né minimo: gli estremi dell'intervallo immagine sono esclusi. Le rette $y=\pm\pi/2$ indicano le altezze a cui il grafico si avvicina per argomenti rispettivamente molto grandi positivi e negativi.
 
 \begin{schema}
 \begin{tikzpicture}[x=.85cm,y=.65cm]

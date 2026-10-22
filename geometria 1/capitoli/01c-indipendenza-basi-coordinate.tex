@@ -1,0 +1,168 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 7, pp. 3--7. Esercizi svolti e schemi ricostruiti.
+
+\section{Indipendenza lineare, basi e coordinate}
+
+\subsection{Insiemi liberi e dipendenza lineare}
+
+L'indipendenza lineare esclude relazioni che rendano superfluo un vettore: se $v_3=2v_1-v_2$, ogni combinazione dei tre vettori si può riscrivere usando soltanto $v_1$ e $v_2$.
+
+\begin{definizione}
+Un sottoinsieme $S\subseteq V$ è \emph{libero}, o \emph{linearmente indipendente}, se per ogni scelta finita di vettori distinti $v_1,\ldots,v_r\in S$ e di scalari $\lambda_1,\ldots,\lambda_r\in K$ si ha
+\[
+  \lambda_1v_1+\cdots+\lambda_rv_r=0_V
+  \quad\Longrightarrow\quad \lambda_1=\cdots=\lambda_r=0_K.
+\]
+Se esiste una relazione nulla con almeno un coefficiente non nullo, $S$ si dice \emph{linearmente dipendente}.
+\end{definizione}
+
+\textbf{Insiemi e famiglie.} Anche per $S$ infinito ogni relazione coinvolge un numero finito di vettori. Per una famiglia $(v_1,\ldots,v_m)$ si richiede che $\sum_i\lambda_iv_i=0_V$ implichi tutti i coefficienti nulli.\footnote{In un insieme si scelgono vettori distinti; in una famiglia si distinguono le posizioni. Due posizioni occupate dallo stesso vettore producono la relazione non banale $v-v=0_V$. L'insieme vuoto e la famiglia vuota sono indipendenti.}
+
+\textbf{Casi immediati.}
+\begin{itemize}
+  \item Un insieme libero non contiene $0_V$, perché $1_K0_V=0_V$ è una relazione con coefficiente non nullo.
+  \item Una famiglia di un solo vettore è indipendente se e solo se il vettore è non nullo. Infatti, se $v\ne0_V$ e $\lambda v=0_V$, un eventuale $\lambda\ne0_K$ darebbe $v=0_V$ moltiplicando per $\lambda^{-1}$.
+\end{itemize}
+
+\begin{teorema}[Criterio di dipendenza]
+Una famiglia non vuota $v_1,\ldots,v_m$ è linearmente dipendente se e solo se almeno uno dei suoi vettori è una combinazione lineare degli altri.
+\end{teorema}
+\begin{proof}
+\passomath{\Rightarrow}\textbf{Isolare un coefficiente non nullo.} Esiste una relazione $\sum_{i=1}^m\lambda_iv_i=0_V$ con $\lambda_j\ne0_K$ per almeno un indice $j$. Isolando il termine corrispondente e moltiplicando per $\lambda_j^{-1}$ si ottiene
+\[
+  \lambda_jv_j=-\sum_{i\ne j}\lambda_i v_i,
+  \qquad
+  v_j=-\sum_{i\ne j}\frac{\lambda_i}{\lambda_j}v_i.
+\]
+
+\passomath{\Leftarrow}\textbf{Costruire una relazione non banale.} Se $v_j=\sum_{i\ne j}a_iv_i$, allora
+\[
+  \sum_{i\ne j}a_iv_i-v_j=0_V.
+\]
+Il coefficiente di $v_j$ è $-1_K\ne0_K$, quindi la famiglia è dipendente.
+\end{proof}
+
+Per $m=1$, la combinazione degli altri vettori è la somma vuota, uguale a $0_V$: il criterio comprende la famiglia costituita dal solo vettore nullo.
+
+\begin{esempio}[Una relazione con un coefficiente nullo]
+In $\R^3$ siano $v_1=(1,1,1)$, $v_2=(2,0,0)$ e $v_3=(4,0,0)$. La relazione $0v_1+2v_2-v_3=0$ è non banale: i vettori sono dipendenti anche se un coefficiente è nullo. Si può isolare $v_3=2v_2+0v_1$, mentre $v_1$ non è combinazione di $v_2,v_3$, che hanno seconda e terza coordinata nulle. Il criterio riguarda \emph{almeno uno} dei vettori.
+\end{esempio}
+
+\begin{esempio}[La stessa relazione risolta in tre modi]
+Per $v_1=(1,2,3)$, $v_2=(2,0,0)$ e $v_3=(3,2,3)$ si ha $v_1+v_2-v_3=0$. Tutti i coefficienti sono non nulli, quindi si può isolare ciascun vettore:
+\[
+  v_3=v_1+v_2,\qquad v_1=v_3-v_2,\qquad v_2=v_3-v_1.
+\]
+\end{esempio}
+
+\subsection{Basi e unicità della rappresentazione}
+
+\begin{definizione}
+Una \emph{base} di $V$ è un insieme libero di generatori di $V$.
+\end{definizione}
+
+\begin{proposizione}
+Se $(v_1,\ldots,v_m)$ è una base finita di $V$, ogni $w\in V$ ammette un'unica espressione
+\[
+  w=\alpha_1v_1+\cdots+\alpha_mv_m,\qquad \alpha_i\in K.
+\]
+\end{proposizione}
+\begin{proof}
+\textbf{Esistenza.} I vettori della base generano $V$.
+
+\textbf{Unicità.} Se $w=\sum_i\alpha_iv_i=\sum_i\beta_iv_i$, sottraendo si ottiene
+\[
+  \sum_{i=1}^m(\alpha_i-\beta_i)v_i=0_V.
+\]
+L'indipendenza impone $\alpha_i-\beta_i=0_K$ per ogni $i$, dunque le due rappresentazioni coincidono.
+\end{proof}
+
+\subsection{La base canonica}
+
+\begin{esempio}
+In $\R^2$, $e_1=(1,0)$ ed $e_2=(0,1)$ formano una base:
+\begin{itemize}
+  \item \textbf{Indipendenza:} $\lambda_1e_1+\lambda_2e_2=(\lambda_1,\lambda_2)=(0,0)$ implica $\lambda_1=\lambda_2=0$.
+  \item \textbf{Generazione:} $(a,b)=ae_1+be_2$ per ogni $(a,b)\in\R^2$.
+\end{itemize}
+\end{esempio}
+\begin{schema}
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \draw[asse] (-.4,0)--(4.2,0);
+  \draw[asse] (0,-.35)--(0,2.8);
+  \draw[vettore] (0,0)--(1,0) node[midway,below] {$e_1$};
+  \draw[vettore] (0,0)--(0,1) node[midway,left] {$e_2$};
+  \draw[dashed] (3.2,0)--(3.2,2.1)--(0,2.1);
+  \draw[vettore] (0,0)--(3.2,2.1)
+    node[above right] {$v=\alpha_1e_1+\alpha_2e_2$};
+  \node[below] at (3.2,0) {$\alpha_1$};
+  \node[left] at (0,2.1) {$\alpha_2$};
+  \node[below left] at (0,0) {$0$};
+\end{tikzpicture}
+
+Le due componenti lungo gli assi individuano univocamente il vettore.
+\end{schema}
+
+\begin{esercizio}[Base canonica in dimensione arbitraria]
+Verificare che i vettori $e_1,\ldots,e_m$ di $\R^m$, con $1$ nella posizione $i$ e $0$ nelle altre per $e_i$, formano una base.
+\end{esercizio}
+\begin{proof}[Svolgimento]
+\textbf{Generazione.} Per ogni $a=(a_1,\ldots,a_m)$ si ha $a=a_1e_1+\cdots+a_me_m$.
+
+\textbf{Indipendenza.} Nell'uguaglianza $\sum_i\lambda_ie_i=0$, la coordinata $i$ è $\lambda_i$ a sinistra e $0$ a destra. Tutti i coefficienti sono quindi nulli.
+\end{proof}
+Questa è la \emph{base canonica} di $\R^m$. La stessa verifica vale per $K^m$ su un campo qualsiasi $K$.
+
+\subsection{Coordinate rispetto a una base}
+
+\begin{definizione}
+Fissata una base ordinata $\mathcal B=(v_1,\ldots,v_m)$, le \emph{coordinate} di $w\in V$ nella base $\mathcal B$ sono gli unici scalari $\alpha_i$ per cui $w=\sum_i\alpha_iv_i$. Si raccolgono nella colonna
+\[
+  [w]_{\mathcal B}=\begin{pmatrix}\alpha_1\\\vdots\\\alpha_m\end{pmatrix}.
+\]
+\end{definizione}
+
+\textbf{Dipendenza dalla base.} L'ordine di $\mathcal B$ associa ogni coordinata al corrispondente vettore di base: scambiando due vettori, si scambiano le loro coordinate. Il vettore $w$ resta lo stesso; la sua colonna dipende dalla base ordinata scelta.
+
+\begin{esercizio}[Coordinate dello stesso vettore in due basi]
+Per $w=(3,2)\in\R^2$, determinare le coordinate nella base canonica $\mathcal E=(e_1,e_2)$ e nella famiglia $\mathcal B=(v_1,v_2)$, con $v_1=(1,-1)$ e $v_2=(2,1)$, verificando che sia una base.
+\end{esercizio}
+
+\textbf{Base canonica.} $w=3e_1+2e_2$, dunque $[w]_{\mathcal E}=\left(\begin{smallmatrix}3\\2\end{smallmatrix}\right)$.
+
+\textbf{Verifica di $\mathcal B$.} Per $(x,y)$ arbitrario imponiamo
+\[
+  (x,y)=av_1+bv_2=(a+2b,-a+b).
+\]
+Il sistema e la soluzione sono
+\[
+  \begin{cases}a+2b=x,\\-a+b=y,\end{cases}
+  \qquad b=\frac{x+y}{3},\qquad a=\frac{x-2y}{3}.
+\]
+La risolubilità per ogni $(x,y)$ prova la generazione; per $(x,y)=(0,0)$ si ottengono soltanto $a=b=0$, quindi anche l'indipendenza.
+
+\textbf{Coordinate di $w$.} Sostituendo $(x,y)=(3,2)$ si trova
+\[
+  b=\frac53,\qquad a=-\frac13,\qquad
+  w=-\frac13v_1+\frac53v_2,
+  \qquad [w]_{\mathcal B}=\begin{pmatrix}-\frac13\\[2pt]\frac53\end{pmatrix}.
+\]
+La verifica diretta è $(-\frac13,\frac13)+(\frac{10}3,\frac53)=(3,2)$.
+\begin{schema}
+\begin{tikzpicture}[x=1.1cm,y=1.1cm]
+  \draw[asse] (-.9,0)--(4,0);
+  \draw[asse] (0,-1.3)--(0,2.7);
+  \draw[vettore] (0,0)--(1,-1) node[right] {$v_1$};
+  \draw[vettore] (0,0)--(2,1) node[below right] {$v_2$};
+  \draw[dashed,draw=black!55] (-.333333,.333333)--(3,2)
+       --(3.333333,1.666667);
+  \draw[vettore] (0,0)--(-.333333,.333333)
+       node[above left] {$-\frac13v_1$};
+  \draw[vettore] (0,0)--(3.333333,1.666667)
+       node[right] {$\frac53v_2$};
+  \draw[vettore] (0,0)--(3,2) node[above] {$w=(3,2)$};
+  \node[below left] at (0,0) {$0$};
+\end{tikzpicture}
+
+Il parallelogramma ricostruisce $w$ dalle componenti nella base $\mathcal B$; la componente lungo $v_1$ ha coefficiente negativo.
+\end{schema}

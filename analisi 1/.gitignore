@@ -1,4 +1,7 @@
 /build/*
+!/build/capitoli/
+/build/capitoli/*
+!/build/capitoli/*.pdf
 !/build/*.pdf
 *.synctex.gz
 *.aux

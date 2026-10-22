@@ -374,3 +374,85 @@ macroargomento. Conservare i riferimenti precisi nei commenti e nel registro
 separato. Sviluppare gli argomenti in prosa autonoma e usare note a piè di
 pagina per precisazioni di convenzione necessarie. Compilare e controllare
 il risultato dopo ogni aggiornamento, lasciando i registri fuori dal PDF.
+
+
+## Revisione matematica — 21 ottobre 2026
+
+Riletti integralmente i sette capitoli di Analisi 1. Corretti un valore
+nella tabella di verità e la spiegazione di punto isolato; aggiunte
+precisazioni sui codomini delle identità dell’inversa, sul periodo
+principale della parte frazionaria e sui risultati assunti per
+l’esponenziale reale. Resoconto e limiti del controllo in
+`REVISIONE_MATEMATICA_2026-10-21.md`. PDF: 53 pagine, compilazione
+senza errori o avvisi. Fonti originali integre.
+
+## Esportazione automatica dei capitoli — 22 ottobre 2026
+
+Attivata la configurazione condivisa della raccolta: ogni Salva/Build
+riuscito esporta i capitoli numerati in `build/capitoli/`, oltre al
+volume completo. Capitoli riconosciuti dai segnalibri, senza elenchi
+manuali; testi, disegni e numerazione provengono dalle stesse pagine
+del volume. Nessun contenuto matematico modificato in questa sessione.
+Verificata l'identità di tutti i flussi di pagina e del testo, la
+numerazione e i link alle note; controllato il rendering della prima
+pagina di ogni estratto. Risultati comuni in
+`../strumenti/VERIFICA_ESPORTAZIONE_2026-10-22.json` rispetto alla materia.
+Copie annotate in Goodnotes separate dai file rigenerati; le
+annotazioni non vengono riallineate automaticamente dopo riscritture.
+Modello e regole predisposti anche per le nuove materie, inclusa Algebra.
+
+
+## Revisione editoriale — sessione 01, 22 ottobre 2026
+
+Revisionato integralmente il capitolo 1: struttura espositiva, distinzione
+tra definizioni ed esempi, metodi di dimostrazione e sorgente con un
+paragrafo logico per riga. Formule, label e numerazione conservate.
+Compilazione e verifica degli estratti completate. Piano e resoconto
+comuni in `../../lavoro/revisione-editoriale/`.
+
+
+## Revisione editoriale — sessione 02, 22 ottobre 2026
+
+Rimossi i rientri di prima riga e ridotti quelli degli elenchi nel
+preambolo. Compilazione ed estratti verificati. Resoconto comune in
+`../../lavoro/revisione-editoriale/SESSIONE_02.md`.
+
+
+## Revisione editoriale — sessione 06, 22 ottobre 2026
+
+Completato Insiemi e relazioni, comprese le prove di De Morgan. Sorgenti, esempi, ordine, elenchi e definizioni riorganizzati; disegni conservati. Compilazione, PDF e tutti gli estratti controllati. Dettagli in `../../lavoro/revisione-editoriale/SESSIONE_06.md`.
+
+
+## Revisione editoriale — sessione 07, 22 ottobre 2026
+
+Completato Numeri naturali, induzione e combinatoria. Prove organizzate per idee, esempi e casi estremi distinti; formule e TikZ conservati. Compilazione, PDF ed estratti verificati. Resoconto in `../../lavoro/revisione-editoriale/SESSIONE_07.md`.
+
+
+## Revisione editoriale — sessione 08, 22 ottobre 2026
+
+Completato Sistemi numerici e completezza, incluse tutte le prove e gli esempi. Formule, quattro TikZ e numerazione degli enunciati conservati. Compilazione, PDF ed estratti verificati. Capitolo di 11 pagine, volume di 53; cambiano di una pagina anche i numeri stampati dei capitoli successivi. Dettagli in `../../lavoro/revisione-editoriale/SESSIONE_08.md`.
+
+
+## Revisione editoriale — sessione 09, 22 ottobre 2026
+
+Completato il capitolo generale sulle funzioni. Prove distinte per idee, domini e notazioni chiariti; formule e cinque TikZ conservati. Compilazione, PDF ed estratti verificati. Volume di 54 pagine, capitolo di sette; numerazione dei capitoli 6–7 spostata di una pagina. Dettagli in `../../lavoro/revisione-editoriale/SESSIONE_09.md`.
+
+
+## Revisione editoriale — sessione 10, 22 ottobre 2026
+
+Completato Funzioni elementari, incluse tutte le prove presenti, i domini, le inverse e l’esercizio finale. Formule e 25 TikZ conservati; compilazione, PDF ed estratti verificati. Restano dichiarate in nota le proprietà assunte dell’esponenziale reale. Capitolo di 14 pagine, volume di 54. Dettagli in `../../lavoro/revisione-editoriale/SESSIONE_10.md`.
+
+
+## Revisione editoriale — sessione 11, 22 ottobre 2026
+
+Completata Topologia della retta: tutte le prove e gli esempi riorganizzati e verificati, con precisazioni sulle famiglie vuote, sulla densità degli irrazionali e sugli intorni nella retta estesa. Display, label e tre TikZ conservati. Compilazioni, estratti e controllo visivo delle sette sezioni completati; volume di 54 pagine, capitolo di sei. Resoconto in `../../lavoro/revisione-editoriale/SESSIONE_11.md`.
+
+
+## Revisione editoriale — verifica conclusiva, 22 ottobre 2026
+
+Revisione integrale conclusa. Controllati sorgenti attivi, indici, provenienza, fonti integre, compilazione condivisa e compilatore integrato; verificati contenuto, numerazione e collegamenti degli estratti. Ispezione visiva finale dei preliminari e dell’intero flusso delle pagine; nessun errore o avviso LaTeX. Resoconto e limiti in `../../lavoro/revisione-editoriale/RESOCONTO_FINALE.md`; impronte correnti in `../../lavoro/revisione-editoriale/VERIFICA_CONCLUSIVA.json`. Le copie annotate non sono state modificate.
+
+
+## Stile visivo — sessione 12, 22 ottobre 2026
+
+Applicati rientro di 4 mm e spaziatura interna alle prove, etichette colorate per i diversi ambienti e formule guida in riquadri sottili. Formule, calcoli, note, label e numerazione conservati; compilazioni condivise e integrate riuscite, estratti verificati. Analisi resta di 54 pagine; Geometria passa a 29 (26 per Spazi vettoriali). Cambia l’impaginazione interna dei capitoli; copie annotate separate e non modificate. Parametri nei preamboli dalla riga 49. Resoconto e verifiche in `../../lavoro/revisione-editoriale/SESSIONE_12.md` e `VERIFICA_STILE_12.json` nella stessa cartella comune.

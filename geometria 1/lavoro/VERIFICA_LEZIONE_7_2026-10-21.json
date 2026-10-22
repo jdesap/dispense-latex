@@ -1,0 +1,89 @@
+{
+  "data": "2026-10-21T21:06:33.444312+02:00",
+  "ambito": "Confronto integrale delle 7 pagine della lezione 7, revisione manuale dei moduli nuovi e modificati e dei raccordi; controllo editoriale della compilazione corrente.",
+  "resoconto": "lavoro/REVISIONE_LEZIONE_7_2026-10-21.md",
+  "fonti": {
+    "pdf": 7,
+    "pagine": 33,
+    "integrita_sha256": "verificata per tutte le fonti"
+  },
+  "copertura": {
+    "righe": 33,
+    "stati": {
+      "verificato": 33
+    },
+    "lezione_7_pagine": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "controlli_matematici": {
+    "esempio_R3_1": "2v2-v3=0",
+    "esempio_R3_2": "v1+v2-v3=0",
+    "coordinate_w": [
+      "-1/3",
+      "5/3"
+    ],
+    "inversa_coordinate": "a=(x-2y)/3; b=(x+y)/3; verificata sulle due colonne della base canonica",
+    "prove": "controllo manuale di entrambe le inclusioni della somma, criterio di somma diretta, prova alternativa, criterio di dipendenza e unicità delle coordinate"
+  },
+  "sorgenti_attivi_sha256": {
+    "main.tex": "411a4a8d7bf859876e88d63d8062ac24d5a11608e1ca68e0e32c9d51174f5a46",
+    "preambolo.tex": "8834b9e137792f62e3c95686cf607fc5262548dfebe183a94c65b0396272efea",
+    "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+    "capitoli/01a-spazi-e-sottospazi.tex": "9bcfeeb71e52ffd3268301faa86d8de31308ca1eb8927878bb454ee6f96abfae",
+    "capitoli/01b-sottospazio-generato.tex": "168311f246c7d673cf1da84827bfc5fd45f12f7318915865429ce1a8c5c1f005",
+    "capitoli/01b-somme-di-sottospazi.tex": "f82269cff4b7ba223151b8c9ac45f735e1706c2bb4c8b684718c728a1267a70c",
+    "capitoli/01c-indipendenza-basi-coordinate.tex": "62499d52d4e057f8fe054f37f38e8194565bae37e617c9cc1ffd9bffb670a917",
+    "capitoli/01c-basi-e-dimensione.tex": "ca498539fbd0c5a148f1ce345b0e5a1ed482813e051a3285c6ef8819689f7ed6",
+    "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "7845de7e5f607f8649a62bbbbb08d92b0781b1906dbedf1f78be09ca9ed5ea27",
+    "capitoli/01e-equazioni-cartesiane.tex": "b0d7d0724f5d008d47d52a7f315b6debbefa3a74315e0b339cd4c8d88572f58f",
+    "capitoli/01f-prodotti.tex": "e1dd6e3f8cf0194d5c3f56ca69cb30db8c2e23b93cfd6c65c436aeeb6f4ed630",
+    "capitoli/01g-quozienti.tex": "c2999a993b45a0188ea473356dd09583786567db244fd8678cab9458a4ee1431",
+    "capitoli/01h-grassmann-complementi.tex": "39eb025b37c90f670959faac5983ebb01e42a60df2458fd068747e84d35973bd",
+    "capitoli/01i-costruzioni-in-r5.tex": "bac0922f2181733d62bd3d94c1ff013f496e0cee5dc20dfaf2a66344490749ed",
+    "capitoli/01j-equazioni-di-polinomi.tex": "2f1e0e39bd2b66d330ae2095ea9588d152b3f94e57c22d0a7edfaae6cf3c570a"
+  },
+  "sorgenti_invariati_dalla_revisione_precedente": [
+    "main.tex",
+    "capitoli/01a-spazi-e-sottospazi.tex",
+    "capitoli/01b-sottospazio-generato.tex",
+    "capitoli/01d-estrazione-e-basi-di-sottospazi.tex",
+    "capitoli/01e-equazioni-cartesiane.tex",
+    "capitoli/01f-prodotti.tex",
+    "capitoli/01g-quozienti.tex",
+    "capitoli/01i-costruzioni-in-r5.tex",
+    "capitoli/01j-equazioni-di-polinomi.tex"
+  ],
+  "pdf": {
+    "file": "build/main.pdf",
+    "pagine": 29,
+    "preliminari": 4,
+    "testo": 25,
+    "sha256": "035072a6fe41f4546e7077afd82024cbda550b3fc9f900b4baab72ffa5fa8b50"
+  },
+  "avvisi_compilazione": [],
+  "controllo_visivo": {
+    "tutte_pagine_in_tavole": true,
+    "pagine_a_risoluzione_leggibile": [
+      2,
+      3,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      23,
+      24
+    ],
+    "schemi_TikZ_nuovi": 2
+  },
+  "limiti": "Le altre 26 pagine delle fonti non sono state nuovamente trascritte in questa sessione. Revisione precedente preservata come storica; complessi non ancora consegnati."
+}

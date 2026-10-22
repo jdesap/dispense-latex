@@ -1,0 +1,189 @@
+% !TeX root = ../main.tex
+% Fonti: Lezione 5, p. 6; Lezione 6, pp. 1--2; Lezione 8, pp. 1--3;
+% Lezione 9, pp. 1--4. La definizione di indipendenza e di base raccorda
+% contenuti presupposti dalle fonti disponibili.
+\chapter{Generatori, basi e dimensione}
+\fonti{Lezioni 5, 6, 8 e 9}
+
+\section{Il sottospazio generato}
+\begin{definizione}
+Dato $S\subseteq V$, il \emph{sottospazio generato} da $S$, scritto
+$\langle S\rangle$, è il più piccolo sottospazio di $V$ che contiene
+$S$. In particolare, se $S$ è già un sottospazio,
+$\langle S\rangle=S$, mentre $\langle\varnothing\rangle=\{0_V\}$.
+\end{definizione}
+L'esistenza del più piccolo sottospazio non va data per implicita: si
+può prendere l'intersezione di tutti i sottospazi che contengono $S$.
+Questa famiglia non è vuota, perché comprende $V$, e l'intersezione è un
+sottospazio per lo stesso argomento usato per due sottospazi.
+
+\begin{teorema}
+Per ogni $S\subseteq V$, $\langle S\rangle$ coincide con l'insieme
+$T$ di tutte le combinazioni lineari finite di elementi di $S$:
+\[
+T=\left\{\sum_{i=1}^{n}\lambda_i s_i:
+ n\geq0,\ s_i\in S,\ \lambda_i\in K\right\}.
+\]
+\end{teorema}
+\begin{proof}
+La somma vuota dà $0_V\in T$. Se $x$ e $y$ sono due combinazioni
+finite, la loro somma si ottiene accostando le due liste di addendi;
+quindi è ancora in $T$. Moltiplicando tutti i coefficienti di una
+combinazione per $\lambda\in K$ si vede che $\lambda x\in T$.
+Dunque $T$ è un sottospazio, e contiene $S$ perché
+$s=1_Ks\in T$. Ne segue $\langle S\rangle\subseteq T$.
+Viceversa, ogni sottospazio che contiene $S$ contiene i multipli di
+ciascun $s_i$ e le loro somme finite. In particolare
+$T\subseteq\langle S\rangle$.
+\end{proof}
+La formula rende precisa l'affermazione che un insieme genera $V$:
+$\langle S\rangle=V$. In $K^m$ i vettori standard
+$e_1=(1,0,\ldots,0),\ldots,e_m=(0,\ldots,0,1)$ generano $K^m$,
+poiché $(a_1,\ldots,a_m)=\sum_i a_ie_i$.
+
+\section{Indipendenza lineare e basi}
+\begin{definizione}
+I vettori $v_1,\ldots,v_r$ sono \emph{linearmente indipendenti} se
+$\lambda_1v_1+\cdots+\lambda_rv_r=0_V$ implica
+$\lambda_1=\cdots=\lambda_r=0_K$. Altrimenti sono
+\emph{linearmente dipendenti}. Una \emph{base} di $V$ è un insieme di
+generatori linearmente indipendente.
+\end{definizione}
+Una famiglia contenente $0_V$ è dipendente, perché $1_K0_V=0_V$.
+Quando una famiglia è dipendente, almeno un vettore è combinazione
+lineare degli altri: basta scegliere un coefficiente non nullo nella
+relazione e isolare il vettore corrispondente. L'implicazione inversa
+segue portando tutti i termini al primo membro.
+
+Se $b_1,\ldots,b_n$ formano una base, ogni $v\in V$ si scrive
+$v=\sum_i\lambda_i b_i$ perché la famiglia genera $V$. La scrittura è
+unica: da $\sum_i\lambda_i b_i=\sum_i\mu_i b_i$ segue
+$\sum_i(\lambda_i-\mu_i)b_i=0_V$, e l'indipendenza forza
+$\lambda_i=\mu_i$ per ogni $i$. Gli scalari sono le \emph{coordinate}
+di $v$ rispetto alla base.
+
+\section{Spazi finitamente generati e teorema dello scambio}
+\begin{definizione}
+Uno spazio vettoriale è \emph{finitamente generato} se ammette un
+insieme finito di generatori. Per esempio $K^m$ è generato dai suoi
+$m$ vettori standard.
+\end{definizione}
+Invece $K[x]$ non è finitamente generato. Se tutti i generatori
+proposti sono nulli, non generano neppure $1$. Altrimenti, se
+$p_1,\ldots,p_n$ sono polinomi fissati e $d$ è il massimo dei gradi
+dei non nulli, ogni loro combinazione lineare ha grado al più $d$;
+il polinomio $x^{d+1}$ non è quindi generato da essi.
+
+\begin{teorema}[dello scambio]
+Se $V$ è generato da $m$ vettori $v_1,\ldots,v_m$ e
+$w_1,\ldots,w_r$ sono linearmente indipendenti in $V$, allora
+$r\leq m$. Più precisamente, alcuni $v_i$ si possono sostituire,
+uno alla volta, con i $w_j$ conservando ogni volta un insieme di
+generatori di $V$.
+\end{teorema}
+\begin{proof}
+Se $r=0$ non c'è nulla da dimostrare; supponiamo quindi $r\geq1$.
+Scriviamo $w_1=\sum_{i=1}^m\lambda_i v_i$. Non tutti i coefficienti
+sono nulli, perché $w_1\ne0_V$. Riordinando eventualmente i $v_i$,
+supponiamo $\lambda_m\ne0$. Isoliamo
+\[
+v_m=\lambda_m^{-1}\left(w_1-\sum_{i=1}^{m-1}\lambda_i v_i\right).
+\]
+Ogni vettore prima espresso mediante i $v_i$ è dunque
+esprimibile mediante $w_1$ e i $v_i$ rimasti: la nuova famiglia
+genera ancora $V$.
+
+Supponiamo ora di aver inserito $w_1,\ldots,w_{j-1}$ e di conservare
+$m-j+1$ vecchi generatori. Esprimiamo $w_j$ mediante questa famiglia.
+Almeno un coefficiente di un vecchio generatore è non nullo: se tutti
+lo fossero nulli, $w_j$ sarebbe combinazione di
+$w_1,\ldots,w_{j-1}$, contro l'indipendenza. Isolando quel vecchio
+generatore lo sostituiamo con $w_j$ e manteniamo la generazione.
+Il procedimento richiede un vecchio vettore a ogni passo. Se
+$r>m$, dopo $m$ passi $w_1,\ldots,w_m$ genererebbero già $V$ e
+$w_{m+1}$ sarebbe loro combinazione, assurdo. Quindi $r\leq m$.
+\end{proof}
+
+\begin{corollario}
+Tutte le basi di uno spazio vettoriale non nullo e finitamente
+generato hanno lo stesso numero di elementi.
+\end{corollario}
+\begin{proof}
+Se $B$ ha $r$ elementi e $C$ ne ha $s$, la famiglia $B$ è
+indipendente e $C$ genera: il teorema dà $r\leq s$. Scambiando i
+ruoli si ottiene $s\leq r$, dunque $r=s$.
+\end{proof}
+\begin{definizione}
+Il numero comune di elementi delle basi è la \emph{dimensione} di $V$,
+scritta $\dim V$. Poniamo $\dim\{0_V\}=0$; in particolare
+$\dim K^m=m$.
+\end{definizione}
+
+\section{Estrarre e completare una base}
+\begin{proposizione}
+Da ogni insieme finito di generatori di $V$ si può estrarre una base.
+Ogni insieme linearmente indipendente in uno spazio finitamente
+generato si può completare a una base.
+\end{proposizione}
+\begin{proof}
+Partendo dai generatori, se la famiglia è dipendente si elimina un
+vettore che è combinazione degli altri. L'insieme rimasto genera
+ancora $V$, perché il vettore eliminato si può ricostruire. Ripetendo,
+il numero degli elementi diminuisce e il processo termina con una
+famiglia indipendente e generatrice.
+
+Per il completamento, se la famiglia indipendente non genera $V$ si
+sceglie un vettore fuori dal suo sottospazio generato e lo si
+aggiunge. La famiglia resta indipendente: in un'eventuale relazione
+il coefficiente del nuovo vettore dovrebbe essere nullo, altrimenti
+esso sarebbe combinazione dei precedenti. Ogni aggiunta aumenta di
+uno il numero di vettori indipendenti; il teorema dello scambio lo
+limita al numero di un insieme finito di generatori. Il processo
+termina dunque con una base.
+\end{proof}
+
+\section{Esercizi sulle basi in \texorpdfstring{$\R^4$}{R4}}
+\begin{esercizio}
+Sia $U\subseteq\R^4$ definito da
+\[
+2x_1-x_2-3x_4=0,\qquad 2x_1+x_3+x_4=0.
+\]
+Ponendo $x_1=a$ e $x_4=b$, le equazioni danno
+$x_2=2a-3b$ e $x_3=-2a-b$. Quindi
+\[
+(x_1,x_2,x_3,x_4)
+=a(1,2,-2,0)+b(0,-3,-1,1).
+\]
+I due vettori generano $U$ e sono indipendenti: nella combinazione
+nulla la prima coordinata impone $a=0$ e la quarta $b=0$. Formano
+perciò una base e $\dim U=2$.
+\end{esercizio}
+
+\begin{esercizio}
+Sia $U=\langle u_1,u_2,u_3\rangle\subseteq\R^4$, dove
+\[
+u_1=(1,-1,0,2),\quad u_2=(-1,-3,2,0),\quad
+u_3=(2,0,-1,3).
+\]
+La relazione $u_2=3u_1-2u_3$ mostra che $u_2$ si può eliminare.
+La famiglia $(u_1,u_3)$ è indipendente: da
+$a u_1+b u_3=0$ la seconda coordinata dà $a=0$ e la terza
+allora dà $b=0$. Pertanto è una base di $U$ e $\dim U=2$.
+Per trovare la relazione direttamente si risolve
+$\lambda_1u_1+\lambda_2u_2+\lambda_3u_3=0$; le equazioni riducono a
+$\lambda_1=-3\lambda_2$ e $\lambda_3=2\lambda_2$, cioè
+$-3u_1+u_2+2u_3=0$.
+
+Consideriamo anche
+\[
+W=\{x\in\R^4:x_1+2x_3+x_4=0,\quad x_2-x_4=0\}.
+\]
+Prendendo $x_3=a$, $x_4=b$ troviamo
+$x=(-2a-b,b,a,b)$, dunque
+\[
+W=\langle(-2,0,1,0),(-1,1,0,1)\rangle.
+\]
+La terza e la quarta
+coordinata rendono immediata l'indipendenza dei due generatori:
+questa è una base di $W$ e $\dim W=2$.
+\end{esercizio}

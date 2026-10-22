@@ -2,93 +2,72 @@
 \section{Potenze a esponente intero positivo}
 % Fonte: Lezione 6, pp.~14--15
 
-Sia $n\in\N^*$. La potenza $x^n$ è il prodotto di $n$ fattori uguali
-a $x$ ed è definita per ogni $x\in\R$. Il comportamento dipende dalla
-parità dell'esponente.
+Sia $n\in\N^*$. La potenza $x^n$ è il prodotto di $n$ fattori uguali a $x$ ed è definita per ogni $x\in\R$. Il comportamento dipende dalla parità dell'esponente.
 \begin{itemize}
-  \item Se $n$ è \emph{pari}, $x^n$ è non negativa su $\R$, nulla
-  soltanto in $0$ e strettamente positiva per $x\ne0$. È una funzione
-  pari, strettamente decrescente su $(-\infty,0]$ e strettamente
-  crescente su $[0,+\infty)$. La sua immagine è $[0,+\infty)$:
+  \item \textbf{Esponente pari.} Se $n$ è pari, $x^n$ è non negativa su $\R$, nulla soltanto in $0$ e strettamente positiva per $x\ne0$. È una funzione pari, strettamente decrescente su $(-\infty,0]$ e strettamente crescente su $[0,+\infty)$. La sua immagine è $[0,+\infty)$:
   \[
   x\longmapsto x^n\colon\R\longrightarrow[0,+\infty).
   \]
-  \item Se $n$ è \emph{dispari}, $x^n$ ha lo stesso segno di $x$:
-  è non negativa su $[0,+\infty)$ e non positiva su $(-\infty,0]$,
-  con segno stretto fuori da $0$. È dispari e strettamente crescente
-  su tutto $\R$. La sua immagine è $\R$:
+  \item \textbf{Esponente dispari.} Se $n$ è dispari, $x^n$ ha lo stesso segno di $x$: è non negativa su $[0,+\infty)$ e non positiva su $(-\infty,0]$, con segno stretto fuori da $0$. È dispari e strettamente crescente su tutto $\R$. La sua immagine è $\R$:
   \[
   x\longmapsto x^n\colon\R\longrightarrow\R.
   \]
 \end{itemize}
 
 \begin{proof}[Verifica del segno e della monotonia]
-Il segno e la simmetria seguono dal numero di fattori negativi e
-dall'identità $(-x)^n=(-1)^n x^n$. Per $0\le u<v$, la fattorizzazione
+\textbf{Segno e simmetria.} Seguono dal numero di fattori negativi e dall'identità $(-x)^n=(-1)^n x^n$.
+
+\textbf{Crescita sui non negativi.} Per $0\le u<v$, la fattorizzazione
 \[
 v^n-u^n=(v-u)\sum_{k=0}^{n-1}v^{n-1-k}u^k>0
 \]
-prova la stretta crescita sulla semiretta positiva; per $n=1$ la somma
-vale $1$. Sulla semiretta negativa si usa la simmetria: nel caso pari
-l'ordine si inverte, nel caso dispari si conserva. Nel caso dispari,
-punti di segno opposto hanno anche immagini di segno opposto, quindi
-la crescita vale sull'intera retta. Le immagini dichiarate seguono
-dall'esistenza delle radici, dimostrata nella prossima sezione.
+prova la stretta crescita sulla semiretta positiva; per $n=1$ la somma vale $1$.
+
+\textbf{Semiretta negativa e confronto fra segni opposti.} Per $u<v\le0$, si ha $0\le-v<-u$. La crescita sui non negativi, insieme alla simmetria, dà $u^n>v^n$ nel caso pari e $u^n<v^n$ nel caso dispari. Nel caso dispari, punti di segno opposto hanno anche immagini di segno opposto: la crescita vale su tutta la retta.
+
+Le immagini dichiarate seguono dall'esistenza delle radici, dimostrata nella prossima sezione.
 \end{proof}
 
 \section{Radici e potenze a esponente razionale}
 % Fonte: Lezione 6, pp.~16--17
 
-Per ogni $n\in\N^*$ la restrizione della potenza alla semiretta
-$[0,+\infty)$ è biettiva su $[0,+\infty)$. La sua inversa si chiama
-\emph{radice $n$-esima}:
+Per ogni $n\in\N^*$ la restrizione della potenza alla semiretta $[0,+\infty)$ è biettiva su $[0,+\infty)$. La sua inversa si chiama \emph{radice $n$-esima}:
 \[
 \sqrt[n]{\,\cdot\,}\colon[0,+\infty)\longrightarrow[0,+\infty),
 \qquad \sqrt[n]{x}=x^{1/n}.
 \]
-Più precisamente, $\sqrt[n]{x}$ è l'unico numero \emph{non negativo}
-la cui potenza $n$-esima è $x$; è strettamente positivo quando $x>0$,
-mentre $\sqrt[n]{0}=0$.
+Più precisamente, $\sqrt[n]{x}$ è l'unico numero \emph{non negativo} la cui potenza $n$-esima è $x$; è strettamente positivo quando $x>0$, mentre $\sqrt[n]{0}=0$.
 
 \begin{proposizione}[Esistenza e unicità della radice]
-Per $a\ge0$ e $n\in\N^*$ esiste uno e un solo $c\ge0$ tale che
-$c^n=a$.
+Per $a\ge0$ e $n\in\N^*$ esiste uno e un solo $c\ge0$ tale che $c^n=a$.
 \end{proposizione}
 \begin{proof}
-Per $a=0$ basta $c=0$. Per $a>0$ consideriamo
+\textbf{Esistenza: scelta del candidato.} Per $a=0$ basta $c=0$. Per $a>0$ consideriamo
 \[
 S=\{t\ge0:t^n\le a\}.
 \]
-È non vuoto perché contiene $0$ ed è limitato superiormente:
-se $t>\max\{1,a\}$, allora $t^n\ge t>a$. Esiste dunque $c=\sup S$.
-Poniamo $B=c+1$ e $K=nB^{n-1}>0$. La fattorizzazione della differenza
-di potenze dà, per $u,v\in[0,B]$,
+È non vuoto perché contiene $0$ ed è limitato superiormente: se $t>\max\{1,a\}$, allora $t^n\ge t>a$. Esiste dunque $c=\sup S\ge0$.
+
+\textbf{Stima della variazione.} Poniamo $B=c+1$ e $K=nB^{n-1}>0$. La fattorizzazione della differenza di potenze dà, per $u,v\in[0,B]$,
 \[
 |u^n-v^n|\le K|u-v|,
 \]
 perché ciascuno dei $n$ prodotti della somma è al più $B^{n-1}$.
 
-Se $c^n<a$, scegliamo $0<h<\min\{1,(a-c^n)/K\}$.
-Allora $(c+h)^n\le c^n+Kh<a$, perciò $c+h\in S$, in contraddizione
-con il fatto che $c$ è un maggiorante.
-Se invece $c^n>a$, allora $c>0$; scegliamo
-$0<h<\min\{c,(c^n-a)/K\}$. Si ha $(c-h)^n\ge c^n-Kh>a$.
-Per la stretta crescita della potenza sui non negativi, nessun
-$t\ge c-h$ appartiene a $S$. Quindi $c-h$ sarebbe un maggiorante di
-$S$ più piccolo di $c$, ancora impossibile.
-Resta $c^n=a$; l'unicità segue dalla stessa stretta crescita.
+\textbf{Caso}\enspace\passomath{c^n<a} Scegliamo $0<h<\min\{1,(a-c^n)/K\}$. Allora $(c+h)^n\le c^n+Kh<a$, perciò $c+h\in S$, in contraddizione con il fatto che $c$ è un maggiorante.
+
+\textbf{Caso}\enspace\passomath{c^n>a} In questo caso $c>0$; scegliamo $0<h<\min\{c,(c^n-a)/K\}$. Si ha $(c-h)^n\ge c^n-Kh>a$. Per la stretta crescita della potenza sui non negativi, nessun $t\ge c-h$ appartiene a $S$. Quindi $c-h$ sarebbe un maggiorante di $S$ più piccolo di $c$, ancora impossibile. Resta necessariamente $c^n=a$.
+
+\textbf{Unicità.} La potenza è strettamente crescente sui non negativi: due numeri non negativi distinti non possono avere la stessa potenza $n$-esima. Questo vale anche per $a=0$.
 \end{proof}
 
-Se $n$ è dispari, la potenza è invertibile su tutta la retta e la
-radice si estende a una funzione $\R\to\R$ ponendo, per $x<0$,
+\textbf{Indice dispari.} Se $n$ è dispari, la potenza è invertibile su tutta la retta e la radice si estende a una funzione $\R\to\R$ ponendo, per $x<0$,
 \[
 \sqrt[n]{x}=-\sqrt[n]{-x}.
 \]
-È strettamente crescente e dispari. Se $n$ è pari, nessun reale ha
-potenza $n$-esima negativa, quindi il dominio reale della radice è
-soltanto $[0,+\infty)$. Per $a>0$, l'equazione $t^n=a$ con $n$ pari
-ha due soluzioni, $\pm\sqrt[n]{a}$: il simbolo di radice sceglie
-quella non negativa. In particolare
+È strettamente crescente e dispari.
+
+\textbf{Indice pari.} Se $n$ è pari, nessun reale ha potenza $n$-esima negativa, quindi il dominio reale della radice è soltanto $[0,+\infty)$. Per $a>0$, l'equazione $t^n=a$ con $n$ pari ha due soluzioni, $\pm\sqrt[n]{a}$: il simbolo di radice sceglie quella non negativa. In particolare
 \[
 (\sqrt[n]{x})^n=x\quad(x\ge0),\qquad
 \sqrt[n]{x^n}=\begin{cases}|x|&n\text{ pari},\\x&n\text{ dispari}.
@@ -119,17 +98,12 @@ quella non negativa. In particolare
 \end{tikzpicture}
 \end{schema}
 
-Combinando potenze intere e radici si definiscono le potenze a esponente
-razionale positivo. Per $p,q\in\N^*$ e $x\ge0$ poniamo
+\textbf{Potenze razionali positive.} Combinando potenze intere e radici si definiscono le potenze a esponente razionale positivo. Per $p,q\in\N^*$ e $x\ge0$ poniamo
 \[
 x^{p/q}=(\sqrt[q]{x})^p=\sqrt[q]{x^p}.
 \]
-Le due espressioni coincidono perché sono non negative e, elevate alla
-$q$-esima potenza, danno entrambe $x^p$.
-La definizione non dipende dalla rappresentazione della frazione:
-se $p/q=p'/q'$, le due potenze ottenute, elevate alla potenza $qq'$,
-danno rispettivamente $x^{pq'}$ e $x^{p'q}$, uguali poiché $pq'=p'q$.
-La stretta crescita della potenza $qq'$ sui non negativi conclude.
-Per basi negative occorre invece verificare separatamente il dominio
-reale delle radici coinvolte; la definizione appena data riguarda
-esplicitamente le basi non negative.
+\textbf{Compatibilità delle due scritture.} Le due espressioni coincidono perché sono non negative e, elevate alla $q$-esima potenza, danno entrambe $x^p$.
+
+\textbf{Indipendenza dalla frazione.} Se due frazioni rappresentano lo stesso razionale, cioè se $p/q=p'/q'$, le due potenze ottenute, elevate alla potenza $qq'$, danno rispettivamente $x^{pq'}$ e $x^{p'q}$, uguali poiché $pq'=p'q$. La stretta crescita della potenza $qq'$ sui non negativi conclude.
+
+Per basi negative occorre verificare separatamente il dominio reale delle radici coinvolte; la definizione appena data riguarda esplicitamente le basi non negative.

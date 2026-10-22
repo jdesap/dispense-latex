@@ -1,0 +1,35 @@
+{
+  "data": "2026-10-22",
+  "sessione": 2,
+  "ambito": "Spazi vettoriali, parte 1; allineamento dei paragrafi e degli elenchi in entrambe le materie",
+  "sorgenti_modificati": [
+    "analisi 1/preambolo.tex",
+    "geometria 1/preambolo.tex",
+    "geometria 1/capitoli/01a-spazi-e-sottospazi.tex",
+    "geometria 1/capitoli/01b-somme-di-sottospazi.tex",
+    "geometria 1/capitoli/01b-sottospazio-generato.tex"
+  ],
+  "ambienti_numerati_e_label_conservati": true,
+  "tikz_conservati": true,
+  "materie": {
+    "analisi 1": {
+      "pagine_pdf": 52,
+      "capitoli_estratti": 7,
+      "pagine_estratti_identiche_al_volume": true,
+      "avvisi_latex": [],
+      "intervalli_numeri_stampati_invariati": true,
+      "pdf_sha256": "f1048aff3fb4b338f32ebb01f9d1ff475813f0942922e2f950707ba030b40b9d",
+      "collegamenti_rimanenti_validi": 6
+    },
+    "geometria 1": {
+      "pagine_pdf": 28,
+      "capitoli_estratti": 1,
+      "pagine_estratti_identiche_al_volume": true,
+      "avvisi_latex": [],
+      "intervalli_numeri_stampati_invariati": true,
+      "pdf_sha256": "3938279104d876079ccdcf685dd5bd5c75dba0cb2ece9ecf74b7549c7f3db9ea",
+      "collegamenti_rimanenti_validi": 7
+    }
+  },
+  "ispezione_visiva": "Geometria 1, pagine 1–8; Logica, pagine 1–2; nuove verifiche dopo le correzioni degli elenchi e dei raccordi"
+}

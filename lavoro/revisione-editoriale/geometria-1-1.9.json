@@ -1,0 +1,33 @@
+{
+  "data": "2026-10-22",
+  "materia": "geometria 1",
+  "sezione": "1.9",
+  "titolo": "1.9 Prodotto di spazi vettoriali",
+  "stato": "completata; verifica matematica e visiva eseguite",
+  "nota": "Proprietà del prodotto raggruppate per struttura additiva e scalari; prova della base distinta in generazione e indipendenza; dimensione e casi nulli verificati.",
+  "pagine_volume": 28,
+  "pagine_fisiche_ispezione": [
+    18,
+    19
+  ],
+  "avvisi_latex": [],
+  "estratti_identici_al_volume": true,
+  "pdf_sha256": "62e84de697d5dcb555abf94a83c38617409a26bcb9fd37a5981e4b26f1d10994",
+  "sorgenti_sha256": {
+    "main.tex": "411a4a8d7bf859876e88d63d8062ac24d5a11608e1ca68e0e32c9d51174f5a46",
+    "preambolo.tex": "0f10401e3c2fbcb1b849992391cdef8abc0a8b67949713cebcb01bb6066edc7a",
+    "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+    "capitoli/01a-spazi-e-sottospazi.tex": "72e8a1798a04b2f913771207520ce4b8ef7e5f22da8245630821ed011d878c9a",
+    "capitoli/01b-somme-di-sottospazi.tex": "0598effeefeac374a47431a56452e09a6a18c649c87389bb9a9fd068e60612ca",
+    "capitoli/01b-sottospazio-generato.tex": "b2a3cecb2bc235e5492daaf38f22f656f57b8e1f331e06ed9b1db76e08744a0e",
+    "capitoli/01c-basi-e-dimensione.tex": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+    "capitoli/01c-indipendenza-basi-coordinate.tex": "5e074c8ce432c9a89b420ae0529b790d177be936a0e23dfedcdcef5539d2a9a4",
+    "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "ed50e0abeb02a6ad48399391066fe8c5faa7b9e2a70c336e0f78fe69a774482f",
+    "capitoli/01e-equazioni-cartesiane.tex": "58bbac306576cf70cdd4018445b84eb08f07dbba5f8ce17d126ae91f0884c303",
+    "capitoli/01f-prodotti.tex": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+    "capitoli/01g-quozienti.tex": "c2999a993b45a0188ea473356dd09583786567db244fd8678cab9458a4ee1431",
+    "capitoli/01h-grassmann-complementi.tex": "39eb025b37c90f670959faac5983ebb01e42a60df2458fd068747e84d35973bd",
+    "capitoli/01i-costruzioni-in-r5.tex": "bac0922f2181733d62bd3d94c1ff013f496e0cee5dc20dfaf2a66344490749ed",
+    "capitoli/01j-equazioni-di-polinomi.tex": "2f1e0e39bd2b66d330ae2095ea9588d152b3f94e57c22d0a7edfaae6cf3c570a"
+  }
+}

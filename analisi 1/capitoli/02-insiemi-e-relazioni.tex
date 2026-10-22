@@ -8,66 +8,54 @@
 \section{Insiemi, elementi e insieme ambiente}
 % Fonte: Lezione 1, pp.~7--8
 
-Il concetto di \emph{insieme} viene assunto come primitivo: intuitivamente
-indica una raccolta di oggetti, detti \emph{elementi} o \emph{punti}.
-Un insieme $A$ è assegnato quando, per ogni oggetto considerato, la frase
-«$x$ appartiene ad $A$» ha un valore di verità. Scriviamo
+Il concetto di \emph{insieme} viene assunto come primitivo: intuitivamente indica una raccolta di oggetti, detti \emph{elementi} o \emph{punti}. Un insieme $A$ è assegnato quando, per ogni oggetto considerato, la frase «$x$ appartiene ad $A$» ha un valore di verità. Scriviamo
 \[
   x\in A\quad\text{se $x$ appartiene ad $A$},\qquad
   x\notin A\quad\text{se non vi appartiene}.
 \]
-L'ordine in cui si elencano gli elementi e le eventuali ripetizioni
-non modificano l'insieme. Due insiemi sono uguali esattamente quando
-hanno gli stessi elementi.
+\textbf{Uguaglianza e rappresentazione.}
+\begin{itemize}
+  \item Due insiemi sono uguali se e solo se hanno gli stessi elementi.
+  \item L'ordine dell'elenco e le eventuali ripetizioni non modificano l'insieme.
+\end{itemize}
 
-Si può assegnare un insieme elencandone gli elementi oppure indicando
-una proprietà che li caratterizza. Per esempio,
+\textbf{Descrizione per elenco o per proprietà.} Si può assegnare un insieme elencandone gli elementi oppure indicando una proprietà che li caratterizza. Per esempio,
 \[
   A=\{1,3,5,7,9\}
    =\{x\in\N:0\le x\le10\ \land\ x\text{ è dispari}\}.
 \]
-In generale, una descrizione per proprietà ha la forma
-$A=\{x\in U:P(x)\}$: $U$ è l'\emph{insieme ambiente} e si selezionano
-gli elementi di $U$ che soddisfano $P$.
+In generale, una descrizione per proprietà ha la forma $A=\{x\in U:P(x)\}$: $U$ è l'\emph{insieme ambiente} e si selezionano gli elementi di $U$ che soddisfano $P$.
 
-Si assume l'esistenza di un insieme privo di elementi, detto
-\emph{insieme vuoto} e indicato con $\varnothing$. Esso è diverso dal
-singoletto $\{\varnothing\}$: quest'ultimo contiene un elemento,
-che è a sua volta l'insieme vuoto.
+\textbf{Insieme vuoto.} Si assume l'esistenza di un insieme privo di elementi, detto \emph{insieme vuoto} e indicato con $\varnothing$. Esso è diverso dal singoletto $\{\varnothing\}$: quest'ultimo contiene un elemento, che è a sua volta l'insieme vuoto.
 
 \section{Sottoinsiemi e insieme delle parti}
 % Fonte: Lezione 1, p.~9
 
 \begin{definizione}[Inclusione]
-Un insieme $B$ è un \emph{sottoinsieme} di $A$ se ogni elemento di $B$
-è anche un elemento di $A$. Si scrive $B\subseteq A$, ossia
+Un insieme $B$ è un \emph{sottoinsieme} di $A$ se ogni elemento di $B$ è anche un elemento di $A$. Si scrive $B\subseteq A$, ossia
 \[
   B\subseteq A\quad\Longleftrightarrow\quad
   \forall x,\ (x\in B\Rightarrow x\in A).
 \]
 \end{definizione}
 
-Gli insiemi $\varnothing$ e $A$ sono sempre sottoinsiemi di $A$ e sono
-detti \emph{sottoinsiemi impropri}.
-L'inclusione $\varnothing\subseteq A$ vale perché non esistono elementi
-del vuoto che possano violarla. Se $B\subseteq A$ ma $B\ne A$,
-scriviamo $B\subsetneq A$.
+\begin{itemize}
+  \item \textbf{Sottoinsiemi impropri.} $\varnothing$ e $A$ sono sempre sottoinsiemi di $A$. L'inclusione $\varnothing\subseteq A$ vale perché il vuoto non ha elementi che possano violarla.
+  \item \textbf{Inclusione stretta.} Se $B\subseteq A$ e $B\ne A$, scriviamo $B\subsetneq A$.
+\end{itemize}
 
-L'\emph{insieme delle parti} di $A$, indicato con $\mathcal P(A)$,
-è l'insieme di tutti i suoi sottoinsiemi:
+\textbf{Insieme delle parti.} L'\emph{insieme delle parti} di $A$, indicato con $\mathcal P(A)$, è l'insieme di tutti i suoi sottoinsiemi:
 \[
   \mathcal P(A)=\{B:B\subseteq A\}.
 \]
-Per esempio, se $A=\{1,2\}$, allora
-$\mathcal P(A)=\{\varnothing,\{1\},\{2\},\{1,2\}\}$.
-È utile distinguere l'appartenenza dall'inclusione: $1\in A$,
-mentre $\{1\}\subseteq A$ e $\{1\}\in\mathcal P(A)$.
+\begin{esempio}
+Se $A=\{1,2\}$, allora $\mathcal P(A)=\{\varnothing,\{1\},\{2\},\{1,2\}\}$. È utile distinguere l'appartenenza dall'inclusione: $1\in A$, mentre $\{1\}\subseteq A$ e $\{1\}\in\mathcal P(A)$.
+\end{esempio}
 
 \section{Operazioni tra insiemi}
 % Fonte: Lezione 1, pp.~10--11
 
-Fissiamo due insiemi $A$ e $B$ contenuti nello stesso ambiente $U$.
-Le operazioni fondamentali traducono le corrispondenti operazioni logiche.
+Fissiamo due insiemi $A$ e $B$ contenuti nello stesso ambiente $U$. Le operazioni fondamentali traducono le corrispondenti operazioni logiche.
 
 \begin{definizione}[Unione, intersezione e differenza]
 Si definiscono
@@ -76,9 +64,7 @@ Si definiscono
   A\cap B&=\{x\in U:x\in A\land x\in B\},\\
   A\setminus B&=\{x\in U:x\in A\land x\notin B\}.
 \end{align*}
-L'unione raccoglie gli elementi che appartengono ad almeno uno dei due
-insiemi; l'intersezione quelli comuni a entrambi; la differenza quelli
-che appartengono ad $A$ e non a $B$.
+L'unione corrisponde all'appartenenza ad almeno uno dei due insiemi; l'intersezione all'appartenenza a entrambi; la differenza all'appartenenza ad $A$ ma non a $B$.
 \end{definizione}
 
 \begin{schema}
@@ -110,19 +96,14 @@ che appartengono ad $A$ e non a $B$.
     \node at (0,-1.2) {$A\setminus B$};
   \end{scope}
 \end{tikzpicture}
-\par\smallskip
-La regione colorata rappresenta l'operazione indicata sotto ciascun disegno.
+\par\smallskip La regione colorata rappresenta l'operazione indicata sotto ciascun disegno.
 \end{schema}
 
-Per esempio, con $A=\{1,2,3\}$ e $B=\{3,4\}$ si ha
-$A\cup B=\{1,2,3,4\}$, $A\cap B=\{3\}$ e $A\setminus B=\{1,2\}$.
-Scambiando i due insiemi si ottiene invece $B\setminus A=\{4\}$:
-la differenza dipende dall'ordine.
+\begin{esempio}
+Con $A=\{1,2,3\}$ e $B=\{3,4\}$ si ha $A\cup B=\{1,2,3,4\}$, $A\cap B=\{3\}$ e $A\setminus B=\{1,2\}$. Scambiando i due insiemi si ottiene invece $B\setminus A=\{4\}$: la differenza dipende dall'ordine.
+\end{esempio}
 
-Se $B\subseteq A$, l'insieme $A\setminus B$ è detto \emph{complementare
-di $B$ in $A$}. Quando l'ambiente è $U$, si scrive semplicemente
-$B^c=U\setminus B$. L'ambiente è essenziale: il complemento dello stesso
-insieme cambia se cambia $U$.
+\textbf{Complementare e insieme ambiente.} Se $B\subseteq A$, l'insieme $A\setminus B$ è detto \emph{complementare di $B$ in $A$}. Quando l'ambiente è $U$, si scrive semplicemente $B^c=U\setminus B$. L'ambiente è essenziale: il complemento dello stesso insieme cambia se cambia $U$.
 
 \section{Le leggi di De Morgan}
 % Fonte: Lezione 1, p.~11
@@ -134,71 +115,74 @@ Per $A,B\subseteq U$, con i complementi calcolati nello stesso ambiente,
   (A\cap B)^c=A^c\cup B^c.
 \]
 \end{proposizione}
+% Evita che la sola frase conclusiva della seconda identità passi alla pagina seguente.
+\enlargethispage{\baselineskip}
 \begin{proof}
-Un elemento $x\in U$ non appartiene all'unione se e solo se non appartiene
-né ad $A$ né a $B$; quindi appartiene a entrambi i complementi. Questo
-dimostra la prima identità. Analogamente, non appartenere all'intersezione
-significa che manca almeno una delle due appartenenze; dunque $x$ appartiene
-ad almeno uno tra $A^c$ e $B^c$, e si ottiene la seconda identità.
+\textbf{Prima identità.} Per ogni $x\in U$,
+\[
+  \begin{aligned}
+    x\in(A\cup B)^c
+    &\iff x\notin A\cup B\\
+    &\iff x\notin A\ \land\ x\notin B\\
+    &\iff x\in A^c\cap B^c.
+  \end{aligned}
+\]
+Le due condizioni di appartenenza sono equivalenti per ogni elemento dell'ambiente, quindi i due insiemi sono uguali.
+
+\textbf{Seconda identità.} Analogamente, per ogni $x\in U$,
+\[
+  \begin{aligned}
+    x\in(A\cap B)^c
+    &\iff x\notin A\cap B\\
+    &\iff x\notin A\ \lor\ x\notin B\\
+    &\iff x\in A^c\cup B^c.
+  \end{aligned}
+\]
+Si ottiene anche la seconda uguaglianza.
 \end{proof}
 
-Le formule esprimono a livello di insiemi le equivalenze logiche
-$\neg(P\lor Q)\Leftrightarrow(\neg P\land\neg Q)$ e
-$\neg(P\land Q)\Leftrightarrow(\neg P\lor\neg Q)$.
-Saranno utili per passare dalle proprietà degli aperti a quelle dei chiusi.
+Le formule esprimono a livello di insiemi le equivalenze logiche $\neg(P\lor Q)\Leftrightarrow(\neg P\land\neg Q)$ e $\neg(P\land Q)\Leftrightarrow(\neg P\lor\neg Q)$. Saranno utili per passare dalle proprietà degli aperti a quelle dei chiusi.
 
 \section{Prodotto cartesiano e relazioni}
 % Fonte: Lezione 1, p.~12
 
 \begin{definizione}[Prodotto cartesiano]
-Il prodotto cartesiano di $A$ e $B$ è l'insieme delle coppie ordinate
-con primo elemento in $A$ e secondo elemento in $B$:
+Il prodotto cartesiano di $A$ e $B$ è l'insieme delle coppie ordinate con primo elemento in $A$ e secondo elemento in $B$:
 \[
   A\times B=\{(a,b):a\in A,\ b\in B\}.
 \]
 \end{definizione}
 
-Una coppia è \emph{ordinata}: $(a,b)=(a',b')$ se e solo se $a=a'$ e
-$b=b'$. In particolare, scambiare le componenti modifica in generale
-la coppia. Per esempio,
+\textbf{Coppie ordinate.} Una coppia è \emph{ordinata}: $(a,b)=(a',b')$ se e solo se $a=a'$ e $b=b'$. In particolare, scambiare le componenti modifica in generale la coppia. Per esempio,
 \[
   \{1,2\}\times\{a,b\}
    =\{(1,a),(1,b),(2,a),(2,b)\}.
 \]
 
 \begin{definizione}[Relazione]
-Dati due insiemi non vuoti $A$ e $B$, una relazione tra $A$ e $B$
-è un sottoinsieme $R\subseteq A\times B$. Si dice che $a\in A$ e
-$b\in B$ sono in relazione, e si scrive $a\,R\,b$, quando $(a,b)\in R$.
-Se $A=B$, si parla di una relazione \emph{su} $A$.
+Dati due insiemi non vuoti $A$ e $B$, una relazione tra $A$ e $B$ è un sottoinsieme $R\subseteq A\times B$. Si dice che $a\in A$ e $b\in B$ sono in relazione, e si scrive $a\,R\,b$, quando $(a,b)\in R$. Se $A=B$, si parla di una relazione \emph{su} $A$.
 \end{definizione}
 
-Specificare una relazione significa dunque scegliere quali coppie
-considerare. Per esempio, su $A=\{1,2,3\}$ la relazione «essere minore
-o uguale» è il sottoinsieme
+\begin{esempio}
+Specificare una relazione significa scegliere quali coppie considerare. Su $A=\{1,2,3\}$ la relazione «essere minore o uguale» è il sottoinsieme
 \[
   R=\{(1,1),(1,2),(1,3),(2,2),(2,3),(3,3)\}\subseteq A\times A.
 \]
+\end{esempio}
 
 \section{Relazioni d'ordine e ordine totale}
 % Fonte: Lezione 1, p.~13
 
 \begin{definizione}[Relazione d'ordine]
-Una relazione $R$ su un insieme non vuoto $A$ si dice \emph{relazione
-d'ordine} se soddisfa le seguenti proprietà:
-\begin{enumerate}
-  \item \emph{Riflessività:} per ogni $a\in A$, $a\,R\,a$.
-  \item \emph{Antisimmetria:} per ogni $a,b\in A$,
-    $(a\,R\,b\land b\,R\,a)\Rightarrow a=b$.
-  \item \emph{Transitività:} per ogni $a,b,c\in A$,
-    $(a\,R\,b\land b\,R\,c)\Rightarrow a\,R\,c$.
+Una relazione $R$ su un insieme non vuoto $A$ si dice \emph{relazione d'ordine} se soddisfa le seguenti proprietà:
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Riflessività:} per ogni $a\in A$, $a\,R\,a$.
+  \item \textbf{Antisimmetria:} per ogni $a,b\in A$, $(a\,R\,b\land b\,R\,a)\Rightarrow a=b$.
+  \item \textbf{Transitività:} per ogni $a,b,c\in A$, $(a\,R\,b\land b\,R\,c)\Rightarrow a\,R\,c$.
 \end{enumerate}
 \end{definizione}
 
-L'antisimmetria non richiede di vietare ogni relazione in entrambi i
-versi: richiede che ciò avvenga soltanto per elementi uguali. È una
-condizione diversa dalla simmetria, che richiederebbe invece la validità
-della relazione in entrambi i versi per ogni coppia in relazione.
+\textbf{Antisimmetria e simmetria.} L'antisimmetria non richiede di vietare ogni relazione in entrambi i versi: richiede che ciò avvenga soltanto per elementi uguali. È una condizione diversa dalla simmetria, che richiederebbe invece la validità della relazione in entrambi i versi per ogni coppia in relazione.
 
 \begin{definizione}[Ordine totale]
 Un ordine si dice \emph{totale} se ogni coppia di elementi è confrontabile:
@@ -207,8 +191,10 @@ Un ordine si dice \emph{totale} se ogni coppia di elementi è confrontabile:
 \]
 \end{definizione}
 
-L'ordine usuale $\le$ sui numeri è totale. L'inclusione è invece un
-esempio di ordine che in generale non è totale: su $\mathcal P(\{1,2\})$
-gli insiemi $\{1\}$ e $\{2\}$ non sono confrontabili, perché nessuno dei
-due contiene l'altro. Riflessività, antisimmetria e transitività
-dell'inclusione continuano comunque a valere.
+\begin{esempio}
+\leavevmode
+\begin{itemize}
+  \item L'ordine usuale $\le$ su $\N$, $\Z$, $\Q$ o $\R$ è totale.
+  \item L'inclusione è un ordine su $\mathcal P(A)$, ma in generale non è totale. Per $A=\{1,2\}$, i sottoinsiemi $\{1\}$ e $\{2\}$ non sono confrontabili: nessuno contiene l'altro. Riflessività, antisimmetria e transitività restano valide.
+\end{itemize}
+\end{esempio}

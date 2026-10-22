@@ -1,27 +1,34 @@
-fonte,pagina,contenuto,sorgente
-Lezione 5,1,Definizione e primi assiomi di spazio vettoriale,capitoli/01-spazi-e-sottospazi.tex
-Lezione 5,2,Assiomi restanti ed esempi geometrico e di campi,capitoli/01-spazi-e-sottospazi.tex
-Lezione 5,3,Esempi di spazi e definizione di sottospazio,capitoli/01-spazi-e-sottospazi.tex
-Lezione 5,4,Esempi e controesempio di sottospazio,capitoli/01-spazi-e-sottospazi.tex
-Lezione 5,5,Intersezione e unione di sottospazi,capitoli/01-spazi-e-sottospazi.tex
-Lezione 5,6,Combinazioni lineari e generatori,capitoli/01-spazi-e-sottospazi.tex
-Lezione 6,1,Esercizi sui generatori e definizione di sottospazio generato,capitoli/01-spazi-e-sottospazi.tex;capitoli/02-generatori-basi-dimensione.tex
-Lezione 6,2,Teorema del sottospazio generato e dimostrazione,capitoli/02-generatori-basi-dimensione.tex
-Lezione 8,1,Spazi finitamente generati e teorema dello scambio,capitoli/02-generatori-basi-dimensione.tex
-Lezione 8,2,Dimostrazione dello scambio e corollario sulle basi,capitoli/02-generatori-basi-dimensione.tex
-Lezione 8,3,Dimensione e dimensione di K^m,capitoli/02-generatori-basi-dimensione.tex
-Lezione 9,1,Estrazione e completamento di basi ed esercizio su equazioni,capitoli/02-generatori-basi-dimensione.tex
-Lezione 9,2,Base del primo sottospazio ed esercizio sui tre generatori,capitoli/02-generatori-basi-dimensione.tex
-Lezione 9,3,Dipendenza e base del secondo esercizio e parametrizzazione di W,capitoli/02-generatori-basi-dimensione.tex
-Lezione 9,4,Base e dimensione di W,capitoli/02-generatori-basi-dimensione.tex
-Lezione 10,1,Equazioni cartesiane da una base in R4,capitoli/03-equazioni-prodotti-quozienti.tex
-Lezione 10,2,Prodotto di spazi vettoriali e formula della dimensione,capitoli/03-equazioni-prodotti-quozienti.tex
-Lezione 10,3,Relazione di equivalenza e classi modulo W,capitoli/03-equazioni-prodotti-quozienti.tex
-Lezione 10,4,Operazioni sul quoziente e inizio della prova della dimensione,capitoli/03-equazioni-prodotti-quozienti.tex
-Lezione 10,5,Fine della prova della dimensione del quoziente,capitoli/03-equazioni-prodotti-quozienti.tex
-Lezione 11_12,1,Formula di Grassmann e prova,capitoli/04-somme-e-complementi.tex
-Lezione 11_12,2,Complementi ed esercizio in R5 con dipendenza,capitoli/04-somme-e-complementi.tex
-Lezione 11_12,3,Base di U metodo matriciale ed equazioni parametriche,capitoli/04-somme-e-complementi.tex
-Lezione 11_12,4,Equazioni cartesiane e complementare W,capitoli/04-somme-e-complementi.tex
-Lezione 11_12,5,Sottospazio Z ed equazioni dei polinomi nella prima base,capitoli/04-somme-e-complementi.tex
-Lezione 11_12,6,Equazioni dei polinomi nella seconda base,capitoli/04-somme-e-complementi.tex
+fonte,pagina,contenuto,stato,modulo_attivo
+Lezione 5,1,Definizione e primi assiomi di spazio vettoriale,verificato,capitoli/01a-spazi-e-sottospazi.tex
+Lezione 5,2,Assiomi restanti ed esempi geometrico e di campi,verificato,capitoli/01a-spazi-e-sottospazi.tex
+Lezione 5,3,Esempi di spazi e definizione di sottospazio,verificato,capitoli/01a-spazi-e-sottospazi.tex
+Lezione 5,4,Esempi e controesempio di sottospazio,verificato,capitoli/01a-spazi-e-sottospazi.tex
+Lezione 5,5,Intersezione e unione di sottospazi,verificato,capitoli/01a-spazi-e-sottospazi.tex
+Lezione 5,6,Combinazioni lineari e generatori,verificato,capitoli/01a-spazi-e-sottospazi.tex
+Lezione 6,1,Esercizi sui generatori e definizione di sottospazio generato,verificato,capitoli/01b-sottospazio-generato.tex
+Lezione 6,2,Teorema del sottospazio generato e dimostrazione,verificato,capitoli/01b-sottospazio-generato.tex
+Lezione 7,1,Somma di due e più sottospazi e definizione generale di somma diretta,verificato,capitoli/01b-somme-di-sottospazi.tex
+Lezione 7,2,Criterio di somma diretta per due sottospazi e dimostrazione nei due versi,verificato,capitoli/01b-somme-di-sottospazi.tex
+Lezione 7,3,Esercizio della prova alternativa e indipendenza e inizio criterio di dipendenza,verificato,capitoli/01b-somme-di-sottospazi.tex;capitoli/01c-indipendenza-basi-coordinate.tex
+Lezione 7,4,Conclusione criterio di dipendenza e due esempi in R3 e definizione di base,verificato,capitoli/01c-indipendenza-basi-coordinate.tex
+Lezione 7,5,Unicità della rappresentazione e verifica della base canonica in R2,verificato,capitoli/01c-indipendenza-basi-coordinate.tex
+Lezione 7,6,Schema canonico ed esercizio in Rm e coordinate e inizio esercizio in due basi,verificato,capitoli/01c-indipendenza-basi-coordinate.tex
+Lezione 7,7,Coordinate di (3;2) nella base ((1;-1);(2;1)) con soluzione completa,verificato,capitoli/01c-indipendenza-basi-coordinate.tex
+Lezione 8,1,Spazi finitamente generati e teorema dello scambio,verificato,capitoli/01c-basi-e-dimensione.tex
+Lezione 8,2,Dimostrazione dello scambio e corollario sulle basi,verificato,capitoli/01c-basi-e-dimensione.tex
+Lezione 8,3,Dimensione e dimensione di K^m,verificato,capitoli/01c-basi-e-dimensione.tex
+Lezione 9,1,Estrazione e completamento di basi ed esercizio su equazioni,verificato,capitoli/01d-estrazione-e-basi-di-sottospazi.tex
+Lezione 9,2,Base del primo sottospazio ed esercizio sui tre generatori,verificato,capitoli/01d-estrazione-e-basi-di-sottospazi.tex
+Lezione 9,3,Dipendenza e base del secondo esercizio e parametrizzazione di W,verificato,capitoli/01d-estrazione-e-basi-di-sottospazi.tex
+Lezione 9,4,Base e dimensione di W,verificato,capitoli/01d-estrazione-e-basi-di-sottospazi.tex
+Lezione 10,1,Equazioni cartesiane da una base in R4,verificato,capitoli/01e-equazioni-cartesiane.tex
+Lezione 10,2,Prodotto di spazi vettoriali e formula della dimensione,verificato,capitoli/01f-prodotti.tex
+Lezione 10,3,Relazione di equivalenza e classi modulo W,verificato,capitoli/01g-quozienti.tex
+Lezione 10,4,Operazioni sul quoziente e inizio della prova della dimensione,verificato,capitoli/01g-quozienti.tex
+Lezione 10,5,Fine della prova della dimensione del quoziente,verificato,capitoli/01g-quozienti.tex
+Lezione 11_12,1,Formula di Grassmann e prova,verificato,capitoli/01h-grassmann-complementi.tex
+Lezione 11_12,2,Complementi ed esercizio in R5 con dipendenza,verificato,capitoli/01h-grassmann-complementi.tex;capitoli/01i-costruzioni-in-r5.tex
+Lezione 11_12,3,Base di U metodo matriciale ed equazioni parametriche,verificato,capitoli/01i-costruzioni-in-r5.tex
+Lezione 11_12,4,Equazioni cartesiane e complementare W,verificato,capitoli/01i-costruzioni-in-r5.tex
+Lezione 11_12,5,Sottospazio Z ed equazioni dei polinomi nella prima base,verificato,capitoli/01i-costruzioni-in-r5.tex;capitoli/01j-equazioni-di-polinomi.tex
+Lezione 11_12,6,Equazioni dei polinomi nella seconda base,verificato,capitoli/01j-equazioni-di-polinomi.tex

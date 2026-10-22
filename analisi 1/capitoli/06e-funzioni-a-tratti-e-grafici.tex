@@ -4,22 +4,19 @@
 
 \subsection{Parte positiva e parte negativa}
 
-Per ogni reale $x$ si definiscono la \emph{parte positiva} e la
-\emph{parte negativa} mediante
+Per ogni reale $x$ si definiscono la \emph{parte positiva} e la \emph{parte negativa} mediante
 \[
 x^+=\max\{x,0\}=\begin{cases}x,&x\ge0,\\0,&x<0,\end{cases}
 \qquad
 x^-=-\min\{x,0\}=\begin{cases}-x,&x\le0,\\0,&x>0.\end{cases}
 \]
-Entrambe sono non negative: la parte negativa misura il modulo della
-componente negativa e non è un numero negativo. Distinguendo i casi
-$x\ge0$ e $x<0$ si verificano le identità
+\textbf{Segno e identità.} Entrambe sono non negative: la parte negativa misura il modulo della componente negativa e non è un numero negativo. Distinguendo i casi $x\ge0$ e $x<0$ si verificano le identità
 \[
 \boxed{x=x^+-x^-,\qquad |x|=x^++x^-}.
 \]
-Le stesse definizioni si applicano punto per punto a una funzione:
-$f^+(x)=\max\{f(x),0\}$ e $f^-(x)=\max\{-f(x),0\}$, con
-$f=f^+-f^-$ e $|f|=f^++f^-$.
+
+
+\textbf{Parti di una funzione.} Le stesse definizioni si applicano punto per punto a una funzione: $f^+(x)=\max\{f(x),0\}$ e $f^-(x)=\max\{-f(x),0\}$, con $f=f^+-f^-$ e $|f|=f^++f^-$.
 
 \begin{schema}
 \begin{tikzpicture}[x=1cm,y=.85cm]
@@ -41,35 +38,30 @@ $f=f^+-f^-$ e $|f|=f^++f^-$.
 \enlargethispage{2pt}
 
 \begin{definizione}
-La \emph{parte intera} di $x\in\R$, o \emph{floor}, è l'unico
-intero $m$ tale che $m\le x<m+1$. Si indica con $\lfloor x\rfloor$.\footnote{Si
-usano anche $[x]$ per la parte intera e $(x)$ per la parte frazionaria;
-qui preferiamo $\lfloor x\rfloor$ e $\{x\}$ per distinguere chiaramente
-le due funzioni dalle altre parentesi.}
-La \emph{parte frazionaria} è $\{x\}=x-\lfloor x\rfloor$.
+La \emph{parte intera} di $x\in\R$, o \emph{floor}, è l'unico intero $m$ tale che $m\le x<m+1$. Si indica con $\lfloor x\rfloor$.\footnote{Si usano anche $[x]$ per la parte intera e $(x)$ per la parte frazionaria; qui preferiamo $\lfloor x\rfloor$ e $\{x\}$ per distinguere chiaramente le due funzioni dalle altre parentesi.} La \emph{parte frazionaria} è $\{x\}=x-\lfloor x\rfloor$.
 \end{definizione}
 
-L'esistenza dell'intero richiesto segue dalla proprietà di Archimede
-e dal principio del minimo intero, come nel passaggio usato per
-dimostrare la densità dei razionali. L'unicità segue dal fatto che
-due interi distinti distano almeno $1$.
+\begin{proof}[Esistenza e unicità]
+\textbf{Esistenza.} Archimede e il principio del minimo intero forniscono, come nella prova della densità dei razionali, un intero $m$ con $x-1<m\le x$: basta applicare a $x-1$ il fatto che per ogni reale $t$ esiste un intero in $(t,t+1]$. Si ottiene $m\le x<m+1$.
+
+\textbf{Unicità.} Se due interi $m<k$ soddisfacessero entrambe le condizioni, si avrebbe $m+1\le k\le x<m+1$, assurdo: due interi distinti distano almeno $1$.
+\end{proof}
+
 Per ogni reale $x$ si ha $0\le\{x\}<1$; dunque
 \[
 \lfloor\,\cdot\,\rfloor\colon\R\to\Z,\qquad
 \{\,\cdot\,\}\colon\R\to[0,1).
 \]
-Il grafico della parte intera ha gradini orizzontali: per
-$m\le x<m+1$ il valore è $m$. Quello della parte frazionaria ha
-segmenti di pendenza $1$: sullo stesso intervallo vale $x-m$.
-Nel primo punto di ogni tratto l'estremo è incluso, nell'ultimo è
-escluso. Inoltre la parte frazionaria è periodica di periodo principale
-$1$, perché $\lfloor x+1\rfloor=\lfloor x\rfloor+1$.
+\textbf{Grafici.} Per $m\le x<m+1$, il grafico della parte intera è il segmento orizzontale $y=m$ e quello della parte frazionaria è il segmento $y=x-m$, di pendenza $1$. In entrambi, l'estremo sinistro è incluso e il destro escluso.
+
+\begin{proof}[Periodo principale]
+\textbf{Periodo $1$ della parte frazionaria.} Se $m=\lfloor x\rfloor$, allora $m+1\le x+1<m+2$: dunque $\lfloor x+1\rfloor=\lfloor x\rfloor+1$ e $\{x+1\}=\{x\}$.
+
+\textbf{Minimalità del periodo.} Ogni periodo $T>0$ soddisfa $\{T\}=\{0\}=0$, quindi $T\in\N^*$ e $T\ge1$. Il periodo $1$ è pertanto il periodo principale.
+\end{proof}
 
 \begin{esempio}
-Si ha $\lfloor2{,}7\rfloor=2$ e $\{2{,}7\}=0{,}7$, ma
-$\lfloor-1{,}3\rfloor=-2$ e $\{-1{,}3\}=0{,}7$.
-La parte intera arrotonda verso il basso, anche per i negativi;
-non coincide con l'eliminazione delle cifre dopo la virgola.
+Si ha $\lfloor2{,}7\rfloor=2$ e $\{2{,}7\}=0{,}7$, ma $\lfloor-1{,}3\rfloor=-2$ e $\{-1{,}3\}=0{,}7$. La parte intera arrotonda verso il basso, anche per i negativi; non coincide con l'eliminazione delle cifre dopo la virgola.
 \end{esempio}
 
 \begin{schema}
@@ -107,21 +99,13 @@ non coincide con l'eliminazione delle cifre dopo la virgola.
 \section{Trasformazioni dei grafici}
 % Fonte: Lezione 7.pdf, p. 13.
 
-Dal grafico di $y=f(x)$ si possono ottenere altri grafici seguendo
-come cambia un suo punto $(x,f(x))$:
+Sia $D$ il dominio di $f$. Dal grafico di $y=f(x)$ si possono ottenere altri grafici seguendo come cambia un suo punto $(x,f(x))$:
 \begin{itemize}
-  \item $y=f(x)+a$: ogni punto diventa $(x,f(x)+a)$; il grafico si
-  trasla verticalmente di $a$, verso l'alto se $a>0$ e verso il basso
-  se $a<0$;
-  \item $y=f(x-b)$: ogni punto $(u,f(u))$ diventa $(u+b,f(u))$;
-  la traslazione è orizzontale, verso destra se $b>0$ e verso sinistra
-  se $b<0$. Il dominio diventa $D+b=\{u+b:u\in D\}$;
-  \item $y=-f(x)$: ogni punto diventa $(x,-f(x))$; il grafico viene
-  riflesso rispetto all'asse $x$.
+  \item \textbf{Traslazione verticale.} $y=f(x)+a$: ogni punto diventa $(x,f(x)+a)$; il grafico si trasla verticalmente di $a$, verso l'alto se $a>0$ e verso il basso se $a<0$;
+  \item \textbf{Traslazione orizzontale.} $y=f(x-b)$: ogni punto $(u,f(u))$ diventa $(u+b,f(u))$; la traslazione è orizzontale, verso destra se $b>0$ e verso sinistra se $b<0$. Il dominio diventa $D+b=\{u+b:u\in D\}$;
+  \item \textbf{Riflessione rispetto all’asse $x$.} $y=-f(x)$: ogni punto diventa $(x,-f(x))$; il grafico viene riflesso rispetto all'asse $x$.
 \end{itemize}
-In particolare, il segno meno \emph{dentro} l'argomento di $f(x-b)$
-non indica uno spostamento verso sinistra: per conservare lo stesso
-argomento bisogna aumentare $x$ di $b$.
+Per $b>0$, il segno meno \emph{dentro} $f(x-b)$ corrisponde a uno spostamento verso destra: per conservare l'argomento $u$ si prende $x=u+b$. Il verso della traslazione dipende quindi dal segno di $b$.
 
 \begin{schema}
 \begin{tikzpicture}[x=.8cm,y=.55cm]
@@ -151,21 +135,23 @@ argomento bisogna aumentare $x$ di $b$.
 In grigio il grafico iniziale; in colore la trasformazione indicata.
 \end{schema}
 
+\Needspace{16\baselineskip}
 \section{Un esercizio su dominio, monotonia e inversa}
 % Fonte: Lezione 7.pdf, pp. 14--18. Corretto il titolo «non decr.»
 % della p. 16, incompatibile con il calcolo decrescente svolto sotto.
 
+\begin{esercizio}
 Studiamo la funzione
 \[
 f(x)=4\arcsin\!\bigl(1-\ln(x-1)\bigr).
 \]
-Cerchiamo il dominio naturale, il verso di monotonia e l'insieme dei
-valori $y\in\R$ per i quali $f(x)=y$ ammette una soluzione.
+Cerchiamo il dominio naturale, il verso di monotonia e l'insieme dei valori $y\in\R$ per i quali $f(x)=y$ ammette una soluzione.
+\end{esercizio}
 
 \subsection{Determinazione del dominio}
 
-Il logaritmo richiede $x-1>0$; l'arcoseno richiede che il proprio
-argomento sia in $[-1,1]$. Quindi
+\begin{svolgimento}
+\textbf{Condizioni di definizione.} Il logaritmo richiede $x-1>0$; l'arcoseno richiede che il proprio argomento sia in $[-1,1]$. Quindi
 \begin{align*}
 x\in D
 &\ \Longleftrightarrow\
@@ -175,47 +161,48 @@ x\in D
 &\ \Longleftrightarrow\
 \begin{cases}x>1,\\1\le x-1\le e^2.\end{cases}
 \end{align*}
-L'ultima doppia disuguaglianza equivale a $2\le x\le1+e^2$ e
-implica già $x>1$. Pertanto
+L'ultima doppia disuguaglianza equivale a $2\le x\le1+e^2$ e implica già $x>1$. Pertanto
 \[
 \boxed{D=[2,1+e^2]}.
 \]
+\end{svolgimento}
 
 \subsection{Monotonia}
 
-Siano $x_1,x_2\in D$ con $x_1<x_2$. Il logaritmo è strettamente
-crescente, perciò
+\begin{svolgimento}
+Siano $x_1,x_2\in D$ con $x_1<x_2$. Il logaritmo è strettamente crescente, perciò
 \[
 x_1-1<x_2-1
 \ \Longrightarrow\ \ln(x_1-1)<\ln(x_2-1)
 \ \Longrightarrow\ 1-\ln(x_1-1)>1-\ln(x_2-1).
 \]
-L'arcoseno è strettamente crescente e moltiplicare per $4>0$
-conserva il verso: ne segue $f(x_1)>f(x_2)$. Dunque $f$ è
-\emph{strettamente decrescente}, quindi iniettiva sul proprio dominio.
+L'arcoseno è strettamente crescente e moltiplicare per $4>0$ conserva il verso: ne segue $f(x_1)>f(x_2)$. Dunque $f$ è \emph{strettamente decrescente}, quindi iniettiva sul proprio dominio.
+
+\end{svolgimento}
+
+\Needspace{30\baselineskip}
 
 \subsection{Immagine, equazione e inversa}
 
-Poiché l'arcoseno assume valori in $[-\pi/2,\pi/2]$, una condizione
-necessaria per $f(x)=y$ è $-2\pi\le y\le2\pi$. Sotto questa
-condizione $y/4$ appartiene proprio all'intervallo in cui seno e
-arcoseno sono inversi, e possiamo procedere mediante equivalenze:
+\begin{svolgimento}
+\textbf{Necessità.} Poiché l'arcoseno assume valori in $[-\pi/2,\pi/2]$, una condizione necessaria per $f(x)=y$ è $-2\pi\le y\le2\pi$.
+
+\textbf{Sufficienza: costruzione della soluzione.} Sotto questa condizione $y/4$ appartiene proprio all'intervallo in cui seno e arcoseno sono inversi, e possiamo procedere mediante equivalenze:
 \begin{align*}
 4\arcsin\!\bigl(1-\ln(x-1)\bigr)=y
 &\ \Longleftrightarrow\ 1-\ln(x-1)=\sin(y/4)\\
 &\ \Longleftrightarrow\ \ln(x-1)=1-\sin(y/4)\\
 &\ \Longleftrightarrow\ x=1+e^{\,1-\sin(y/4)}.
 \end{align*}
-Per ogni $y\in[-2\pi,2\pi]$ il valore $1-\sin(y/4)$ è in $[0,2]$;
-quindi la soluzione trovata appartiene a $[2,1+e^2]$ ed è valida.
-Per i valori di $y$ esterni all'intervallo non ci sono soluzioni.
-In conclusione,
+Per ogni $y\in[-2\pi,2\pi]$ il valore $1-\sin(y/4)$ è in $[0,2]$; quindi la soluzione trovata appartiene a $[2,1+e^2]$ ed è valida. Per i valori di $y$ esterni all'intervallo non ci sono soluzioni. In conclusione,
 \[
 \operatorname{Im}(f)=[-2\pi,2\pi],\qquad
 f^{-1}(y)=1+e^{\,1-\sin(y/4)}\quad(-2\pi\le y\le2\pi).
 \]
-La soluzione è unica per l'iniettività. Gli estremi sono raggiunti:
-$f(2)=2\pi$ è il massimo e $f(1+e^2)=-2\pi$ è il minimo.
+\textbf{Unicità.} La soluzione è unica per l'iniettività.
+\end{svolgimento}
+
+\textbf{Massimo e minimo.} Gli estremi sono raggiunti: $f(2)=2\pi$ è il massimo e $f(1+e^2)=-2\pi$ è il minimo.
 
 \begin{schema}
 \begin{tikzpicture}[x=.85cm,y=.4cm]

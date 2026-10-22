@@ -1,0 +1,107 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 6, pp. 1--2.
+\subsection{Verificare se alcuni vettori generano uno spazio}
+
+Per verificare che $S=\{v_1,\ldots,v_r\}$ generi $V$, si cerca, per un vettore arbitrario $w\in V$, una soluzione di
+\[
+  w=\lambda_1v_1+\cdots+\lambda_rv_r,\qquad \lambda_i\in K.
+\]
+Negli spazi di coordinate l'uguaglianza equivale a un sistema lineare nei coefficienti. $S$ genera $V$ se il sistema è risolubile per ogni $w$; per escluderlo basta un vettore per cui sia impossibile.
+
+\begin{esercizio}[Due generatori di $\R^2$]
+Siano $v_1=(2,-1)$ e $v_2=(1,3)$. Verifichiamo che $S=\{v_1,v_2\}$ genera $\R^2$.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Sistema nei coefficienti.} Per $(x,y)\in\R^2$ imponiamo
+\[
+  a(2,-1)+b(1,3)=(x,y),
+  \qquad
+  \begin{cases}
+    2a+b=x,\\
+    -a+3b=y.
+  \end{cases}
+\]
+\textbf{Soluzione.} Tre volte la prima equazione meno la seconda dà $7a=3x-y$; sostituendo nella prima si trova
+\[
+  a=\frac{3x-y}{7},\qquad b=\frac{x+2y}{7}.
+\]
+Le formule verificano entrambe le equazioni per ogni $x,y\in\R$. Quindi
+\[
+  (x,y)=\frac{3x-y}{7}v_1+\frac{x+2y}{7}v_2
+\]
+e $S$ genera il piano.
+\end{svolgimento}
+
+\begin{esercizio}[Due vettori che non generano $\R^3$]
+Siano $v_1=(1,1,-1)$ e $v_2=(2,0,1)$.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Controesempio.} Il vettore $e_2=(0,1,0)$ non è una loro combinazione lineare: l'uguaglianza $av_1+bv_2=e_2$ richiederebbe
+\[
+  a+2b=0,\qquad a=1,\qquad -a+b=0.
+\]
+Le prime due equazioni danno $a=1$ e $b=-\tfrac12$, incompatibili con la terza, che diventerebbe $-\tfrac32=0$. Dunque $\{v_1,v_2\}$ non genera $\R^3$.
+
+\textbf{Vincolo sulle combinazioni.} Un vettore generico della forma $av_1+bv_2=(a+2b,a,-a+b)$ soddisfa $x-3y-2z=0$. Tutte le combinazioni restano nel piano definito da questa equazione.
+\end{svolgimento}
+
+\subsection{Il più piccolo sottospazio che contiene un insieme}
+
+\begin{definizione}
+Il \emph{sottospazio generato} da $S\subseteq V$, indicato con $\langle S\rangle$, è il più piccolo sottospazio di $V$ che contiene $S$: è contenuto in ogni sottospazio di $V$ contenente $S$.
+\end{definizione}
+
+\begin{proof}[Esistenza del sottospazio generato]
+\textbf{Costruzione.} Consideriamo la famiglia $\mathcal F_S$ di tutti i sottospazi di $V$ che contengono $S$ e poniamo
+\[
+  T=\bigcap_{W\in\mathcal F_S}W.
+\]
+La famiglia è non vuota, perché contiene $V$. Ogni suo elemento contiene $0_V$, dunque $T\ne\varnothing$. Se $u,v\in T$ e $\lambda,\mu\in K$, il vettore $\lambda u+\mu v$ appartiene a ciascun $W\in\mathcal F_S$ e quindi a $T$. Pertanto $T$ è un sottospazio.
+
+\textbf{Minimalità e unicità.} Per costruzione, $T$ contiene $S$ ed è contenuto in ogni sottospazio che contiene $S$. Ha quindi la proprietà richiesta. Se $T'$ è un altro sottospazio con la stessa proprietà, si ha $T\subseteq T'$ e $T'\subseteq T$, dunque $T=T'$.
+\end{proof}
+
+\begin{osservazione}
+\leavevmode
+\begin{itemize}
+  \item Se $S$ è già un sottospazio, $\langle S\rangle=S$: l'inclusione $S\subseteq\langle S\rangle$ segue dalla definizione e l'inclusione opposta dalla minimalità.
+  \item $\langle\varnothing\rangle=\{0_V\}$: ogni sottospazio contiene $0_V$ e $\{0_V\}$ è un sottospazio che contiene l'insieme vuoto.
+\end{itemize}
+\end{osservazione}
+\begin{schema}
+\begin{tikzpicture}[scale=.85]
+  \draw[spazio] (0,0) ellipse (3.2cm and 1.45cm);
+  \draw[spazio,fill=coloreschema!11] (0,0) ellipse (1.75cm and .9cm);
+  \foreach \x/\y in {-.8/.1,-.2/-.3,.55/.25} \fill[coloreschema] (\x,\y) circle (1.7pt);
+  \node at (.1,-.55) {$S$};
+  \node at (1.55,.65) {$\langle S\rangle$};
+  \node at (2.75,1.05) {$W$};
+  \node[below] at (0,-1.55) {$S\subseteq\langle S\rangle\subseteq W$
+    per ogni sottospazio $W$ che contiene $S$};
+\end{tikzpicture}
+\end{schema}
+
+\subsection{Caratterizzazione mediante combinazioni lineari}
+
+La minimalità descrive $\langle S\rangle$ tramite i sottospazi che contengono $S$; le combinazioni lineari ne descrivono direttamente gli elementi.
+
+\begin{teorema}
+Per ogni $S\subseteq V$, il sottospazio $\langle S\rangle$ coincide con l'insieme delle combinazioni lineari finite di elementi di $S$:
+\[
+  \langle S\rangle=
+  \left\{\sum_{i=1}^{n}\lambda_i s_i:
+    n\geq0,\ s_i\in S,\ \lambda_i\in K\right\}.
+\]
+Quando $n=0$, la somma vuota vale $0_V$.
+\end{teorema}
+\begin{proof}
+Indichiamo con $T$ l'insieme a destra.
+
+\passomath{\langle S\rangle\subseteq T} Basta mostrare che $T$ è un sottospazio contenente $S$. La somma vuota dà $0_V\in T$. Se $u=\sum_{i=1}^{m}\alpha_i s_i$ e $v=\sum_{j=1}^{n}\beta_j t_j$ sono in $T$, la somma $u+v$ è ancora una combinazione lineare finita di elementi di $S$, ottenuta accostando le due liste di addendi. Inoltre $\lambda u=\sum_{i=1}^{m}(\lambda\alpha_i)s_i\in T$. Quindi $T$ è un sottospazio; contiene $S$ perché $s=1_Ks$ per ogni $s\in S$. Per minimalità, $\langle S\rangle\subseteq T$.
+
+\passomath{T\subseteq\langle S\rangle} Ogni sottospazio $W$ che contiene $S$ contiene le combinazioni lineari finite dei suoi elementi, per chiusura rispetto alle operazioni. Contiene anche la somma vuota, uguale a $0_V$. Dunque $T\subseteq W$ per ogni tale $W$; in particolare, $T\subseteq\langle S\rangle$.
+
+Le due inclusioni danno l'uguaglianza.
+\end{proof}
+
+Di conseguenza $S$ genera $V$ se e solo se $\langle S\rangle=V$.

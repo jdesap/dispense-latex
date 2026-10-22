@@ -14,15 +14,11 @@ Gli insiemi numerici che incontreremo si dispongono nella catena
 \[
   \N\subseteq\Z\subseteq\Q\subseteq\R\subseteq\mathbb C,
 \]
-dove $\mathbb C$ indica l'insieme dei numeri complessi, richiamato qui
-soltanto per collocare i diversi sistemi numerici. Partiamo dai naturali,
-che comprendono lo zero:
+dove $\mathbb C$ indica l'insieme dei numeri complessi, richiamato qui soltanto per collocare i diversi sistemi numerici. Partiamo dai naturali, che comprendono lo zero:
 \[
   \N=\{0,1,2,3,\ldots\}.
 \]
-L'ordine usuale $\le$ rende $\N$ totalmente ordinato: dati due naturali,
-è sempre possibile confrontarli. Per lavorare sui naturali si assume
-inoltre la seguente proprietà, più forte del solo ordine totale.
+L'ordine usuale $\le$ rende $\N$ totalmente ordinato: dati due naturali, è sempre possibile confrontarli. Per lavorare sui naturali si assume inoltre la seguente proprietà, più forte del solo ordine totale.
 
 \begin{assioma}[Principio del minimo intero]
 Ogni sottoinsieme non vuoto di $\N$ ammette un minimo. In formule,
@@ -33,59 +29,43 @@ Ogni sottoinsieme non vuoto di $\N$ ammette un minimo. In formule,
 \]
 \end{assioma}
 
-Il minimo deve appartenere a $S$ ed essere minore o uguale a tutti gli
-altri suoi elementi. Il principio permette di parlare del \emph{primo}
-naturale che soddisfa una certa proprietà; in una dimostrazione per assurdo
-permetterà, per esempio, di scegliere il primo eventuale controesempio.
+\textbf{Ruolo del minimo.} Il minimo deve appartenere a $S$ ed essere minore o uguale a tutti gli altri suoi elementi. Il principio permette di parlare del \emph{primo} naturale che soddisfa una certa proprietà; in una dimostrazione per assurdo permetterà, per esempio, di scegliere il primo eventuale controesempio.
 
+\Needspace{16\baselineskip}
 \section{Il principio di induzione}
 % Fonte: Lezione 2, pp.~3 e~8
 
-Il principio di induzione formalizza un'idea semplice: se una proprietà
-vale all'inizio e passa da ogni naturale al suo successivo, allora vale
-per tutti i naturali a partire da quello iniziale. Possiamo esprimerlo
-in due forme equivalenti.
+Il principio di induzione formalizza un'idea semplice: se una proprietà vale all'inizio e passa da ogni naturale al suo successivo, allora vale per tutti i naturali a partire da quello iniziale. Possiamo esprimerlo in due forme equivalenti.
 
 \begin{proposizione}[Induzione: forma insiemistica]
-Sia $S\subseteq\N$. Se $0\in S$ e, per ogni $n\in S$, anche
-$n+1\in S$, allora $S=\N$.
+Sia $S\subseteq\N$. Se $0\in S$ e, per ogni $n\in S$, anche $n+1\in S$, allora $S=\N$.
 \end{proposizione}
 
 \begin{proposizione}[Induzione: forma con un predicato]
-Sia $n_0\in\N$ e sia $P(n)$ un predicato definito per i naturali
-$n\ge n_0$. Supponiamo che valgano:
+Sia $n_0\in\N$ e sia $P(n)$ un predicato definito per i naturali $n\ge n_0$. Supponiamo che valgano:
 \begin{enumerate}
   \item la \emph{base induttiva}: $P(n_0)$ è vera;
-  \item il \emph{passo induttivo}: per ogni $n\ge n_0$,
-    $P(n)\Rightarrow P(n+1)$.
+  \item il \emph{passo induttivo}: per ogni $n\ge n_0$, $P(n)\Rightarrow P(n+1)$.
 \end{enumerate}
 Allora $P(n)$ è vera per ogni $n\ge n_0$.
 \end{proposizione}
 
 \begin{proof}
-Ragioniamo per assurdo.
-Supponiamo che esista almeno un naturale $n\ge n_0$ per cui $P(n)$ è falsa.
-L'insieme dei controesempi
+\textbf{Minimo controesempio.} Ragioniamo per assurdo. Supponiamo che esista almeno un naturale $n\ge n_0$ per cui $P(n)$ è falsa. L'insieme dei controesempi
 \[
   F=\{n\in\N:n\ge n_0\text{ e }P(n)\text{ è falsa}\}
 \]
-è allora non vuoto. Per il principio del minimo intero esiste
-$\bar n=\min F$. Non può essere $\bar n=n_0$, perché $P(n_0)$ è vera
-per la base induttiva. Dunque $\bar n>n_0$, e il naturale precedente
-$\bar n-1$ appartiene ancora all'intervallo di indici considerato.
+è allora non vuoto. Per il principio del minimo intero esiste $\bar n=\min F$. Non può essere $\bar n=n_0$, perché $P(n_0)$ è vera per la base induttiva. Dunque $\bar n>n_0$, e il naturale precedente $\bar n-1$ appartiene ancora all'intervallo di indici considerato.
 
-Poiché $\bar n$ è il primo controesempio, $\bar n-1\notin F$:
-$P(\bar n-1)$ è vera. Applicando il passo induttivo con $n=\bar n-1$
-otteniamo che anche $P(\bar n)$ è vera, in contraddizione con
-$\bar n\in F$. Pertanto $F$ è vuoto e la proprietà vale per tutti
-i naturali $n\ge n_0$.
+\textbf{Contraddizione dal predecessore.} Poiché $\bar n$ è il primo controesempio, $\bar n-1\notin F$: $P(\bar n-1)$ è vera. Applicando il passo induttivo con $n=\bar n-1$ otteniamo che anche $P(\bar n)$ è vera, in contraddizione con $\bar n\in F$. Pertanto $F$ è vuoto e la proprietà vale per tutti i naturali $n\ge n_0$.
 \end{proof}
 
-La forma insiemistica si ricava scegliendo $n_0=0$ e ponendo
-$P(n)$ uguale alla proprietà «$n\in S$». Viceversa, l'insieme degli indici
-per cui un predicato è vero rende esplicito il collegamento fra le due
-formulazioni. È essenziale verificare entrambi i passaggi: il solo passo
-induttivo non garantisce che esista un punto da cui iniziare.
+\textbf{Equivalenza delle formulazioni.}
+\begin{itemize}
+  \item \textbf{Dal predicato all'insieme.} Ponendo $n_0=0$ e $P(n)\equiv(n\in S)$, le ipotesi diventano $0\in S$ e $n\in S\Rightarrow n+1\in S$; la conclusione è $S=\N$.
+  \item \textbf{Dall'insieme al predicato.} Per un inizio qualsiasi $n_0$, poniamo $T=\{m\in\N:P(n_0+m)\}$. La base dà $0\in T$ e il passo dà $m\in T\Rightarrow m+1\in T$. La forma insiemistica implica $T=\N$, cioè $P(n)$ per ogni $n\ge n_0$.
+\end{itemize}
+La base e il passo sono entrambi necessari: il solo passo induttivo non garantisce un punto da cui iniziare.
 
 \section{La somma dei primi naturali}
 % Fonte: Lezione 2, pp.~4--6
@@ -94,16 +74,12 @@ Consideriamo la somma
 \[
   1+2+\cdots+99+100.
 \]
-Accoppiando il primo termine con l'ultimo, il secondo con il penultimo
-e così via, si ottengono $50$ coppie di somma $101$:
+Accoppiando il primo termine con l'ultimo, il secondo con il penultimo e così via, si ottengono $50$ coppie di somma $101$:
 \[
   (1+100)+(2+99)+\cdots+(50+51)
   =50\cdot101=\frac{100\cdot101}{2}=5050.
 \]
-Questo suggerisce una formula valida per un numero qualsiasi di termini.
-La notazione $\sum_{k=1}^{n}k$ abbrevia la somma $1+2+\cdots+n$:
-$k$ è l'indice che percorre i termini, mentre $n$ indica dove la somma
-si arresta.
+Questo suggerisce una formula valida per un numero qualsiasi di termini. La notazione $\sum_{k=1}^{n}k$ abbrevia la somma $1+2+\cdots+n$: $k$ è l'indice che percorre i termini, mentre $n$ indica dove la somma si arresta.
 
 \begin{proposizione}
 Per ogni $n\in\N^*$ vale
@@ -112,16 +88,13 @@ Per ogni $n\in\N^*$ vale
 \]
 \end{proposizione}
 \begin{proof}
-Procediamo per induzione a partire da $n_0=1$. La base è vera, perché
-$\sum_{k=1}^{1}k=1=1(1+1)/2$.
+\textbf{Base}\enspace\passomath{n=1} Si ha $\sum_{k=1}^{1}k=1=1(1+1)/2$.
 
-Per il passo induttivo fissiamo $n\ge1$ e assumiamo l'\emph{ipotesi
-induttiva} $\sum_{k=1}^{n}k=n(n+1)/2$. La tesi al passo successivo è
+\textbf{Passo induttivo.} Fissiamo $n\ge1$ e assumiamo l'\emph{ipotesi induttiva} $\sum_{k=1}^{n}k=n(n+1)/2$. La tesi al passo successivo è
 \[
   \sum_{k=1}^{n+1}k=\frac{(n+1)(n+2)}2.
 \]
-Separiamo l'ultimo addendo e usiamo l'ipotesi soltanto per la somma
-dei primi $n$ termini:
+Separiamo l'ultimo addendo e usiamo l'ipotesi soltanto per la somma dei primi $n$ termini:
 \begin{align*}
   \sum_{k=1}^{n+1}k
   &=\left(\sum_{k=1}^{n}k\right)+(n+1)\\
@@ -129,8 +102,7 @@ dei primi $n$ termini:
     =\frac{n^2+3n+2}{2}
     =\frac{(n+1)(n+2)}2.
 \end{align*}
-Abbiamo dimostrato $P(n)\Rightarrow P(n+1)$; per il principio di
-induzione la formula vale per ogni $n\ge1$.
+Abbiamo dimostrato $P(n)\Rightarrow P(n+1)$; per il principio di induzione la formula vale per ogni $n\ge1$.
 \end{proof}
 
 \section{La disuguaglianza di Bernoulli}
@@ -143,11 +115,11 @@ Per ogni $n\in\N$ e ogni reale $x>-1$ si ha
 \]
 \end{proposizione}
 \begin{proof}
-Fissiamo un qualunque $x>-1$ e procediamo per induzione su $n$.
-Per $n=0$, entrambi i membri valgono $1$.
+Fissiamo $x>-1$ e procediamo per induzione su $n$.
 
-Supponiamo ora che $(1+x)^n\ge1+nx$. Poiché $1+x>0$, possiamo
-moltiplicare questa disuguaglianza per $1+x$ senza cambiarne il verso:
+\textbf{Base}\enspace\passomath{n=0} Entrambi i membri valgono $1$.
+
+\textbf{Passo induttivo.} Supponiamo che $(1+x)^n\ge1+nx$. Poiché $1+x>0$, possiamo moltiplicare questa disuguaglianza per $1+x$ senza cambiarne il verso:
 \begin{align*}
   (1+x)^{n+1}
   &=(1+x)^n(1+x)\\
@@ -155,60 +127,56 @@ moltiplicare questa disuguaglianza per $1+x$ senza cambiarne il verso:
   &=1+(n+1)x+nx^2\\
   &\ge1+(n+1)x.
 \end{align*}
-L'ultimo passaggio usa $nx^2\ge0$. La disuguaglianza è così dimostrata
-per $n+1$, e quindi per ogni $n\in\N$. Poiché $x>-1$ era arbitrario,
-l'enunciato vale per tutti i valori di $x$ richiesti.
+L'ultimo passaggio usa $nx^2\ge0$. La disuguaglianza è così dimostrata per $n+1$, e quindi per ogni $n\in\N$. Poiché $x>-1$ era arbitrario, l'enunciato vale per tutti i valori di $x$ richiesti.
 \end{proof}
 
-La condizione su $x$ entra precisamente nel passaggio in cui si moltiplica
-l'ipotesi induttiva per $1+x$: anche quando $x$ è negativo, il fattore
-$1+x$ resta positivo.
+\textbf{Ruolo dell’ipotesi $x>-1$.} La condizione su $x$ entra precisamente nel passaggio in cui si moltiplica l'ipotesi induttiva per $1+x$: anche quando $x$ è negativo, il fattore $1+x$ resta positivo.
 
 \section{Permutazioni, disposizioni e combinazioni}
 % Fonte: Lezione 2, pp.~9--10
 
-Nel calcolo combinatorio si contano modi diversi di ordinare o scegliere
-elementi di un insieme finito. Le formule seguenti riguardano
-oggetti \emph{distinti} e scelte \emph{senza ripetizione}: un oggetto
-già scelto non viene scelto di nuovo.
+Nel calcolo combinatorio si contano modi diversi di ordinare o scegliere elementi di un insieme finito. Le formule seguenti riguardano oggetti \emph{distinti} e scelte \emph{senza ripetizione}: un oggetto già scelto non viene scelto di nuovo.
 
 \subsection{Permutazioni e fattoriale}
 
 Una \emph{permutazione} di $n$ oggetti è un modo di disporli tutti in fila.
-Per il primo posto ci sono $n$ possibilità, per il secondo $n-1$ e così
-via fino all'ultimo. Il numero di permutazioni è dunque
+
+\textbf{Conteggio.} Per il primo posto ci sono $n$ possibilità, per il secondo $n-1$ e così via fino all'ultimo. Il numero di permutazioni è dunque
 \[
   P_n=n!=n(n-1)(n-2)\cdots2\cdot1.
 \]
-Il simbolo $n!$ si legge \emph{fattoriale di $n$}. Si pone $0!=1$:
-anche l'insieme vuoto ha un solo ordinamento, quello senza elementi.
-Per esempio, tre oggetti distinti hanno $3!=6$ possibili ordinamenti.
+\textbf{Convenzione per lo zero.} Il simbolo $n!$ si legge \emph{fattoriale di $n$}. Si pone $0!=1$: anche l'insieme vuoto ha un solo ordinamento, quello senza elementi.
+
+\begin{esempio}
+Tre oggetti distinti hanno $3!=6$ possibili ordinamenti.
+\end{esempio}
 
 \subsection{Disposizioni: scegliere e ordinare}
 
-Una \emph{disposizione} di $k$ oggetti scelti fra $n$ consiste nel
-selezionare $k$ elementi distinti e disporli in fila, tenendo conto
-dell'ordine. Per $0\le k\le n$ il numero di disposizioni è
+Una \emph{disposizione} di $k$ oggetti scelti fra $n$ consiste nel selezionare $k$ elementi distinti e disporli in fila, tenendo conto dell'ordine.
+
+\textbf{Conteggio.} Per $0\le k\le n$ il numero di disposizioni è
 \[
   D_{n,k}=n(n-1)\cdots(n-k+1)=\frac{n!}{(n-k)!}.
 \]
-Per $k=0$ il prodotto è vuoto e vale $1$; per $k=n$ ritroviamo le
-permutazioni. Per esempio, per assegnare un primo e un secondo posto
-fra cinque persone ci sono $D_{5,2}=5\cdot4=20$ possibilità.
+\textbf{Casi estremi.} Per $k=0$ il prodotto è vuoto e vale $1$; per $k=n$ ritroviamo le permutazioni.
+
+\begin{esempio}
+Per assegnare un primo e un secondo posto fra cinque persone ci sono $D_{5,2}=5\cdot4=20$ possibilità.
+\end{esempio}
 
 \subsection{Combinazioni: scegliere senza ordinare}
 
-Una \emph{combinazione} di $k$ oggetti fra $n$ è una scelta nella quale
-l'ordine non conta: equivale a un sottoinsieme di $k$ elementi.
-Indichiamo il numero di queste scelte con $C_{n,k}$. Ogni scelta di
-$k$ elementi produce $k!$ disposizioni, perché i suoi elementi possono
-essere ordinati in $k!$ modi. Quindi
+Una \emph{combinazione} di $k$ oggetti fra $n$ è una scelta nella quale l'ordine non conta: equivale a un sottoinsieme di $k$ elementi. Indichiamo il numero di queste scelte con $C_{n,k}$.
+
+\textbf{Conteggio.} Ogni scelta di $k$ elementi produce $k!$ disposizioni, perché i suoi elementi possono essere ordinati in $k!$ modi. Quindi
 \[
   D_{n,k}=C_{n,k}\,k!,\qquad
   C_{n,k}=\frac{n!}{k!(n-k)!}.
 \]
-Per esempio, scegliendo due persone fra cinque senza assegnare ruoli
-si ottiene $C_{5,2}=20/2=10$.
+\begin{esempio}
+Scegliendo due persone fra cinque senza assegnare ruoli si ottiene $C_{5,2}=20/2=10$.
+\end{esempio}
 
 \section{Coefficienti binomiali e loro proprietà}
 % Fonte: Lezione 2, pp.~10--11; lezione 3, p.~2
@@ -221,9 +189,7 @@ Per $n\in\N$ e $k\in\Z$ definiamo il \emph{coefficiente binomiale}
     0,&k<0\text{ oppure }k>n.
   \end{cases}
 \]
-Quando $0\le k\le n$, esso coincide con $C_{n,k}$. Il valore zero
-fuori da questo intervallo consente di scrivere le identità senza
-dover separare continuamente i casi agli estremi.
+Quando $0\le k\le n$, esso coincide con $C_{n,k}$. Il valore zero fuori da questo intervallo consente di scrivere le identità senza dover separare continuamente i casi agli estremi.
 
 \begin{proposizione}
 Per ogni $n\in\N$ valgono le seguenti proprietà:
@@ -239,19 +205,17 @@ Per ogni $n\in\N$ valgono le seguenti proprietà:
 \end{proposizione}
 
 \begin{proof}
-Le prime due proprietà seguono subito dalla definizione e da $0!=1$.
-Per $0\le k\le n$, la simmetria si verifica scambiando i fattoriali
-al denominatore:
+\textbf{Valori estremi e coefficienti nulli.} Le prime due proprietà seguono subito dalla definizione e da $0!=1$.
+
+\textbf{Simmetria.} Per $0\le k\le n$, la simmetria si verifica scambiando i fattoriali al denominatore:
 \[
   \binom n{n-k}
    =\frac{n!}{(n-k)!\,[n-(n-k)]!}
    =\frac{n!}{(n-k)!\,k!}=\binom nk.
 \]
-Se $k$ è fuori dall'intervallo $[0,n]$, lo è anche $n-k$ e i due
-coefficienti sono entrambi zero.
+Se $k$ è fuori dall'intervallo $[0,n]$, lo è anche $n-k$ e i due coefficienti sono entrambi zero.
 
-Per la relazione di Pascal consideriamo prima $1\le k\le n$ e
-portiamo le due frazioni allo stesso denominatore:
+\textbf{Relazione di Pascal.} Consideriamo prima $1\le k\le n$ e portiamo le due frazioni allo stesso denominatore:
 \begin{align*}
   \binom nk+\binom n{k-1}
   &=\frac{n!}{k!(n-k)!}
@@ -260,29 +224,25 @@ portiamo le due frazioni allo stesso denominatore:
   &=\frac{(n+1)!}{k!(n+1-k)!}
    =\binom{n+1}k.
 \end{align*}
-Dividendo l'identità per il fattore positivo $n!/[(k-1)!(n-k)!$, la si riduce a
+Dividendo la stessa identità per il fattore positivo $n!/[(k-1)!(n-k)!$, la si riduce a
 \[
   \frac{n+1}{k(n+1-k)}
    =\frac1k+\frac1{n+1-k}
    =\frac{n+1-k+k}{k(n+1-k)}.
 \]
-Per $k=0$ e $k=n+1$ la formula diventa rispettivamente $1=1+0$
-e $1=0+1$; per gli altri indici esterni entrambi i membri sono zero.
+Per $k=0$ e $k=n+1$ la formula diventa rispettivamente $1=1+0$ e $1=0+1$; per gli altri indici esterni entrambi i membri sono zero.
 \end{proof}
 
-La simmetria ha anche un significato combinatorio: scegliere $k$
-elementi equivale a scegliere gli $n-k$ da escludere. Analogamente,
-per scegliere $k$ elementi fra $n+1$ si può fissare un elemento e
-distinguere le scelte che non lo contengono, in numero $\binom nk$,
-da quelle che lo contengono, in numero $\binom n{k-1}$.
+\textbf{Interpretazioni combinatorie.}
+\begin{itemize}
+  \item \textbf{Simmetria.} Scegliere $k$ elementi equivale a scegliere gli $n-k$ da escludere.
+  \item \textbf{Pascal.} Per scegliere $k$ elementi fra $n+1$, fissiamo un elemento: le scelte che non lo contengono sono $\binom nk$, quelle che lo contengono sono $\binom n{k-1}$, perché occorre scegliere gli altri $k-1$ fra i rimanenti $n$.
+\end{itemize}
 
 \section{Il triangolo di Tartaglia}
 % Fonte: Lezione 3, p.~3
 
-Scrivendo in ogni riga i coefficienti $\binom n0,\binom n1,\ldots,
-\binom nn$ si ottiene il \emph{triangolo di Tartaglia}. Le estremità
-valgono $1$ e ciascun elemento interno è la somma dei due che lo
-precedono nella riga superiore: è proprio la relazione di Pascal.
+Scrivendo in ogni riga i coefficienti $\binom n0,\binom n1,\ldots, \binom nn$ si ottiene il \emph{triangolo di Tartaglia}. Le estremità valgono $1$ e ciascun elemento interno è la somma dei due che lo precedono nella riga superiore: è proprio la relazione di Pascal.
 
 \begin{schema}
 \begin{tikzpicture}[x=1.05cm,y=.85cm]
@@ -298,10 +258,7 @@ precedono nella riga superiore: è proprio la relazione di Pascal.
     (t-3-2) -- (t-4-2);
   \node[coloreschema,anchor=west] at (2.9,-3.7) {$3+3=6$};
 \end{tikzpicture}
-\par\smallskip
-Ogni riga contiene i coefficienti binomiali di un dato ordine $n$.
-Le frecce mostrano come due coefficienti della riga $n=3$ generano
-quello centrale della riga $n=4$.
+\par\smallskip Ogni riga contiene i coefficienti binomiali di un dato ordine $n$. Le frecce mostrano come due coefficienti della riga $n=3$ generano quello centrale della riga $n=4$.
 \end{schema}
 
 \section{La formula del binomio di Newton}
@@ -312,20 +269,15 @@ Per $a,b\in\R$ e $n\in\N$ vale
 \[
   (a+b)^n=\sum_{k=0}^{n}\binom nk a^{n-k}b^k.
 \]
-I fattori con esponente zero si interpretano come $1$, secondo
-la convenzione usata nelle identità polinomiali.
+I fattori con esponente zero si interpretano come $1$, secondo la convenzione usata nelle identità polinomiali.
 \end{proposizione}
 
-Il termine di indice $k$ contiene $k$ fattori $b$ e $n-k$ fattori $a$.
-Per ottenerlo dal prodotto di $n$ parentesi $(a+b)$ si scelgono le
-$k$ parentesi dalle quali prendere $b$: questo spiega la presenza
-del coefficiente $\binom nk$.
+Il termine di indice $k$ contiene $k$ fattori $b$ e $n-k$ fattori $a$. Per ottenerlo dal prodotto di $n$ parentesi $(a+b)$ si scelgono le $k$ parentesi dalle quali prendere $b$: questo spiega la presenza del coefficiente $\binom nk$.
 
 \begin{proof}
-Procediamo per induzione. Per
-$n=0$ la formula vale, perché entrambi i membri sono $1$ con la
-convenzione appena precisata. Supponiamo ora che valga per $n$.
-Moltiplicando per $a+b$ e distribuendo i due fattori otteniamo
+\textbf{Base}\enspace\passomath{n=0} Entrambi i membri sono $1$ con la convenzione precisata nell'enunciato.
+
+\textbf{Passo induttivo: allineamento degli indici.} Supponiamo che la formula valga per $n$. Moltiplicando per $a+b$ e distribuendo i due fattori otteniamo
 \begin{align*}
   (a+b)^{n+1}
   &=\sum_{k=0}^{n}\binom nk a^{n+1-k}b^k
@@ -333,17 +285,12 @@ Moltiplicando per $a+b$ e distribuendo i due fattori otteniamo
   &=\sum_{k=0}^{n}\binom nk a^{n+1-k}b^k
     +\sum_{k=1}^{n+1}\binom n{k-1}a^{n+1-k}b^k.
 \end{align*}
-Nella seconda somma abbiamo cambiato indice, in modo che le potenze
-di $a$ e $b$ abbiano la stessa forma. Per gli indici $1\le k\le n$
-il coefficiente complessivo è allora
-$\binom nk+\binom n{k-1}=\binom{n+1}k$.
-Ai due estremi restano $a^{n+1}$ e $b^{n+1}$, entrambi con coefficiente
-$1$. Si ricompone quindi esattamente
-$\sum_{k=0}^{n+1}\binom{n+1}k a^{n+1-k}b^k$, che è la formula al passo
-successivo. Il principio di induzione conclude la dimostrazione.
+\textbf{Ricomposizione mediante Pascal.} Nella seconda somma abbiamo cambiato indice, in modo che le potenze di $a$ e $b$ abbiano la stessa forma. Per gli indici $1\le k\le n$ il coefficiente complessivo è allora $\binom nk+\binom n{k-1}=\binom{n+1}k$. Ai due estremi restano $a^{n+1}$ e $b^{n+1}$, entrambi con coefficiente $1$. Si ricompone quindi esattamente $\sum_{k=0}^{n+1}\binom{n+1}k a^{n+1-k}b^k$, che è la formula al passo successivo. Il principio di induzione conclude la dimostrazione.
 \end{proof}
 
-Per esempio, dalla riga $n=4$ del triangolo si legge subito
+\begin{esempio}
+Dalla riga $n=4$ del triangolo si legge
 \[
   (a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4.
 \]
+\end{esempio}

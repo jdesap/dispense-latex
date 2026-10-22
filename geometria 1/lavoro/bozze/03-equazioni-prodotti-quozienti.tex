@@ -1,0 +1,128 @@
+% !TeX root = ../main.tex
+% Fonti: Lezione 9, pp. 1--4; Lezione 10, pp. 1--5.
+\chapter{Equazioni, prodotti e quozienti}
+\fonti{Lezioni 9 e 10}
+
+\section{Equazioni parametriche e cartesiane}
+Una base $u_1,\ldots,u_r$ di un sottospazio $U\subseteq K^m$ dà una
+descrizione \emph{parametrica}:
+\[
+U=\{a_1u_1+\cdots+a_ru_r:a_1,\ldots,a_r\in K\}.
+\]
+Una descrizione \emph{cartesiana} specifica invece le coordinate
+mediante equazioni lineari omogenee. Per passare dalla prima alla
+seconda si eliminano i parametri; per il verso inverso si scelgono
+coordinate libere e si risolvono le equazioni restanti. La
+omogeneità è essenziale: l'insieme delle soluzioni contiene il
+vettore nullo ed è chiuso per le combinazioni lineari.
+
+\begin{esercizio}
+Riprendiamo
+$U=\langle(1,-1,0,2),(2,0,-1,3)\rangle\subseteq\R^4$.
+Scrivendo
+\[
+(x_1,x_2,x_3,x_4)
+=a(1,-1,0,2)+b(2,0,-1,3)
+\]
+si hanno $x_1=a+2b$, $x_2=-a$, $x_3=-b$ e $x_4=2a+3b$.
+Le coordinate seconda e terza danno $a=-x_2$, $b=-x_3$; sostituendo
+nelle altre due otteniamo
+\[
+U=\{x\in\R^4:x_1+x_2+2x_3=0,\quad
+2x_2+3x_3+x_4=0\}.
+\]
+Le condizioni sono anche sufficienti: se $x$ le soddisfa, i valori
+$a=-x_2$ e $b=-x_3$ ricostruiscono tutte e quattro le coordinate,
+quindi $x\in U$.
+\end{esercizio}
+
+\section{Prodotto di spazi vettoriali}
+\begin{proposizione}
+Se $V$ e $W$ sono spazi vettoriali sullo stesso campo $K$, il prodotto
+cartesiano $V\times W$ è uno spazio vettoriale con
+\[
+(v_1,w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2),\qquad
+\lambda(v,w)=(\lambda v,\lambda w).
+\]
+Se $V$ e $W$ hanno dimensioni finite, allora
+$\dim(V\times W)=\dim V+\dim W$.
+\end{proposizione}
+\begin{proof}
+Il vettore nullo è $(0_V,0_W)$ e l'opposto di $(v,w)$ è
+$(-v,-w)$. Associatività, commutatività e distributività seguono
+verificando separatamente le due componenti. Per la dimensione,
+siano $v_1,\ldots,v_r$ una base di $V$ e $w_1,\ldots,w_s$ una base
+di $W$. La famiglia
+\[
+(v_1,0_W),\ldots,(v_r,0_W),
+(0_V,w_1),\ldots,(0_V,w_s)
+\]
+genera il prodotto, perché $(v,w)$ si scompone nelle due espansioni
+in base. È indipendente: una combinazione nulla produce nella prima
+componente una relazione tra i $v_i$ e nella seconda una relazione
+tra i $w_j$; tutti i coefficienti sono dunque nulli. La base così
+costruita ha $r+s$ elementi.
+\end{proof}
+
+\section{Classi laterali e spazio quoziente}
+\begin{definizione}
+Sia $W$ un sottospazio di $V$. Due vettori sono equivalenti modulo
+$W$ se $v_1-v_2\in W$. La classe di $v$ è
+\[
+[v]=v+W=\{v+w:w\in W\}.
+\]
+L'insieme delle classi è scritto $V/W$ e si chiama
+\emph{spazio quoziente}.
+\end{definizione}
+La relazione è riflessiva perché $v-v=0_V\in W$; è simmetrica perché
+$-(v_1-v_2)\in W$; è transitiva perché la somma di
+$v_1-v_2$ e $v_2-v_3$ appartiene a $W$. Due classi coincidono
+esattamente quando i rispettivi rappresentanti differiscono di un
+elemento di $W$.
+
+Definiamo $[v_1]+[v_2]=[v_1+v_2]$ e
+$\lambda[v]=[\lambda v]$. Occorre controllare che il risultato non
+dipenda dai rappresentanti scelti. Se $v_i'\in[v_i]$, allora
+$v_i'-v_i\in W$, per $i=1,2$, e
+\[
+(v_1'+v_2')-(v_1+v_2)
+=(v_1'-v_1)+(v_2'-v_2)\in W.
+\]
+Inoltre $\lambda v'-\lambda v=\lambda(v'-v)\in W$.
+Le operazioni sono quindi ben definite; gli assiomi di spazio
+vettoriale passano da $V$ alle classi. Il vettore nullo del
+quoziente è $[0_V]=W$, non il solo vettore $0_V$.
+
+\begin{esempio}
+Se $W$ è l'asse orizzontale di $\R^2$, due punti $(x,y)$ e
+$(x',y')$ sono equivalenti se $y=y'$. Ogni classe è una retta
+orizzontale: il quoziente registra solo la coordinata verticale.
+\end{esempio}
+\begin{schema}
+\begin{tikzpicture}[scale=.7]
+  \draw[asse] (-3,0)--(3.3,0) node[right] {$W$};
+  \draw[asse] (0,-.8)--(0,2.7);
+  \draw[spazio] (-2.6,1.45)--(2.7,1.45);
+  \fill[coloreschema] (-1.45,1.45) circle (2pt)
+      node[above] {$v$};
+  \fill[coloreschema] (1.25,1.45) circle (2pt)
+      node[above] {$v'$};
+  \node[right] at (2.7,1.45) {$[v]=[v']$};
+\end{tikzpicture}
+\end{schema}
+
+\begin{teorema}
+Se $V$ è di dimensione finita e $W\subseteq V$ è un sottospazio,
+allora $\dim(V/W)=\dim V-\dim W$.
+\end{teorema}
+\begin{proof}
+Scegliamo una base $w_1,\ldots,w_r$ di $W$ e completiamola
+con $v_1,\ldots,v_s$ fino a una base di $V$. Le classi
+$[v_1],\ldots,[v_s]$ generano $V/W$: ogni $v\in V$ si scrive
+$v=\sum_i a_iw_i+\sum_j b_jv_j$, e nel quoziente la prima somma
+ha classe nulla. Se $\sum_j b_j[v_j]=[0_V]$, allora
+$\sum_j b_jv_j\in W$, quindi
+$\sum_j b_jv_j=\sum_i a_iw_i$. L'indipendenza della base di $V$
+impone $a_i=b_j=0$ per tutti gli indici. Le $s$ classi sono dunque
+una base; poiché $\dim V=r+s$ e $\dim W=r$, segue la formula.
+\end{proof}

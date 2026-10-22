@@ -1,0 +1,105 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 7, pp. 1--3. Generalizzazioni esplicitate nel testo.
+
+\section{Somme di sottospazi e somme dirette}
+
+\subsection{Il sottospazio somma}
+
+Per ottenere un sottospazio che contenga $U$ e $W$, si considera il sottospazio generato dalla loro unione, che può non essere chiusa per somma.
+
+\begin{definizione}
+La \emph{somma} di due sottospazi $U,W$ di uno spazio vettoriale $V$ è
+\[
+  U+W=\langle U\cup W\rangle.
+\]
+\end{definizione}
+
+\begin{teorema}
+Per due sottospazi $U,W\subseteq V$ si ha
+\[
+  U+W=\{u+w:u\in U,\ w\in W\}.
+\]
+\end{teorema}
+\begin{proof}
+Indichiamo con $T$ l'insieme delle somme a destra.
+
+\passomath{U+W\subseteq T} Un elemento di $\langle U\cup W\rangle$ è una combinazione lineare finita di vettori di $U\cup W$. Raggruppando i termini secondo il sottospazio di provenienza, si scrive
+\[
+  \lambda_1u_1+\cdots+\lambda_ru_r
+  +\mu_1w_1+\cdots+\mu_sw_s.
+\]
+La prima somma appartiene a $U$ e la seconda a $W$, per la chiusura rispetto alle combinazioni lineari. Un gruppo privo di termini dà $0_V$. Il vettore ha quindi la forma $u+w$ e appartiene a $T$.
+
+\passomath{T\subseteq U+W} Se $u\in U$ e $w\in W$, allora $u+w=1_Ku+1_Kw$ è una combinazione lineare di elementi di $U\cup W$ e appartiene a $\langle U\cup W\rangle=U+W$.
+
+Le due inclusioni concludono la prova.
+\end{proof}
+
+\begin{osservazione}[Verifica diretta e minimalità]
+L'insieme delle somme contiene $0_V=0_V+0_V$ ed è chiuso per le operazioni:
+\begin{align*}
+  (u_1+w_1)+(u_2+w_2)&=(u_1+u_2)+(w_1+w_2)\in U+W,\\
+  \lambda(u_1+w_1)&=\lambda u_1+\lambda w_1\in U+W.
+\end{align*}
+Inoltre $u=u+0_V$ e $w=0_V+w$, dunque contiene entrambi i sottospazi. Ogni sottospazio che contiene $U$ e $W$ contiene tutte queste somme: $U+W$ è il più piccolo sottospazio contenente $U\cup W$.
+\end{osservazione}
+
+\begin{esempio}[Somma dei due assi]
+In $\R^2$, $(a,b)=(a,0)+(0,b)$: la somma degli assi coordinati è tutto il piano, mentre l'unione comprende soltanto i punti dei due assi.
+\end{esempio}
+
+\textbf{Più sottospazi.} Per un numero finito di sottospazi,
+\[
+  U_1+\cdots+U_r
+  =\langle U_1\cup\cdots\cup U_r\rangle
+  =\{u_1+\cdots+u_r:u_i\in U_i\}.
+\]
+La prova usa lo stesso raggruppamento dei termini. L'ordine dei sottospazi e la disposizione delle parentesi non cambiano il risultato, per commutatività e associatività della somma in $V$.
+
+\subsection{Unicità della scomposizione e somma diretta}
+
+L'appartenenza a $U+W$ assicura una scomposizione, che può non essere unica. Se $U=W$ è una retta non nulla e $v\ne0_V$ è un suo vettore, le scritture $v=v+0_V$ e $v=0_V+v$ hanno componenti diverse nelle due posizioni.
+
+\begin{definizione}
+La somma $U_1+\cdots+U_r$ si dice \emph{diretta} se ogni suo vettore si scrive in modo unico come $u_1+\cdots+u_r$, con $u_i\in U_i$. Si usa allora la notazione $U_1\oplus\cdots\oplus U_r$.
+\end{definizione}
+
+\begin{teorema}
+La somma di due sottospazi $U$ e $W$ è diretta se e solo se $U\cap W=\{0_V\}$.
+\end{teorema}
+\begin{proof}
+\passomath{\Rightarrow} Supponiamo che la somma sia diretta. Per $z\in U\cap W$, le scritture $z=z+0_V$ e $z=0_V+z$ sono entrambe scomposizioni valide. L'unicità delle componenti in $U$ impone $z=0_V$. Poiché il vettore nullo appartiene a entrambi i sottospazi, $U\cap W=\{0_V\}$.
+
+\passomath{\Leftarrow} Supponiamo $U\cap W=\{0_V\}$. L'esistenza della scomposizione segue dalla caratterizzazione di $U+W$. Se $u+w=u'+w'$, con $u,u'\in U$ e $w,w'\in W$, allora
+\[
+  u-u'=w'-w\in U\cap W.
+\]
+Entrambi i membri sono quindi nulli: $u=u'$ e $w=w'$. La scomposizione è unica e la somma è diretta.
+\end{proof}
+
+\begin{esercizio}[Dimostrazione alternativa per assurdo]
+Dimostrare che, se $U\cap W$ contiene un vettore non nullo, la scomposizione dei vettori di $U+W$ non è unica.
+\end{esercizio}
+\begin{proof}[Svolgimento]
+Scegliamo $z\in U\cap W$, con $z\ne0_V$. A ogni scomposizione $v=u+w$ si affianca
+\[
+  v=(u+z)+(w-z).
+\]
+Le nuove componenti appartengono ancora rispettivamente a $U$ e a $W$, ma sono diverse dalle precedenti: $u+z\ne u$ e $w-z\ne w$. Ogni vettore della somma ha quindi due scomposizioni distinte. Assumere contemporaneamente la somma diretta e un'intersezione non nulla porta a una contraddizione.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{osservazione}[Criterio per più sottospazi]
+La somma $U_1+\cdots+U_r$ è diretta se e solo se
+\[
+  u_1+\cdots+u_r=0_V,\quad u_i\in U_i
+  \quad\Longrightarrow\quad u_1=\cdots=u_r=0_V.
+\]
+\end{osservazione}
+\begin{proof}
+\passomath{\Rightarrow} Si confronta la scomposizione nulla assegnata con $0_V=0_V+\cdots+0_V$. L'unicità impone che tutte le componenti siano nulle.
+
+\passomath{\Leftarrow} Sottraendo due scomposizioni dello stesso vettore si ottiene una somma nulla, con ciascuna componente nel rispettivo sottospazio. La proprietà impone che tutte le differenze siano nulle, quindi le scomposizioni coincidono.
+\end{proof}
+
+\textbf{Attenzione alle intersezioni.} Per tre o più sottospazi, le sole intersezioni a due a due nulle non garantiscono la somma diretta.\footnote{In $\R^2$, le rette generate da $(1,0)$, $(0,1)$ e $(1,1)$ hanno intersezioni a due a due nulle, ma $(1,0)+(0,1)-(1,1)=0$ è una relazione con componenti non nulle. Per due sottospazi, invece, l'intersezione nulla è il criterio necessario e sufficiente.}

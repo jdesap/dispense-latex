@@ -9,58 +9,45 @@
 \section{Proposizioni e connettivi logici}
 % Fonte: Lezione 1, pp.~2--3
 
-Una \emph{proposizione} è un'affermazione alla quale si può attribuire un
-valore di verità: vero oppure falso. Per esempio, «$2+3=5$» è una
-proposizione vera, mentre «$2+3=6$» è una proposizione falsa. Una frase
-contenente una variabile libera, come «$x>0$», richiede invece di sapere
-quale valore si assegna a $x$ prima di poter stabilire se sia vera o falsa.
+Una \emph{proposizione} è un'affermazione alla quale si attribuisce un valore di verità: vero oppure falso.
 
-Per costruire proposizioni complesse a partire da proposizioni $P$ e $Q$
-si usano i \emph{connettivi logici}:
-\begin{description}[style=nextline]
-  \item[Negazione: $\neg P$.]
-    È vera esattamente quando $P$ è falsa; si legge «non $P$».
-  \item[Congiunzione: $P\land Q$.]
-    È vera quando sono vere sia $P$ sia $Q$; si legge «$P$ e $Q$».
-  \item[Disgiunzione: $P\lor Q$.]
-    È vera quando è vera almeno una delle due proposizioni. Si tratta
-    della disgiunzione inclusiva: è vera anche se sono vere entrambe.
-  \item[Implicazione: $P\Rightarrow Q$.]
-    È falsa soltanto quando $P$ è vera e $Q$ è falsa. $P$ è l'ipotesi
-    e $Q$ la tesi; si legge «se $P$, allora $Q$».
-  \item[Doppia implicazione: $P\Leftrightarrow Q$.]
-    È vera quando $P$ e $Q$ hanno lo stesso valore di verità: entrambe
-    vere oppure entrambe false. Si legge «$P$ se e solo se $Q$».
+\begin{esempio}
+«$2+3=5$» è una proposizione vera; «$2+3=6$» è falsa. L'espressione «$x>0$» contiene invece una variabile libera: il suo valore di verità dipende dal valore assegnato a $x$.
+\end{esempio}
+
+I \emph{connettivi logici} costruiscono nuove proposizioni a partire da proposizioni $P$ e $Q$:
+\begin{description}[itemsep=.3em,topsep=.4em]
+  \item[Negazione: $\neg P$.] È vera se e solo se $P$ è falsa; si legge «non $P$».
+  \item[Congiunzione: $P\land Q$.] È vera se e solo se sono vere sia $P$ sia $Q$; si legge «$P$ e $Q$».
+  \item[Disgiunzione: $P\lor Q$.] È vera se e solo se è vera almeno una delle due proposizioni. La disgiunzione è \emph{inclusiva}: ammette che siano vere entrambe.
+  \item[Implicazione: $P\Rightarrow Q$.] È falsa soltanto quando $P$ è vera e $Q$ è falsa. $P$ è l'ipotesi e $Q$ la tesi; si legge «se $P$, allora $Q$».
+  \item[Doppia implicazione: $P\Leftrightarrow Q$.] È vera se e solo se $P$ e $Q$ hanno lo stesso valore di verità; si legge «$P$ se e solo se $Q$».
 \end{description}
 
-La tabella seguente riassume tutti i casi; $V$ significa vero e $F$ falso.
+La \textbf{tabella di verità} riassume tutti i casi: $V$ indica vero e $F$ falso.
 \begin{center}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{ccccccc}
-\toprule
-$P$ & $Q$ & $\neg P$ & $P\land Q$ & $P\lor Q$ & $P\Rightarrow Q$ & $P\Leftrightarrow Q$\\
-\midrule
-$V$ & $V$ & $F$ & $V$ & $V$ & $V$ & $V$\\
-$V$ & $F$ & $F$ & $F$ & $V$ & $F$ & $F$\\
-$F$ & $V$ & $V$ & $F$ & $V$ & $V$ & $V$\\
-$F$ & $F$ & $V$ & $F$ & $F$ & $V$ & $V$\\
-\bottomrule
-\end{tabular}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{ccccccc}
+    \toprule
+    $P$ & $Q$ & $\neg P$ & $P\land Q$ & $P\lor Q$ & $P\Rightarrow Q$ & $P\Leftrightarrow Q$\\
+    \midrule
+    $V$ & $V$ & $F$ & $V$ & $V$ & $V$ & $V$\\
+    $V$ & $F$ & $F$ & $F$ & $V$ & $F$ & $F$\\
+    $F$ & $V$ & $V$ & $F$ & $V$ & $V$ & $F$\\
+    $F$ & $F$ & $V$ & $F$ & $F$ & $V$ & $V$\\
+    \bottomrule
+  \end{tabular}
 \end{center}
 
 \section{Implicazioni e metodi di dimostrazione}
 % Fonte: Lezione 1, p.~3
 
-L'implicazione $P\Rightarrow Q$ esprime che la verità di $P$ basta a
-garantire la verità di $Q$. Per questo $P$ è detta \emph{condizione
-sufficiente} per $Q$ e $Q$ \emph{condizione necessaria} per $P$.
-L'implicazione non afferma che $P$ sia vera: esclude soltanto il caso
-in cui l'ipotesi sia vera e la tesi falsa. In particolare,
+\textbf{Condizioni sufficienti e necessarie.} In $P\Rightarrow Q$, la verità di $P$ garantisce quella di $Q$: $P$ è una \emph{condizione sufficiente} per $Q$ e $Q$ è una \emph{condizione necessaria} per $P$. L'implicazione non afferma che $P$ sia vera; esclude che $P$ sia vera e $Q$ falsa. Equivalentemente,
 \[
   P\Rightarrow Q\quad\Longleftrightarrow\quad \neg P\lor Q.
 \]
-Per dimostrare una doppia implicazione si devono verificare entrambi
-i versi, $P\Rightarrow Q$ e $Q\Rightarrow P$.
+
+\textbf{Doppia implicazione.} Per dimostrare $P\Leftrightarrow Q$ occorre verificare entrambi i versi: $P\Rightarrow Q$ e $Q\Rightarrow P$.
 
 \begin{proposizione}[Contrapposizione]
 Un'implicazione è equivalente alla sua contronominale:
@@ -70,39 +57,24 @@ Un'implicazione è equivalente alla sua contronominale:
 \]
 \end{proposizione}
 \begin{proof}
-La prima implicazione è falsa esattamente nel caso $P$ vera e $Q$ falsa.
-La seconda è falsa esattamente quando $\neg Q$ è vera e $\neg P$ è falsa,
-cioè nello stesso caso. Le due implicazioni hanno quindi sempre lo
-stesso valore di verità.
+$P\Rightarrow Q$ è falsa esattamente quando $P$ è vera e $Q$ è falsa. Anche $\neg Q\Rightarrow\neg P$ è falsa soltanto in questo caso: $\neg Q$ deve essere vera e $\neg P$ falsa. Le due implicazioni hanno quindi sempre lo stesso valore di verità.
 \end{proof}
 
-Questa equivalenza fornisce un metodo di dimostrazione: se è più semplice
-partire dalla negazione della tesi, si dimostra $\neg Q\Rightarrow\neg P$
-e si conclude $P\Rightarrow Q$.
+\textbf{Dimostrazione per contrapposizione.} Per provare $P\Rightarrow Q$ si può dimostrare $\neg Q\Rightarrow\neg P$, partendo dalla negazione della tesi.
 
-Il \emph{ragionamento per assurdo} consiste nell'assumere la negazione di ciò che si
-vuole dimostrare e nel ricavarne una contraddizione. Per provare
-$P\Rightarrow Q$ si può dunque assumere che $P$ sia vera e $Q$ falsa e
-mostrare che queste due assunzioni non possono valere contemporaneamente.
-I due metodi sono strettamente collegati, ma conviene distinguerne
-il modo di procedere.
+\textbf{Dimostrazione per assurdo.} Si assume la negazione di ciò che si vuole dimostrare e se ne ricava una contraddizione. Per provare $P\Rightarrow Q$, si assumono dunque $P$ vera e $Q$ falsa e si mostra che le due assunzioni sono incompatibili.
 
 \section{Predicati e quantificatori}
 % Fonte: Lezione 1, pp.~4--5
 
-Un \emph{predicato} $P(x)$ è un'affermazione che dipende da una variabile
-$x$. Il suo significato va accompagnato dall'insieme nel quale $x$ può
-variare: per esempio, $P(x)$ può essere la proprietà «$x^2=1$» con
-$x\in\R$. I quantificatori permettono di trasformare un predicato
-in una proposizione.
+Un \emph{predicato} $P(x)$ è un'affermazione che dipende da una variabile $x$, il cui insieme di variazione deve essere specificato. Per esempio, $P(x)$ può essere «$x^2=1$» con $x\in\R$. I quantificatori trasformano un predicato in una proposizione.
 
 \begin{definizione}[Quantificatore universale]
 La proposizione
 \[
   \forall x\in U,\quad P(x)
 \]
-è vera se $P(a)$ è vera per ogni valore $a$ appartenente all'insieme
-ambiente $U$. Il simbolo $\forall$ si legge «per ogni» o «qualunque sia».
+è vera se e solo se $P(a)$ è vera per ogni $a\in U$. Il simbolo $\forall$ si legge «per ogni» o «qualunque sia».
 \end{definizione}
 
 \begin{definizione}[Quantificatore esistenziale]
@@ -110,9 +82,7 @@ La proposizione
 \[
   \exists x\in U:\ P(x)
 \]
-è vera se esiste almeno un elemento $a\in U$ per il quale $P(a)$ è vera.
-Il simbolo $\exists$ si legge «esiste». Non si esclude che gli elementi
-con questa proprietà siano più di uno.
+è vera se e solo se esiste almeno un $a\in U$ per cui $P(a)$ è vera. Il simbolo $\exists$ si legge «esiste» e ammette che gli elementi con la proprietà richiesta siano più di uno.
 \end{definizione}
 
 \begin{definizione}[Esistenza e unicità]
@@ -120,40 +90,39 @@ La proposizione
 \[
   \exists!\,x\in U:\ P(x)
 \]
-è vera quando esiste esattamente un elemento di $U$ che soddisfa $P$.
-Per dimostrarla occorre provare sia l'esistenza sia l'unicità: dopo
-aver trovato un elemento $a$ con la proprietà richiesta, si mostra che
-ogni altro elemento che la soddisfa coincide con $a$.
+è vera se e solo se esiste esattamente un elemento di $U$ che soddisfa $P$.
 \end{definizione}
 
-Per esempio, $\exists x\in\R:x^2=1$ è vera, ma
-$\exists!\,x\in\R:x^2=1$ è falsa, perché sia $1$ sia $-1$ risolvono
-l'equazione. Se imponiamo anche $x>0$, la soluzione diventa unica.
+La verifica di $\exists!\,x\in U:\ P(x)$ richiede due passaggi distinti:
+\begin{description}[itemsep=.3em,topsep=.4em]
+  \item[Esistenza.] Si trova un elemento $a\in U$ che soddisfa $P$.
+  \item[Unicità.] Si dimostra che ogni $b\in U$ che soddisfa $P$ coincide con $a$.
+\end{description}
+
+\begin{esempio}[Esistenza senza unicità]
+$\exists x\in\R:x^2=1$ è vera, mentre $\exists!\,x\in\R:x^2=1$ è falsa: le soluzioni sono $1$ e $-1$. Imponendo anche $x>0$, l'unica soluzione è $1$.
+\end{esempio}
 
 \section{Negare una proposizione con quantificatori}
 % Fonte: Lezione 1, p.~6
 
-Negare un'affermazione universale significa trovare almeno un caso
-in cui la proprietà non vale; negare un'affermazione esistenziale
-significa affermare che la proprietà non vale per nessun elemento.
-Formalmente,
+La negazione di un'affermazione universale richiede almeno un caso in cui la proprietà sia falsa; quella di un'affermazione esistenziale richiede che la proprietà sia falsa per tutti gli elementi. In formule,
 \begin{align*}
   \neg\bigl(\forall x\in U,\ P(x)\bigr)
     &\quad\Longleftrightarrow\quad \exists x\in U:\ \neg P(x),\\
   \neg\bigl(\exists x\in U:\ P(x)\bigr)
     &\quad\Longleftrightarrow\quad \forall x\in U,\ \neg P(x).
 \end{align*}
-Quando la negazione attraversa un quantificatore, dunque, $\forall$
-si trasforma in $\exists$ e $\exists$ si trasforma in $\forall$;
-anche la proprietà all'interno deve essere negata.
+La negazione scambia dunque $\forall$ con $\exists$ e nega il predicato. In presenza di più quantificatori, la regola si applica a ciascuno, \textbf{conservandone l'ordine}.
 
-Per esempio, la negazione di «tutti gli elementi di $U$ sono positivi»
-è «esiste un elemento di $U$ che è minore o uguale a zero».
-Non è necessario che siano tutti negativi: basta un controesempio.
-Se sono presenti più quantificatori, si applica la regola a ciascuno,
-mantenendo il loro ordine. Per esempio,
+\begin{esempio}[Negazione e controesempio]
+Per $U\subseteq\R$, la negazione di «tutti gli elementi di $U$ sono positivi» è «esiste un elemento di $U$ minore o uguale a zero». Basta un controesempio: non si richiede che tutti gli elementi siano negativi.
+\end{esempio}
+
+\begin{esempio}[Più quantificatori]
 \[
   \neg\bigl(\forall x\in\R\ \exists y\in\R:\ y>x\bigr)
   \quad\Longleftrightarrow\quad
   \exists x\in\R\ \forall y\in\R:\ y\le x.
 \]
+\end{esempio}

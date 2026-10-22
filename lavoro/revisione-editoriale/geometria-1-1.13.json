@@ -1,0 +1,33 @@
+{
+  "data": "2026-10-22",
+  "materia": "geometria 1",
+  "sezione": "1.13",
+  "titolo": "1.13 Costruzioni di sottospazi in R5",
+  "stato": "completata; verifica matematica e visiva eseguite",
+  "nota": "Ricontrollati i sistemi in R5, tutte le matrici e le operazioni di riga; distinte necessità e sufficienza delle cartesiane e le inclusioni per le intersezioni di Z.",
+  "pagine_volume": 28,
+  "pagine_fisiche_ispezione": [
+    24,
+    27
+  ],
+  "avvisi_latex": [],
+  "estratti_identici_al_volume": true,
+  "pdf_sha256": "2fac0ca880170019049836b44f1a07183ff000e71f0370e93266bbdcd0ef7011",
+  "sorgenti_sha256": {
+    "main.tex": "411a4a8d7bf859876e88d63d8062ac24d5a11608e1ca68e0e32c9d51174f5a46",
+    "preambolo.tex": "0f10401e3c2fbcb1b849992391cdef8abc0a8b67949713cebcb01bb6066edc7a",
+    "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+    "capitoli/01a-spazi-e-sottospazi.tex": "72e8a1798a04b2f913771207520ce4b8ef7e5f22da8245630821ed011d878c9a",
+    "capitoli/01b-somme-di-sottospazi.tex": "0598effeefeac374a47431a56452e09a6a18c649c87389bb9a9fd068e60612ca",
+    "capitoli/01b-sottospazio-generato.tex": "b2a3cecb2bc235e5492daaf38f22f656f57b8e1f331e06ed9b1db76e08744a0e",
+    "capitoli/01c-basi-e-dimensione.tex": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+    "capitoli/01c-indipendenza-basi-coordinate.tex": "5e074c8ce432c9a89b420ae0529b790d177be936a0e23dfedcdcef5539d2a9a4",
+    "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "ed50e0abeb02a6ad48399391066fe8c5faa7b9e2a70c336e0f78fe69a774482f",
+    "capitoli/01e-equazioni-cartesiane.tex": "58bbac306576cf70cdd4018445b84eb08f07dbba5f8ce17d126ae91f0884c303",
+    "capitoli/01f-prodotti.tex": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+    "capitoli/01g-quozienti.tex": "d6fed5e00245f72f71b3e537791cc509feac974a88d92206f5183e0aea6912f9",
+    "capitoli/01h-grassmann-complementi.tex": "e92ddd82f371ce2f987fa090d19f7aa00287e8a096ed0cebb4cd79934dafbd10",
+    "capitoli/01i-costruzioni-in-r5.tex": "7ea779b4af05c117a7c0b152df518682d9d3198da803afd766e0dff3f8afe3c7",
+    "capitoli/01j-equazioni-di-polinomi.tex": "2f1e0e39bd2b66d330ae2095ea9588d152b3f94e57c22d0a7edfaae6cf3c570a"
+  }
+}

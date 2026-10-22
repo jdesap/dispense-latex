@@ -11,54 +11,46 @@
 Fissati $a,b\in\R$, con $a>0$, esiste $n\in\N$ tale che $na>b$.
 \end{teorema}
 \begin{proof}
-Fissiamo $a>0$ e consideriamo l'insieme dei suoi multipli naturali
+\textbf{Riduzione al supremo dei multipli.} Fissiamo $a>0$ e consideriamo l'insieme
 \[
   A=\{na:n\in\N\}.
 \]
-Dimostriamo che è superiormente illimitato. Se per assurdo fosse
-superiormente limitato, il teorema di esistenza degli estremi
-garantirebbe un numero reale $S=\sup A$.
-La caratterizzazione operativa del supremo, con la scelta
-$\varepsilon=a>0$, darebbe un elemento $\bar n a\in A$ per cui
+È non vuoto, perché $0\in A$. Dimostriamo che è superiormente illimitato. Se per assurdo fosse superiormente limitato, il teorema di esistenza degli estremi garantirebbe un numero reale $S=\sup A$.
+
+\textbf{Il successivo supera il supremo.} La caratterizzazione operativa, con la scelta $\varepsilon=a>0$, darebbe un elemento $\bar n a\in A$ per cui
 \[
   \bar n a>S-a.
 \]
-Sommando $a$ ai due membri otteniamo $(\bar n+1)a>S$. Ma
-$\bar n+1\in\N$, quindi anche $(\bar n+1)a\in A$, in contraddizione
-con il fatto che $S$ sia un maggiorante. L'insieme dei multipli è
-dunque superiormente illimitato: per ogni $b\in\R$ contiene un
-elemento $na>b$, come richiesto.
+Sommando $a$ ai due membri otteniamo $(\bar n+1)a>S$. Ma $\bar n+1\in\N$, quindi anche $(\bar n+1)a\in A$, in contraddizione con il fatto che $S$ sia un maggiorante. L'insieme dei multipli è dunque superiormente illimitato: per ogni $b\in\R$ contiene un elemento $na>b$, come richiesto.
 \end{proof}
 
-Prendendo $a=1$ si ottiene che i naturali superano qualunque reale:
-$\N$ è superiormente illimitato. Un'altra forma che useremo spesso è
-\[
-  \forall\varepsilon>0\ \exists n\in\N^*:\quad
-  \frac1n<\varepsilon.
-\]
-Infatti basta scegliere un naturale $n>1/\varepsilon$.
-La completezza ha quindi una conseguenza concreta: non esiste
-un reale positivo che sia minore o uguale a tutti i reciproci
-dei naturali positivi.
+\textbf{Conseguenze.}
+\begin{itemize}
+  \item Con $a=1$ si ottiene che i naturali superano qualunque reale: $\N$ è superiormente illimitato.
+  \item I reciproci dei naturali positivi possono essere arbitrariamente piccoli:
+  \[
+    \forall\varepsilon>0\ \exists n\in\N^*:\quad \frac1n<\varepsilon.
+  \]
+  Basta infatti scegliere $n>1/\varepsilon$.
+\end{itemize}
+La completezza ha quindi una conseguenza concreta: non esiste un reale positivo minore o uguale a tutti i reciproci dei naturali positivi.
 
+\addtocontents{toc}{\protect\Needspace{3\protect\baselineskip}}
 \section{Esempi ed esercizi su supremo e infimo}
 % Fonte: Lezione 5, pp.~2--7
 
 \subsection{Un intervallo e un insieme con un punto isolato}
 % Fonte: Lezione 5, p.~2
 
-Per $A=[0,1)$ si ha
+\textbf{Intervallo con estremo escluso.} Per $A=[0,1)$ si ha
 \[
   \inf A=\min A=0,\qquad \sup A=1.
 \]
-Il minimo è immediato, perché $0\in A$ e tutti gli elementi sono
-non negativi. Per il supremo, $1$ è un maggiorante e, dato
-$\varepsilon>0$, il punto
-$a=1-\min\{\varepsilon/2,1/2\}$ appartiene ad $A$ e soddisfa
-$a>1-\varepsilon$. Il criterio operativo dimostra dunque che
-$1=\sup A$. Tuttavia $1\notin A$, quindi il massimo non esiste.
+\textbf{Minimo.} Il minimo è $0$, perché $0\in A$ e tutti gli elementi sono non negativi.
 
-Consideriamo invece
+\textbf{Supremo non raggiunto.} Il numero $1$ è un maggiorante e, dato $\varepsilon>0$, il punto $a=1-\min\{\varepsilon/2,1/2\}$ appartiene ad $A$ e soddisfa $a>1-\varepsilon$. Il criterio operativo dimostra dunque che $1=\sup A$. Tuttavia $1\notin A$, quindi il massimo non esiste.
+
+\textbf{Un massimo isolato.} Consideriamo
 \[
   B=[-1,2]\cup\{5\}.
 \]
@@ -66,10 +58,7 @@ In questo caso entrambi gli estremi sono raggiunti:
 \[
   \inf B=\min B=-1,\qquad \sup B=\max B=5.
 \]
-Per verificare il criterio del supremo basta scegliere $a=5$
-per ogni $\varepsilon>0$, poiché $5>5-\varepsilon$.
-Il punto che realizza il massimo può dunque essere isolato;
-la presenza dell'intero intervallo fra $2$ e $5$ non è richiesta.
+Per verificare il criterio del supremo basta scegliere $a=5$ per ogni $\varepsilon>0$, poiché $5>5-\varepsilon$. Il punto che realizza il massimo può dunque essere isolato; la presenza dell'intero intervallo fra $2$ e $5$ non è richiesta.
 
 \begin{schema}
 \begin{tikzpicture}[x=1.45cm,y=1cm]
@@ -88,9 +77,7 @@ la presenza dell'intero intervallo fra $2$ e $5$ non è richiesta.
     \node[below=6pt] at (\pos,-.8) {$\pos$};
   }
 \end{tikzpicture}
-\par\smallskip
-In $A$ l'estremo superiore $1$ è escluso; in $B$ il punto $5$
-è presente ed è il massimo, anche se è separato dall'intervallo.
+\par\smallskip In $A$ l'estremo superiore $1$ è escluso; in $B$ il punto $5$ è presente ed è il massimo, anche se è separato dall'intervallo.
 \end{schema}
 
 \subsection{I reciproci dei naturali positivi}
@@ -100,19 +87,13 @@ Sia
 \[
   A=\left\{\frac1n:n\in\N^*\right\}.
 \]
-La rappresentazione dei suoi punti suggerisce $\sup A=1$ e
-$\inf A=0$. Verifichiamo entrambe le affermazioni.
+La rappresentazione dei suoi punti suggerisce $\sup A=1$ e $\inf A=0$. Verifichiamo entrambe le affermazioni.
 
-Il numero $1$ appartiene ad $A$ per $n=1$ e maggiora tutti gli
-elementi, poiché $1/n\le1$ per ogni $n\ge1$. Dunque
+\textbf{Massimo e supremo.} Il numero $1$ appartiene ad $A$ per $n=1$ e maggiora tutti gli elementi, poiché $1/n\le1$ per ogni $n\ge1$. Dunque
 \[
   1=\max A=\sup A.
 \]
-Il numero $0$, invece, non appartiene ad $A$: nessun reciproco di
-un naturale positivo è zero. Per dimostrare che è l'infimo usiamo
-le due condizioni operative. È un minorante, perché $1/n>0$;
-inoltre, per ogni $\varepsilon>0$, Archimede fornisce un naturale
-$n>1/\varepsilon$, e quindi
+\textbf{Infimo non raggiunto.} Il numero $0$ non appartiene ad $A$: nessun reciproco di un naturale positivo è zero. Per dimostrare che è l'infimo usiamo le due condizioni operative. È un minorante, perché $1/n>0$; inoltre, per ogni $\varepsilon>0$, Archimede fornisce un naturale $n>1/\varepsilon$, e quindi
 \[
   \frac1n<\varepsilon=0+\varepsilon.
 \]
@@ -121,90 +102,67 @@ Ne segue $\inf A=0$. Poiché $0\notin A$, il minimo non esiste.
 \subsection{Come scartare un candidato sbagliato per l'infimo}
 % Fonte: Lezione 5, pp.~5--6
 
-Per lo stesso insieme $A=\{1/n:n\in\N^*\}$ proviamo a proporre
-un candidato $k$ diverso da $0$.
-Se $k>0$, il problema è già nella prima condizione: $k$ non è
-un minorante. Infatti esiste $n>1/k$, quindi $1/n<k$.
+Per lo stesso insieme $A=\{1/n:n\in\N^*\}$ proviamo a proporre un candidato $k$ diverso da $0$.
 
-Se invece $k<0$, esso è un minorante, perché tutti gli elementi
-di $A$ sono positivi, ma non è il più grande: $0$ è un minorante
-maggiore di $k$. Lo stesso difetto si vede con il criterio
-operativo. Per il candidato $k=-1$, prendendo $0<\varepsilon<1$
-avremmo bisogno di un elemento per cui
+\textbf{Candidato positivo: non è un minorante.} Se $k>0$, $k$ non è un minorante. Infatti esiste $n>1/k$, quindi $1/n<k$.
+
+\textbf{Candidato negativo: manca l’avvicinabilità.} Se $k<0$, esso è un minorante, perché tutti gli elementi di $A$ sono positivi, ma non è il più grande: $0$ è un minorante maggiore di $k$. Lo stesso difetto si vede con il criterio operativo. Per il candidato $k=-1$, prendendo $0<\varepsilon<1$ avremmo bisogno di un elemento per cui
 \[
   \frac1n<-1+\varepsilon<0,
 \]
-che è impossibile. In generale, per un qualunque $k<0$, basta
-scegliere $\varepsilon=-k/2$: allora $k+\varepsilon=k/2<0$ e
-nessun elemento di $A$ può trovarsi sotto questa soglia.
+che è impossibile. In generale, per un qualunque $k<0$, basta scegliere $\varepsilon=-k/2$: allora $k+\varepsilon=k/2<0$ e nessun elemento di $A$ può trovarsi sotto questa soglia.
 
 \subsection{Due esercizi: cubi traslati e unione di insiemi}
 % Fonte: Lezione 5, p.~7
 
-Il primo insieme proposto è
+\textbf{Cubi traslati.} Il primo insieme è
 \[
   A_1=\{n^3-1:n\in\N\}.
 \]
-Poiché $n^3\ge0$ per ogni $n\in\N$ e il valore $-1$ si ottiene
-per $n=0$, si ha $\inf A_1=\min A_1=-1$.
-L'insieme è superiormente illimitato: dato un qualunque $M\in\R$,
-scegliamo un naturale $n>\max\{1,M+1\}$. Allora
-$n^3-1\ge n-1>M$. Dunque, nella retta estesa,
+Poiché $n^3\ge0$ per ogni $n\in\N$ e il valore $-1$ si ottiene per $n=0$, si ha $\inf A_1=\min A_1=-1$.
+
+\textbf{Illimitatezza superiore.} L'insieme è superiormente illimitato: dato un qualunque $M\in\R$, scegliamo un naturale $n>\max\{1,M+1\}$. Allora $n^3-1\ge n-1>M$. Dunque, nella retta estesa,
 \[
   \sup A_1=+\infty.
 \]
 
-Il secondo insieme è
+\textbf{Unione di due insiemi.} Il secondo insieme è
 \[
   A_2=\{x\in\R:x^2<1\}
       \cup\{x\in\R:(x-3)^2=0\}
      =(-1,1)\cup\{3\}.
 \]
-Il numero $3$ appartiene ad $A_2$ e maggiora tutti gli elementi,
-quindi $\sup A_2=\max A_2=3$.
-Per l'infimo, $-1$ è un minorante. Dato $\varepsilon>0$, scegliamo
+Il numero $3$ appartiene ad $A_2$ e maggiora tutti gli elementi, quindi $\sup A_2=\max A_2=3$.
+
+\textbf{Infimo non raggiunto.} Il numero $-1$ è un minorante. Dato $\varepsilon>0$, scegliamo
 \[
   a=-1+\frac{\varepsilon}{1+\varepsilon}.
 \]
-Il punto $a$ appartiene a $(-1,0)\subseteq A_2$ e soddisfa
-$a<-1+\varepsilon$, perché
-$0<\varepsilon/(1+\varepsilon)<\varepsilon$. Perciò
-$\inf A_2=-1$; il minimo non esiste, perché $-1\notin A_2$.
+Il punto $a$ appartiene a $(-1,0)\subseteq A_2$ e soddisfa $a<-1+\varepsilon$, perché $0<\varepsilon/(1+\varepsilon)<\varepsilon$. Perciò $\inf A_2=-1$; il minimo non esiste, perché $-1\notin A_2$.
 
 \section{La densità dei razionali nella retta reale}
 % Fonte: Lezione 5, pp.~10--11
 
-Fra due razionali distinti si trovano altri razionali. Il risultato
-seguente estende la proprietà a qualunque intervallo aperto con
-estremi reali.
+Fra due razionali distinti si trovano altri razionali. Il risultato seguente estende la proprietà a qualunque intervallo aperto con estremi reali.
 
 \begin{teorema}[Densità di $\Q$ in $\R$]
 \label{teo:densita-razionali}
 Se $a,b\in\R$ e $a<b$, esiste $r\in\Q$ tale che $a<r<b$.
 \end{teorema}
 \begin{proof}
-Poiché $b-a>0$, il principio di Archimede permette di scegliere
-$q\in\N^*$ tale che
+\textbf{Dilatazione dell’intervallo.} Poiché $b-a>0$, il principio di Archimede permette di scegliere $q\in\N^*$ tale che
 \[
   q(b-a)>1.
 \]
-L'intervallo $(qa,qb)$ ha dunque ampiezza maggiore di $1$ e
-contiene un intero $p$.
+L'intervallo $(qa,qb)$ ha dunque ampiezza maggiore di $1$ e contiene un intero $p$.
 
-Esplicitiamo questo passaggio. Per ogni reale $t$ esiste un
-intero $p$ con $t<p\le t+1$. Infatti, scegliamo un naturale
-$N>-t$ e consideriamo il minimo naturale $m>t+N$, che esiste
-per Archimede e per il principio del minimo intero. Si ha $m\ge1$
-e $m-1\le t+N$, altrimenti $m$ non sarebbe il minimo.
-Ponendo $p=m-N$ si ottiene proprio $t<p\le t+1$.
+\textbf{Scelta dell’intero.} Per ogni reale $t$ esiste un intero $p$ con $t<p\le t+1$. Infatti, scegliamo un naturale $N>-t$ e consideriamo il minimo naturale $m>t+N$, che esiste per Archimede e per il principio del minimo intero. Si ha $m\ge1$ e $m-1\le t+N$, altrimenti $m$ non sarebbe il minimo. Ponendo $p=m-N$ si ottiene proprio $t<p\le t+1$.
 
-Applicando il fatto appena verificato a $t=qa$, troviamo
+\textbf{Ritorno alla scala iniziale.} Applicando il fatto appena verificato a $t=qa$, troviamo
 \[
   qa<p\le qa+1<qb.
 \]
-Dividendo per $q>0$ segue $a<p/q<b$. Il numero
-$r=p/q$ è razionale, perché $p\in\Z$ e $q\in\N^*$,
-e appartiene all'intervallo richiesto.
+Dividendo per $q>0$ segue $a<p/q<b$. Il numero $r=p/q$ è razionale, perché $p\in\Z$ e $q\in\N^*$, e appartiene all'intervallo richiesto.
 \end{proof}
 
 \begin{schema}
@@ -221,14 +179,7 @@ e appartiene all'intervallo richiesto.
   }
   \fill[coloreschema] (2,0) circle[radius=2.5pt];
 \end{tikzpicture}
-\par\smallskip
-Dilatando l'intervallo con un fattore intero $q$ si ottiene
-un'ampiezza maggiore di $1$, che assicura la presenza di un
-intero $p$. Tornando alla scala iniziale si trova il razionale $p/q$.
+\par\smallskip Dilatando l'intervallo con un fattore intero $q$ si ottiene un'ampiezza maggiore di $1$, che assicura la presenza di un intero $p$. Tornando alla scala iniziale si trova il razionale $p/q$.
 \end{schema}
 
-In realtà i razionali in $(a,b)$ sono infiniti: trovato un primo
-razionale $r_1$ nell'intervallo, si può cercarne un secondo in
-$(a,r_1)$, un terzo fra $a$ e il secondo, e continuare.
-Ogni intervallo aperto non vuoto della retta incontra quindi
-$\Q$, anche quando i suoi estremi sono irrazionali.
+\textbf{Infinità dei punti razionali.} I razionali in $(a,b)$ sono infiniti: trovato un primo razionale $r_1$ nell'intervallo, si può cercarne un secondo in $(a,r_1)$, un terzo fra $a$ e il secondo, e continuare. Ogni intervallo aperto non vuoto della retta incontra quindi $\Q$, anche quando i suoi estremi sono irrazionali.

@@ -1,0 +1,62 @@
+{
+  "data": "2026-10-22",
+  "esiti": [
+    {
+      "materia": "analisi 1",
+      "file": "01-logica-e-metodi-di-dimostrazione.pdf",
+      "pagine": 3,
+      "contenuto_identico": true,
+      "numerazione_e_link_verificati": true
+    },
+    {
+      "materia": "analisi 1",
+      "file": "02-insiemi-e-relazioni.pdf",
+      "pagine": 3,
+      "contenuto_identico": true,
+      "numerazione_e_link_verificati": true
+    },
+    {
+      "materia": "analisi 1",
+      "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
+      "pagine": 6,
+      "contenuto_identico": true,
+      "numerazione_e_link_verificati": true
+    },
+    {
+      "materia": "analisi 1",
+      "file": "04-sistemi-numerici-e-completezza.pdf",
+      "pagine": 10,
+      "contenuto_identico": true,
+      "numerazione_e_link_verificati": true
+    },
+    {
+      "materia": "analisi 1",
+      "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
+      "pagine": 6,
+      "contenuto_identico": true,
+      "numerazione_e_link_verificati": true
+    },
+    {
+      "materia": "analisi 1",
+      "file": "06-funzioni-elementari.pdf",
+      "pagine": 14,
+      "contenuto_identico": true,
+      "numerazione_e_link_verificati": true
+    },
+    {
+      "materia": "analisi 1",
+      "file": "07-topologia-della-retta.pdf",
+      "pagine": 6,
+      "contenuto_identico": true,
+      "numerazione_e_link_verificati": true
+    },
+    {
+      "materia": "geometria 1",
+      "file": "01-spazi-vettoriali.pdf",
+      "pagine": 25,
+      "contenuto_identico": true,
+      "numerazione_e_link_verificati": true
+    }
+  ],
+  "controlli": "Identità di tutti i flussi pagina e testo, dimensioni, numerazione e link alle note; rendering prima pagina di tutti gli 8 estratti. Volumi completi non modificati."
+}

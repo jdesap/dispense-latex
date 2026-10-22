@@ -1,0 +1,79 @@
+{
+  "data": "2026-10-22",
+  "materia": "analisi 1",
+  "pagine_volume": 54,
+  "pdf_sha256": "648820893682d0f5976edec8507b1f5b8ea72405aba73eb098ab62f9255031e0",
+  "avvisi_latex": [],
+  "estratti": [
+    {
+      "capitolo": 1,
+      "file": "01-logica-e-metodi-di-dimostrazione.pdf",
+      "pagine": 3,
+      "contenuto_numerazione_dimensioni_identici": true,
+      "link_interni_verificati": 0
+    },
+    {
+      "capitolo": 2,
+      "file": "02-insiemi-e-relazioni.pdf",
+      "pagine": 3,
+      "contenuto_numerazione_dimensioni_identici": true,
+      "link_interni_verificati": 0
+    },
+    {
+      "capitolo": 3,
+      "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
+      "pagine": 6,
+      "contenuto_numerazione_dimensioni_identici": true,
+      "link_interni_verificati": 0
+    },
+    {
+      "capitolo": 4,
+      "file": "04-sistemi-numerici-e-completezza.pdf",
+      "pagine": 11,
+      "contenuto_numerazione_dimensioni_identici": true,
+      "link_interni_verificati": 2
+    },
+    {
+      "capitolo": 5,
+      "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
+      "pagine": 7,
+      "contenuto_numerazione_dimensioni_identici": true,
+      "link_interni_verificati": 1
+    },
+    {
+      "capitolo": 6,
+      "file": "06-funzioni-elementari.pdf",
+      "pagine": 14,
+      "contenuto_numerazione_dimensioni_identici": true,
+      "link_interni_verificati": 2
+    },
+    {
+      "capitolo": 7,
+      "file": "07-topologia-della-retta.pdf",
+      "pagine": 6,
+      "contenuto_numerazione_dimensioni_identici": true,
+      "link_interni_verificati": 1
+    }
+  ],
+  "sorgenti_sha256": {
+    "main.tex": "4cbcfc0167e388d0248e64796c9e3bc5442ef17a582c31d26faeb8ff5f7b7864",
+    "preambolo.tex": "ead5f5487e3fb644173565378c4d58f2e30caac12f39118c343abda32db75d66",
+    "capitoli/01-logica.tex": "4b3b55b075816877556fb022cc2b63b6b4c213f9679cabfcdb14e7f24e7bc376",
+    "capitoli/02-insiemi-e-relazioni.tex": "a1c8c20957ff2970a847b3a63cca629e65679597df0863b453d47b0e8e0c60c4",
+    "capitoli/03-numeri-naturali-e-combinatoria.tex": "616d5b2ff25cda3dd81049ad7d3052a149e13f1a5f8cda62ad004d43464924cf",
+    "capitoli/04-numeri-reali-e-completezza.tex": "2bfe80f1d4148e3e6056208d1f90346e17a41f5b6ca907832eaba8d3dc5faecc",
+    "capitoli/04a-reali-e-completezza.tex": "e87e7890f6a4ddfb4e1d3b6e4300fa498ec621f0c231b14c9c6ac20389573deb",
+    "capitoli/04b-intervalli-ed-estremi.tex": "2837a80c2957c60482fcb5583ec318bfe66d10958df055aae402cba06725bd9e",
+    "capitoli/04c-archimede-ed-esempi.tex": "6fbdd1419f5d580a0773935b2c9060d0f18c042171deaaa0aa118139cb8d6cb8",
+    "capitoli/05-funzioni.tex": "d77f146b94c3ec9ed181ea9c23df8080efaa60675abe1c770a5356370dedc39d",
+    "capitoli/05a-funzioni-reali.tex": "89b95f94bdb1860f94619276ec5fef5382984182e68767c2ed13a1c9e40fb317",
+    "capitoli/06-funzioni-elementari.tex": "53631c18d7c0dbc3879a1936a4ade9e422c920f80078b2499caee26b11144c13",
+    "capitoli/06a-potenze-e-radici.tex": "d5b96b53ec345948c645ace0da64ecfeae3058b902108799dc46cb35e1a81fe7",
+    "capitoli/06b-modulo-e-distanza.tex": "c16ebedb14294e42785ccac09d5194df37fe68e6ed2ac0ea63e4c72985374aba",
+    "capitoli/06c-trigonometria.tex": "d0de19a4154301fd2db900c04c2a9458a1eba8a51ccc83288b5a1a419e55aa16",
+    "capitoli/06d-esponenziali-e-iperboliche.tex": "f13c1254564200f5066217d31c74eda786855e28a732642a91056d4b48c14334",
+    "capitoli/06e-funzioni-a-tratti-e-grafici.tex": "186a6fee7266640598cceb2a9a6c426c953302df2762e8fd9cc57e14bb0cfee0",
+    "capitoli/07-topologia.tex": "a2fea1a0aa54f99e244941f737ffc2b3ab86d1b0dffdbc4d76fc6cb7ebe6bfe0",
+    "capitoli/07a-introduzione.tex": "806c988d297a4920e19908e6990b0af971e2e34fd21a43cf153593bb8afe5a9f"
+  }
+}

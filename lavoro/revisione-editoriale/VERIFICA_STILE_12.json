@@ -1,0 +1,417 @@
+{
+  "data": "2026-10-22",
+  "sessione": 12,
+  "stato": "completata",
+  "parametri": {
+    "rientro_mm": 4,
+    "parskip_prove": ".42\\baselineskip",
+    "cornice_pt": 0.35,
+    "margine_cornice_pt": 2.2,
+    "tinta_etichette_percento": 9
+  },
+  "conteggi": {
+    "analisi 1": {
+      "proof": 32,
+      "svolgimento": 3,
+      "formule_guida": 23
+    },
+    "geometria 1": {
+      "proof": 24,
+      "svolgimento": 15,
+      "formule_guida": 20
+    }
+  },
+  "sorgenti_capitoli_modificati": {
+    "analisi 1": [
+      "capitoli/02-insiemi-e-relazioni.tex",
+      "capitoli/03-numeri-naturali-e-combinatoria.tex",
+      "capitoli/04b-intervalli-ed-estremi.tex",
+      "capitoli/05a-funzioni-reali.tex",
+      "capitoli/06a-potenze-e-radici.tex",
+      "capitoli/06b-modulo-e-distanza.tex",
+      "capitoli/06d-esponenziali-e-iperboliche.tex",
+      "capitoli/06e-funzioni-a-tratti-e-grafici.tex",
+      "capitoli/07-topologia.tex",
+      "capitoli/07a-introduzione.tex"
+    ],
+    "geometria 1": [
+      "capitoli/01a-spazi-e-sottospazi.tex",
+      "capitoli/01b-somme-di-sottospazi.tex",
+      "capitoli/01b-sottospazio-generato.tex",
+      "capitoli/01c-indipendenza-basi-coordinate.tex",
+      "capitoli/01d-estrazione-e-basi-di-sottospazi.tex",
+      "capitoli/01e-equazioni-cartesiane.tex",
+      "capitoli/01g-quozienti.tex",
+      "capitoli/01i-costruzioni-in-r5.tex",
+      "capitoli/01j-equazioni-di-polinomi.tex"
+    ]
+  },
+  "conservazione": {
+    "analisi 1": [
+      {
+        "file": "capitoli/01-logica.tex",
+        "display_conservati": 6,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/02-insiemi-e-relazioni.tex",
+        "display_conservati": 11,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 1,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/03-numeri-naturali-e-combinatoria.tex",
+        "display_conservati": 18,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 1,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/04-numeri-reali-e-completezza.tex",
+        "display_conservati": 9,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 1,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/04a-reali-e-completezza.tex",
+        "display_conservati": 8,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/04b-intervalli-ed-estremi.tex",
+        "display_conservati": 10,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 1,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/04c-archimede-ed-esempi.tex",
+        "display_conservati": 16,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 2,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/05-funzioni.tex",
+        "display_conservati": 12,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 2,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/05a-funzioni-reali.tex",
+        "display_conservati": 7,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 2,
+        "tikz_conservati": 3,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/06-funzioni-elementari.tex",
+        "display_conservati": 0,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/06a-potenze-e-radici.tex",
+        "display_conservati": 9,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 2,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/06b-modulo-e-distanza.tex",
+        "display_conservati": 6,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 1,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/06c-trigonometria.tex",
+        "display_conservati": 10,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 7,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/06d-esponenziali-e-iperboliche.tex",
+        "display_conservati": 13,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 7,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/06e-funzioni-a-tratti-e-grafici.tex",
+        "display_conservati": 7,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 8,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/07-topologia.tex",
+        "display_conservati": 12,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 3,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/07a-introduzione.tex",
+        "display_conservati": 4,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      }
+    ],
+    "geometria 1": [
+      {
+        "file": "capitoli/01-spazi-vettoriali.tex",
+        "display_conservati": 0,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01a-spazi-e-sottospazi.tex",
+        "display_conservati": 9,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 3,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01b-somme-di-sottospazi.tex",
+        "display_conservati": 7,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01b-sottospazio-generato.tex",
+        "display_conservati": 7,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 1,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01c-basi-e-dimensione.tex",
+        "display_conservati": 3,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01c-indipendenza-basi-coordinate.tex",
+        "display_conservati": 10,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 2,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01d-estrazione-e-basi-di-sottospazi.tex",
+        "display_conservati": 10,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01e-equazioni-cartesiane.tex",
+        "display_conservati": 5,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01f-prodotti.tex",
+        "display_conservati": 5,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01g-quozienti.tex",
+        "display_conservati": 14,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 1,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01h-grassmann-complementi.tex",
+        "display_conservati": 11,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 1,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01i-costruzioni-in-r5.tex",
+        "display_conservati": 17,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      },
+      {
+        "file": "capitoli/01j-equazioni-di-polinomi.tex",
+        "display_conservati": 10,
+        "formule_in_linea_conservate": true,
+        "etichette_logiche_ridondanti_abbreviate": 0,
+        "tikz_conservati": 0,
+        "note_label_enunciati_numerati_conservati": true
+      }
+    ]
+  },
+  "fonti_originali_integre": true,
+  "compilatore_integrato": {
+    "analisi 1": "success",
+    "geometria 1": "success"
+  },
+  "verifiche_pdf_ed_estratti": {
+    "analisi 1": {
+      "data": "2026-10-22",
+      "materia": "analisi 1",
+      "pagine_volume": 54,
+      "pdf_sha256": "a15afc9b8a20c099f431b800f6da1229f91423c741d718a82a0717a842069ec9",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "capitolo": 1,
+          "file": "01-logica-e-metodi-di-dimostrazione.pdf",
+          "pagine": 3,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 0
+        },
+        {
+          "capitolo": 2,
+          "file": "02-insiemi-e-relazioni.pdf",
+          "pagine": 3,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 0
+        },
+        {
+          "capitolo": 3,
+          "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
+          "pagine": 6,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 0
+        },
+        {
+          "capitolo": 4,
+          "file": "04-sistemi-numerici-e-completezza.pdf",
+          "pagine": 11,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 2
+        },
+        {
+          "capitolo": 5,
+          "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
+          "pagine": 7,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 1
+        },
+        {
+          "capitolo": 6,
+          "file": "06-funzioni-elementari.pdf",
+          "pagine": 14,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 2
+        },
+        {
+          "capitolo": 7,
+          "file": "07-topologia-della-retta.pdf",
+          "pagine": 6,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 1
+        }
+      ],
+      "sorgenti_sha256": {
+        "main.tex": "4cbcfc0167e388d0248e64796c9e3bc5442ef17a582c31d26faeb8ff5f7b7864",
+        "preambolo.tex": "95f2bfe60530a4cc98bb835641ee4952a312c7035bb492c428602aedf4e66f0b",
+        "capitoli/01-logica.tex": "4b3b55b075816877556fb022cc2b63b6b4c213f9679cabfcdb14e7f24e7bc376",
+        "capitoli/02-insiemi-e-relazioni.tex": "a4f224ce44430821d014a75cc31affc7a8070f3e1a9b9ba13997cd5ec5e2ac1c",
+        "capitoli/03-numeri-naturali-e-combinatoria.tex": "3f3a75c4cf366d8e492ad44f0dca8244e04d90324a4a4c8dffc980f1dfa6c78e",
+        "capitoli/04-numeri-reali-e-completezza.tex": "2bfe80f1d4148e3e6056208d1f90346e17a41f5b6ca907832eaba8d3dc5faecc",
+        "capitoli/04a-reali-e-completezza.tex": "e87e7890f6a4ddfb4e1d3b6e4300fa498ec621f0c231b14c9c6ac20389573deb",
+        "capitoli/04b-intervalli-ed-estremi.tex": "58f757584b727ef26bfedb1336ced1c2b6edd7f45ee54dbb93214bd392215030",
+        "capitoli/04c-archimede-ed-esempi.tex": "6fbdd1419f5d580a0773935b2c9060d0f18c042171deaaa0aa118139cb8d6cb8",
+        "capitoli/05-funzioni.tex": "d77f146b94c3ec9ed181ea9c23df8080efaa60675abe1c770a5356370dedc39d",
+        "capitoli/05a-funzioni-reali.tex": "4c1228b2d1a13ed60682380face37f08a02cb7d4cdf89e26018b3f512faa6f8c",
+        "capitoli/06-funzioni-elementari.tex": "53631c18d7c0dbc3879a1936a4ade9e422c920f80078b2499caee26b11144c13",
+        "capitoli/06a-potenze-e-radici.tex": "730b897e507010813c5e6376261b21e6870fe216f37aac38d0d704437244e1ee",
+        "capitoli/06b-modulo-e-distanza.tex": "cbc285fd85fecb099e2a475b10b2ea525a2d751629d3e89bb9d638409d4705b3",
+        "capitoli/06c-trigonometria.tex": "d0de19a4154301fd2db900c04c2a9458a1eba8a51ccc83288b5a1a419e55aa16",
+        "capitoli/06d-esponenziali-e-iperboliche.tex": "61295f0ad0a86d8ad8d081cf6a25f601520db021dd88d5faeabcf02b07b6b688",
+        "capitoli/06e-funzioni-a-tratti-e-grafici.tex": "61ea7ad8ee6102fc82d786741c8e1840859f3a63db4bb2fd5b02bafebf76e737",
+        "capitoli/07-topologia.tex": "bf6490450d6dfa9d4886c9f649a8d4f5b486ad2047fce14b09376128e62e42b4",
+        "capitoli/07a-introduzione.tex": "8cac8057f25c23ed537917beff954ee7776a8135851b9da40a90f938510a4b8e"
+      }
+    },
+    "geometria 1": {
+      "data": "2026-10-22",
+      "materia": "geometria 1",
+      "pagine_volume": 29,
+      "pdf_sha256": "1e13a499e2861c38d49a77b1d43e80b42e8501c91abdc672aa0f0c143e0d4efa",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "capitolo": 1,
+          "file": "01-spazi-vettoriali.pdf",
+          "pagine": 26,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 7
+        }
+      ],
+      "sorgenti_sha256": {
+        "main.tex": "fdd96aeedf69c3090c6827e3e5545450c10afadde029533b4ee41e037749188c",
+        "preambolo.tex": "62dec0cc5f0113183aafc14ef9cffda7edc71409030c5d8b26e2557ef1af1f4a",
+        "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+        "capitoli/01a-spazi-e-sottospazi.tex": "fab45b6829dcd302a2aef81080399ab9da1da0ee1b10e7c3e2cebf4bc726bca7",
+        "capitoli/01b-somme-di-sottospazi.tex": "5c00547d5307a64a6276e7d992a2d6a58bd9cf08ddc08c91ba72e534bf7070aa",
+        "capitoli/01b-sottospazio-generato.tex": "e49646dc973b6544fc0dec5be981a228ddc108bcf4b014996f6c1a991c6e4df7",
+        "capitoli/01c-basi-e-dimensione.tex": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+        "capitoli/01c-indipendenza-basi-coordinate.tex": "8a82e85d0e41254d024426c0bf686923283860c23128e43fedcc5fc0b08f2b1b",
+        "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "52a26349bb387b74d74e398566921138860c54c6aa81ecf4ec981d76315b540d",
+        "capitoli/01e-equazioni-cartesiane.tex": "114f13e0c25df18f464b0f95596ebd5cb283f3b245d2f81dc9f598c34b3cacac",
+        "capitoli/01f-prodotti.tex": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+        "capitoli/01g-quozienti.tex": "345603c0023f68acfc78043f17c3d9b0f5b4bcbfa752e3e24625f68044767c5b",
+        "capitoli/01h-grassmann-complementi.tex": "e92ddd82f371ce2f987fa090d19f7aa00287e8a096ed0cebb4cd79934dafbd10",
+        "capitoli/01i-costruzioni-in-r5.tex": "2f60bec8150bfc88d1029ea3d3fc89006d649807690ae1ee7dc28ad7612cffa4",
+        "capitoli/01j-equazioni-di-polinomi.tex": "402c572b810fb79195cddaa70972202fbfec1bc2e17de5b0c08a6a8751d1b04b"
+      }
+    }
+  },
+  "ispezione_visiva": "Panoramica di tutte le 83 pagine; pagine rappresentative e raccordo di De Morgan a risoluzione leggibile.",
+  "resoconto": "SESSIONE_12.md",
+  "copie_annotate_modificate": false
+}

@@ -1,0 +1,118 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 11_12, pp. 1--2.
+
+\addtocontents{toc}{\protect\Needspace{3\protect\baselineskip}}
+\Needspace{16\baselineskip}
+\section{Formula di Grassmann}
+
+\subsection{Una base della somma e la formula delle dimensioni}
+
+Si parte da una base dell'intersezione e la si completa separatamente nei due sottospazi: nella base della somma i vettori comuni compariranno una sola volta.
+
+\begin{teorema}[formula di Grassmann]
+Se $U,W$ sono sottospazi di dimensione finita di $V$, allora
+\[
+  \dim(U+W)=\dim U+\dim W-\dim(U\cap W).
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Scelta delle basi.} L'intersezione è un sottospazio di $U$, quindi ha dimensione finita. Scegliamone una base $(v_1,\ldots,v_r)$ e completiamola separatamente:
+\[
+  (v_1,\ldots,v_r,u_1,\ldots,u_s)\text{ base di }U,
+  \qquad (v_1,\ldots,v_r,w_1,\ldots,w_t)\text{ base di }W.
+\]
+Consideriamo la famiglia $v_1,\ldots,v_r,u_1,\ldots,u_s,w_1,\ldots,w_t$.
+
+\textbf{Generazione di $U+W$.} Scrivendo $u\in U$ e $w\in W$ nelle rispettive basi,
+\[
+  u+w=\sum_{i=1}^r(a_i+b_i)v_i+\sum_{j=1}^s c_ju_j+\sum_{k=1}^t d_kw_k.
+\]
+La famiglia genera quindi la somma.
+
+\textbf{Indipendenza: ricondursi all'intersezione.} Supponiamo
+\[
+  \sum_{i=1}^r\alpha_i v_i+\sum_{j=1}^s\beta_j u_j+\sum_{k=1}^t\gamma_k w_k=0_V.
+\]
+Isolando l'ultima somma si ottiene
+\[
+  \underbrace{\sum_i\alpha_i v_i+\sum_j\beta_j u_j}_{\in U}
+  =\underbrace{-\sum_k\gamma_k w_k}_{\in W}.
+\]
+Il vettore comune appartiene a $U\cap W$, dunque è una combinazione dei $v_i$. Per opportuni $\delta_i$,
+\[
+  -\sum_k\gamma_k w_k=\sum_i\delta_i v_i,
+  \qquad \sum_i\delta_i v_i+\sum_k\gamma_k w_k=0_V.
+\]
+L'indipendenza della base di $W$ annulla i $\delta_i$ e i $\gamma_k$. La relazione iniziale si riduce a $\sum_i\alpha_i v_i+\sum_j\beta_j u_j=0_V$; l'indipendenza della base di $U$ annulla anche gli $\alpha_i$ e i $\beta_j$.
+
+\textbf{Conteggio.} La famiglia è una base di $U+W$ con $r+s+t$ vettori, quindi
+\[
+  \dim(U+W)=r+s+t=(r+s)+(r+t)-r=\dim U+\dim W-\dim(U\cap W).
+\]
+Il ragionamento comprende le famiglie vuote, interpretando le somme corrispondenti come nulle.
+\end{proof}
+
+\section{Sottospazi complementari}
+
+\subsection{Definizione e dimensione}
+\begin{definizione}
+Un sottospazio $W\subseteq V$ è un \emph{complementare} di $U$ in $V$ se
+\[
+  V=U\oplus W,
+  \qquad\text{ossia}\qquad U+W=V\ \text{ e }\ U\cap W=\{0_V\}.
+\]
+\end{definizione}
+\begin{itemize}
+  \item \textbf{Scomposizione unica.} Ogni vettore di $V$ si scrive in modo unico come somma di un vettore di $U$ e di uno di $W$.
+  \item \textbf{Dimensione.} In dimensione finita, Grassmann dà
+  \[
+    \dim(U\oplus W)=\dim U+\dim W.
+  \]
+  Un complementare di $U$ in $V$ ha quindi dimensione $\dim V-\dim U$.
+\end{itemize}
+
+\subsection{Esistenza e non unicità dei complementari}
+\begin{proposizione}
+Ogni sottospazio di uno spazio vettoriale di dimensione finita possiede un complementare.
+\end{proposizione}
+\begin{proof}
+\textbf{Costruzione.} Scegliamo una base $(u_1,\ldots,u_r)$ di $U$ e completiamola a una base $(u_1,\ldots,u_r,w_1,\ldots,w_s)$ di $V$. Poniamo $W=\langle w_1,\ldots,w_s\rangle$.
+
+\textbf{Somma uguale a $V$.} Ogni elemento di $V$ è una combinazione dei vettori della base completata: separando i termini con $u_i$ da quelli con $w_j$ si ottiene $U+W=V$.
+
+\textbf{Intersezione nulla.} Se $z\in U\cap W$, possiamo scrivere
+\[
+  z=\sum_i a_iu_i=\sum_j b_jw_j,
+  \qquad \sum_i a_iu_i-\sum_j b_jw_j=0_V.
+\]
+L'indipendenza della base completata annulla tutti i coefficienti, quindi $z=0_V$. Si conclude $V=U\oplus W$.
+\end{proof}
+
+\textbf{Non unicità.} In $\R^2$ fissiamo $U=\langle(1,0)\rangle$. Per ogni $m\in\R$, la retta $W_m=\langle(m,1)\rangle$ è un complementare di $U$:
+\begin{itemize}
+  \item La somma è tutto il piano, perché
+  \[
+    (x,y)=(x-my,0)+y(m,1).
+  \]
+  \item L'intersezione è nulla: da $(a,0)=b(m,1)$, la seconda coordinata dà $b=0$ e quindi $a=0$.
+\end{itemize}
+Al variare di $m$ si ottengono rette diverse: se $(m,1)$ è multiplo di $(n,1)$, la seconda coordinata impone che il multiplo sia $1$, e la prima dà $m=n$.
+
+\begin{schema}
+\begin{tikzpicture}[x=1.15cm,y=1.15cm]
+  \draw[asse] (-.65,0)--(3.2,0) node[right] {$U$};
+  \draw[draw=coloreschema,line width=.8pt] (0,-.55)--(0,2.1)
+      node[above] {$W_0$};
+  \draw[draw=coloreschema,line width=.8pt] (-.5,-.5)--(2.1,2.1)
+      node[above right] {$W_1$};
+  \draw[dashed,draw=black!55] (0,1)--(2,1);
+  \draw[vettore] (2,0)--(2,1);
+  \draw[vettore] (1,0)--(2,1);
+  \fill (2,1) circle (1.6pt) node[right] {$(2,1)$};
+  \fill (1,0) circle (1.4pt) node[below] {$(1,0)$};
+  \fill (2,0) circle (1.4pt) node[below] {$(2,0)$};
+\end{tikzpicture}
+
+Lo stesso vettore si scompone usando $U$ e il complementare scelto: $(2,1)=(2,0)+(0,1)=(1,0)+(1,1)$.
+\end{schema}
+

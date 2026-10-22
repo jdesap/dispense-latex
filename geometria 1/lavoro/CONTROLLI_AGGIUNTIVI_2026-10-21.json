@@ -1,0 +1,40 @@
+{
+  "data": "2026-10-21T20:40:48",
+  "ambito": "Rilettura matematica dei sorgenti attivi, riscontri mirati sulle fonti e calcoli aggiuntivi. Non una certificazione o un nuovo confronto integrale di tutte le pagine delle fonti.",
+  "controlli_aggiuntivi": {
+    "integrita_fonti_pdf": 6,
+    "esercizi_R2_R3_R4": "sostituzioni, relazioni, basi e sistemi cartesiani verificati esattamente",
+    "R5_dimensioni": {
+      "U": 2,
+      "W": 2,
+      "U_piu_W": 4,
+      "Z": 3,
+      "Z_inter_U": 1,
+      "Z_inter_W": 1
+    },
+    "polinomi": "equazioni nelle due basi, invertibilita e inversa del cambio, base di W verificati esattamente"
+  },
+  "natura_controlli": "I controlli finiti supportano la revisione manuale delle prove: non sostituiscono dimostrazioni universali o un confronto integrale rinnovato con tutte le pagine originali.",
+  "sorgenti_revisionati_sha256": {
+    "main.tex": "411a4a8d7bf859876e88d63d8062ac24d5a11608e1ca68e0e32c9d51174f5a46",
+    "preambolo.tex": "cdf21f9686a6cf227c208aa9650ae928e73357053d83c7e08babcda9abf5e335",
+    "capitoli/01-spazi-vettoriali.tex": "6787be1fd0e0ea96771f8c254ea6e313bbe92889ff1dd7bbb876b217ece52a55",
+    "capitoli/01a-spazi-e-sottospazi.tex": "9bcfeeb71e52ffd3268301faa86d8de31308ca1eb8927878bb454ee6f96abfae",
+    "capitoli/01b-sottospazio-generato.tex": "168311f246c7d673cf1da84827bfc5fd45f12f7318915865429ce1a8c5c1f005",
+    "capitoli/01c-basi-e-dimensione.tex": "58c403715617627df68f3ec610d64aa4aca939726eb69ddb9bab49fff27b0d5f",
+    "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "7845de7e5f607f8649a62bbbbb08d92b0781b1906dbedf1f78be09ca9ed5ea27",
+    "capitoli/01e-equazioni-cartesiane.tex": "b0d7d0724f5d008d47d52a7f315b6debbefa3a74315e0b339cd4c8d88572f58f",
+    "capitoli/01f-prodotti.tex": "e1dd6e3f8cf0194d5c3f56ca69cb30db8c2e23b93cfd6c65c436aeeb6f4ed630",
+    "capitoli/01g-quozienti.tex": "c2999a993b45a0188ea473356dd09583786567db244fd8678cab9458a4ee1431",
+    "capitoli/01h-somme-grassmann-complementi.tex": "8d5eccc2911c812ff1e259683f69a7e65a8c08de38adeb25d8439ee639bfaddd",
+    "capitoli/01i-costruzioni-in-r5.tex": "bac0922f2181733d62bd3d94c1ff013f496e0cee5dc20dfaf2a66344490749ed",
+    "capitoli/01j-equazioni-di-polinomi.tex": "2f1e0e39bd2b66d330ae2095ea9588d152b3f94e57c22d0a7edfaae6cf3c570a"
+  },
+  "pdf": {
+    "file": "build/main.pdf",
+    "pagine": 25,
+    "sha256": "2ff2c28fc91fe1d0df4e5df52003ac2b192841d116509bd2216e28f04dc3922c"
+  },
+  "avvisi_compilazione": [],
+  "resoconto": "lavoro/REVISIONE_MATEMATICA_2026-10-21.md"
+}

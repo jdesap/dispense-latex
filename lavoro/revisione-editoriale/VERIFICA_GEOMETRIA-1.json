@@ -1,0 +1,33 @@
+{
+  "data": "2026-10-22",
+  "materia": "geometria 1",
+  "pagine_volume": 29,
+  "pdf_sha256": "1e13a499e2861c38d49a77b1d43e80b42e8501c91abdc672aa0f0c143e0d4efa",
+  "avvisi_latex": [],
+  "estratti": [
+    {
+      "capitolo": 1,
+      "file": "01-spazi-vettoriali.pdf",
+      "pagine": 26,
+      "contenuto_numerazione_dimensioni_identici": true,
+      "link_interni_verificati": 7
+    }
+  ],
+  "sorgenti_sha256": {
+    "main.tex": "fdd96aeedf69c3090c6827e3e5545450c10afadde029533b4ee41e037749188c",
+    "preambolo.tex": "62dec0cc5f0113183aafc14ef9cffda7edc71409030c5d8b26e2557ef1af1f4a",
+    "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+    "capitoli/01a-spazi-e-sottospazi.tex": "fab45b6829dcd302a2aef81080399ab9da1da0ee1b10e7c3e2cebf4bc726bca7",
+    "capitoli/01b-somme-di-sottospazi.tex": "5c00547d5307a64a6276e7d992a2d6a58bd9cf08ddc08c91ba72e534bf7070aa",
+    "capitoli/01b-sottospazio-generato.tex": "e49646dc973b6544fc0dec5be981a228ddc108bcf4b014996f6c1a991c6e4df7",
+    "capitoli/01c-basi-e-dimensione.tex": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+    "capitoli/01c-indipendenza-basi-coordinate.tex": "8a82e85d0e41254d024426c0bf686923283860c23128e43fedcc5fc0b08f2b1b",
+    "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "52a26349bb387b74d74e398566921138860c54c6aa81ecf4ec981d76315b540d",
+    "capitoli/01e-equazioni-cartesiane.tex": "114f13e0c25df18f464b0f95596ebd5cb283f3b245d2f81dc9f598c34b3cacac",
+    "capitoli/01f-prodotti.tex": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+    "capitoli/01g-quozienti.tex": "345603c0023f68acfc78043f17c3d9b0f5b4bcbfa752e3e24625f68044767c5b",
+    "capitoli/01h-grassmann-complementi.tex": "e92ddd82f371ce2f987fa090d19f7aa00287e8a096ed0cebb4cd79934dafbd10",
+    "capitoli/01i-costruzioni-in-r5.tex": "2f60bec8150bfc88d1029ea3d3fc89006d649807690ae1ee7dc28ad7612cffa4",
+    "capitoli/01j-equazioni-di-polinomi.tex": "402c572b810fb79195cddaa70972202fbfec1bc2e17de5b0c08a6a8751d1b04b"
+  }
+}

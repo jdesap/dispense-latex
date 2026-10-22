@@ -1,0 +1,72 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 10, p. 2.
+
+\section{Prodotto di spazi vettoriali}
+
+\subsection{Operazioni nel prodotto}
+
+Siano $V,W$ spazi vettoriali sullo stesso campo $K$. Sul prodotto cartesiano
+\[
+  V\times W=\{(v,w):v\in V,\ w\in W\}
+\]
+si definiscono le operazioni componente per componente:
+\begin{align*}
+  (v_1,w_1)+(v_2,w_2)&=(v_1+v_2,w_1+w_2),\\
+  \lambda(v,w)&=(\lambda v,\lambda w),\qquad\lambda\in K.
+\end{align*}
+Entrambe hanno risultato in $V\times W$, per la chiusura delle operazioni nei fattori.
+
+\begin{proposizione}
+Con queste operazioni $V\times W$ è uno spazio vettoriale su $K$.
+\end{proposizione}
+\begin{proof}
+Poniamo $p=(v,w)$, $q=(v',w')$ e $t=(v'',w'')$.
+
+\textbf{Struttura additiva.} Commutatività e associatività si verificano nelle componenti:
+\begin{align*}
+  p+q&=(v+v',w+w')=(v'+v,w'+w)=q+p,\\
+  (p+q)+t&=((v+v')+v'',(w+w')+w'')\\
+    &=(v+(v'+v''),w+(w'+w''))=p+(q+t).
+\end{align*}
+Il neutro è $(0_V,0_W)$ e l'opposto di $(v,w)$ è $(-v,-w)$, come si verifica sommando per componenti.
+
+\textbf{Prodotto per scalari.} Per $\lambda,\mu\in K$, gli assiomi nei due fattori danno
+\begin{align*}
+  \lambda(p+q)&=(\lambda(v+v'),\lambda(w+w'))=\lambda p+\lambda q,\\
+  (\lambda+\mu)p&=((\lambda+\mu)v,(\lambda+\mu)w)=\lambda p+\mu p,\\
+  \lambda(\mu p)&=(\lambda(\mu v),\lambda(\mu w))\\
+    &=((\lambda\mu)v,(\lambda\mu)w)=(\lambda\mu)p,\\
+  1_Kp&=(1_Kv,1_Kw)=(v,w)=p.
+\end{align*}
+Sono soddisfatti tutti gli assiomi.
+\end{proof}
+
+\subsection{Base e dimensione del prodotto}
+
+\begin{proposizione}
+Se $(v_1,\ldots,v_r)$ è una base di $V$ e $(w_1,\ldots,w_s)$ è una base di $W$, allora
+\[
+  (v_1,0_W),\ldots,(v_r,0_W),\quad(0_V,w_1),\ldots,(0_V,w_s)
+\]
+è una base di $V\times W$. In particolare,
+\[
+  \dim(V\times W)=\dim V+\dim W.
+\]
+\end{proposizione}
+\begin{proof}
+\textbf{Generazione.} Per $(v,w)\in V\times W$, scriviamo $v=\sum_i a_iv_i$ e $w=\sum_j b_jw_j$. Allora
+\[
+  (v,w)=\sum_{i=1}^r a_i(v_i,0_W)+\sum_{j=1}^s b_j(0_V,w_j).
+\]
+
+\textbf{Indipendenza.} Una combinazione nulla della famiglia proposta dà
+\[
+  \sum_{i=1}^r a_i(v_i,0_W)+\sum_{j=1}^s b_j(0_V,w_j)=(0_V,0_W)
+  \quad\Longrightarrow\quad
+  \begin{cases}
+    \sum_{i=1}^r a_iv_i=0_V,\\
+    \sum_{j=1}^s b_jw_j=0_W.
+  \end{cases}
+\]
+L'indipendenza delle basi dei fattori annulla tutti gli $a_i$ e i $b_j$. La famiglia è quindi una base, con $r+s$ vettori: segue la formula della dimensione.
+\end{proof}

@@ -7,22 +7,21 @@
 % Fonte: Lezione 5, p.~12
 
 \begin{definizione}
-Una \emph{funzione} $f\colon X\to Y$ è una legge che associa a ogni
-elemento $x\in X$ uno e un solo elemento $y\in Y$. Scriviamo
+Una \emph{funzione} $f\colon X\to Y$ è una legge che associa a ogni elemento $x\in X$ uno e un solo elemento $y\in Y$. Scriviamo
 \[
 f\colon X\longrightarrow Y,\qquad x\longmapsto y=f(x).
 \]
-L'insieme $X$ è il \emph{dominio}, $Y$ il \emph{codominio}; $f(x)$ è
-l'\emph{immagine di $x$ tramite $f$}. L'\emph{insieme immagine} è
+L'insieme $X$ è il \emph{dominio}, $Y$ il \emph{codominio}; $f(x)$ è l'\emph{immagine di $x$ tramite $f$}. L'\emph{insieme immagine} è
 \[
 \operatorname{Im}(f)=f(X)=\{f(x):x\in X\}\subseteq Y.
 \]
 \end{definizione}
 
-La condizione «uno e un solo» riguarda il valore associato a ciascun
-elemento del dominio. Elementi distinti possono avere la stessa immagine;
-inoltre un elemento del codominio può non essere raggiunto. Perciò
-codominio e immagine non coincidono necessariamente.
+\textbf{Unicità del valore e insieme immagine.}
+\begin{itemize}
+  \item «Uno e un solo» riguarda il valore associato a ciascun elemento del dominio; punti distinti possono avere la stessa immagine.
+  \item Un elemento del codominio può non essere raggiunto: codominio e immagine non coincidono necessariamente.
+\end{itemize}
 
 \section{Iniettività, suriettività e biettività}
 % Fonte: Lezione 5, p.~13
@@ -30,40 +29,37 @@ codominio e immagine non coincidono necessariamente.
 \begin{definizione}
 Una funzione $f\colon X\to Y$ si dice:
 \begin{itemize}
-  \item \emph{iniettiva} se elementi distinti hanno immagini distinte:
+  \item \textbf{Iniettiva} se elementi distinti hanno immagini distinte:
   \[
   \forall x_1,x_2\in X,\quad
   x_1\ne x_2\ \Longrightarrow\ f(x_1)\ne f(x_2);
   \]
-  equivalentemente, $f(x_1)=f(x_2)$ implica $x_1=x_2$;
-  \item \emph{suriettiva} se ogni elemento del codominio è raggiunto:
+equivalentemente, $f(x_1)=f(x_2)$ implica $x_1=x_2$;
+  \item \textbf{Suriettiva} se ogni elemento del codominio è raggiunto:
   \[
   \forall y\in Y\ \exists x\in X:\ f(x)=y,
   \qquad\text{ossia }\operatorname{Im}(f)=Y;
   \]
-  \item \emph{biettiva} se è sia iniettiva sia suriettiva.
+  \item \textbf{Biettiva} se è sia iniettiva sia suriettiva.
 \end{itemize}
 \end{definizione}
 
-Per una biezione, dunque, l'equazione $f(x)=y$ ha esattamente una
-soluzione $x\in X$ per ogni $y\in Y$: la suriettività dà l'esistenza,
-l'iniettività dà l'unicità.
+\textbf{Esistenza e unicità delle soluzioni.} Per una biezione, l'equazione $f(x)=y$ ha esattamente una soluzione $x\in X$ per ogni $y\in Y$: la suriettività dà l'esistenza, l'iniettività dà l'unicità.
 
 \begin{esempio}
-La funzione $f\colon\R\to\R$, $f(x)=x^2$, non è iniettiva perché
-$f(1)=f(-1)=1$, e non è suriettiva perché non assume valori negativi.
-Se il codominio diventa $[0,+\infty)$, la funzione è suriettiva.
-Restringendo anche il dominio a $[0,+\infty)$ diventa biettiva.
-Dominio e codominio sono quindi parte essenziale della descrizione di
-una funzione.
+La stessa formula $f(x)=x^2$ dà funzioni con proprietà diverse secondo dominio e codominio:
+\begin{itemize}
+  \item $f\colon\R\to\R$ non è iniettiva, perché $f(1)=f(-1)=1$, e non è suriettiva, perché non assume valori negativi;
+  \item $f\colon\R\to[0,+\infty)$ è suriettiva;
+  \item $f\colon[0,+\infty)\to[0,+\infty)$ è biettiva.
+\end{itemize}
+Dominio e codominio sono parte essenziale della descrizione di una funzione.
 \end{esempio}
 
 \section{Composizione e suo dominio}
 % Fonte: Lezione 5, pp.~14--15
 
-Siano $f\colon X\to Y$ e $g\colon V\to Z$. Per calcolare $g(f(x))$
-occorre che il risultato della prima funzione appartenga al dominio
-della seconda. Poniamo pertanto
+Siano $f\colon X\to Y$ e $g\colon V\to Z$. Per calcolare $g(f(x))$ occorre che il risultato della prima funzione appartenga al dominio della seconda. Poniamo pertanto
 \[
 X'=\{x\in X:f(x)\in V\}.
 \]
@@ -72,11 +68,13 @@ La \emph{funzione composta} è
 g\circ f\colon X'\longrightarrow Z,\qquad
 (g\circ f)(x)=g(f(x)).
 \]
-Se $f(X)\subseteq V$, il dominio della composta è tutto $X$; se c'è
-soltanto un'intersezione non vuota fra $f(X)$ e $V$, la composta è
-definita sul sottoinsieme $X'$. In assenza di intersezione, $X'$ è vuoto.
-L'ordine di lettura è da destra verso sinistra: si applica prima $f$ e
-poi $g$.
+\textbf{Dominio della composta.}
+\begin{itemize}
+  \item Se $f(X)\subseteq V$, allora $X'=X$.
+  \item Se $f(X)\cap V\ne\varnothing$ ma $f(X)\nsubseteq V$, la composta è definita su un sottoinsieme proprio non vuoto $X'\subsetneq X$.
+  \item Se $f(X)\cap V=\varnothing$, allora $X'=\varnothing$.
+\end{itemize}
+\textbf{Ordine di applicazione.} Si legge da destra verso sinistra: prima $f$, poi $g$.
 
 \begin{schema}
 \begin{tikzpicture}[>=Stealth]
@@ -90,20 +88,19 @@ poi $g$.
 \end{schema}
 
 \begin{esempio}
-Prendiamo $f(x)=1+x^2$, con dominio $\R$, e $g(y)=\sqrt y$, con
-dominio $[0,+\infty)$. Si ottiene
+Prendiamo $f(x)=1+x^2$, con dominio $\R$, e $g(y)=\sqrt y$, con dominio $[0,+\infty)$.
+
+\textbf{Prima $g$, poi $f$.} Si ottiene
 \[
 (f\circ g)(x)=1+(\sqrt x)^2=1+x,
 \qquad \operatorname{dom}(f\circ g)=[0,+\infty),
 \]
-mentre
+\textbf{Prima $f$, poi $g$.} Si ottiene invece
 \[
 (g\circ f)(x)=\sqrt{1+x^2},
 \qquad \operatorname{dom}(g\circ f)=\R.
 \]
-La composizione, in generale, non è commutativa: qui differiscono sia
-le formule sia i domini. Anche quando una formula si semplifica, il
-dominio della composta resta quello imposto dalle operazioni originarie.
+La composizione, in generale, non è commutativa: qui differiscono sia le formule sia i domini. Anche quando una formula si semplifica, il dominio della composta resta quello imposto dalle operazioni originarie.
 \end{esempio}
 
 \section{Grafico, controimmagini e funzione inversa}
@@ -118,15 +115,15 @@ La \emph{controimmagine}, o \emph{fibra}, di $y\in Y$ è
 \[
 f^{-1}(\{y\})=\{x\in X:f(x)=y\}.
 \]
-Più in generale, per $B\subseteq Y$ si pone
-$f^{-1}(B)=\{x\in X:f(x)\in B\}$.
+Più in generale, per $B\subseteq Y$ si pone $f^{-1}(B)=\{x\in X:f(x)\in B\}$.
 \end{definizione}
 
-La controimmagine è un insieme ed è definita per ogni funzione. Se $f$
-è iniettiva, la fibra di un elemento $y\in\operatorname{Im}(f)$ contiene
-esattamente un elemento: non è vuota perché $y$ appartiene all'immagine,
-e non ne può contenere due per l'iniettività. Questo consente di
-definire una nuova funzione.
+\textbf{Dalla fibra all'inversa.} La controimmagine è un insieme ed è definita per ogni funzione. Se $f$ è iniettiva e $y\in\operatorname{Im}(f)$, la fibra contiene esattamente un elemento:
+\begin{itemize}
+  \item \textbf{Esistenza:} non è vuota perché $y$ appartiene all'immagine;
+  \item \textbf{Unicità:} non contiene due elementi distinti, per l'iniettività.
+\end{itemize}
+Si può quindi definire una nuova funzione.
 
 \begin{definizione}
 Se $f\colon X\to Y$ è iniettiva, la \emph{funzione inversa} è
@@ -136,10 +133,7 @@ f^{-1}\colon\operatorname{Im}(f)\longrightarrow X,
 \]
 \end{definizione}
 
-La scrittura $f^{-1}(y)$ indica qui un elemento, mentre
-$f^{-1}(\{y\})=\{f^{-1}(y)\}$ indica il corrispondente insieme con un
-solo elemento. Inoltre $f^{-1}$ non indica il reciproco $1/f$.
-L'inversa è definita sull'intero codominio $Y$ se $f$ è biettiva.
+\textbf{Notazioni da distinguere.} La scrittura $f^{-1}(y)$ indica un elemento, mentre $f^{-1}(\{y\})=\{f^{-1}(y)\}$ indica il corrispondente insieme con un solo elemento. Inoltre $f^{-1}$ non indica il reciproco $1/f$. L'inversa è definita sull'intero codominio $Y$ se $f$ è biettiva.
 
 \begin{proposizione}
 L'inversa di una funzione iniettiva soddisfa
@@ -147,18 +141,15 @@ L'inversa di una funzione iniettiva soddisfa
 f^{-1}\circ f=\operatorname{Id}_X,
 \qquad f\circ f^{-1}=\operatorname{Id}_{\operatorname{Im}(f)},
 \]
-dove $\operatorname{Id}_A\colon A\to A$, $a\mapsto a$, è la funzione
-identità su $A$.
+dove $\operatorname{Id}_A\colon A\to A$, $a\mapsto a$, è la funzione identità su $A$. Nella seconda identità si considera $f$ con codominio $\operatorname{Im}(f)$, così che coincidano anche i codomini delle due funzioni.
 \end{proposizione}
 \begin{proof}
-Per $x\in X$, l'unico elemento che $f$ manda in $f(x)$ è $x$ stesso;
-quindi $f^{-1}(f(x))=x$. Per $y\in\operatorname{Im}(f)$, la definizione
-di $f^{-1}(y)$ dà direttamente $f(f^{-1}(y))=y$.
+\textbf{Identità sul dominio.} Per $x\in X$, l'unico elemento che $f$ manda in $f(x)$ è $x$ stesso; quindi $f^{-1}(f(x))=x$.
+
+\textbf{Identità sull’immagine.} Per $y\in\operatorname{Im}(f)$, la definizione di $f^{-1}(y)$ dà direttamente $f(f^{-1}(y))=y$.
 \end{proof}
 
-Quando $X,Y\subseteq\R$, il punto $(x,y)$ appartiene al grafico di $f$
-se e solo se $(y,x)$ appartiene al grafico dell'inversa: i due grafici
-sono simmetrici rispetto alla bisettrice $y=x$.
+\textbf{Simmetria dei grafici.} Se $f$ è iniettiva e $X,Y\subseteq\R$, il punto $(x,y)$ appartiene al grafico di $f$ se e solo se $(y,x)$ appartiene al grafico dell'inversa: i due grafici sono simmetrici rispetto alla bisettrice $y=x$.
 
 \begin{schema}
 \begin{tikzpicture}[x=1cm,y=1cm]

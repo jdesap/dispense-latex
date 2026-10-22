@@ -1,0 +1,196 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 5, pp. 1--6.
+\section{Struttura e modelli}
+\subsection{Definizione e assiomi}
+
+\begin{definizione}
+Sia $K$ un campo. Uno \emph{spazio vettoriale su $K$} è un insieme non vuoto $V$ munito delle operazioni
+\[
+  +\colon V\times V\longrightarrow V,\quad (v,w)\longmapsto v+w,
+  \qquad
+  K\times V\longrightarrow V,\quad (\lambda,v)\longmapsto\lambda v,
+\]
+che, per ogni $u,v,w\in V$ e $\lambda,\mu\in K$, soddisfano:
+\begin{enumerate}[label=(\alph*)]
+  \item \emph{Associatività della somma:} $(u+v)+w=u+(v+w)$.
+  \item \emph{Commutatività della somma:} $u+v=v+u$.
+  \item \emph{Elemento neutro:} esiste $0_V\in V$ tale che $v+0_V=0_V+v=v$.
+  \item \emph{Opposto:} per ogni $v\in V$ esiste $-v\in V$ tale che $v+(-v)=0_V$.
+  \item \emph{Compatibilità con il prodotto in $K$:} $(\lambda\mu)v=\lambda(\mu v)$.
+  \item \emph{Distributività:} $(\lambda+\mu)v=\lambda v+\mu v$ e $\lambda(v+w)=\lambda v+\lambda w$.
+  \item \emph{Unità:} $1_Kv=v$.
+\end{enumerate}
+Gli elementi di $V$ si chiamano \emph{vettori}, quelli di $K$ \emph{scalari}.\footnote{Equivalentemente, $(V,+)$ è un gruppo abeliano e la moltiplicazione $K\times V\to V$ soddisfa le due distributività, la compatibilità con il prodotto in $K$ e l'identità $1_Kv=v$.}
+\end{definizione}
+
+\textbf{Tipi delle operazioni.} La somma combina due vettori; il prodotto per scalare combina uno scalare e un vettore. Entrambe le operazioni hanno risultato in $V$: la chiusura è espressa dai rispettivi codomini. In $(\lambda\mu)v=\lambda(\mu v)$, il prodotto $\lambda\mu$ è quello del campo $K$; le due distributività riguardano, rispettivamente, la somma degli scalari e quella dei vettori.
+
+\textbf{Proprietà derivate.} Dagli assiomi seguono:
+\begin{itemize}
+  \item unicità del vettore nullo e dell'opposto di ciascun vettore;
+  \item $0_Kv=0_V$ e $\lambda0_V=0_V$ per ogni $v\in V$ e $\lambda\in K$;
+  \item $(-1_K)v=-v$. La sottrazione è definita da $v-w=v+(-w)$.
+\end{itemize}
+\begin{proof}[Verifica delle proprietà]
+\textbf{Unicità.} Se $e,e'$ sono elementi neutri, allora $e=e+e'=e'$. Se $v+a=v+b=0_V$, sommando un opposto di $v$ e usando l'associatività si ottiene $a=b$.
+
+\textbf{Prodotti nulli e opposto.} Per distributività,
+\[
+  0_Kv=(0_K+0_K)v=0_Kv+0_Kv;
+\]
+sottraendo $0_Kv$ si ricava $0_Kv=0_V$. Analogamente, $\lambda0_V=\lambda(0_V+0_V)=\lambda0_V+\lambda0_V$ implica $\lambda0_V=0_V$. Infine,
+\[
+  v+(-1_K)v=(1_K-1_K)v=0_Kv=0_V,
+\]
+quindi $(-1_K)v$ è l'opposto di $v$.
+\end{proof}
+
+\subsection{Esempi di spazi vettoriali}
+
+\begin{itemize}
+  \item \textbf{Vettori geometrici del piano, su $\R$.} Un vettore non nullo è rappresentato da segmenti orientati con la stessa direzione, lo stesso verso e la stessa lunghezza; il vettore nullo da un segmento con estremi coincidenti. La \emph{regola del triangolo} definisce la somma: si trasla il secondo rappresentante in modo che inizi dove termina il primo e si congiunge il punto iniziale al punto finale. Il prodotto $\lambda v$ modifica la lunghezza di un fattore $|\lambda|$ e, se $\lambda<0$, inverte il verso. Per distributività e unità, $v+v=(1+1)v=2v$.
+\begin{schema}
+\begin{tikzpicture}[scale=.8]
+  \coordinate (O) at (0,0); \coordinate (A) at (2.5,.35);
+  \coordinate (B) at (3.35,1.65);
+  \draw[vettore] (O)--(A) node[midway,below] {$v$};
+  \draw[vettore] (A)--(B) node[midway,right] {$w$};
+  \draw[vettore] (O)--(B) node[midway,above left] {$v+w$};
+  \fill (O) circle (1pt) node[below left] {$O$};
+\end{tikzpicture}
+\end{schema}
+
+  \item \textbf{Campi.} $K$ è uno spazio vettoriale su se stesso con le proprie operazioni. Se $K\subseteq L$ è un sottocampo, $L$ è uno spazio vettoriale su $K$: vettori in $L$, scalari in $K$, operazioni ereditate da $L$. Esempi: $\R$ su $\Q$ e $\C$ su $\R$.\footnote{Basta l'inclusione tra campi; per questo esempio non occorre costruire i numeri complessi.}
+
+  \item \textbf{Coordinate: $K^m$, con $m\ge1$.} Le operazioni sono definite componente per componente:
+  \begin{align*}
+    (a_1,\ldots,a_m)+(b_1,\ldots,b_m)&=(a_1+b_1,\ldots,a_m+b_m),\\
+    \lambda(a_1,\ldots,a_m)&=(\lambda a_1,\ldots,\lambda a_m).
+  \end{align*}
+  Il vettore nullo è $(0_K,\ldots,0_K)$ e l'opposto di $(a_1,\ldots,a_m)$ è $(-a_1,\ldots,-a_m)$. Le componenti possono essere disposte in riga o in colonna, mantenendo coerente la convenzione. Gli assiomi si verificano in ciascuna componente; per esempio, $\lambda(u_i+v_i)=\lambda u_i+\lambda v_i$.
+
+  \item \textbf{Polinomi: $K[x]$.} Per $p(x)=\sum_{i=0}^r a_ix^i$ e $q(x)=\sum_{i=0}^s b_ix^i$, si estende con zeri la lista di coefficienti più corta e si pone
+  \[
+    (p+q)(x)=\sum_i(a_i+b_i)x^i,\qquad
+    (\lambda p)(x)=\sum_i(\lambda a_i)x^i.
+  \]
+  Il polinomio nullo ha tutti i coefficienti nulli. Non si impone un grado massimo: somma e prodotto per scalare restano polinomi.
+
+  \item \textbf{Funzioni $\R\to\R$, su $\R$.} Le operazioni sono definite punto per punto:
+  \[
+    (f+g)(x)=f(x)+g(x),\qquad (\lambda f)(x)=\lambda f(x).
+  \]
+  Gli assiomi seguono da quelli dei reali, valutando in ogni $x\in\R$; per esempio,
+  \[
+    ((f+g)+h)(x)=(f(x)+g(x))+h(x)=f(x)+(g(x)+h(x)).
+  \]
+  Il vettore nullo è la funzione costantemente nulla, distinta dal numero $0$ considerato isolatamente.
+\end{itemize}
+
+\section{Sottospazi}
+
+\begin{definizione}
+Un sottoinsieme $W\subseteq V$ è un \emph{sottospazio vettoriale} se, con le operazioni indotte da $V$, è uno spazio vettoriale sullo stesso campo $K$.
+\end{definizione}
+
+\begin{osservazione}[Criterio di sottospazio]
+$W\subseteq V$ è un sottospazio se e solo se:
+\begin{enumerate}[label=(\alph*)]
+  \item $W\ne\varnothing$;
+  \item $u+v\in W$ per ogni $u,v\in W$;
+  \item $\lambda w\in W$ per ogni $w\in W$ e $\lambda\in K$.
+\end{enumerate}
+Equivalentemente, si può richiedere $W\ne\varnothing$ e
+\[
+  \lambda u+\mu v\in W\qquad\forall u,v\in W,\quad\forall\lambda,\mu\in K.
+\]
+\end{osservazione}
+\begin{proof}
+\passomath{\Rightarrow} Uno spazio vettoriale è non vuoto e le sue operazioni hanno risultato nello spazio stesso.
+
+\passomath{\Leftarrow} Scelto $w\in W$, la chiusura per scalari dà $0_Kw=0_V\in W$. Per ogni $v\in W$ dà anche $(-1_K)v=-v\in W$. La chiusura rende quindi le due operazioni interne a $W$, che contiene il neutro e gli opposti; gli altri assiomi sono ereditati da $V$.
+
+\textbf{Forma equivalente.} Le due chiusure implicano quella per $\lambda u+\mu v$. Viceversa, ponendo $(\lambda,\mu)=(1_K,1_K)$ si ottiene la chiusura per somma; ponendo $(\lambda,\mu)=(\lambda,0_K)$ si ottiene quella per prodotto per scalare.
+\end{proof}
+
+\begin{esempio}[Rette nel piano]
+\leavevmode
+\begin{itemize}
+  \item $\boldsymbol{a+b=1}$. Non contiene $(0,0)$, quindi non è un sottospazio. Fallisce anche la chiusura per somma: $(1,0)$ e $(0,1)$ soddisfano l'equazione, mentre $(1,1)$ no.
+  \item $\boldsymbol{a+b=0}$. Contiene $(0,0)$ ed è un sottospazio: se $a+b=c+d=0$, allora $(a+c)+(b+d)=0$ e $\lambda a+\lambda b=\lambda(a+b)=0$.
+\end{itemize}
+La seconda retta passa per l'origine; la prima è una sua parallela traslata.
+\end{esempio}
+\begin{schema}
+\begin{tikzpicture}[scale=.72]
+  \draw[asse] (-2.2,0)--(2.4,0) node[right] {$a$};
+  \draw[asse] (0,-1.9)--(0,2.2) node[above] {$b$};
+  \draw[coloreschema,thick] (-1.8,1.8)--(1.8,-1.8)
+    node[below right] {$a+b=0$};
+  \draw[coloreschema!60,dashed,thick] (-1.1,2.1)--(2.1,-1.1)
+    node[below right] {$a+b=1$};
+  \fill (0,0) circle (1.4pt) node[below left] {$0$};
+  \fill (0,1) circle (1.4pt);
+  \fill (1,0) circle (1.4pt);
+\end{tikzpicture}
+\end{schema}
+
+\begin{esempio}[Primo quadrante]
+L'insieme $\{(a,b)\in\R^2:a\ge0,\ b\ge0\}$ contiene lo zero ed è chiuso per somma, perché lo è la condizione di non negatività di ciascuna coordinata. Non è un sottospazio: $-1\cdot(1,0)=(-1,0)$ esce dall'insieme.
+\end{esempio}
+
+\begin{esercizio}[Una condizione non lineare]
+L'insieme $W=\{(a,b)\in\R^2:a^2-2b=0\}$ contiene lo zero, ma non è un sottospazio.
+
+\textbf{Chiusura per somma.} Per $(a_i,b_i)\in W$, con $i=1,2$, si ha
+\[
+  (a_1+a_2)^2-2(b_1+b_2)=2a_1a_2,
+\]
+che non è sempre nullo.
+
+\textbf{Controesempio.} $(1,\tfrac12)\in W$, ma $(1,\tfrac12)+(1,\tfrac12)=(2,1)\notin W$, perché $2^2-2\cdot1=2\ne0$. Lo stesso esempio esclude la chiusura per il prodotto per $2$. Geometricamente, $b=a^2/2$ è una parabola.
+\end{esercizio}
+
+\subsection{Intersezioni e unioni}
+
+\begin{proposizione}
+Se $U,W$ sono sottospazi di $V$, allora $U\cap W$ è un sottospazio.
+\end{proposizione}
+\begin{proof}
+Il vettore nullo appartiene a entrambi, quindi l'intersezione è non vuota. Se $u,v\in U\cap W$ e $\lambda,\mu\in K$, la combinazione $\lambda u+\mu v$ appartiene sia a $U$ sia a $W$, per la chiusura di ciascuno. Il criterio di sottospazio conclude la prova.
+\end{proof}
+
+\begin{esempio}[L'unione può non essere un sottospazio]
+In $\R^2$ siano $U=\{(a,0):a\in\R\}$ e $W=\{(0,b):b\in\R\}$. La somma di $(1,0)\in U$ e $(0,1)\in W$ è $(1,1)\notin U\cup W$: l'unione non è chiusa per somma.
+\end{esempio}
+\begin{schema}
+\begin{tikzpicture}[scale=.68]
+  \draw[asse] (-2.5,0)--(2.8,0) node[right] {$U$};
+  \draw[asse] (0,-2)--(0,2.5) node[above] {$W$};
+  \draw[vettore] (0,0)--(1.45,0) node[below] {$(1,0)$};
+  \draw[vettore] (0,0)--(0,1.4) node[left] {$(0,1)$};
+  \draw[vettore] (0,0)--(1.45,1.4) node[right] {$(1,1)$};
+  \draw[dashed,black!45] (1.45,0)--(1.45,1.4)--(0,1.4);
+\end{tikzpicture}
+\end{schema}
+
+Ogni sottospazio che contiene entrambi gli assi deve contenere tutte le somme $u+w$, con $u\in U$ e $w\in W$, e quindi tutto il piano. Questo porta alla nozione di combinazione lineare.
+
+\section{Generatori e sottospazio generato}
+\subsection{Combinazioni lineari e insiemi di generatori}
+
+\begin{definizione}
+Una \emph{combinazione lineare} di $v_1,\ldots,v_n\in V$ è un vettore della forma $\lambda_1v_1+\cdots+\lambda_nv_n$, con $\lambda_i\in K$. Un insieme $S\subseteq V$ è un \emph{insieme di generatori} di $V$ se ogni vettore di $V$ è una combinazione lineare finita di elementi di $S$.
+\end{definizione}
+
+\textbf{Finitezza.} Si ammettono coefficienti nulli e ripetizioni. Anche se $S$ è infinito, ogni combinazione usa soltanto un numero finito di suoi elementi; la scelta e il numero dei vettori possono dipendere dal vettore da rappresentare. Le operazioni impiegate assicurano che il risultato appartenga a $V$.
+
+\begin{esempio}[Generatori del piano]
+Per $e_1=(1,0)$ ed $e_2=(0,1)$ si ha
+\[
+  ae_1+be_2=a(1,0)+b(0,1)=(a,0)+(0,b)=(a,b).
+\]
+Quindi $\{e_1,e_2\}$ genera $\R^2$: la somma dei due assi dà anche i punti esterni alla loro unione.
+\end{esempio}
+
+\textbf{Insieme vuoto.} La combinazione lineare vuota vale per convenzione $0_V$. Pertanto l'insieme vuoto genera soltanto lo spazio $\{0_V\}$.

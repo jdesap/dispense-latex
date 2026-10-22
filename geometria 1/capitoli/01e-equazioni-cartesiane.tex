@@ -1,0 +1,47 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 10, p. 1.
+% Continua la sezione sulle basi di sottospazi di R^4.
+
+\subsection{Da una base alle equazioni cartesiane}
+
+Una base $u_1,\ldots,u_r$ di $U\subseteq K^m$ fornisce la descrizione \emph{parametrica}
+\[
+  U=\{a_1u_1+\cdots+a_ru_r:a_1,\ldots,a_r\in K\}.
+\]
+Gli scalari $a_i$ sono i \emph{parametri}. Le equazioni \emph{cartesiane} impongono condizioni alle sole coordinate: si ottengono eliminando i parametri e verificando che le condizioni siano sia necessarie sia sufficienti.
+
+\begin{esercizio}
+Scrivere le equazioni del sottospazio $U\subseteq\R^4$ generato da
+\[
+  v_1=(1,-1,0,2),\quad v_2=(-1,-3,2,0),\quad v_3=(2,0,-1,3).
+\]
+\end{esercizio}
+
+\begin{svolgimento}
+\textbf{Descrizione parametrica.} Dalla relazione $v_2=3v_1-2v_3$ si usa la base $(v_1,v_3)$. Si ha $x\in U$ se e solo se esistono $a_1,a_2\in\R$ tali che
+\[
+  x=a_1(1,-1,0,2)+a_2(2,0,-1,3),\qquad
+  \begin{cases}
+    x_1=a_1+2a_2,\\
+    x_2=-a_1,\\
+    x_3=-a_2,\\
+    x_4=2a_1+3a_2.
+  \end{cases}
+\]
+
+\textbf{Condizioni necessarie.} La seconda e la terza equazione danno $a_1=-x_2$ e $a_2=-x_3$. Sostituendo nelle altre si ricava il sistema omogeneo
+\[
+  \begin{cases}
+    x_1+x_2+2x_3=0,\\
+    2x_2+3x_3+x_4=0.
+  \end{cases}
+\]
+
+\textbf{Condizioni sufficienti.} Se $x$ soddisfa il sistema, scegliamo $a_1=-x_2$ e $a_2=-x_3$. Allora
+\[
+  a_1v_1+a_2v_3=(-x_2-2x_3,\ x_2,\ x_3,\ -2x_2-3x_3)
+  =(x_1,x_2,x_3,x_4).
+\]
+Pertanto $x\in U$: il sistema caratterizza esattamente il sottospazio.
+\end{svolgimento}
+

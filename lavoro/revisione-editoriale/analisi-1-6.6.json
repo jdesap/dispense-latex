@@ -1,0 +1,37 @@
+{
+  "data": "2026-10-22",
+  "materia": "analisi 1",
+  "sezione": "6.6",
+  "titolo": "6.6 Restrizioni invertibili e arcoseno",
+  "stato": "completata; verifica matematica e visiva eseguite",
+  "nota": "Ramo invertibile, definizione e identità distinti. Verificati intervalli chiusi, monotonia, disparità e controesempio al di fuori del ramo; due grafici preservati.",
+  "pagine_volume": 54,
+  "pagine_fisiche_ispezione": [
+    40,
+    40
+  ],
+  "avvisi_latex": [],
+  "estratti_identici_al_volume": true,
+  "pdf_sha256": "fb58921b2583fcfdf878a9725aa819f52971afd21dabf5ed6d655e90d523adc4",
+  "sorgenti_sha256": {
+    "main.tex": "4cbcfc0167e388d0248e64796c9e3bc5442ef17a582c31d26faeb8ff5f7b7864",
+    "preambolo.tex": "ead5f5487e3fb644173565378c4d58f2e30caac12f39118c343abda32db75d66",
+    "capitoli/01-logica.tex": "4b3b55b075816877556fb022cc2b63b6b4c213f9679cabfcdb14e7f24e7bc376",
+    "capitoli/02-insiemi-e-relazioni.tex": "a1c8c20957ff2970a847b3a63cca629e65679597df0863b453d47b0e8e0c60c4",
+    "capitoli/03-numeri-naturali-e-combinatoria.tex": "ac0c9f5749fbe4275c4478140df652e42226d1cc2eaa9e7e9ef6930a6ddbd354",
+    "capitoli/04-numeri-reali-e-completezza.tex": "2bfe80f1d4148e3e6056208d1f90346e17a41f5b6ca907832eaba8d3dc5faecc",
+    "capitoli/04a-reali-e-completezza.tex": "e87e7890f6a4ddfb4e1d3b6e4300fa498ec621f0c231b14c9c6ac20389573deb",
+    "capitoli/04b-intervalli-ed-estremi.tex": "2837a80c2957c60482fcb5583ec318bfe66d10958df055aae402cba06725bd9e",
+    "capitoli/04c-archimede-ed-esempi.tex": "6fbdd1419f5d580a0773935b2c9060d0f18c042171deaaa0aa118139cb8d6cb8",
+    "capitoli/05-funzioni.tex": "d77f146b94c3ec9ed181ea9c23df8080efaa60675abe1c770a5356370dedc39d",
+    "capitoli/05a-funzioni-reali.tex": "89b95f94bdb1860f94619276ec5fef5382984182e68767c2ed13a1c9e40fb317",
+    "capitoli/06-funzioni-elementari.tex": "53631c18d7c0dbc3879a1936a4ade9e422c920f80078b2499caee26b11144c13",
+    "capitoli/06a-potenze-e-radici.tex": "b28c95b10de1544ac263e5e70d8e1c4fdcc5f72354ed44502d891d9256485a3d",
+    "capitoli/06b-modulo-e-distanza.tex": "f4239a9795ea2424a24b0b0fe16b666e9b1204917bd0802bafd2c92a1b0db76c",
+    "capitoli/06c-trigonometria.tex": "6b297f052c81cdb209fffe8ee5a82d87af502d664d3eddfd7fb0be22f06b9e47",
+    "capitoli/06d-esponenziali-e-iperboliche.tex": "de7716947680c7e61477f98c883c8f96646e2d7d35511d266e5d4471de839b44",
+    "capitoli/06e-funzioni-a-tratti-e-grafici.tex": "d686210c5f0b393fb1833c009373e89a380167c307451c6eb1aa20ded179220a",
+    "capitoli/07-topologia.tex": "c856193fe2e367fa9f7d4f864e39bcc1186eb665baf55f3673cb2af0695fd33f",
+    "capitoli/07a-introduzione.tex": "35433b3df6259dbed116a2f9ea12ea80fb86b63cfedba675ca50542f0d063490"
+  }
+}

@@ -1,0 +1,198 @@
+% !TeX root = ../main.tex
+% Fonti: Lezione 11_12, pp. 1--6; richiami a Lezioni 5 e 9--10.
+\chapter{Somme, formula di Grassmann e complementi}
+\fonti{Lezioni 11 e 12}
+
+\section{Somma di sottospazi}
+\begin{definizione}
+Per due sottospazi $U,W\subseteq V$, la loro \emph{somma} è
+\[
+U+W=\{u+w:u\in U,\ w\in W\}.
+\]
+È il più piccolo sottospazio che contiene $U\cup W$.
+\end{definizione}
+Infatti $0_V=0_U+0_W$ è nella somma e
+$(u_1+w_1)+(u_2+w_2)=(u_1+u_2)+(w_1+w_2)$ vi appartiene;
+lo stesso vale per il prodotto per scalari. La somma contiene
+$U$ e $W$ perché si può aggiungere $0_V$; qualunque sottospazio
+che li contenga contiene anche tutte le somme $u+w$. In generale
+$U+W$ è più grande dell'unione: gli assi di $\R^2$ hanno somma
+$\R^2$, mentre la loro unione contiene soltanto i due assi.
+
+\section{La formula di Grassmann}
+\begin{teorema}[formula di Grassmann]
+Se $U$ e $W$ sono sottospazi di dimensione finita, allora
+\[
+\dim(U+W)=\dim U+\dim W-\dim(U\cap W).
+\]
+\end{teorema}
+\begin{proof}
+Sia $v_1,\ldots,v_r$ una base di $U\cap W$. Completiamola
+rispettivamente a basi
+\[
+v_1,\ldots,v_r,u_1,\ldots,u_s\quad\text{di }U,
+\qquad
+v_1,\ldots,v_r,w_1,\ldots,w_t\quad\text{di }W.
+\]
+La famiglia unita
+$v_1,\ldots,v_r,u_1,\ldots,u_s,w_1,\ldots,w_t$
+genera $U+W$: ogni $u+w$ si ottiene espandendo $u$ e $w$ nelle
+rispettive basi. Mostriamo che è indipendente. Supponiamo
+\[
+\sum_i\alpha_i v_i+\sum_j\beta_j u_j+
+\sum_k\gamma_k w_k=0_V.
+\]
+Spostando l'ultima somma a destra, il membro sinistro appartiene
+a $U$ e il destro a $W$, quindi il loro valore comune appartiene
+a $U\cap W$. Esistono perciò $\delta_i$ con
+$-\sum_k\gamma_k w_k=\sum_i\delta_i v_i$. L'indipendenza della
+base di $W$ impone $\gamma_k=\delta_i=0$. La relazione iniziale
+si riduce a $\sum_i\alpha_i v_i+\sum_j\beta_j u_j=0$, e la base
+di $U$ impone anche $\alpha_i=\beta_j=0$.
+La famiglia unita è dunque una base di $U+W$, che ha dimensione
+$r+s+t$. Poiché $\dim U=r+s$, $\dim W=r+t$ e
+$\dim(U\cap W)=r$, la formula segue.
+\end{proof}
+
+\section{Complementi e somma diretta}
+\begin{definizione}
+La somma $U+W$ si dice \emph{diretta}, e si scrive $U\oplus W$,
+se $U\cap W=\{0_V\}$. Un \emph{complementare} di $U$ in $V$
+è un sottospazio $W$ tale che $V=U\oplus W$.
+\end{definizione}
+La condizione di somma diretta equivale all'unicità della
+scomposizione $v=u+w$. Se $u+w=u'+w'$, allora
+$u-u'=w'-w\in U\cap W$; quando l'intersezione è nulla,
+$u=u'$ e $w=w'$. Viceversa, un vettore non nullo nell'intersezione
+avrebbe due scomposizioni, $x=x+0_V=0_V+x$.
+
+In dimensione finita un complementare esiste sempre: si estende
+una base di $U$ a una base di $V$ e si prende il sottospazio
+generato dai vettori aggiunti. Esso non è in generale unico.
+Per esempio, per l'asse orizzontale di $\R^2$ sono complementari
+sia l'asse verticale sia ogni altra retta per l'origine distinta
+dall'asse orizzontale.
+\begin{schema}
+\begin{tikzpicture}[scale=.7]
+  \draw[asse] (-3,0)--(3.2,0) node[right] {$U$};
+  \draw[spazio] (0,-2)--(0,2) node[above] {$W_1$};
+  \draw[spazio] (-1.8,-1.8)--(1.8,1.8) node[above right] {$W_2$};
+  \fill (0,0) circle (1.4pt);
+\end{tikzpicture}
+\end{schema}
+
+\section{Un esercizio in \texorpdfstring{$\R^5$}{R5}}
+\begin{esercizio}
+Sia $V\subseteq\R^5$ l'iperpiano
+$x_1+x_2+x_3+x_4+x_5=0$ e sia $U$ generato da
+\begin{align*}
+u_1&=(3,0,1,-2,-2),\\
+u_2&=(1,-2,3,-1,-1),\\
+u_3&=(3,6,-7,-1,-1).
+\end{align*}
+Si cercano una base e le equazioni cartesiane di $U$, un
+complementare di $U$ in $V$ e un sottospazio $Z\subseteq\R^5$
+di dimensione $3$ che intersechi $U$ e il complementare in
+sottospazi di dimensione $1$.
+
+Per prima cosa i tre generatori appartengono a $V$, perché la
+somma delle coordinate di ciascuno è zero. Risolvendo
+$\alpha_1u_1+\alpha_2u_2+\alpha_3u_3=0$, la seconda
+coordinata dà $\alpha_2=3\alpha_3$ e la terza, insieme alla
+prima, dà $\alpha_1=-2\alpha_3$. Quindi
+\[
+-2u_1+3u_2+u_3=0,
+\qquad u_3=2u_1-3u_2.
+\]
+I vettori $u_1,u_2$ sono indipendenti: la seconda coordinata
+di $a u_1+b u_2=0$ dà $b=0$ e la terza dà $a=0$.
+Pertanto $(u_1,u_2)$ è una base di $U$ e $\dim U=2$.
+La stessa relazione si può ottenere eliminando le righe della
+matrice aumentata
+\[
+\left(\begin{array}{rrrrr|rrr}
+3&0&1&-2&-2&1&0&0\\
+1&-2&3&-1&-1&0&1&0\\
+3&6&-7&-1&-1&0&0&1
+\end{array}\right).
+\]
+Le operazioni $R_2\leftarrow R_1-3R_2$ e
+$R_3\leftarrow R_3-R_1$ producono nella parte sinistra due
+righe uguali $(0,6,-8,1,1)$; sottraendole, la riga nulla
+porta nella parte destra i coefficienti $(-2,3,1)$.
+
+Per le equazioni cartesiane scriviamo
+$x=\lambda_1u_1+\lambda_2u_2$:
+\[
+\begin{array}{lll}
+x_1=3\lambda_1+\lambda_2,&x_2=-2\lambda_2,&
+x_3=\lambda_1+3\lambda_2,\\
+x_4=-2\lambda_1-\lambda_2,&
+x_5=-2\lambda_1-\lambda_2.&
+\end{array}
+\]
+Da $\lambda_2=-x_2/2$ e
+$\lambda_1=x_3+3x_2/2$ segue
+\[
+\boxed{\quad x_1-4x_2-3x_3=0,\qquad
+2x_4+5x_2+4x_3=0,\qquad x_5-x_4=0.\quad}
+\]
+Queste tre equazioni sono anche sufficienti: dati $x_2,x_3$,
+fissano $x_1,x_4,x_5$ esattamente come la parametrizzazione.
+
+Per costruire un complementare in $V$ scegliamo
+$w_1=(1,0,0,0,-1)$ e $w_2=(0,1,0,-1,0)$.
+Entrambi sono in $V$. Verifichiamo l'indipendenza di
+$u_1,u_2,w_1,w_2$: se
+$a u_1+b u_2+c w_1+d w_2=0$, la terza coordinata dà
+$a=-3b$, la seconda $d=2b$ e la quarta
+$-2a-b-d=0$, cioè $3b=0$. Quindi $a=b=c=d=0$.
+Poiché $V$ ha dimensione $4$ (una coordinata si ricava dalle
+altre quattro), questi quattro vettori ne formano una base.
+Dunque $W=\langle w_1,w_2\rangle$ soddisfa
+$V=U\oplus W$.
+
+Infine prendiamo
+$Z=\langle u_1,w_1,e_1\rangle$, con
+$e_1=(1,0,0,0,0)$. I tre vettori sono indipendenti:
+in $a u_1+b w_1+c e_1=0$ la terza coordinata impone $a=0$,
+la quinta $b=0$ e la prima $c=0$. Quindi $\dim Z=3$.
+Ogni vettore di $Z$ ha seconda coordinata nulla. Se appartiene
+a $U=\langle u_1,u_2\rangle$, il coefficiente di $u_2$ è
+forzato a zero; pertanto $Z\cap U=\langle u_1\rangle$.
+Se appartiene a $W=\langle w_1,w_2\rangle$, il coefficiente
+di $w_2$ è zero; pertanto $Z\cap W=\langle w_1\rangle$.
+In entrambi i casi la dimensione è $1$.
+\end{esercizio}
+
+\section{Equazioni di polinomi in basi diverse}
+\begin{esercizio}
+Sia $V=\R[x]_{\leq3}$ e
+$W=\{p\in V:p(1)=p(2)=0\}$. Nella base monomiale
+$(1,x,x^2,x^3)$, un polinomio
+$p(x)=x_0+x_1x+x_2x^2+x_3x^3$ appartiene a $W$ se e
+solo se le sue coordinate soddisfano
+\[
+x_0+x_1+x_2+x_3=0,\qquad
+x_0+2x_1+4x_2+8x_3=0.
+\]
+Le due equazioni sono indipendenti, quindi $\dim W=2$.
+Si può anche vedere direttamente che
+$p(x)=(x-1)(x-2)(a+bx)$, con $a,b\in\R$.
+
+Consideriamo ora la base
+$(1,\,1-x,\,x-x^2,\,x^2-x^3)$ e scriviamo
+\[
+p(x)=y_0+y_1(1-x)+y_2(x-x^2)+y_3(x^2-x^3).
+\]
+È una base perché il passaggio alle coordinate monomiali ha
+matrice triangolare con diagonale $(1,-1,-1,-1)$, quindi
+invertibile. Valutando direttamente si ottiene
+$p(1)=y_0$ e $p(2)=y_0-y_1-2y_2-4y_3$. Le equazioni
+cartesiane di $W$ nelle nuove coordinate sono dunque
+\[
+y_0=0,\qquad y_0-y_1-2y_2-4y_3=0.
+\]
+L'insieme dei polinomi è lo stesso: cambiano le coordinate e
+perciò cambia la forma delle equazioni.
+\end{esercizio}

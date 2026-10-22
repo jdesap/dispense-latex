@@ -1,6 +1,13 @@
 # Appunti di analisi 1
 
 Appunti di **Jude De Sa'Pinto** dal corso del **Prof. Federico Cacciafesta**.
+Revisione editoriale integrale conclusa il 22 ottobre 2026: 54 pagine,
+sette capitoli. Resoconto e limiti del controllo in
+`../lavoro/revisione-editoriale/RESOCONTO_FINALE.md`.
+Gli stili a colori, il rientro delle prove e le spaziature si regolano nel
+blocco **STILE MATEMATICO** di `preambolo.tex`, dalla riga 49. I parametri
+e gli ultimi controlli sono descritti in
+`../lavoro/revisione-editoriale/SESSIONE_12.md`.
 Il documento è organizzato per argomenti. I numeri delle lezioni di
 provenienza sono indicati soltanto sotto i titoli dei sette capitoli.
 I riferimenti precisi alle pagine restano nei commenti TeX e nel registro
@@ -15,11 +22,14 @@ di copertura, esclusi dal PDF.
 - `fonti/manifest.json`: inventario e impronte delle fonti.
 - `lavoro/SESSIONI.md`: avanzamento, piano delle sessioni e controlli.
 - `lavoro/COPERTURA.csv`: corrispondenza tra pagine delle fonti e contenuti.
+- `lavoro/REVISIONE_MATEMATICA_2026-10-21.md`: correzioni, controlli
+  matematici effettuati e limiti della revisione.
 - `build/`: PDF compilato e file temporanei, separati dai sorgenti.
 
 I file di `lavoro/` e il manifest delle fonti non sono inclusi nel PDF.
 Il frontespizio mantiene il titolo, il nome del docente e il campo autore
-richiesti. L'indice contiene argomenti e sottargomenti, senza una divisione
+richiesti. L'indice contiene capitoli e sezioni principali; le sottosezioni
+restano nel testo e nei segnalibri, senza una divisione
 in capitoli denominati «Lezione 1», «Lezione 2», ecc.
 
 ## Compilare e leggere
@@ -38,6 +48,15 @@ latexmk main.tex
 Il risultato è `build/main.pdf`. `latexmk` esegue anche i passaggi necessari
 ad aggiornare indice e collegamenti. I commenti `TeX root` permettono di
 compilare il documento principale anche mentre si modifica un capitolo.
+
+La stessa compilazione, anche con Salva/Build in VS Code, esporta
+automaticamente i sette capitoli in `build/capitoli/`, con nomi tematici.
+I nuovi capitoli saranno riconosciuti senza configurazioni aggiuntive.
+Gli estratti mantengono impaginazione, numeri di pagina e segnalibri
+del volume; possono essere importati singolarmente in Goodnotes.
+Le copie annotate restano separate dai file generati. Se viene riscritto
+un capitolo, il PDF aggiornato non riallinea automaticamente le annotazioni
+già fatte nella vecchia versione.
 
 ## Aggiornare gli appunti
 

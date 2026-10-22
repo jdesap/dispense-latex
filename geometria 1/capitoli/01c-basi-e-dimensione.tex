@@ -1,0 +1,65 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 8, pp. 1--3.
+
+\section{Dimensione e teorema dello scambio}
+
+\subsection{Spazi finitamente generati}
+
+\begin{definizione}
+Uno spazio vettoriale è \emph{finitamente generato} se possiede un insieme finito di generatori.
+\end{definizione}
+
+\textbf{Esistenza di una base finita.} Da una famiglia finita di generatori si elimina, finché possibile, un vettore che sia combinazione degli altri. Il criterio di dipendenza garantisce che i vettori rimasti generino ancora $V$. La cardinalità diminuisce a ogni passo: il procedimento termina con una famiglia libera di generatori, quindi con una base.
+
+\begin{esempio}[$K^m$ è finitamente generato]
+I vettori coordinati $e_1=(1,0,\ldots,0),\ldots,e_m=(0,\ldots,0,1)$ generano $K^m$, perché
+\[
+  (a_1,\ldots,a_m)=a_1e_1+\cdots+a_me_m.
+\]
+La definizione richiede l'esistenza di un insieme finito di generatori; ammette che lo spazio abbia anche insiemi infiniti di generatori.
+\end{esempio}
+
+\begin{esempio}[Polinomi di grado arbitrario]
+Supponiamo che $p_1,\ldots,p_n$ generino $K[x]$. Non possono essere tutti nulli, perché devono generare il polinomio $1$. Sia quindi $d$ il massimo dei gradi dei polinomi non nulli della famiglia. Somma e prodotto per scalare non aumentano questo limite: ogni combinazione è nulla oppure ha grado al più $d$. Il polinomio $x^{d+1}$ non si può ottenere, contro l'ipotesi di generazione.
+\end{esempio}
+
+\subsection{Teorema dello scambio}
+
+L'idea è sostituire progressivamente alcuni generatori con i vettori indipendenti, mantenendo invariato il sottospazio generato.
+
+\begin{teorema}[dello scambio]
+Se $v_1,\ldots,v_m$ generano $V$ e $w_1,\ldots,w_r$ sono linearmente indipendenti in $V$, allora $r\leq m$.
+\end{teorema}
+\begin{proof}
+\textbf{Casi vuoti.} Per $r=0$ la tesi è immediata. Se $m=0$, allora $V=\{0_V\}$ e l'unica famiglia indipendente è quella vuota: $r=0$. Supponiamo $m,r\ge1$.
+
+\textbf{Prima sostituzione.} Scriviamo $w_1=\sum_{i=1}^m\lambda_iv_i$. Poiché $w_1\ne0_V$, almeno un coefficiente è non nullo. Riordinando i generatori possiamo supporre $\lambda_m\ne0_K$ e ricavare
+\[
+  v_m=\lambda_m^{-1}\left(w_1-\sum_{i=1}^{m-1}\lambda_i v_i\right).
+\]
+La famiglia $w_1,v_1,\ldots,v_{m-1}$ genera ancora $V$: ogni vecchio generatore è esprimibile mediante i nuovi.
+
+\textbf{Passo generale: conservare la generazione.} Dopo $j-1$ sostituzioni, conserviamo $w_1,\ldots,w_{j-1}$ e $m-j+1$ vecchi generatori, ancora sufficienti a generare $V$. Per $j\le\min\{r,m\}$ esprimiamo $w_j$ mediante questa famiglia. Almeno un coefficiente dei vecchi generatori è non nullo: altrimenti $w_j$ sarebbe combinazione dei $w_i$ precedenti, contro l'indipendenza. Isolando il vecchio generatore corrispondente lo sostituiamo con $w_j$, senza perdere la generazione.
+
+\textbf{Conclusione.} Se $r>m$, dopo $m$ sostituzioni i soli $w_1,\ldots,w_m$ genererebbero $V$. Anche $w_{m+1}$ sarebbe una loro combinazione, contraddicendo l'indipendenza. Dunque $r\le m$.
+\end{proof}
+
+\subsection{Cardinalità delle basi e dimensione}
+
+\begin{corollario}
+Due basi di uno spazio vettoriale finitamente generato hanno lo stesso numero di elementi.
+\end{corollario}
+\begin{proof}
+\textbf{Finitezza delle basi.} Se $m$ vettori generano $V$, una base non può contenere $m+1$ elementi: essi sarebbero indipendenti, contro il teorema dello scambio. Ogni base è quindi finita.
+
+\textbf{Confronto delle cardinalità.} Siano $B=(v_1,\ldots,v_r)$ e $C=(w_1,\ldots,w_s)$ due basi. Poiché $B$ è indipendente e $C$ genera, lo scambio dà $r\le s$. Invertendo i ruoli si ottiene $s\le r$, dunque $r=s$.
+\end{proof}
+
+\begin{definizione}
+La \emph{dimensione} di uno spazio vettoriale finitamente generato $V$, indicata con $\dim V$, è il numero di vettori di una sua base. Per lo spazio nullo si pone $\dim\{0_V\}=0$: la base è la famiglia vuota.
+\end{definizione}
+
+Il corollario assicura che la dimensione dipenda soltanto dallo spazio. La base canonica di $K^m$ contiene $m$ vettori, quindi
+\[
+  \dim K^m=m.
+\]

@@ -21,13 +21,20 @@
   pdftitle={Appunti di geometria 1},
   pdfauthor={Jude De Sa'Pinto},
   pdfsubject={Geometria 1 -- Prof. Francesco Bottacin},
-  bookmarksnumbered=true
+  bookmarksnumbered=true,
+  bookmarksdepth=2
 }
-\setcounter{tocdepth}{2}
+% Indice stampato sintetico; sottosezioni disponibili nei segnalibri PDF.
+\setcounter{tocdepth}{1}
 \setcounter{secnumdepth}{2}
-\setlist[enumerate]{itemsep=.35em,topsep=.4em}
-\setlist[itemize]{itemsep=.25em,topsep=.4em}
+\setlength{\parindent}{0pt}
+% Un poco più di aria tra il corpo del testo e il separatore delle note.
+\addtolength{\skip\footins}{3pt}
+\setlist[enumerate]{leftmargin=*,labelindent=0pt,itemsep=.35em,topsep=.4em}
+\setlist[itemize]{leftmargin=*,labelindent=0pt,itemsep=.25em,topsep=.4em}
+\setlist[description]{leftmargin=0pt,labelindent=0pt}
 \raggedbottom
+\interfootnotelinepenalty=10000
 \emergencystretch=1.5em
 \AddToHook{cmd/section/before}{\Needspace{9\baselineskip}}
 \AddToHook{cmd/subsection/before}{\Needspace{7\baselineskip}}
@@ -39,18 +46,108 @@
 \renewcommand{\headrulewidth}{.3pt}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
-\theoremstyle{plain}
+% === STILE MATEMATICO: parametri modificabili ===
+% Colori delle etichette; il testo dei blocchi resta nero.
+\definecolor{coloreRisultati}{RGB}{83,76,153}     % Teoremi, lemmi, proposizioni, corollari, assiomi.
+\definecolor{coloreDefinizioni}{RGB}{35,112,77}   % Verde.
+\definecolor{coloreEsempi}{RGB}{142,102,8}        % Giallo oro scuro, leggibile su fondo chiaro.
+\definecolor{coloreEsercizi}{RGB}{202,24,113}     % Rosa acceso.
+\definecolor{coloreOsservazioni}{RGB}{90,96,105}  % Grigio neutro.
+\definecolor{coloreFasi}{RGB}{130,134,143}        % Contorno delle formule guida.
+\newcommand{\tintaEtichette}{9}                  % Percentuale di colore nel fondo (0--100).
+\newlength{\rientroDimostrazione}
+\setlength{\rientroDimostrazione}{4mm}
+\newlength{\spazioParagrafiProva}
+\setlength{\spazioParagrafiProva}{.42\baselineskip}
+\newlength{\spessoreBoxFase}
+\setlength{\spessoreBoxFase}{.35pt}
+\newlength{\margineBoxFase}
+\setlength{\margineBoxFase}{2.2pt}
+% Ambienti matematici. I parametri modificabili sono nel blocco precedente.
+% Le etichette sono colorate; corpi, note a piè di pagina e formule restano ordinari.
+\newcommand{\etichettaAmbiente}[2]{%
+  \begingroup
+  \setlength{\fboxsep}{2.4pt}%
+  \colorbox{#1!\tintaEtichette!white}{\normalfont\bfseries\color{#1}\strut #2}%
+  \endgroup
+}
+
+\newtheoremstyle{risultatoDispensa}
+  {8pt}{6pt}{\itshape}{}{\bfseries}{.}{.55em}
+  {\etichettaAmbiente{coloreRisultati}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+\newtheoremstyle{definizioneDispensa}
+  {8pt}{6pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\etichettaAmbiente{coloreDefinizioni}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+\newtheoremstyle{esempioDispensa}
+  {8pt}{6pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\etichettaAmbiente{coloreEsempi}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+\newtheoremstyle{esercizioDispensa}
+  {8pt}{6pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\etichettaAmbiente{coloreEsercizi}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+\newtheoremstyle{osservazioneDispensa}
+  {7pt}{5pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\etichettaAmbiente{coloreOsservazioni}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+
+\theoremstyle{risultatoDispensa}
 \newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{lemma}[teorema]{Lemma}
 \newtheorem{proposizione}[teorema]{Proposizione}
 \newtheorem{corollario}[teorema]{Corollario}
-\theoremstyle{definition}
+\newtheorem{assioma}[teorema]{Assioma}
+\theoremstyle{definizioneDispensa}
 \newtheorem{definizione}[teorema]{Definizione}
+\theoremstyle{esempioDispensa}
 \newtheorem*{esempio}{Esempio}
+\theoremstyle{esercizioDispensa}
 \newtheorem*{esercizio}{Esercizio}
-\theoremstyle{remark}
+\theoremstyle{osservazioneDispensa}
 \newtheorem*{osservazione}{Osservazione}
+
+% Formule guida in linea: \passomath{A\subseteq B}, \passomath{\Rightarrow}.
+% La scatola non altera le formule né introduce numerazione o segnalibri.
+\newcommand{\passomath}[1]{%
+  \begingroup
+  \setlength{\fboxsep}{\margineBoxFase}%
+  \setlength{\fboxrule}{\spessoreBoxFase}%
+  \fcolorbox{coloreFasi}{white}{\normalfont\ensuremath{#1}}%
+  \endgroup\enspace\ignorespaces
+}
+
+% Una lista senza etichetta rientra l'intera prova, comprese formule ed elenchi.
+% Mantiene le interruzioni di pagina e le note nel normale flusso del documento.
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}\normalfont
+  \list{}{%
+    \setlength{\leftmargin}{\rientroDimostrazione}%
+    \setlength{\rightmargin}{0pt}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\itemindent}{0pt}%
+    \setlength{\listparindent}{0pt}%
+    \setlength{\topsep}{6pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\parsep}{\spazioParagrafiProva}%
+    \setlength{\itemsep}{0pt}%
+  }%
+  \item\relax
+  \setlength{\parskip}{\spazioParagrafiProva}%
+  \textit{#1\@addpunct{.}}\enspace\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+}
+\makeatother
+
+% Gli svolgimenti usano lo stesso rientro delle dimostrazioni.
+\newenvironment{svolgimento}{\begin{proof}[Svolgimento]}{\end{proof}}
+
+% Non lasciare un enunciato isolato in fondo pagina.
 \AddToHook{env/proposizione/before}{\Needspace{6\baselineskip}}
 \AddToHook{env/teorema/before}{\Needspace{6\baselineskip}}
+\AddToHook{env/lemma/before}{\Needspace{6\baselineskip}}
+\AddToHook{env/corollario/before}{\Needspace{6\baselineskip}}
+\AddToHook{env/assioma/before}{\Needspace{6\baselineskip}}
+% === FINE STILE MATEMATICO ===
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}

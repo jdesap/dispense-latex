@@ -12,8 +12,7 @@ x,&x\ge0,\\
 \]
 \end{definizione}
 
-La funzione $x\mapsto|x|$ ha dominio $\R$ e immagine $[0,+\infty)$,
-è pari, decresce su $(-\infty,0]$ e cresce su $[0,+\infty)$.
+La funzione $x\mapsto|x|$ ha dominio $\R$ e immagine $[0,+\infty)$, è pari, decresce su $(-\infty,0]$ e cresce su $[0,+\infty)$.
 
 \begin{schema}
 \begin{tikzpicture}[x=1cm,y=.8cm]
@@ -24,16 +23,14 @@ La funzione $x\mapsto|x|$ ha dominio $\R$ e immagine $[0,+\infty)$,
 \end{tikzpicture}
 \end{schema}
 
-Per il modulo di una funzione la scelta del ramo dipende dal segno
-di \emph{$f(x)$}, non dal segno di $x$:
+\textbf{Modulo di una funzione.} La scelta del ramo dipende dal segno di \emph{$f(x)$}, non dal segno di $x$:
 \[
 |f(x)|=\begin{cases}
 f(x),&f(x)\ge0,\\
 -f(x),&f(x)<0.
 \end{cases}
 \]
-Graficamente si conserva la parte del grafico sopra l'asse $x$ e si
-riflette rispetto a tale asse la parte che sta sotto.
+Graficamente si conserva la parte del grafico sopra l'asse $x$ e si riflette rispetto a tale asse la parte che sta sotto.
 
 \begin{proposizione}
 Per ogni $a\in\R$ e ogni $b\ge0$ valgono
@@ -48,25 +45,20 @@ Per ogni $a,b\in\R$ vale inoltre la \emph{disuguaglianza triangolare}
 \]
 \end{proposizione}
 \begin{proof}
-Poiché $|a|=\max\{a,-a\}$, si ha sia $a\le|a|$ sia $-a\le|a|$;
-il massimo è zero esattamente quando $a=0$.
-La condizione $|a|\le b$ significa contemporaneamente $a\le b$ e
-$-a\le b$, cioè $-b\le a\le b$. La condizione $|a|\ge b$ significa
-che almeno uno tra $a$ e $-a$ è maggiore o uguale a $b$, dando la
-seconda equivalenza.
+\textbf{Confronto e annullamento.} Poiché $|a|=\max\{a,-a\}$, si ha sia $a\le|a|$ sia $-a\le|a|$; il massimo è zero esattamente quando $a=0$.
 
-Infine $-|a|\le a\le|a|$ e $-|b|\le b\le|b|$; sommando si ottiene
+\passomath{|a|\le b} Significa contemporaneamente $a\le b$ e $-a\le b$, cioè $-b\le a\le b$.
+
+\passomath{|a|\ge b} Significa che almeno uno tra $a$ e $-a$ è maggiore o uguale a $b$, dando la seconda equivalenza.
+
+\textbf{Disuguaglianza triangolare.} Da $-|a|\le a\le|a|$ e $-|b|\le b\le|b|$, sommando si ottiene
 \[
 -(|a|+|b|)\le a+b\le|a|+|b|.
 \]
-La prima equivalenza, con soglia non negativa $|a|+|b|$, conclude
-la prova della disuguaglianza triangolare.
+La caratterizzazione della condizione $|a|\le b$, con soglia non negativa $|a|+|b|$, conclude la prova della disuguaglianza triangolare.
 \end{proof}
 
-Le versioni strette sono $|a|<b\iff-b<a<b$ e
-$|a|>b\iff a>b\text{ oppure }a<-b$, per $b\ge0$.
-Nelle disequazioni è essenziale distinguere l'intersezione delle due
-condizioni nel primo caso dall'unione nel secondo.
+\textbf{Versioni strette.} Si ha $|a|<b\iff-b<a<b$ e $|a|>b\iff a>b\text{ oppure }a<-b$, per $b\ge0$. Nelle disequazioni è essenziale distinguere l'intersezione delle due condizioni nel primo caso dall'unione nel secondo.
 
 \section{Distanza sulla retta e nozione di metrica}
 % Fonte: Lezione 6, pp.~19--20
@@ -75,25 +67,24 @@ La distanza usuale fra due numeri reali è
 \[
 d(x,y)=|x-y|.
 \]
-È la lunghezza del segmento che li separa e non dipende dall'ordine
-in cui si considerano i punti.
+È la lunghezza del segmento che li separa e non dipende dall'ordine in cui si considerano i punti.
 
 \begin{definizione}
-Una \emph{distanza}, o \emph{metrica}, su un insieme $E$ (in
-particolare su un sottoinsieme di $\R$) è una funzione
-$d\colon E\times E\to[0,+\infty)$ tale che, per ogni $x,y,z\in E$,
-\begin{enumerate}
-  \item $d(x,y)\ge0$;
-  \item $d(x,y)=0$ se e solo se $x=y$;
-  \item $d(x,y)=d(y,x)$ \emph{(simmetria)};
-  \item $d(x,y)\le d(x,z)+d(z,y)$ \emph{(disuguaglianza triangolare)}.
+Una \emph{distanza}, o \emph{metrica}, su un insieme $E$ (in particolare su un sottoinsieme di $\R$) è una funzione $d\colon E\times E\to[0,+\infty)$ tale che, per ogni $x,y,z\in E$,
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Non negatività:} $d(x,y)\ge0$;
+  \item \textbf{Annullamento:} $d(x,y)=0$ se e solo se $x=y$;
+  \item \textbf{Simmetria:} $d(x,y)=d(y,x)$;
+  \item \textbf{Disuguaglianza triangolare:} $d(x,y)\le d(x,z)+d(z,y)$.
 \end{enumerate}
 \end{definizione}
 
 \begin{proof}[Verifica per la distanza usuale]
-Il modulo è non negativo e si annulla soltanto in zero: quindi
-$|x-y|\ge0$ e $|x-y|=0\iff x=y$. Inoltre
-$|x-y|=|-(y-x)|=|y-x|$, che dà la simmetria. Infine
+\textbf{Non negatività e annullamento.} Il modulo è non negativo e si annulla soltanto in zero: quindi $|x-y|\ge0$ e $|x-y|=0\iff x=y$.
+
+\textbf{Simmetria.} Si ha $|x-y|=|-(y-x)|=|y-x|$, che dà la simmetria.
+
+\textbf{Disuguaglianza triangolare.} Scrivendo $x-y=(x-z)+(z-y)$,
 \[
 |x-y|=|(x-z)+(z-y)|\le|x-z|+|z-y|.
 \]

@@ -6,37 +6,21 @@
 
 \subsection{La funzione esponenziale}
 
-Per una base $a>0$, le potenze razionali si estendono all'esponente
-zero ponendo $a^0=1$ e agli esponenti negativi ponendo
-$a^{-r}=1/a^r$ per $r>0$ razionale.
-La funzione $x\mapsto a^x$ estende poi a tutti
-gli esponenti reali le potenze già definite per esponenti
-razionali.\footnote{Per $a>1$ si può porre
-$a^x=\sup\{a^r:r\in\Q,\ r\le x\}$; per $0<a<1$ si pone
-$a^x=(1/a)^{-x}$, mentre $1^x=1$. Le proprietà qui utilizzate sono
-quelle dell'esponenziale reale così ottenuto.}
-Ha dominio $\R$, assume soltanto valori strettamente positivi e
-passa per $(0,1)$, perché $a^0=1$.
+\textbf{Esponenti nulli e negativi.} Per una base $a>0$, le potenze razionali si estendono all'esponente zero ponendo $a^0=1$ e agli esponenti negativi ponendo $a^{-r}=1/a^r$ per $r>0$ razionale.
+
+\textbf{Estensione agli esponenti reali.} La funzione $x\mapsto a^x$ estende a tutti gli esponenti reali le potenze già definite per esponenti razionali.\footnote{Per $a>1$ si può porre $a^x=\sup\{a^r:r\in\Q,\ r\le x\}$; per $0<a<1$ si pone $a^x=(1/a)^{-x}$, mentre $1^x=1$. La verifica completa di questa costruzione e delle proprietà dell'esponenziale reale non è svolta qui: le regole delle potenze, la stretta monotonia e l'immagine $(0,+\infty)$, per $a\ne1$, sono assunte come proprietà note.} Ha dominio $\R$, assume soltanto valori strettamente positivi e passa per $(0,1)$, perché $a^0=1$.
 \begin{itemize}
-  \item Se $a>1$, è strettamente crescente e biettiva da $\R$ a
-  $(0,+\infty)$.
-  \item Se $0<a<1$, è strettamente decrescente e ancora biettiva da
-  $\R$ a $(0,+\infty)$.
+  \item Se $a>1$, è strettamente crescente e biettiva da $\R$ a $(0,+\infty)$.
+  \item Se $0<a<1$, è strettamente decrescente e ancora biettiva da $\R$ a $(0,+\infty)$.
   \item Se $a=1$, è la funzione costante $1$ e non è invertibile su $\R$.
 \end{itemize}
-Al crescere dell'argomento, nel primo caso i valori diventano
-arbitrariamente grandi; nel secondo si avvicinano a zero senza mai
-raggiungerlo. Per argomenti molto negativi i due comportamenti si
-scambiano. Perciò, quando $a\ne1$, l'infimo è $0$ senza minimo,
-mentre non esiste un maggiorante reale.
+\textbf{Comportamento ed estremi.} Al crescere dell'argomento, nel caso $a>1$ i valori diventano arbitrariamente grandi; nel caso $0<a<1$ si avvicinano a zero senza mai raggiungerlo. Per argomenti molto negativi i due comportamenti si scambiano. Perciò, quando $a\ne1$, l'infimo è $0$ senza minimo, mentre non esiste un maggiorante reale.
 
-Le regole fondamentali delle potenze sono
+\textbf{Regole delle potenze.} Si ha
 \[
 a^{x+y}=a^xa^y,\qquad a^{-x}=\frac1{a^x},\qquad a^0=1.
 \]
-Una base particolarmente importante è il \emph{numero di Nepero}
-$e=2{,}718281828\ldots$. Con la scrittura \emph{funzione esponenziale},
-senza precisare la base, si indica di solito
+\textbf{Base $e$.} Una base particolarmente importante è il \emph{numero di Nepero} $e=2{,}718281828\ldots$. Con la scrittura \emph{funzione esponenziale}, senza precisare la base, si indica di solito
 \[
 \exp\colon\R\longrightarrow(0,+\infty),\qquad \exp(x)=e^x,
 \]
@@ -70,23 +54,19 @@ Esponenziali con basi maggiore e minore di $1$, e rispettivi logaritmi.
 
 \subsection{Il logaritmo come funzione inversa}
 
-Per $a>0$, $a\ne1$, si definisce il \emph{logaritmo in base $a$}
-come l'inversa dell'esponenziale:
+Per $a>0$, $a\ne1$, si definisce il \emph{logaritmo in base $a$} come l'inversa dell'esponenziale:
 \[
 \log_a\colon(0,+\infty)\longrightarrow\R,\qquad
 \log_a x=y\ \Longleftrightarrow\ a^y=x.
 \]
-Il dominio contiene soltanto numeri positivi; l'immagine è tutta $\R$.
-Il logaritmo è strettamente crescente se $a>1$, strettamente
-decrescente se $0<a<1$, perché l'inversa conserva il verso della
-monotonia. Per ogni base ammissibile,
+\textbf{Dominio, immagine e monotonia.} Il dominio contiene soltanto numeri positivi; l'immagine è tutta $\R$. Il logaritmo è strettamente crescente se $a>1$, strettamente decrescente se $0<a<1$, perché l'inversa conserva il verso della monotonia.
+
+\textbf{Identità del logaritmo.} Per ogni base ammissibile,
 \[
 \log_a1=0,\qquad \log_a a=1,\qquad
 \log_a(a^y)=y\ (y\in\R),\qquad a^{\log_a x}=x\ (x>0).
 \]
-Se la base è $e$, si parla di \emph{logaritmo naturale} e si scrive
-$\ln x=\log_e x$. In particolare $\ln\colon(0,+\infty)\to\R$ è
-strettamente crescente e inversa di $\exp$.
+\textbf{Logaritmo naturale.} Se la base è $e$, si parla di \emph{logaritmo naturale} e si scrive $\ln x=\log_e x$. In particolare $\ln\colon(0,+\infty)\to\R$ è strettamente crescente e inversa di $\exp$.
 
 \section{Funzioni iperboliche}
 \label{sec:iperboliche}
@@ -94,23 +74,21 @@ strettamente crescente e inversa di $\exp$.
 \subsection{Definizioni, identità e grafici}
 % Fonte: Lezione 7.pdf, pp. 5--7.
 
-Si definiscono \emph{seno iperbolico}, \emph{coseno iperbolico} e
-\emph{tangente iperbolica} mediante
+Si definiscono \emph{seno iperbolico}, \emph{coseno iperbolico} e \emph{tangente iperbolica} mediante
 \[
 \sinh x=\frac{e^x-e^{-x}}2,\qquad
 \cosh x=\frac{e^x+e^{-x}}2,\qquad
 \tanh x=\frac{\sinh x}{\cosh x}.
 \]
-Sono tutte definite su $\R$: infatti $\cosh x>0$ e il quoziente non
-ha denominatore nullo. La tangente iperbolica si indica anche con
-$\operatorname{tgh}$.
+Sono tutte definite su $\R$: infatti $\cosh x>0$ e il quoziente non ha denominatore nullo. La tangente iperbolica si indica anche con $\operatorname{tgh}$.
 
-Il seno iperbolico è dispari, strettamente crescente e ha immagine
-$\R$. Il coseno iperbolico è pari, strettamente decrescente su
-$(-\infty,0]$ e strettamente crescente su $[0,+\infty)$; ha minimo
-$1$ nel punto $0$ e immagine $[1,+\infty)$. La tangente iperbolica
-è dispari, strettamente crescente e ha immagine $(-1,1)$: è limitata,
-ma non ha né massimo né minimo.
+\Needspace{6\baselineskip}
+\textbf{Proprietà delle tre funzioni.}
+\begin{itemize}
+  \item \textbf{Seno iperbolico:} dispari, strettamente crescente, con immagine $\R$.
+  \item \textbf{Coseno iperbolico:} pari, strettamente decrescente su $(-\infty,0]$ e strettamente crescente su $[0,+\infty)$; ha minimo $1$ nel punto $0$ e immagine $[1,+\infty)$.
+  \item \textbf{Tangente iperbolica:} dispari, strettamente crescente, con immagine $(-1,1)$; è limitata, senza massimo né minimo.
+\end{itemize}
 
 \begin{proposizione}[Identità iperbolica fondamentale]
 Per ogni $t\in\R$ si ha
@@ -127,10 +105,7 @@ Sostituendo le definizioni e usando $e^te^{-t}=1$ si ottiene
 \]
 \end{proof}
 
-Il nome richiama una costruzione geometrica: mentre
-$P(t)=(\cos t,\sin t)$ percorre la circonferenza $u^2+v^2=1$,
-il punto $Q(t)=(\cosh t,\sinh t)$ percorre il \emph{ramo destro}
-dell'iperbole $u^2-v^2=1$, quello con $u\ge1$.
+\textbf{Interpretazione geometrica.} Il nome richiama una costruzione geometrica: mentre $P(t)=(\cos t,\sin t)$ percorre la circonferenza $u^2+v^2=1$, il punto $Q(t)=(\cosh t,\sinh t)$ percorre il \emph{ramo destro} dell'iperbole $u^2-v^2=1$, quello con $u\ge1$.
 
 \begin{schema}
 \begin{tikzpicture}[scale=1.45]
@@ -156,31 +131,29 @@ dell'iperbole $u^2-v^2=1$, quello con $u\ge1$.
 \end{schema}
 
 \begin{proof}[Verifica delle proprietà]
-La parità di $\cosh$ e la disparità di $\sinh$ seguono scambiando
-$t$ con $-t$. Se $u<v$, si ha $e^u<e^v$ ed $e^{-u}>e^{-v}$:
-dalla differenza delle due quantità segue $\sinh u<\sinh v$.
-Inoltre
+\textbf{Simmetrie.} La parità di $\cosh$ e la disparità di $\sinh$ seguono scambiando $t$ con $-t$.
+
+\textbf{Crescita del seno iperbolico.} Se $u<v$, si ha $e^u<e^v$ ed $e^{-u}>e^{-v}$: dalla differenza delle due quantità segue $\sinh u<\sinh v$.
+
+\textbf{Minimo del coseno iperbolico.} Si ha
 \[
 \cosh x-1=\frac{(e^{x/2}-e^{-x/2})^2}{2}\ge0,
 \]
-con uguaglianza soltanto in $x=0$. Per $0\le u<v$, sviluppando
-le definizioni si verifica
+con uguaglianza soltanto in $x=0$.
+
+\textbf{Monotonia del coseno iperbolico.} Per $0\le u<v$, sviluppando le definizioni si verifica
 \[
 \cosh v-\cosh u
 =2\sinh\frac{u+v}2\,\sinh\frac{v-u}2>0.
 \]
 La parità dà poi la decrescenza sulla semiretta negativa.
 
-Per la tangente iperbolica è utile scrivere
-$\tanh x=(e^{2x}-1)/(e^{2x}+1)$. Per $0<s<t$,
+\textbf{Tangente iperbolica.} È utile scrivere $\tanh x=(e^{2x}-1)/(e^{2x}+1)$. Per $0<s<t$,
 \[
 \frac{t-1}{t+1}-\frac{s-1}{s+1}
 =\frac{2(t-s)}{(t+1)(s+1)}>0;
 \]
-quindi $\tanh$ è strettamente crescente. Il rapporto è sempre
-compreso fra $-1$ e $1$ e, sostituendo $-x$, cambia segno.
-Le immagini esatte delle tre funzioni seguono anche dalle formule
-inverse ricavate qui sotto.
+quindi $\tanh$ è strettamente crescente. Il rapporto è sempre compreso fra $-1$ e $1$ e, sostituendo $-x$, cambia segno. Le immagini esatte delle tre funzioni seguono anche dalle formule inverse ricavate qui sotto.
 \end{proof}
 
 \begin{schema}
@@ -217,44 +190,41 @@ inverse ricavate qui sotto.
 \subsection{Funzioni iperboliche inverse}
 % Fonte: Lezione 7.pdf, pp. 8--9.
 
-Il seno iperbolico è biettivo da $\R$ a $\R$. La sua inversa è il
-\emph{settore seno iperbolico}, indicato con $\operatorname{arsinh}$
-o $\operatorname{settsinh}$, e si esprime mediante il logaritmo:
+\textbf{Settore seno iperbolico.} Il seno iperbolico è biettivo da $\R$ a $\R$. La sua inversa è il \emph{settore seno iperbolico}, indicato con $\operatorname{arsinh}$ o $\operatorname{settsinh}$, e si esprime mediante il logaritmo:
 \[
 \operatorname{arsinh}x=\ln\!\left(x+\sqrt{x^2+1}\right),
 \qquad \operatorname{arsinh}\colon\R\longrightarrow\R.
 \]
-Per ricavare la formula risolviamo $x=\sinh y$ e poniamo $t=e^y>0$:
+\begin{proof}[Derivazione]
+Risolviamo $x=\sinh y$ e poniamo $t=e^y>0$:
 \begin{align*}
 x=\frac{e^y-e^{-y}}2
 &\ \Longleftrightarrow\ 2x=t-\frac1t\\
 &\ \Longleftrightarrow\ t^2-2xt-1=0\\
 &\ \Longleftrightarrow\ t=x\pm\sqrt{x^2+1}.
 \end{align*}
-Poiché $\sqrt{x^2+1}>|x|$, il segno meno darebbe $t<0$ e va
-scartato; il segno più dà un valore strettamente positivo per ogni
-reale $x$. Dunque $e^y=x+\sqrt{x^2+1}$ e si applica $\ln$.
+Poiché $\sqrt{x^2+1}>|x|$, il segno meno darebbe $t<0$ e va scartato; il segno più dà un valore strettamente positivo per ogni reale $x$. Dunque $e^y=x+\sqrt{x^2+1}$ e si applica $\ln$.
+\end{proof}
 
-Il coseno iperbolico è invertibile dopo averne ristretto il dominio
-a $[0,+\infty)$. L'inversa è il \emph{settore coseno iperbolico}:
+\textbf{Settore coseno iperbolico.} Il coseno iperbolico è invertibile dopo averne ristretto il dominio a $[0,+\infty)$. L'inversa è il \emph{settore coseno iperbolico}:
 \[
 \operatorname{arcosh}x=\ln\!\left(x+\sqrt{x^2-1}\right),
 \qquad \operatorname{arcosh}\colon[1,+\infty)\longrightarrow[0,+\infty).
 \]
-La notazione alternativa è $\operatorname{settcosh}$. Infatti,
-da $x=\cosh y$ e $t=e^y$ segue $t^2-2xt+1=0$, con soluzioni
-$t=x\pm\sqrt{x^2-1}$. Per $x>1$ il segno più dà $t>1$, dunque
-$y>0$; il segno meno dà $0<t<1$, dunque $y<0$, escluso dalla
-restrizione scelta. Per $x=1$ le due soluzioni coincidono in $t=1$,
-cioè $y=0$.
+La notazione alternativa è $\operatorname{settcosh}$.
 
-Infine la tangente iperbolica è biettiva da $\R$ a $(-1,1)$.
-La sua inversa, il \emph{settore tangente iperbolica}, è
+\begin{proof}[Scelta del ramo]
+Da $x=\cosh y$ e $t=e^y$ segue $t^2-2xt+1=0$, con soluzioni $t=x\pm\sqrt{x^2-1}$. Per $x>1$ il segno più dà $t>1$, dunque $y>0$; il segno meno dà $0<t<1$, dunque $y<0$, escluso dalla restrizione scelta. Per $x=1$ le due soluzioni coincidono in $t=1$, cioè $y=0$.
+\end{proof}
+
+\textbf{Settore tangente iperbolica.} La tangente iperbolica è biettiva da $\R$ a $(-1,1)$. La sua inversa, il \emph{settore tangente iperbolica}, è
 \[
 \operatorname{artanh}x=\frac12\ln\!\left(\frac{1+x}{1-x}\right),
 \qquad \operatorname{artanh}\colon(-1,1)\longrightarrow\R,
 \]
-indicata anche con $\operatorname{setttgh}$. Per verificarla,
-$x=(e^{2y}-1)/(e^{2y}+1)$ equivale a
-$e^{2y}=(1+x)/(1-x)$. Per $-1<x<1$ il rapporto è positivo,
-quindi si può applicare il logaritmo e dividere per $2$.
+indicata anche con $\operatorname{setttgh}$.
+
+\begin{proof}[Derivazione]
+L'equazione $x=(e^{2y}-1)/(e^{2y}+1)$ equivale a $e^{2y}=(1+x)/(1-x)$. Per $-1<x<1$ il rapporto è positivo, quindi si può applicare il logaritmo e dividere per $2$.
+\end{proof}
+

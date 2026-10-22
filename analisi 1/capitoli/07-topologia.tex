@@ -11,14 +11,11 @@
 \section{Proprietà degli insiemi aperti}
 % Fonte: Lezione 8, pp.~2--3
 
-Ricordiamo il criterio fondamentale: un insieme $A\subseteq\R$ è \emph{aperto}
-se, per ogni $x\in A$, esiste $\varepsilon>0$ tale che
-$(x-\varepsilon,x+\varepsilon)\subseteq A$. In altre parole, ogni punto di $A$
-può essere circondato da un piccolo intervallo interamente contenuto in $A$.
+Il criterio locale consente di dimostrare le seguenti proprietà.
 
 \begin{proposizione}[Operazioni con gli aperti]
 Valgono le seguenti proprietà.
-\begin{enumerate}
+\begin{enumerate}[label=\alph*)]
   \item $\varnothing$ e $\R$ sono aperti.
   \item L'intersezione di un numero \emph{finito} di aperti è aperta.
   \item L'unione di una famiglia \emph{arbitraria} di aperti è aperta.
@@ -26,43 +23,36 @@ Valgono le seguenti proprietà.
 \end{proposizione}
 
 \begin{proof}
-Per l'insieme vuoto non ci sono punti sui quali verificare il criterio;
-per $\R$, qualunque intervallo centrato in un suo punto resta in $\R$.
+\textbf{(a) Insiemi vuoto e ambiente.} Per l'insieme vuoto non ci sono punti sui quali verificare il criterio; per $\R$, qualunque intervallo centrato in un suo punto resta in $\R$.
 
-Siano $A_1,\ldots,A_m$ aperti e sia $x\in\bigcap_{j=1}^{m}A_j$.
-Per ogni $j$ esiste $\varepsilon_j>0$ per cui
-$(x-\varepsilon_j,x+\varepsilon_j)\subseteq A_j$.
-Poiché gli insiemi sono in numero finito, il minimo
-$\varepsilon=\min\{\varepsilon_1,\ldots,\varepsilon_m\}$ è ancora positivo.
-L'intervallo $(x-\varepsilon,x+\varepsilon)$ è quindi contenuto in tutti
-gli $A_j$, e dunque nella loro intersezione.
+\textbf{(b) Intersezioni finite.} Siano $A_1,\ldots,A_m$ aperti, con $m\ge1$, e sia $x\in\bigcap_{j=1}^{m}A_j$. Per ogni $j$ esiste $\varepsilon_j>0$ per cui $(x-\varepsilon_j,x+\varepsilon_j)\subseteq A_j$. Poiché gli insiemi sono in numero finito, il minimo $\varepsilon=\min\{\varepsilon_1,\ldots,\varepsilon_m\}$ è ancora positivo. L'intervallo $(x-\varepsilon,x+\varepsilon)$ è quindi contenuto in tutti gli $A_j$, e dunque nella loro intersezione. L'intersezione della famiglia vuota si intende uguale a $\R$, già considerato in (a).
 
-Se invece $x$ appartiene a un'unione $\bigcup_{\alpha\in I}A_\alpha$ di aperti,
-allora appartiene ad almeno uno di essi, diciamo $A_{\alpha_0}$. Un intervallo
-aperto intorno a $x$ contenuto in $A_{\alpha_0}$ è automaticamente contenuto
-nell'intera unione. Non serve che la famiglia sia finita.
+\textbf{(c) Unioni arbitrarie.} Se $x$ appartiene a un'unione $\bigcup_{\alpha\in I}A_\alpha$ di aperti, allora appartiene ad almeno uno di essi, diciamo $A_{\alpha_0}$. Un intervallo aperto intorno a $x$ contenuto in $A_{\alpha_0}$ è automaticamente contenuto nell'intera unione. Non serve che la famiglia sia finita.
 \end{proof}
 
-L'ipotesi di finitezza nell'intersezione è essenziale. Per esempio,
+\begin{esempio}[Necessità della finitezza]
+L'ipotesi di finitezza nell'intersezione è essenziale:
 \[
   \bigcap_{n\in\N^*}\left(-\frac1n,\frac1n\right)=\{0\}.
 \]
-Il numero $0$ appartiene a tutti gli intervalli. Se $x\ne0$, scegliendo
-$n>1/|x|$ si ottiene $1/n<|x|$, perciò $x$ non appartiene all'$n$-esimo
-intervallo. Tuttavia $\{0\}$ non è aperto: nessun intervallo aperto centrato
-in $0$ può essere contenuto nel solo punto $0$. Un'intersezione infinita
-di aperti può quindi non essere aperta.
+\begin{proof}[Verifica dell'identità]
+\passomath{\{0\}\subseteq\bigcap_{n\in\N^*}(-1/n,1/n)} Il numero $0$ appartiene a tutti gli intervalli.
+
+\passomath{\bigcap_{n\in\N^*}(-1/n,1/n)\subseteq\{0\}} Se $x\ne0$, scegliendo $n>1/|x|$ si ottiene $1/n<|x|$, perciò $x$ non appartiene all'$n$-esimo intervallo.
+\end{proof}
+
+Tuttavia $\{0\}$ non è aperto: nessun intervallo aperto centrato in $0$ può essere contenuto nel solo punto $0$. Un'intersezione infinita di aperti può quindi non essere aperta.
+\end{esempio}
 
 \Needspace{12\baselineskip}
 \section{Proprietà degli insiemi chiusi}
 % Fonte: Lezione 8, p.~4
 
-Un insieme $C\subseteq\R$ è \emph{chiuso} quando il suo complemento $C^c$
-è aperto. Applicando le leggi di De Morgan alle proprietà appena dimostrate
-si ottiene il risultato duale.
+Un insieme $C\subseteq\R$ è \emph{chiuso} quando il suo complemento $C^c$ è aperto. Applicando le leggi di De Morgan alle proprietà appena dimostrate si ottiene il risultato duale.
 
 \begin{proposizione}[Operazioni con i chiusi]
-\begin{enumerate}
+\leavevmode
+\begin{enumerate}[label=\alph*)]
   \item $\varnothing$ e $\R$ sono chiusi.
   \item L'intersezione di una famiglia arbitraria di chiusi è chiusa.
   \item L'unione di un numero finito di chiusi è chiusa.
@@ -70,20 +60,21 @@ si ottiene il risultato duale.
 \end{proposizione}
 
 \begin{proof}
-I complementi di $\varnothing$ e $\R$ sono rispettivamente $\R$ e
-$\varnothing$, che sono aperti. Se $C_\alpha$ sono chiusi, allora
+\textbf{(a) Insiemi vuoto e ambiente.} I complementi di $\varnothing$ e $\R$ sono rispettivamente $\R$ e $\varnothing$, che sono aperti.
+
+\textbf{(b) Intersezioni arbitrarie.} Se i $C_\alpha$ sono chiusi, allora
 \[
   \left(\bigcap_{\alpha\in I}C_\alpha\right)^c
   =\bigcup_{\alpha\in I}C_\alpha^c
 \]
-è aperto, perché è un'unione arbitraria di aperti. Analogamente, per
-$C_1,\ldots,C_m$ chiusi,
+è aperto, perché è un'unione arbitraria di aperti. L'intersezione dei $C_\alpha$ è dunque chiusa.
+
+\textbf{(c) Unioni finite.} Per $C_1,\ldots,C_m$ chiusi,
 \[
   \left(\bigcup_{j=1}^{m}C_j\right)^c
   =\bigcap_{j=1}^{m}C_j^c
 \]
-è aperto, perché l'intersezione è finita. In entrambi i casi l'insieme
-di partenza è dunque chiuso.
+è aperto, perché l'intersezione è finita. L'unione dei $C_j$ è dunque chiusa.
 \end{proof}
 
 \section{Esempi nella retta reale}
@@ -91,44 +82,30 @@ di partenza è dunque chiuso.
 
 \subsection{I numeri naturali e gli interi}
 
-L'insieme $\N$ è chiuso. Un modo diretto per vederlo è scrivere il suo
-complemento come unione di intervalli aperti:
+\textbf{Chiusura di $\N$.} Il complemento si scrive come unione di intervalli aperti:
 \[
   \R\setminus\N=(-\infty,0)\ \cup\
   \bigcup_{n\in\N}(n,n+1).
 \]
-Ogni reale non naturale è negativo oppure si trova strettamente tra due
-naturali consecutivi. Il membro destro è aperto, essendo un'unione di aperti;
-per definizione, quindi, $\N$ è chiuso.
+Ogni reale non naturale è negativo oppure si trova strettamente tra due naturali consecutivi. Il membro destro è aperto, essendo un'unione di aperti; per definizione, quindi, $\N$ è chiuso.
 
-Lo stesso ragionamento vale per gli interi:
+\textbf{Chiusura di $\Z$.} Lo stesso ragionamento vale per gli interi:
 \[
   \R\setminus\Z=\bigcup_{n\in\Z}(n,n+1).
 \]
-Fra due interi consecutivi non si trovano altri interi, e ogni reale non
-intero cade in uno di questi intervalli. Ne segue che $\Z$ è chiuso.
-Né $\N$ né $\Z$ sono aperti: ciascuno dei loro punti è isolato rispetto
-all'insieme, cioè ogni piccolo intervallo centrato in esso contiene anche
-reali che non gli appartengono.
+Fra due interi consecutivi non si trovano altri interi, e ogni reale non intero cade in uno di questi intervalli. Ne segue che $\Z$ è chiuso.
+
+\textbf{Punti isolati.} Ogni intero $n$ è un punto \emph{isolato} di $\Z$: esiste un raggio $r>0$ per cui $(n-r,n+r)\cap\Z=\{n\}$; basta scegliere $r=1/2$. La stessa proprietà vale per i punti di $\N$ rispetto a $\N$.
+
+\textbf{Mancanza di apertura.} Né $\N$ né $\Z$ sono aperti: per ogni $\varepsilon>0$, il numero $n+\min\{\varepsilon/2,1/2\}$ è nell'intervallo $(n-\varepsilon,n+\varepsilon)$ ma non è intero. Nessun intorno sferico di un loro punto è quindi contenuto nell'insieme.
 
 \subsection{I numeri razionali}
 
-$\Q$ non è aperto. La ragione è che in ogni intervallo aperto non vuoto
-si trova almeno un numero irrazionale: dunque non esiste alcun intervallo
-aperto centrato in un razionale e interamente contenuto in $\Q$.
-Questa proprietà si chiama \emph{densità degli irrazionali in $\R$}.
+\textbf{Densità degli irrazionali.} In ogni intervallo aperto non vuoto $(a,b)$ si trova un irrazionale. Fra gli infiniti razionali dell'intervallo $(a/\sqrt2,b/\sqrt2)$ scegliamo $q\ne0$. Allora $a<q\sqrt2<b$ e $q\sqrt2$ è irrazionale: se fosse razionale, dividendo per il razionale non nullo $q$ si otterrebbe che $\sqrt2$ è razionale.
 
-Per chiarire il passaggio, siano $a<b$. Dalla densità di $\Q$ in $\R$
-possiamo scegliere un razionale $q\ne0$ tale che
-$a/\sqrt2<q<b/\sqrt2$. Allora $a<q\sqrt2<b$ e $q\sqrt2$ è irrazionale:
-se fosse razionale, dividendo per il razionale non nullo $q$ si otterrebbe
-che $\sqrt2$ è razionale. Abbiamo così trovato un irrazionale in $(a,b)$.
+\textbf{$\Q$ non è aperto.} Per la densità degli irrazionali non esiste alcun intervallo aperto centrato in un razionale e interamente contenuto in $\Q$.
 
-Neppure $\Q$ è chiuso. Infatti, se lo fosse, il complemento
-$\R\setminus\Q$ sarebbe aperto. Ma, per la densità dei razionali,
-ogni intervallo aperto centrato in un irrazionale contiene razionali;
-quindi $\R\setminus\Q$ non è aperto. In sintesi, $\Q$ non è né aperto
-né chiuso. La densità di entrambi gli insiemi spiega le due conclusioni.
+\textbf{$\Q$ non è chiuso.} Se lo fosse, $\R\setminus\Q$ sarebbe aperto. Ma ogni intervallo aperto centrato in un irrazionale contiene razionali, per la densità di $\Q$; dunque $\R\setminus\Q$ non è aperto. La densità dei razionali e degli irrazionali spiega quindi perché $\Q$ non è né aperto né chiuso.
 
 \subsection{La successione \texorpdfstring{$1/n$}{1/n} vista come insieme}
 
@@ -137,23 +114,17 @@ Consideriamo
   X=\left\{\frac1n:n\in\N^*\right\}
    =\left\{1,\frac12,\frac13,\ldots\right\}.
 \]
-$X$ non è aperto: per esempio, ogni intervallo aperto centrato in $1$
-contiene numeri diversi da tutti gli elementi di $X$.
+\textbf{Non apertura.} Il punto $1$ appartiene a $X$, ma per ogni $\varepsilon>0$ il numero $1+\varepsilon/2$ appartiene a $(1-\varepsilon,1+\varepsilon)$ ed è esterno a $X$, i cui elementi sono tutti minori o uguali a $1$.
 
-$X$ non è neppure chiuso. Il punto $0$ non appartiene a $X$, ma è
-arbitrariamente vicino ai suoi elementi: per ogni $\varepsilon>0$ esiste
-$n\in\N^*$ con $1/n<\varepsilon$. Il complemento di $X$ contiene dunque
-$0$, ma non contiene nessun intervallo aperto centrato in $0$;
-di conseguenza non è aperto. Esplicitamente,
+\textbf{Non chiusura.} $X$ non è neppure chiuso. Il punto $0$ non appartiene a $X$, ma è arbitrariamente vicino ai suoi elementi: per ogni $\varepsilon>0$ esiste $n\in\N^*$ con $1/n<\varepsilon$. Il complemento di $X$ contiene dunque $0$, ma non contiene nessun intervallo aperto centrato in $0$; di conseguenza non è aperto. Esplicitamente,
 \[
   X^c=(-\infty,0]\ \cup\
   \bigcup_{n\in\N^*}\left(\frac1{n+1},\frac1n\right)
   \ \cup\ (1,+\infty).
 \]
-L'estremo $0$, incluso nel primo pezzo, è proprio ciò che impedisce a
-$X^c$ di essere aperto.
+L'estremo $0$, incluso nel primo pezzo, è proprio ciò che impedisce a $X^c$ di essere aperto.
 
-Se aggiungiamo il punto mancante, otteniamo invece l'insieme chiuso
+\textbf{Aggiunta del punto $0$.} Aggiungendo il punto mancante si ottiene l'insieme chiuso
 \[
   Y=X\cup\{0\}.
 \]
@@ -163,9 +134,7 @@ Infatti
   \bigcup_{n\in\N^*}\left(\frac1{n+1},\frac1n\right)
   \ \cup\ (1,+\infty)
 \]
-è un'unione di intervalli aperti. L'esempio mostra che l'unione infinita
-dei singoletti chiusi $\{1/n\}$ non è necessariamente chiusa, mentre
-l'aggiunta del suo punto di accumulazione $0$ la rende tale.
+è un'unione di intervalli aperti. L'esempio mostra che l'unione infinita dei singoletti chiusi $\{1/n\}$ non è necessariamente chiusa, mentre l'aggiunta del suo punto di accumulazione $0$ la rende tale.
 
 \begin{schema}
 \begin{tikzpicture}[x=10cm,y=1cm]
@@ -185,30 +154,19 @@ l'aggiunta del suo punto di accumulazione $0$ la rende tale.
   \node[below=5pt] at (0,-.6) {$0$};
   \node[below=5pt] at (1,-.6) {$1$};
 \end{tikzpicture}
-\par\smallskip
-I punti $1/n$ si avvicinano a $0$: il cerchio vuoto indica che
-$0\notin X$, il punto pieno che $0\in Y$. Aggiungendo $0$ si ottiene
-l'insieme chiuso $Y=X\cup\{0\}$.
+\par\smallskip I punti $1/n$ si avvicinano a $0$: il cerchio vuoto indica che $0\notin X$, il punto pieno che $0\in Y$. Aggiungendo $0$ si ottiene l'insieme chiuso $Y=X\cup\{0\}$.
 \end{schema}
 
 \section{Intorni di un punto}
 % Fonte: Lezione 8, pp.~10--11
 
-\paragraph{Definizione generale.}
-Dato $x_0\in\R$, un insieme $U\subseteq\R$ si dice \emph{intorno di $x_0$}
-se esiste un aperto $A$ tale che
+\textbf{Definizione generale.} Dato $x_0\in\R$, un insieme $U\subseteq\R$ si dice \emph{intorno di $x_0$} se esiste un aperto $A$ tale che
 \[
   x_0\in A\subseteq U.
 \]
-L'insieme $U$ non deve necessariamente essere aperto: deve soltanto
-contenere un insieme aperto che comprenda $x_0$. Per esempio,
-$[x_0-1,x_0+1]$ è un intorno di $x_0$, perché contiene
-$(x_0-1,x_0+1)$.
+L'insieme $U$ non deve necessariamente essere aperto: deve soltanto contenere un insieme aperto che comprenda $x_0$. Per esempio, $[x_0-1,x_0+1]$ è un intorno di $x_0$, perché contiene $(x_0-1,x_0+1)$.
 
-Se $U$ è esso stesso aperto e $x_0\in U$, si parla di \emph{intorno aperto}
-di $x_0$. In particolare, ogni intervallo $(a,b)$ con $a<x_0<b$
-è un intorno aperto di $x_0$. L'insieme di tutti gli intorni di $x_0$
-si può indicare con $\mathcal I_{x_0}$.
+Se $U$ è esso stesso aperto e $x_0\in U$, si parla di \emph{intorno aperto} di $x_0$. In particolare, ogni intervallo $(a,b)$ con $a<x_0<b$ è un intorno aperto di $x_0$. L'insieme di tutti gli intorni di $x_0$ si può indicare con $\mathcal I_{x_0}$.
 
 La definizione precedente equivale a una forma molto concreta:
 \[
@@ -216,21 +174,16 @@ La definizione precedente equivale a una forma molto concreta:
   \quad\Longleftrightarrow\quad
   \exists\,\varepsilon>0:\ (x_0-\varepsilon,x_0+\varepsilon)\subseteq U.
 \]
-Infatti, se $x_0\in A\subseteq U$ con $A$ aperto, il criterio di apertura
-fornisce un tale $\varepsilon$; nel verso opposto, l'intervallo stesso
-può fare da insieme aperto $A$.
+\passomath{\Rightarrow} Se $x_0\in A\subseteq U$ con $A$ aperto, il criterio locale fornisce un tale $\varepsilon$.
 
-\paragraph{Intorni sferici.}
-Per $r>0$ si definisce l'\emph{intorno sferico}
-di centro $x_0$ e raggio $r$ come
+\passomath{\Leftarrow} L'intervallo $(x_0-\varepsilon,x_0+\varepsilon)$ è aperto, contiene $x_0$ ed è contenuto in $U$: può quindi fare da insieme $A$ nella definizione.
+
+\textbf{Intorni sferici.} Per $r>0$ si definisce l'\emph{intorno sferico} di centro $x_0$ e raggio $r$ come
 \[
   I_r(x_0)=(x_0-r,x_0+r)
   =\{x\in\R:|x-x_0|<r\}.
 \]
-Sulla retta si tratta semplicemente di un intervallo aperto simmetrico.
-Ogni intorno $U$ di $x_0$ contiene un intorno sferico $I_r(x_0)$.
-Per esempio, se $(a,b)\subseteq U$ e $a<x_0<b$, basta scegliere
-$0<r\le\min\{x_0-a,b-x_0\}$.
+Sulla retta si tratta semplicemente di un intervallo aperto simmetrico. Ogni intorno $U$ di $x_0$ contiene un intorno sferico $I_r(x_0)$. Per esempio, se $(a,b)\subseteq U$ e $a<x_0<b$, basta scegliere $0<r\le\min\{x_0-a,b-x_0\}$.
 
 \begin{schema}
 \begin{tikzpicture}[x=1.2cm,y=1cm]
@@ -254,48 +207,39 @@ $0<r\le\min\{x_0-a,b-x_0\}$.
   }
   \node[black!70] at (6.5,.5) {$(a,b)\subseteq U$};
 \end{tikzpicture}
-\par\smallskip
-L'intorno sferico $I_r(x_0)$, in blu, è simmetrico rispetto a $x_0$
-e resta dentro $(a,b)$; quindi è contenuto anche in $U$.
+\par\smallskip L'intorno sferico $I_r(x_0)$, in blu, è simmetrico rispetto a $x_0$ e resta dentro $(a,b)$; quindi è contenuto anche in $U$.
 \end{schema}
 
 \begin{proposizione}[Aperti e intorni]
-Un insieme $A\subseteq\R$ è aperto se e solo se è un intorno di ciascuno
-dei suoi punti.
+Un insieme $A\subseteq\R$ è aperto se e solo se è un intorno di ciascuno dei suoi punti.
 \end{proposizione}
 \begin{proof}
-Se $A$ è aperto e $x\in A$, nella definizione di intorno possiamo
-scegliere come aperto proprio $A$. Viceversa, se $A$ è un intorno di
-ogni $x\in A$, per ogni tale $x$ esiste $\varepsilon_x>0$ con
-$(x-\varepsilon_x,x+\varepsilon_x)\subseteq A$; questo è esattamente
-il criterio che definisce un insieme aperto.
+\passomath{\Rightarrow} Se $A$ è aperto e $x\in A$, nella definizione di intorno possiamo scegliere come aperto proprio $A$.
+
+\passomath{\Leftarrow} Se $A$ è un intorno di ogni $x\in A$, per ogni tale $x$ esiste $\varepsilon_x>0$ con $(x-\varepsilon_x,x+\varepsilon_x)\subseteq A$. Per il criterio locale, $A$ è aperto.
 \end{proof}
 
-\paragraph{Intorni di $+\infty$ e $-\infty$.}
-Quando si lavora nella retta estesa
-$\overline\R=\R\cup\{-\infty,+\infty\}$, gli intorni aperti di
-$+\infty$ contengono una coda $(a,+\infty]$, e quelli di $-\infty$
-contengono una coda $[-\infty,b)$, con $a,b\in\R$.
-Se si resta nella sola $\R$, le rispettive code si scrivono
-$(a,+\infty)$ e $(-\infty,b)$: i simboli $\pm\infty$ non sono allora
-punti dell'insieme ambiente.
+\textbf{Intorni di $+\infty$ e $-\infty$.} Nella retta estesa $\overline\R=\R\cup\{-\infty,+\infty\}$, con la topologia usuale, le code $(a,+\infty]$ e $[-\infty,b)$, con $a,b\in\R$, sono intorni aperti rispettivamente di $+\infty$ e di $-\infty$. Ogni intorno di uno dei due estremi contiene una di tali code.
+
+Se si resta nella sola $\R$, le rispettive code si scrivono $(a,+\infty)$ e $(-\infty,b)$: i simboli $\pm\infty$ non sono allora punti dell'insieme ambiente.
 
 \section{Intorni laterali}
 % Fonte: Lezione 8, p.~12
 
-Fissato $x_0\in\R$, un \emph{intorno sinistro}
-di $x_0$ è un intervallo $(a,x_0)$ con $a<x_0$; un \emph{intorno destro}
-è un intervallo $(x_0,b)$ con $b>x_0$. Si possono ammettere anche
-$a=-\infty$ e $b=+\infty$.\footnote{Gli intorni laterali qui definiti
-escludono il punto $x_0$: non sono quindi intorni di $x_0$ nel senso
-della definizione generale. La denominazione serve a descrivere il
-comportamento vicino al punto da sinistra o da destra.}
+Fissato $x_0\in\R$, si definiscono:
+\begin{itemize}
+  \item \textbf{intorno sinistro} di $x_0$: un intervallo $(a,x_0)$ con $a<x_0$;
+  \item \textbf{intorno destro} di $x_0$: un intervallo $(x_0,b)$ con $b>x_0$.
+\end{itemize}
+Si ammettono anche $a=-\infty$ e $b=+\infty$.\footnote{Gli intorni laterali qui definiti escludono il punto $x_0$: non sono quindi intorni di $x_0$ nel senso della definizione generale. La denominazione serve a descrivere il comportamento vicino al punto da sinistra o da destra.}
 
-Per esempio, $(-1,1)$ è un intorno sferico di $0$ di raggio $1$.
-È anche un intorno ordinario di ogni suo punto, fra cui $0$, $1/2$,
-$1/3$, $-1/10$ e $1/5$. Visto invece rispetto ai suoi estremi, $(-1,1)$ è un
-intorno destro di $-1$ e un intorno sinistro di $1$. In particolare,
-gli intorni laterali di un punto non contengono quel punto.
+\textbf{Esempio.} L'intervallo $(-1,1)$ è:
+\begin{itemize}
+  \item un intorno sferico di $0$ di raggio $1$;
+  \item un intorno ordinario di ogni suo punto, fra cui $0$, $1/2$, $1/3$, $-1/10$ e $-1/5$;
+  \item un intorno destro di $-1$ e un intorno sinistro di $1$, rispetto ai suoi estremi.
+\end{itemize}
+Gli intorni laterali di un punto non contengono quel punto.
 
 \begin{schema}
 \begin{tikzpicture}[x=1.15cm,y=1cm]
@@ -314,7 +258,5 @@ gli intorni laterali di un punto non contengono quel punto.
   \node[above=6pt,coloreschema] at (2.5,.7) {intorno sinistro $(a,x_0)$};
   \node[above=6pt,coloreschema] at (5.5,-.7) {intorno destro $(x_0,b)$};
 \end{tikzpicture}
-\par\smallskip
-Negli intorni laterali il punto $x_0$ è escluso,
-come mostrano i cerchi vuoti.
+\par\smallskip Negli intorni laterali il punto $x_0$ è escluso, come mostrano i cerchi vuoti.
 \end{schema}

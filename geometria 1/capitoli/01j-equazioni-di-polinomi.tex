@@ -1,0 +1,87 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 11_12, pp. 5--6.
+
+\section{Equazioni di sottospazi di polinomi}
+
+\subsection{Condizioni sui valori di un polinomio}
+\begin{esercizio}
+Siano $V=\R[X]_{\leq3}$, lo spazio dei polinomi reali di grado al più $3$, e
+\[
+  W=\{p\in V:p(1)=0,\ p(2)=0\}.
+\]
+Scrivere le equazioni cartesiane di $W$ nelle coordinate associate prima alla base $(1,X,X^2,X^3)$, poi alla base $(1,1-X,X-X^2,X^2-X^3)$.
+\end{esercizio}
+
+\begin{svolgimento}
+\textbf{Verifica del sottospazio.} Il polinomio nullo soddisfa entrambe le condizioni. Se $p,q\in W$ e $\lambda,\mu\in\R$, per $t=1$ e $t=2$ si ha $(\lambda p+\mu q)(t)=\lambda p(t)+\mu q(t)=0$; dunque $W$ è effettivamente un sottospazio di $V$. Per scriverne le equazioni occorre esprimere un polinomio generico nella base scelta e tradurre le due condizioni sui valori in condizioni sulle sue coordinate.
+\end{svolgimento}
+
+\subsection{Coordinate nella base monomiale}
+\begin{svolgimento}
+\textbf{Equazioni cartesiane.} Ogni $p\in V$ ha un'unica espressione
+\[
+  p(X)=x_0+x_1X+x_2X^2+x_3X^3.
+\]
+Gli scalari $x_0,x_1,x_2,x_3$ sono le coordinate nella base $(1,X,X^2,X^3)$. Valutando in $1$ e in $2$ si ottiene
+\[
+  p(1)=x_0+x_1+x_2+x_3,\qquad
+  p(2)=x_0+2x_1+4x_2+8x_3.
+\]
+Pertanto le equazioni richieste sono esattamente
+\[
+  \begin{cases}
+    x_0+x_1+x_2+x_3=0,\\
+    x_0+2x_1+4x_2+8x_3=0.
+  \end{cases}
+\]
+\textbf{Base e dimensione.} Per trovare i parametri liberi, sottraiamo la prima equazione dalla seconda: $x_1+3x_2+7x_3=0$. Quindi $x_1=-3x_2-7x_3$ e $x_0=2x_2+6x_3$. Ogni polinomio di $W$ si scrive come
+\[
+  p(X)=x_2(2-3X+X^2)+x_3(6-7X+X^3).
+\]
+I due polinomi sono indipendenti, perché in una combinazione nulla i coefficienti di $X^2$ e di $X^3$ annullano rispettivamente i due scalari. Essi formano una base di $W$, che ha dimensione $2$.
+\end{svolgimento}
+
+\subsection{Coordinate in una base diversa}
+\begin{svolgimento}
+Usiamo ora la famiglia
+\[
+  B=(1,\ 1-X,\ X-X^2,\ X^2-X^3).
+\]
+\textbf{Verifica della base.} Sviluppiamo la combinazione
+\begin{align*}
+  p(X)&=y_0+y_1(1-X)+y_2(X-X^2)+y_3(X^2-X^3)\\
+      &=(y_0+y_1)+(-y_1+y_2)X+(-y_2+y_3)X^2-y_3X^3.
+\end{align*}
+Il confronto con le coordinate monomiali dà
+\[
+  x_0=y_0+y_1,\quad x_1=-y_1+y_2,\quad
+  x_2=-y_2+y_3,\quad x_3=-y_3.
+\]
+Per ogni scelta degli $x_i$, queste equazioni determinano univocamente gli $y_i$, risolvendo dall'ultima alla prima:
+\[
+  \begin{aligned}
+    y_3&=-x_3,& y_2&=-x_2-x_3,\\
+    y_1&=-x_1-x_2-x_3,& y_0&=x_0+x_1+x_2+x_3.
+  \end{aligned}
+\]
+Ogni polinomio ha quindi un'unica espressione mediante $B$: la famiglia è una base e gli $y_i$ sono le relative coordinate.
+
+\textbf{Equazioni nelle nuove coordinate.} Valutiamo direttamente l'espressione in questa base. In $X=1$, i tre polinomi $1-X$, $X-X^2$ e $X^2-X^3$ si annullano, quindi $p(1)=y_0$. In $X=2$ i loro valori sono rispettivamente $-1$, $-2$ e $-4$, perciò
+\[
+  p(2)=y_0-y_1-2y_2-4y_3.
+\]
+Le equazioni cartesiane di $W$ nelle nuove coordinate sono dunque
+\[
+  \begin{cases}
+    y_0=0,\\
+    y_0-y_1-2y_2-4y_3=0,
+  \end{cases}
+  \qquad\text{equivalentemente}\qquad
+  \begin{cases}
+    y_0=0,\\
+    y_1+2y_2+4y_3=0.
+  \end{cases}
+\]
+\textbf{Confronto delle coordinate.} Il polinomio $p(X)=2-3X+X^2$ ha coordinate $(2,-3,1,0)$ nella base monomiale e $(0,2,-1,0)$ nella base $B$, poiché $p(X)=2(1-X)-(X-X^2)$. Le due quadruple soddisfano i rispettivi sistemi. Il sottospazio di polinomi resta lo stesso, mentre la forma delle equazioni dipende dalle coordinate adottate.
+\end{svolgimento}
+
