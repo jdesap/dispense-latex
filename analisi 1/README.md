@@ -1,13 +1,13 @@
 # Appunti di analisi 1
 
 Appunti di **Jude De Sa'Pinto** dal corso del **Prof. Federico Cacciafesta**.
-Revisione editoriale integrale conclusa il 22 ottobre 2026: 54 pagine,
+Revisione editoriale integrale conclusa il 22 ottobre 2026: 55 pagine,
 sette capitoli. Resoconto e limiti del controllo in
 `../lavoro/revisione-editoriale/RESOCONTO_FINALE.md`.
-Gli stili a colori, il rientro delle prove e le spaziature si regolano nel
-blocco **STILE MATEMATICO** di `preambolo.tex`, dalla riga 49. I parametri
-e gli ultimi controlli sono descritti in
-`../lavoro/revisione-editoriale/SESSIONE_12.md`.
+Le barre laterali, i numeretti blu delle note, il rientro delle prove e le
+spaziature si regolano nel blocco **STILE MATEMATICO** di `preambolo.tex`,
+dalla riga 51. I parametri e gli ultimi controlli sono descritti in
+`../lavoro/revisione-editoriale/SESSIONE_14.md`.
 Il documento è organizzato per argomenti. I numeri delle lezioni di
 provenienza sono indicati soltanto sotto i titoli dei sette capitoli.
 I riferimenti precisi alle pagine restano nei commenti TeX e nel registro

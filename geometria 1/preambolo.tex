@@ -10,9 +10,11 @@
 \usepackage{needspace}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,patterns}
+\usepackage{mdframed}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \usepackage{bookmark}
+\usepackage{footnotehyper}
 
 \definecolor{coloreschema}{RGB}{30,77,112}
 \hypersetup{
@@ -47,46 +49,76 @@
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
 % === STILE MATEMATICO: parametri modificabili ===
-% Colori delle etichette; il testo dei blocchi resta nero.
+% Colori delle barre laterali; titoli e testo restano neri.
 \definecolor{coloreRisultati}{RGB}{83,76,153}     % Teoremi, lemmi, proposizioni, corollari, assiomi.
 \definecolor{coloreDefinizioni}{RGB}{35,112,77}   % Verde.
-\definecolor{coloreEsempi}{RGB}{142,102,8}        % Giallo oro scuro, leggibile su fondo chiaro.
+\definecolor{coloreEsempi}{RGB}{225,178,24}       % Giallo oro della barra.
 \definecolor{coloreEsercizi}{RGB}{202,24,113}     % Rosa acceso.
 \definecolor{coloreOsservazioni}{RGB}{90,96,105}  % Grigio neutro.
 \definecolor{coloreFasi}{RGB}{130,134,143}        % Contorno delle formule guida.
-\newcommand{\tintaEtichette}{9}                  % Percentuale di colore nel fondo (0--100).
+\definecolor{coloreRichiamiNote}{RGB}{0,85,255}   % Blu elettrico dei numeri delle note.
+\newlength{\spessoreBarraAmbiente}
+\setlength{\spessoreBarraAmbiente}{1.6pt}
+\newlength{\distanzaBarraAmbiente}
+\setlength{\distanzaBarraAmbiente}{8pt}
+\newlength{\sogliaBloccoBreve}
+\setlength{\sogliaBloccoBreve}{8\baselineskip} % I blocchi brevi restano interi.
 \newlength{\rientroDimostrazione}
 \setlength{\rientroDimostrazione}{4mm}
 \newlength{\spazioParagrafiProva}
 \setlength{\spazioParagrafiProva}{.42\baselineskip}
+\newlength{\spazioFormuleProva}
+\setlength{\spazioFormuleProva}{8pt}
 \newlength{\spessoreBoxFase}
 \setlength{\spessoreBoxFase}{.35pt}
 \newlength{\margineBoxFase}
 \setlength{\margineBoxFase}{2.2pt}
-% Ambienti matematici. I parametri modificabili sono nel blocco precedente.
-% Le etichette sono colorate; corpi, note a piè di pagina e formule restano ordinari.
-\newcommand{\etichettaAmbiente}[2]{%
-  \begingroup
-  \setlength{\fboxsep}{2.4pt}%
-  \colorbox{#1!\tintaEtichette!white}{\normalfont\bfseries\color{#1}\strut #2}%
-  \endgroup
+% Ambienti matematici: una sola barra a sinistra, senza fondo o cornice.
+% Le note conservano numerazione, collegamenti e posizione a piè di pagina.
+\makeatletter
+\renewcommand{\mdf@footnoteinput}{}
+% Evita frammenti finali di poche righe; i blocchi lunghi restano spezzabili.
+\pretocmd{\detected@mdf@put@frame}{%
+  \ifdim\dimexpr\ht\mdf@splitbox@one+\dp\mdf@splitbox@one\relax<\sogliaBloccoBreve
+    \booltrue{mdf@nobreak}%
+  \fi
+}{}{\PackageError{dispense}{Impossibile impostare i blocchi brevi}{Verificare la versione di mdframed.}}
+% Colora solo il richiamo, sia nel corpo sia a piè di pagina.
+\renewcommand{\@makefnmark}{%
+  \hbox{\@textsuperscript{\normalfont\color{coloreRichiamiNote}\@thefnmark}}%
+}
+\makeatother
+\makesavenoteenv{mdframed}
+\mdfdefinestyle{barraDispensa}{
+  topline=false, rightline=false, bottomline=false, leftline=true,
+  linewidth=\spessoreBarraAmbiente,
+  backgroundcolor=white, fontcolor=black,
+  % La barra è allineata al testo normale; il contenuto rientra di spessore + distanza.
+  leftmargin=0pt,
+  rightmargin=0pt,
+  innerleftmargin=\distanzaBarraAmbiente, innerrightmargin=0pt,
+  innertopmargin=1.5pt, innerbottommargin=1.5pt,
+  skipabove=6pt, skipbelow=4pt,
+  splittopskip=5pt, splitbottomskip=3pt,
+  needspace=4\baselineskip,
+  nobreak=false
 }
 
 \newtheoremstyle{risultatoDispensa}
-  {8pt}{6pt}{\itshape}{}{\bfseries}{.}{.55em}
-  {\etichettaAmbiente{coloreRisultati}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+  {0pt}{0pt}{\itshape}{}{\bfseries}{.}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
 \newtheoremstyle{definizioneDispensa}
-  {8pt}{6pt}{\normalfont}{}{\bfseries}{.}{.55em}
-  {\etichettaAmbiente{coloreDefinizioni}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+  {0pt}{0pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
 \newtheoremstyle{esempioDispensa}
-  {8pt}{6pt}{\normalfont}{}{\bfseries}{.}{.55em}
-  {\etichettaAmbiente{coloreEsempi}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+  {0pt}{0pt}{\normalfont}{}{\bfseries}{:}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
 \newtheoremstyle{esercizioDispensa}
-  {8pt}{6pt}{\normalfont}{}{\bfseries}{.}{.55em}
-  {\etichettaAmbiente{coloreEsercizi}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+  {0pt}{0pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
 \newtheoremstyle{osservazioneDispensa}
-  {7pt}{5pt}{\normalfont}{}{\bfseries}{.}{.55em}
-  {\etichettaAmbiente{coloreOsservazioni}{\thmname{#1}\thmnumber{ #2}}\thmnote{\normalfont\;(#3)}}
+  {0pt}{0pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
 
 \theoremstyle{risultatoDispensa}
 \newtheorem{teorema}{Teorema}[chapter]
@@ -102,6 +134,16 @@
 \newtheorem*{esercizio}{Esercizio}
 \theoremstyle{osservazioneDispensa}
 \newtheorem*{osservazione}{Osservazione}
+
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{teorema}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{lemma}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{proposizione}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{corollario}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{assioma}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreDefinizioni]{definizione}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreEsempi]{esempio}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreEsercizi]{esercizio}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreOsservazioni]{osservazione}
 
 % Formule guida in linea: \passomath{A\subseteq B}, \passomath{\Rightarrow}.
 % La scatola non altera le formule né introduce numerazione o segnalibri.
@@ -132,6 +174,9 @@
   }%
   \item\relax
   \setlength{\parskip}{\spazioParagrafiProva}%
+  \setlength{\abovedisplayskip}{\spazioFormuleProva}%
+  \setlength{\belowdisplayskip}{\spazioFormuleProva}%
+  \setlength{\belowdisplayshortskip}{5pt}%
   \textit{#1\@addpunct{.}}\enspace\ignorespaces
 }{%
   \popQED\endlist\@endpefalse

@@ -1,5 +1,7 @@
 # Sessione 12 — Stile visivo, 22 ottobre 2026
 
+Stile successivamente aggiornato: parametri correnti e barre laterali in `SESSIONE_13.md` e `VERIFICA_STILE_13.json`. Il contenuto seguente documenta la versione storica della sessione 12.
+
 Applicate alle due dispense le modifiche richieste dopo la revisione integrale.
 
 ## Resa e sorgenti

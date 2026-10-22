@@ -456,3 +456,13 @@ Revisione integrale conclusa. Controllati sorgenti attivi, indici, provenienza, 
 ## Stile visivo — sessione 12, 22 ottobre 2026
 
 Applicati rientro di 4 mm e spaziatura interna alle prove, etichette colorate per i diversi ambienti e formule guida in riquadri sottili. Formule, calcoli, note, label e numerazione conservati; compilazioni condivise e integrate riuscite, estratti verificati. Analisi resta di 54 pagine; Geometria passa a 29 (26 per Spazi vettoriali). Cambia l’impaginazione interna dei capitoli; copie annotate separate e non modificate. Parametri nei preamboli dalla riga 49. Resoconto e verifiche in `../../lavoro/revisione-editoriale/SESSIONE_12.md` e `VERIFICA_STILE_12.json` nella stessa cartella comune.
+
+
+## Stile visivo — sessione 13, 22 ottobre 2026
+
+Applicate barre laterali ai diversi ambienti, intestazioni nere e numeretti delle note blu elettrico in corpo e a piè di pagina. Esempi non numerati con due punti. Conservati rientro e fasi delle prove; rifiniti spazi dei display e cambi pagina. Contenuti invariati salvo la punteggiatura di un titoletto in Topologia. Compilazioni condivise e integrate riuscite senza avvisi LaTeX; tutti gli estratti e le 83 pagine controllati. Volumi di 54 e 29 pagine, estratti invariati per lunghezza; copie annotate non modificate. Parametri nei preamboli dalla riga 51; resoconto e verifiche in `../../lavoro/revisione-editoriale/SESSIONE_13.md` e `VERIFICA_STILE_13.json` nella stessa cartella comune.
+
+
+## Stile visivo — sessione 14, 22 ottobre 2026
+
+Barra allineata al testo normale e corpo degli ambienti rientrato di circa 3.4 mm. Compilazioni condivise e integrate riuscite senza avvisi LaTeX; formule, allineamenti e tutti gli estratti verificati. Contenuti invariati, con solo un correttivo di impaginazione prima del binomio. Analisi ha ora 55 pagine (sette nel capitolo 3); Geometria 29 (26 di Spazi vettoriali). Cambiano numerazione dei capitoli 4–7 di Analisi e disposizione interna degli ambienti. Copie annotate non modificate. Dettagli in `../../lavoro/revisione-editoriale/SESSIONE_14.md` e `VERIFICA_STILE_14.json` nella stessa cartella comune.

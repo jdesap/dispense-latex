@@ -42,6 +42,9 @@ Avvio: 22 ottobre 2026. Criteri richiesti dall'autore in `CRITERI.md`.
 | 10 | Analisi 1 — Funzioni elementari | Capitolo completo | Completata il 22 ottobre 2026 |
 | 11 | Analisi 1 — Topologia della retta | Capitolo completo | Completata il 22 ottobre 2026 |
 | 12 | Analisi 1 e Geometria 1 — Stile visivo | Prove rientrate, ambienti a colori, formule guida e verifica dei due volumi | Completata il 22 ottobre 2026 |
+| 13 | Analisi 1 e Geometria 1 — Barre laterali e note | Barre colorate, richiami blu elettrico, esempi con due punti e verifica dei due volumi | Completata il 22 ottobre 2026 |
+
+| 14 | Analisi 1 e Geometria 1 — Allineamento ambienti | Barra sul margine del testo, corpo rientrato e verifica della nuova impaginazione | Completata il 22 ottobre 2026 |
 
 L'ordine dà precedenza alla riorganizzazione di Geometria dopo la prima
 sessione di Analisi. Ulteriori capitoli aggiunti dall'autore saranno

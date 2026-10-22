@@ -5,7 +5,7 @@
   "verifica_editoriale_conclusiva": "../lavoro/revisione-editoriale/VERIFICA_CONCLUSIVA.json",
   "materia": "geometria 1",
   "pagine_volume": 29,
-  "pdf_sha256": "1e13a499e2861c38d49a77b1d43e80b42e8501c91abdc672aa0f0c143e0d4efa",
+  "pdf_sha256": "bc1ddbea13a9c929db895fca43793ae47ca0a58db282af3f55ca3d24de56eacd",
   "avvisi_latex": [],
   "estratti": [
     {
@@ -18,7 +18,7 @@
   ],
   "sorgenti_sha256": {
     "main.tex": "fdd96aeedf69c3090c6827e3e5545450c10afadde029533b4ee41e037749188c",
-    "preambolo.tex": "62dec0cc5f0113183aafc14ef9cffda7edc71409030c5d8b26e2557ef1af1f4a",
+    "preambolo.tex": "cd5d1841681fed0dad3e942391bb60259e5f9c65ae9e078ee54afd71cfc018a2",
     "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
     "capitoli/01a-spazi-e-sottospazi.tex": "fab45b6829dcd302a2aef81080399ab9da1da0ee1b10e7c3e2cebf4bc726bca7",
     "capitoli/01b-somme-di-sottospazi.tex": "5c00547d5307a64a6276e7d992a2d6a58bd9cf08ddc08c91ba72e534bf7070aa",
@@ -33,5 +33,6 @@
     "capitoli/01i-costruzioni-in-r5.tex": "2f60bec8150bfc88d1029ea3d3fc89006d649807690ae1ee7dc28ad7612cffa4",
     "capitoli/01j-equazioni-di-polinomi.tex": "402c572b810fb79195cddaa70972202fbfec1bc2e17de5b0c08a6a8751d1b04b"
   },
-  "aggiornamento_stile": "../lavoro/revisione-editoriale/SESSIONE_12.md"
+  "aggiornamento_stile": "../lavoro/revisione-editoriale/SESSIONE_14.md",
+  "verifica_stile": "../lavoro/revisione-editoriale/VERIFICA_STILE_14.json"
 }
