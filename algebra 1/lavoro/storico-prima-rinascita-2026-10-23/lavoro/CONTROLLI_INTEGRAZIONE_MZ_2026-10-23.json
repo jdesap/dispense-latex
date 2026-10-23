@@ -1,0 +1,11 @@
+{
+  "data": "2026-10-23",
+  "terne_insiemi": 4096,
+  "mappe_finite": 60,
+  "sottoinsiemi_verificati": 749,
+  "conteggi_B_potenza_A": 25,
+  "riduzioni_coprime": 6560,
+  "famiglie_coefficienti_Bezout": 41,
+  "controlli_sorgenti": "superati",
+  "limite": "Controlli finiti e strutturali supplementari; nessuna certificazione formale delle prove generali."
+}

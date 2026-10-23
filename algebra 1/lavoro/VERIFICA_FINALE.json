@@ -1,0 +1,196 @@
+{
+  "data": "2026-10-23",
+  "stato": "ricostruzione dei cinque capitoli conclusa sui materiali ricevuti",
+  "criterio": "A–L determina ordine e copertura; prove scelte da entrambe le serie per qualità e prerequisiti. M–Z integra omissioni di temi conclusi.",
+  "fonti": {
+    "pdf": 22,
+    "pagine": 140,
+    "serie_A-L": {
+      "pdf": 11,
+      "pagine": 65,
+      "ruolo": "ossatura e futuri caricamenti"
+    },
+    "serie_M-Z": {
+      "pdf": 11,
+      "pagine": 75,
+      "ruolo": "confronto delle prove e integrazione"
+    },
+    "riesame_visivo_pagine": 140,
+    "originali_byte_identici": 22,
+    "righe_copertura_A-L": 65,
+    "righe_confronto_M-Z": 75,
+    "unita_riesame": 75
+  },
+  "compilazione": {
+    "latexmk": "success con configurazione condivisa",
+    "integrata": "success",
+    "avvisi_latex": [],
+    "pagine_volume": 35,
+    "preliminari": 3,
+    "pagine_testo": 32,
+    "pdf_sha256": "2d19495b9f44f75b96693bfdc5d1f951cfc8ceac4136eefd9ed137108b635ba0"
+  },
+  "struttura": {
+    "capitoli": 5,
+    "sezioni": 26,
+    "sottosezioni": 5,
+    "figure_tikz": 11,
+    "prove": 45,
+    "esercizi": 20,
+    "svolgimenti": 20,
+    "label_uniche": 22,
+    "riferimenti_risolti": 13,
+    "registri_esclusi_dal_pdf": true
+  },
+  "estratti": [
+    {
+      "numero": 1,
+      "file": "01-insiemi-e-operazioni.pdf",
+      "pagine": 4,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 0,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 2,
+      "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+      "pagine": 6,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 2,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 3,
+      "file": "03-funzioni.pdf",
+      "pagine": 8,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 1,
+      "link_al_volume": 2,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 4,
+      "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+      "pagine": 5,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 4,
+      "link_al_volume": 1,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 5,
+      "file": "05-aritmetica-degli-interi.pdf",
+      "pagine": 9,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 4,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    }
+  ],
+  "capitoli_correnti": [
+    {
+      "numero": 1,
+      "titolo": "Insiemi e operazioni",
+      "file": "01-insiemi-e-operazioni.pdf",
+      "pagine": 4,
+      "pagina_pdf_iniziale": 4,
+      "pagina_pdf_finale": 7,
+      "numero_stampato_iniziale": "1",
+      "numero_stampato_finale": "4",
+      "sha256": "8b38263be5bee2d5eb82195205a5bedcb3170e0fe4a6c79984e07706cf9a1568"
+    },
+    {
+      "numero": 2,
+      "titolo": "Relazioni, equivalenze e quozienti",
+      "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+      "pagine": 6,
+      "pagina_pdf_iniziale": 8,
+      "pagina_pdf_finale": 13,
+      "numero_stampato_iniziale": "5",
+      "numero_stampato_finale": "10",
+      "sha256": "4a6835768c287d69510ce0bee5d333ef9afb9e19a8037728f5350ad71bce8676"
+    },
+    {
+      "numero": 3,
+      "titolo": "Funzioni",
+      "file": "03-funzioni.pdf",
+      "pagine": 8,
+      "pagina_pdf_iniziale": 14,
+      "pagina_pdf_finale": 21,
+      "numero_stampato_iniziale": "11",
+      "numero_stampato_finale": "18",
+      "sha256": "63b8ec0fea146375989517953a3c25767e6e6e68919dae04c91868ed36aa9972"
+    },
+    {
+      "numero": 4,
+      "titolo": "Insiemi finiti, infiniti e cardinalità",
+      "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+      "pagine": 5,
+      "pagina_pdf_iniziale": 22,
+      "pagina_pdf_finale": 26,
+      "numero_stampato_iniziale": "19",
+      "numero_stampato_finale": "23",
+      "sha256": "d94451a3c9d104067f8737650c551559dd7d69cf3b694efa91e99d34182cb381"
+    },
+    {
+      "numero": 5,
+      "titolo": "Aritmetica degli interi",
+      "file": "05-aritmetica-degli-interi.pdf",
+      "pagine": 9,
+      "pagina_pdf_iniziale": 27,
+      "pagina_pdf_finale": 35,
+      "numero_stampato_iniziale": "24",
+      "numero_stampato_finale": "32",
+      "sha256": "e361a7c1b75c7deb459517570514fbf4b9d8413874f457e289618350ebc96d34"
+    }
+  ],
+  "revisione_visiva": {
+    "volume_intermedio": "35 pagine ispezionate integralmente",
+    "versione_finale": "nuova ispezione di tutte le pagine variate dopo i raccordi: PDF 11–22 e 35; le altre pagine conservano il contenuto e impaginazione ispezionati",
+    "controlli": "Indice, barre, tabelle, formule, figure, note, margini, esercizi e svolgimenti, induzioni e ricorrenza dei coefficienti. Corretto elenco divisori fuori margine; riequilibrata chiusura relazioni e mantenuto elenco delle sei funzioni intero.",
+    "estratti": "confronto pixel di tutte le 32 pagine esportate, oltre a flussi, testo, formato, numerazione e collegamenti",
+    "anomalie_aperte": []
+  },
+  "controlli_matematici_correnti": [
+    "CONTROLLI_RINASCITA_2026-10-23.json",
+    "CONTROLLI_INTEGRAZIONE_MZ_2026-10-23.json"
+  ],
+  "registro_corrente": "RINASCITA_2026-10-23.md",
+  "scelta_prove": "SCELTA_DIMOSTRAZIONI.csv",
+  "snapshot_precedente": "storico-prima-rinascita-2026-10-23/",
+  "verifica_condivisa": "../../strumenti/VERIFICA_ESPORTAZIONE_2026-10-23.json",
+  "sorgenti_sha256": {
+    "main.tex": "4d540834b9aef800d7da32715c7576e1bdccdff56348834e9c01ae579d6327f8",
+    "preambolo.tex": "33dc6ef968d685c47e8790592eba95c58c93d8573e99cfc12de8a290fb3b048f",
+    "capitoli/01-insiemi.tex": "ec252433f9a7e2d00a8bb99ad5876c86c7f9b01650c147af3b44bf6d681d0d30",
+    "capitoli/02-relazioni.tex": "1f42f367c4acc687cf81cbe76b74698c17b9deac3d717558320c97dc8166fa42",
+    "capitoli/03-funzioni.tex": "afaad6da16beb6cdd3ab541e4b14cfc2367fb969ba1da6664e3740a351351f65",
+    "capitoli/04-cardinalita.tex": "0ce1c76f6e9a227bba5867a895f9913b244253fcbb5e6843ddcf973551247e2e",
+    "capitoli/05-interi.tex": "39491fb076b39488ebcb81524d85ab28e05fb45162ba7c1fd0b860d2e4d22ee4"
+  },
+  "limiti": [
+    "Riesame manuale delle prove per unità; controlli finiti supplementari, senza certificazione formale o attestazione dell’intero programma d’esame.",
+    "CSB, confronto totale e aritmetica cardinale generale assunti senza dimostrazione.",
+    "Passo analitico della cardinalità di R e indipendenza di CH assunti; CH non viene assunta.",
+    "Conteggio finito e proprietà numeriche usuali assunti; uso della scelta dichiarato.",
+    "J usa temporaneamente infinità dei primi e fattorizzazione, dimostrate successivamente; seno/arcoseno usano proprietà analitiche dichiarate.",
+    "Tutti i capitoli e la numerazione dei risultati cambiano; copie annotate Goodnotes separate, nessun riallineamento automatico."
+  ],
+  "capitoli_modificati": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "copie_annotate_modificate": false,
+  "commit_push_pubblicazioni": false,
+  "lavori_pendenti_sulle_fonti_ricevute": []
+}

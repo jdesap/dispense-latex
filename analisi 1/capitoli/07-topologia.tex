@@ -174,9 +174,11 @@ La definizione precedente equivale a una forma molto concreta:
   \quad\Longleftrightarrow\quad
   \exists\,\varepsilon>0:\ (x_0-\varepsilon,x_0+\varepsilon)\subseteq U.
 \]
+\begin{proof}[Equivalenza]
 \passomath{\Rightarrow} Se $x_0\in A\subseteq U$ con $A$ aperto, il criterio locale fornisce un tale $\varepsilon$.
 
 \passomath{\Leftarrow} L'intervallo $(x_0-\varepsilon,x_0+\varepsilon)$ è aperto, contiene $x_0$ ed è contenuto in $U$: può quindi fare da insieme $A$ nella definizione.
+\end{proof}
 
 \textbf{Intorni sferici.} Per $r>0$ si definisce l'\emph{intorno sferico} di centro $x_0$ e raggio $r$ come
 \[
@@ -233,13 +235,15 @@ Fissato $x_0\in\R$, si definiscono:
 \end{itemize}
 Si ammettono anche $a=-\infty$ e $b=+\infty$.\footnote{Gli intorni laterali qui definiti escludono il punto $x_0$: non sono quindi intorni di $x_0$ nel senso della definizione generale. La denominazione serve a descrivere il comportamento vicino al punto da sinistra o da destra.}
 
-\textbf{Esempio:} L'intervallo $(-1,1)$ è:
+\begin{esempio}
+L'intervallo $(-1,1)$ è:
 \begin{itemize}
   \item un intorno sferico di $0$ di raggio $1$;
   \item un intorno ordinario di ogni suo punto, fra cui $0$, $1/2$, $1/3$, $-1/10$ e $-1/5$;
   \item un intorno destro di $-1$ e un intorno sinistro di $1$, rispetto ai suoi estremi.
 \end{itemize}
 Gli intorni laterali di un punto non contengono quel punto.
+\end{esempio}
 
 \begin{schema}
 \begin{tikzpicture}[x=1.15cm,y=1cm]

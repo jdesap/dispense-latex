@@ -1,0 +1,76 @@
+serie,lezione,pagina,contenuto,raccordo_A-L,esito,lettura
+M–Z,1,1,Operazioni; tabella di verità; commutatività e associatività,A–L 1 pp.1–2; 2 p.2,tabella integrata,visiva completa
+M–Z,1,2,Famiglie; proprietà universali di unione/intersezione; esercizi associatività,A–L 1 pp.2–3,proprietà universali integrate,visiva completa
+M–Z,2,1,Prodotti cartesiani; tuple; funzioni su indici,A–L 1 pp.3–4; 6 p.6,coperto; generalizzazione famiglie nel capitolo funzioni,visiva completa
+M–Z,2,2,Parti; complementi; De Morgan,A–L 2 p.1,confrontato e coperto,visiva completa
+M–Z,2,3,Verifica uguaglianza; descrizioni estensive/intensive,A–L 1–2,chiarimento integrato,visiva completa
+M–Z,2,4,Predicati; negazione; inclusione e implicazione,A–L 1–2,integrato,visiva completa
+M–Z,2,5,Implicazione come disgiunzione; negazione; distributività; esercizio logico,A–L 2 p.2,integrato e svolto,visiva completa
+M–Z,2,6,Ripresa simmetrica; distribuzione; neutri e inversi; relazioni,A–L 1 p.3; 2 pp.2–3; 3 p.2,coperto senza strumenti successivi,visiva completa
+M–Z,2,7,Relazione persone/città e coppie,A–L 2 p.3,variante confrontata; conservati dati e orientamento A–L,visiva completa
+M–Z,3,1,Inclusione e controesempio; città/persone,A–L 1–2,negazione inclusione integrata; variante non duplicata,visiva completa
+M–Z,3,2,Relazione e rappresentazioni,A–L 2 p.3,coperto,visiva completa
+M–Z,3,3,Tre grafici; confrontabilità; equivalenze,A–L 2 pp.3–6,coperto,visiva completa
+M–Z,3,4,Frazioni; similitudine; parallelismo; classificazione; ordini,A–L 2 pp.4–6,coperto,visiva completa
+M–Z,3,5,Ordini; classe di equivalenza; prima inclusione,A–L 2 p.6; 3 p.3,coperto,visiva completa
+M–Z,3,6,Uguaglianza classi; quoziente,A–L 3 pp.3–4,coperto; ordine A–L preservato,visiva completa
+M–Z,3,7,Partizioni e teorema,"A–L 3 pp.1,5",coperto; non adottato ordine M–Z,visiva completa
+M–Z,3,8,Prova equivalenza/partizione,A–L 3 pp.5–6,coperto,visiva completa
+M–Z,3,9,Conclusione prova; costruzioni inverse; quozienti,A–L 3 p.7,coperto,visiva completa
+M–Z,4,1,Q come quoziente; rappresentanti,A–L 3 p.8; 4 p.1,coperto,visiva completa
+M–Z,4,2,Regola incompatibile su Q,A–L 4 p.1,variante confrontata; esempio A–L conservato,visiva completa
+M–Z,4,3,Operazioni ben definite; compatibilità generale,A–L 4 pp.2–3,criterio generale integrato,visiva completa
+M–Z,4,4,Compatibilità; funzioni; immagine e grafico,A–L 4 p.3,criterio integrato; resto coperto,visiva completa
+M–Z,4,5,Quadrato; area; differenza; supporto primo; criterio verticale,A–L 4 pp.4–5,coperto; dominio non positivo come variante integrata,visiva completa
+M–Z,4,6,Iniettività e suriettività,A–L 4 p.5,coperto,visiva completa
+M–Z,4,7,Biettività; esercizi su esempi,A–L 4 pp.5–6; 5 p.1,coperto; definizione biezione nel punto A–L,visiva completa
+M–Z,5,1,Inverse di biezioni e grafico,A–L 5 p.7; 6 pp.2–5,coperto nei criteri; non anticipata definizione,visiva completa
+M–Z,5,2,F del piano: prova iniettività,A–L 4 p.6,prova esplicitata con supporto M–Z,visiva completa
+M–Z,5,3,F del piano: prova suriettività,A–L 4 p.6,prova esplicitata con supporto M–Z,visiva completa
+M–Z,5,4,Equivalenza da funzione; iff iniettività; fibre J,A–L 4 pp.6–7,criterio iff integrato; fibre confermate,visiva completa
+M–Z,5,5,Fibra [168]; proiezione; immagini,A–L 4 p.7; 5 pp.1–2,esercizio [168] integrato; resto coperto,visiva completa
+M–Z,5,6,Immagine e controimmagine,A–L 5 p.2,coperto,visiva completa
+M–Z,5,7,Esempi quadrato; inclusioni ed uguaglianze f*f*,A–L 5 p.2,proprietà generali integrate,visiva completa
+M–Z,5,8,Condizioni iniettività/suriettività per uguaglianze,A–L 5 p.2,integrate con prove,visiva completa
+M–Z,6,1,Composizione e associatività,A–L 5 p.3,coperto,visiva completa
+M–Z,6,2,Composizione immagini e controimmagini,A–L 5 p.4,coperto,visiva completa
+M–Z,6,3,Quattro proprietà composte e prove,A–L 5 pp.4–6,coperto,visiva completa
+M–Z,6,4,Controesempi; identità,A–L 5 pp.6–7,coperto; quattro controesempi A–L mantenuti,visiva completa
+M–Z,6,5,Inverse unilaterali; quadrato/radice,A–L 5 p.7; 6 pp.1–2,coperto,visiva completa
+M–Z,6,6,Radice negativa; seno; criteri inverse,A–L 6 pp.1–2,esercizio seno integrato; proprietà trigonometriche assunte,visiva completa
+M–Z,7,1,Ripresa esercizio a tratti: iniettività,A–L 4 p.5,conferma; collocato con consegna A–L,visiva completa
+M–Z,7,2,Conclusione esercizio; costruzione inversa sinistra,A–L 4 p.5; 6 p.3,coperto,visiva completa
+M–Z,7,3,Criteri inverse sinistra/destra,A–L 6 pp.3–4,coperto,visiva completa
+M–Z,7,4,Biettività; unicità inversa; frecce,A–L 5 p.7; 6 p.5,coperto,visiva completa
+M–Z,7,5,Esistenza iniezione iff suriezione; insiemi funzioni,A–L 6 pp.5–6,coperto,visiva completa
+M–Z,7,6,Tuple e successioni,A–L 6 p.6,coperto,visiva completa
+M–Z,7,7,Famiglie indicizzate come funzioni,A–L 6 p.6,chiarimento generale integrato,visiva completa
+M–Z,7,8,Funzioni caratteristiche; alpha/beta,A–L 6 pp.6–7; 7 p.1,coperto,visiva completa
+M–Z,7,9,Inversione reciproca alpha/beta,A–L 7 pp.1–2,coperto,visiva completa
+M–Z,8,1,Cardinalità finita; confronto via iniezioni/suriezioni,A–L 7 p.2; 8 p.3,coperto; ordine A–L,visiva completa
+M–Z,8,2,Potenze e 2^n; avvio Cantor,A–L 7 p.2; 8 pp.5–6,coperto; Cantor non anticipato,visiva completa
+M–Z,8,3,Diagonale Cantor; infinito,A–L 8 pp.5–6; 7 pp.2–3,coperto; ordine A–L,visiva completa
+M–Z,8,4,Infinito; scelta successione; spostamento,A–L 7 p.3; 8 p.1,coperto,visiva completa
+M–Z,8,5,Conclusione infinito; equipotenza,A–L 8 pp.1–2,coperto,visiva completa
+M–Z,8,6,Ordine cardinalità; Cantor–Bernstein; confronto totale; aleph0,A–L 8 p.3,CSB solo enunciato; confronto totale integrato come risultato assunto su autorizzazione autore,visiva completa
+M–Z,8,7,Continuo; ipotesi del continuo e commento assiomatico,A–L 8 p.6,ipotesi e indecidibilità integrate; esclusa inferenza scorretta su infinite cardinalità intermedie,visiva completa
+M–Z,9,1,Numerabilità N² e potenze finite; diagonali,A–L 8 p.4,coperto,visiva completa
+M–Z,9,2,Numerabilità Q e Z; avvio cardinalità R,A–L 8 pp.4–5; 9 p.1,coperto,visiva completa
+M–Z,9,3,Tagli razionali; passo analitico assunto; unione numerabile,A–L 9 p.1; 8 pp.4–5,chiarisce limite del passo analitico; non inserita prova alternativa,visiva completa
+M–Z,9,4,Unione numerabile; somma/prodotto cardinalità infinite,A–L 8 pp.4–5,unione coperta; aritmetica cardinale integrata come risultato assunto su autorizzazione autore,visiva completa
+M–Z,9,5,Aritmetica cardinale; divisibilità Z,A–L 9 p.3,divisibilità coperta; aritmetica cardinale integrata con correzione caso vuoto,visiva completa
+M–Z,9,6,Associati; primi; crivello,A–L 9 pp.3–4,coperto; infinità A–L mantenuta,visiva completa
+M–Z,9,7,MCD e mcm; unicità a meno segno,A–L 9 pp.4–6; 10 p.1,coperto; mantenuto ordine A–L,visiva completa
+M–Z,9,8,Combinazioni e prodotti; dividere per MCD,A–L 10 p.1,prova senza Bézout integrata nel punto A–L,visiva completa
+M–Z,9,9,Conclusione coprimalità; ipotesi MCD non nullo,A–L 10 p.1,ipotesi esplicitata,visiva completa
+M–Z,10,1,Divisione euclidea e casi di segno,A–L 10 pp.2–3,confrontato; esempi numerici varianti non duplicati,visiva completa
+M–Z,10,2,"Esistenza divisione, positivi/negativi",A–L 10 pp.2–3,coperto,visiva completa
+M–Z,10,3,Unicità divisione; minima combinazione positiva,A–L 10 p.3; 11 pp.2–3,coperto; mantenuto ordine A–L,visiva completa
+M–Z,10,4,Prova minimo positivo e MCD,A–L 11 p.3,coperto,visiva completa
+M–Z,11,1,Bézout; non unicità coefficienti; criterio coprimalità,A–L 11 pp.1–2,non unicità integrata con svolgimento,visiva completa
+M–Z,11,2,Combinazioni = MCD Z; algoritmo esteso,A–L 11 pp.1–2,uguaglianza insiemi integrata; algoritmo coperto,visiva completa
+M–Z,11,3,Tabella algoritmo esteso; invarianti,A–L 11 pp.1–2,invarianti coperti da ricostruzione dei resti,visiva completa
+M–Z,11,4,"Correttezza algoritmo; esempio 72,-420",A–L 11 p.2,coperto; segni ricondotti a valori assoluti,visiva completa
+M–Z,11,5,Euclide; coprimi divisori implicano prodotto divisore; primi,A–L 11 pp.3–4,corollario prodotto integrato,visiva completa
+M–Z,11,6,Caratterizzazione primi; fattorizzazione,A–L 11 pp.4–5,coperto,visiva completa
+M–Z,11,7,Esistenza fattorizzazione; unicità rinviata,A–L 11 pp.5–6,A–L conserva prova unicità già svolta; M–Z non la fornisce,visiva completa

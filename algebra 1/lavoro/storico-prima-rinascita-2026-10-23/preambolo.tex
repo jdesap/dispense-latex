@@ -1,0 +1,211 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[a4paper,margin=27mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{needspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\usepackage{mdframed}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{footnotehyper}
+
+\definecolor{coloreschema}{RGB}{30,77,112}
+\hypersetup{
+  unicode=true,
+  hidelinks,
+  pdftitle={Appunti di algebra 1},
+  pdfauthor={Jude De Sa'Pinto},
+  pdfsubject={Algebra 1 -- Prof.ssa E. Detomi},
+  bookmarksnumbered=true,
+  bookmarksdepth=2
+}
+% Indice stampato sintetico; sottosezioni disponibili nei segnalibri PDF.
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+\setlength{\parindent}{0pt}
+% Un poco più di aria tra il corpo del testo e il separatore delle note.
+\addtolength{\skip\footins}{3pt}
+\setlist[enumerate]{leftmargin=*,labelindent=0pt,itemsep=.35em,topsep=.4em}
+\setlist[itemize]{leftmargin=*,labelindent=0pt,itemsep=.25em,topsep=.4em}
+\setlist[description]{leftmargin=0pt,labelindent=0pt}
+\raggedbottom
+\interfootnotelinepenalty=10000
+\emergencystretch=1.5em
+\AddToHook{cmd/section/before}{\Needspace{9\baselineskip}}
+\AddToHook{cmd/subsection/before}{\Needspace{7\baselineskip}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{.3pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+% === STILE MATEMATICO: parametri modificabili ===
+% Colori delle barre laterali; titoli e testo restano neri.
+\definecolor{coloreRisultati}{RGB}{83,76,153}     % Teoremi, lemmi, proposizioni, corollari, assiomi.
+\definecolor{coloreDefinizioni}{RGB}{35,112,77}   % Verde.
+\definecolor{coloreEsempi}{RGB}{225,178,24}       % Giallo oro della barra.
+\definecolor{coloreEsercizi}{RGB}{202,24,113}     % Rosa acceso.
+\definecolor{coloreOsservazioni}{RGB}{90,96,105}  % Grigio neutro.
+\definecolor{coloreFasi}{RGB}{130,134,143}        % Contorno delle formule guida.
+\definecolor{coloreRichiamiNote}{RGB}{0,85,255}   % Blu elettrico dei numeri delle note.
+\newlength{\spessoreBarraAmbiente}
+\setlength{\spessoreBarraAmbiente}{1.6pt}
+\newlength{\distanzaBarraAmbiente}
+\setlength{\distanzaBarraAmbiente}{8pt}
+\newlength{\sogliaBloccoBreve}
+\setlength{\sogliaBloccoBreve}{8\baselineskip} % I blocchi brevi restano interi.
+\newlength{\rientroDimostrazione}
+\setlength{\rientroDimostrazione}{4mm}
+\newlength{\spazioParagrafiProva}
+\setlength{\spazioParagrafiProva}{.42\baselineskip}
+\newlength{\spazioFormuleProva}
+\setlength{\spazioFormuleProva}{8pt}
+\newlength{\spessoreBoxFase}
+\setlength{\spessoreBoxFase}{.35pt}
+\newlength{\margineBoxFase}
+\setlength{\margineBoxFase}{2.2pt}
+% Ambienti matematici: una sola barra a sinistra, senza fondo o cornice.
+% Le note conservano numerazione, collegamenti e posizione a piè di pagina.
+\makeatletter
+\renewcommand{\mdf@footnoteinput}{}
+% Evita frammenti finali di poche righe; i blocchi lunghi restano spezzabili.
+\pretocmd{\detected@mdf@put@frame}{%
+  \ifdim\dimexpr\ht\mdf@splitbox@one+\dp\mdf@splitbox@one\relax<\sogliaBloccoBreve
+    \booltrue{mdf@nobreak}%
+  \fi
+}{}{\PackageError{dispense}{Impossibile impostare i blocchi brevi}{Verificare la versione di mdframed.}}
+% Colora solo il richiamo, sia nel corpo sia a piè di pagina.
+\renewcommand{\@makefnmark}{%
+  \hbox{\@textsuperscript{\normalfont\color{coloreRichiamiNote}\@thefnmark}}%
+}
+\makeatother
+\makesavenoteenv{mdframed}
+\mdfdefinestyle{barraDispensa}{
+  topline=false, rightline=false, bottomline=false, leftline=true,
+  linewidth=\spessoreBarraAmbiente,
+  backgroundcolor=white, fontcolor=black,
+  % La barra è allineata al testo normale; il contenuto rientra di spessore + distanza.
+  leftmargin=0pt,
+  rightmargin=0pt,
+  innerleftmargin=\distanzaBarraAmbiente, innerrightmargin=0pt,
+  innertopmargin=1.5pt, innerbottommargin=1.5pt,
+  skipabove=6pt, skipbelow=4pt,
+  splittopskip=5pt, splitbottomskip=3pt,
+  needspace=4\baselineskip,
+  nobreak=false
+}
+
+\newtheoremstyle{risultatoDispensa}
+  {0pt}{0pt}{\itshape}{}{\bfseries}{.}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
+\newtheoremstyle{definizioneDispensa}
+  {0pt}{0pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
+\newtheoremstyle{esempioDispensa}
+  {0pt}{0pt}{\normalfont}{}{\bfseries}{:}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
+\newtheoremstyle{esercizioDispensa}
+  {0pt}{0pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
+\newtheoremstyle{osservazioneDispensa}
+  {0pt}{0pt}{\normalfont}{}{\bfseries}{.}{.55em}
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\;(#3)}}
+
+\theoremstyle{risultatoDispensa}
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{lemma}[teorema]{Lemma}
+\newtheorem{proposizione}[teorema]{Proposizione}
+\newtheorem{corollario}[teorema]{Corollario}
+\newtheorem{assioma}[teorema]{Assioma}
+\theoremstyle{definizioneDispensa}
+\newtheorem{definizione}[teorema]{Definizione}
+\theoremstyle{esempioDispensa}
+\newtheorem*{esempio}{Esempio}
+\theoremstyle{esercizioDispensa}
+\newtheorem*{esercizio}{Esercizio}
+\theoremstyle{osservazioneDispensa}
+\newtheorem*{osservazione}{Osservazione}
+
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{teorema}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{lemma}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{proposizione}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{corollario}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreRisultati]{assioma}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreDefinizioni]{definizione}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreEsempi]{esempio}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreEsercizi]{esercizio}
+\surroundwithmdframed[style=barraDispensa,linecolor=coloreOsservazioni]{osservazione}
+
+% Formule guida in linea: \passomath{A\subseteq B}, \passomath{\Rightarrow}.
+% La scatola non altera le formule né introduce numerazione o segnalibri.
+\newcommand{\passomath}[1]{%
+  \begingroup
+  \setlength{\fboxsep}{\margineBoxFase}%
+  \setlength{\fboxrule}{\spessoreBoxFase}%
+  \fcolorbox{coloreFasi}{white}{\normalfont\ensuremath{#1}}%
+  \endgroup\enspace\ignorespaces
+}
+
+% Una lista senza etichetta rientra l'intera prova, comprese formule ed elenchi.
+% Mantiene le interruzioni di pagina e le note nel normale flusso del documento.
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}\normalfont
+  \list{}{%
+    \setlength{\leftmargin}{\rientroDimostrazione}%
+    \setlength{\rightmargin}{0pt}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\itemindent}{0pt}%
+    \setlength{\listparindent}{0pt}%
+    \setlength{\topsep}{6pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\parsep}{\spazioParagrafiProva}%
+    \setlength{\itemsep}{0pt}%
+  }%
+  \item\relax
+  \setlength{\parskip}{\spazioParagrafiProva}%
+  \setlength{\abovedisplayskip}{\spazioFormuleProva}%
+  \setlength{\belowdisplayskip}{\spazioFormuleProva}%
+  \setlength{\belowdisplayshortskip}{5pt}%
+  \textit{#1\@addpunct{.}}\enspace\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+}
+\makeatother
+
+% Gli svolgimenti usano lo stesso rientro delle dimostrazioni.
+\newenvironment{svolgimento}{\begin{proof}[Svolgimento]}{\end{proof}}
+
+% Non lasciare un enunciato isolato in fondo pagina.
+\AddToHook{env/proposizione/before}{\Needspace{6\baselineskip}}
+\AddToHook{env/teorema/before}{\Needspace{6\baselineskip}}
+\AddToHook{env/lemma/before}{\Needspace{6\baselineskip}}
+\AddToHook{env/corollario/before}{\Needspace{6\baselineskip}}
+\AddToHook{env/assioma/before}{\Needspace{6\baselineskip}}
+% === FINE STILE MATEMATICO ===
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\fonti}[1]{\par\nobreak\noindent{\small\itshape #1.}\par\medskip}
+\newenvironment{schema}
+  {\par\medskip\noindent\begin{minipage}{\linewidth}\centering\small}
+  {\end{minipage}\par\medskip}
+\tikzset{
+  asse/.style={-{Stealth[length=2mm]},draw=black!55,line width=.5pt},
+  vettore/.style={-{Stealth[length=2.5mm]},draw=coloreschema,line width=1pt},
+  spazio/.style={draw=coloreschema,line width=.9pt,fill=coloreschema!5}
+}

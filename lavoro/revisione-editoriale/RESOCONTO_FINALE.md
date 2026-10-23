@@ -1,6 +1,6 @@
 # Revisione conclusa — 22 ottobre 2026
 
-Questo resoconto fotografa la revisione precedente alle successive modifiche visive richieste dall'autore. Lo stato corrente dello stile e dell'impaginazione è documentato in `SESSIONE_14.md` e `VERIFICA_STILE_14.json`: Analisi ha 55 pagine; Geometria 29. I limiti matematici descritti sotto restano validi.
+Questo resoconto fotografa la revisione precedente alle successive modifiche visive richieste dall'autore. Lo stato corrente dello stile e dell'impaginazione è documentato in `SESSIONE_15.md` e `VERIFICA_STILE_15.json`: Analisi ha 56 pagine; Geometria 29. I limiti matematici descritti sotto restano validi.
 
 Revisionate integralmente le due dispense attive in undici sessioni: sette capitoli di Analisi 1 e il capitolo Spazi vettoriali di Geometria 1, suddiviso in quattro sessioni di lavoro. Ambito e criteri sono in `CRITERI.md`; dettagli e controlli per sezione nei resoconti `SESSIONE_01.md`–`SESSIONE_11.md` e nei relativi JSON.
 

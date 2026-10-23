@@ -1,0 +1,66 @@
+fonte,pagina,contenuto,stato,modulo_attivo
+Lezione 1,1,Operazioni tra insiemi; diagrammi di Venn; metadato docente E. Detomi,integrato; confronto visivo della fonte,capitoli/01-insiemi.tex
+Lezione 1,2,Commutatività; associatività; unioni e intersezioni indicizzate,integrato; confronto visivo della fonte,capitoli/01-insiemi.tex
+Lezione 1,3,Esercizi su associatività di differenza e differenza simmetrica; prodotto cartesiano ed esempio finito,integrato; confronto visivo della fonte,capitoli/01-insiemi.tex
+Lezione 1,4,Prodotti con n fattori; potenze cartesiane; R²,integrato; confronto visivo della fonte,capitoli/01-insiemi.tex
+Lezione 2,1,Insieme delle parti; esempio a tre elementi; complementare e doppio complementare; De Morgan,integrato; confronto visivo della fonte,capitoli/01-insiemi.tex
+Lezione 2,2,Tabella di verità; distributività; differenza simmetrica e intersezione; elementi neutri; esercizi di annullamento,integrato; confronto visivo della fonte,capitoli/01-insiemi.tex
+Lezione 2,3,Relazione città-persone; rappresentazione per coppie e tabella; tre relazioni da rappresentare graficamente,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 2,4,Relazioni binarie; uguaglianza; equivalenza; frazioni; similitudine; parallelismo,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 2,5,Esercizi di riconoscimento di equivalenze; ordine parziale e totale; ordine sui reali,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 2,6,"Inclusione e divisibilità come ordini; controesempio sugli interi; confrontabilità; insieme {1,2,-2,6,-6,18}",integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 3,1,Partizioni e decomposizione di due/tre insiemi in regioni disgiunte,integrato; confronto visivo della fonte,capitoli/01-insiemi.tex; capitoli/02-relazioni.tex
+Lezione 3,2,Prova dell’associatività della differenza simmetrica mediante regioni,integrato; confronto visivo della fonte,capitoli/01-insiemi.tex
+Lezione 3,3,Classe di equivalenza; equivalenza implica uguaglianza delle classi; prima inclusione,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 3,4,Seconda inclusione e verso inverso; definizione di quoziente e schema,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 3,5,Teorema equivalenze-partizioni nei due versi; inizio prova della copertura,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 3,6,Copertura; disgiunzione delle classi; riflessività e simmetria dell’equivalenza da partizione,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 3,7,Transitività; esercizio della corrispondenza biunivoca; descrizione di quozienti,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 3,8,Costruzione di Q come quoziente di Z×Z*; esempi di rappresentanti equivalenti,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 4,1,Richiami su partizioni e classi; esempio x²=y²; razionali e regola incompatibile,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex; capitoli/03-funzioni.tex
+Lezione 4,2,Somma dei razionali e verifica della buona definizione; prodotto,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex
+Lezione 4,3,Verifica del prodotto; definizione di funzione; regola a/b↦a+b; immagine e grafico,integrato; confronto visivo della fonte,capitoli/02-relazioni.tex; capitoli/03-funzioni.tex
+Lezione 4,4,Esempi: costante complessa; identità; quadrato non negativo; area; differenza; supporto primo; regola non definita,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 4,5,Grafico e criterio verticale; iniettività e suriettività; esercizi su esempi e funzione a tratti su Z,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 4,6,"Esercizio F(x,y)=(y³,x(y²+1)); equivalenza indotta e fibre; quadrato",integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 4,7,Fibre del supporto primo sopra 5 e 6,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 5,1,Biettività; proiezione canonica; suriettività; fibre,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 5,2,Immagine diretta e controimmagine; quadrato su intervalli; mancata inversione,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 5,3,Definizione di composizione; associatività con prova,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 5,4,Esempio di inclusione dopo una funzione; composizione delle immagini/controimmagini; quattro proprietà,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 5,5,Prove delle proprietà della composta: iniettività; suriettività; primo fattore iniettivo; avvio ultimo caso,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 5,6,Ultimo fattore suriettivo; quattro controesempi e loro domini/codomini,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 5,7,Identità; inverse a sinistra/destra; coincidenza; invertibilità; quadrato e radice,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 6,1,Supporto primo esteso a 0 e 1; immagine esatta; non iniettività/suriettività; quadrato e radice,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 6,2,Seconda inversa destra negativa; criteri di esistenza inverse,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 6,3,Costruzione e prova dell’inversa sinistra; verso inverso,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 6,4,Costruzione e prova dell’inversa destra; verso inverso,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 6,5,Notazione iniezione/suriezione/biezione; inclusione; equivalenza di esistenze fra iniezioni e suriezioni,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 6,6,Insiemi di funzioni; tuple e successioni; funzione caratteristica; mappa α,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 6,7,Mappa β; esercizio di biettività e inversione reciproca di α e β,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 7,1,Prova αβ=id e βα=id,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex
+Lezione 7,2,Corollario cardinalità insieme delle parti; insiemi finiti e infiniti; quattro caratterizzazioni; avvio scelta successione,integrato; confronto visivo della fonte,capitoli/03-funzioni.tex; capitoli/04-cardinalita.tex
+Lezione 7,3,Costruzione iniezione N→X; spostamento su una copia di N,integrato; confronto visivo della fonte,capitoli/04-cardinalita.tex
+Lezione 8,1,Verifica dell’iniettività dello spostamento nei tre casi,integrato; confronto visivo della fonte,capitoli/04-cardinalita.tex
+Lezione 8,2,Immagine propria; impossibilità finita; equipotenza,integrato; confronto visivo della fonte,capitoli/04-cardinalita.tex
+Lezione 8,3,Confronto cardinalità; Cantor–Schröder–Bernstein; numerabilità e aleph0,integrato; confronto visivo della fonte,capitoli/04-cardinalita.tex
+Lezione 8,4,Numerabilità N² e N^r; codifica 2^m(2n+1)-1; unioni numerabili; numerabilità Q,integrato; confronto visivo della fonte,capitoli/04-cardinalita.tex
+Lezione 8,5,Prova unione numerabile; Z e Q; teorema di Cantor e insieme diagonale,integrato; confronto visivo della fonte,capitoli/04-cardinalita.tex
+Lezione 8,6,Conclusione Cantor; potenza del continuo; ipotesi del continuo; esercizio A∪B A×B B^A,integrato; confronto visivo della fonte,capitoli/04-cardinalita.tex
+Lezione 9,1,Cardinalità di R; tagli razionali; potenze di insiemi equipotenti; limite codifica binaria,integrato; passo analitico dichiarato assunto e confronto M–Z L9 pp.2–3,capitoli/04-cardinalita.tex
+Lezione 9,2,Operazioni di Z; proprietà di anello; assenza divisori zero; unità,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 9,3,Divisibilità; associati; primi; avvio prova infinità,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 9,4,Infinità dei primi; numerabilità P; crivello; avvio definizione MCD,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 9,5,Definizione MCD; esempio -12 e 16; cambi di segno e unicità a meno di associati,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 9,6,"Notazione MCD positivo; caso (0,a)",integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 10,1,mcm e associati; combinazioni divisibili; prodotto; criterio MCD; coprimalità dopo divisione per MCD,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 10,2,Divisione euclidea: enunciato; esistenza non negativa per induzione,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 10,3,Divisione con segni; unicità; resto nullo; invarianza MCD,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 10,4,Conclusione dell’invarianza MCD mediante associati positivi,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 11,1,Algoritmo di Euclide; terminazione; Bézout,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 11,2,"Esempio 72,420; risalita; coprimalità; minima combinazione positiva",integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 11,3,Prova minimo positivo mediante divisione; lemma di Euclide,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 11,4,Caratterizzazione primi con prodotti; avvio teorema fondamentale,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 11,5,Enunciato fattorizzazione con esponenti; esistenza per induzione forte,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 11,6,Unicità della fattorizzazione per cancellazione e induzione,integrato; confronto visivo della fonte,capitoli/05-interi.tex
+Lezione 11,7,Formule MCD e mcm; identità del prodotto; esercizio irrazionalità radice di primo,integrato; confronto visivo della fonte,capitoli/05-interi.tex

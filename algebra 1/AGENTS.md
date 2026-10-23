@@ -1,0 +1,16 @@
+# Continuità della dispensa di Algebra
+
+- L'autore frequenta **A–L**. Le fonti A–L sono l'ossatura della dispensa e i futuri caricamenti ordinari saranno di questa serie.
+- Seguire il flusso delle lezioni A–L all'interno dei capitoli per macroargomento. Non riordinare autonomamente il corso per preferenze didattiche. Per adottare l'ordine M–Z o un ordine alternativo occorre chiedere prima all'autore.
+- **Scelta delle dimostrazioni:** confrontare le prove disponibili in entrambe le serie e scegliere la migliore per correttezza, completezza, chiarezza e coerenza con i prerequisiti del punto in cui compare. Nessuna preferenza automatica per A–L: A–L determina ordine e copertura, non la dimostrazione da adottare. Una prova M–Z migliore può sostituire quella A–L, con provenienza e motivo della scelta nei registri. Completare i passaggi impliciti necessari; non introdurre teorie successive per ottenere una prova più breve. Conservare prove alternative quando apportano un metodo o un contenuto utile distinto, evitando duplicazioni equivalenti.
+- La serie **M–Z** è una fonte di confronto e integrazione: usarla per colmare mancanze, chiarire/completare prove e recuperare contenuti omessi in argomenti già conclusi in A–L. Distinguere nei registri ciò che è A–L, ciò che è supportato da M–Z e gli eventuali svolgimenti completati. Integrare anche i contenuti esclusivi M–Z interni ad argomenti già conclusi; lasciare fuori quelli plausibilmente rinviati a sviluppi successivi, registrando il motivo. Non anticipare i nuovi argomenti solo perché già presenti in M–Z.
+- Ricondurre un ritorno tardivo a un argomento precedente al punto pertinente solo quando si tratta effettivamente di una ripresa delle lezioni; non creare nuovi argomenti o nuove dimostrazioni autonome non richieste.
+- Ogni prova deve usare soltanto strumenti disponibili in quel punto. In particolare, dimostrare l'associatività della differenza simmetrica con le operazioni tra insiemi, senza anticipare funzioni caratteristiche, parità o calcolo modulo 2.
+- Le provenienze numeriche sotto i capitoli si riferiscono ad A–L; corrispondenze e pagine M–Z restano nei commenti e nei registri esterni.
+
+## Metodo di revisione adottato dopo la ricostruzione
+
+- Prima di scrivere un nuovo blocco, ricavare dalle pagine originali una lista di contenuti e, per ogni prova, ipotesi, prerequisiti e schema dei passaggi. Confrontare le due serie prima della scelta, senza usare il testo precedente come unica ossatura.
+- Verificare le induzioni esplicitando parametro, base, ipotesi e passo; per ricorrenze a due termini servono le due righe iniziali. Distinguere terminazione, correttezza e costruzione dei coefficienti nell'algoritmo di Euclide.
+- Registrare la scelta delle prove e le integrazioni per unità in `lavoro/SCELTA_DIMOSTRAZIONI.csv`; le sole righe di copertura per pagina non sono una verifica dello sviluppo delle prove. Non presentare controlli numerici o compilazione come certificazione matematica.
+- La ricostruzione del 23 ottobre è il nuovo testo di riferimento. Le versioni in `lavoro/storico-*` e le sessioni 1–2 sono storiche. Per i futuri caricamenti integrare il nuovo materiale A–L nel testo corrente, con lo stesso metodo, senza ripartire ogni volta.

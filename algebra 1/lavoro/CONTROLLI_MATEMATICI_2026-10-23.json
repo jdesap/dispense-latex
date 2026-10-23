@@ -1,0 +1,34 @@
+{
+  "identita_insiemi": {
+    "terne": 4096,
+    "esito": true
+  },
+  "cambi_rappresentante_razionali": 3528,
+  "funzione_intera_a_tratti": {
+    "punti": 1001,
+    "esito": true
+  },
+  "inversa_piano_sostituzione_esatta": 961,
+  "divisione_con_segni_e_passo_euclideo": 25760,
+  "esempio_bezout_72_420": [
+    12,
+    6,
+    -1
+  ],
+  "supporto_primo_e_fibre": {
+    "intervallo": [
+      1,
+      399
+    ],
+    "esito": true
+  },
+  "codifica_coppie_inverse": 10000,
+  "codifica_ternaria_prefissi": {
+    "lunghezze": [
+      1,
+      8
+    ],
+    "esito": true
+  },
+  "limite": "Controlli su insiemi finiti e intervalli dichiarati; le prove generali sono nel testo."
+}

@@ -186,6 +186,8 @@
 % Gli svolgimenti usano lo stesso rientro delle dimostrazioni.
 \newenvironment{svolgimento}{\begin{proof}[Svolgimento]}{\end{proof}}
 
+% La consegna di un esercizio deve avere spazio per avviare lo svolgimento.
+\AddToHook{env/esercizio/before}{\Needspace{12\baselineskip}}
 % Non lasciare un enunciato isolato in fondo pagina.
 \AddToHook{env/proposizione/before}{\Needspace{6\baselineskip}}
 \AddToHook{env/teorema/before}{\Needspace{6\baselineskip}}

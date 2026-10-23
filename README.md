@@ -7,6 +7,7 @@ i sorgenti LaTeX, le fonti, la configurazione di compilazione e il PDF.
 
 - [Analisi 1 — PDF](<analisi 1/build/main.pdf>)
 - [Geometria 1 — PDF](<geometria 1/build/main.pdf>)
+- [Algebra 1 — PDF](<algebra 1/build/main.pdf>)
 
 ### Importare un capitolo in Goodnotes
 
@@ -14,6 +15,7 @@ Ogni compilazione aggiorna automaticamente anche i PDF in:
 
 - `analisi 1/build/capitoli/`: un PDF per ciascuno dei sette capitoli attuali.
 - `geometria 1/build/capitoli/`: attualmente `01-spazi-vettoriali.pdf`.
+- `algebra 1/build/capitoli/`: cinque capitoli, dagli insiemi all'aritmetica degli interi.
 
 Su iPad importare in Goodnotes soltanto il PDF del capitolo che si vuole
 studiare. I file hanno nomi riconoscibili e mantengono le pagine e la

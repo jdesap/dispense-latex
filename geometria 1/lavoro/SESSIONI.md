@@ -391,3 +391,17 @@ Applicate barre laterali ai diversi ambienti, intestazioni nere e numeretti dell
 ## Stile visivo — sessione 14, 22 ottobre 2026
 
 Barra allineata al testo normale e corpo degli ambienti rientrato di circa 3.4 mm. Compilazioni condivise e integrate riuscite senza avvisi LaTeX; formule, allineamenti e tutti gli estratti verificati. Contenuti invariati, con solo un correttivo di impaginazione prima del binomio. Analisi ha ora 55 pagine (sette nel capitolo 3); Geometria 29 (26 di Spazi vettoriali). Cambiano numerazione dei capitoli 4–7 di Analisi e disposizione interna degli ambienti. Copie annotate non modificate. Dettagli in `../../lavoro/revisione-editoriale/SESSIONE_14.md` e `VERIFICA_STILE_14.json` nella stessa cartella comune.
+
+
+## Verifica dell’esportazione con Algebra — 23 ottobre 2026
+
+Aggiornato l’esportatore condiviso per conservare anche i link a pagine esterne al capitolo come collegamenti remoti al volume completo. Rigenerati e verificati gli estratti: identità di tutti i flussi pagina, testo, formato, numerazione e rendering pixel; conservate tutte le annotazioni e verificate le destinazioni. Nessuna modifica ai contenuti o all’impaginazione del volume e nessuna copia annotata modificata. Risultati correnti in `../../strumenti/VERIFICA_ESPORTAZIONE_2026-10-23.json`. I collegamenti remoti richiedono un lettore compatibile e il volume nel percorso relativo.
+
+
+## Rifiniture editoriali — sessione 15, 23 ottobre 2026
+
+Uniformata ad Algebra la separazione fra consegna nell'ambiente `esercizio` e soluzione nell'ambiente `svolgimento`. Recuperati esercizi ancora mescolati alla spiegazione e svolgimenti senza ambiente; uniformati due alias e consegne incomplete. In Analisi riportati sei esempi manuali negli ambienti gialli e una prova degli intorni nell'ambiente delle dimostrazioni. Migliorati i raccordi per gli esercizi brevi e per la densità; allineata la protezione delle note di Analisi a Geometria e Algebra.
+
+Conservati tutte le formule precedenti, gli ambienti di calcolo, i 47 TikZ complessivi, note, label e sequenza degli enunciati numerati. Compilazione condivisa e integrata riuscite senza avvisi LaTeX; tutti gli otto estratti verificati, anche pixel per pixel e nei collegamenti. Analisi passa da 55 a 56 pagine: capitolo 4 di 12 pagine, numerazione dei capitoli 5–7 spostata di una pagina; Geometria resta di 29 pagine, con 26 per Spazi vettoriali. Cambia anche la disposizione interna di alcune pagine. Copie annotate non modificate.
+
+Regola aggiunta ad `AGENTS.md` e `MASTER_PROMPT.md`. Resoconto e verifiche in `../../lavoro/revisione-editoriale/SESSIONE_15.md` e `VERIFICA_STILE_15.json` nella cartella comune. Le modifiche sono editoriali: restano i limiti delle precedenti revisioni matematiche.

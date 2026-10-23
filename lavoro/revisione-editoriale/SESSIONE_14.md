@@ -1,5 +1,7 @@
 # Sessione 14 — Barra sul margine del testo, 22 ottobre 2026
 
+Stato successivo: separazione esercizi/svolgimenti e impaginazione corrente in `SESSIONE_15.md` e `VERIFICA_STILE_15.json`.
+
 ## Modifica richiesta
 
 La barra degli ambienti è ora allineata al margine sinistro del testo normale (`leftmargin=0pt`), con il contenuto spostato a destra di 9.6 pt, circa 3.4 mm: 1.6 pt di barra e 8 pt di spazio interno. Il margine destro resta quello ordinario; diminuisce di 9.6 pt la larghezza disponibile dentro gli ambienti. Parametri nei due `preambolo.tex`, blocco **STILE MATEMATICO** dalla riga 51, allineamento nello stile `barraDispensa` dalla riga 91.

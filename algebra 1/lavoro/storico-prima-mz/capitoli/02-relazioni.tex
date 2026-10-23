@@ -1,0 +1,245 @@
+% !TeX root = ../main.tex
+\chapter{Relazioni, equivalenze e quozienti}
+\fonti{Lezioni 2, 3 e 4}
+
+\section{Relazioni tra insiemi}
+% Fonte: L2 pp. 3--4.
+\begin{definizione}
+Una \textbf{relazione} da $X$ a $Y$ è un sottoinsieme $\rho\subseteq X\times Y$. Si scrive $x\mathrel\rho y$ quando $(x,y)\in\rho$. Se $Y=X$, si parla di relazione binaria \textbf{su} $X$.
+\end{definizione}
+
+\begin{esempio}[Città visitate]
+Siano $X=\{P,V,R,M,T\}$ un insieme di cinque città e $Y=\{\text{Anna},\text{Luca},\text{Lia}\}$. La relazione «la città è stata visitata dalla persona» può essere descritta da
+\[
+\begin{split}
+\rho=\{&(P,\text{Anna}),(V,\text{Anna}),(R,\text{Anna}),\\
+       &(M,\text{Luca}),(T,\text{Luca}),(M,\text{Lia}),(R,\text{Lia})\}.
+\end{split}
+\]
+La stessa informazione è rappresentata dalla tabella seguente, dove un segno indica che la coppia appartiene alla relazione:
+\[
+\begin{array}{c|ccc}
+&\text{Anna}&\text{Luca}&\text{Lia}\\\hline
+P&\times&&\\V&\times&&\\R&\times&&\times\\M&&\times&\times\\T&&\times&
+\end{array}
+\]
+Una relazione può associare a una città più persone; non è richiesto che si tratti di una funzione.
+\end{esempio}
+
+\begin{esercizio}[Descrizione grafica di relazioni]
+Descrivere le relazioni
+\[
+\begin{aligned}
+\rho&=\{(x,y)\in\N\times\Z\mid x+y=1\},\\
+\sigma&=\{(x,y)\in\R^2\mid x^2+y^2=1\},\\
+\tau&=\{(a,b)\in\N^*\times\N\mid b/a\in\N\}.
+\end{aligned}
+\]
+\end{esercizio}
+\begin{svolgimento}
+La prima è l'insieme dei punti $(n,1-n)$, $n\in\N$: è una parte discreta della retta $y=1-x$, a partire da $(0,1)$. La seconda è la circonferenza unitaria di centro l'origine. La terza consiste nei punti $(a,ka)$, con $a\ge1$ e $k\in\N$: per ciascuna ascissa intera positiva sono ammessi tutti i multipli non negativi di essa, compreso $b=0$.
+\end{svolgimento}
+
+\begin{schema}
+\begin{tikzpicture}[scale=.65]
+  \begin{scope}
+    \draw[asse] (-.5,0)--(4,0) node[right] {$x$};\draw[asse] (0,-2.6)--(0,1.8) node[above] {$y$};
+    \draw[densely dashed,black!45] (-.3,1.3)--(3.4,-2.4);
+    \foreach \x in {0,...,3}{\fill[coloreschema] (\x,{1-\x}) circle (2pt);}
+    \node at (1.6,-3.2) {$x+y=1$, $x\in\N$};
+  \end{scope}
+  \begin{scope}[shift={(7,0)}]
+    \draw[asse] (-1.7,0)--(1.8,0) node[right] {$x$};\draw[asse] (0,-1.6)--(0,1.8) node[above] {$y$};
+    \draw[coloreschema,thick] (0,0) circle (1);\node at (.9,.3) {$1$};
+    \node at (0,-3.2) {$x^2+y^2=1$};
+  \end{scope}
+  \begin{scope}[shift={(11,0)}]
+    \draw[asse] (-.3,0)--(4.5,0) node[right] {$a$};\draw[asse] (0,-.3)--(0,4.6) node[above] {$b$};
+    \foreach \a in {1,...,4}{\foreach \b in {0,...,4}{\pgfmathtruncatemacro{\rem}{mod(\b,\a)}\ifnum\rem=0\fill[coloreschema] (\a,\b) circle (2pt);\fi}}
+    \node at (2,-3.2) {$a\mid b$, porzione del grafico};
+  \end{scope}
+\end{tikzpicture}
+\end{schema}
+
+\section{Relazioni di equivalenza}
+\begin{definizione}
+Una relazione $\rho$ su $X$ è una \textbf{relazione di equivalenza} se è
+\begin{itemize}
+  \item \textbf{riflessiva}: $x\rho x$ per ogni $x\in X$;
+  \item \textbf{simmetrica}: $x\rho y$ implica $y\rho x$;
+  \item \textbf{transitiva}: $x\rho y$ e $y\rho z$ implicano $x\rho z$.
+\end{itemize}
+Le ultime due condizioni valgono per ogni scelta degli elementi coinvolti.
+\end{definizione}
+
+\begin{esempio}[Uguaglianza]
+La diagonale $\Delta_X=\{(x,x)\mid x\in X\}$ è la relazione di uguaglianza. È riflessiva perché $x=x$, simmetrica perché $x=y$ implica $y=x$, transitiva perché da $x=y$ e $y=z$ segue $x=z$.
+\end{esempio}
+
+\begin{esempio}[Frazioni, triangoli e rette]
+Su $F=\Z\times\Z^*$, la relazione
+\[
+(a,b)\sim(c,d)\quad\Longleftrightarrow\quad ad=bc
+\]
+è un'equivalenza. Riflessività e simmetria seguono dall'uguaglianza dei prodotti. Per la transitività, da $ad=bc$ e $cf=de$ si ottiene $adf=bcf=bde$; cancellando $d\ne0$ si ricava $af=be$.
+
+La similitudine è un'equivalenza tra i triangoli non degeneri del piano: l'identità ha rapporto $1$; l'inversa di una similitudine di rapporto $r>0$ ha rapporto $1/r$; la composizione di due similitudini ha rapporto pari al prodotto dei rapporti.
+
+Anche il parallelismo tra rette del piano è un'equivalenza, purché si considerino parallele anche due rette coincidenti. Infatti equivale ad avere la stessa direzione: questa condizione è riflessiva, simmetrica e transitiva. Se si richiede che rette parallele siano distinte, viene meno la riflessività.
+\end{esempio}
+
+\begin{esercizio}[Riconoscere le equivalenze]
+Stabilire se sono equivalenze: $a\rho b\iff b=a^2$ su $\R$; la perpendicolarità tra rette; $a\sigma b\iff a\le b$ su $\N$; $a\tau b\iff |a|=|b|$ su $\R$; $x\sim_f x'\iff f(x)=f(x')$ per una funzione $f:X\to Y$.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Il grafico del quadrato.} Non è riflessivo, perché $2\not\rho2$. Non è simmetrico: $2\rho4$, ma $4\not\rho2$. Non è transitivo: $2\rho4$ e $4\rho16$, ma $2\not\rho16$.
+
+\textbf{Perpendicolarità.} È simmetrica, ma nessuna retta è perpendicolare a se stessa. Non è transitiva: se $r\perp s$, anche $s\perp r$, senza che $r\perp r$.
+
+\textbf{Ordine usuale.} È riflessivo e transitivo, ma non simmetrico: $0\le1$, mentre $1\nleq0$.
+
+\textbf{Valore assoluto.} L'uguaglianza dei valori assoluti è riflessiva, simmetrica e transitiva. Le classi saranno $\{t,-t\}$ per $t>0$, e $\{0\}$.
+
+\textbf{Uguaglianza delle immagini.} Le tre proprietà seguono rispettivamente da $f(x)=f(x)$, dalla simmetria dell'uguaglianza e da $f(x)=f(x')=f(x'')$. È dunque un'equivalenza; le sue classi sono le fibre di $f$.
+\end{svolgimento}
+
+\section{Relazioni d'ordine}
+% Fonte: L2 pp. 5--6.
+\begin{definizione}
+Una relazione su $X$ è un \textbf{ordine parziale} se è riflessiva, transitiva e \textbf{antisimmetrica}, cioè
+\[
+x\rho y\ \text{e}\ y\rho x\quad\Longrightarrow\quad x=y.
+\]
+È un \textbf{ordine totale} se inoltre ogni coppia è confrontabile: per ogni $x,y\in X$, vale $x\rho y$ oppure $y\rho x$.
+\end{definizione}
+
+\begin{esempio}
+L'ordine $\le$ su $\R$ è totale: oltre alle tre proprietà dell'ordine, due numeri reali sono sempre confrontabili. L'inclusione su $\mathcal P(Y)$ è un ordine parziale: $A\subseteq A$; da $A\subseteq B\subseteq A$ segue $A=B$; da $A\subseteq B\subseteq C$ segue $A\subseteq C$.
+
+La divisibilità $a\mid b\iff b=ak$ per qualche intero $k$ è un ordine parziale su $\N^*$: $a=a\cdot1$; da $b=ak$ e $c=bh$ segue $c=a(kh)$; se $a,b>0$ e si dividono a vicenda, $a\le b$ e $b\le a$, quindi $a=b$. Non è totale, perché $2\nmid3$ e $3\nmid2$.
+
+Su $\Z^*$ la divisibilità non è antisimmetrica: $1\mid-1$ e $-1\mid1$, ma $1\ne-1$.
+\end{esempio}
+
+\begin{esercizio}[Confrontabilità e antisimmetria]
+Per $X\ne\varnothing$, l'inclusione su $\mathcal P(X)$ è sempre totale? Su $S=\{1,2,-2,6,-6,18\}$, con la divisibilità, ogni coppia è confrontabile? Due elementi che si dividono a vicenda sono necessariamente uguali?
+\end{esercizio}
+\begin{svolgimento}
+Se $X$ contiene due elementi distinti $x,y$, i sottoinsiemi $\{x\}$ e $\{y\}$ non sono confrontabili. Se invece $X$ ha un solo elemento, $\mathcal P(X)=\{\varnothing,X\}$ è totalmente ordinato. Lo stesso vale per $X=\varnothing$, quando l'insieme delle parti ha un solo elemento.
+
+In $S$ i valori assoluti formano la catena $1\mid2\mid6\mid18$. Il segno non modifica la divisibilità intera, perciò ogni coppia è confrontabile. Tuttavia $2\mid-2$ e $-2\mid2$, mentre $2\ne-2$: la relazione resta priva di antisimmetria e non è un ordine totale.
+\end{svolgimento}
+
+\section{Classi, partizioni e insieme quoziente}
+% Fonti: L3 pp. 1, 3--7; L4 p. 1. Ripetizioni fuse.
+\begin{definizione}
+Una \textbf{partizione} di $X$ è una famiglia $\mathcal A\subseteq\mathcal P(X)$ di sottoinsiemi \emph{non vuoti}, detti blocchi, tale che la loro unione è $X$ e due blocchi distinti sono disgiunti. Equivalentemente, ogni elemento di $X$ appartiene a un unico blocco.
+\end{definizione}
+
+\begin{osservazione}
+La condizione sui blocchi non vuoti è necessaria. La sola implicazione $A\cap B\ne\varnothing\Rightarrow A=B$, insieme all'unione uguale a $X$, non impedisce di aggiungere il blocco vuoto. Per $X=\varnothing$ la partizione è la famiglia vuota.
+\end{osservazione}
+
+\begin{esempio}
+I pezzi $A\setminus B$, $A\cap B$ e $B\setminus A$, eliminando quelli vuoti, formano una partizione di $A\cup B$. Scrivere un'unione come disgiunta significa che gli addendi non hanno elementi comuni; la sola uguaglianza $A\cup B=A\triangle B$ equivale a $A\cap B=\varnothing$.
+\end{esempio}
+
+\begin{definizione}
+Sia $\sim$ un'equivalenza su $X$. La \textbf{classe di equivalenza} di $x\in X$ è
+\[
+[x]=\{y\in X\mid y\sim x\}.
+\]
+L'\textbf{insieme quoziente} è $X/{\sim}=\{[x]\mid x\in X\}\subseteq\mathcal P(X)$. Un elemento della classe è un suo \textbf{rappresentante}.
+\end{definizione}
+
+\begin{proposizione}\label{prop:classi}
+Per $x,y\in X$ sono equivalenti $x\sim y$, $[x]=[y]$ e $[x]\cap[y]\ne\varnothing$.
+\end{proposizione}
+\begin{proof}
+\passomath{x\sim y\Rightarrow[x]=[y]} Se $z\in[x]$, allora $z\sim x\sim y$, quindi $z\in[y]$. Questo prova $[x]\subseteq[y]$. Per simmetria $y\sim x$; ripetendo l'argomento si ottiene l'altra inclusione.
+
+\passomath{[x]=[y]\Rightarrow[x]\cap[y]\ne\varnothing} Per riflessività $x\in[x]$, dunque la classe comune non è vuota.
+
+\passomath{[x]\cap[y]\ne\varnothing\Rightarrow x\sim y} Sia $z$ nell'intersezione. Si ha $z\sim x$ e $z\sim y$; dalla simmetria segue $x\sim z$, poi dalla transitività $x\sim y$.
+\end{proof}
+
+\begin{teorema}[Corrispondenza tra equivalenze e partizioni]\label{teo:partizioni}
+Le classi di un'equivalenza su $X$ formano una partizione di $X$. Viceversa, data una partizione $\mathcal A$ di $X$, la relazione
+\[
+x\sim_{\mathcal A}y\quad\Longleftrightarrow\quad
+\text{$x$ e $y$ appartengono a uno stesso blocco di $\mathcal A$}
+\]
+è un'equivalenza le cui classi sono precisamente i blocchi. Le due costruzioni sono inverse.
+\end{teorema}
+\begin{proof}
+\textbf{Dall'equivalenza alla partizione.} Ogni classe è non vuota perché contiene il rappresentante. Ogni $x\in X$ appartiene a $[x]$, quindi $X\subseteq\bigcup_{x\in X}[x]$; l'altra inclusione segue da $[x]\subseteq X$. Due classi che si incontrano coincidono per la proposizione precedente.
+
+\textbf{Dalla partizione all'equivalenza.} Ogni $x$ appartiene a un blocco, dunque $x\sim_{\mathcal A}x$. Se $x,y$ appartengono allo stesso blocco, lo stesso vale per $y,x$: la relazione è simmetrica. Se $x,y\in A$ e $y,z\in B$, i blocchi $A$ e $B$ si incontrano in $y$, quindi $A=B$ e $x,z$ stanno nello stesso blocco. Questo prova la transitività.
+
+\textbf{Le costruzioni si annullano a vicenda.} Se $x\in A\in\mathcal A$, la sua classe per $\sim_{\mathcal A}$ è proprio $A$, perché il blocco contenente $x$ è unico. Partendo invece da $\sim$, due elementi si trovano in una stessa classe se e solo se sono equivalenti, per la proposizione~\ref{prop:classi}. Si recuperano quindi sia la partizione sia la relazione iniziale.
+\end{proof}
+
+\begin{schema}
+\begin{tikzpicture}
+  \draw[rounded corners] (0,0) rectangle (6,2.4);
+  \draw (2,0)--(2,2.4);\draw (4,0)--(4,2.4);
+  \node at (1,1.9) {$[x]$};\node at (3,1.9) {$[y]$};\node at (5,1.9) {$[z]$};
+  \foreach \x/\y in {.5/.7,1.4/1,2.6/.6,3.4/1.1,4.6/.7,5.3/1.1}{\fill[coloreschema] (\x,\y) circle (1.5pt);}
+  \node[right] at (6.2,1.2) {$X$};
+\end{tikzpicture}
+\end{schema}
+
+\begin{esercizio}[Descrivere quozienti]
+Descrivere i quozienti relativi alle equivalenze già incontrate.
+\end{esercizio}
+\begin{svolgimento}
+Per l'uguaglianza le classi sono i singoletti $\{x\}$; per l'uguaglianza dei valori assoluti, $\{0\}$ e $\{t,-t\}$, $t>0$. La relazione $x^2=y^2$ su $\R$ dà le stesse classi: per esempio $[5]=[-5]=\{5,-5\}$.
+
+Per il parallelismo le classi sono gli insiemi delle rette con la medesima direzione. Per la similitudine sono gli insiemi dei triangoli di una stessa forma, indipendentemente da posizione e dimensioni; la terna degli angoli, senza fissare un ordine dei vertici, descrive una classe.
+
+Per $x\sim_f y\iff f(x)=f(y)$ le classi sono le controimmagini dei singoli valori effettivamente assunti da $f$. Per le coppie intere $(a,b)$, $b\ne0$, con equivalenza per prodotti incrociati, il quoziente è l'insieme dei numeri razionali, costruito nella prossima sezione.
+\end{svolgimento}
+
+\section{I razionali come quoziente}
+% Fonti: L3 p. 8; L4 pp. 1--3.
+\begin{definizione}
+Posto $F=\Z\times\Z^*$ e $(a,b)\sim(c,d)\iff ad=bc$, si definisce $\Q=F/{\sim}$. Si indica la classe $[(a,b)]$ con $a/b$. Per esempio
+\[
+\frac{-2}{4}=\frac{-1}{2}=\frac{1}{-2},
+\qquad \frac12=\frac24=\frac{-2}{-4}=\frac36.
+\]
+Le operazioni sono date da
+\[
+\frac ab+\frac cd=\frac{ad+bc}{bd},
+\qquad \frac ab\cdot\frac cd=\frac{ac}{bd}.
+\]
+\end{definizione}
+
+\begin{proposizione}[Buona definizione delle operazioni]
+Somma e prodotto non dipendono dai rappresentanti scelti.
+\end{proposizione}
+\begin{proof}
+Supponiamo $ab'=a'b$ e $cd'=c'd$, con tutti i denominatori non nulli. Per la somma dobbiamo verificare
+\[
+(ad+bc)b'd'=(a'd'+b'c')bd.
+\]
+Infatti
+\[
+\begin{aligned}
+(ad+bc)b'd'&=(ab')dd'+bb'(cd')\\
+&=(a'b)dd'+bb'(c'd)\\
+&=(a'd'+b'c')bd.
+\end{aligned}
+\]
+Per il prodotto si ha $(ac)b'd'=(ab')(cd')=(a'b)(c'd)=(a'c')bd$. Inoltre $bd\ne0$, perciò entrambe le coppie risultanti appartengono a $F$.
+\end{proof}
+
+\begin{esempio}[Una regola che non passa al quoziente]
+La regola $a/b\star c/d=(a+c)/(bd)$ non definisce un'operazione su $\Q$, perché
+\[
+\frac12\star\frac23=\frac36=\frac12,
+\qquad
+\frac24\star\frac23=\frac4{12}=\frac13,
+\]
+benché $1/2=2/4$. Il problema non è il calcolo sui rappresentanti: è l'assenza di un risultato univoco sulle classi.
+\end{esempio}

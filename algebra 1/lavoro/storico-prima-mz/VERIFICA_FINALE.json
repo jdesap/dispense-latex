@@ -1,0 +1,171 @@
+{
+  "data": "2026-10-23",
+  "stato": "completato sui materiali consegnati",
+  "fonti": {
+    "pdf": 11,
+    "pagine": 65,
+    "pagine_confrontate_visivamente": 65,
+    "impronte_verificate": true,
+    "righe_copertura": 65
+  },
+  "compilazione": {
+    "latexmk": "riuscita con configurazione condivisa",
+    "integrata": "success",
+    "avvisi_latex": [],
+    "pagine_volume": 33,
+    "preliminari": 3,
+    "pagine_testo": 30,
+    "pdf_sha256": "04e52d7bf575147d6966be738a29d14c001374eafce0d2125292c74c97215ce6"
+  },
+  "struttura": {
+    "capitoli": 5,
+    "sezioni": 26,
+    "figure_tikz": 9,
+    "prove": 43,
+    "svolgimenti": 12,
+    "label_uniche": 23,
+    "riferimenti_risolti": 15,
+    "registri_esclusi_dal_pdf": true,
+    "stile": "preambolo attivo di Geometria; soli metadati modificati"
+  },
+  "estratti": [
+    {
+      "numero": 1,
+      "file": "01-insiemi-e-operazioni.pdf",
+      "pagine": 4,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 0,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 2,
+      "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+      "pagine": 5,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 1,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 3,
+      "file": "03-funzioni.pdf",
+      "pagine": 7,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 1,
+      "link_al_volume": 1,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 4,
+      "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+      "pagine": 6,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 4,
+      "link_al_volume": 2,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 5,
+      "file": "05-aritmetica-degli-interi.pdf",
+      "pagine": 8,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 6,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    }
+  ],
+  "revisione_visiva": {
+    "panoramica": "Tutte le 33 pagine della versione finale; le pagine invariate sono state confrontate anche nelle versioni intermedie.",
+    "dettagli": "Raccordi finali alle pagine PDF 15–16 e 32–33 a 1500 pixel; diagrammi, indice, ambienti, margini, numerazione e simboli verificati.",
+    "estratti": "Rendering pixel identico al volume per tutte le 30 pagine esportate.",
+    "anomalie_aperte": []
+  },
+  "controlli_matematici": "CONTROLLI_MATEMATICI_2026-10-23.json",
+  "verifica_condivisa": "../../strumenti/VERIFICA_ESPORTAZIONE_2026-10-23.json",
+  "sorgenti_sha256": {
+    "main.tex": "4d540834b9aef800d7da32715c7576e1bdccdff56348834e9c01ae579d6327f8",
+    "preambolo.tex": "33dc6ef968d685c47e8790592eba95c58c93d8573e99cfc12de8a290fb3b048f",
+    "capitoli/01-insiemi.tex": "fabbd028da295e2c293148ad52a1b92d5d5fbf74e927e3dc023387dbb2ed6d63",
+    "capitoli/02-relazioni.tex": "a6cc00eec6547c166428609ae390efc006bd22c365c533418dfa29f51d4910cb",
+    "capitoli/03-funzioni.tex": "63273497dfadf452852a022e6674c3da5d1d09952e11de88bcdfa67dfce13067",
+    "capitoli/04-cardinalita.tex": "393667a10ad5813fe3a6ae09de071608692dd4c247a99e3a8521a08d099d808b",
+    "capitoli/05-interi.tex": "adf19c5363d8d6e215f9282134d5a4b4ebf1d8d2c4861733ca8a0552ef27e6ca"
+  },
+  "configurazione_sha256": {
+    ".latexmkrc": "f1ff0a910b4957ec4882eae2e518761ae9404f23c866a5eee03c520e2ff1c948",
+    "esporta-capitoli.py": "896afb6ac04ccaa39937b1e4e385240b45e05b3f1274b2a972d722a6a04add90"
+  },
+  "capitoli_correnti": [
+    {
+      "numero": 1,
+      "titolo": "Insiemi e operazioni",
+      "file": "01-insiemi-e-operazioni.pdf",
+      "pagine": 4,
+      "pagina_pdf_iniziale": 4,
+      "pagina_pdf_finale": 7,
+      "numero_stampato_iniziale": "1",
+      "numero_stampato_finale": "4",
+      "sha256": "edca7195d8a6084558223af7e9fa3fffafdbda949fe6bf1a3efd3f5945d34b55"
+    },
+    {
+      "numero": 2,
+      "titolo": "Relazioni, equivalenze e quozienti",
+      "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+      "pagine": 5,
+      "pagina_pdf_iniziale": 8,
+      "pagina_pdf_finale": 12,
+      "numero_stampato_iniziale": "5",
+      "numero_stampato_finale": "9",
+      "sha256": "b4148cd8310a2f05947a00c8850bf85cbe372cbcf616b6661a8c9fbe5e41280f"
+    },
+    {
+      "numero": 3,
+      "titolo": "Funzioni",
+      "file": "03-funzioni.pdf",
+      "pagine": 7,
+      "pagina_pdf_iniziale": 13,
+      "pagina_pdf_finale": 19,
+      "numero_stampato_iniziale": "10",
+      "numero_stampato_finale": "16",
+      "sha256": "025e1cdf8a3d054d34b6b97cc845c06f98c24ce4c1a8ab6de683281871ca6637"
+    },
+    {
+      "numero": 4,
+      "titolo": "Insiemi finiti, infiniti e cardinalità",
+      "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+      "pagine": 6,
+      "pagina_pdf_iniziale": 20,
+      "pagina_pdf_finale": 25,
+      "numero_stampato_iniziale": "17",
+      "numero_stampato_finale": "22",
+      "sha256": "16dff78f503d9c8f1fda2cc153aa99d652ce0f4f0826750772cd9bc85a1a6144"
+    },
+    {
+      "numero": 5,
+      "titolo": "Aritmetica degli interi",
+      "file": "05-aritmetica-degli-interi.pdf",
+      "pagine": 8,
+      "pagina_pdf_iniziale": 26,
+      "pagina_pdf_finale": 33,
+      "numero_stampato_iniziale": "23",
+      "numero_stampato_finale": "30",
+      "sha256": "6094b51412a754762d5ae7e1f57b5b5a8da92888c6306779d23a621c4c1a633d"
+    }
+  ],
+  "limiti": [
+    "Copertura limitata alle fonti consegnate, non attestazione del programma d’esame.",
+    "Revisione manuale dell’assistente; verifiche finite supplementari, senza certificazione formale delle prove.",
+    "Aritmetica elementare e proprietà di base dei reali assunte e dichiarate; scelta esplicitata dove impiegata.",
+    "Link remoti al volume dipendono dal lettore e dalla struttura delle cartelle; nessun riallineamento delle annotazioni Goodnotes.",
+    "Altre lezioni del secondo docente proposte dall’autore e non ancora ricevute."
+  ],
+  "copie_annotate_modificate": false,
+  "commit_push_pubblicazioni": false,
+  "lavori_pendenti_sulle_fonti_ricevute": []
+}

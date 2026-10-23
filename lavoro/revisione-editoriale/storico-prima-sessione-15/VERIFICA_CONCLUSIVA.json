@@ -1,0 +1,931 @@
+{
+  "data": "2026-10-22",
+  "stato": "revisione integrale conclusa; stile visivo aggiornato nella sessione 14",
+  "ambito": {
+    "analisi 1": "sette capitoli attivi, lezioni 1–8",
+    "geometria 1": "Spazi vettoriali completo, lezioni 5–12 consegnate"
+  },
+  "sessioni_completate": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "checkpoint_sezioni_completati": [
+    "analisi-1-2.1.json",
+    "analisi-1-2.2.json",
+    "analisi-1-2.3.json",
+    "analisi-1-2.4.json",
+    "analisi-1-2.5.json",
+    "analisi-1-2.6.json",
+    "analisi-1-3.1.json",
+    "analisi-1-3.2.json",
+    "analisi-1-3.3.json",
+    "analisi-1-3.4.json",
+    "analisi-1-3.5.json",
+    "analisi-1-3.6.json",
+    "analisi-1-3.7.json",
+    "analisi-1-3.8.json",
+    "analisi-1-4.1.json",
+    "analisi-1-4.10.json",
+    "analisi-1-4.11.json",
+    "analisi-1-4.12.json",
+    "analisi-1-4.13.json",
+    "analisi-1-4.14.json",
+    "analisi-1-4.15.json",
+    "analisi-1-4.2.json",
+    "analisi-1-4.3.json",
+    "analisi-1-4.4.json",
+    "analisi-1-4.5.json",
+    "analisi-1-4.6.json",
+    "analisi-1-4.7.json",
+    "analisi-1-4.8.json",
+    "analisi-1-4.9.json",
+    "analisi-1-5.1.json",
+    "analisi-1-5.10.json",
+    "analisi-1-5.11.json",
+    "analisi-1-5.2.json",
+    "analisi-1-5.3.json",
+    "analisi-1-5.4.json",
+    "analisi-1-5.5.json",
+    "analisi-1-5.6.json",
+    "analisi-1-5.7.json",
+    "analisi-1-5.8.json",
+    "analisi-1-5.9.json",
+    "analisi-1-6.1.json",
+    "analisi-1-6.10.json",
+    "analisi-1-6.11.json",
+    "analisi-1-6.12.json",
+    "analisi-1-6.13.json",
+    "analisi-1-6.2.json",
+    "analisi-1-6.3.json",
+    "analisi-1-6.4.json",
+    "analisi-1-6.5.json",
+    "analisi-1-6.6.json",
+    "analisi-1-6.7.json",
+    "analisi-1-6.8.json",
+    "analisi-1-6.9.json",
+    "analisi-1-7.1.json",
+    "analisi-1-7.2.json",
+    "analisi-1-7.3.json",
+    "analisi-1-7.4.json",
+    "analisi-1-7.5.json",
+    "analisi-1-7.6.json",
+    "analisi-1-7.7.json",
+    "geometria-1-1.10.json",
+    "geometria-1-1.11.json",
+    "geometria-1-1.12.json",
+    "geometria-1-1.13.json",
+    "geometria-1-1.14.json",
+    "geometria-1-1.5.json",
+    "geometria-1-1.6.json",
+    "geometria-1-1.7.json",
+    "geometria-1-1.8.json",
+    "geometria-1-1.9.json"
+  ],
+  "prime_sezioni_verificate_nei_resoconti": {
+    "analisi 1": "1.1–1.4: SESSIONE_01.md e VERIFICA_SESSIONE_01.json",
+    "geometria 1": "1.1–1.4: SESSIONE_02.md e VERIFICA_SESSIONE_02.json"
+  },
+  "verifiche_strutturali": {
+    "analisi 1": {
+      "sorgenti_attivi": 19,
+      "sezioni": 64,
+      "prove_in_ambiente": 32,
+      "tikz": 39,
+      "fonti_integre": 9,
+      "pulizia_sorgente_senza_effetti_sulle_pagine": true,
+      "prosa_un_paragrafo_per_riga": true,
+      "indice_stampato_profondita": 1,
+      "sottosezioni_e_segnalibri_profondita": 2,
+      "riferimenti_lezioni_solo_macroargomenti": [
+        {
+          "file": "capitoli/01-logica.tex",
+          "riga": 7,
+          "testo": "\\fonti{Lezione 1}"
+        },
+        {
+          "file": "capitoli/02-insiemi-e-relazioni.tex",
+          "riga": 6,
+          "testo": "\\fonti{Lezione 1}"
+        },
+        {
+          "file": "capitoli/03-numeri-naturali-e-combinatoria.tex",
+          "riga": 8,
+          "testo": "\\fonti{Lezioni 2 e 3}"
+        },
+        {
+          "file": "capitoli/04-numeri-reali-e-completezza.tex",
+          "riga": 8,
+          "testo": "\\fonti{Lezioni 3, 4 e 5}"
+        },
+        {
+          "file": "capitoli/05-funzioni.tex",
+          "riga": 4,
+          "testo": "\\fonti{Lezioni 5 e 6}"
+        },
+        {
+          "file": "capitoli/06-funzioni-elementari.tex",
+          "riga": 4,
+          "testo": "\\fonti{Lezioni 6 e 7}"
+        },
+        {
+          "file": "capitoli/07-topologia.tex",
+          "riga": 7,
+          "testo": "\\fonti{Lezioni 7 e 8}"
+        }
+      ],
+      "spazio_note_incrementato_pt": 3,
+      "registri_esclusi_dal_pdf": true,
+      "compilatore_integrato": "success",
+      "segnalibri": [
+        [
+          0,
+          "Convenzioni e notazioni"
+        ],
+        [
+          0,
+          "1 Logica e metodi di dimostrazione"
+        ],
+        [
+          1,
+          "1.1 Proposizioni e connettivi logici"
+        ],
+        [
+          1,
+          "1.2 Implicazioni e metodi di dimostrazione"
+        ],
+        [
+          1,
+          "1.3 Predicati e quantificatori"
+        ],
+        [
+          1,
+          "1.4 Negare una proposizione con quantificatori"
+        ],
+        [
+          0,
+          "2 Insiemi e relazioni"
+        ],
+        [
+          1,
+          "2.1 Insiemi, elementi e insieme ambiente"
+        ],
+        [
+          1,
+          "2.2 Sottoinsiemi e insieme delle parti"
+        ],
+        [
+          1,
+          "2.3 Operazioni tra insiemi"
+        ],
+        [
+          1,
+          "2.4 Le leggi di De Morgan"
+        ],
+        [
+          1,
+          "2.5 Prodotto cartesiano e relazioni"
+        ],
+        [
+          1,
+          "2.6 Relazioni d'ordine e ordine totale"
+        ],
+        [
+          0,
+          "3 Numeri naturali, induzione e combinatoria"
+        ],
+        [
+          1,
+          "3.1 I naturali e il principio del minimo intero"
+        ],
+        [
+          1,
+          "3.2 Il principio di induzione"
+        ],
+        [
+          1,
+          "3.3 La somma dei primi naturali"
+        ],
+        [
+          1,
+          "3.4 La disuguaglianza di Bernoulli"
+        ],
+        [
+          1,
+          "3.5 Permutazioni, disposizioni e combinazioni"
+        ],
+        [
+          2,
+          "3.5.1 Permutazioni e fattoriale"
+        ],
+        [
+          2,
+          "3.5.2 Disposizioni: scegliere e ordinare"
+        ],
+        [
+          2,
+          "3.5.3 Combinazioni: scegliere senza ordinare"
+        ],
+        [
+          1,
+          "3.6 Coefficienti binomiali e loro proprietà"
+        ],
+        [
+          1,
+          "3.7 Il triangolo di Tartaglia"
+        ],
+        [
+          1,
+          "3.8 La formula del binomio di Newton"
+        ],
+        [
+          0,
+          "4 Sistemi numerici e completezza"
+        ],
+        [
+          1,
+          "4.1 Gli interi e la struttura di gruppo"
+        ],
+        [
+          1,
+          "4.2 I razionali come campo ordinato"
+        ],
+        [
+          1,
+          "4.3 La proprietà di Archimede nei razionali"
+        ],
+        [
+          1,
+          "4.4 La densità fra razionali"
+        ],
+        [
+          1,
+          "4.5 La numerabilità dei razionali"
+        ],
+        [
+          1,
+          "4.6 I limiti dei razionali: l'irrazionalità della radice di due"
+        ],
+        [
+          1,
+          "4.7 I reali e l'assioma di Dedekind"
+        ],
+        [
+          2,
+          "4.7.1 Perché l'assioma fallisce nei razionali"
+        ],
+        [
+          2,
+          "4.7.2 L'idea delle sezioni di Dedekind"
+        ],
+        [
+          1,
+          "4.8 Intervalli e retta reale estesa"
+        ],
+        [
+          1,
+          "4.9 Limitatezza, maggioranti e minoranti"
+        ],
+        [
+          1,
+          "4.10 Massimo e minimo"
+        ],
+        [
+          1,
+          "4.11 Estremo superiore ed estremo inferiore"
+        ],
+        [
+          2,
+          "4.11.1 Il teorema di esistenza degli estremi"
+        ],
+        [
+          2,
+          "4.11.2 Estremi infiniti"
+        ],
+        [
+          1,
+          "4.12 La caratterizzazione operativa di supremo e infimo"
+        ],
+        [
+          1,
+          "4.13 Il principio di Archimede nei reali"
+        ],
+        [
+          1,
+          "4.14 Esempi ed esercizi su supremo e infimo"
+        ],
+        [
+          2,
+          "4.14.1 Un intervallo e un insieme con un punto isolato"
+        ],
+        [
+          2,
+          "4.14.2 I reciproci dei naturali positivi"
+        ],
+        [
+          2,
+          "4.14.3 Come scartare un candidato sbagliato per l'infimo"
+        ],
+        [
+          2,
+          "4.14.4 Due esercizi: cubi traslati e unione di insiemi"
+        ],
+        [
+          1,
+          "4.15 La densità dei razionali nella retta reale"
+        ],
+        [
+          0,
+          "5 Funzioni: definizioni e proprietà generali"
+        ],
+        [
+          1,
+          "5.1 Dominio, codominio e immagine"
+        ],
+        [
+          1,
+          "5.2 Iniettività, suriettività e biettività"
+        ],
+        [
+          1,
+          "5.3 Composizione e suo dominio"
+        ],
+        [
+          1,
+          "5.4 Grafico, controimmagini e funzione inversa"
+        ],
+        [
+          1,
+          "5.5 Funzioni reali e dominio naturale"
+        ],
+        [
+          1,
+          "5.6 Operazioni tra funzioni"
+        ],
+        [
+          1,
+          "5.7 Monotonia e composizione"
+        ],
+        [
+          1,
+          "5.8 Stretta monotonia e invertibilità"
+        ],
+        [
+          1,
+          "5.9 Simmetrie: funzioni pari e dispari"
+        ],
+        [
+          1,
+          "5.10 Periodicità"
+        ],
+        [
+          1,
+          "5.11 Limitatezza ed estremi di una funzione"
+        ],
+        [
+          0,
+          "6 Funzioni elementari"
+        ],
+        [
+          1,
+          "6.1 Potenze a esponente intero positivo"
+        ],
+        [
+          1,
+          "6.2 Radici e potenze a esponente razionale"
+        ],
+        [
+          1,
+          "6.3 Valore assoluto e proprietà fondamentali"
+        ],
+        [
+          1,
+          "6.4 Distanza sulla retta e nozione di metrica"
+        ],
+        [
+          1,
+          "6.5 Seno, coseno e tangente"
+        ],
+        [
+          1,
+          "6.6 Restrizioni invertibili e arcoseno"
+        ],
+        [
+          1,
+          "6.7 Arcocoseno"
+        ],
+        [
+          1,
+          "6.8 Arcotangente"
+        ],
+        [
+          1,
+          "6.9 Esponenziali e logaritmi"
+        ],
+        [
+          2,
+          "6.9.1 La funzione esponenziale"
+        ],
+        [
+          2,
+          "6.9.2 Il logaritmo come funzione inversa"
+        ],
+        [
+          1,
+          "6.10 Funzioni iperboliche"
+        ],
+        [
+          2,
+          "6.10.1 Definizioni, identità e grafici"
+        ],
+        [
+          2,
+          "6.10.2 Funzioni iperboliche inverse"
+        ],
+        [
+          1,
+          "6.11 Funzioni definite a tratti"
+        ],
+        [
+          2,
+          "6.11.1 Parte positiva e parte negativa"
+        ],
+        [
+          2,
+          "6.11.2 Parte intera e parte frazionaria"
+        ],
+        [
+          1,
+          "6.12 Trasformazioni dei grafici"
+        ],
+        [
+          1,
+          "6.13 Un esercizio su dominio, monotonia e inversa"
+        ],
+        [
+          2,
+          "6.13.1 Determinazione del dominio"
+        ],
+        [
+          2,
+          "6.13.2 Monotonia"
+        ],
+        [
+          2,
+          "6.13.3 Immagine, equazione e inversa"
+        ],
+        [
+          0,
+          "7 Topologia della retta"
+        ],
+        [
+          1,
+          "7.1 Insiemi aperti e insiemi chiusi"
+        ],
+        [
+          1,
+          "7.2 Il criterio locale di apertura"
+        ],
+        [
+          1,
+          "7.3 Proprietà degli insiemi aperti"
+        ],
+        [
+          1,
+          "7.4 Proprietà degli insiemi chiusi"
+        ],
+        [
+          1,
+          "7.5 Esempi nella retta reale"
+        ],
+        [
+          2,
+          "7.5.1 I numeri naturali e gli interi"
+        ],
+        [
+          2,
+          "7.5.2 I numeri razionali"
+        ],
+        [
+          2,
+          "7.5.3 La successione 1/n vista come insieme"
+        ],
+        [
+          1,
+          "7.6 Intorni di un punto"
+        ],
+        [
+          1,
+          "7.7 Intorni laterali"
+        ]
+      ],
+      "svolgimenti_in_ambiente": 3,
+      "rientro_prove_mm": 4,
+      "ambienti_con_barra_laterale_colorata": true,
+      "intestazioni_nere": true,
+      "richiami_note_blu_elettrico": true,
+      "punteggiatura_esempi": ":",
+      "barra_allineata_al_testo_normale": true,
+      "rientro_corpo_ambienti_pt": 9.6
+    },
+    "geometria 1": {
+      "sorgenti_attivi": 15,
+      "sezioni": 14,
+      "prove_in_ambiente": 24,
+      "tikz": 8,
+      "fonti_integre": 7,
+      "pulizia_sorgente_senza_effetti_sulle_pagine": true,
+      "prosa_un_paragrafo_per_riga": true,
+      "indice_stampato_profondita": 1,
+      "sottosezioni_e_segnalibri_profondita": 2,
+      "riferimenti_lezioni_solo_macroargomenti": [
+        {
+          "file": "capitoli/01-spazi-vettoriali.tex",
+          "riga": 3,
+          "testo": "\\fonti{Lezioni 5, 6, 7, 8, 9, 10, 11 e 12}"
+        }
+      ],
+      "spazio_note_incrementato_pt": 3,
+      "registri_esclusi_dal_pdf": true,
+      "compilatore_integrato": "success",
+      "segnalibri": [
+        [
+          0,
+          "Convenzioni e notazioni"
+        ],
+        [
+          0,
+          "1 Spazi vettoriali"
+        ],
+        [
+          1,
+          "1.1 Struttura e modelli"
+        ],
+        [
+          2,
+          "1.1.1 Definizione e assiomi"
+        ],
+        [
+          2,
+          "1.1.2 Esempi di spazi vettoriali"
+        ],
+        [
+          1,
+          "1.2 Sottospazi"
+        ],
+        [
+          2,
+          "1.2.1 Intersezioni e unioni"
+        ],
+        [
+          1,
+          "1.3 Generatori e sottospazio generato"
+        ],
+        [
+          2,
+          "1.3.1 Combinazioni lineari e insiemi di generatori"
+        ],
+        [
+          2,
+          "1.3.2 Verificare se alcuni vettori generano uno spazio"
+        ],
+        [
+          2,
+          "1.3.3 Il più piccolo sottospazio che contiene un insieme"
+        ],
+        [
+          2,
+          "1.3.4 Caratterizzazione mediante combinazioni lineari"
+        ],
+        [
+          1,
+          "1.4 Somme di sottospazi e somme dirette"
+        ],
+        [
+          2,
+          "1.4.1 Il sottospazio somma"
+        ],
+        [
+          2,
+          "1.4.2 Unicità della scomposizione e somma diretta"
+        ],
+        [
+          1,
+          "1.5 Indipendenza lineare, basi e coordinate"
+        ],
+        [
+          2,
+          "1.5.1 Insiemi liberi e dipendenza lineare"
+        ],
+        [
+          2,
+          "1.5.2 Basi e unicità della rappresentazione"
+        ],
+        [
+          2,
+          "1.5.3 La base canonica"
+        ],
+        [
+          2,
+          "1.5.4 Coordinate rispetto a una base"
+        ],
+        [
+          1,
+          "1.6 Dimensione e teorema dello scambio"
+        ],
+        [
+          2,
+          "1.6.1 Spazi finitamente generati"
+        ],
+        [
+          2,
+          "1.6.2 Teorema dello scambio"
+        ],
+        [
+          2,
+          "1.6.3 Cardinalità delle basi e dimensione"
+        ],
+        [
+          1,
+          "1.7 Estrazione e completamento di basi"
+        ],
+        [
+          1,
+          "1.8 Basi di sottospazi di R4"
+        ],
+        [
+          2,
+          "1.8.1 Da equazioni cartesiane a una base"
+        ],
+        [
+          2,
+          "1.8.2 Da una famiglia di generatori a una base"
+        ],
+        [
+          2,
+          "1.8.3 Parametri liberi e vettori di base"
+        ],
+        [
+          2,
+          "1.8.4 Da una base alle equazioni cartesiane"
+        ],
+        [
+          1,
+          "1.9 Prodotto di spazi vettoriali"
+        ],
+        [
+          2,
+          "1.9.1 Operazioni nel prodotto"
+        ],
+        [
+          2,
+          "1.9.2 Base e dimensione del prodotto"
+        ],
+        [
+          1,
+          "1.10 Spazio vettoriale quoziente"
+        ],
+        [
+          2,
+          "1.10.1 Equivalenza modulo un sottospazio"
+        ],
+        [
+          2,
+          "1.10.2 Operazioni sulle classi e loro buona definizione"
+        ],
+        [
+          2,
+          "1.10.3 Interpretazione geometrica delle classi"
+        ],
+        [
+          2,
+          "1.10.4 Base e dimensione del quoziente"
+        ],
+        [
+          1,
+          "1.11 Formula di Grassmann"
+        ],
+        [
+          2,
+          "1.11.1 Una base della somma e la formula delle dimensioni"
+        ],
+        [
+          1,
+          "1.12 Sottospazi complementari"
+        ],
+        [
+          2,
+          "1.12.1 Definizione e dimensione"
+        ],
+        [
+          2,
+          "1.12.2 Esistenza e non unicità dei complementari"
+        ],
+        [
+          1,
+          "1.13 Costruzioni di sottospazi in R5"
+        ],
+        [
+          2,
+          "1.13.1 Dati e richieste dell'esercizio"
+        ],
+        [
+          2,
+          "1.13.2 Relazione di dipendenza e base"
+        ],
+        [
+          2,
+          "1.13.3 Metodo matriciale per conservare le relazioni"
+        ],
+        [
+          2,
+          "1.13.4 Dalle equazioni parametriche alle cartesiane"
+        ],
+        [
+          2,
+          "1.13.5 Costruzione di un complementare in V"
+        ],
+        [
+          2,
+          "1.13.6 Un sottospazio con due intersezioni assegnate"
+        ],
+        [
+          1,
+          "1.14 Equazioni di sottospazi di polinomi"
+        ],
+        [
+          2,
+          "1.14.1 Condizioni sui valori di un polinomio"
+        ],
+        [
+          2,
+          "1.14.2 Coordinate nella base monomiale"
+        ],
+        [
+          2,
+          "1.14.3 Coordinate in una base diversa"
+        ]
+      ],
+      "svolgimenti_in_ambiente": 15,
+      "rientro_prove_mm": 4,
+      "ambienti_con_barra_laterale_colorata": true,
+      "intestazioni_nere": true,
+      "richiami_note_blu_elettrico": true,
+      "punteggiatura_esempi": ":",
+      "barra_allineata_al_testo_normale": true,
+      "rientro_corpo_ambienti_pt": 9.6
+    }
+  },
+  "verifiche_pdf_ed_estratti": {
+    "analisi 1": {
+      "data": "2026-10-22",
+      "materia": "analisi 1",
+      "pagine_volume": 55,
+      "pdf_sha256": "9754712cd662e3cbfca26a63aaee9a03f1975b494f4037824aff34f9aa89d9c0",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "capitolo": 1,
+          "file": "01-logica-e-metodi-di-dimostrazione.pdf",
+          "pagine": 3,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 0
+        },
+        {
+          "capitolo": 2,
+          "file": "02-insiemi-e-relazioni.pdf",
+          "pagine": 3,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 0
+        },
+        {
+          "capitolo": 3,
+          "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
+          "pagine": 7,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 0
+        },
+        {
+          "capitolo": 4,
+          "file": "04-sistemi-numerici-e-completezza.pdf",
+          "pagine": 11,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 2
+        },
+        {
+          "capitolo": 5,
+          "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
+          "pagine": 7,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 1
+        },
+        {
+          "capitolo": 6,
+          "file": "06-funzioni-elementari.pdf",
+          "pagine": 14,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 2
+        },
+        {
+          "capitolo": 7,
+          "file": "07-topologia-della-retta.pdf",
+          "pagine": 6,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 1
+        }
+      ],
+      "sorgenti_sha256": {
+        "main.tex": "4cbcfc0167e388d0248e64796c9e3bc5442ef17a582c31d26faeb8ff5f7b7864",
+        "preambolo.tex": "38a24e485d9baa0ebeb0800021fca7167ea1efeb371fb5b23cacf72d9b7224e6",
+        "capitoli/01-logica.tex": "4b3b55b075816877556fb022cc2b63b6b4c213f9679cabfcdb14e7f24e7bc376",
+        "capitoli/02-insiemi-e-relazioni.tex": "a4f224ce44430821d014a75cc31affc7a8070f3e1a9b9ba13997cd5ec5e2ac1c",
+        "capitoli/03-numeri-naturali-e-combinatoria.tex": "aebf24b42af871a70fe817c3c3759b255a54077a0a0e24f179aa66ad60663945",
+        "capitoli/04-numeri-reali-e-completezza.tex": "2bfe80f1d4148e3e6056208d1f90346e17a41f5b6ca907832eaba8d3dc5faecc",
+        "capitoli/04a-reali-e-completezza.tex": "e87e7890f6a4ddfb4e1d3b6e4300fa498ec621f0c231b14c9c6ac20389573deb",
+        "capitoli/04b-intervalli-ed-estremi.tex": "58f757584b727ef26bfedb1336ced1c2b6edd7f45ee54dbb93214bd392215030",
+        "capitoli/04c-archimede-ed-esempi.tex": "6fbdd1419f5d580a0773935b2c9060d0f18c042171deaaa0aa118139cb8d6cb8",
+        "capitoli/05-funzioni.tex": "d77f146b94c3ec9ed181ea9c23df8080efaa60675abe1c770a5356370dedc39d",
+        "capitoli/05a-funzioni-reali.tex": "4c1228b2d1a13ed60682380face37f08a02cb7d4cdf89e26018b3f512faa6f8c",
+        "capitoli/06-funzioni-elementari.tex": "53631c18d7c0dbc3879a1936a4ade9e422c920f80078b2499caee26b11144c13",
+        "capitoli/06a-potenze-e-radici.tex": "730b897e507010813c5e6376261b21e6870fe216f37aac38d0d704437244e1ee",
+        "capitoli/06b-modulo-e-distanza.tex": "cbc285fd85fecb099e2a475b10b2ea525a2d751629d3e89bb9d638409d4705b3",
+        "capitoli/06c-trigonometria.tex": "d0de19a4154301fd2db900c04c2a9458a1eba8a51ccc83288b5a1a419e55aa16",
+        "capitoli/06d-esponenziali-e-iperboliche.tex": "61295f0ad0a86d8ad8d081cf6a25f601520db021dd88d5faeabcf02b07b6b688",
+        "capitoli/06e-funzioni-a-tratti-e-grafici.tex": "61ea7ad8ee6102fc82d786741c8e1840859f3a63db4bb2fd5b02bafebf76e737",
+        "capitoli/07-topologia.tex": "e304c9536340809060da27136808217e3a29942059549ce7b52032fc1801c83f",
+        "capitoli/07a-introduzione.tex": "8cac8057f25c23ed537917beff954ee7776a8135851b9da40a90f938510a4b8e"
+      }
+    },
+    "geometria 1": {
+      "data": "2026-10-22",
+      "materia": "geometria 1",
+      "pagine_volume": 29,
+      "pdf_sha256": "bc1ddbea13a9c929db895fca43793ae47ca0a58db282af3f55ca3d24de56eacd",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "capitolo": 1,
+          "file": "01-spazi-vettoriali.pdf",
+          "pagine": 26,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "link_interni_verificati": 7
+        }
+      ],
+      "sorgenti_sha256": {
+        "main.tex": "fdd96aeedf69c3090c6827e3e5545450c10afadde029533b4ee41e037749188c",
+        "preambolo.tex": "cd5d1841681fed0dad3e942391bb60259e5f9c65ae9e078ee54afd71cfc018a2",
+        "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+        "capitoli/01a-spazi-e-sottospazi.tex": "fab45b6829dcd302a2aef81080399ab9da1da0ee1b10e7c3e2cebf4bc726bca7",
+        "capitoli/01b-somme-di-sottospazi.tex": "5c00547d5307a64a6276e7d992a2d6a58bd9cf08ddc08c91ba72e534bf7070aa",
+        "capitoli/01b-sottospazio-generato.tex": "e49646dc973b6544fc0dec5be981a228ddc108bcf4b014996f6c1a991c6e4df7",
+        "capitoli/01c-basi-e-dimensione.tex": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+        "capitoli/01c-indipendenza-basi-coordinate.tex": "8a82e85d0e41254d024426c0bf686923283860c23128e43fedcc5fc0b08f2b1b",
+        "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "52a26349bb387b74d74e398566921138860c54c6aa81ecf4ec981d76315b540d",
+        "capitoli/01e-equazioni-cartesiane.tex": "114f13e0c25df18f464b0f95596ebd5cb283f3b245d2f81dc9f598c34b3cacac",
+        "capitoli/01f-prodotti.tex": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+        "capitoli/01g-quozienti.tex": "345603c0023f68acfc78043f17c3d9b0f5b4bcbfa752e3e24625f68044767c5b",
+        "capitoli/01h-grassmann-complementi.tex": "e92ddd82f371ce2f987fa090d19f7aa00287e8a096ed0cebb4cd79934dafbd10",
+        "capitoli/01i-costruzioni-in-r5.tex": "2f60bec8150bfc88d1029ea3d3fc89006d649807690ae1ee7dc28ad7612cffa4",
+        "capitoli/01j-equazioni-di-polinomi.tex": "402c572b810fb79195cddaa70972202fbfec1bc2e17de5b0c08a6a8751d1b04b"
+      }
+    }
+  },
+  "conservazione_sessione_11": {
+    "07-topologia.tex": {
+      "display_conservati": 12,
+      "tikz_conservati": 3,
+      "label_conservate": true
+    },
+    "07a-introduzione.tex": {
+      "display_conservati": 4,
+      "tikz_conservati": 0,
+      "label_conservate": true
+    }
+  },
+  "ispezione_visiva_finale": {
+    "preliminari": "Frontespizi e indici stampati a risoluzione leggibile",
+    "panoramica": "Versione dopo sessione 14: tutte le 84 pagine; dettagli di allineamento, formule, note e raccordi. Binomio ricontrollato dopo il correttivo locale.",
+    "topologia": "Tutte le sei pagine e i tre TikZ ricontrollati nelle sezioni 7.1–7.7"
+  },
+  "limiti": [
+    "Costruzione e proprietà fondamentali dell’esponenziale reale assunte nella sezione 6.9 e dichiarate in nota, come rinviate nella fonte.",
+    "Copertura riferita alle fonti consegnate, non attestazione dell’intero programma d’esame; numeri complessi non ancora consegnati in Geometria.",
+    "Revisione manuale dell’assistente senza validazione indipendente del docente."
+  ],
+  "resoconto": "RESOCONTO_FINALE.md",
+  "copie_annotate_modificate": false,
+  "lavori_richiesti_pendenti": [],
+  "ultimo_aggiornamento_stile": "VERIFICA_STILE_14.json",
+  "resoconto_stile": "SESSIONE_14.md"
+}

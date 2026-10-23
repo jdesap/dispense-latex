@@ -21,3 +21,8 @@ Le richieste dell'autore e le convenzioni della singola dispensa prevalgono.
   delle annotazioni quando il testo di un capitolo cambia impaginazione.
 - Non congelare errori matematici per mantenere l'impaginazione: segnalare
   quali capitoli cambiano quando sono necessarie correzioni.
+
+- Negli esercizi separare sempre la consegna (`esercizio`) dalla soluzione
+  (`svolgimento`): il riquadro rosa contiene soltanto dati e richieste.
+  Conservare esempi illustrativi e dimostrazioni nei rispettivi ambienti.
+  Evitare consegne isolate in fondo pagina prima dello svolgimento.

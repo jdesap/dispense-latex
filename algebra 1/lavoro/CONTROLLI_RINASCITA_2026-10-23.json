@@ -1,0 +1,22 @@
+{
+  "data": "2026-10-23",
+  "divisioni_confrontate": 32160,
+  "dividendi_nonnegativi": "0..200",
+  "divisori_assoluti": "1..40",
+  "segni": "tutte quattro le combinazioni",
+  "coppie_euclide": 40400,
+  "argomenti_euclide": "-100..100 escluso (0,0)",
+  "righe_ricorrenza_controllate": 159504,
+  "tabella_stampata_righe": 6,
+  "identita_coefficienti_e_segni": true,
+  "prerequisiti_capitolo_1": true,
+  "esercizi_con_svolgimento_separato": true,
+  "sorgenti_sha256": {
+    "01-insiemi.tex": "ec252433f9a7e2d00a8bb99ad5876c86c7f9b01650c147af3b44bf6d681d0d30",
+    "05-interi.tex": "39491fb076b39488ebcb81524d85ab28e05fb45162ba7c1fd0b860d2e4d22ee4",
+    "02-relazioni.tex": "1f42f367c4acc687cf81cbe76b74698c17b9deac3d717558320c97dc8166fa42",
+    "03-funzioni.tex": "afaad6da16beb6cdd3ab541e4b14cfc2367fb969ba1da6664e3740a351351f65",
+    "04-cardinalita.tex": "0ce1c76f6e9a227bba5867a895f9913b244253fcbb5e6843ddcf973551247e2e"
+  },
+  "limite": "Riscontri finiti, non prove dei risultati generali. Il riesame delle dimostrazioni è documentato separatamente nelle 75 unità del registro."
+}

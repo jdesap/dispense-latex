@@ -1,0 +1,195 @@
+{
+  "data": "2026-10-23",
+  "sessione": 15,
+  "ambito": "Separazione consegne/svolgimenti e rifiniture editoriali coerenti con Algebra",
+  "compilatore_integrato": {
+    "analisi 1": "success",
+    "geometria 1": "success"
+  },
+  "verifiche_pdf_ed_estratti": {
+    "analisi 1": {
+      "data": "2026-10-23",
+      "materia": "analisi 1",
+      "pagine_volume": 56,
+      "pdf_sha256": "419473ae54c8ff439cd12ffd3888f09155edbe0c92a7cec47e785e8cc4c8b722",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "capitolo": 1,
+          "file": "01-logica-e-metodi-di-dimostrazione.pdf",
+          "pagine": 3,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni_verificati": 0,
+          "link_al_volume": 0
+        },
+        {
+          "capitolo": 2,
+          "file": "02-insiemi-e-relazioni.pdf",
+          "pagine": 3,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni_verificati": 0,
+          "link_al_volume": 0
+        },
+        {
+          "capitolo": 3,
+          "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
+          "pagine": 7,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni_verificati": 0,
+          "link_al_volume": 0
+        },
+        {
+          "capitolo": 4,
+          "file": "04-sistemi-numerici-e-completezza.pdf",
+          "pagine": 12,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni_verificati": 2,
+          "link_al_volume": 0
+        },
+        {
+          "capitolo": 5,
+          "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
+          "pagine": 7,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni_verificati": 1,
+          "link_al_volume": 0
+        },
+        {
+          "capitolo": 6,
+          "file": "06-funzioni-elementari.pdf",
+          "pagine": 14,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni_verificati": 2,
+          "link_al_volume": 0
+        },
+        {
+          "capitolo": 7,
+          "file": "07-topologia-della-retta.pdf",
+          "pagine": 6,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni_verificati": 1,
+          "link_al_volume": 0
+        }
+      ],
+      "sorgenti_sha256": {
+        "main.tex": "4cbcfc0167e388d0248e64796c9e3bc5442ef17a582c31d26faeb8ff5f7b7864",
+        "preambolo.tex": "6702c0a8199d8149622631f7ff9311f5851533f7ce48cdab8ceb6b623c3e3340",
+        "capitoli/01-logica.tex": "4b3b55b075816877556fb022cc2b63b6b4c213f9679cabfcdb14e7f24e7bc376",
+        "capitoli/02-insiemi-e-relazioni.tex": "a4f224ce44430821d014a75cc31affc7a8070f3e1a9b9ba13997cd5ec5e2ac1c",
+        "capitoli/03-numeri-naturali-e-combinatoria.tex": "aebf24b42af871a70fe817c3c3759b255a54077a0a0e24f179aa66ad60663945",
+        "capitoli/04-numeri-reali-e-completezza.tex": "2bfe80f1d4148e3e6056208d1f90346e17a41f5b6ca907832eaba8d3dc5faecc",
+        "capitoli/04a-reali-e-completezza.tex": "e87e7890f6a4ddfb4e1d3b6e4300fa498ec621f0c231b14c9c6ac20389573deb",
+        "capitoli/04b-intervalli-ed-estremi.tex": "58f757584b727ef26bfedb1336ced1c2b6edd7f45ee54dbb93214bd392215030",
+        "capitoli/04c-archimede-ed-esempi.tex": "6024d24548424cfa898e7c05bb8bf3ac9cdb7ccff93a67307dae1c6c69f3f44f",
+        "capitoli/05-funzioni.tex": "d77f146b94c3ec9ed181ea9c23df8080efaa60675abe1c770a5356370dedc39d",
+        "capitoli/05a-funzioni-reali.tex": "4c1228b2d1a13ed60682380face37f08a02cb7d4cdf89e26018b3f512faa6f8c",
+        "capitoli/06-funzioni-elementari.tex": "53631c18d7c0dbc3879a1936a4ade9e422c920f80078b2499caee26b11144c13",
+        "capitoli/06a-potenze-e-radici.tex": "730b897e507010813c5e6376261b21e6870fe216f37aac38d0d704437244e1ee",
+        "capitoli/06b-modulo-e-distanza.tex": "cbc285fd85fecb099e2a475b10b2ea525a2d751629d3e89bb9d638409d4705b3",
+        "capitoli/06c-trigonometria.tex": "d0de19a4154301fd2db900c04c2a9458a1eba8a51ccc83288b5a1a419e55aa16",
+        "capitoli/06d-esponenziali-e-iperboliche.tex": "61295f0ad0a86d8ad8d081cf6a25f601520db021dd88d5faeabcf02b07b6b688",
+        "capitoli/06e-funzioni-a-tratti-e-grafici.tex": "787207506f815f22c6a74796cf3c0b418a4f69dba8546a79b17239a6c06ae398",
+        "capitoli/07-topologia.tex": "6885a02181dba875438dc61e0dc8c5145acd7374ab4706939c72fd3234bd9615",
+        "capitoli/07a-introduzione.tex": "1c6e3e30baf1ddcd231839c9fc56fffc731dbc2971ef4d534e36aea7c467e554"
+      }
+    },
+    "geometria 1": {
+      "data": "2026-10-23",
+      "materia": "geometria 1",
+      "pagine_volume": 29,
+      "pdf_sha256": "4d99c68d57314a72bc58e0c6742bd0785a19c2f3e1e3317f621635b016ec9918",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "capitolo": 1,
+          "file": "01-spazi-vettoriali.pdf",
+          "pagine": 26,
+          "contenuto_numerazione_dimensioni_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni_verificati": 7,
+          "link_al_volume": 0
+        }
+      ],
+      "sorgenti_sha256": {
+        "main.tex": "fdd96aeedf69c3090c6827e3e5545450c10afadde029533b4ee41e037749188c",
+        "preambolo.tex": "7cee24c42f94291a842b20a5c4dd3f48bc344b1046b6c45480db94b99a02e2c9",
+        "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+        "capitoli/01a-spazi-e-sottospazi.tex": "535bfeb172f84080bd3645d3a00a12577f58f80af390ff07c53424607195c147",
+        "capitoli/01b-somme-di-sottospazi.tex": "6fa3a4cd2dbc409c34e2d4af45b0fd7cfe2105552f8ea945ad05081beef093d2",
+        "capitoli/01b-sottospazio-generato.tex": "31b23d9ad0d47e42c403fc4e07a0ee20d8263d8b0e41855769690eda0fe59546",
+        "capitoli/01c-basi-e-dimensione.tex": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+        "capitoli/01c-indipendenza-basi-coordinate.tex": "748f7b3543bb560e66125b3dab49fe392f5bf9a6c80240203e0aeb29da4c62c1",
+        "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "bf88f6272ad99b49dbd7f7aa6721f274d2f861f4007ff225bb556304bf190f37",
+        "capitoli/01e-equazioni-cartesiane.tex": "114f13e0c25df18f464b0f95596ebd5cb283f3b245d2f81dc9f598c34b3cacac",
+        "capitoli/01f-prodotti.tex": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+        "capitoli/01g-quozienti.tex": "345603c0023f68acfc78043f17c3d9b0f5b4bcbfa752e3e24625f68044767c5b",
+        "capitoli/01h-grassmann-complementi.tex": "e92ddd82f371ce2f987fa090d19f7aa00287e8a096ed0cebb4cd79934dafbd10",
+        "capitoli/01i-costruzioni-in-r5.tex": "2f60bec8150bfc88d1029ea3d3fc89006d649807690ae1ee7dc28ad7612cffa4",
+        "capitoli/01j-equazioni-di-polinomi.tex": "402c572b810fb79195cddaa70972202fbfec1bc2e17de5b0c08a6a8751d1b04b"
+      }
+    }
+  },
+  "conservazione_e_struttura": {
+    "analisi 1": {
+      "file_capitoli_modificati": [
+        "04c-archimede-ed-esempi.tex",
+        "06e-funzioni-a-tratti-e-grafici.tex",
+        "07-topologia.tex",
+        "07a-introduzione.tex"
+      ],
+      "formule_precedenti_conservate": {
+        "display": 158,
+        "inline": 1733,
+        "calcoli": 14,
+        "tikz": 39
+      },
+      "note_label_enunciati_numerati_conservati": true,
+      "esercizi": 3,
+      "svolgimenti": 5,
+      "tutte_le_consegne_seguite_da_svolgimento": true,
+      "consegne_senza_soluzioni_incorporate": true,
+      "prove_in_ambiente": 33
+    },
+    "geometria 1": {
+      "file_capitoli_modificati": [
+        "01a-spazi-e-sottospazi.tex",
+        "01b-somme-di-sottospazi.tex",
+        "01b-sottospazio-generato.tex",
+        "01c-indipendenza-basi-coordinate.tex",
+        "01d-estrazione-e-basi-di-sottospazi.tex"
+      ],
+      "formule_precedenti_conservate": {
+        "display": 108,
+        "inline": 903,
+        "calcoli": 12,
+        "tikz": 8
+      },
+      "note_label_enunciati_numerati_conservati": true,
+      "esercizi": 12,
+      "svolgimenti": 19,
+      "tutte_le_consegne_seguite_da_svolgimento": true,
+      "consegne_senza_soluzioni_incorporate": true,
+      "prove_in_ambiente": 22
+    }
+  },
+  "ispezione_visiva": {
+    "panoramica": "Tutti i volumi interessati; dettagli finali dei raccordi dopo gli ultimi interventi.",
+    "dettagli": "Estremi, esempi di aperti/chiusi, prova degli intorni, controesempio non lineare, coordinate, esercizi in R4 e densità dei razionali.",
+    "anomalie_aperte": []
+  },
+  "verifica_estratti_condivisa": "../../strumenti/VERIFICA_ESPORTAZIONE_2026-10-23.json",
+  "regole_aggiornate": [
+    "AGENTS.md",
+    "MASTER_PROMPT.md"
+  ],
+  "master_prompt_caratteri": 7986,
+  "copie_annotate_modificate": false,
+  "nuova_revisione_matematica_integrale": false
+}

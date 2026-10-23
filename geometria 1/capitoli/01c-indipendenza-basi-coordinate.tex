@@ -106,11 +106,11 @@ Le due componenti lungo gli assi individuano univocamente il vettore.
 \begin{esercizio}[Base canonica in dimensione arbitraria]
 Verificare che i vettori $e_1,\ldots,e_m$ di $\R^m$, con $1$ nella posizione $i$ e $0$ nelle altre per $e_i$, formano una base.
 \end{esercizio}
-\begin{proof}[Svolgimento]
+\begin{svolgimento}
 \textbf{Generazione.} Per ogni $a=(a_1,\ldots,a_m)$ si ha $a=a_1e_1+\cdots+a_me_m$.
 
 \textbf{Indipendenza.} Nell'uguaglianza $\sum_i\lambda_ie_i=0$, la coordinata $i$ è $\lambda_i$ a sinistra e $0$ a destra. Tutti i coefficienti sono quindi nulli.
-\end{proof}
+\end{svolgimento}
 Questa è la \emph{base canonica} di $\R^m$. La stessa verifica vale per $K^m$ su un campo qualsiasi $K$.
 
 \subsection{Coordinate rispetto a una base}
@@ -128,6 +128,7 @@ Fissata una base ordinata $\mathcal B=(v_1,\ldots,v_m)$, le \emph{coordinate} di
 Per $w=(3,2)\in\R^2$, determinare le coordinate nella base canonica $\mathcal E=(e_1,e_2)$ e nella famiglia $\mathcal B=(v_1,v_2)$, con $v_1=(1,-1)$ e $v_2=(2,1)$, verificando che sia una base.
 \end{esercizio}
 
+\begin{svolgimento}
 \textbf{Base canonica.} $w=3e_1+2e_2$, dunque $[w]_{\mathcal E}=\left(\begin{smallmatrix}3\\2\end{smallmatrix}\right)$.
 
 \textbf{Verifica di $\mathcal B$.} Per $(x,y)$ arbitrario imponiamo
@@ -166,3 +167,4 @@ La verifica diretta è $(-\frac13,\frac13)+(\frac{10}3,\frac53)=(3,2)$.
 
 Il parallelogramma ricostruisce $w$ dalle componenti nella base $\mathcal B$; la componente lungo $v_1$ ha coefficiente negativo.
 \end{schema}
+\end{svolgimento}

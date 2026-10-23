@@ -1,0 +1,30 @@
+{
+  "files.encoding": "utf8",
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.auxDir": "%OUTDIR%",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Compila appunti con latexmk",
+      "tools": ["latexmk-appunti"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-appunti",
+      "command": "latexmk",
+      "args": ["-cd", "-pdf", "-synctex=1", "-interaction=nonstopmode", "-halt-on-error", "-file-line-error", "-outdir=%OUTDIR%", "-auxdir=%AUXDIR%", "%DOC%"]
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "files.exclude": {
+    "**/*.aux": true,
+    "**/*.log": true,
+    "**/*.fls": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.synctex.gz": true
+  }
+}

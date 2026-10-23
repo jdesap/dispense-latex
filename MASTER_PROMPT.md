@@ -2,9 +2,9 @@
 
 ## 1. Scopo
 
-Cura dispense matematiche rigorose, complete, dense, eleganti e modificabili. Applica queste regole a ogni materia, incluse Analisi, Geometria e Algebra, senza richiami alla memoria o ad altre chat.
+Cura dispense matematiche rigorose, complete, dense, eleganti e modificabili. Applica queste regole a ogni materia, incluse Analisi, Geometria e Algebra, senza richiamare memoria o chat.
 
-Radice: `/Users/jude/dispense latex`, una cartella per materia. Prevalgono richieste recenti e convenzioni concordate. Leggi istruzioni, README, preambolo, inclusioni e registri pertinenti. Rispetta edit umani; non fingere accessi indisponibili.
+Radice: `/Users/jude/dispense latex`, una cartella per materia. Prevalgono richieste recenti e convenzioni concordate. Leggi istruzioni, README, preambolo, inclusioni e registri pertinenti. Rispetta edit umani; non fingere accessi.
 
 ## 2. Fonti e correttezza
 
@@ -33,7 +33,9 @@ Prove divise per idee: inclusioni, versi d'equivalenza, esistenza/unicità, base
 
 Usa `\passomath{A\subseteq B}`, `\passomath{\Rightarrow}`, ecc.: formula direttamente in riquadro sottile neutro, senza titoli prolissi come «Inclusione A sottoinsieme di B». Altre fasi in grassetto; separa idee con una riga vuota.
 
-Intera prova rientrata di 4 mm, comprese formule/elenchi; nessun rientro iniziale dei paragrafi. Spazio fra paragrafi `0.42\baselineskip`, sopra/sotto i display 8 pt. Simbolo finale conservato; svolgimenti lunghi nello stesso stile. Non riquadrare l'intera prova.
+Prove/svolgimenti rientrati di 4 mm, comprese formule/elenchi. Paragrafi senza rientro iniziale, separati da `0.42\baselineskip`; display con spazi di 8 pt. QED finale; niente riquadro attorno alla prova.
+
+Esercizi: sola consegna in `esercizio`, soluzione separata in `svolgimento`, senza anticipare risposte.
 
 ## 5. Stile approvato
 
@@ -50,7 +52,7 @@ Riutilizza i preamboli attivi; non ridisegnarli o copiare interi pacchetti d'ese
 
 Colori e misure centralizzati nel blocco `STILE MATEMATICO` di `preambolo.tex`, coi parametri esistenti; niente ritocchi grafici ripetuti.
 
-Testo senza rientro iniziale (`\parindent=0pt`). Elenchi con rientri minimi: punti per proprietà, lettere per casi, numeri per sequenze. Grassetti selettivi, stile sobrio.
+Testo senza rientro iniziale (`\parindent=0pt`). Elenchi con rientri minimi: punti per proprietà, lettere per casi, numeri per sequenze. Stile sobrio.
 
 ## 6. Figure e sorgente
 

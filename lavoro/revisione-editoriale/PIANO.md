@@ -46,6 +46,8 @@ Avvio: 22 ottobre 2026. Criteri richiesti dall'autore in `CRITERI.md`.
 
 | 14 | Analisi 1 e Geometria 1 — Allineamento ambienti | Barra sul margine del testo, corpo rientrato e verifica della nuova impaginazione | Completata il 22 ottobre 2026 |
 
+| 15 | Analisi 1 e Geometria 1 — Esercizi e svolgimenti | Separazione consegne/soluzioni, esempi manuali e raccordi | Completata il 23 ottobre 2026 |
+
 L'ordine dà precedenza alla riorganizzazione di Geometria dopo la prima
 sessione di Analisi. Ulteriori capitoli aggiunti dall'autore saranno
 inseriti nel piano senza modificare quelli già revisionati.

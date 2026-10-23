@@ -87,8 +87,74 @@ def set_page_labels(writer, labels):
         writer.set_page_label(index, index, prefix=label)
 
 
+def copy_annotations(reader, writer, start, stop, volume_name):
+    """Conserva i link interni e rende remoti quelli fuori dall'estratto.
+
+    Le annotazioni vengono ricopiate esplicitamente: append filtrerebbe
+    quelle dirette a pagine escluse e alcune versioni segnalano inoltre
+    differenze attese fra le due liste di link durante tale filtraggio.
+    Nessuna pagina del volume o copia annotata viene modificata.
+    """
+    from pypdf.generic import (
+        ArrayObject, DictionaryObject, NameObject, NumberObject,
+        TextStringObject,
+    )
+
+    page_numbers = {page.indirect_reference.idnum: index
+                    for index, page in enumerate(reader.pages)}
+    for offset, source in enumerate(reader.pages[start:stop]):
+        annotations = ArrayObject()
+        for reference in source.get("/Annots", []):
+            original = reference.get_object()
+            copied = original.clone(writer, ignore_fields=("/P", "/Dest", "/A"))
+            action = original.get("/A")
+            if action is not None:
+                action = action.get_object()
+            destination = original.get("/Dest")
+            if action is not None and action.get("/S") == "/GoTo":
+                destination = action.get("/D")
+            if destination is None:
+                if action is not None:
+                    copied[NameObject("/A")] = action.clone(writer)
+            else:
+                destination = destination.get_object()
+                if isinstance(destination, str):
+                    target = reader.named_destinations.get(str(destination))
+                    if target is None:
+                        raise ValueError(f"Destinazione inesistente: {destination}")
+                    page_number = reader.get_destination_page_number(target)
+                    local_destination = TextStringObject(str(destination))
+                    remote_destination = TextStringObject(str(destination))
+                else:
+                    page_number = page_numbers.get(destination[0].idnum)
+                    if page_number is None:
+                        raise ValueError("Link a una pagina estranea al volume.")
+                    tail = [value.clone(writer) for value in destination[1:]]
+                    remote_destination = ArrayObject([NumberObject(page_number), *tail])
+                    local_destination = (ArrayObject([
+                        writer.pages[page_number - start].indirect_reference, *tail,
+                    ]) if start <= page_number < stop else None)
+                if page_number is None or page_number < 0:
+                    raise ValueError("Destinazione senza pagina valida.")
+                if start <= page_number < stop:
+                    copied[NameObject("/A")] = DictionaryObject({
+                        NameObject("/S"): NameObject("/GoTo"),
+                        NameObject("/D"): local_destination,
+                    })
+                else:
+                    copied[NameObject("/A")] = DictionaryObject({
+                        NameObject("/S"): NameObject("/GoToR"),
+                        NameObject("/F"): TextStringObject(f"../{volume_name}"),
+                        NameObject("/D"): remote_destination,
+                    })
+            annotations.append(writer._add_object(copied))
+        if annotations:
+            writer.pages[offset][NameObject("/Annots")] = annotations
+
+
 def export(pdf):
     PdfReader, PdfWriter = load_pdf_library()
+    from pypdf.generic import NameObject
     pdf = pdf.resolve(strict=True)
     reader = PdfReader(pdf)
     chapters = numbered_chapters(reader)
@@ -106,7 +172,19 @@ def export(pdf):
         for chapter in chapters:
             start, stop = chapter["inizio"], chapter["fine"]
             writer = PdfWriter()
-            writer.append(reader, pages=(start, stop), import_outline=True)
+            # Evita anche il tentativo di abbinare link durante la copia:
+            # le annotazioni sono ripristinate in memoria prima di ricopiarle.
+            # Il PDF sorgente su disco non viene mai modificato.
+            saved_annotations = [(page, page.pop(NameObject("/Annots"), None))
+                                 for page in reader.pages[start:stop]]
+            try:
+                writer.append(reader, pages=(start, stop), import_outline=True,
+                              excluded_fields=("/Annots",))
+            finally:
+                for page, annotations in saved_annotations:
+                    if annotations is not None:
+                        page[NameObject("/Annots")] = annotations
+            copy_annotations(reader, writer, start, stop, pdf.name)
             metadata = reader.metadata or {}
             writer.add_metadata({
                 "/Title": f"{metadata.get('/Title', pdf.stem)} - {chapter['titolo']}",

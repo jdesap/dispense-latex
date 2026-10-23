@@ -26,8 +26,8 @@ vettoriali, è conclusa. Resoconto comune e verifiche aggiornate in
 `../lavoro/revisione-editoriale/RESOCONTO_FINALE.md`.
 Le barre laterali, i numeretti blu delle note, il rientro delle prove e le
 spaziature si regolano nel blocco **STILE MATEMATICO** di `preambolo.tex`,
-dalla riga 51. I parametri e gli ultimi controlli sono descritti in
-`../lavoro/revisione-editoriale/SESSIONE_14.md`.
+I parametri e gli ultimi controlli sono descritti in
+`../lavoro/revisione-editoriale/SESSIONE_15.md`.
 
 La prima stesura che raccoglieva tutte le lezioni è conservata in
 `lavoro/bozze/` come materiale **non verificato**. Non fa parte del PDF

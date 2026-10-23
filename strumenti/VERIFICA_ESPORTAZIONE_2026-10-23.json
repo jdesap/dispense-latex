@@ -1,0 +1,166 @@
+{
+  "data": "2026-10-23",
+  "materie": [
+    {
+      "materia": "analisi 1",
+      "pagine_volume": 56,
+      "volume_sha256": "419473ae54c8ff439cd12ffd3888f09155edbe0c92a7cec47e785e8cc4c8b722",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "numero": 1,
+          "file": "01-logica-e-metodi-di-dimostrazione.pdf",
+          "pagine": 3,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 0,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 2,
+          "file": "02-insiemi-e-relazioni.pdf",
+          "pagine": 3,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 0,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 3,
+          "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
+          "pagine": 7,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 0,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 4,
+          "file": "04-sistemi-numerici-e-completezza.pdf",
+          "pagine": 12,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 2,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 5,
+          "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
+          "pagine": 7,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 1,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 6,
+          "file": "06-funzioni-elementari.pdf",
+          "pagine": 14,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 2,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 7,
+          "file": "07-topologia-della-retta.pdf",
+          "pagine": 6,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 1,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        }
+      ]
+    },
+    {
+      "materia": "geometria 1",
+      "pagine_volume": 29,
+      "volume_sha256": "4d99c68d57314a72bc58e0c6742bd0785a19c2f3e1e3317f621635b016ec9918",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "numero": 1,
+          "file": "01-spazi-vettoriali.pdf",
+          "pagine": 26,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 7,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        }
+      ]
+    },
+    {
+      "materia": "algebra 1",
+      "pagine_volume": 35,
+      "volume_sha256": "2d19495b9f44f75b96693bfdc5d1f951cfc8ceac4136eefd9ed137108b635ba0",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "numero": 1,
+          "file": "01-insiemi-e-operazioni.pdf",
+          "pagine": 4,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 0,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 2,
+          "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+          "pagine": 6,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 2,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 3,
+          "file": "03-funzioni.pdf",
+          "pagine": 8,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 1,
+          "link_al_volume": 2,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 4,
+          "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+          "pagine": 5,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 4,
+          "link_al_volume": 1,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 5,
+          "file": "05-aritmetica-degli-interi.pdf",
+          "pagine": 9,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 4,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        }
+      ]
+    }
+  ],
+  "confronto": "tutte le pagine e tutte le annotazioni",
+  "fonti_algebra": {
+    "pdf_identici_agli_originali": 22,
+    "serie_primaria": "A–L",
+    "serie_supporto": "M–Z",
+    "pagine_inventariate": 140
+  }
+}

@@ -36,6 +36,7 @@
 \setlist[itemize]{leftmargin=*,labelindent=0pt,itemsep=.25em,topsep=.4em}
 \setlist[description]{leftmargin=0pt,labelindent=0pt}
 \raggedbottom
+\interfootnotelinepenalty=10000
 \emergencystretch=1.5em
 % Conserva titoli, provenienza e prime righe sulla stessa pagina.
 \AddToHook{cmd/section/before}{\Needspace{9\baselineskip}}
@@ -186,6 +187,8 @@
 % Gli svolgimenti usano lo stesso rientro delle dimostrazioni.
 \newenvironment{svolgimento}{\begin{proof}[Svolgimento]}{\end{proof}}
 
+% La consegna di un esercizio deve avere spazio per avviare lo svolgimento.
+\AddToHook{env/esercizio/before}{\Needspace{12\baselineskip}}
 % Non lasciare un enunciato isolato in fondo pagina.
 \AddToHook{env/proposizione/before}{\Needspace{6\baselineskip}}
 \AddToHook{env/teorema/before}{\Needspace{6\baselineskip}}

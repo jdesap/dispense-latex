@@ -42,15 +42,18 @@ La completezza ha quindi una conseguenza concreta: non esiste un reale positivo 
 \subsection{Un intervallo e un insieme con un punto isolato}
 % Fonte: Lezione 5, p.~2
 
-\textbf{Intervallo con estremo escluso.} Per $A=[0,1)$ si ha
+\begin{esempio}[Intervallo con estremo escluso]
+Per $A=[0,1)$ si ha
 \[
   \inf A=\min A=0,\qquad \sup A=1.
 \]
 \textbf{Minimo.} Il minimo è $0$, perché $0\in A$ e tutti gli elementi sono non negativi.
 
 \textbf{Supremo non raggiunto.} Il numero $1$ è un maggiorante e, dato $\varepsilon>0$, il punto $a=1-\min\{\varepsilon/2,1/2\}$ appartiene ad $A$ e soddisfa $a>1-\varepsilon$. Il criterio operativo dimostra dunque che $1=\sup A$. Tuttavia $1\notin A$, quindi il massimo non esiste.
+\end{esempio}
 
-\textbf{Un massimo isolato.} Consideriamo
+\begin{esempio}[Un massimo isolato]
+Consideriamo
 \[
   B=[-1,2]\cup\{5\}.
 \]
@@ -59,6 +62,7 @@ In questo caso entrambi gli estremi sono raggiunti:
   \inf B=\min B=-1,\qquad \sup B=\max B=5.
 \]
 Per verificare il criterio del supremo basta scegliere $a=5$ per ogni $\varepsilon>0$, poiché $5>5-\varepsilon$. Il punto che realizza il massimo può dunque essere isolato; la presenza dell'intero intervallo fra $2$ e $5$ non è richiesta.
+\end{esempio}
 
 \begin{schema}
 \begin{tikzpicture}[x=1.45cm,y=1cm]
@@ -83,6 +87,7 @@ Per verificare il criterio del supremo basta scegliere $a=5$ per ogni $\varepsil
 \subsection{I reciproci dei naturali positivi}
 % Fonte: Lezione 5, pp.~3--4
 
+\begin{esempio}[Reciproci dei naturali positivi]
 Sia
 \[
   A=\left\{\frac1n:n\in\N^*\right\}.
@@ -98,6 +103,7 @@ La rappresentazione dei suoi punti suggerisce $\sup A=1$ e $\inf A=0$. Verifichi
   \frac1n<\varepsilon=0+\varepsilon.
 \]
 Ne segue $\inf A=0$. Poiché $0\notin A$, il minimo non esiste.
+\end{esempio}
 
 \subsection{Come scartare un candidato sbagliato per l'infimo}
 % Fonte: Lezione 5, pp.~5--6
@@ -115,18 +121,28 @@ che è impossibile. In generale, per un qualunque $k<0$, basta scegliere $\varep
 \subsection{Due esercizi: cubi traslati e unione di insiemi}
 % Fonte: Lezione 5, p.~7
 
-\textbf{Cubi traslati.} Il primo insieme è
+\begin{esercizio}[Cubi traslati]
+Determinare supremo e infimo dell'insieme
 \[
   A_1=\{n^3-1:n\in\N\}.
 \]
+Stabilire se esistono massimo e minimo.
+\end{esercizio}
+\begin{svolgimento}
 Poiché $n^3\ge0$ per ogni $n\in\N$ e il valore $-1$ si ottiene per $n=0$, si ha $\inf A_1=\min A_1=-1$.
 
 \textbf{Illimitatezza superiore.} L'insieme è superiormente illimitato: dato un qualunque $M\in\R$, scegliamo un naturale $n>\max\{1,M+1\}$. Allora $n^3-1\ge n-1>M$. Dunque, nella retta estesa,
 \[
   \sup A_1=+\infty.
 \]
+L'illimitatezza superiore esclude l'esistenza di un massimo.
+\end{svolgimento}
 
-\textbf{Unione di due insiemi.} Il secondo insieme è
+\begin{esercizio}[Unione di due insiemi]
+Determinare supremo, infimo ed eventuali massimo e minimo dell'insieme $A_2=\{x\in\R:x^2<1\}\cup\{x\in\R:(x-3)^2=0\}$.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Descrizione dell'insieme.} Si ha
 \[
   A_2=\{x\in\R:x^2<1\}
       \cup\{x\in\R:(x-3)^2=0\}
@@ -139,7 +155,10 @@ Il numero $3$ appartiene ad $A_2$ e maggiora tutti gli elementi, quindi $\sup A_
   a=-1+\frac{\varepsilon}{1+\varepsilon}.
 \]
 Il punto $a$ appartiene a $(-1,0)\subseteq A_2$ e soddisfa $a<-1+\varepsilon$, perché $0<\varepsilon/(1+\varepsilon)<\varepsilon$. Perciò $\inf A_2=-1$; il minimo non esiste, perché $-1\notin A_2$.
+\end{svolgimento}
 
+% Mantiene insieme la dimostrazione e il disegno della densità.
+\Needspace{36\baselineskip}
 \section{La densità dei razionali nella retta reale}
 % Fonte: Lezione 5, pp.~10--11
 

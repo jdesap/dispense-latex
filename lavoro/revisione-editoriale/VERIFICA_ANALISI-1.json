@@ -1,8 +1,8 @@
 {
-  "data": "2026-10-22",
+  "data": "2026-10-23",
   "materia": "analisi 1",
-  "pagine_volume": 55,
-  "pdf_sha256": "9754712cd662e3cbfca26a63aaee9a03f1975b494f4037824aff34f9aa89d9c0",
+  "pagine_volume": 56,
+  "pdf_sha256": "419473ae54c8ff439cd12ffd3888f09155edbe0c92a7cec47e785e8cc4c8b722",
   "avvisi_latex": [],
   "estratti": [
     {
@@ -10,61 +10,75 @@
       "file": "01-logica-e-metodi-di-dimostrazione.pdf",
       "pagine": 3,
       "contenuto_numerazione_dimensioni_identici": true,
-      "link_interni_verificati": 0
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni_verificati": 0,
+      "link_al_volume": 0
     },
     {
       "capitolo": 2,
       "file": "02-insiemi-e-relazioni.pdf",
       "pagine": 3,
       "contenuto_numerazione_dimensioni_identici": true,
-      "link_interni_verificati": 0
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni_verificati": 0,
+      "link_al_volume": 0
     },
     {
       "capitolo": 3,
       "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
       "pagine": 7,
       "contenuto_numerazione_dimensioni_identici": true,
-      "link_interni_verificati": 0
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni_verificati": 0,
+      "link_al_volume": 0
     },
     {
       "capitolo": 4,
       "file": "04-sistemi-numerici-e-completezza.pdf",
-      "pagine": 11,
+      "pagine": 12,
       "contenuto_numerazione_dimensioni_identici": true,
-      "link_interni_verificati": 2
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni_verificati": 2,
+      "link_al_volume": 0
     },
     {
       "capitolo": 5,
       "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
       "pagine": 7,
       "contenuto_numerazione_dimensioni_identici": true,
-      "link_interni_verificati": 1
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni_verificati": 1,
+      "link_al_volume": 0
     },
     {
       "capitolo": 6,
       "file": "06-funzioni-elementari.pdf",
       "pagine": 14,
       "contenuto_numerazione_dimensioni_identici": true,
-      "link_interni_verificati": 2
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni_verificati": 2,
+      "link_al_volume": 0
     },
     {
       "capitolo": 7,
       "file": "07-topologia-della-retta.pdf",
       "pagine": 6,
       "contenuto_numerazione_dimensioni_identici": true,
-      "link_interni_verificati": 1
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni_verificati": 1,
+      "link_al_volume": 0
     }
   ],
   "sorgenti_sha256": {
     "main.tex": "4cbcfc0167e388d0248e64796c9e3bc5442ef17a582c31d26faeb8ff5f7b7864",
-    "preambolo.tex": "38a24e485d9baa0ebeb0800021fca7167ea1efeb371fb5b23cacf72d9b7224e6",
+    "preambolo.tex": "6702c0a8199d8149622631f7ff9311f5851533f7ce48cdab8ceb6b623c3e3340",
     "capitoli/01-logica.tex": "4b3b55b075816877556fb022cc2b63b6b4c213f9679cabfcdb14e7f24e7bc376",
     "capitoli/02-insiemi-e-relazioni.tex": "a4f224ce44430821d014a75cc31affc7a8070f3e1a9b9ba13997cd5ec5e2ac1c",
     "capitoli/03-numeri-naturali-e-combinatoria.tex": "aebf24b42af871a70fe817c3c3759b255a54077a0a0e24f179aa66ad60663945",
     "capitoli/04-numeri-reali-e-completezza.tex": "2bfe80f1d4148e3e6056208d1f90346e17a41f5b6ca907832eaba8d3dc5faecc",
     "capitoli/04a-reali-e-completezza.tex": "e87e7890f6a4ddfb4e1d3b6e4300fa498ec621f0c231b14c9c6ac20389573deb",
     "capitoli/04b-intervalli-ed-estremi.tex": "58f757584b727ef26bfedb1336ced1c2b6edd7f45ee54dbb93214bd392215030",
-    "capitoli/04c-archimede-ed-esempi.tex": "6fbdd1419f5d580a0773935b2c9060d0f18c042171deaaa0aa118139cb8d6cb8",
+    "capitoli/04c-archimede-ed-esempi.tex": "6024d24548424cfa898e7c05bb8bf3ac9cdb7ccff93a67307dae1c6c69f3f44f",
     "capitoli/05-funzioni.tex": "d77f146b94c3ec9ed181ea9c23df8080efaa60675abe1c770a5356370dedc39d",
     "capitoli/05a-funzioni-reali.tex": "4c1228b2d1a13ed60682380face37f08a02cb7d4cdf89e26018b3f512faa6f8c",
     "capitoli/06-funzioni-elementari.tex": "53631c18d7c0dbc3879a1936a4ade9e422c920f80078b2499caee26b11144c13",
@@ -72,8 +86,8 @@
     "capitoli/06b-modulo-e-distanza.tex": "cbc285fd85fecb099e2a475b10b2ea525a2d751629d3e89bb9d638409d4705b3",
     "capitoli/06c-trigonometria.tex": "d0de19a4154301fd2db900c04c2a9458a1eba8a51ccc83288b5a1a419e55aa16",
     "capitoli/06d-esponenziali-e-iperboliche.tex": "61295f0ad0a86d8ad8d081cf6a25f601520db021dd88d5faeabcf02b07b6b688",
-    "capitoli/06e-funzioni-a-tratti-e-grafici.tex": "61ea7ad8ee6102fc82d786741c8e1840859f3a63db4bb2fd5b02bafebf76e737",
-    "capitoli/07-topologia.tex": "e304c9536340809060da27136808217e3a29942059549ce7b52032fc1801c83f",
-    "capitoli/07a-introduzione.tex": "8cac8057f25c23ed537917beff954ee7776a8135851b9da40a90f938510a4b8e"
+    "capitoli/06e-funzioni-a-tratti-e-grafici.tex": "787207506f815f22c6a74796cf3c0b418a4f69dba8546a79b17239a6c06ae398",
+    "capitoli/07-topologia.tex": "6885a02181dba875438dc61e0dc8c5145acd7374ab4706939c72fd3234bd9615",
+    "capitoli/07a-introduzione.tex": "1c6e3e30baf1ddcd231839c9fc56fffc731dbc2971ef4d534e36aea7c467e554"
   }
 }

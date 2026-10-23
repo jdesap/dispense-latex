@@ -1,0 +1,239 @@
+% !TeX root = ../main.tex
+\chapter{Insiemi finiti, infiniti e cardinalità}
+\fonti{Lezioni 7, 8 e 9}
+
+\section{Insiemi finiti e infiniti}
+% Fonti: A–L L7 p. 2 e L8 p. 2. Fatto finito assunto anche nelle fonti; nessuna prova autonoma aggiunta.
+\begin{definizione}
+Poniamo $[n]=\{1,\ldots,n\}$ per $n\ge1$ e $[0]=\varnothing$. Un insieme $X$ è \textbf{finito} se esiste una biezione $[n]\to X$ per qualche $n\in\N$. È \textbf{infinito} se non è finito.
+\end{definizione}
+
+Il numero $n$ è la \textbf{cardinalità} di $X$ e si indica con $|X|$. Usiamo il fatto finito che una funzione iniettiva da un insieme finito in se stesso è suriettiva; in questa trattazione è assunto senza dimostrazione.
+
+\begin{corollario}
+Se $X$ è finito, $|\mathcal P(X)|=2^{|X|}$.
+\end{corollario}
+\begin{proof}
+Per il teorema~\ref{teo:caratteristiche}, i sottoinsiemi corrispondono alle funzioni $X\to\{0,1\}$. Per ciascuno dei $n=|X|$ elementi si scelgono indipendentemente due valori: le funzioni sono $2^n$. Per $n=0$ c'è la sola funzione vuota e $\mathcal P(\varnothing)=\{\varnothing\}$ ha $1=2^0$ elemento.
+\end{proof}
+
+\section{Caratterizzazioni degli insiemi infiniti}
+% Fonti: L7 pp. 2--3; L8 pp. 1--2.
+\begin{teorema}\label{teo:infiniti}
+Nel quadro con assioma della scelta, per un insieme $X$ sono equivalenti:
+\begin{enumerate}[label=\alph*)]
+  \item $X$ è infinito;
+  \item esiste un'iniezione $f:\N\to X$;
+  \item esiste un'iniezione $g:X\to X$ non suriettiva;
+  \item esiste una biezione da $X$ a un suo sottoinsieme proprio.
+\end{enumerate}
+\end{teorema}
+\begin{proof}
+\passomath{a\Rightarrow b} Scegliamo $x_0\in X$ e poi, ricorsivamente,
+\[
+x_n\in X\setminus\{x_0,\ldots,x_{n-1}\}.
+\]
+Il sottoinsieme da cui scegliere non è mai vuoto, altrimenti $X$ sarebbe finito. Una successione di scelte di questo tipo è garantita dall'assioma della scelta. Definiamo $f(n)=x_n$. Se $m<n$, la scelta di $x_n$ assicura $x_n\ne x_m$, dunque $f$ è iniettiva.
+
+\passomath{b\Rightarrow c} Posto $S=f(\N)$, definiamo lo spostamento
+\[
+g(x)=\begin{cases}f(n+1)&x=f(n),\\x&x\notin S.\end{cases}
+\]
+L'indice $n$ è unico per l'iniettività di $f$, quindi la definizione è univoca. Se $x=f(n)$ e $y=f(m)$, l'uguaglianza $g(x)=g(y)$ implica $f(n+1)=f(m+1)$, quindi $n=m$ e $x=y$. Se entrambi sono fuori da $S$, $g$ li lascia fissi. Se uno solo è in $S$, anche una sola immagine è in $S$ e non possono coincidere. La funzione è perciò iniettiva. Non è suriettiva, perché $f(0)$ non è immagine di alcun elemento.
+
+\passomath{c\Rightarrow d} La stessa regola $g$, con codominio ristretto a $g(X)$, è una biezione $X\to g(X)$. La mancata suriettività su $X$ significa $g(X)\subsetneq X$.
+
+\passomath{d\Rightarrow a} Se $h:X\to S\subsetneq X$ è una biezione, la sua composizione con l'inclusione $S\hookrightarrow X$ è un'iniezione non suriettiva $X\to X$. Per il fatto finito richiamato sopra, $X$ non può essere finito.
+\end{proof}
+
+\begin{schema}
+\begin{tikzpicture}[>=Stealth]
+  \foreach \i in {0,...,3}{\node (x\i) at (2*\i,1) {$f(\i)$};\node (y\i) at (2*\i,-.5) {$f(\i)$};}
+  \foreach \i in {0,...,2}{\pgfmathtruncatemacro{\j}{\i+1}\draw[->,coloreschema] (x\i)--(y\j);}
+  \node at (8,1) {$\cdots$};\node at (8,-.5) {$\cdots$};\draw[->,coloreschema] (x3)--(7.7,-.3);
+  \node[below=2pt] at (y0.south) {omesso};\node at (4,-1.6) {fuori da $f(\N)$ ogni elemento resta fisso};
+\end{tikzpicture}
+\end{schema}
+
+\section{Confronto di cardinalità}
+% Fonte: A–L L8 p. 3; M–Z L8 p. 6. In entrambe solo enunciato.
+\begin{definizione}
+Due insiemi sono \textbf{equipotenti}, e si scrive $X\simeq Y$, se esiste una biezione fra essi.
+\end{definizione}
+L'equipotenza è riflessiva per l'identità, simmetrica perché una biezione ha un'inversa, transitiva perché la composizione di biezioni è una biezione.
+
+\begin{definizione}
+Si scrive $|X|\le|Y|$ se esiste un'iniezione $X\to Y$, e $|X|=|Y|$ se esiste una biezione. Si scrive $|X|<|Y|$ se $|X|\le|Y|$ e non esiste una biezione. Per insiemi non vuoti, il primo confronto equivale all'esistenza di una suriezione $Y\to X$, con l'ipotesi di scelta del teorema~\ref{teo:inverse}.
+\end{definizione}
+
+\begin{osservazione}
+L'iniezione come definizione di $\le$ vale anche per insiemi vuoti: $|\varnothing|\le|Y|$ per ogni $Y$. La formulazione tramite suriezioni richiede attenzione, perché non esiste una funzione $Y\to\varnothing$ quando $Y\ne\varnothing$. Per esempio $|\{\text{rosso},\text{blu},\text{verde}\}|=3$, tramite una biezione con $\{1,2,3\}$.
+\end{osservazione}
+
+\begin{teorema}[Cantor--Schröder--Bernstein]\label{teo:csb}
+Se esistono iniezioni $f:X\to Y$ e $g:Y\to X$, esiste una biezione $X\to Y$. Quindi $|X|\le|Y|$ e $|Y|\le|X|$ implicano $|X|=|Y|$.
+\end{teorema}
+Il teorema è assunto senza dimostrazione.
+
+% M–Z L8 p. 6; integrazione autorizzata dall'autore il 23 ottobre 2026.
+\begin{osservazione}[Ordine fra cardinalità]
+Il confronto fra cardinalità è riflessivo, perché esiste l'identità $X\to X$, e transitivo, perché la composizione di due iniezioni è iniettiva. L'antisimmetria è il contenuto di Cantor--Schröder--Bernstein.
+
+Nel quadro con assioma della scelta vale inoltre il \textbf{confronto totale}: per ogni coppia di insiemi $X,Y$, si ha $|X|\le|Y|$ oppure $|Y|\le|X|$. Questo risultato è assunto senza dimostrazione.
+\end{osservazione}
+
+\section{Insiemi numerabili}
+% Fonti: L8 pp. 3--5; raccordo sulle famiglie con membri vuoti.
+\begin{definizione}
+Un insieme $X$ si dice \textbf{numerabile} se $|X|\le|\N|$, e \textbf{numerabile infinito} se $|X|=|\N|$. Questa convenzione comprende tra i numerabili anche gli insiemi finiti e quello vuoto. Si indica $|\N|$ con $\aleph_0$.
+\end{definizione}
+
+Un sottoinsieme infinito $S\subseteq\N$ si può enumerare senza ripetizioni scegliendo di volta in volta il minimo non ancora scelto. Ogni elemento di $S$ compare: prima di un dato $s\in S$ ci sono solo finitamente molti naturali. Ne segue che ogni insieme numerabile infinito è equipotente a $\N$, passando prima alla sua immagine tramite un'iniezione in $\N$.
+
+\begin{proposizione}
+Gli insiemi $\Z$, $\N\times\N$ e $\N^r$, per ogni $r\ge1$, sono numerabili infiniti.
+\end{proposizione}
+\begin{proof}
+\textbf{Interi.} La funzione $e:\N\to\Z$ data da
+\[
+e(2k)=k,\qquad e(2k+1)=-(k+1)
+\]
+enumera $0,-1,1,-2,2,\ldots$ senza ripetizioni e raggiunge tutti gli interi.
+
+\textbf{Coppie.} La funzione
+\[
+p:\N\times\N\to\N,\qquad p(m,n)=2^m(2n+1)-1
+\]
+è biettiva. Infatti ogni $t+1>0$ si scrive in modo unico come potenza di $2$ per un dispari positivo, dividendo ripetutamente per $2$ fino a ottenere un numero dispari. Dunque esistono unici $m,n\in\N$ con $t+1=2^m(2n+1)$. In particolare $p$ è l'iniezione richiesta; nell'altro verso si può usare anche $m\mapsto(m,0)$ e applicare Cantor--Schröder--Bernstein.
+
+\textbf{Prodotti finiti.} Il caso $r=1$ è immediato. Se $\N^r\simeq\N$, allora $\N^{r+1}\simeq\N\times\N\simeq\N$, componendo le biezioni. Si conclude per induzione.
+\end{proof}
+
+\begin{schema}
+\begin{tikzpicture}[scale=.55,>=Stealth]
+  \draw[asse] (-.4,0)--(5.5,0) node[right] {$m$};\draw[asse] (0,-.4)--(0,5.5) node[above] {$n$};
+  \foreach \x in {0,...,4}{\foreach \y in {0,...,4}{\fill (\x,\y) circle (1.7pt);}}
+  \draw[->,coloreschema,thick] (0,0)--(1,0)--(0,1)--(0,2)--(1,1)--(2,0)--(3,0)--(2,1)--(1,2)--(0,3);
+  \node[right,align=left] at (6,2.5) {Un'altra enumerazione percorre le diagonali\\$m+n=0,1,2,\ldots$ del reticolo.};
+\end{tikzpicture}
+\end{schema}
+
+\begin{teorema}[Unione numerabile di numerabili]\label{teo:unione-numerabile}
+Se $I$ è numerabile e ogni $A_i$, $i\in I$, è numerabile, anche $\bigcup_{i\in I}A_i$ è numerabile, nel quadro con assioma della scelta.
+\end{teorema}
+\begin{proof}
+\textbf{Riduzione ai membri non vuoti.} Se tutti i membri sono vuoti, anche l'unione lo è. Altrimenti eliminiamo gli indici dei membri vuoti. Un insieme numerabile non vuoto è immagine di una suriezione da $\N$: se è infinito si usa un'enumerazione; se è finito si ripetono gli elementi. Possiamo quindi enumerare gli indici, eventualmente con ripetizioni, come $i_0,i_1,\ldots$.
+
+\textbf{Enumerazione dell'unione.} Scegliamo per ogni indice una suriezione $\varphi_i:\N\to A_i$; la scelta simultanea è l'ipotesi insiemistica usata qui. La funzione
+\[
+\Phi:\N\times\N\to\bigcup_{i\in I}A_i,\qquad
+\Phi(k,n)=\varphi_{i_k}(n)
+\]
+è suriettiva: se $a\in A_i$, esiste $k$ con $i_k=i$ e poi $n$ con $\varphi_i(n)=a$. Poiché $\N\times\N\simeq\N$, l'unione è numerabile. Per ottenere direttamente un'iniezione dell'unione in $\N$, si associa a ogni elemento il minimo codice $p(k,n)$ di una sua preimmagine.
+\end{proof}
+
+\begin{corollario}
+L'insieme $\Q$ è numerabile infinito.
+\end{corollario}
+\begin{proof}
+La mappa $\Z\times\N^*\to\Q$, $(a,b)\mapsto a/b$, è suriettiva: ogni frazione ha un rappresentante con denominatore positivo, cambiando entrambi i segni se necessario. Il dominio è numerabile, quindi $|\Q|\le\aleph_0$. L'inclusione $\N\hookrightarrow\Q$ dà l'altra disuguaglianza; per il teorema~\ref{teo:csb} si conclude $|\Q|=\aleph_0$.
+\end{proof}
+
+\section{Teorema di Cantor e cardinalità del continuo}
+% Fonti: A–L L8 pp. 5--6 e L9 p. 1; M–Z L9 pp. 2--3.
+% M–Z dichiara non sviluppato il passo analitico; eliminata la prova ternaria autonoma.
+\begin{teorema}[Cantor]\label{teo:cantor}
+Per ogni insieme $X$ non esiste una suriezione $X\to\mathcal P(X)$. In particolare $|X|<|\mathcal P(X)|$.
+\end{teorema}
+\begin{proof}
+\textbf{Argomento diagonale.} Data $f:X\to\mathcal P(X)$, consideriamo
+\[
+D=\{x\in X\mid x\notin f(x)\}\in\mathcal P(X).
+\]
+Se $D=f(a)$ per qualche $a\in X$, dalla definizione segue
+\[
+a\in D\iff a\notin f(a)\iff a\notin D,
+\]
+contraddizione. In dettaglio, $a\in D$ implicherebbe $a\notin D$, mentre $a\notin D$ implicherebbe $a\in D$. Quindi $D$ non è raggiunto da $f$.
+
+\textbf{Disuguaglianza stretta.} L'applicazione $x\mapsto\{x\}$ è iniettiva da $X$ in $\mathcal P(X)$, ma una biezione sarebbe in particolare suriettiva, ciò che abbiamo escluso. Se $X=\varnothing$, la conclusione vale ugualmente, poiché $\mathcal P(X)=\{\varnothing\}$.
+\end{proof}
+
+\begin{definizione}
+La \textbf{cardinalità del continuo} è
+\[
+\mathfrak c=2^{\aleph_0}=|\{0,1\}^{\N}|=|\mathcal P(\N)|.
+\]
+Per Cantor, $\aleph_0<\mathfrak c$. Più in generale, $2^{|X|}$ indica la cardinalità di $\{0,1\}^X$, uguale a quella di $\mathcal P(X)$.
+\end{definizione}
+
+\begin{osservazione}[Ipotesi del continuo]
+L'\textbf{ipotesi del continuo} afferma che non esiste una cardinalità strettamente compresa fra $\aleph_0$ e $2^{\aleph_0}$. È un'affermazione distinta dal teorema di Cantor e qui non viene assunta né dimostrata. Nella teoria assiomatica usuale degli insiemi con scelta, se questa è coerente, l'ipotesi del continuo non è né dimostrabile né confutabile; è un risultato di logica assunto qui senza prova. Ripetendo Cantor si ottiene invece la catena strettamente crescente
+\[
+\aleph_0<2^{\aleph_0}<2^{\,2^{\aleph_0}}<\cdots.
+\]
+\end{osservazione}
+
+
+\subsection{Unioni, prodotti e insiemi di funzioni}
+% Fonte: L8 p. 6, domande finali. Svolgimenti integrativi.
+% Correzione della precedente trascrizione: A–L L8 p. 6 chiede B^A, non A^B.
+\begin{esercizio}
+Se $A$ è finito e $B$ è numerabile, sono numerabili $A\cup B$, $A\times B$ e $B^A$?
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Unione.} È numerabile per il teorema~\ref{teo:unione-numerabile}, essendo unione di due insiemi numerabili.
+
+\textbf{Prodotto.} Fissando iniezioni di $A$ e $B$ in $\N$, si ottiene un'iniezione $A\times B\to\N\times\N$. Il prodotto è quindi numerabile, anche se un fattore è vuoto.
+
+\textbf{Funzioni.} Se $A=\{a_1,\ldots,a_m\}$ con $m\ge1$, la funzione
+\[
+B^A\longrightarrow B^m,\qquad f\longmapsto(f(a_1),\ldots,f(a_m))
+\]
+è biettiva: i valori nei punti di $A$ determinano univocamente $f$, e ogni $m$-upla assegna tali valori. Un'iniezione $B\to\N$ induce un'iniezione $B^m\to\N^m$, quindi $B^A$ è numerabile. Se $A=\varnothing$, esiste la sola funzione vuota e $B^A$ ha un elemento. Se $B=\varnothing$ e $A\ne\varnothing$, $B^A=\varnothing$. La risposta è dunque affermativa in tutti e tre i casi.
+\end{svolgimento}
+
+\section{Cardinalità della retta reale}
+% Fonte: A–L L9 p. 1; supporto M–Z L9 pp. 2--3.
+\begin{proposizione}
+Se $f:X\to Y$ è una biezione, allora $f_*:\mathcal P(X)\to\mathcal P(Y)$ è una biezione.
+\end{proposizione}
+\begin{proof}
+La sua inversa è $(f^{-1})_*$. Infatti $(f^{-1})_*(f_*(A))=A$ per ogni $A\subseteq X$, e $f_*((f^{-1})_*(B))=B$ per ogni $B\subseteq Y$. Le identità seguono applicando $f^{-1}\circ f=\operatorname{id}_X$ e $f\circ f^{-1}=\operatorname{id}_Y$ ai singoli elementi.
+\end{proof}
+
+\begin{teorema}\label{teo:continuo}
+La retta reale ha cardinalità $|\R|=\mathfrak c=2^{\aleph_0}$.
+\end{teorema}
+\begin{proof}
+\passomath{|\R|\le\mathfrak c} Associamo a $x\in\R$ il taglio razionale inferiore $L_x=\{q\in\Q\mid q<x\}$. Se $x<y$, la densità di $\Q$ fornisce $q$ con $x<q<y$, quindi $q\in L_y\setminus L_x$ e $L_x\ne L_y$. La mappa è iniettiva da $\R$ a $\mathcal P(\Q)$. Poiché $\Q\simeq\N$, la proposizione precedente dà $|\mathcal P(\Q)|=|\mathcal P(\N)|=\mathfrak c$.
+
+\passomath{\mathfrak c\le|\R|} Si usa qui il risultato analitico che esiste un'iniezione $\{0,1\}^{\N}\to\R$, assunto senza dimostrazione.\footnote{La costruzione richiede un argomento sulle serie numeriche, non sviluppato qui. La semplice somma binaria non basta a provare l'iniettività: $(1,0,0,\ldots)$ e $(0,1,1,\ldots)$ hanno entrambe somma $1$ nella serie $\sum_{n\ge0}\varepsilon(n)/2^n$.} Con la prima disuguaglianza, Cantor--Schröder--Bernstein dà $|\R|=\mathfrak c$.
+\end{proof}
+
+
+\section{Somme e prodotti di cardinalità infinite}
+% M–Z L9 pp. 4--5. Argomento integrativo autorizzato dall'autore.
+\begin{definizione}
+L'\textbf{unione disgiunta} di $A$ e $B$ è
+\[
+A\sqcup B=(A\times\{0\})\cup(B\times\{1\}).
+\]
+Le etichette distinguono le due copie anche se $A$ e $B$ hanno elementi comuni. Se $|A|=\alpha$ e $|B|=\beta$, si definiscono
+\[
+\alpha+\beta=|A\sqcup B|,\qquad \alpha\beta=|A\times B|.
+\]
+\end{definizione}
+Le definizioni non dipendono dai rappresentanti delle cardinalità: biezioni $f:A\to A'$ e $g:B\to B'$ inducono le biezioni $(a,0)\mapsto(f(a),0)$, $(b,1)\mapsto(g(b),1)$ sull'unione disgiunta, e $(a,b)\mapsto(f(a),g(b))$ sul prodotto.
+
+\begin{teorema}
+Nel quadro con assioma della scelta, per cardinalità non nulle $\alpha,\beta$, di cui almeno una infinita,
+\[
+\alpha+\beta=\alpha\beta=\max\{\alpha,\beta\}.
+\]
+\end{teorema}
+Il risultato generale è assunto senza dimostrazione. In termini di insiemi, se $A,B$ sono non vuoti e almeno uno è infinito, l'unione disgiunta e il prodotto hanno entrambi cardinalità $\max\{|A|,|B|\}$.
+
+\begin{osservazione}[Caso vuoto]
+Se $B=\varnothing$, allora $A\sqcup B\simeq A$, ma $A\times B=\varnothing$. Per questo la formula del prodotto richiede entrambi i fattori non vuoti.
+\end{osservazione}
