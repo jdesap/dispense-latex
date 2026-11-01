@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper,oneside]{report}
+\input{preambolo}
+
+\title{Appunti di algebra 1\\[.8em]\large Prof.ssa E. Detomi}
+\author{Jude De Sa'Pinto}
+\date{}
+
+\begin{document}
+\pagenumbering{roman}
+\hypersetup{pageanchor=false}
+\maketitle
+\hypersetup{pageanchor=true}
+\tableofcontents
+\clearpage
+
+\chapter*{Convenzioni e notazioni}
+\addcontentsline{toc}{chapter}{Convenzioni e notazioni}
+Scriviamo $\N=\{0,1,2,\ldots\}$, $\N^*=\N\setminus\{0\}$ e $\Z^*=\Z\setminus\{0\}$. Il simbolo $\subseteq$ ammette l'uguaglianza, mentre $\subsetneq$ indica l'inclusione stretta. Il complementare di un insieme è sempre relativo a un ambiente specificato. Indichiamo con $\mathcal P(X)$ l'insieme delle parti di $X$.
+
+La composizione $g\circ f$ applica prima $f$, poi $g$. Per $f:X\to Y$ usiamo $f_*$ per l'immagine diretta e $f^*$ per la controimmagine; quest'ultima esiste anche quando $f$ non è invertibile. La notazione $f^{-1}$, riferita a una funzione, indica l'inversa di una biezione.
+
+Assumiamo le proprietà usuali dei numeri naturali e interi, il principio d'induzione e il buon ordinamento di $\N$. Per i reali assumiamo la struttura di campo ordinato completo e la densità di $\Q$. Le scelte simultanee di rappresentanti, quando necessarie per insiemi arbitrari, sono intese nel consueto quadro con assioma della scelta; i punti in cui intervengono sono precisati nel testo.
+
+\clearpage
+\pagenumbering{arabic}
+\input{capitoli/01-insiemi}
+\input{capitoli/02-relazioni}
+\input{capitoli/03-funzioni}
+\input{capitoli/04-cardinalita}
+\input{capitoli/05-interi}
+\input{capitoli/06-aritmetica-modulare}
+\end{document}

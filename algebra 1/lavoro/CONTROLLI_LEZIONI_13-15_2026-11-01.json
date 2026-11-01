@@ -1,0 +1,19 @@
+{
+  "data": "2026-11-01",
+  "congruenze_testate": 91871,
+  "sistemi_CRT_testati": 339,
+  "elementi_prodotti_campi": 289,
+  "matrici_testate": 2401,
+  "esempi_stampati": "tutti verificati",
+  "fonti_originali_identiche": 30,
+  "pagine_AL": 97,
+  "pagine_MZ": 106,
+  "unita": 113,
+  "unita_rinviate": [
+    "D01",
+    "D02",
+    "D03"
+  ],
+  "capitoli_1_5": "sorgenti e testo PDF invariati",
+  "limite": "Riscontri finiti supplementari; le prove generali sono riesaminate manualmente nelle unità e non certificate da questi controlli."
+}

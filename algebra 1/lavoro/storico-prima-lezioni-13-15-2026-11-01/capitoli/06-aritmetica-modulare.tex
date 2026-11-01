@@ -1,0 +1,264 @@
+% !TeX root = ../main.tex
+\chapter{Aritmetica modulare}\label{cap:modulare}
+\fonti{Lezione 12}
+
+\section{Congruenza e classi resto}
+% A–L L12 pp. 1–2; M–Z L12 pp. 4–5.
+Fissiamo un intero $m\ge2$, detto \textbf{modulo}.
+\begin{definizione}
+Due interi $x,y$ sono \textbf{congrui modulo $m$} se hanno lo stesso resto nella divisione euclidea per $m$. Si scrive $x\equiv_m y$, oppure $x\equiv y\pmod m$.
+\end{definizione}
+
+\begin{proposizione}\label{prop:congruenza-divisibilita}
+Per ogni $x,y\in\Z$,
+\[
+x\equiv y\pmod m\quad\Longleftrightarrow\quad m\mid x-y.
+\]
+\end{proposizione}
+\begin{proof}
+Scriviamo le divisioni $x=mq_1+r_1$, $y=mq_2+r_2$, con $0\le r_1,r_2<m$. Sottraendo,
+\[
+x-y=m(q_1-q_2)+(r_1-r_2).
+\]
+Se $r_1=r_2$, la differenza è multipla di $m$. Viceversa, se $m\mid x-y$, allora $m\mid r_1-r_2$. Poiché $|r_1-r_2|<m$, tale multiplo di $m$ deve essere zero: $r_1=r_2$.
+\end{proof}
+
+\begin{proposizione}
+La congruenza modulo $m$ è una relazione di equivalenza su $\Z$.
+\end{proposizione}
+\begin{proof}
+È riflessiva perché $m\mid x-x=0$. È simmetrica perché da $x-y=mk$ segue $y-x=m(-k)$. È transitiva perché da $x-y=mk$ e $y-z=mh$ segue $x-z=m(k+h)$.
+\end{proof}
+
+La stessa equivalenza è quella indotta dalla funzione resto
+\[
+\rho_m:\Z\longrightarrow\{0,1,\ldots,m-1\},\qquad
+\rho_m(x)=\text{resto della divisione di $x$ per $m$}:
+\]
+due interi sono equivalenti esattamente quando hanno la stessa immagine.
+
+\begin{definizione}
+La \textbf{classe resto} di $x$ modulo $m$ è
+\[
+[x]_m=\{y\in\Z\mid m\mid x-y\}
+     =\{x+mk\mid k\in\Z\}=x+m\Z.
+\]
+L'insieme quoziente si indica con $\Z/m\Z$. Quando il modulo è chiaro, scriviamo semplicemente $[x]$; si usa anche la notazione $\overline{x}$.
+\end{definizione}
+
+L'uguaglianza delle due descrizioni della classe segue da $m\mid x-y\iff y=x+mk$ per qualche $k\in\Z$.
+
+\begin{proposizione}
+Ogni classe ha un unico rappresentante in $\{0,1,\ldots,m-1\}$. In particolare
+\[
+\Z/m\Z=\{[0]_m,[1]_m,\ldots,[m-1]_m\},\qquad |\Z/m\Z|=m.
+\]
+\end{proposizione}
+\begin{proof}
+La divisione $x=mq+r$, $0\le r<m$, dà $[x]_m=[r]_m$, quindi ogni classe ha un tale rappresentante. Se $r,s$ sono entrambi in quell'intervallo e $[r]_m=[s]_m$, allora $m\mid r-s$ e $|r-s|<m$, dunque $r=s$. Le $m$ classi elencate sono perciò distinte ed esauriscono il quoziente.
+\end{proof}
+
+\begin{esempio}
+Per $m=2$, $[0]_2=2\Z$ è l'insieme dei pari e $[1]_2=1+2\Z$ quello dei dispari. Per $m=3$ le classi sono $3\Z$, $1+3\Z$ e $2+3\Z$: per esempio $[-3]_3=[0]_3=[6]_3$ e $[8]_3=[5]_3=[2]_3$.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=1.7cm,y=.65cm]
+\draw[asse] (-2.35,0)--(2.5,0);
+\foreach \k/\testo in {-2/{x-2m},-1/{x-m},0/{x},1/{x+m},2/{x+2m}}{
+  \fill[coloreschema] (\k,0) circle (2pt);
+  \node[below=5pt] at (\k,0) {$\testo$};
+}
+\foreach \k in {-2,-1,0,1}{\draw[coloreschema] (\k,.15) to[bend left=30] (\k+1,.15);}
+\node at (0,1.1) {Rappresentanti della stessa classe $[x]_m$};
+\end{tikzpicture}
+\end{schema}
+
+\begin{osservazione}
+Tra classi si scrive un'\emph{uguaglianza}; tra interi, una \emph{congruenza}. Per esempio $[-2]_3=[1]_3$ e $-2\equiv1\pmod3$, mentre $-2\ne1$ in $\Z$.
+\end{osservazione}
+
+\section{Operazioni sul quoziente}
+% A–L L12 pp. 3–4: scelta la prova esplicita, lasciata per esercizio in M–Z p. 5.
+\begin{proposizione}\label{prop:operazioni-modulari}
+Le regole
+\[
+[a]_m+[b]_m=[a+b]_m,\qquad [a]_m[b]_m=[ab]_m
+\]
+definiscono operazioni su $\Z/m\Z$: il risultato non dipende dai rappresentanti scelti.
+\end{proposizione}
+\begin{proof}
+Siano $[a]_m=[a']_m$ e $[b]_m=[b']_m$, cioè $m\mid a-a'$ e $m\mid b-b'$. Per la somma,
+\[
+(a+b)-(a'+b')=(a-a')+(b-b')
+\]
+è divisibile per $m$, quindi $[a+b]_m=[a'+b']_m$. Per il prodotto,
+\[
+ab-a'b'=a(b-b')+(a-a')b'
+\]
+è ancora divisibile per $m$, quindi $[ab]_m=[a'b']_m$. Entrambe le operazioni sono dunque ben definite.
+\end{proof}
+
+\begin{proposizione}
+Le operazioni sul quoziente sono associative e commutative; il prodotto è distributivo rispetto alla somma. I neutri sono $[0]_m$ e $[1]_m$, rispettivamente; ogni $[a]_m$ ha opposto $[-a]_m$. Pertanto $\Z/m\Z$ è un anello commutativo con unità.
+\end{proposizione}
+\begin{proof}
+Omettiamo il pedice $m$. Le proprietà si verificano sui rappresentanti usando quelle degli interi:
+\[
+\begin{aligned}
+[a]+[b]&=[a+b]=[b+a]=[b]+[a],\\
+([a]+[b])+[c]&=[(a+b)+c]=[a+(b+c)]=[a]+([b]+[c]),\\
+[a][b]&=[ab]=[ba]=[b][a],\\
+([a][b])[c]&=[(ab)c]=[a(bc)]=[a]([b][c]),\\
+[a]([b]+[c])&=[a(b+c)]=[ab+ac]=[a][b]+[a][c].
+\end{aligned}
+\]
+Inoltre $[a]+[0]=[a]$, $[a]+[-a]=[0]$ e $[a][1]=[a]$. La distributività dall'altro lato segue dalla commutatività del prodotto. Infine $[0]\ne[1]$, perché $m\ge2$ non divide $1$.
+\end{proof}
+
+\begin{esempio}[Parità e orologio]
+In $\Z/2\Z$, $[0]+[0]=[0]$, $[0]+[1]=[1]$ e $[1]+[1]=[0]$: sono le regole della parità. Inoltre $[1]=[-1]=[-3]$, perciò una classe può coincidere con il proprio opposto.
+
+In $\Z/12\Z$ si calcola come su un orologio con lo zero al posto del dodici: ad esempio $[9]+[5]=[14]=[2]$. L'opposto di $[7]_{12}$ è $[-7]_{12}=[5]_{12}$.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[scale=.85]
+\draw[spazio] (0,0) circle (1.45);
+\foreach \k in {0,...,11}{
+  \fill[coloreschema] ({90-30*\k}:1.45) circle (1.5pt);
+  \node at ({90-30*\k}:1.8) {$\k$};
+}
+\draw[-{Stealth},coloreschema,line width=.9pt] (90:1.15) arc (90:-60:1.15);
+\node at (0,-2.35) {Le dodici classi di $\Z/12\Z$};
+\end{tikzpicture}
+\end{schema}
+
+\section{Invertibili e divisori dello zero}
+% A–L L12 pp. 5–6; integrazioni M–Z L12 p. 6.
+\begin{esempio}
+In $\Z/4\Z$ si ha $[2]+[2]=[0]$ e $[2][2]=[0]$, pur essendo $[2]\ne[0]$. In $\Z/6\Z$, $[2][3]=[0]$ con entrambi i fattori non nulli. L'assenza di divisori dello zero in $\Z$ non passa quindi a tutti i quozienti.
+
+In $\Z/5\Z$, invece, $[2][3]=[6]=[1]$: le classi $[2]$ e $[3]$ sono inverse l'una dell'altra. Le altre classi non nulle sono $[1]$, inversa di sé, e $[4]=[-1]$, anch'essa inversa di sé. Anche in $\Z/2\Z$ ogni classe non nulla è invertibile.
+\end{esempio}
+
+\begin{definizione}
+Una classe $[a]_m$ è \textbf{invertibile}, o è un'\textbf{unità}, se esiste $[b]_m$ tale che $[a]_m[b]_m=[1]_m$. Tale classe $[b]_m$ si chiama \textbf{inverso} di $[a]_m$.
+
+Seguendo la convenzione della lezione, $[a]_m$ è un \textbf{divisore dello zero} se esiste una classe $[b]_m\ne[0]_m$ con $[a]_m[b]_m=[0]_m$. Questa definizione include $[0]_m$.
+\end{definizione}
+
+\begin{osservazione}
+La classe nulla rientra nella definizione perché $[0]_m[1]_m=[0]_m$ e $[1]_m\ne[0]_m$. Quando si richiede anche $[a]_m\ne[0]_m$, si parla di divisore dello zero \emph{non nullo}; questa condizione aggiuntiva va tenuta presente confrontando convenzioni diverse.
+\end{osservazione}
+
+L'inverso, quando esiste, è unico: se $[a][b]=[1]=[a][c]$, allora
+\[
+[b]=[b][1]=[b]([a][c])=([b][a])[c]=[1][c]=[c].
+\]
+Lo indichiamo con $[a]_m^{-1}$. Per esempio $[5]_{12}^{-1}=[5]_{12}$, perché $25\equiv1\pmod{12}$.
+
+\begin{esempio}
+In $\Z/6\Z$, $[1]$ e $[5]=[-1]$ sono invertibili. Le classi $[0],[2],[3],[4]$ sono divisori dello zero: oltre al prodotto $[2][3]=[0]$, si ha $[4][3]=[12]=[0]$. Qui ogni classe è un'unità oppure un divisore dello zero. Il prossimo risultato mostra che ciò vale per ogni modulo.
+\end{esempio}
+
+\Needspace{17\baselineskip}
+\subsection{Il criterio del massimo comune divisore}
+% A–L L12 pp. 6–8; M–Z L12 p. 6 per la costruzione dell'inverso con Bézout.
+\begin{teorema}\label{teo:unita-modulari}
+Siano $m\ge2$ e $a\in\Z$. Allora:
+\begin{enumerate}
+\item $[a]_m$ è invertibile se e solo se $\operatorname{MCD}(a,m)=1$;
+\item $[a]_m$ è divisore dello zero, nella convenzione che include $[0]_m$, se e solo se $\operatorname{MCD}(a,m)>1$.
+\end{enumerate}
+In particolare ogni classe appartiene esattamente a una delle due categorie.
+\end{teorema}
+\begin{proof}
+\textbf{Invertibilità: necessità.} Se $[a]_m[b]_m=[1]_m$, esiste $q\in\Z$ con $ab-1=mq$. Quindi $1=ab-mq$ è una combinazione intera di $a,m$. Ogni divisore comune divide $1$, perciò $\operatorname{MCD}(a,m)=1$.
+
+\textbf{Invertibilità: sufficienza e costruzione.} Se $\operatorname{MCD}(a,m)=1$, Bézout dà $\alpha a+\beta m=1$. Passando alle classi,
+\[
+[\alpha]_m[a]_m+[\beta]_m[m]_m=[1]_m.
+\]
+Poiché $[m]_m=[0]_m$, segue $[\alpha]_m[a]_m=[1]_m$: dunque $[a]_m^{-1}=[\alpha]_m$.
+
+\textbf{Divisori dello zero: esclusione del caso coprimo.} Se $\operatorname{MCD}(a,m)=1$ e $[a]_m[b]_m=[0]_m$, allora $m\mid ab$. Il lemma di Euclide applicato a $m,a$ dà $m\mid b$, cioè $[b]_m=[0]_m$. Non esiste quindi un annullatore non nullo.
+
+\textbf{Divisori dello zero: costruzione dell'annullatore.} Se $d=\operatorname{MCD}(a,m)>1$, scriviamo $a=da'$ e $m=dm'$. Si ha $m'=m/d\in\Z$ e $1\le m'<m$, quindi $[m']_m\ne[0]_m$. Inoltre
+\[
+[a]_m[m']_m=[da'm']_m=[ma']_m=[0]_m.
+\]
+Quindi $[a]_m$ è divisore dello zero, con annullatore non nullo $[m/d]_m$. La costruzione include $a\equiv0\pmod m$: in quel caso $d=m$ e l'annullatore è $[1]_m$.
+\end{proof}
+
+\begin{osservazione}
+Il criterio non dipende dal rappresentante: se $a'=a+km$, un intero divide $a,m$ se e solo se divide $a',m$, mediante le combinazioni $a'=a+km$ e $a=a'-km$. I due massimi comuni divisori positivi coincidono.
+
+Se $m=p$ è primo, ogni classe non nulla ha $\operatorname{MCD}(a,p)=1$ ed è invertibile. Dunque $\Z/p\Z$ è un \textbf{campo}: un anello commutativo con $[0]\ne[1]$ in cui ogni elemento non nullo è invertibile. Questo spiega gli esempi dei moduli $2$ e $5$.
+\end{osservazione}
+
+\subsection{Cancellazione e calcolo degli inversi}
+\begin{osservazione}
+Si può cancellare un fattore invertibile: moltiplicando $[a][b]=[a][c]$ per $[a]^{-1}$ si ottiene $[b]=[c]$. Un divisore dello zero, invece, può impedire la cancellazione. In $\Z/6\Z$,
+\[
+[2][1]=[2]=[2][4],\qquad [1]\ne[4].
+\]
+Dalla sola uguaglianza del prodotto a zero non segue che uno dei fattori sia nullo: $[2][3]=[0]$ è già un controesempio.
+\end{osservazione}
+
+\Needspace{10\baselineskip}
+\begin{esercizio}[Calcoli modulo 84]
+In $\Z/84\Z$, caratterizzare le classi invertibili e i divisori dello zero. Trovare una classe non nulla che annulli $[30]_{84}$ e calcolare $[65]_{84}^{-1}$.
+\end{esercizio}
+\begin{svolgimento}
+Poiché $84=2^2\cdot3\cdot7$, una classe $[a]_{84}$ è divisore dello zero se e solo se almeno uno tra $2,3,7$ divide $a$. È invertibile se nessuno dei tre divide $a$.
+
+Si ha $\operatorname{MCD}(30,84)=6$. La costruzione del teorema dà l'annullatore $[84/6]_{84}=[14]_{84}$, non nullo, e infatti $30\cdot14=420=5\cdot84$. Anche $[28]_{84}$ e $[42]_{84}$ sono annullatori non nulli, perché $30\cdot28=10\cdot84$ e $30\cdot42=15\cdot84$. Ogni loro multiplo annulla ancora $[30]$, ma il multiplo scelto può essere la classe nulla.
+
+Per $65$ e $84$ le divisioni sono
+\[
+\begin{aligned}
+84&=65+19,&65&=3\cdot19+8,\\
+19&=2\cdot8+3,&8&=2\cdot3+2,\\
+3&=2+1,&2&=2\cdot1.
+\end{aligned}
+\]
+L'ultimo resto non nullo è $1$. Risalendo,
+\[
+\begin{aligned}
+1&=3-2=3-(8-2\cdot3)=3\cdot3-8\\
+ &=3(19-2\cdot8)-8=3\cdot19-7\cdot8\\
+ &=3\cdot19-7(65-3\cdot19)=24\cdot19-7\cdot65\\
+ &=24(84-65)-7\cdot65=24\cdot84-31\cdot65.
+\end{aligned}
+\]
+Quindi $[65]_{84}^{-1}=[-31]_{84}=[53]_{84}$. La verifica diretta è $65\cdot53=3445=41\cdot84+1$.
+\end{svolgimento}
+
+\Needspace{9\baselineskip}
+\begin{esercizio}
+Trovare l'inverso di $[5]_{84}$. Stabilire se $[8]_{84}$ è invertibile.
+\end{esercizio}
+\begin{svolgimento}
+Le divisioni $84=16\cdot5+4$ e $5=4+1$ danno
+\[
+1=5-4=5-(84-16\cdot5)=17\cdot5-84.
+\]
+Pertanto $[5]_{84}^{-1}=[17]_{84}$. Invece $\operatorname{MCD}(8,84)=4>1$, quindi $[8]_{84}$ non è invertibile. È un divisore dello zero: ad esempio $[8]_{84}[21]_{84}=[168]_{84}=[0]_{84}$ e $[21]_{84}\ne[0]_{84}$.
+\end{svolgimento}
+
+\section{Calcoli con le classi resto}
+% A–L L12 p. 9.
+\begin{esempio}[Il numero 2026]
+In $\Z/10\Z$, $2026=202\cdot10+6$ dà $[2026]_{10}=[6]_{10}$.
+
+In $\Z/3\Z$, poiché $[10]_3=[1]_3$, per le proprietà del prodotto si ha anche $[1000]_3=[10]_3^3=[1]_3$. Quindi
+\[
+\begin{aligned}
+[2026]_3&=[2\cdot1000+2\cdot10+6]_3\\
+&=[2]_3[1]_3+[2]_3[1]_3+[0]_3\\
+&=[4]_3=[1]_3.
+\end{aligned}
+\]
+Equivalentemente, $[2]_3=[-1]_3$ permette di ottenere $[-1]_3+[-1]_3=[-2]_3=[1]_3$. Il resto della divisione di $2026$ per $3$ è perciò $1$.
+\end{esempio}

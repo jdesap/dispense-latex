@@ -83,3 +83,14 @@ La copertura è relativa ai PDF consegnati; non attesta il programma completo d'
 
 
 **Correzione terminologica, 24 ottobre 2026:** su richiesta dell’autore, «congrui modulo m» nella definizione 6.1. Preferenza salvata nell’AGENTS.md della materia. Ricompilati volume ed estratti, verificati tutti e sei gli estratti e ispezionata la pagina variata (stampata 34, PDF 38). Restano 42 pagine e la stessa numerazione; solo il capitolo 6 cambia nel testo.
+
+
+## Sessione 5 — 1 novembre 2026: lezioni 13–15
+
+**Richiesta:** integrare le tre lezioni successive come di consueto; confrontare anche sovrapposizioni e aggiunte retroattive.
+
+**Completato:** lettura visiva e inventario di tre PDF A–L e tre M–Z,47 pagine nuove; riprese MZ13 sulle operazioni/unità riunite al capitolo6, con elenco completo delle unità mod84 aggiunto nello svolgimento già esistente. Ampliato lo stesso capitolo con congruenze lineari, conteggio delle classi, riduzioni, sistemi e teorema cinese con due metodi per gli esempi. Nuovo capitolo7 Anelli e campi: assiomi, convenzioni, esempi, prove, domini/campi e prodotti, tavole mod6. Corretta l’affermazione MZ15 troppo generale sulla risolubilità dei sistemi con coefficienti arbitrari. Morfismi e sviluppi dipendenti rinviati esplicitamente come nuovi argomenti non ancora A–L, indicizzati in MATERIALE_MZ_DA_RIPRENDERE.json.
+
+**Risultato:** 53 pagine,4 preliminari e49 testo; capitolo6 di10 pagine (34–43), capitolo7 di6 (44–49). Capitoli1–5 invariati anche nel rendering di tutte le33 pagine. Compilazione senza avvisi e sette estratti verificati integralmente (pixel, testo, flussi, numerazione, link). Riscontri matematici finiti supplementari:91.871 congruenze,339 sistemi,289 elementi di prodotti,2.401 matrici. Annotazioni separate non toccate.
+
+**Ripresa:** registro corrente LEZIONI_13-15_2026-11-01.md; prossima lezione A–L16. Snapshot precedente storico-prima-lezioni-13-15-2026-11-01/. Confrontare i rinvii D01–D03 al momento opportuno. Nessun commit,push o pubblicazione.

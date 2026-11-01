@@ -1,0 +1,215 @@
+{
+  "data_inventario": "2026-10-24",
+  "totale_pdf": 24,
+  "totale_pagine": 156,
+  "numerazione": "Numero ricavato dal nome del file; non sono inventate date delle lezioni.",
+  "fonti": [
+    {
+      "numero": 1,
+      "origine": "/Users/jude/Downloads/Algebra 1 2026_0013bb3f66a58b8375e03651d51da80e.pdf",
+      "pagine": 4,
+      "file": "fonti/Lezione 1.pdf",
+      "sha256": "3d4eb1caa165828fe41ebdf8130028e2f8c12fc1e81f329c7ba42caf1b8d946b"
+    },
+    {
+      "numero": 2,
+      "origine": "/Users/jude/Downloads/Algebra-2_02f2b1142143e410d7ceb6c1a999a278.pdf",
+      "pagine": 6,
+      "file": "fonti/Lezione 2.pdf",
+      "sha256": "2a9a6379482455bdd87ce4c909c1192766e3aff961e3e6fb136bda7e0f419f7d"
+    },
+    {
+      "numero": 3,
+      "origine": "/Users/jude/Downloads/Algebra-3_dad22aec3b3967c65c4eef118c1625d9.pdf",
+      "pagine": 8,
+      "file": "fonti/Lezione 3.pdf",
+      "sha256": "f84f7e62c6878baf349e3522ff619c9f606a773e43568caee1fa15bbca96c54e"
+    },
+    {
+      "numero": 4,
+      "origine": "/Users/jude/Downloads/Algebra-4_53297ac83a12a30f4f9d69211568bbcc.pdf",
+      "pagine": 7,
+      "file": "fonti/Lezione 4.pdf",
+      "sha256": "ed3ccecf85cb8f04ebb348b6f32e48dd1f459cdea5ae1d339d6b7aca5ec73ee7"
+    },
+    {
+      "numero": 5,
+      "origine": "/Users/jude/Downloads/Algebra-5_66cf3b36d9ca611cab5ad4e2c9b84caa.pdf",
+      "pagine": 7,
+      "file": "fonti/Lezione 5.pdf",
+      "sha256": "bba130d1d0b82c104d29ed5b260a6465e8bd4e972d31f0ad890c97fde7a55e9f"
+    },
+    {
+      "numero": 6,
+      "origine": "/Users/jude/Downloads/Algebra-6_21cfcf30fd6369c58eda013e18d84f2f.pdf",
+      "pagine": 7,
+      "file": "fonti/Lezione 6.pdf",
+      "sha256": "61adc01c38c41407c19449f17f257068f4b54840f56c3c4b50fe6d3ab3555180"
+    },
+    {
+      "numero": 7,
+      "origine": "/Users/jude/Downloads/Algebra-7_199e92c62776ab3f8d4a943abfc584ad.pdf",
+      "pagine": 3,
+      "file": "fonti/Lezione 7.pdf",
+      "sha256": "2e572b5b546ee0886eb3dded41cbb5bb7ddc424c7ba028d06da250483dcdcef4"
+    },
+    {
+      "numero": 8,
+      "origine": "/Users/jude/Downloads/Algebra-8_0bdc3e37b3cf2abd0db7ccd4358c660a.pdf",
+      "pagine": 6,
+      "file": "fonti/Lezione 8.pdf",
+      "sha256": "ee70b8e037e2e1960e07ca275da9b381c2b8e7cc535c36d140e41c4b2bbf8002"
+    },
+    {
+      "numero": 9,
+      "origine": "/Users/jude/Downloads/Algebra-9_633d54d4a25d5da28da01080dfe4664d.pdf",
+      "pagine": 6,
+      "file": "fonti/Lezione 9.pdf",
+      "sha256": "70679aef8ca40cdce5d593821b0c91d4bd28120e81c19bbc08ccc2654dc9983c"
+    },
+    {
+      "numero": 10,
+      "origine": "/Users/jude/Downloads/Algebra-10_9482aacbc92165831062d2380eadce6d.pdf",
+      "pagine": 4,
+      "file": "fonti/Lezione 10.pdf",
+      "sha256": "0dbdb28b5b3ac58359d533f657b15a9de3f21aff8b351d38c2238f8fa8b62099"
+    },
+    {
+      "numero": 11,
+      "origine": "/Users/jude/Downloads/Algebra-11_14bcf808f17e442a3c79a0689950e48a.pdf",
+      "pagine": 7,
+      "file": "fonti/Lezione 11.pdf",
+      "sha256": "3e05c7481191eceb8054dbd7e8882e19fb20318194de339ad85b2a2dc439013e"
+    },
+    {
+      "numero": 12,
+      "origine": "/Users/jude/Downloads/Algebra-12.pdf",
+      "pagine": 9,
+      "file": "fonti/Lezione 12.pdf",
+      "sha256": "163f3bdab32b2dcc781c3e9178c6767ebadf541650ae4c996215e176d945d4b5"
+    }
+  ],
+  "serie_M-Z": {
+    "data_inventario": "2026-10-24",
+    "docente": "non identificato nei PDF; indicato dall’autore come altro docente",
+    "pagine": 82,
+    "fonti": [
+      {
+        "numero": 1,
+        "origine": "/Users/jude/Downloads/Prima lezione M-Z_414a3fcc9dd68251c6195d013d26b8e4.pdf",
+        "pagine": 2,
+        "caratteri": 120,
+        "file": "fonti/M-Z/Lezione 1.pdf",
+        "serie": "M-Z",
+        "sha256": "83d6d152d3e9411c981ae8f4029758c67f580105ddb2fadac5d20a7e790d0c37"
+      },
+      {
+        "numero": 2,
+        "origine": "/Users/jude/Downloads/Seconda lezione M-Z_fd0939d58daf24928e4313a3a37ebf1c.pdf",
+        "pagine": 7,
+        "caratteri": 333,
+        "file": "fonti/M-Z/Lezione 2.pdf",
+        "serie": "M-Z",
+        "sha256": "e42f86cf2a868e5320cdbf75e353c7c63722b225b574fffd8c8072f627f9c171"
+      },
+      {
+        "numero": 3,
+        "origine": "/Users/jude/Downloads/Terza lezione M-Z_f44c090c8e9e984b0d8438b493fcde9b.pdf",
+        "pagine": 9,
+        "caratteri": 398,
+        "file": "fonti/M-Z/Lezione 3.pdf",
+        "serie": "M-Z",
+        "sha256": "71bbe69de0b02cb78366d4199d6bbee60a374a8a6a143ce2693acef6f0e12b20"
+      },
+      {
+        "numero": 4,
+        "origine": "/Users/jude/Downloads/Quarta lezione M-Z_16b2e5a3b1bbdb0c05c3d0597b912fb5.pdf",
+        "pagine": 7,
+        "caratteri": 325,
+        "file": "fonti/M-Z/Lezione 4.pdf",
+        "serie": "M-Z",
+        "sha256": "9f5bb6c87029b40be3ad22dccf2b1e1decdba013ab8c2b7a58c037a81c4065f4"
+      },
+      {
+        "numero": 5,
+        "origine": "/Users/jude/Downloads/Quinta lezione M-Z_a7d7bd72e4f27484ebc41603b6d48d6d.pdf",
+        "pagine": 8,
+        "caratteri": 364,
+        "file": "fonti/M-Z/Lezione 5.pdf",
+        "serie": "M-Z",
+        "sha256": "076cf79f6abf5c924a36dfcaf244fe38f7e00a65d53d47232dc2ef367afabfe7"
+      },
+      {
+        "numero": 6,
+        "origine": "/Users/jude/Downloads/Sesta lezione M-Z_f428cf3ed2ac3a63bd0eddf54c21f19e.pdf",
+        "pagine": 6,
+        "caratteri": 275,
+        "file": "fonti/M-Z/Lezione 6.pdf",
+        "serie": "M-Z",
+        "sha256": "6c0cff7982f845da79e91d2db86ce407cd7dfa73d39639e6f5aaa736fd89f983"
+      },
+      {
+        "numero": 7,
+        "origine": "/Users/jude/Downloads/Settima lezione M-Z_61530b86e49c42f5aea0589ac3b3da18.pdf",
+        "pagine": 9,
+        "caratteri": 418,
+        "file": "fonti/M-Z/Lezione 7.pdf",
+        "serie": "M-Z",
+        "sha256": "5c2e69987f72353d16cece57214c29c81ed511a7b2a322478b3d201928403c39"
+      },
+      {
+        "numero": 8,
+        "origine": "/Users/jude/Downloads/Ottava lezione M-Z_35661a9e688a15627e1c2720e0ace94a.pdf",
+        "pagine": 7,
+        "caratteri": 324,
+        "file": "fonti/M-Z/Lezione 8.pdf",
+        "serie": "M-Z",
+        "sha256": "7e1a222fef28a8ca0e8fc0e2b53182291f993f847ea2bff6c0f43ebb4184ba24"
+      },
+      {
+        "numero": 9,
+        "origine": "/Users/jude/Downloads/Nona lezione M-Z_7b7e37585865dc80afd16f857ffd5f2d.pdf",
+        "pagine": 9,
+        "caratteri": 386,
+        "file": "fonti/M-Z/Lezione 9.pdf",
+        "serie": "M-Z",
+        "sha256": "80d36dc5a1aa69aac666cb30176fdb96b13078d39835ba95f4fe2ae3f4c74c11"
+      },
+      {
+        "numero": 10,
+        "origine": "/Users/jude/Downloads/Decima lezione M-Z_c5620c38f527b4eecdabbc8bf987563d.pdf",
+        "pagine": 4,
+        "caratteri": 203,
+        "file": "fonti/M-Z/Lezione 10.pdf",
+        "serie": "M-Z",
+        "sha256": "90460990fc77cda3a96e717a02dd811cce1f2642e40b90947c818b52f014ebc3"
+      },
+      {
+        "numero": 11,
+        "origine": "/Users/jude/Downloads/Undicesima lezione M-Z_d832eea940a4baf5edfc5a6634eac642.pdf",
+        "pagine": 7,
+        "caratteri": 358,
+        "file": "fonti/M-Z/Lezione 11.pdf",
+        "serie": "M-Z",
+        "sha256": "f32ede34390f9c5060a6da38e5d6801359cad9f85d05008fcee3010dde476606"
+      },
+      {
+        "numero": 12,
+        "origine": "/Users/jude/Downloads/Dodicesima lezione M-Z.pdf",
+        "pagine": 7,
+        "file": "fonti/M-Z/Lezione 12.pdf",
+        "sha256": "8bd4a4ca226707acf43f1f4d737b47cb14ffc65d296abc4613fd949be3e28b79",
+        "serie": "M-Z",
+        "caratteri": 281
+      }
+    ],
+    "criterio_confronto": "globale per macroargomenti, senza corrispondenza per numero di lezione"
+  },
+  "serie_primaria": "A–L",
+  "serie_supporto": "M–Z",
+  "lettura_visiva": {
+    "A–L": 74,
+    "M–Z": 82
+  },
+  "criterio_integrazione": "Ordine A–L; M–Z integra lacune e contenuti omessi di argomenti conclusi. Sviluppi plausibilmente futuri da distinguere e registrare."
+}
