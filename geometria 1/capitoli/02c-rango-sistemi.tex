@@ -1,0 +1,94 @@
+% !TeX root = ../main.tex
+\section{Rango per righe e per colonne}
+\begin{definizione}
+Il \emph{rango per righe} di una matrice è la dimensione del sottospazio generato dalle sue righe; il \emph{rango per colonne} è la dimensione del sottospazio generato dalle sue colonne. In altre parole, ciascuno è il massimo numero di righe, o rispettivamente di colonne, linearmente indipendenti.
+\end{definizione}
+Le operazioni elementari conservano lo spazio delle righe e quindi il rango per righe. Nella forma a scala le righe non nulle sono indipendenti: il rango per righe coincide perciò con il numero di pivot.
+
+\begin{teorema}
+Il rango per righe e il rango per colonne di ogni matrice sono uguali. Il valore comune si chiama \emph{rango} e si indica con $\operatorname{rg}A$. In particolare,
+\[
+ \operatorname{rg}A\leq\min(m,n),\qquad \operatorname{rg}A^T=\operatorname{rg}A
+ \quad\text{per }A\in M(m,n,K).
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Le relazioni fra colonne.} Se $A_1,\ldots,A_n$ sono le colonne, le loro relazioni sono esattamente le soluzioni di
+\[
+ x_1A_1+\cdots+x_nA_n=0,\qquad\text{cioè }Ax=0.
+\]
+Se $A'$ è ottenuta da $A$ per operazioni elementari sulle righe, i sistemi $Ax=0$ e $A'x=0$ hanno le stesse soluzioni. Ogni sottofamiglia di colonne ha dunque le medesime relazioni prima e dopo la riduzione: è indipendente in una matrice se e solo se lo è nell'altra. Il rango per colonne resta invariato.
+
+\textbf{Prima disuguaglianza.} Siano $r$ il rango per righe e $c$ quello per colonne di $A$. Riduciamo $A$ a scala: rimangono $r$ righe non nulle. Cancellando le righe nulle, senza cambiare le relazioni fra colonne, queste diventano vettori di $K^r$; quindi $c\leq r$.
+
+\textbf{Disuguaglianza opposta.} Applichiamo lo stesso ragionamento ad $A^T$: le sue righe sono le colonne di $A$ e viceversa. Si ottiene $r\leq c$, e quindi $r=c$. I limiti sulle dimensioni e l'uguaglianza con il rango della trasposta seguono immediatamente.
+\end{proof}
+
+\begin{osservazione}
+Le colonne che occupano le posizioni dei pivot nella forma a scala sono indipendenti: limitandosi alle righe non nulle, formano una matrice triangolare con diagonale non nulla. Sono tante quanto il rango, quindi formano una base dello spazio delle colonne. Poiché le operazioni sulle righe conservano tutte le relazioni fra colonne, le colonne \emph{originarie} nelle stesse posizioni formano una base dello spazio delle colonne della matrice iniziale. Il procedimento permette così di estrarre una base da una famiglia di generatori disposti per colonne.
+\end{osservazione}
+
+\section{Sistemi omogenei e struttura delle soluzioni}
+\begin{definizione}
+Il sistema $Ax=b$ è \emph{omogeneo} se $b=0$; altrimenti è \emph{non omogeneo}. Il sistema $Ax=0$ è detto sistema omogeneo associato ad $Ax=b$.
+\end{definizione}
+L'insieme $S_0=\{x\in K^n:Ax=0\}$ è un sottospazio: contiene $0$ e, per la distributività del prodotto, $A(\lambda x+\mu y)=\lambda Ax+\mu Ay=0$ se $x,y\in S_0$.
+
+\begin{proposizione}
+Se $\bar y$ è una soluzione particolare di $Ay=b$, tutte e sole le soluzioni sono
+\[
+ S=\bar y+S_0=\{\bar y+x:x\in S_0\}.
+\]
+Inoltre la differenza di due soluzioni di $Ay=b$ è soluzione di $Ax=0$.
+\end{proposizione}
+\begin{proof}
+Se $Ax=0$, allora $A(\bar y+x)=A\bar y+Ax=b$. Viceversa, se $Ay=b$, si ha $A(y-\bar y)=b-b=0$, quindi $y=\bar y+x$ per $x=y-\bar y\in S_0$. In particolare, per due soluzioni $y_1,y_2$, vale $A(y_1-y_2)=0$.
+\end{proof}
+Se $b\ne0$, l'insieme delle soluzioni, quando non vuoto, è dunque un traslato del sottospazio $S_0$; non contiene il vettore nullo.
+
+\section{Il teorema di Rouché--Capelli}
+\begin{teorema}[Rouché--Capelli]
+Il sistema $Ax=b$, con $A$ di tipo $m\times n$, ha soluzione se e solo se
+\[
+ \operatorname{rg}A=\operatorname{rg}(A\mid b).
+\]
+Quando il sistema è compatibile, posto $r=\operatorname{rg}A$, se $r=n$ la soluzione è unica; se $r<n$ le soluzioni dipendono da $n-r$ parametri liberi. Su $\R$, in quest'ultimo caso le soluzioni sono infinite.\footnote{Su un campo arbitrario la parametrizzazione resta valida; se il campo ha $q$ elementi, le soluzioni di un sistema compatibile sono esattamente $q^{n-r}$.}
+\end{teorema}
+\begin{proof}
+\textbf{Compatibilità.} Scrivere $Ax=b$ equivale a chiedere che $b$ sia combinazione lineare delle colonne di $A$. Aggiungendo $b$ a tali colonne, la dimensione dello spazio generato resta $\operatorname{rg}A$ precisamente quando $b$ appartiene già a quello spazio; altrimenti aumenta di uno. Usando l'uguaglianza fra rango per righe e per colonne otteniamo il criterio enunciato.
+
+\textbf{Parametri.} Riduciamo la matrice completa a scala. Se il sistema è compatibile non vi sono righe del tipo $(0,\ldots,0\mid c)$ con $c\ne0$, e ci sono esattamente $r$ pivot nelle colonne delle incognite. Assegniamo valori arbitrari alle $n-r$ incognite senza pivot. Partendo dall'ultima equazione non nulla e risalendo, ogni incognita pivot è determinata univocamente, perché il suo coefficiente è diverso da zero. Otteniamo così una corrispondenza biunivoca fra $K^{n-r}$ e l'insieme delle soluzioni. Se $r=n$ non resta alcuna scelta; se $r<n$, su $\R$ vi sono infinite scelte.
+\end{proof}
+Per il sistema omogeneo la compatibilità è automatica. Se $n>r$ esistono soluzioni non nulle; inoltre $\dim S_0=n-r$. Infatti le soluzioni dipendono linearmente dai parametri liberi: scegliendo a turno un parametro uguale a $1$ e gli altri a $0$ si ottengono $n-r$ soluzioni che generano $S_0$ e sono indipendenti, come si vede dalle loro coordinate libere.
+
+\section{Rango di una matrice con parametro}
+\begin{esercizio}
+Determinare il rango, al variare di $a\in\R$, della matrice
+\[
+ A=\begin{pmatrix}
+ 0&1&2&1&0\\1&2&2&1&1\\1&1&a&0&1\\0&a&2a&a^2&0
+ \end{pmatrix}.
+\]
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Riduzione senza dividere per il parametro.} Scambiamo $R_1$ e $R_2$, poi sottraiamo la nuova prima riga alla terza:
+\[
+ A\sim\begin{pmatrix}
+ 1&2&2&1&1\\0&1&2&1&0\\0&-1&a-2&-1&0\\0&a&2a&a^2&0
+ \end{pmatrix}.
+\]
+Eseguiamo $R_3\leftarrow R_3+R_2$ e $R_4\leftarrow R_4-aR_2$:
+\[
+ A\sim\begin{pmatrix}
+ 1&2&2&1&1\\0&1&2&1&0\\0&0&a&0&0\\0&0&0&a(a-1)&0
+ \end{pmatrix}.
+\]
+Queste operazioni sono valide per ogni $a$: non abbiamo diviso per espressioni che potrebbero annullarsi.
+
+\textbf{Discussione dei casi.} Se $a=0$ le ultime due righe sono nulle e i pivot sono due. Se $a=1$ resta la terza riga $(0,0,1,0,0)$, mentre la quarta è nulla: i pivot sono tre. Se $a\ne0,1$ le quattro righe sono non nulle e la matrice è a scala con quattro pivot. Pertanto
+\[
+ \operatorname{rg}A=\begin{cases}
+ 2,&a=0,\\3,&a=1,\\4,&a\notin\{0,1\}.
+ \end{cases}
+\]
+\end{svolgimento}

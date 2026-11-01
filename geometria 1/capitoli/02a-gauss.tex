@@ -1,0 +1,78 @@
+% !TeX root = ../main.tex
+\section{Matrici e sistemi lineari}
+\begin{definizione}
+Una \emph{matrice} $A=(a_{ij})$ di tipo $m\times n$ è una tabella di scalari con $m$ righe e $n$ colonne. L'insieme delle matrici di questo tipo su $K$ si indica con $M(m,n,K)$. Somma e prodotto per scalari sono definiti componente per componente:
+\[
+ (A+B)_{ij}=a_{ij}+b_{ij},\qquad (\lambda A)_{ij}=\lambda a_{ij}.
+\]
+Con queste operazioni $M(m,n,K)$ è uno spazio vettoriale, identificabile con $K^{mn}$ ordinando le entrate.
+\end{definizione}
+Un sistema di $m$ equazioni lineari nelle $n$ incognite $x_1,\ldots,x_n$ ha la forma
+\[
+ \sum_{j=1}^n a_{ij}x_j=b_i\qquad(i=1,\ldots,m).
+\]
+La matrice $A=(a_{ij})$ è la \emph{matrice dei coefficienti}, o \emph{incompleta}; affiancando la colonna $b=(b_1,\ldots,b_m)^T$ si ottiene la \emph{matrice completa} $(A\mid b)$. Due sistemi sono equivalenti se hanno lo stesso insieme di soluzioni.
+
+\section{Eliminazione di Gauss e forma a scala}
+\begin{proposizione}
+Le seguenti operazioni elementari sulle righe della matrice completa trasformano un sistema in uno equivalente:
+\begin{enumerate}
+\item scambiare due righe;
+\item moltiplicare una riga per uno scalare diverso da zero;
+\item sommare a una riga un multiplo di un'altra riga.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+Scambiare equazioni non cambia le condizioni imposte; moltiplicare un'uguaglianza per uno scalare non nullo è reversibile. Se a un'equazione si somma un multiplo di un'altra, ogni soluzione del sistema iniziale soddisfa quella nuova. L'operazione inversa sottrae lo stesso multiplo, quindi vale anche il viceversa. Tutte le operazioni vanno eseguite anche sui termini noti.
+\end{proof}
+
+\begin{definizione}
+Una matrice è in \emph{forma a scala} se le righe nulle sono tutte in fondo e il primo elemento non nullo di ogni riga non nulla si trova strettamente a destra del primo elemento non nullo della riga precedente. Questi primi elementi si chiamano \emph{pivot}. La forma a scala è \emph{speciale} se tutti i pivot sono $1$; è \emph{ridotta} se, inoltre, ogni pivot è l'unico elemento non nullo della sua colonna.
+\end{definizione}
+\begin{esempio}
+Le matrici
+\[
+ \begin{pmatrix}2&-1&0&1\\0&0&2&2\\0&0&-3&3\\0&0&0&4\end{pmatrix},\qquad
+ \begin{pmatrix}5&0&-1&4\\0&3&2&0\\0&0&0&7\\0&0&0&0\end{pmatrix}
+\]
+non sono entrambe a scala: nella prima, seconda e terza riga hanno il primo elemento non nullo nella stessa colonna; la seconda è a scala con pivot $5,3,7$. La matrice
+\[
+ \begin{pmatrix}1&0&2&5&0\\0&1&-2&3&0\\0&0&0&0&1\\0&0&0&0&0\end{pmatrix}
+\]
+è invece in forma a scala ridotta.
+\end{esempio}
+
+\textbf{Procedimento di Gauss.} Si cerca una colonna non nulla e si porta in alto, con uno scambio, una riga che abbia lì un elemento non nullo. Usando tale elemento come pivot si annullano le entrate sottostanti mediante somme di multipli di righe. Si ripete sul blocco di righe inferiori e colonne successive. Il procedimento termina perché a ogni passo si avanza di una riga e di almeno una colonna. Dividendo ciascuna riga non nulla per il suo pivot si ottiene la forma speciale; annullando anche sopra i pivot si ottiene la forma ridotta.
+
+\begin{esempio}
+Consideriamo il sistema
+\[
+ \begin{cases}x_2+2x_3=1,\\2x_1-x_2+2x_3=2,\\-2x_1+3x_2+5x_3=-6.\end{cases}
+\]
+Scambiando le prime due righe della matrice completa e poi eseguendo $R_3\leftarrow R_3+R_1$ e $R_3\leftarrow R_3-2R_2$, otteniamo
+\[
+ \left(\begin{array}{rrr|r}0&1&2&1\\2&-1&2&2\\-2&3&5&-6\end{array}\right)
+ \sim\left(\begin{array}{rrr|r}2&-1&2&2\\0&1&2&1\\0&2&7&-4\end{array}\right)
+ \sim\left(\begin{array}{rrr|r}2&-1&2&2\\0&1&2&1\\0&0&3&-6\end{array}\right).
+\]
+La sostituzione dal basso dà $x_3=-2$, $x_2=5$ e $x_1=11/2$. La terna ottenuta soddisfa tutte le equazioni iniziali.
+\end{esempio}
+
+\subsection{Operazioni sulle righe e basi di sottospazi}
+Le operazioni elementari conservano anche il sottospazio generato dalle righe: ogni riga nuova è combinazione delle precedenti e, poiché ogni operazione è invertibile, vale anche l'inclusione opposta. Le righe non nulle di una matrice a scala sono indipendenti: in una relazione nulla, la colonna del primo pivot forza a zero il coefficiente della prima riga; si prosegue allo stesso modo per le altre. Formano quindi una base dello spazio delle righe.
+
+\begin{esercizio}
+Sia $U\subseteq\R^4$ generato da $u_1=(1,-1,0,2)$, $u_2=(-1,-3,2,0)$ e $u_3=(2,0,-1,3)$. Verificare che $\dim U=2$ e trovare una base.
+\end{esercizio}
+\begin{svolgimento}
+Disponiamo i generatori per righe. Con $R_2\leftarrow R_2+R_1$, $R_3\leftarrow R_3-2R_1$ e infine $R_3\leftarrow2R_3+R_2$ si trova
+\[
+ \begin{pmatrix}1&-1&0&2\\-1&-3&2&0\\2&0&-1&3\end{pmatrix}
+ \sim\begin{pmatrix}1&-1&0&2\\0&-4&2&2\\0&2&-1&-1\end{pmatrix}
+ \sim\begin{pmatrix}1&-1&0&2\\0&-4&2&2\\0&0&0&0\end{pmatrix}.
+\]
+Due righe non nulle danno $\dim U=2$. Una base è $(u_1,u_1+u_2)$; equivalentemente è una base anche $(u_1,u_2)$, perché il passaggio fra le due coppie è invertibile. La relazione $2u_3-3u_1+u_2=0$ conferma che il terzo generatore è ridondante.
+\end{svolgimento}
+\begin{osservazione}
+Le righe non nulle della forma a scala sono una base dello stesso sottospazio, ma in generale non sono righe della matrice iniziale. Per estrarre una base fra i generatori originari occorre conservarne le relazioni, come nel metodo con il blocco identità già usato nel capitolo precedente, oppure usare le colonne pivot come spiegato più avanti.
+\end{osservazione}

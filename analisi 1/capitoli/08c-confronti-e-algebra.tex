@@ -1,0 +1,240 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 12, pp. 2--10; caso sin(n) da Lezione 11, p. 14.
+% Completate le prove lasciate implicite: confronti a infinito, prodotto,
+% casi infiniti dell'algebra. Il teorema sui quozienti non è nelle fonti.
+\section{Teoremi di confronto}
+
+\begin{proposizione}[Confronto con una successione divergente]
+Siano $a_n\le b_n$ definitivamente. Se $a_n\to+\infty$, allora $b_n\to+\infty$. Se $b_n\to-\infty$, allora $a_n\to-\infty$.
+\end{proposizione}
+\begin{proof}
+Nel primo caso fissiamo $M>0$. Definitivamente si hanno sia $a_n>M$ sia $a_n\le b_n$; oltre la massima delle due soglie risulta $b_n\ge a_n>M$. Questo è il criterio per $b_n\to+\infty$.
+
+Nel secondo caso si hanno definitivamente $b_n<-M$ e $a_n\le b_n$, quindi $a_n<-M$ definitivamente, per ogni $M>0$.
+\end{proof}
+
+\begin{teorema}[Teorema dei carabinieri]
+\label{teo:carabinieri}
+Siano $(a_n)$, $(b_n)$ e $(c_n)$ successioni reali con $a_n\le b_n\le c_n$ definitivamente. Se $a_n\to\ell$ e $c_n\to\ell$, con $\ell\in\overline\R$, allora anche $b_n\to\ell$.
+\end{teorema}
+\begin{proof}
+\textbf{Limite finito.} Per $\varepsilon>0$, definitivamente $\ell-\varepsilon<a_n<\ell+\varepsilon$ e $\ell-\varepsilon<c_n<\ell+\varepsilon$. Oltre una soglia comune, che assicuri anche i confronti, si ha
+\[
+\ell-\varepsilon<a_n\le b_n\le c_n<\ell+\varepsilon.
+\]
+Quindi $|b_n-\ell|<\varepsilon$ definitivamente.
+
+\textbf{Limiti infiniti.} Se $\ell=+\infty$, basta il confronto $a_n\le b_n$; se $\ell=-\infty$, basta $b_n\le c_n$. Si applica la proposizione precedente.
+\end{proof}
+
+\begin{schema}
+\begin{tikzpicture}[x=.72cm,y=.85cm]
+  \draw[asse] (-.3,0) -- (10.7,0) node[right] {$n$};
+  \draw[asse] (0,-.2) -- (0,3.2);
+  \draw[dashed,black!45] (0,1.6) -- (10.3,1.6) node[right] {$\ell$};
+  \foreach \n in {1,...,10} {
+    \pgfmathsetmacro{\d}{1.25/\n}
+    \draw[draw=black!50,fill=white] (\n,{1.6-\d}) circle[radius=1.8pt];
+    \draw[draw=black!50,fill=white] (\n,{1.6+\d}) circle[radius=1.8pt];
+    \fill[coloreschema] (\n,{1.6+cos(\n*65)*\d*.7}) circle[radius=1.8pt];
+  }
+\end{tikzpicture}
+\par\smallskip I valori della successione centrale restano fra due successioni che tendono allo stesso limite; anche la fascia che li contiene si restringe verso $\ell$.
+\end{schema}
+
+\section{Somme con successioni divergenti}
+% Fonte: Lezione 12, p. 7; prova assegnata per casa.
+
+\begin{esercizio}[Divergente più limitata da un lato]
+Dimostrare che, se $a_n\to+\infty$ e $(b_n)$ è inferiormente limitata, allora $a_n+b_n\to+\infty$.
+\end{esercizio}
+\begin{svolgimento}
+Sia $m\in\R$ un minorante per tutti i $b_n$. Dato $M>0$, dalla divergenza di $a_n$ si ottiene definitivamente $a_n>M-m$; se $M-m$ non è positivo, basta prima imporre una soglia positiva più grande. Pertanto
+\[
+a_n+b_n\ge a_n+m>M
+\]
+definitivamente. Questo vale per ogni $M>0$, quindi la somma tende a $+\infty$.
+\end{svolgimento}
+
+L'ipotesi su $b_n$ può valere soltanto definitivamente, perché si possono assorbire i termini iniziali mediante la proposizione~\ref{prop:coda-limitata}. Cambiando i segni si ottiene anche: se $a_n\to-\infty$ e $b_n$ è superiormente limitata, allora $a_n+b_n\to-\infty$.
+
+\begin{esempio}
+Per $a_n=n$ e $b_n=(-1)^n$ si ha $b_n\ge-1$, quindi $n+(-1)^n\to+\infty$. Il secondo addendo non ha limite, ma il suo vincolo inferiore è sufficiente.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=.72cm,y=.35cm]
+  \draw[asse] (-.4,0) -- (10.7,0) node[right] {$n$};
+  \draw[asse] (0,-.5) -- (0,12);
+  \foreach \n in {1,...,10} {
+    \draw[draw=black!55,fill=white] (\n,\n) circle[radius=1.8pt];
+    \fill[coloreschema] (\n,{\n+cos(\n*180)}) circle[radius=2pt];
+  }
+\end{tikzpicture}
+\par\smallskip I punti pieni rappresentano $n+(-1)^n$, quelli vuoti $n$: le oscillazioni del secondo addendo non impediscono la divergenza della somma.
+\end{schema}
+
+\section{Prodotto di una limitata per un'infinitesima}
+% Fonte: Lezione 12, pp. 8--9. La stima per K|a_n| è giustificata direttamente.
+
+\begin{proposizione}
+\label{prop:limitata-infinitesima}
+Se $a_n\to0$ e $(b_n)$ è limitata, allora $a_nb_n\to0$.
+\end{proposizione}
+\begin{proof}
+Scegliamo $K>0$ tale che $|b_n|\le K$ per ogni indice. Si ha
+\[
+0\le|a_nb_n|=|a_n|\,|b_n|\le K|a_n|.
+\]
+La successione $K|a_n|$ tende a $0$: dato $\varepsilon>0$, basta usare la definizione di $a_n\to0$ con il raggio $\varepsilon/K$. Per il teorema dei carabinieri segue $|a_nb_n|\to0$. Infine
+\[
+-|a_nb_n|\le a_nb_n\le|a_nb_n|,
+\]
+e le due successioni esterne tendono a $0$; applicando nuovamente i carabinieri si conclude $a_nb_n\to0$.
+\end{proof}
+
+La limitatezza è richiesta solo da un certo indice in poi, perché essa si estende a tutta la successione; analogamente, per la dimostrazione basta che le stime valgano definitivamente. Il risultato non richiede che $(b_n)$ abbia limite.
+
+\begin{schema}
+\begin{tikzpicture}[x=.72cm,y=.8cm]
+  \draw[asse] (-.4,0) -- (10.7,0) node[right] {$n$};
+  \draw[asse] (0,-1.8) -- (0,1.8);
+  \foreach \n in {1,...,10} {
+    \draw[draw=black!50,fill=white] (\n,{1.5/\n}) circle[radius=1.8pt];
+    \draw[draw=black!50,fill=white] (\n,{-1.5/\n}) circle[radius=1.8pt];
+    \fill[coloreschema] (\n,{cos(\n*180)/\n}) circle[radius=1.8pt];
+  }
+\end{tikzpicture}
+\par\smallskip Un prodotto con fattore limitato può oscillare di segno, ma il suo modulo resta sotto un'infinitesima: i due vincoli tendono entrambi a $0$.
+\end{schema}
+
+\Needspace{18\baselineskip}
+\section{Algebra dei limiti}
+% Fonte: Lezione 12, pp. 4--6; completate le prove dei prodotti e dei casi infiniti.
+
+\subsection{Operazioni nella retta estesa}
+
+Nella retta estesa alcune operazioni si prolungano secondo le seguenti regole:
+\[
+\begin{aligned}
+x+(+\infty)&=+\infty &&\text{se }x\ne-\infty,\\
+x+(-\infty)&=-\infty &&\text{se }x\ne+\infty.
+\end{aligned}
+\]
+Per i prodotti vale la consueta regola dei segni: un fattore positivo, finito o infinito, moltiplicato per $+\infty$ dà $+\infty$, e moltiplicato per $-\infty$ dà $-\infty$; un fattore negativo inverte i segni. In particolare
+\[
+\begin{array}{c|cc}
+\cdot & +\infty & -\infty\\ \hline
+x>0 & +\infty & -\infty\\
+x<0 & -\infty & +\infty
+\end{array}
+\]
+dove il fattore $x$ può essere anche infinito. Rimangono escluse le espressioni
+\[
+(+\infty)+(-\infty),\qquad (-\infty)+(+\infty),
+\qquad 0\cdot(\pm\infty).
+\]
+La retta estesa non è quindi un campo: queste operazioni non sono definite per ogni coppia di elementi.
+
+\subsection{Limite della somma}
+
+\begin{teorema}
+Siano $a_n\to\alpha$ e $b_n\to\beta$, con $\alpha,\beta\in\overline\R$. Se la somma $\alpha+\beta$ è definita, allora
+\[
+a_n+b_n\longrightarrow\alpha+\beta.
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Due limiti finiti.} Dato $\varepsilon>0$, definitivamente valgono insieme $|a_n-\alpha|<\varepsilon/2$ e $|b_n-\beta|<\varepsilon/2$. Per la disuguaglianza triangolare,
+\[
+|(a_n+b_n)-(\alpha+\beta)|
+\le|a_n-\alpha|+|b_n-\beta|<\varepsilon.
+\]
+
+\textbf{Almeno un limite infinito.} Se, per esempio, $\alpha=+\infty$ e $\beta\in\R\cup\{+\infty\}$, la successione $(b_n)$ è inferiormente limitata: se converge è limitata; se tende a $+\infty$ è definitivamente positiva e poi si applica la proposizione~\ref{prop:coda-limitata}. Il risultato sulla somma con una successione inferiormente limitata dà $a_n+b_n\to+\infty$. Si scambiano gli addendi se è $\beta$ a essere infinito. Per il limite $-\infty$ si usa la versione con limitatezza superiore. Sono così coperti tutti i casi in cui la somma dei limiti è definita.
+\end{proof}
+
+\subsection{Limite del prodotto}
+
+\begin{teorema}
+Siano $a_n\to\alpha$ e $b_n\to\beta$, con $\alpha,\beta\in\overline\R$. Se il prodotto $\alpha\beta$ è definito, allora
+\[
+a_nb_n\longrightarrow\alpha\beta.
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Due limiti finiti.} La successione $(b_n)$ è limitata. Dalla definizione, $a_n-\alpha\to0$ e $b_n-\beta\to0$; per la proposizione~\ref{prop:limitata-infinitesima},
+\[
+(a_n-\alpha)b_n\to0,\qquad \alpha(b_n-\beta)\to0.
+\]
+Poiché
+\[
+a_nb_n-\alpha\beta=(a_n-\alpha)b_n+\alpha(b_n-\beta),
+\]
+la regola della somma già dimostrata dà $a_nb_n-\alpha\beta\to0$, ossia $a_nb_n\to\alpha\beta$.
+
+\Needspace{14\baselineskip}
+\textbf{Un limite finito non nullo e uno infinito.} Supponiamo prima $\alpha>0$ e $\beta=+\infty$. Definitivamente $a_n>\alpha/2$. Per ogni $M>0$, definitivamente $b_n>2M/\alpha>0$, quindi $a_nb_n>M$. Se $\alpha<0$ oppure $\beta=-\infty$, si applica lo stesso ragionamento alle successioni con i segni cambiati, ottenendo il segno previsto dalla tabella. Il cambio di segno nel limite segue direttamente da $|-a_n-(-\alpha)|=|a_n-\alpha|$ nei casi finiti e dalle definizioni con le code nei casi infiniti. Si scambiano i fattori quando necessario.
+
+\textbf{Due limiti infiniti.} Se $a_n,b_n\to+\infty$, allora per ogni $M>0$ definitivamente entrambi i fattori sono maggiori di $\sqrt M$, dunque $a_nb_n>M$. Gli altri casi si riducono a questo cambiando i segni dei fattori; si ottiene $+\infty$ per segni uguali e $-\infty$ per segni opposti.
+\end{proof}
+
+\begin{osservazione}[Forme indeterminate]
+Se le operazioni fra limiti non sono definite, i limiti dei singoli fattori o addendi non determinano il risultato. Per esempio, con $c\in\R$,
+\[
+n+(-n+c)=c,
+\]
+benché i due addendi tendano a $+\infty$ e $-\infty$. Per i prodotti con fattori tendenti a $0$ e a $+\infty$ si hanno, per $n\ge1$,
+\[
+\frac1{n^2}\,n=\frac1n\to0,\qquad
+\frac1n\,n=1,\qquad
+\frac1n\,n^2=n\to+\infty.
+\]
+\end{osservazione}
+
+\begin{esercizio}[L'oscillazione di $\sin n$]
+% Fonte: Lezione 11, p. 14: esempio senza dimostrazione.
+% Svolgimento aggiunto; identità trigonometriche di addizione richiamate in nota.
+Mostrare che la successione $a_n=\sin n$, con gli angoli misurati in radianti, non ha limite.
+\end{esercizio}
+\begin{svolgimento}
+La successione è limitata fra $-1$ e $1$, quindi non può tendere a un infinito. Supponiamo per assurdo $\sin n\to L\in\R$. Le successioni traslate $\sin(n+1)$ e $\sin(n+2)$ sono sottosuccessioni e hanno lo stesso limite $L$. Dall'identità\footnote{Si usano qui le formule trigonometriche di addizione $\sin(u+v)=\sin u\cos v+\cos u\sin v$ e $\sin(u-v)=\sin u\cos v-\cos u\sin v$, con gli angoli in radianti.}
+\[
+\sin(n+2)+\sin n=2\cos1\,\sin(n+1)
+\]
+e dalle regole per somma e prodotto finiti segue $2L=2\cos1\,L$. Poiché $\cos1\ne1$, necessariamente $L=0$.
+
+\Needspace{10\baselineskip}
+L'altra identità
+\[
+\cos n=\frac{\sin(n+1)-\cos1\,\sin n}{\sin1}
+\]
+è lecita perché $\sin1\ne0$. Il suo membro destro è una combinazione lineare di successioni infinitesime, dunque $\cos n\to0$. Le regole del prodotto e della somma darebbero allora $\sin^2n+\cos^2n\to0$, in contraddizione con l'identità $\sin^2n+\cos^2n=1$ e con l'unicità del limite.
+\end{svolgimento}
+
+\Needspace{26\baselineskip}
+\section{Avvicinamento da sopra e da sotto}
+% Fonte: Lezione 12, p. 10. Le fonti terminano qui: nessun teorema del quoziente.
+
+Per descrivere il segno della differenza $a_n-\ell$ occorre aggiungere un'informazione alla sola convergenza.
+
+\begin{definizione}
+Per $\ell\in\R$ si scrive $a_n\to\ell^+$ se $a_n\to\ell$ e $a_n>\ell$ definitivamente; si scrive $a_n\to\ell^-$ se $a_n\to\ell$ e $a_n<\ell$ definitivamente. Si dice che la successione tende a $\ell$ rispettivamente \emph{da sopra} o \emph{da sotto}.
+\end{definizione}
+
+\begin{esempio}
+Per $n\ge1$, $\ell+1/n\to\ell^+$ e $\ell-1/n\to\ell^-$. La successione $\ell+(-1)^n/n$ converge a $\ell$, ma assume valori maggiori e minori di $\ell$ a indici arbitrariamente grandi: non tende a $\ell$ né da sopra né da sotto. La convergenza da un lato non richiede monotonia; richiede soltanto la posizione definitiva rispetto al limite.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=.72cm,y=1cm]
+  \draw[asse] (-.4,0) -- (10.7,0) node[right] {$n$};
+  \draw[asse] (0,-.2) -- (0,3);
+  \draw[black!60] (0,1.5) -- (10.3,1.5) node[right] {$\ell$};
+  \foreach \n in {1,...,10} {
+    \fill[coloreschema] (\n,{1.5+1.1/\n}) circle[radius=1.8pt];
+    \draw[draw=black!60,fill=white] (\n,{1.5-1.1/\n}) circle[radius=1.8pt];
+  }
+\end{tikzpicture}
+\par\smallskip I punti pieni tendono a $\ell$ da sopra, quelli vuoti da sotto. Una convergenza generica può invece attraversare ripetutamente il livello $\ell$.
+\end{schema}

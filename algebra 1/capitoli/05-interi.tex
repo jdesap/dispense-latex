@@ -415,9 +415,18 @@ In particolare il minimo comune multiplo positivo esiste e $\operatorname{MCD}(a
 
 I prodotti vuoti valgono $1$: le formule includono così $a=\pm1$ o $b=\pm1$. Se un solo argomento è nullo, l'identità del prodotto rimane valida con $\operatorname{MCD}(a,0)=|a|$ e $\operatorname{mcm}(a,0)=0$.
 
+% Ripresa M–Z L12 p. 2: conseguenza operativa della formula già dimostrata.
+Per $a,b\ne0$ si può dunque calcolare anche il minimo comune multiplo mediante l'algoritmo di Euclide, senza fattorizzare gli argomenti:
+\[
+\operatorname{mcm}(a,b)=\frac{|ab|}{\operatorname{MCD}(a,b)}.
+\]
+
 \begin{esercizio}[Radice di un primo]
 Dimostrare che per ogni primo positivo $p$, $\sqrt p\notin\Q$.
 \end{esercizio}
 \begin{svolgimento}
 Supponiamo $\sqrt p=a/b$ con $a\in\Z$, $b\in\N^*$. Dividendo entrambi per $\operatorname{MCD}(a,b)$ possiamo scegliere $a,b$ coprimi. Dall'uguaglianza $a^2=pb^2$ segue $p\mid a^2$, quindi $p\mid a$ per la proprietà sui prodotti. Scriviamo $a=pc$: sostituendo e cancellando $p\ne0$, si ottiene $pc^2=b^2$. Allora $p\mid b^2$, quindi $p\mid b$. Ma un primo $p>1$ non può dividere entrambi gli interi coprimi $a,b$. La contraddizione esclude la razionalità.
+
+% M–Z L12 p. 3: metodo alternativo mediante gli esponenti, senza frazione ridotta.
+\textbf{Secondo metodo.} Dalla stessa uguaglianza $a^2=pb^2$, con $a,b\ne0$, confrontiamo l'esponente del primo $p$ nelle due fattorizzazioni. Se $p$ compare in $|a|$ con esponente $h\ge0$ e in $|b|$ con esponente $k\ge0$, nell'uguaglianza dovrebbe valere $2h=1+2k$. Il primo membro è pari e il secondo dispari: impossibile. Questo argomento usa l'unicità della fattorizzazione e non richiede che $a,b$ siano coprimi.
 \end{svolgimento}

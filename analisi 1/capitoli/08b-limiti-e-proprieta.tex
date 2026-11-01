@@ -1,0 +1,202 @@
+% !TeX root = ../main.tex
+% Fonti: Lezione 10, p. 18; Lezione 11, pp. 2--17; Lezione 12, p. 10.
+% La definizione comune alle lezioni 10 e 11 è esposta una sola volta.
+\Needspace{22\baselineskip}
+\section{Limite di una successione}
+
+\begin{definizione}[Limite]
+Sia $(a_n)$ una successione reale. Si dice che ha \emph{limite} $\ell\in\overline\R$ e si scrive
+\[
+a_n\longrightarrow\ell,\qquad
+\lim_{n\to+\infty}a_n=\ell,
+\]
+se, per ogni intorno $U$ di $\ell$ nella retta estesa, i termini $a_n$ appartengono definitivamente a $U$:
+\[
+\forall U\in\mathcal I_\ell\ \exists N\in\N:
+\quad \forall n\ge N,\quad a_n\in U.
+\]
+Si sottintende che gli indici considerati appartengano al dominio della successione.
+\end{definizione}
+
+Il limite descrive una proprietà definitiva per \emph{ogni} intorno del candidato $\ell$. La soglia può dipendere dall'intorno: non occorre trovare un unico indice che funzioni contemporaneamente per tutti gli intorni. Cambiare o eliminare finiti termini iniziali non modifica il limite, perché le soglie possono sempre essere aumentate.
+
+\begin{definizione}[Successioni convergenti, divergenti e irregolari]
+Una successione si dice \emph{convergente} se ha un limite finito $\ell\in\R$; se $\ell=0$ è detta anche \emph{infinitesima}. Si dice \emph{divergente a $+\infty$} o \emph{a $-\infty$} se ha il corrispondente limite infinito. Le successioni convergenti o divergenti sono dette \emph{regolari}; quelle che non hanno limite neppure in $\overline\R$ si dicono \emph{irregolari}.
+\end{definizione}
+
+Con queste convenzioni, «non convergente» non significa necessariamente «divergente»: può mancare qualsiasi limite oppure esistere un limite infinito.
+
+\subsection{La forma con epsilon e le code a infinito}
+
+Per un limite finito, ogni intorno di $\ell$ contiene un intervallo $(\ell-\varepsilon,\ell+\varepsilon)$ con $\varepsilon>0$. Usare questi soli intorni è quindi sufficiente, e la definizione diventa
+\[
+a_n\to\ell\in\R
+\quad\Longleftrightarrow\quad
+\forall\varepsilon>0\ \exists N_\varepsilon\in\N:
+\quad \forall n\ge N_\varepsilon,\quad |a_n-\ell|<\varepsilon.
+\]
+Infatti la definizione per tutti gli intorni dà in particolare questa condizione; viceversa, dato un intorno qualunque, basta prendere un intervallo sferico contenuto in esso.
+
+Analogamente, gli intorni a infinito si riducono alle code. Si ottiene
+\[
+\begin{aligned}
+a_n\to+\infty
+&\Longleftrightarrow\ \forall M>0\ \exists N_M\in\N:
+\quad \forall n\ge N_M,\quad a_n>M,\\
+a_n\to-\infty
+&\Longleftrightarrow\ \forall M>0\ \exists N_M\in\N:
+\quad \forall n\ge N_M,\quad a_n<-M.
+\end{aligned}
+\]
+Richiedere solo $M>0$ è sufficiente: aumentando una soglia positiva si coprono anche le code con estremo reale arbitrario.
+
+\begin{schema}
+\begin{tikzpicture}[x=.65cm,y=1cm]
+  \draw[asse] (-.4,0) -- (12,0) node[right] {$n$};
+  \draw[asse] (0,-.2) -- (0,2.7);
+  \draw[black!45] (0,2) -- (11.6,2);
+  \draw[dashed,coloreschema] (0,1.6) -- (11.6,1.6);
+  \draw[dashed,coloreschema] (0,2.4) -- (11.6,2.4);
+  \node[left] at (0,2) {$\ell$};
+  \node[left] at (0,1.6) {$\ell-\varepsilon$};
+  \node[left] at (0,2.4) {$\ell+\varepsilon$};
+  \draw[dotted] (4,0) -- (4,2.6);
+  \node[below] at (4,0) {$N_\varepsilon$};
+  \foreach \n/\v in {1/.5,2/.9,3/1.4,4/1.7,5/1.8,6/2.1,7/1.9,8/2.08,9/1.94,10/2.03,11/1.98} {
+    \fill[coloreschema] (\n,\v) circle[radius=1.8pt];
+  }
+\end{tikzpicture}
+\par\smallskip Per il raggio scelto, dopo $N_\varepsilon$ tutti i termini restano nella fascia; una fascia più stretta può richiedere una soglia maggiore.
+\end{schema}
+
+\begin{schema}
+\begin{tikzpicture}[x=.65cm,y=.45cm]
+  \draw[asse] (-.4,0) -- (12,0) node[right] {$n$};
+  \draw[asse] (0,-.4) -- (0,6.2);
+  \draw[dashed,coloreschema] (0,2.6) -- (11.5,2.6) node[right] {$M$};
+  \draw[dotted] (6,0) -- (6,5.7);
+  \node[below] at (6,0) {$N_M$};
+  \foreach \n/\v in {1/.3,2/.8,3/1.2,4/1.6,5/2.2,6/3,7/3.4,8/4,9/4.5,10/5,11/5.5} {
+    \fill[coloreschema] (\n,\v) circle[radius=1.8pt];
+  }
+\end{tikzpicture}
+\par\smallskip Per tendere a $+\infty$ i termini devono superare definitivamente ogni livello $M$, non soltanto assumere valori arbitrariamente grandi.
+\end{schema}
+
+\subsection{Primi limiti e verifiche dalla definizione}
+% Fonte: Lezione 11, pp. 5--9; soglie naturali rese esplicite.
+
+\begin{esempio}[Costante, reciproco e indice]
+La successione costante $a_n=1$ converge a $1$: ogni intorno di $1$ contiene tutti i suoi termini. Per $n\ge1$, la successione $b_n=1/n$ converge a $0$: dato $\varepsilon>0$, scegliamo un naturale $N_\varepsilon>1/\varepsilon$, così per $n\ge N_\varepsilon$ si ha $|b_n|=1/n<\varepsilon$. Infine $c_n=n$ diverge a $+\infty$: dato $M>0$, basta un naturale $N_M>M$.
+\end{esempio}
+
+\begin{esercizio}[Un limite finito]
+Verificare dalla definizione che $1-1/n^2\to1$, per $n\ge1$, e mostrare direttamente perché il candidato limite $2$ è impossibile.
+\end{esercizio}
+\begin{svolgimento}
+Per $\varepsilon>0$ si ha
+\[
+\left|\left(1-\frac1{n^2}\right)-1\right|<\varepsilon
+\quad\Longleftrightarrow\quad n>\frac1{\sqrt\varepsilon}.
+\]
+Scegliamo quindi un \emph{naturale} $N_\varepsilon>1/\sqrt\varepsilon$; per ogni $n\ge N_\varepsilon$ vale la disuguaglianza richiesta. La scelta, per esempio, $N_\varepsilon=\lfloor1/\sqrt\varepsilon\rfloor+1$ garantisce anche la stretta disuguaglianza quando $1/\sqrt\varepsilon$ è intero.
+
+Per il candidato $2$ si avrebbe invece
+\[
+\left|\left(1-\frac1{n^2}\right)-2\right|
+=1+\frac1{n^2}>1.
+\]
+Con $\varepsilon=1/2$ nessun termine soddisfa la condizione, perciò non esiste la soglia richiesta e $2$ non è un limite.
+\end{svolgimento}
+
+\begin{esercizio}[Un limite infinito]
+Verificare dalla definizione che $n^3-1\to+\infty$.
+\end{esercizio}
+\begin{svolgimento}
+Per $M>0$ si ha $n^3-1>M$ se e solo se $n>\sqrt[3]{M+1}$. Scegliendo un naturale $N_M>\sqrt[3]{M+1}$, la condizione vale per ogni $n\ge N_M$.
+\end{svolgimento}
+
+\Needspace{16\baselineskip}
+\section{Unicità ed estrazione di sottosuccessioni}
+% Fonte: Lezione 11, pp. 10--14; separazione ripresa dal capitolo 7.
+
+\begin{teorema}[Unicità del limite]
+Una successione reale ha al più un limite in $\overline\R$.
+\end{teorema}
+\begin{proof}
+Supponiamo per assurdo che $a_n\to\ell_1$ e $a_n\to\ell_2$, con $\ell_1\ne\ell_2$. La proprietà di separazione nella retta estesa fornisce intorni disgiunti $U_1$ e $U_2$ dei due punti. Dalle definizioni di limite, $a_n\in U_1$ e $a_n\in U_2$ sono entrambe proprietà definitive. Per la proposizione~\ref{prop:congiunzione-definitiva}, oltre la massima delle due soglie si avrebbe $a_n\in U_1\cap U_2=\varnothing$, assurdo.
+\end{proof}
+
+\begin{schema}
+\begin{tikzpicture}[x=.65cm,y=.85cm]
+  \draw[asse] (-.4,0) -- (12,0) node[right] {$n$};
+  \draw[asse] (0,-.2) -- (0,4.7);
+  \foreach \v in {1,2,3,4} {\draw[dashed,black!45] (0,\v) -- (11.5,\v);}
+  \node[left] at (0,1.5) {$U_1$};
+  \node[left] at (0,3.5) {$U_2$};
+  \draw[dotted,coloreschema] (5,0) -- (5,4.5);
+  \draw[dotted,black!60] (8,0) -- (8,4.5);
+  \node[below] at (5,0) {$N_1$};
+  \node[below] at (8,0) {$N_2$};
+  \draw[{Stealth}-{Stealth},coloreschema] (9,2.1) -- (9,2.9);
+\end{tikzpicture}
+\par\smallskip Oltre $\max\{N_1,N_2\}$ la definizione imporrebbe a ogni termine di stare in entrambe le fasce disgiunte, condizione impossibile.
+\end{schema}
+
+\begin{proposizione}[Limite delle sottosuccessioni]
+Se $a_n\to\ell\in\overline\R$, ogni sottosuccessione $(a_{k_j})$ tende allo stesso limite $\ell$.
+\end{proposizione}
+\begin{proof}
+Sia $U$ un intorno di $\ell$. Esiste $N$ tale che $a_n\in U$ per ogni $n\ge N$. Gli indici $k_j$ sono strettamente crescenti, dunque diventano arbitrariamente grandi: per la stima $k_j\ge k_{j_0}+j-j_0$ esiste $J$ tale che $k_j\ge N$ per ogni $j\ge J$. Allora $a_{k_j}\in U$ per ogni $j\ge J$, cioè la sottosuccessione tende a $\ell$.
+\end{proof}
+
+\begin{corollario}[Criterio di non esistenza del limite]
+Se due sottosuccessioni di $(a_n)$ hanno limiti diversi in $\overline\R$, la successione $(a_n)$ non ha limite.
+\end{corollario}
+\begin{proof}
+Un eventuale limite dell'intera successione sarebbe il limite di entrambe le sottosuccessioni. L'unicità del limite rende impossibile che esse abbiano limiti diversi.
+\end{proof}
+
+\begin{esempio}[Successioni oscillanti]
+La successione $a_n=(-1)^n$ non ha limite: $a_{2j}=1\to1$ e $a_{2j+1}=-1\to-1$. È dunque irregolare, pur essendo limitata.
+
+Anche $b_n=\sin(n\pi/2)$ è irregolare: le estrazioni $b_{4j}=0$, $b_{4j+1}=1$ e $b_{4j+3}=-1$ sono costanti con tre limiti diversi. Le ripetizioni dei valori non impediscono l'estrazione: sono gli indici a essere strettamente crescenti.
+\end{esempio}
+
+\section{Limitatezza e permanenza del segno}
+% Fonte: Lezione 11, pp. 15--17.
+
+\begin{teorema}[Una successione convergente è limitata]
+Se $a_n\to\ell\in\R$, esiste $K>0$ con $|a_n|\le K$ per ogni indice del dominio.
+\end{teorema}
+\begin{proof}
+Usando $\varepsilon=1$ nella definizione di limite, definitivamente si ha $|a_n-\ell|<1$, dunque $|a_n|\le|a_n-\ell|+|\ell|<1+|\ell|$. La coda è limitata e la proposizione~\ref{prop:coda-limitata} estende il vincolo all'intera successione.
+\end{proof}
+
+\begin{osservazione}
+La limitatezza non implica convergenza, come mostra $(-1)^n$. Neppure l'illimitatezza implica divergenza a uno dei due infiniti: per $a_n=(-1)^n n$, la sottosuccessione pari tende a $+\infty$ e quella dispari a $-\infty$, perciò il limite non esiste neanche nella retta estesa.
+\end{osservazione}
+
+\begin{teorema}[Permanenza del segno]
+\label{teo:permanenza-segno}
+Se $a_n\to\ell\in\R$ e $\ell>0$, allora $a_n>0$ definitivamente. Se $\ell<0$, allora $a_n<0$ definitivamente.
+\end{teorema}
+\begin{proof}
+Per $\ell>0$, scegliamo $\varepsilon=\ell/2$. Definitivamente
+\[
+|a_n-\ell|<\ell/2
+\quad\Longrightarrow\quad \ell/2<a_n<3\ell/2,
+\]
+quindi $a_n>0$. Per $\ell<0$, scegliendo $\varepsilon=|\ell|/2$ si ottiene definitivamente $a_n<\ell+|\ell|/2=\ell/2<0$.
+\end{proof}
+
+La conclusione vale anche per i limiti infiniti: se $a_n\to+\infty$, definitivamente $a_n>1>0$; se $a_n\to-\infty$, definitivamente $a_n<-1<0$.
+
+\begin{corollario}[Segno del limite]
+Se $a_n\ge0$ definitivamente e $a_n\to\ell\in\R$, allora $\ell\ge0$. Analogamente, da $a_n\le0$ definitivamente segue $\ell\le0$.
+\end{corollario}
+\begin{proof}
+Se il limite fosse negativo, per la permanenza del segno i termini sarebbero definitivamente negativi, in contraddizione con l'ipotesi. Il secondo caso è simmetrico.
+\end{proof}
+
+Non si può concludere la stretta positività del limite dalla stretta positività dei termini: $1/n>0$ per ogni $n\ge1$, ma $1/n\to0$.

@@ -1,0 +1,87 @@
+% !TeX root = ../main.tex
+\section{Prodotto di matrici e trasposizione}
+\begin{definizione}
+Se $A\in M(m,n,K)$ e $B\in M(n,p,K)$, il \emph{prodotto righe per colonne} $AB\in M(m,p,K)$ è definito da
+\[
+ (AB)_{ij}=\sum_{h=1}^n a_{ih}b_{hj}.
+\]
+Il numero di colonne del primo fattore deve coincidere con il numero di righe del secondo.
+\end{definizione}
+Per una colonna $x=(x_1,\ldots,x_n)^T$, la componente $i$ di $Ax$ è $\sum_j a_{ij}x_j$. Un sistema lineare si scrive dunque $Ax=b$. Se $A_1,\ldots,A_n$ sono le colonne di $A$, vale inoltre
+\[
+ Ax=x_1A_1+\cdots+x_nA_n.
+\]
+Il prodotto di una riga $(a_1,\ldots,a_n)$ per una colonna $(b_1,\ldots,b_n)^T$ è lo scalare $\sum_h a_hb_h$; su $\R$ è il prodotto scalare usuale.
+
+\begin{esempio}
+Per
+\[
+ A=\begin{pmatrix}2&1\\-3&3\end{pmatrix},\qquad
+ B=\begin{pmatrix}1&4\\2&-1\end{pmatrix}
+\]
+si ottiene
+\[
+ AB=\begin{pmatrix}4&7\\3&-15\end{pmatrix},\qquad
+ BA=\begin{pmatrix}-10&13\\7&-1\end{pmatrix}.
+\]
+Anche quando entrambi i prodotti sono definiti, in generale $AB\ne BA$.
+\end{esempio}
+
+\begin{proposizione}
+Per matrici di dimensioni compatibili valgono l'associatività $(AB)C=A(BC)$ e le distributività
+\[
+ A(B+C)=AB+AC,\qquad (A+B)C=AC+BC.
+\]
+La matrice identità $I_n=(\delta_{ij})$, con $1$ sulla diagonale e $0$ altrove, soddisfa $AI_n=A$ e $I_mA=A$ per $A\in M(m,n,K)$.
+\end{proposizione}
+\begin{proof}
+Se $A$ è $m\times n$, $B$ è $n\times p$ e $C$ è $p\times q$, allora
+\begin{align*}
+ ((AB)C)_{ij}
+ &=\sum_{\ell=1}^p\left(\sum_{h=1}^n a_{ih}b_{h\ell}\right)c_{\ell j}
+ =\sum_{h=1}^n\sum_{\ell=1}^p a_{ih}b_{h\ell}c_{\ell j}\\
+ &=\sum_{h=1}^n a_{ih}\left(\sum_{\ell=1}^p b_{h\ell}c_{\ell j}\right)
+ =(A(BC))_{ij}.
+\end{align*}
+Per la prima distributività, $\sum_h a_{ih}(b_{hj}+c_{hj})=\sum_h a_{ih}b_{hj}+\sum_h a_{ih}c_{hj}$; l'altra segue allo stesso modo. Nel prodotto con l'identità sopravvive soltanto il termine con indice coincidente, che è l'entrata corrispondente di $A$.
+\end{proof}
+
+\begin{definizione}
+La \emph{trasposta} di $A\in M(m,n,K)$ è $A^T\in M(n,m,K)$, definita da $(A^T)_{ij}=a_{ji}$: le righe diventano colonne e viceversa.
+\end{definizione}
+\begin{esempio}
+\[
+ A=\begin{pmatrix}2&1&3&0\\4&-2&1&3\end{pmatrix}
+ \quad\Longrightarrow\quad
+ A^T=\begin{pmatrix}2&4\\1&-2\\3&1\\0&3\end{pmatrix}.
+\]
+\end{esempio}
+\begin{proposizione}
+Valgono $(A^T)^T=A$, $(A+B)^T=A^T+B^T$ e $(AB)^T=B^TA^T$.
+\end{proposizione}
+\begin{proof}
+Le prime due uguaglianze seguono scambiando gli indici una o due volte. Per la terza,
+\[
+ ((AB)^T)_{ij}=(AB)_{ji}=\sum_h a_{jh}b_{hi}
+ =\sum_h (B^T)_{ih}(A^T)_{hj}=(B^TA^T)_{ij}.
+\]
+La trasposizione inverte quindi l'ordine dei fattori.
+\end{proof}
+
+\section{Matrici inverse}
+\begin{definizione}
+Per una matrice quadrata $A\in M(n,n,K)$, una matrice $B$ è un'\emph{inversa destra} se $AB=I_n$, un'\emph{inversa sinistra} se $BA=I_n$. È un'\emph{inversa} se valgono entrambe le identità; in questo caso $A$ è detta invertibile.
+\end{definizione}
+\begin{proposizione}
+Se $B$ è inversa sinistra di $A$ e $C$ è inversa destra, allora $B=C$. In particolare l'inversa, quando esiste, è unica e si indica con $A^{-1}$.
+\end{proposizione}
+\begin{proof}
+Per associatività, $B=B(AC)=(BA)C=C$.
+\end{proof}
+Se $A$ è invertibile, il sistema $Ax=b$ ha l'unica soluzione $x=A^{-1}b$: moltiplicando per $A^{-1}$ si ottiene necessariamente questa espressione e, viceversa, $A(A^{-1}b)=b$.
+
+\textbf{Calcolo mediante Gauss.} Si affianca $I_n$ ad $A$ e si applicano le stesse operazioni ai due blocchi. Se il blocco sinistro si riduce a $I_n$, il blocco destro è $A^{-1}$:
+\[
+ (A\mid I_n)\ \sim\ (I_n\mid A^{-1}).
+\]
+Infatti le operazioni rappresentano una composizione invertibile $E$ sulle righe, e il risultato è $(EA\mid E)$. Da $EA=I_n$ e dall'invertibilità di $E$ segue $A=E^{-1}$, dunque anche $AE=I_n$. Se la forma a scala di $A$ ha una riga nulla, esiste una soluzione non nulla di $Ax=0$, incompatibile con l'esistenza di un'inversa.

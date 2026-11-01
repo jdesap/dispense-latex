@@ -1,0 +1,81 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 10, pp. 2--6. Completamento tematico del capitolo 7.
+% Prove e verifiche implicite sviluppate redazionalmente, senza usare limiti.
+\Needspace{20\baselineskip}
+\section{Estremi e punti di accumulazione}
+
+La caratterizzazione operativa degli estremi si può ora leggere in termini di accumulazione. La sola esistenza del supremo non garantisce però che esso sia un punto di accumulazione: se è un massimo isolato, l'approssimazione richiesta dal criterio può essere ottenuta scegliendo sempre quel massimo.
+
+\begin{proposizione}[Estremo non raggiunto]
+Sia $A\subseteq\R$ non vuoto e superiormente limitato. Se $S=\sup A$ non appartiene ad $A$, allora $S\in\operatorname{Acc}(A)$. Analogamente, se $s=\inf A\in\R$ e $s\notin A$, allora $s\in\operatorname{Acc}(A)$.
+\end{proposizione}
+\begin{proof}
+Per ogni $r>0$, il criterio del supremo fornisce $a\in A$ con $S-r<a\le S$. Poiché $S\notin A$, si ha in realtà $S-r<a<S$, dunque $0<|a-S|<r$. Questo è il criterio di accumulazione.
+
+Per l'infimo il ragionamento è simmetrico: per ogni $r>0$ esiste $a\in A$ con $s\le a<s+r$ e, non essendo $s$ in $A$, la prima disuguaglianza è stretta.
+\end{proof}
+
+\begin{esempio}[Un massimo isolato]
+Nell'insieme $A=[0,1)\cup\{2\}$ già esaminato, $\sup A=\max A=2$, ma $2$ è isolato e quindi non è di accumulazione. L'ipotesi che il supremo non appartenga all'insieme è dunque essenziale per la proposizione.
+\end{esempio}
+
+\begin{esercizio}[Arcotangenti e intervallo]
+Considerare
+\[
+E=\{\arctan n:n\in\N\}\cup(0,\pi/4).
+\]
+Determinare supremo e infimo, eventuali massimo e minimo, punti interni, punti isolati e punti di accumulazione di $E$.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Scomposizione dell'insieme.} Poiché $\arctan0=0$ e $\arctan1=\pi/4$, si può riscrivere
+\[
+E=[0,\pi/4]\cup\{\arctan n:n\ge2\}.
+\]
+L'unione è disgiunta: per $n\ge2$ la stretta monotonia dell'arcotangente dà $\arctan n>\pi/4$.
+
+\textbf{Estremi.} Tutti gli elementi sono non negativi e $0\in E$, quindi $\inf E=\min E=0$. Inoltre $\pi/2$ maggiora $E$ e non vi appartiene. Per verificare che è il supremo fissiamo $\varepsilon>0$ e poniamo $\delta=\min\{\varepsilon,\pi/4\}$. Scegliamo, per Archimede, un naturale $n\ge2$ con
+\[
+n>\tan(\pi/2-\delta).
+\]
+Il numero $\pi/2-\delta$ appartiene al ramo invertibile della tangente; applicando la sua inversa crescente si ottiene
+\[
+\arctan n>\pi/2-\delta\ge\pi/2-\varepsilon.
+\]
+Il criterio del supremo dà $\sup E=\pi/2$; non esiste massimo.
+
+\Needspace{24\baselineskip}
+\textbf{Punti interni e isolati.} Ogni punto di $(0,\pi/4)$ è interno. I punti $0$ e $\pi/4$ non sono interni, perché ogni loro intorno contiene rispettivamente punti negativi oppure punti del vuoto $(\pi/4,\arctan2)$. Per $n\ge2$, il punto $\arctan n$ è isolato: basta il raggio
+\[
+r_n=\frac12\min\{\arctan n-\arctan(n-1),\ \arctan(n+1)-\arctan n\}>0.
+\]
+Gli altri valori discreti, e anche l'intervallo $[0,\pi/4]$, restano fuori da questo intorno. Quindi
+\[
+\mathring E=(0,\pi/4),\qquad
+\text{punti isolati di }E=\{\arctan n:n\ge2\}.
+\]
+
+\textbf{Accumulazione.} Tutti i punti di $[0,\pi/4]$ sono di accumulazione per la presenza dell'intervallo. Lo è anche $\pi/2$, perché è un supremo non raggiunto. Nessun punto discreto è di accumulazione, essendo isolato. Ogni altro reale si trova fuori da $[0,\pi/2]$ oppure in uno degli intervalli vuoti fra $\arctan n$ e $\arctan(n+1)$, con $n\ge1$, e ha quindi un intorno disgiunto da $E$. Per giustificare quest'ultima alternativa, se $\pi/4<x<\pi/2$ e $x$ non è una delle arcotangenti, il numero $\tan x>1$ si trova fra due interi consecutivi; basta applicare l'arcotangente. Ne segue
+\[
+\operatorname{Acc}(E)=[0,\pi/4]\cup\{\pi/2\},\qquad
+\overline E=E\cup\{\pi/2\}.
+\]
+L'insieme è limitato, perciò non ha punti di accumulazione all'infinito.
+\end{svolgimento}
+
+\begin{schema}
+\begin{tikzpicture}[x=6.2cm,y=1cm]
+  \draw[asse] (-.08,0) -- (1.72,0);
+  \draw[intervallo] (0,0) -- (.785398,0);
+  \foreach \pos in {0,.785398} {\fill[coloreschema] (\pos,0) circle[radius=2pt];}
+  \foreach \n in {2,3,4,6,9} {
+    \fill[coloreschema] ({atan(\n)*pi/180},0) circle[radius=1.8pt];
+  }
+  \draw[estremo] (1.570796,0) circle[radius=2.6pt];
+  \node[above=6pt] at (1.48,0) {$\cdots$};
+  \node[below=6pt] at (0,0) {$0$};
+  \node[below=6pt] at (.785398,0) {$\pi/4$};
+  \node[below=6pt] at (1.107149,0) {$\arctan2$};
+  \node[below=6pt] at (1.570796,0) {$\pi/2$};
+\end{tikzpicture}
+\par\smallskip L'intervallo è incluso con i suoi estremi. A destra compaiono punti isolati che si accumulano nel punto escluso $\pi/2$.
+\end{schema}

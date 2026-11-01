@@ -13,7 +13,7 @@ i sorgenti LaTeX, le fonti, la configurazione di compilazione e il PDF.
 
 Ogni compilazione aggiorna automaticamente anche i PDF in:
 
-- `analisi 1/build/capitoli/`: un PDF per ciascuno dei sette capitoli attuali.
+- `analisi 1/build/capitoli/`: un PDF per ciascuno degli otto capitoli attuali.
 - `geometria 1/build/capitoli/`: attualmente `01-spazi-vettoriali.pdf`.
 - `algebra 1/build/capitoli/`: cinque capitoli, dagli insiemi all'aritmetica degli interi.
 

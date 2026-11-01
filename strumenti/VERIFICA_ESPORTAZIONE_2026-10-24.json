@@ -1,0 +1,80 @@
+{
+  "data": "2026-10-24",
+  "materie": [
+    {
+      "materia": "algebra 1",
+      "pagine_volume": 42,
+      "volume_sha256": "8f2161e52e79635bd15d0f36fe0b05c53dfd8de130d52f22c1611b3bad4fd841",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "numero": 1,
+          "file": "01-insiemi-e-operazioni.pdf",
+          "pagine": 4,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 0,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 2,
+          "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+          "pagine": 6,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 2,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 3,
+          "file": "03-funzioni.pdf",
+          "pagine": 8,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 1,
+          "link_al_volume": 2,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 4,
+          "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+          "pagine": 5,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 4,
+          "link_al_volume": 1,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 5,
+          "file": "05-aritmetica-degli-interi.pdf",
+          "pagine": 10,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 7,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 6,
+          "file": "06-aritmetica-modulare.pdf",
+          "pagine": 5,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 0,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        }
+      ]
+    }
+  ],
+  "confronto": "tutte le pagine e tutte le annotazioni",
+  "fonti_algebra": {
+    "pdf_identici_agli_originali": 24,
+    "serie_primaria": "A–L",
+    "serie_supporto": "M–Z",
+    "pagine_inventariate": 156
+  }
+}

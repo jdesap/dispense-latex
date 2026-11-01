@@ -21,7 +21,7 @@ Radice: `/Users/jude/dispense latex`, una cartella per materia. Prevalgono richi
 
 Italiano da appunti universitari: elimina ridondanze/enfasi, sviluppa idee difficili; aggiunte estranee solo se indispensabili. Distingui definizioni, proprietà derivate, osservazioni ed esempi. Titoletti in grassetto e punti per idee distinte; ragionamenti unitari discorsivi. Niente muri di testo o frammentazione. Esempi con oggetto e conclusione motivata.
 
-Capitoli per MACROARGOMENTI, mai per lezione; struttura modulare aggiornabile, nuove fonti integrate senza duplicazioni. Indice con capitoli/sezioni (`tocdepth=1`); sottosezioni numerate nel testo e nei segnalibri (`secnumdepth=2`, `bookmarksdepth=2`).
+Capitoli per MACROARGOMENTI, mai per lezione; struttura modulare aggiornabile, nuove fonti integrate senza duplicazioni. Prima di scrivere, confronta il materiale nuovo con la dispensa esistente: distingui sovrapposizioni, integrazioni, correzioni e argomenti nuovi. Scegli autonomamente l'ordine e la collocazione più coerenti, integrando o riorganizzando localmente anche le sezioni precedenti quando serve; non accodare automaticamente una nuova lezione. Accorpa le ripetizioni senza perdere contenuti distinti, prove, esempi o provenienza. Indice con capitoli/sezioni (`tocdepth=1`); sottosezioni numerate nel testo e nei segnalibri (`secnumdepth=2`, `bookmarksdepth=2`).
 
 Provenienza sotto i soli macroargomenti: `\fonti{Lezioni ...}`, soli numeri. Pagine nei commenti/registri, non nel PDF. Testo autonomo: niente «come nella lezione» o «seguendo il professore»; precisazioni in nota se utili.
 

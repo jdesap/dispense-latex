@@ -480,3 +480,36 @@ Uniformata ad Algebra la separazione fra consegna nell'ambiente `esercizio` e so
 Conservati tutte le formule precedenti, gli ambienti di calcolo, i 47 TikZ complessivi, note, label e sequenza degli enunciati numerati. Compilazione condivisa e integrata riuscite senza avvisi LaTeX; tutti gli otto estratti verificati, anche pixel per pixel e nei collegamenti. Analisi passa da 55 a 56 pagine: capitolo 4 di 12 pagine, numerazione dei capitoli 5–7 spostata di una pagina; Geometria resta di 29 pagine, con 26 per Spazi vettoriali. Cambia anche la disposizione interna di alcune pagine. Copie annotate non modificate.
 
 Regola aggiunta ad `AGENTS.md` e `MASTER_PROMPT.md`. Resoconto e verifiche in `../../lavoro/revisione-editoriale/SESSIONE_15.md` e `VERIFICA_STILE_15.json` nella cartella comune. Le modifiche sono editoriali: restano i limiti delle precedenti revisioni matematiche.
+
+
+## Integrazione della lezione 9 — 23 ottobre 2026
+
+Letto visivamente il PDF fornito (9 pagine, di cui una copertina), conservato in `fonti/Lezione 9.pdf` e aggiunto al manifest con impronta SHA-256. Integrate tutte le pagine di contenuto nel capitolo 7, nel sottomodulo `07b-punti-e-accumulazione.tex`: separazione, interno/esterno/frontiera, punti isolati, aderenza e chiusura, accumulazione, esempi e passaggio alla retta estesa. Conservati tutti gli esempi della fonte e ricostruiti quattro schemi TikZ, riutilizzando il disegno di X e Y già presente.
+
+Esplicitata la distinzione fra accumulazione in R e nella retta estesa, necessaria per leggere correttamente gli esempi sui naturali, i reali e i razionali. Completate le verifiche degli esempi e le prove delle osservazioni; l'enunciato sugli infiniti elementi di ogni intorno resta in `esercizio`, seguito da uno `svolgimento` ricostruito. Mappa, precisazioni e aggiunte redazionali in `LEZIONE_9_2026-10-23.md` e `COPERTURA.csv`; nessun registro inserito nel PDF.
+
+Compilazioni condivisa e integrata riuscite senza avvisi LaTeX. Ispezionati indice, apertura e tutte le pagine coinvolte. Verificati tutti e sette gli estratti: pagine identiche al volume per flussi, testo, formato, numerazione e rendering; annotazioni, segnalibri e destinazioni validi. Risultati in `VERIFICA_LEZIONE_9_2026-10-23.json`.
+
+**Stato corrente:** lezioni 1–9 integrate; 61 pagine complessive. Topologia cresce da 6 a 11 pagine (numeri stampati 47–57); i nuovi contenuti iniziano a pagina 52. I capitoli 1–6 conservano testo, rendering e numerazione (1–46); conservate anche le pagine 48–51 di Topologia. Copie annotate non modificate. Restano i limiti delle revisioni matematiche precedenti; questa sessione riguarda la nuova fonte e il raccordo locale, senza una revisione integrale delle altre lezioni.
+
+
+## Criterio di integrazione e controllo delle sovrapposizioni — 24 ottobre 2026
+
+Su richiesta dell'autore, esplicitata in `../../AGENTS.md` e `../../MASTER_PROMPT.md` la regola valida per tutte le materie: confrontare sempre le fonti nuove con la dispensa esistente, scegliere autonomamente la collocazione didattica e integrare anche le sezioni precedenti quando necessario, accorpando le ripetizioni senza perdere contenuti distinti.
+
+Ricontrollati i raccordi della lezione 9 con Topologia e con gli esempi e la densità del capitolo sui reali. Le sovrapposizioni riguardano gli intorni (anche a infinito), N e Q, l'intervallo [0,1) e gli insiemi X={1/n}, Y=X unito a {0}. La trattazione nuova riprende questi oggetti per proprietà ulteriori: frontiera, isolamento, aderenza e accumulazione. Mantiene i richiami alle verifiche già svolte e riutilizza la figura di X e Y. La densità di Q resta dimostrata nel capitolo sui reali; non ne è stata aggiunta una seconda dimostrazione. Le nuove nozioni seguono gli intorni di cui dipendono. Per questi raccordi non si è resa necessaria un'ulteriore modifica dei sorgenti TeX.
+
+Compilazione condivisa riuscita ed estratti rigenerati; ricontrollata per tutti e sette la corrispondenza dei flussi pagina e della numerazione con il volume. Nessuna modifica ai contenuti o all'impaginazione del PDF in questa sessione; conservati i risultati delle verifiche visive del 23 ottobre.
+
+
+## Integrazione delle lezioni 10–12 — 28 ottobre 2026
+
+Lette visivamente tutte le 45 pagine dei tre nuovi PDF, comprese le tre copertine senza contenuto matematico; fonti copiate identiche in `fonti/`, inventariate con SHA-256 e mappate in `COPERTURA.csv`.
+
+Integrate in Topologia le pagine 2–6 della lezione 10: estremi non raggiunti e accumulazione, controesempio del massimo isolato ed esercizio completo con arcotangenti e intervallo. Creato il capitolo 8 «Successioni e limiti» per il resto della lezione 10 e per le lezioni 11–12. Include proprietà definitive e frequenti, successioni ed estrazioni, limitatezza delle code, definizione unificata di limite, esempi e verifiche, unicità, limiti delle estratte, permanenza del segno, confronti, somma con una divergente, prodotto limitata per infinitesima, algebra di somme e prodotti e avvicinamento da sopra/sotto. Il teorema sui quozienti non è presente nelle fonti e resta per un successivo aggiornamento.
+
+Verificate le sovrapposizioni con i capitoli 4–7: riutilizzati criteri degli estremi, proprietà dell'arcotangente, definizioni topologiche, separazione e limitatezza delle funzioni. Accorpate la definizione di limite ripetuta fra lezioni 10 e 11 e le figure con lo stesso ruolo. Prove lasciate implicite o per esercizio completate e distinte dalla fonte nel registro; chiarite soglie naturali, casi infiniti, limitatezza da un lato e notazione E rispetto alla chiusura. Tutte le scelte e i limiti dell'intervento sono in `LEZIONI_10_12_2026-10-28.md`.
+
+Compilazioni condivisa e integrata riuscite senza avvisi LaTeX; ispezionate nuove pagine e raccordi, figure, formule, note e separazione fra consegna e svolgimento. Tutti e otto gli estratti verificati: flussi, testo, formato, numerazione e rendering identici al volume; annotazioni conservate e destinazioni dei link e segnalibri valide. Rapporto in `VERIFICA_LEZIONI_10_12_2026-10-28.json`.
+
+**Stato corrente:** lezioni 1–12 integrate, 75 pagine e otto capitoli. Topologia: 13 pagine (47–59), due nuove pagine finali. Successioni e limiti: 11 pagine (60–70). Capitoli 1–6 invariati nel testo, nella numerazione stampata e nel rendering; indice generale ampliato a tre pagine. In Topologia è aggiornata la provenienza a pagina 47, mentre le pagine 48–57 restano identiche alla versione precedente. Copie annotate non modificate; restano i limiti delle revisioni precedenti e delle proprietà assunte segnalate nel testo.

@@ -1,5 +1,7 @@
 """Verifica tutti gli estratti correnti della raccolta e confronta il rendering."""
 from pathlib import Path
+import argparse
+from datetime import date
 import hashlib
 import json
 import subprocess
@@ -37,10 +39,14 @@ def target_page(reader, destination):
 
 
 def run():
-    subjects = sys.argv[1:] or ['algebra 1', 'analisi 1', 'geometria 1']
-    target = ROOT / 'strumenti/VERIFICA_ESPORTAZIONE_2026-10-23.json'
-    report = (json.loads(target.read_text()) if sys.argv[1:] and target.exists()
-              else {'data': '2026-10-23', 'materie': [], 'confronto': 'tutte le pagine e tutte le annotazioni'})
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--data', default=date.today().isoformat())
+    parser.add_argument('materie', nargs='*')
+    args = parser.parse_args()
+    subjects = args.materie or ['algebra 1', 'analisi 1', 'geometria 1']
+    target = ROOT / f'strumenti/VERIFICA_ESPORTAZIONE_{args.data}.json'
+    report = (json.loads(target.read_text()) if args.materie and target.exists()
+              else {'data': args.data, 'materie': [], 'confronto': 'tutte le pagine e tutte le annotazioni'})
     report['materie'] = [item for item in report['materie'] if item['materia'] not in subjects]
     for name in subjects:
         folder = ROOT / name

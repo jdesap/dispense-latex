@@ -78,3 +78,31 @@ lezione,pagine_pdf,argomento,file_destinazione,stato
 8,5–9,"Esempi N, Z, Q, X={1/n}, Y=X∪{0}",capitoli/07-topologia.tex,trascritta e revisionata
 8,10–11,"Intorni, intorni sferici e intorni degli infiniti",capitoli/07-topologia.tex,trascritta e revisionata
 8,12,Intorni laterali,capitoli/07-topologia.tex,trascritta e revisionata
+9,2,Separazione di punti distinti: enunciato nella retta estesa e dimostrazione; schema,capitoli/07b-punti-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+9,3–4,"Interno, esterno e frontiera; esempi del singoletto e di [0,1); schema",capitoli/07b-punti-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+9,5,"Punti isolati; [0,1) unito a {2}, X={1/n} e Y=X unito a {0}; verifiche dei raggi",capitoli/07b-punti-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+9,6,"Aderenza e chiusura; esempio (0,1) unito a {2}; distinzione degli ambienti reale ed esteso",capitoli/07b-punti-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+9,7,"Punti di accumulazione; [0,1) unito a {2} e X={1/n}; esempi e verifiche",capitoli/07b-punti-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+9,8,Punti aderenti isolati o di accumulazione; esercizio sugli infiniti punti con svolgimento redazionale,capitoli/07b-punti-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+9,9,"(0,1) unito a (1,2) e {3}; isolati, accumulazione e chiusura; schema; accumulazione di N, R e Q nella retta estesa",capitoli/07b-punti-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+10,2–5,"Arcotangenti e intervallo: esercizio, scomposizione, estremi, interni, isolati e accumulazione; prova con tangente e schema",capitoli/07c-estremi-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+10,6,Supremo non raggiunto e accumulazione; controesempio del massimo isolato e versione per infimo,capitoli/07c-estremi-e-accumulazione.tex,integrata; lettura visiva e controllo matematico locale
+10,7–9,Definitivamente e frequentemente; esempi e congiunzione finita di proprietà definitive,capitoli/08a-successioni-e-sottosuccessioni.tex,integrata; lettura visiva e controllo matematico locale
+10,10–11,"Successione, dominio semiretta e notazioni; esempi costante, 2n^2 e 1/(n-4); grafico",capitoli/08a-successioni-e-sottosuccessioni.tex,integrata; lettura visiva e controllo matematico locale
+10,12–15,"Sottosuccessioni: definizione, esempi e non esempi, selezione da proprietà frequente e schemi",capitoli/08a-successioni-e-sottosuccessioni.tex,integrata; lettura visiva e controllo matematico locale
+10,16–17,"Limitatezza definitiva e globale, prova mediante massimo dei termini iniziali; figura",capitoli/08a-successioni-e-sottosuccessioni.tex,integrata; lettura visiva e controllo matematico locale
+10,18,Limite tramite intorni: accorpato alla ripresa della lezione 11,capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+11,2–4,"Limite finito e infinito, figure; convergenti, infinitesime, divergenti, regolari e irregolari",capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+11,5–6,Primi esempi e definizioni epsilon-N e M-N,capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+11,7–9,"Verifiche 1-1/n^2 verso 1, impossibilità del limite 2, n^3-1 verso infinito; soglie naturali",capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+11,10–11,Unicità del limite e prova mediante separazione; schema,capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+11,12–13,Limite delle sottosuccessioni e prova con crescita degli indici; riuso schema di estrazione,capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+11,14,"Criterio di non esistenza, (-1)^n e sin(n pi/2)",capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+11,14,Esempio sin(n): esercizio con svolgimento redazionale dopo algebra dei limiti,capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale
+11,15,Convergente implica limitata; limitata non implica convergente e illimitata non implica divergente,capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+11,16–17,Permanenza del segno e conseguenza sul segno del limite,capitoli/08b-limiti-e-proprieta.tex,integrata; lettura visiva e controllo matematico locale
+12,2–3,"Confronto con divergenti e carabinieri, prove finite e infinite e schema",capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale
+12,4–6,Algebra parziale della retta estesa; somma e prodotto dei limiti; prove completate,capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale
+12,7,Divergente più inferiormente limitata: esercizio con svolgimento; n+(-1)^n e figura,capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale
+12,8–9,Limitata per infinitesima; prova con due applicazioni dei carabinieri e schema,capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale
+12,10,"Avvicinamento da sopra e da sotto, definizioni e schema; nessun teorema sul quoziente nella fonte",capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale

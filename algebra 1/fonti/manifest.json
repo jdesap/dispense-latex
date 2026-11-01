@@ -1,7 +1,7 @@
 {
-  "data_inventario": "2026-10-23",
-  "totale_pdf": 22,
-  "totale_pagine": 140,
+  "data_inventario": "2026-10-24",
+  "totale_pdf": 24,
+  "totale_pagine": 156,
   "numerazione": "Numero ricavato dal nome del file; non sono inventate date delle lezioni.",
   "fonti": [
     {
@@ -80,12 +80,19 @@
       "pagine": 7,
       "file": "fonti/Lezione 11.pdf",
       "sha256": "3e05c7481191eceb8054dbd7e8882e19fb20318194de339ad85b2a2dc439013e"
+    },
+    {
+      "numero": 12,
+      "origine": "/Users/jude/Downloads/Algebra-12.pdf",
+      "pagine": 9,
+      "file": "fonti/Lezione 12.pdf",
+      "sha256": "163f3bdab32b2dcc781c3e9178c6767ebadf541650ae4c996215e176d945d4b5"
     }
   ],
   "serie_M-Z": {
-    "data_inventario": "2026-10-23",
+    "data_inventario": "2026-10-24",
     "docente": "non identificato nei PDF; indicato dall’autore come altro docente",
-    "pagine": 75,
+    "pagine": 82,
     "fonti": [
       {
         "numero": 1,
@@ -185,6 +192,15 @@
         "file": "fonti/M-Z/Lezione 11.pdf",
         "serie": "M-Z",
         "sha256": "f32ede34390f9c5060a6da38e5d6801359cad9f85d05008fcee3010dde476606"
+      },
+      {
+        "numero": 12,
+        "origine": "/Users/jude/Downloads/Dodicesima lezione M-Z.pdf",
+        "pagine": 7,
+        "file": "fonti/M-Z/Lezione 12.pdf",
+        "sha256": "8bd4a4ca226707acf43f1f4d737b47cb14ffc65d296abc4613fd949be3e28b79",
+        "serie": "M-Z",
+        "caratteri": 281
       }
     ],
     "criterio_confronto": "globale per macroargomenti, senza corrispondenza per numero di lezione"
@@ -192,8 +208,8 @@
   "serie_primaria": "A–L",
   "serie_supporto": "M–Z",
   "lettura_visiva": {
-    "A–L": 65,
-    "M–Z": 75
+    "A–L": 74,
+    "M–Z": 82
   },
   "criterio_integrazione": "Ordine A–L; M–Z integra lacune e contenuti omessi di argomenti conclusi. Sviluppi plausibilmente futuri da distinguere e registrare."
 }

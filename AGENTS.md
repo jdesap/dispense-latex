@@ -4,6 +4,12 @@ Queste regole valgono per tutte le materie della raccolta, inclusa Algebra.
 Le richieste dell'autore e le convenzioni della singola dispensa prevalgono.
 
 - Organizzare capitoli per macroargomenti, non per numero di lezione.
+- Prima di integrare nuove fonti, confrontarle con i contenuti già presenti:
+  individuare sovrapposizioni, integrazioni, correzioni e argomenti nuovi.
+  Scegliere autonomamente la collocazione più coerente con il percorso
+  didattico e aggiornare anche le sezioni precedenti quando necessario.
+  Accorpare le ripetizioni conservando tutti i contenuti distinti e la
+  provenienza; non aggiungere automaticamente ogni nuova lezione in coda.
 - Conservare il PDF completo in `build/main.pdf` e generare automaticamente
   anche un PDF per ogni capitolo numerato in `build/capitoli/`.
 - Usare la configurazione condivisa `strumenti/latexmk-comune.pl` tramite
@@ -26,3 +32,5 @@ Le richieste dell'autore e le convenzioni della singola dispensa prevalgono.
   (`svolgimento`): il riquadro rosa contiene soltanto dati e richieste.
   Conservare esempi illustrativi e dimostrazioni nei rispettivi ambienti.
   Evitare consegne isolate in fondo pagina prima dello svolgimento.
+
+- A ogni nuovo caricamento verificare le sovrapposizioni con tutte le parti già scritte, scegliere la collocazione per macroargomento e integrare nel testo precedente i contenuti pertinenti. Evitare duplicazioni e registrare le scelte di accorpamento e le prove alternative utili.

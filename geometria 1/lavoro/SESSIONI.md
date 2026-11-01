@@ -405,3 +405,36 @@ Uniformata ad Algebra la separazione fra consegna nell'ambiente `esercizio` e so
 Conservati tutte le formule precedenti, gli ambienti di calcolo, i 47 TikZ complessivi, note, label e sequenza degli enunciati numerati. Compilazione condivisa e integrata riuscite senza avvisi LaTeX; tutti gli otto estratti verificati, anche pixel per pixel e nei collegamenti. Analisi passa da 55 a 56 pagine: capitolo 4 di 12 pagine, numerazione dei capitoli 5–7 spostata di una pagina; Geometria resta di 29 pagine, con 26 per Spazi vettoriali. Cambia anche la disposizione interna di alcune pagine. Copie annotate non modificate.
 
 Regola aggiunta ad `AGENTS.md` e `MASTER_PROMPT.md`. Resoconto e verifiche in `../../lavoro/revisione-editoriale/SESSIONE_15.md` e `VERIFICA_STILE_15.json` nella cartella comune. Le modifiche sono editoriali: restano i limiti delle precedenti revisioni matematiche.
+
+
+## Lezioni 13–15 — 28 ottobre 2026
+
+Confrontate visivamente tutte le 14 pagine dei tre nuovi PDF, copiati in
+fonti con impronte nel manifest. Copertura aggiornata pagina per pagina.
+Nuovo capitolo 2 «Sistemi lineari e matrici»: matrici e sistemi, Gauss,
+forme a scala e pivot, basi tramite righe, prodotto e proprietà con prove,
+trasposizione, inverse destre e sinistre e unicità, rango e uguaglianza
+fra ranghi, soluzioni omogenee e traslazione, Rouché–Capelli con prova,
+esercizio sul rango parametrico con tutti i casi.
+
+Confronto con tutti i moduli attivi: sistemi per coordinate, basi e metodo
+con blocco identità erano già presenti nel capitolo 1. Conservata lì la
+trattazione degli esercizi; aggiunto un rinvio al nuovo capitolo nel metodo
+matriciale. La nuova applicazione in R4 resta nel capitolo 2 per illustrare
+Gauss, senza duplicare la teoria delle basi. La prova dei ranghi completa
+l'anticipazione della lezione 13. Riprese sulle soluzioni accorpate nella
+sezione tematica. Aggiunte giustificazioni delle operazioni, delle proprietà
+della trasposta e del calcolo dell'inversa. Precisata la condizione sulle
+righe nulle nella forma a scala. Come richiesto, trattazione soprattutto
+su R e precisazione sui campi finiti soltanto in nota a Rouché–Capelli.
+
+Controllati con frazioni sistema, prodotti e relazione fra generatori;
+riletta la riduzione simbolica del parametro e controllata in cinque valori.
+La prova dei ranghi esplicita l'invarianza di ogni relazione fra colonne,
+evitando di assumere l'uguaglianza dei ranghi nel corso della dimostrazione.
+
+Compilazione condivisa riuscita senza avvisi: 36 pagine. Estratti di 26 e
+7 pagine, testo e flussi pagina identici al volume; controllo visivo di
+indice, raccordo e tutte le pagine nuove. Capitolo 1: aggiunto un rinvio,
+lunghezza invariata; capitolo 2 nuovo, pagine 27–33. Nessuna copia annotata
+modificata. Risultati in VERIFICA_LEZIONI_13-15_2026-10-28.json.

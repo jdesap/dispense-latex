@@ -6,20 +6,13 @@ confrontate con la fonte, compilate e controllate nell'impaginazione.
 
 ## Stato attuale
 
-Sono integrate e verificate le **lezioni 5, 6, 7, 8, 9, 10 e 11–12**: spazi vettoriali,
-sottospazi, generatori, somme e somme dirette, indipendenza lineare,
-basi e coordinate, teorema dello scambio, dimensione,
-estrazione e completamento di basi, ed esercizi sui sottospazi di
-`R^4`, equazioni cartesiane, prodotto di spazi, spazio quoziente,
-formula di Grassmann, somme dirette, complementari, costruzioni in
-`R^5` ed equazioni di sottospazi di polinomi in basi diverse.
-Tutte le 33 pagine dei sette PDF consegnati risultano integrate nella
-dispensa attiva, che comprende 29 pagine complessive (26 di testo
-e 3 preliminari), dopo l'aggiornamento visivo del 22 ottobre 2026.
-La lezione 7 è stata confrontata integralmente con
-la fonte e integrata riordinando i temi, senza duplicare i raccordi
-aggiunti quando quella fonte mancava.
-La parte sui numeri complessi arriverà con una consegna separata.
+Sono integrate le **lezioni 5–15** (10 PDF, 47 pagine di fonti).
+Il capitolo 1 raccoglie spazi vettoriali e sottospazi; il nuovo capitolo 2,
+**Sistemi lineari e matrici**, comprende Gauss, rango, prodotto e trasposta,
+inverse, sistemi omogenei, Rouché–Capelli ed esercizi con parametro.
+Il volume aggiornato al 28 ottobre 2026 ha **36 pagine**, con 3 preliminari,
+26 pagine per il capitolo 1 e 7 per il capitolo 2.
+La parte sui numeri complessi resta in attesa di consegna separata.
 
 La revisione editoriale integrale, svolta in quattro sessioni per Spazi
 vettoriali, è conclusa. Resoconto comune e verifiche aggiornate in

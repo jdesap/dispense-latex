@@ -1,0 +1,18 @@
+{
+  "data": "2026-10-24",
+  "classi_esaminate": 7259,
+  "moduli": [
+    2,
+    120
+  ],
+  "controlli": [
+    "invertibilità iff MCD=1",
+    "unicità inverso",
+    "divisori zero inclusivi iff MCD>1",
+    "annullatore m/d non nullo",
+    "indipendenza MCD dal rappresentante",
+    "identità numeriche stampate, inversi e annullatori mod84, resti 2026"
+  ],
+  "esito": "tutti superati",
+  "limite": "Controlli finiti supplementari; non sostituiscono le dimostrazioni generali riesaminate."
+}

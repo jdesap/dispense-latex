@@ -64,3 +64,12 @@ Lezione 11,4,Caratterizzazione primi con prodotti; avvio teorema fondamentale,ri
 Lezione 11,5,Enunciato fattorizzazione con esponenti; esistenza per induzione forte,ricostruito e riesaminato; risultati assunti distinti nel testo,capitoli/05-interi.tex,Z19,Rinascita 2026-10-23; confronto delle unità in SCELTA_DIMOSTRAZIONI.csv
 Lezione 11,6,Unicità della fattorizzazione per cancellazione e induzione,ricostruito e riesaminato; risultati assunti distinti nel testo,capitoli/05-interi.tex,Z20,Rinascita 2026-10-23; confronto delle unità in SCELTA_DIMOSTRAZIONI.csv
 Lezione 11,7,Formule MCD e mcm; identità del prodotto; esercizio irrazionalità radice di primo,ricostruito e riesaminato; risultati assunti distinti nel testo,capitoli/05-interi.tex,Z21; Z22,Rinascita 2026-10-23; confronto delle unità in SCELTA_DIMOSTRAZIONI.csv
+Lezione 12,1,Congruenza; equivalenza fra resto uguale e differenza divisibile,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A01,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"
+Lezione 12,2,Equivalenza; quoziente; classi mod 2 e 3,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A02; A03,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"
+Lezione 12,3,Orologio mod 12; operazioni sul quoziente; compatibilità somma,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A03; A04; A06,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"
+Lezione 12,4,Compatibilità prodotto; proprietà ereditate; opposti mod 2,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A04; A05; A06,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"
+Lezione 12,5,Esempi mod 4 6 5 2; invertibilità,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A06; A07; A10,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"
+Lezione 12,6,Divisori dello zero; convenzione inclusiva; dicotomia; criteri MCD,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A07; A08; A09,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"
+Lezione 12,7,Esclusione caso coprimo; annullatore m/d; cancellazione,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A08; A09,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"
+Lezione 12,8,Inverso da Bézout; modulo 84; annullatori 30 e inverso 65,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A08; A11,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"
+Lezione 12,9,Conclusione inverso 65; resti 2026; uguaglianza e congruenza,integrato e riesaminato,capitoli/06-aritmetica-modulare.tex,A11; A12,"Lezione 12, 2026-10-24; SCELTA_DIMOSTRAZIONI.csv"

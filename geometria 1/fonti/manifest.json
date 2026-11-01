@@ -1,5 +1,5 @@
 {
-  "data_inventario": "2026-10-21",
+  "data_inventario": "2026-10-28",
   "fonti": [
     {
       "lezione": "5",
@@ -42,6 +42,24 @@
       "file": "fonti/Lezione 11_12.pdf",
       "pagine": 6,
       "sha256": "4e685e2cce71d38119b0505239e6a6514b18b655ee730a8ac01626f0648e331a"
+    },
+    {
+      "lezione": "13",
+      "file": "fonti/Lezione_13.pdf",
+      "pagine": 7,
+      "sha256": "23dbb972a7794f86c61ffd44f2506d3d860d77eeb920cd925da05a281e138601"
+    },
+    {
+      "lezione": "14",
+      "file": "fonti/Lezione_14.pdf",
+      "pagine": 5,
+      "sha256": "f226a0c73d1820c76f7bf4fd50972934e154e56d608522322a3714ca46f6132e"
+    },
+    {
+      "lezione": "15",
+      "file": "fonti/Lezione_15.pdf",
+      "pagine": 2,
+      "sha256": "b7b793deb03a603a57dbb6b83de43fc8325af19437daf282a1af5807881106b1"
     }
   ]
 }

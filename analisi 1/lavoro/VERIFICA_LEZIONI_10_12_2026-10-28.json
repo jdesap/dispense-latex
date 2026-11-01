@@ -1,0 +1,146 @@
+{
+  "data": "2026-10-28",
+  "pagine_volume_precedente": 61,
+  "pagine_volume": 75,
+  "compilazione_condivisa": "riuscita senza avvisi, riferimenti indefiniti o righe fuori margine",
+  "fonti": [
+    {
+      "lezione": 10,
+      "pagine": 18,
+      "sha256": "0e6be6a02c966b69f652fdc31fcc37d5252588080e237f48b18a1493df472214",
+      "lettura_visiva": "tutte le pagine, inclusa copertina"
+    },
+    {
+      "lezione": 11,
+      "pagine": 17,
+      "sha256": "abfd3fd7f7f39ccc1204fa1db42b4098b7a0960ce59d079cb13683096d0f51d7",
+      "lettura_visiva": "tutte le pagine, inclusa copertina"
+    },
+    {
+      "lezione": 12,
+      "pagine": 10,
+      "sha256": "016d7687aa2f6d9a90a0948e0bf2cdc9b131e8db43430e09c669fcf901e5ae2b",
+      "lettura_visiva": "tutte le pagine, inclusa copertina"
+    }
+  ],
+  "estratti": [
+    {
+      "numero": 1,
+      "file": "01-logica-e-metodi-di-dimostrazione.pdf",
+      "pagine": 3,
+      "numeri_stampati": [
+        "1",
+        "3"
+      ],
+      "identita_testo_flussi_formato_numerazione_rendering_72dpi": true,
+      "annotazioni_conservate": 0,
+      "link_e_segnalibri_validi": true
+    },
+    {
+      "numero": 2,
+      "file": "02-insiemi-e-relazioni.pdf",
+      "pagine": 3,
+      "numeri_stampati": [
+        "4",
+        "6"
+      ],
+      "identita_testo_flussi_formato_numerazione_rendering_72dpi": true,
+      "annotazioni_conservate": 0,
+      "link_e_segnalibri_validi": true
+    },
+    {
+      "numero": 3,
+      "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
+      "pagine": 7,
+      "numeri_stampati": [
+        "7",
+        "13"
+      ],
+      "identita_testo_flussi_formato_numerazione_rendering_72dpi": true,
+      "annotazioni_conservate": 0,
+      "link_e_segnalibri_validi": true
+    },
+    {
+      "numero": 4,
+      "file": "04-sistemi-numerici-e-completezza.pdf",
+      "pagine": 12,
+      "numeri_stampati": [
+        "14",
+        "25"
+      ],
+      "identita_testo_flussi_formato_numerazione_rendering_72dpi": true,
+      "annotazioni_conservate": 2,
+      "link_e_segnalibri_validi": true
+    },
+    {
+      "numero": 5,
+      "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
+      "pagine": 7,
+      "numeri_stampati": [
+        "26",
+        "32"
+      ],
+      "identita_testo_flussi_formato_numerazione_rendering_72dpi": true,
+      "annotazioni_conservate": 1,
+      "link_e_segnalibri_validi": true
+    },
+    {
+      "numero": 6,
+      "file": "06-funzioni-elementari.pdf",
+      "pagine": 14,
+      "numeri_stampati": [
+        "33",
+        "46"
+      ],
+      "identita_testo_flussi_formato_numerazione_rendering_72dpi": true,
+      "annotazioni_conservate": 2,
+      "link_e_segnalibri_validi": true
+    },
+    {
+      "numero": 7,
+      "file": "07-topologia-della-retta.pdf",
+      "pagine": 13,
+      "numeri_stampati": [
+        "47",
+        "59"
+      ],
+      "identita_testo_flussi_formato_numerazione_rendering_72dpi": true,
+      "annotazioni_conservate": 1,
+      "link_e_segnalibri_validi": true
+    },
+    {
+      "numero": 8,
+      "file": "08-successioni-e-limiti.pdf",
+      "pagine": 11,
+      "numeri_stampati": [
+        "60",
+        "70"
+      ],
+      "identita_testo_flussi_formato_numerazione_rendering_72dpi": true,
+      "annotazioni_conservate": 6,
+      "link_e_segnalibri_validi": true
+    }
+  ],
+  "capitoli_1_6": {
+    "numeri_stampati": "1–46",
+    "testo_e_rendering_identici_alla_versione_precedente": true,
+    "spostamento_pagina_fisica_pdf": 1,
+    "motivo": "indice cresce da due a tre pagine"
+  },
+  "copertura": "Tutte le 42 pagine di contenuto delle tre fonti hanno una destinazione in COPERTURA.csv; tre copertine escluse.",
+  "compilazione_integrata": "riuscita anche sui sorgenti finali",
+  "sha256_volume": "51afd29826957bfab35a16bccc8ea0271e8f25c12abdad8a125b99530af17611",
+  "copie_annotate_modificate": false,
+  "topologia_precedente": {
+    "pagine_stampate_invariate": "48–57",
+    "pagina_47": "sola provenienza aggiornata",
+    "aggiunte": "58–59"
+  },
+  "controllo_visivo": "Ispezionate le pagine nuove in compilazioni successive e i raccordi finali; controllati apertura di Topologia, indice, definizioni, tutte le figure nuove, formule, esercizi e svolgimenti, cambi pagina e nota sulle identità trigonometriche. Nessun titolo isolato, sovrapposizione o contenuto tagliato rilevato nelle pagine finali.",
+  "nuove_figure_tikz": 11,
+  "validazione_registro": {
+    "errori": 0,
+    "warning": 1,
+    "valutazione": "densità delle liste ammessa nel registro di audit, che non entra nel PDF"
+  }
+}

@@ -71,3 +71,15 @@ La copertura è relativa ai PDF consegnati; non attesta il programma completo d'
 **Limiti:** rimangono dichiarati assunti i risultati non dimostrati nelle fonti o espressamente autorizzati come enunciati, come elencato nel registro corrente. Nessuna verifica formale, nessuna attestazione dell'intero programma d'esame. Nessun commit, push o pubblicazione.
 
 **Ripresa:** integrare progressivamente le nuove lezioni A–L nella ricostruzione corrente, aggiungendo le nuove unità e confrontando M–Z quando disponibile. Non usare le vecchie stesure come ossatura e non ricominciare di nuovo salvo nuova richiesta. Il metodo è salvato anche in `AGENTS.md` della materia.
+
+
+## Sessione 4 — 24 ottobre 2026: lezione 12 e confronto delle sovrapposizioni
+
+**Completato:** lettura visiva di A–L 12 (9 pagine) e M–Z 12 (7 pagine), inventario e confronto prima della scrittura. Nuovo capitolo 6 Aritmetica modulare; nel capitolo 5 integrati calcolo mcm tramite Euclide e prova alternativa di √p con gli esponenti. Nessuna duplicazione di unicità della fattorizzazione o infinità dei primi. Convenzione inclusiva dello zero dichiarata per i divisori dello zero; completati criteri MCD, annullatori e inversi modulo 84.
+
+**Risultato:** 42 pagine (4 preliminari, 38 testo), sei estratti; capitolo 5 di 10 pagine e capitolo 6 di 5. Capitoli 1–4 invariati nel testo e nella numerazione stampata; indice su due pagine. Compilazione senza avvisi; sei estratti verificati integralmente per testo, flussi, pixel e collegamenti. Riscontri numerici su 7.259 classi e tutti i conti degli esempi. Inventario 24 PDF / 156 pagine, 87 unità. Annotazioni separate non toccate.
+
+**Registro corrente:** `LEZIONE_12_2026-10-24.md`; snapshot precedente `storico-prima-lezione-12-2026-10-24/`. Prossima lezione A–L: 13. Regola esplicita dell’autore salvata in AGENTS.md della raccolta: verificare sempre sovrapposizioni, organizzazione e integrazioni nel testo precedente.
+
+
+**Correzione terminologica, 24 ottobre 2026:** su richiesta dell’autore, «congrui modulo m» nella definizione 6.1. Preferenza salvata nell’AGENTS.md della materia. Ricompilati volume ed estratti, verificati tutti e sei gli estratti e ispezionata la pagina variata (stampata 34, PDF 38). Restano 42 pagine e la stessa numerazione; solo il capitolo 6 cambia nel testo.

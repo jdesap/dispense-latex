@@ -1,0 +1,292 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 9.pdf, pp. 2--9; p. 1: copertina senza contenuto matematico.
+% Le prove di caratterizzazioni e osservazioni sono sviluppi redazionali.
+% L'esercizio sugli infiniti punti è enunciato a p. 8; svolgimento ricostruito.
+% Le definizioni finite sono date in R; l'estensione a R estesa è esplicita
+% nell'ultima sezione, che conserva gli esempi a infinito della fonte.
+
+\section{Separazione di punti distinti}
+% Fonte: Lezione 9, p. 2.
+
+Gli intorni permettono di distinguere due punti della retta mediante insiemi disgiunti.
+
+\begin{proposizione}[Proprietà di separazione]
+Se $x,y\in\R$ e $x\ne y$, esistono un intorno aperto $U$ di $x$ e un intorno aperto $V$ di $y$ tali che $U\cap V=\varnothing$.
+\end{proposizione}
+\begin{proof}
+Possiamo supporre $x<y$. Posto $m=(x+y)/2$, si ha $x<m<y$; scegliamo
+\[
+U=(-\infty,m),\qquad V=(m,+\infty).
+\]
+Le due semirette sono aperte, contengono rispettivamente $x$ e $y$ e sono disgiunte, perché nessun reale è contemporaneamente minore e maggiore di $m$.
+\end{proof}
+
+\begin{schema}
+\begin{tikzpicture}[x=1.25cm,y=1cm]
+  \draw[asse] (-.3,0) -- (8.3,0);
+  \draw[intervallo] (0,.55) -- (4,.55);
+  \draw[draw=black!60,line width=1.5pt] (4,-.55) -- (8,-.55);
+  \draw[estremo] (4,.55) circle[radius=2.6pt];
+  \draw[draw=black!60,fill=white] (4,-.55) circle[radius=2.6pt];
+  \foreach \pos/\nome in {2/x,6/y} {
+    \fill[coloreschema] (\pos,0) circle[radius=1.8pt];
+    \node[above=5pt] at (\pos,0) {$\nome$};
+  }
+  \fill[coloreschema] (4,0) circle[radius=1.8pt];
+  \node[below=5pt] at (4,0) {$m$};
+  \node[above=5pt,coloreschema] at (1,.55) {$U=(-\infty,m)$};
+  \node[below=5pt] at (7,-.55) {$V=(m,+\infty)$};
+\end{tikzpicture}
+\par\smallskip Il punto medio $m$ non appartiene a nessuno dei due intorni: le due semirette non si incontrano.
+\end{schema}
+
+\section{Interno, esterno e frontiera}
+% Fonte: Lezione 9, pp. 3--4.
+
+\begin{definizione}[Punti interni, esterni e di frontiera]
+Siano $A\subseteq\R$ e $x\in\R$.
+\begin{itemize}
+  \item $x$ è \emph{interno} ad $A$ se esiste un intorno $U$ di $x$ tale che $U\subseteq A$. L'insieme dei punti interni è l'\emph{interno} di $A$, indicato con $\mathring A$.
+  \item $x$ è \emph{esterno} ad $A$ se esiste un intorno $U$ di $x$ tale che $U\cap A=\varnothing$. I punti esterni sono quindi i punti interni al complemento $A^c$.
+  \item $x$ è un \emph{punto di bordo} o \emph{di frontiera} di $A$ se non è né interno né esterno. La \emph{frontiera} è l'insieme di questi punti e si indica con $\partial A$.
+\end{itemize}
+\end{definizione}
+
+Poiché ogni intorno contiene un intorno sferico, per verificare le prime due condizioni basta trovare un raggio $r>0$ con $I_r(x)\subseteq A$ oppure $I_r(x)\cap A=\varnothing$. Negando entrambe le condizioni si ottiene
+\[
+x\in\partial A
+\quad\Longleftrightarrow\quad
+\forall r>0:\quad I_r(x)\cap A\ne\varnothing
+\ \text{e}\ I_r(x)\cap A^c\ne\varnothing.
+\]
+In un punto di frontiera, dunque, ogni intorno incontra sia l'insieme sia il suo complemento. Un punto interno appartiene sempre ad $A$, un punto esterno appartiene ad $A^c$; un punto di frontiera può appartenere all'uno o all'altro. Le tre possibilità sono mutuamente esclusive ed esauriscono tutti i punti di $\R$.
+
+\begin{esempio}[Un singoletto]
+Per $A=\{1\}$ non esistono punti interni: nessun intervallo aperto è contenuto in un singoletto. Ogni $x\ne1$ è esterno, perché il raggio $r=|x-1|/2$ dà un intervallo che non contiene $1$. Il punto $1$ è invece di frontiera: ogni suo intorno contiene $1$ e punti diversi da $1$. Pertanto
+\[
+\mathring A=\varnothing,\qquad \partial A=\{1\},
+\qquad \text{esterno di }A=\R\setminus\{1\}.
+\]
+\end{esempio}
+
+\begin{esempio}[Un intervallo semiaperto]
+Se $A=[0,1)$, ogni $x\in(0,1)$ è interno: basta scegliere $0<r<\min\{x,1-x\}$. I punti $x<0$ e $x>1$ sono esterni, scegliendo un raggio minore della distanza dall'estremo più vicino. Ogni intorno di $0$ o di $1$ incontra sia $A$ sia $A^c$, quindi
+\[
+\mathring A=(0,1),\qquad \partial A=\{0,1\},
+\qquad \text{esterno di }A=(-\infty,0)\cup(1,+\infty).
+\]
+Il punto di frontiera $0$ appartiene ad $A$, mentre il punto di frontiera $1$ non vi appartiene.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=3cm,y=1cm]
+  \draw[asse] (-.4,.65) -- (2.2,.65);
+  \fill[coloreschema] (1,.65) circle[radius=2.4pt];
+  \node[above=6pt] at (1,.65) {$1$};
+  \node[anchor=east] at (-.45,.65) {$\{1\}$};
+  \draw[asse] (-.4,-.65) -- (2.2,-.65);
+  \draw[intervallo] (0,-.65) -- (1,-.65);
+  \fill[coloreschema] (0,-.65) circle[radius=2.4pt];
+  \draw[estremo] (1,-.65) circle[radius=2.6pt];
+  \node[below=6pt] at (0,-.65) {$0$};
+  \node[below=6pt] at (1,-.65) {$1$};
+  \node[anchor=east] at (-.45,-.65) {$[0,1)$};
+\end{tikzpicture}
+\par\smallskip La frontiera non dipende dall'inclusione dell'estremo nell'insieme: per $[0,1)$ comprende sia $0$ sia $1$.
+\end{schema}
+
+\section{Punti isolati e punti aderenti}
+% Fonte: Lezione 9, pp. 5--6.
+
+\begin{definizione}[Punto isolato]
+Siano $A\subseteq\R$ e $x\in\R$. Il punto $x$ si dice \emph{isolato} di $A$ se esiste un intorno $U$ di $x$ tale che
+\[
+U\cap A=\{x\}.
+\]
+In particolare, un punto isolato appartiene necessariamente ad $A$.
+\end{definizione}
+
+\begin{esempio}[Un intervallo e un punto isolato]
+L'insieme $A=[0,1)\cup\{2\}$ ha come unico punto isolato $2$: l'intorno $(3/2,5/2)$ incontra $A$ soltanto in $2$. Nessun punto di $[0,1)$ è isolato, perché ogni suo intorno contiene altri punti dell'intervallo, anche quando il punto considerato è $0$.
+\end{esempio}
+
+\begin{esempio}[I punti degli insiemi $X$ e $Y$]
+Riprendiamo $X=\{1/n:n\in\N^*\}$ e $Y=X\cup\{0\}$. Ogni punto $1/n$ è isolato in entrambi gli insiemi. Per verificarlo si può scegliere
+\[
+r_n=\frac{1}{2n(n+1)}.
+\]
+Infatti la distanza da $1/(n+1)$ è $1/[n(n+1)]=2r_n$; se $n>1$, la distanza da $1/(n-1)$ è ancora maggiore. Tutti gli altri punti di $X$ sono più lontani e anche $0$ resta fuori da $I_{r_n}(1/n)$.
+
+Il punto $0$ non è isolato in $Y$: per ogni $r>0$, la proprietà di Archimede dà un naturale $n>1/r$, per cui $0<1/n<r$. Gli insiemi dei punti isolati di $X$ e di $Y$ coincidono quindi entrambi con $X$.
+\end{esempio}
+
+\begin{definizione}[Punto aderente e chiusura]
+Siano $A\subseteq\R$ e $x\in\R$. Il punto $x$ si dice \emph{aderente} ad $A$ se ogni suo intorno incontra $A$:
+\[
+\forall U\in\mathcal I_x,\qquad U\cap A\ne\varnothing.
+\]
+L'insieme dei punti aderenti si chiama \emph{chiusura} di $A$ e si indica con $\overline A$.
+\end{definizione}
+
+Ogni punto di $A$ è aderente, perché appartiene a ogni proprio intorno; pertanto $A\subseteq\overline A$. Possono però essere aderenti anche punti che non appartengono all'insieme. La condizione equivale a richiedere $I_r(x)\cap A\ne\varnothing$ per ogni $r>0$. Un punto non è aderente esattamente quando è esterno ad $A$; di conseguenza
+\[
+\overline A=A\cup\partial A.
+\]
+Infatti un punto aderente che non appartiene ad $A$ non può essere interno e, non essendo esterno, è di frontiera; viceversa ogni punto di frontiera è aderente.
+
+\begin{esempio}[Chiusura di un intervallo con un punto isolato]
+Per $A=(0,1)\cup\{2\}$ si ha
+\[
+\overline A=[0,1]\cup\{2\}.
+\]
+I punti di $A$ sono aderenti. Lo sono anche $0$ e $1$, perché ogni loro intorno contiene punti di $(0,1)$. Ogni punto fuori da $[0,1]\cup\{2\}$ ha invece un intorno disgiunto da $A$.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=3cm,y=1cm]
+  \foreach \quota in {.65,-.65} {
+    \draw[asse] (-.3,\quota) -- (2.4,\quota);
+    \draw[intervallo] (0,\quota) -- (1,\quota);
+    \fill[coloreschema] (2,\quota) circle[radius=2.4pt];
+    \draw[estremo] (1,\quota) circle[radius=2.6pt];
+  }
+  \fill[coloreschema] (0,.65) circle[radius=2.4pt];
+  \draw[estremo] (0,-.65) circle[radius=2.6pt];
+  \node[anchor=east] at (-.35,.65) {$[0,1)\cup\{2\}$};
+  \node[anchor=east] at (-.35,-.65) {$(0,1)\cup\{2\}$};
+  \foreach \pos in {0,1,2} {
+    \node[above=6pt] at (\pos,.65) {$\pos$};
+    \node[below=6pt] at (\pos,-.65) {$\pos$};
+  }
+\end{tikzpicture}
+\par\smallskip In entrambi gli insiemi $2$ è isolato. La chiusura di entrambi è $[0,1]\cup\{2\}$: si aggiungono gli estremi mancanti dell'intervallo.
+\end{schema}
+
+\section{Punti di accumulazione}
+% Fonte: Lezione 9, pp. 7--8.
+
+\begin{definizione}[Punto di accumulazione]
+Siano $A\subseteq\R$ e $x\in\R$. Il punto $x$ si dice \emph{di accumulazione} per $A$ se ogni suo intorno contiene un punto di $A$ diverso da $x$, cioè
+\[
+\forall U\in\mathcal I_x,\qquad (U\setminus\{x\})\cap A\ne\varnothing.
+\]
+L'insieme dei punti di accumulazione si indica con $\operatorname{Acc}(A)$.
+\end{definizione}
+
+Si può equivalentemente richiedere che per ogni $r>0$ esista $a\in A$ tale che $0<|a-x|<r$. La differenza rispetto all'aderenza è l'esclusione del punto $x$: un punto isolato è aderente, ma non è di accumulazione. Un punto di accumulazione, invece, può appartenere ad $A$ oppure no.
+
+\begin{esempio}[Un intervallo e un punto separato]
+Per $A=[0,1)\cup\{2\}$ si ha $\operatorname{Acc}(A)=[0,1]$. Ogni intorno di un punto di $[0,1]$ contiene punti di $(0,1)$ diversi dal centro; $2$ è isolato e ogni altro punto ha un intorno disgiunto da $A$.
+
+In particolare $0$ è un punto di accumulazione appartenente ad $A$, mentre $1$ è un punto di accumulazione che non appartiene ad $A$; il punto $2$ appartiene ad $A$ ma non è di accumulazione.
+\end{esempio}
+
+\begin{esempio}[L'accumulazione dei punti $1/n$]
+Per $X=\{1/n:n\in\N^*\}$ e $Y=X\cup\{0\}$ si ha
+\[
+\operatorname{Acc}(X)=\operatorname{Acc}(Y)=\{0\}.
+\]
+Ogni intorno di $0$ contiene un punto $1/n\ne0$, come già verificato. Nessun punto di $X$ è di accumulazione, perché è isolato anche in $Y$. Infine $Y$ è chiuso, come dimostrato mediante il suo complemento: ogni punto fuori da $Y$ possiede un intorno disgiunto da $Y$, quindi anche da $X$. Non esistono altri punti di accumulazione e $\overline X=\overline Y=Y$.
+\end{esempio}
+
+\begin{proposizione}[Punti aderenti, isolati e di accumulazione]
+Ogni punto aderente a $A\subseteq\R$ è un punto isolato di $A$ oppure un punto di accumulazione per $A$; le due possibilità si escludono. In particolare,
+\[
+\overline A=A\cup\operatorname{Acc}(A).
+\]
+\end{proposizione}
+\begin{proof}
+Se $x$ è aderente ma non è di accumulazione, esiste un intorno $U$ di $x$ per cui $(U\setminus\{x\})\cap A=\varnothing$. D'altra parte $U\cap A\ne\varnothing$ per l'aderenza, quindi $U\cap A=\{x\}$: il punto è isolato. Viceversa un punto isolato è aderente, ma l'intorno che lo isola esclude l'accumulazione. Un punto di accumulazione è sempre aderente.
+
+L'identità segue perché i punti isolati appartengono ad $A$ e ogni punto di $A$ è aderente: aggiungendo ad $A$ i suoi punti di accumulazione si ottengono esattamente tutti i punti aderenti.
+\end{proof}
+
+\Needspace{24\baselineskip}
+\begin{esercizio}[Infiniti punti in ogni intorno]
+Siano $A\subseteq\R$ e $x\in\operatorname{Acc}(A)$. Dimostrare che ogni intorno di $x$ contiene infiniti elementi di $A$.
+\end{esercizio}
+\begin{svolgimento}
+Sia $U$ un intorno di $x$ e scegliamo $r>0$ con $I_r(x)\subseteq U$. Supponiamo per assurdo che $U\cap A$ sia finito. Anche $(U\setminus\{x\})\cap A$ è allora finito ed è non vuoto per l'accumulazione; scriviamolo come $\{a_1,\ldots,a_k\}$, con $a_j\ne x$. Il numero
+\[
+\delta=\frac12\min\{r,|a_1-x|,\ldots,|a_k-x|\}
+\]
+è positivo. L'intorno $I_\delta(x)$ è contenuto in $U$ e non contiene nessuno degli $a_j$, perciò $(I_\delta(x)\setminus\{x\})\cap A=\varnothing$. Ciò contraddice l'ipotesi che $x$ sia di accumulazione.
+\end{svolgimento}
+
+\begin{esempio}[Due intervalli e un punto isolato]
+% Fonte: Lezione 9, p. 9, primo esempio.
+Consideriamo
+\[
+A=(0,1)\cup(1,2)\cup\{3\}.
+\]
+Il punto $3$ è l'unico punto isolato. Ogni punto di $[0,2]$ è di accumulazione: ciò vale anche per $0$, $1$ e $2$, i cui intorni incontrano gli intervalli in punti diversi dal centro. Nessun punto fuori da $[0,2]\cup\{3\}$ è aderente, poiché ha un intorno disgiunto da $A$. Quindi
+\[
+\operatorname{Acc}(A)=[0,2],\qquad
+\overline A=[0,2]\cup\{3\}.
+\]
+Inoltre $\mathring A=(0,1)\cup(1,2)$ e $\partial A=\{0,1,2,3\}$: anche il punto isolato $3$ è di frontiera.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=2.7cm,y=1cm]
+  \foreach \quota in {.6,-.6} {
+    \draw[asse] (-.3,\quota) -- (3.35,\quota);
+    \fill[coloreschema] (3,\quota) circle[radius=2.4pt];
+  }
+  \draw[intervallo] (0,.6) -- (2,.6);
+  \foreach \pos in {0,1,2} {
+    \draw[estremo] (\pos,.6) circle[radius=2.6pt];
+  }
+  \draw[intervallo] (0,-.6) -- (2,-.6);
+  \foreach \pos in {0,2} {
+    \fill[coloreschema] (\pos,-.6) circle[radius=2.4pt];
+  }
+  \foreach \pos in {0,1,2,3} {
+    \node[above=6pt] at (\pos,.6) {$\pos$};
+  }
+  \node[anchor=east] at (-.35,.6) {$A$};
+  \node[anchor=east] at (-.35,-.6) {$\overline A$};
+\end{tikzpicture}
+\par\smallskip La chiusura aggiunge $0$, $1$ e $2$; il punto $3$ era già presente e resta isolato.
+\end{schema}
+
+\Needspace{40\baselineskip}
+\section{Accumulazione nella retta estesa}
+% Fonte: Lezione 9, pp. 6--9: aderenza e accumulazione anche per x in R estesa.
+% Esplicitata la distinzione fra ambiente reale ed esteso, necessaria per Acc(N).
+
+Le definizioni di aderenza e accumulazione si estendono ai punti di $\overline\R=\R\cup\{-\infty,+\infty\}$ usando gli intorni della retta estesa già descritti. Per i punti finiti le nozioni coincidono con quelle in $\R$. Per evitare ambiguità indichiamo con $\operatorname{Acc}_{\overline\R}(A)$ l'insieme dei punti di accumulazione nell'ambiente esteso e con $\overline A^{\,\overline\R}$ la chiusura in tale ambiente. Senza questa indicazione, $\operatorname{Acc}(A)$ e $\overline A$ si riferiscono a $\R$.
+
+Anche la proprietà di separazione vale nella retta estesa. Per $x<y$ in $\overline\R$ scegliamo un reale $m$ con $x<m<y$: se gli estremi sono finiti basta il punto medio, mentre se uno o entrambi sono infiniti un tale reale esiste comunque. Gli aperti $[-\infty,m)$ e $(m,+\infty]$ sono allora intorni disgiunti rispettivamente di $x$ e di $y$.
+
+Per $A\subseteq\R$, ogni suo elemento è diverso da $+\infty$ e da $-\infty$. Pertanto, in questi due punti, aderenza e accumulazione coincidono. In particolare,
+\[
+\begin{aligned}
++\infty\in\operatorname{Acc}_{\overline\R}(A)
+&\Longleftrightarrow \forall M\in\R\ \exists a\in A:\ a>M,\\
+-\infty\in\operatorname{Acc}_{\overline\R}(A)
+&\Longleftrightarrow \forall M\in\R\ \exists a\in A:\ a<M.
+\end{aligned}
+\]
+Sono precisamente le condizioni che $A$ sia illimitato superiormente o inferiormente. Anche a infinito ogni intorno di un punto di accumulazione contiene infiniti elementi di $A$: se una coda ne contenesse soltanto un numero finito, una coda più corta, oltre il loro massimo o sotto il loro minimo, non ne conterrebbe nessuno.
+
+\begin{esempio}[I naturali nei due ambienti]
+Ogni naturale è isolato e ogni reale non naturale ha un intorno disgiunto da $\N$, perché $\N$ è chiuso in $\R$. Non ci sono quindi punti di accumulazione finiti. D'altra parte ogni coda $(M,+\infty]$ contiene naturali, per la proprietà di Archimede, mentre $[-\infty,-1)$ non ne contiene. Si ottiene
+\[
+\operatorname{Acc}(\N)=\varnothing,\qquad
+\operatorname{Acc}_{\overline\R}(\N)=\{+\infty\}.
+\]
+Coerentemente, $\overline\N=\N$ in $\R$, mentre $\overline\N^{\,\overline\R}=\N\cup\{+\infty\}$ nella retta estesa. La chiusura dipende dunque dall'insieme ambiente.
+\end{esempio}
+
+\begin{esempio}[Reali e razionali]
+Ogni intorno di un reale contiene altri reali, quindi $\operatorname{Acc}(\R)=\R$. Ogni intorno sferico contiene inoltre infiniti razionali, per la densità già dimostrata: anche escludendo il centro restano razionali. Pertanto $\operatorname{Acc}(\Q)=\R$.
+
+Entrambi gli insiemi sono illimitati superiormente e inferiormente; passando alla retta estesa si aggiungono entrambi i punti all'infinito:
+\[
+\operatorname{Acc}_{\overline\R}(\R)=\overline\R,
+\qquad
+\operatorname{Acc}_{\overline\R}(\Q)=\overline\R.
+\]
+In particolare un irrazionale, come $\sqrt2$, è un punto di accumulazione di $\Q$ senza appartenere a $\Q$.
+\end{esempio}

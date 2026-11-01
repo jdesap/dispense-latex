@@ -1,0 +1,151 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 10, pp. 7--17. Prove implicite completate redazionalmente.
+\section{Proprietà definitive e frequenti}
+
+Nello studio di una successione interessa ciò che accade per indici arbitrariamente grandi. Una proprietà può valere da un certo indice in poi, oppure continuare a ripresentarsi senza diventare stabile: le due situazioni hanno quantificatori diversi.
+
+\begin{definizione}[Definitivamente e frequentemente]
+Sia $P(n)$ un predicato definito per i naturali di una semiretta $\{n\in\N:n\ge n_0\}$. Si dice che $P(n)$ è:
+\begin{itemize}
+  \item \emph{definitivamente vero} se esiste $N\ge n_0$ tale che $P(n)$ è vero per ogni $n\ge N$;
+  \item \emph{frequentemente vero} se per ogni $N\ge n_0$ esiste $n\ge N$ tale che $P(n)$ è vero.
+\end{itemize}
+\end{definizione}
+
+Definitivamente significa che ci sono al più un numero finito di eccezioni; frequentemente significa che gli indici per cui la proprietà vale formano un insieme infinito, quindi illimitato in $\N$. Ogni proprietà definitiva è frequente, ma non vale il contrario. Inoltre, negando i quantificatori,
+\[
+\neg(P\text{ definitivamente vero})
+\ \Longleftrightarrow\ (\neg P)\text{ frequentemente vero}.
+\]
+
+\begin{esempio}
+Per $n\ge1$, la proprietà $1/n\le1/10$ è definitivamente vera: vale per tutti gli indici $n\ge10$. La proprietà $(-1)^n>0$ è invece vera per tutti gli indici pari, perciò è frequente ma non definitiva, perché è falsa per tutti gli indici dispari.
+\end{esempio}
+
+\begin{proposizione}[Congiunzione di proprietà definitive]
+\label{prop:congiunzione-definitiva}
+Se $P_1(n),\ldots,P_k(n)$, con $k\ge1$, sono definitivamente vere, anche la loro congiunzione è definitivamente vera.
+\end{proposizione}
+\begin{proof}
+Per ogni $j$ esiste una soglia $N_j$ oltre la quale $P_j(n)$ è sempre vera. Ponendo $N=\max\{N_1,\ldots,N_k\}$, per $n\ge N$ risultano contemporaneamente vere tutte le proprietà.
+\end{proof}
+
+\begin{esempio}[Una soglia comune]
+Le proprietà $n^2\ge25$ e $1/n\le1/10$, per $n\ge1$, valgono rispettivamente da $N_1=5$ e $N_2=10$. La loro congiunzione vale da $N=10$. Per proprietà soltanto frequenti il ragionamento non funziona: «$n$ è pari» e «$n$ è dispari» sono entrambe frequenti, ma non sono mai vere insieme.
+\end{esempio}
+
+\section{Successioni e insieme dei valori}
+% Fonte: Lezione 10, pp. 10--11 e 16--17.
+
+\begin{definizione}[Successione]
+Una \emph{successione a valori in $A$} è una funzione
+\[
+a\colon S\longrightarrow A,\qquad n\longmapsto a_n,
+\quad S=\{n\in\N:n\ge n_0\}.
+\]
+Il numero $n$ è l'\emph{indice}, $a_n$ il termine di indice $n$. Si usano le notazioni $(a_n)_{n\ge n_0}$, $(a_n)$ e, quando non crea ambiguità, $\{a_n\}$. Per $A=\R$ si parla di \emph{successione reale}.
+\end{definizione}
+
+Una successione conserva l'ordine dei termini e le loro ripetizioni; l'insieme dei suoi valori $\{a_n:n\in S\}$ dimentica entrambe le informazioni. Per esempio la successione costante $a_n=1$ ha infiniti termini, ma il suo insieme immagine è il singoletto $\{1\}$.
+
+\begin{esempio}[Formule e dominio degli indici]
+Le formule $a_n=1$ e $b_n=2n^2$ definiscono successioni su tutta $\N$. La formula $c_n=1/(n-4)$ può definire una successione sulla semiretta $n\ge5$, sulla quale il denominatore è sempre diverso da zero. Specificare il dominio evita di considerare un termine non definito.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=.72cm,y=.9cm]
+  \draw[asse] (-.4,0) -- (10.7,0) node[right] {$n$};
+  \draw[asse] (0,-.2) -- (0,1.8) node[above] {$a_n$};
+  \foreach \n in {0,...,10} {
+    \fill[coloreschema] (\n,1) circle[radius=1.8pt];
+  }
+  \foreach \n in {0,2,4,6,8,10} {\node[below=4pt] at (\n,0) {$\n$};}
+  \node[left] at (0,1) {$1$};
+\end{tikzpicture}
+\par\smallskip Il grafico di una successione è formato da punti con ascissa intera; qui ogni indice ha valore $1$.
+\end{schema}
+
+Per una successione reale si riprendono le nozioni già date per le funzioni: è \emph{superiormente limitata} se $a_n\le M$ per ogni indice e per uno stesso $M\in\R$; è \emph{inferiormente limitata} se $a_n\ge m$ per ogni indice. È \emph{limitata} se esiste $K>0$ con $|a_n|\le K$ per ogni indice.
+
+\begin{proposizione}[Da una coda limitata all'intera successione]
+\label{prop:coda-limitata}
+Una successione reale definitivamente superiormente limitata è superiormente limitata su tutto il dominio. Valgono anche le versioni con limitatezza inferiore e con limitatezza in valore assoluto.
+\end{proposizione}
+\begin{proof}
+Supponiamo $a_n\le M$ per $n\ge N$. Il numero
+\[
+M'=\max\bigl(\{M\}\cup\{a_n:n_0\le n<N\}\bigr)
+\]
+esiste perché l'insieme è finito e non vuoto. Esso maggiora i termini iniziali e anche tutti quelli della coda, quindi maggiora l'intera successione. Per la limitatezza inferiore si usa il minimo insieme a un minorante della coda. Per quella in valore assoluto si applica lo stesso ragionamento alla successione $|a_n|$.
+\end{proof}
+
+La proposizione usa il fatto che prima di una soglia naturale ci sono solo finiti termini. Un vincolo su un solo lato non dà invece limitatezza in valore assoluto: per esempio $a_n=-n$ è superiormente limitata, ma non inferiormente limitata.
+
+\begin{schema}
+\begin{tikzpicture}[x=.72cm,y=.65cm]
+  \draw[asse] (-.4,0) -- (10.7,0) node[right] {$n$};
+  \draw[asse] (0,-2.5) -- (0,3.3);
+  \draw[dashed,black!50] (0,1.2) -- (10.3,1.2) node[right] {$K$};
+  \draw[dashed,black!50] (0,-1.2) -- (10.3,-1.2) node[right] {$-K$};
+  \draw[dotted] (4,-2.2) -- (4,3);
+  \node[above] at (4,3) {$N$};
+  \foreach \n/\v in {0/2.6,1/-2,2/1.9,3/2.3,4/.8,5/-.7,6/.5,7/-.6,8/.4,9/-.3,10/.2} {
+    \fill[coloreschema] (\n,\v) circle[radius=1.8pt];
+  }
+\end{tikzpicture}
+\par\smallskip Dopo $N$ i valori restano fra $-K$ e $K$. I finiti termini precedenti si includono ampliando il vincolo.
+\end{schema}
+
+\section{Sottosuccessioni}
+% Fonte: Lezione 10, pp. 12--15.
+
+\begin{definizione}[Sottosuccessione o successione estratta]
+Data $a\colon S\to A$, una \emph{sottosuccessione} è la composta $a\circ k$, dove $k\colon T\to S$ è strettamente crescente e $T$ è una semiretta di $\N$. Scrivendo $k_j=k(j)$, i termini estratti sono $a_{k_j}$, con
+\[
+k_{j+1}>k_j.
+\]
+Si scelgono quindi infiniti indici preservando il loro ordine.
+\end{definizione}
+
+\begin{esempio}[Scelte di indici]
+Se $(a_n)$ è definita su tutta $\N$, sono sottosuccessioni
+\[
+(a_j),\qquad (a_{2j}),\qquad (a_{13j+4}),\qquad (a_{j+1}),
+\qquad j\in\N.
+\]
+Per esempio $(a_{13j+4})=(a_4,a_{17},a_{30},\ldots)$. Non sono scelte ammesse la lista $a_2,a_6,a_{11},a_3,\ldots$, che torna a un indice precedente, né la lista $a_0,a_5,a_{11},a_6,a_{21},a_{19},\ldots$, che non conserva l'ordine. La condizione riguarda gli indici: due termini estratti possono avere lo stesso valore.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=.8cm,y=.65cm]
+  \draw[asse] (-.4,0) -- (9.7,0) node[right] {$n$};
+  \draw[asse] (0,-1.8) -- (0,2.8);
+  \foreach \n/\v in {0/.6,1/1.1,2/1.8,3/.5,4/-1.2,5/-1,6/-.5,7/.8,8/1.2,9/2.4} {
+    \pgfmathtruncatemacro{\pari}{mod(\n,2)}
+    \ifnum\pari=0
+      \fill[coloreschema] (\n,\v) circle[radius=2.4pt];
+    \else
+      \draw[draw=black!60,fill=white] (\n,\v) circle[radius=2.4pt];
+    \fi
+    \node[below=4pt] at (\n,-1.7) {$\n$};
+  }
+\end{tikzpicture}
+\par\smallskip I punti pieni selezionano $(a_{2j})$, i punti vuoti $(a_{2j+1})$; ciascuna estrazione mantiene l'ordine degli indici.
+\end{schema}
+
+Gli indici estratti diventano arbitrariamente grandi. Infatti, se $T=\{j\ge j_0\}$, la stretta crescita fra interi implica per induzione
+\[
+k_j\ge k_{j_0}+j-j_0.
+\]
+In particolare, indicizzando da $0$, si ha $k_j\ge j$. La crescita richiesta è quella di $k_j$, non quella dei valori $a_{k_j}$.
+
+\begin{proposizione}[Estrazione da una proprietà frequente]
+Se $P(a_n)$ è frequentemente vera, esiste una sottosuccessione $(a_{k_j})$ per la quale $P(a_{k_j})$ è vera a ogni indice.
+\end{proposizione}
+\begin{proof}
+Scegliamo un indice $k_0$ per cui $P(a_{k_0})$ è vera. Dopo aver scelto $k_j$, la frequenza applicata alla soglia $k_j+1$ fornisce un indice $k_{j+1}\ge k_j+1$ per il quale la proprietà è ancora vera. Si costruisce così una funzione di estrazione strettamente crescente.
+\end{proof}
+
+\begin{esempio}
+Per $a_n=(-1)^n$ la proprietà $a_n>0$ è frequentemente vera. L'estrazione $k_j=2j$ dà $a_{k_j}=1>0$ per ogni $j$.
+\end{esempio}

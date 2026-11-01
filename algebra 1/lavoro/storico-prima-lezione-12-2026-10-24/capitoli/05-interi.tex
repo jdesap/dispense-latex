@@ -1,0 +1,423 @@
+% !TeX root = ../main.tex
+\chapter{Aritmetica degli interi}\label{cap:interi}
+\fonti{Lezioni 9, 10 e 11}
+
+\section{Interi e unità}
+% A–L L9 pp. 2–3; M–Z L9 pp. 5–6.
+Assumiamo le proprietà usuali delle operazioni interne $+,\cdot:\Z^2\to\Z$. L'addizione è associativa e commutativa, ha neutro $0$ e ogni $z$ ha opposto $-z$; la moltiplicazione è associativa e commutativa, ha neutro $1$ ed è distributiva rispetto all'addizione: $(a+b)c=ac+bc$. Queste proprietà fanno di $\Z$ un \textbf{anello commutativo con unità}.
+
+Inoltre non vi sono divisori dello zero: $ab=0$ implica $a=0$ oppure $b=0$. Ne segue la cancellazione: se $a\ne0$ e $ab=ac$, allora $a(b-c)=0$ e perciò $b=c$.
+
+\begin{definizione}
+Un intero $a$ è un'\textbf{unità}, o è \textbf{invertibile}, se esiste $b\in\Z$ con $ab=1$.
+\end{definizione}
+
+Si ha $U(\Z)=\{1,-1\}$.: entrambi sono inversi di se stessi; viceversa $ab=1$ implica $|a||b|=1$, quindi i due valori assoluti interi positivi sono entrambi $1$ \footnote{La dimostrazione non é del tutto triviale: posso ragionare sui moduli ma prima devo capire come si comporta la moltiplicazione rispetto al $\leq$.}
+
+\section{Divisibilità}
+\begin{definizione}
+Per $a,b\in\Z$ si dice che $a$ \textbf{divide} $b$, e si scrive $a\mid b$, se $b=am$ per qualche $m\in\Z$. Inoltre, se $a\mid b$ e $b\mid a$, si dice che $a$ e $b$ sono \textbf{associati} e si scrive $a\sim b$.
+\end{definizione}
+
+\begin{proposizione}
+La divisibilità è riflessiva e transitiva, ma non è né simmetrica né antisimmetrica (quindi in $\Z$ non è una relazione di ordine o di equivalenza\footnote{E in $\N$? Beh è riflessiva, antisym. e transitiva (ma non totale) quindi è un ordine parziale.}). Due interi sono associati se e solo se $a=\pm b$; $\sim$ è un'equivalenza.
+\end{proposizione}
+\begin{proof}
+Si ha $a=a\cdot1$; se $b=am$ e $c=bn$, allora $c=a(mn)$. La simmetria fallisce perché $2\mid4$ e $4\nmid2$; l'antisimmetria fallisce perché $1\mid-1$ e $-1\mid1$.
+
+Se $b=am$ e $a=bn$, per $a=0$ segue $b=0$. Se $a\ne0$, sostituendo si ha $a=amn$; cancellando $a$ si ricava $mn=1$, quindi $m=n=1$ oppure $m=n=-1$. Dunque $b=\pm a$. Il viceversa segue moltiplicando per $1$ o $-1$. Infine l'uguaglianza a meno del segno è riflessiva, simmetrica e transitiva: se $a=\varepsilon b$ e $b=\eta c$, con $\varepsilon,\eta\in\{1,-1\}$, allora $a=(\varepsilon\eta)c$.
+\end{proof}
+
+\begin{osservazione}
+Per ogni $z\in\Z$, $1,-1,z,-z$ dividono $z$. Ogni intero divide $0$, perché $0=z\cdot0$; invece $0$ divide soltanto $0$. La divisibilità non è totale: $2\nmid3$ e $3\nmid2$.
+\end{osservazione}
+
+\section{Primi e crivello di Eratostene}
+% A–L L9 pp. 3–4. L'infinità precede MCD e divisione, senza usare fattorizzazione unica.
+\begin{definizione}
+Un intero $p$ è \textbf{primo} se $p\ne0,\pm1$ e da $p=ab$ segue $a=\pm1$ oppure $b=\pm1$. Equivalentemente, i divisori di $p$ sono soltanto $\pm1,\pm p$. Indichiamo con $P$ l'insieme dei primi positivi; $p$ è primo se e solo se lo è $-p$.\footnote{La "vera" definizione di primo è "$p$ è primo $\iff p\ne0,\pm1$ e $p\mid ab\Rightarrow p\mid a$ oppure $p\mid b$" (questa infatti si generalizza). Dopo si dimostra che sono equivalenti.}
+\end{definizione}
+
+\begin{teorema}
+Valgono le seguenti:
+\begin{enumerate}
+    \item Ogni intero $N>1$ ha un divisore primo;
+    \item I primi positivi sono infiniti e, in particolare, $|P|=\aleph_0$.
+\end{enumerate}
+\end{teorema}
+\begin{proof}
+\textbf{1.} Ogni intero $N>1$ ha un divisore primo: l'insieme dei suoi divisori positivi maggiori di $1$ è non vuoto, perché contiene $N$. Sia $q$ il minimo. Se $q$ non fosse primo, avrebbe un divisore positivo $u$ con $1<u<q$. Per transitività $u\mid N$, contro la minimalità di $q$.
+
+\textbf{2.} I primi positivi sono infiniti: supponiamo per assurdo che siano finiti, e li ordiniamo in una lista $P=\{p_1,\ldots,p_r\}$. Consideriamo $N=p_1\cdots p_r+1>1$ e scegliamo un suo divisore primo $q$. Per ipotesi $q=p_i$ per qualche $i$, quindi divide anche il prodotto. Scrivendo $N=qu$ e $p_1\cdots p_r=qv$, si ha $1=q(u-v)$: un primo dividerebbe $1$, impossibile. Perciò non esiste una lista finita di tutti i primi.
+
+Essendo un sottoinsieme infinito di $\N$, $P$ è numerabile infinito.
+\end{proof}
+
+\begin{osservazione}
+Il numero $p_1\cdots p_r+1$ non deve essere primo: deve soltanto avere un divisore primo, che non può stare nella lista. La prova non richiede il teorema di fattorizzazione unica.
+\end{osservazione}
+
+\begin{esempio}[Crivello do Eratostene]
+Per trovare i primi fino a un intero $N\ge2$, si elencano i numeri da $2$ a $N$, si conserva il più piccolo non cancellato e si cancellano i suoi multipli maggiori di esso, ripetendo il procedimento. Un primo non viene cancellato; un composto viene cancellato quando si esamina un suo divisore primo. Per $N=20$ rimangono $2,3,5,7,11,13,17,19$.
+
+Si può interrompere la cancellazione dopo i primi non maggiori di $\sqrt N$: se $n\le N$ è composto, $n=uv$ con $u,v>1$ e almeno uno dei due fattori non supera $\sqrt n\le\sqrt N$. Quel fattore ha a sua volta un divisore primo non maggiore di $\sqrt N$, che fa cancellare $n$.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=.76cm,y=.68cm]
+\foreach \n in {1,...,20}{\pgfmathtruncatemacro{\xx}{mod(\n-1,10)}\pgfmathtruncatemacro{\yy}{-floor((\n-1)/10)}\node at (\xx,\yy) {$\n$};}
+\foreach \n in {2,3,5,7,11,13,17,19}{\pgfmathtruncatemacro{\xx}{mod(\n-1,10)}\pgfmathtruncatemacro{\yy}{-floor((\n-1)/10)}\draw[coloreschema] (\xx,\yy) circle (.28);}
+\foreach \n in {1,4,6,8,9,10,12,14,15,16,18,20}{\pgfmathtruncatemacro{\xx}{mod(\n-1,10)}\pgfmathtruncatemacro{\yy}{-floor((\n-1)/10)}\draw[black!50] (\xx-.19,\yy-.20)--(\xx+.19,\yy+.20);}
+\end{tikzpicture}
+\end{schema}
+
+\section{Massimo comune divisore e minimo comune multiplo}
+% A–L L9 pp. 4–6 e L10 p. 1; M–Z L9 p. 7. Prima definizioni, poi esistenza.
+\begin{definizione}
+Per $(a,b)\ne(0,0)$, un intero $d$ è un \textbf{massimo comune divisore} nel senso della divisibilità se $d\mid a$, $d\mid b$ e ogni divisore comune $c$ di $a,b$ divide $d$. Quando esiste, quello positivo si indica con $\operatorname{MCD}(a,b)$.
+\end{definizione}
+
+\begin{esempio}
+Gli elenchi dei divisori sono
+\[
+\begin{aligned}
+-12&:\quad \pm1,\pm2,\pm3,\pm4,\pm6,\pm12,\\
+16&:\quad \pm1,\pm2,\pm4,\pm8,\pm16.
+\end{aligned}
+\]
+I divisori comuni sono $\pm1,\pm2,\pm4$. Il numero $4$ divide entrambi e viene diviso da tutti i divisori comuni, quindi $\operatorname{MCD}(-12,16)=4$.
+\end{esempio}
+
+\begin{proposizione}
+Se $d$ è un massimo comune divisore, anche $-d$ lo è. Due massimi comuni divisori sono associati: ne esiste al più uno positivo. Per $a\ne0$, $\operatorname{MCD}(a,0)=\operatorname{MCD}(0,a)=|a|$.
+\end{proposizione}
+
+\begin{proof}
+Il segno non modifica i divisori né i multipli di un numero, quindi le due condizioni della definizione valgono per $d$ se e solo se valgono per $-d$. Se $d,d'$ soddisfano entrambe la definizione, ciascuno divide l'altro per la condizione universale: sono associati, dunque uguali a meno del segno. Non sono nulli, perché almeno uno tra $a,b$ è non nullo e $0$ non lo divide. Pertanto i rappresentanti positivi coincidono.
+
+Il numero $|a|$ divide $a$ e $0$; ogni divisore comune divide $a$ e quindi $|a|$. Soddisfa così la definizione per $(a,0)$; lo scambio degli argomenti non cambia le condizioni.
+\end{proof}
+
+L'esistenza del massimo comune divisore per ogni coppia non nulla sarà ottenuta dall'algoritmo di Euclide. Fino a quel punto i risultati che lo menzionano si intendono per un massimo comune divisore esistente.
+
+\begin{definizione}
+Un intero $m$ è un \textbf{minimo comune multiplo} di $a,b$ nel senso della divisibilità se $a\mid m$, $b\mid m$ e $m$ divide ogni multiplo comune di $a,b$. Per $ab\ne0$, quello positivo, quando esiste, si indica con $\operatorname{mcm}(a,b)$. Se un argomento è zero, si pone $\operatorname{mcm}(a,b)=0$.
+\end{definizione}
+
+\begin{proposizione}
+Cambiare il segno di un minimo comune multiplo dà ancora un minimo comune multiplo; due di essi sono associati. Se $ab\ne0$, ne esiste al più uno positivo. Se un argomento è zero, l'unico multiplo comune è $0$, che soddisfa la definizione.
+\end{proposizione}
+\begin{proof}
+Il cambio di segno conserva le condizioni di divisibilità. Se $m,m'$ soddisfano la definizione, la condizione universale dà sia $m\mid m'$ sia $m'\mid m$. Quando $ab\ne0$, un minimo comune multiplo non può essere zero: il multiplo comune $ab\ne0$ dovrebbe essere divisibile per $0$. Quindi due rappresentanti positivi coincidono.
+
+Se $a=0$, la condizione $0\mid m$ forza $m=0$; il numero $0$ è multiplo di $b$ e divide l'unico multiplo comune, che è ancora $0$. Lo stesso vale se $b=0$.
+\end{proof}
+
+\begin{osservazione}
+«Massimo» e «minimo» si riferiscono alla divisibilità, non inizialmente all'ordine usuale. Per il minimo comune multiplo positivo è necessario $ab\ne0$: la sola esclusione $(a,b)=(0,0)$ non basta, come mostra la coppia $(0,2)$.
+\end{osservazione}
+
+\section{Combinazioni intere e coprimalità}
+% A–L L10 p. 1; M–Z L9 pp. 8–9.
+\begin{proposizione}\label{prop:combinazioni}
+Se $d\mid a$ e $d\mid b$, allora $d\mid\alpha a+\beta b$ per ogni $\alpha,\beta\in\Z$. Se invece $d\mid a$ e $d'\mid b$, allora $dd'\mid ab$.
+\end{proposizione}
+\begin{proof}
+Nella prima affermazione, $a=du$ e $b=dv$ danno $\alpha a+\beta b=d(\alpha u+\beta v)$. Nella seconda, $a=du$ e $b=d'v$ danno $ab=dd'(uv)$. I quozienti esibiti sono interi.
+\end{proof}
+
+\begin{proposizione}[Criterio tramite una combinazione]\label{prop:criterio-mcd}
+Siano $(a,b)\ne(0,0)$ e $d\mid a,b$. Se $d=\alpha a+\beta b$ per certi interi $\alpha,\beta$, allora $d$ è un massimo comune divisore. Se $d>0$, è $\operatorname{MCD}(a,b)$.
+\end{proposizione}
+\begin{proof}
+La condizione di divisore comune è già un'ipotesi. Se $c\mid a,b$, la proposizione~\ref{prop:combinazioni} dà $c\mid\alpha a+\beta b=d$. Vale quindi anche la condizione universale della definizione.
+\end{proof}
+
+\begin{definizione}
+Gli interi $a,b$, non entrambi nulli, sono \textbf{coprimi} se $\operatorname{MCD}(a,b)=1$.
+\end{definizione}
+
+\begin{proposizione}
+Se $d=\operatorname{MCD}(a,b)$, $a=da'$ e $b=db'$, allora $\operatorname{MCD}(a',b')=1$.
+\end{proposizione}
+\begin{proof}
+Il numero $1$ divide $a',b'$. Per verificare che è un massimo comune divisore, sia $c$ un loro divisore comune. Poiché $a',b'$ non sono entrambi nulli, $c\ne0$. Il numero $dc$ divide $da'=a$ e $db'=b$, quindi $dc\mid d$. Esiste perciò $q\in\Z$ con $d=dcq$. Essendo $d>0$, si cancella e si ottiene $1=cq$, cioè $c=\pm1$. Ogni divisore comune divide dunque $1$, come richiesto.
+\end{proof}
+
+\section{Divisione euclidea}
+% A–L L10 pp. 2–3; M–Z L10 pp. 1–3. Induzione comune resa esplicita in tutte le sue parti.
+\begin{teorema}[Divisione euclidea]\label{teo:divisione}
+Per $a,b\in\Z$, $b\ne0$, esistono unici $q,r\in\Z$ tali che
+\[
+a=bq+r,\qquad 0\le r<|b|.
+\]
+Si chiamano \textbf{quoziente} e \textbf{resto} della divisione di $a$ per $b$.
+\end{teorema}
+\begin{proof}
+\textbf{Esistenza per $b>0$, $a\ge0$: base.} Fissiamo $b>0$ e procediamo per induzione su $a\in\N$. Per $a=0$ si scelgono $q=0$, $r=0$; il vincolo $0\le0<b$ vale.
+
+\textbf{Ipotesi e passo induttivo.} Supponiamo che per un certo $a\ge0$ esistano $q,r$ con $a=bq+r$ e $0\le r<b$. Allora $a+1=bq+(r+1)$. Poiché $r$ è intero, $1\le r+1\le b$. Se $r+1<b$, la nuova coppia è $(q,r+1)$; se $r+1=b$, si riscrive $a+1=b(q+1)+0$, e la coppia è $(q+1,0)$. In entrambi i casi il resto è nell'intervallo richiesto. Il principio d'induzione dà l'esistenza per ogni $a\ge0$.
+
+\textbf{Esistenza per $b>0$, $a<0$.} Si applica quanto provato a $-a=bq_1+r_1$, $0\le r_1<b$. Se $r_1=0$, $a=b(-q_1)+0$. Se $r_1>0$,
+\[
+a=-bq_1-r_1=b(-q_1-1)+(b-r_1),\qquad 0<b-r_1<b.
+\]
+Il quoziente va quindi diminuito di un'unità per mantenere il resto non negativo.
+
+\textbf{Esistenza per $b<0$.} Dividiamo $a$ per $-b>0$: dalla scrittura $a=(-b)q_1+r$ si ottiene $a=b(-q_1)+r$, con $0\le r<|-b|=|b|$.
+
+\textbf{Unicità.} Se $a=bq+r=bq'+r'$, allora $b(q-q')=r'-r$. I vincoli sui resti danno $|r'-r|<|b|$. Se $q\ne q'$, essendo interi si avrebbe $|q-q'|\ge1$, quindi $|b(q-q')|\ge|b|$, contraddizione. Dunque $q=q'$ e poi $r=r'$.
+\end{proof}
+
+\begin{esempio}[Segni del quoziente e resto]
+Le divisioni
+\[
+\begin{aligned}
+27&=12\cdot2+3,&-5&=12\cdot(-1)+7,\\
+8&=(-3)\cdot(-2)+2,&-10&=(-3)\cdot4+2
+\end{aligned}
+\]
+hanno tutte resto non negativo e minore del valore assoluto del divisore. Per $0\le a<b$ si ha direttamente $q=0$, $r=a$.
+\end{esempio}
+
+\begin{corollario}
+Per $b\ne0$, $b\mid a$ se e solo se il resto è zero.
+\end{corollario}
+\begin{proof}
+Un resto zero dà $a=bq$. Viceversa, se $a=bk$, la coppia $(k,0)$ soddisfa tutti i vincoli, quindi per unicità è la coppia della divisione euclidea.
+\end{proof}
+
+\begin{lemma}[Passo euclideo]\label{lem:passo-euclideo}
+Se $a=bq+r$, i divisori comuni di $a,b$ sono esattamente quelli di $b,r$. Di conseguenza le due coppie hanno gli stessi massimi comuni divisori, quando definiti.
+\end{lemma}
+\begin{proof}
+\passomath{c\mid a,b\Rightarrow c\mid b,r} Dall'identità $r=a-qb$ e dalla proprietà delle combinazioni segue $c\mid r$; $c\mid b$ è già noto.
+
+\passomath{c\mid b,r\Rightarrow c\mid a,b} Da $a=bq+r$ segue $c\mid a$; $c\mid b$ è già noto. Coincidendo tutti i divisori comuni, coincidono anche le due condizioni che definiscono un massimo comune divisore.
+\end{proof}
+
+\section{Algoritmo di Euclide e Bézout}
+% A–L L11 pp. 1–2; M–Z L11 pp. 2–4. Separati terminazione, invariante e ricorrenza dei coefficienti.
+\begin{teorema}[Algoritmo di Euclide]\label{teo:euclide}
+Per $(a,b)\ne(0,0)$ esiste il massimo comune divisore positivo. Sostituiti gli argomenti con $A=|a|$, $B=|b|$, se $B=0$ il risultato è $A$; altrimenti è l'ultimo termine non nullo nelle divisioni successive
+\[
+r_0=A,\quad r_1=B,\quad
+r_{i-1}=q_i r_i+r_{i+1},\qquad 0\le r_{i+1}<r_i.
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Terminazione.} Se $B=0$, il risultato è già noto. Sia $B>0$. A ogni passo con $r_i>0$ la divisione euclidea esiste e determina il resto. I termini $r_1,r_2,\ldots$, finché positivi, sono strettamente decrescenti. Se fossero tutti positivi, il loro insieme avrebbe per buon ordinamento un minimo, seguito da un termine ancora minore: impossibile. Esiste quindi $k\ge1$ con $r_k>0$ e $r_{k+1}=0$.
+
+\textbf{Invariante, base.} Indichiamo con $\mathcal D_i$ l'insieme dei divisori comuni di $r_{i-1},r_i$, per $1\le i\le k+1$. Per $i=1$ sono esattamente i divisori comuni di $A,B$, quindi di $a,b$, perché il segno non modifica la divisibilità.
+
+\textbf{Invariante, passo induttivo.} Supponiamo che $\mathcal D_i$ coincida con l'insieme dei divisori comuni di $a,b$, per un $i\le k$. Dalla divisione $r_{i-1}=q_i r_i+r_{i+1}$, il lemma~\ref{lem:passo-euclideo} dà $\mathcal D_{i+1}=\mathcal D_i$. La stessa proprietà vale dunque per la coppia successiva. Per induzione vale fino a $\mathcal D_{k+1}$.
+
+\textbf{Identificazione finale.} La coppia finale è $(r_k,0)$, il cui massimo comune divisore positivo è $r_k$. Poiché ha esattamente gli stessi divisori comuni della coppia iniziale, $r_k$ soddisfa le due condizioni di massimo comune divisore anche per $a,b$. Questo dimostra insieme esistenza e correttezza dell'algoritmo. Se il primo resto è già zero, $k=1$ e il risultato è $r_1=B$.
+\end{proof}
+
+\subsection{Algoritmo esteso e identità di Bézout}
+\begin{teorema}[Identità di Bézout]\label{teo:bezout}
+Per $(a,b)\ne(0,0)$ esistono interi $\alpha,\beta$ tali che
+\[
+\operatorname{MCD}(a,b)=\alpha a+\beta b.
+\]
+I coefficienti si possono calcolare insieme alle divisioni euclidee.
+\end{teorema}
+\begin{proof}
+\textbf{Inizializzazione.} Siano $A=|a|$, $B=|b|$. Se $B=0$, $A=\pm a$ dà subito la tesi. Per $B>0$, usiamo i resti dell'algoritmo precedente e definiamo
+\[
+s_0=1,\quad t_0=0,\qquad s_1=0,\quad t_1=1.
+\]
+Si hanno $r_0=s_0A+t_0B=A$ e $r_1=s_1A+t_1B=B$: sono le due righe iniziali della costruzione.
+
+\textbf{Ricorrenza e passo induttivo.} Per ogni divisione $r_{i-1}=q_i r_i+r_{i+1}$ poniamo
+\[
+s_{i+1}=s_{i-1}-q_i s_i,\qquad t_{i+1}=t_{i-1}-q_i t_i.
+\]
+Supponiamo che $r_{i-1}=s_{i-1}A+t_{i-1}B$ e $r_i=s_iA+t_iB$. Sostituendo nella formula del resto,
+\[
+\begin{aligned}
+r_{i+1}&=r_{i-1}-q_i r_i\\
+&=(s_{i-1}-q_i s_i)A+(t_{i-1}-q_i t_i)B\\
+&=s_{i+1}A+t_{i+1}B.
+\end{aligned}
+\]
+La ricorrenza usa soltanto interi e conserva quindi coefficienti interi. Dalle due basi e dal passo segue per induzione che ogni riga verifica $r_i=s_iA+t_iB$.
+
+\textbf{Ultima riga e segni.} All'ultimo termine non nullo, $d=\operatorname{MCD}(a,b)=r_k=s_k|a|+t_k|b|$. Scriviamo $|a|=\varepsilon_a a$, $|b|=\varepsilon_b b$, dove $\varepsilon_z=1$ per $z\ge0$ e $\varepsilon_z=-1$ per $z<0$. Allora $\alpha=s_k\varepsilon_a$ e $\beta=t_k\varepsilon_b$ sono i coefficienti richiesti rispetto agli argomenti originali.
+\end{proof}
+
+\begin{esempio}[Divisioni, coefficienti e sostituzione a ritroso]
+Per $(a,b)=(72,420)$ le divisioni sono
+\[
+\begin{aligned}
+72&=0\cdot420+72,\\
+420&=5\cdot72+60,\\
+72&=1\cdot60+12,\\
+60&=5\cdot12+0.
+\end{aligned}
+\]
+La tabella dell'algoritmo esteso conserva l'identità $r_i=s_i\cdot72+t_i\cdot420$. Il quoziente $q_i$ nella riga $i$ serve per ottenere il resto $r_{i+1}$:
+\[
+\begin{array}{c|r|r|r|r}
+i&r_i&q_i&s_i&t_i\\\hline
+0&72&-&1&0\\
+1&420&0&0&1\\
+2&72&5&1&0\\
+3&60&1&-5&1\\
+4&12&5&6&-1\\
+5&0&-&-35&6
+\end{array}
+\]
+L'ultima riga non nulla dà $d=12=6\cdot72-420$. Per esempio la riga $4$ nasce da $s_4=s_2-q_3s_3=1-1\cdot(-5)=6$ e $t_4=t_2-q_3t_3=0-1\cdot1=-1$.
+
+Si possono ottenere gli stessi coefficienti risalendo nelle divisioni: $12=72-60=72-(420-5\cdot72)=6\cdot72-420$. Questo è il procedimento a ritroso, mentre la tabella costruisce i coefficienti in avanti. Per la coppia $(72,-420)$ il massimo comune divisore resta $12$, e l'identità diventa $12=6\cdot72+1\cdot(-420)$.
+\end{esempio}
+
+\begin{corollario}
+Per $(a,b)\ne(0,0)$, gli interi $a,b$ sono coprimi se e solo se esistono $\alpha,\beta\in\Z$ con $\alpha a+\beta b=1$.
+\end{corollario}
+\begin{proof}
+\passomath{\Rightarrow} Bézout, applicato a $\operatorname{MCD}(a,b)=1$, dà la combinazione richiesta.
+
+\passomath{\Leftarrow} Il numero $1$ divide $a,b$ ed è una loro combinazione intera positiva. Il criterio~\ref{prop:criterio-mcd} dà $\operatorname{MCD}(a,b)=1$.
+\end{proof}
+
+\begin{esercizio}[Non unicità dei coefficienti]
+Mostrare che i coefficienti di Bézout non sono unici.
+\end{esercizio}
+\begin{svolgimento}
+Se $d=\alpha a+\beta b$, per ogni $t\in\Z$ vale
+\[
+d=(\alpha+tb)a+(\beta-ta)b,
+\]
+perché i termini aggiunti sono $tab-tba=0$. Poiché $(a,b)\ne(0,0)$, almeno uno dei due coefficienti cambia quando cambia $t$: si ottengono infinite coppie distinte. Questa costruzione prova la non unicità, senza pretendere di descrivere qui tutte le coppie possibili.
+\end{svolgimento}
+
+\begin{corollario}
+Per $d=\operatorname{MCD}(a,b)$, $(a,b)\ne(0,0)$,
+\[
+\{\alpha a+\beta b\mid\alpha,\beta\in\Z\}=d\Z,
+\qquad d\Z=\{dk\mid k\in\Z\}.
+\]
+\end{corollario}
+\begin{proof}
+\passomath{\subseteq} Il numero $d$ divide $a,b$, quindi divide ogni loro combinazione intera.
+
+\passomath{\supseteq} Bézout dà $d=\alpha_0a+\beta_0b$. Ogni $dk$ è allora $(k\alpha_0)a+(k\beta_0)b$, quindi appartiene all'insieme delle combinazioni.
+\end{proof}
+
+\subsection{La minima combinazione positiva}
+% A–L L11 pp. 2–3; M–Z L10 pp. 3–4. Scelta la prova M–Z, indipendente da Bézout.
+\begin{proposizione}\label{prop:min-combinazione}
+Per $(a,b)\ne(0,0)$,
+\[
+\operatorname{MCD}(a,b)=\min\{\alpha a+\beta b>0\mid\alpha,\beta\in\Z\}.
+\]
+\end{proposizione}
+\begin{proof}
+\textbf{Esistenza del minimo.} L'insieme $S$ delle combinazioni positive è non vuoto: se $a\ne0$ contiene $|a|=\pm a+0b$; altrimenti contiene $|b|=0a\pm b$. Per buon ordinamento ha un minimo $s=\alpha_0a+\beta_0b>0$.
+
+\textbf{Divisibilità di $a$.} Dividiamo $a$ per $s$: $a=qs+r$, $0\le r<s$. Allora
+\[
+r=a-qs=(1-q\alpha_0)a-q\beta_0b.
+\]
+Se $r>0$, sarebbe una combinazione positiva minore del minimo $s$. Quindi $r=0$ e $s\mid a$.
+
+\textbf{Divisibilità di $b$.} Dividiamo anche $b=q's+r'$, $0\le r'<s$. Il resto è $r'=-q'\alpha_0a+(1-q'\beta_0)b$. Se positivo contraddirebbe la stessa minimalità, dunque $r'=0$ e $s\mid b$.
+
+\textbf{Condizione universale.} Ogni divisore comune $c$ di $a,b$ divide la combinazione $s=\alpha_0a+\beta_0b$. Quindi $s$ soddisfa entrambe le condizioni di massimo comune divisore ed è positivo: è $\operatorname{MCD}(a,b)$.
+\end{proof}
+
+La prova mediante il minimo fornisce anche un'esistenza del massimo comune divisore e dell'identità di Bézout indipendente dall'algoritmo. L'algoritmo esteso offre in più un procedimento di calcolo dei coefficienti.
+
+\section{Lemma di Euclide e fattorizzazione}
+\begin{lemma}[Euclide]\label{lem:euclide}
+Se $\operatorname{MCD}(a,b)=1$ e $a\mid bc$, allora $a\mid c$.
+\end{lemma}
+\begin{proof}
+Da Bézout si ha $\alpha a+\beta b=1$. Moltiplicando per $c$, $c=\alpha ac+\beta bc$. Se $bc=am$, questa identità diventa $c=a(\alpha c+\beta m)$: il quoziente è intero, quindi $a\mid c$.
+\end{proof}
+
+\begin{corollario}
+Se $a\mid c$, $b\mid c$ e $\operatorname{MCD}(a,b)=1$, allora $ab\mid c$.
+\end{corollario}
+\begin{proof}
+% M–Z L11 p. 5: prova diretta via Bézout, senza divisione per a o b.
+Scriviamo $c=au=bv$ e $1=\alpha a+\beta b$. Moltiplicando per $c$ e sostituendo nelle due parti,
+\[
+c=\alpha ac+\beta bc=\alpha abv+\beta bau=ab(\alpha v+\beta u).
+\]
+Il quoziente esibito è intero. L'argomento vale anche nei casi nulli consentiti dalla coprimalità.
+\end{proof}
+
+\begin{proposizione}[Primi e divisibilità dei prodotti]\label{prop:primo-prodotto}
+Per $p\in\Z\setminus\{0,1,-1\}$ sono equivalenti: $p$ è primo; per ogni $a,b\in\Z$, da $p\mid ab$ segue $p\mid a$ oppure $p\mid b$.
+\end{proposizione}
+\begin{proof}
+\passomath{\Rightarrow} Sia $p$ primo e $p\mid ab$. Se $p\mid a$ abbiamo già concluso. Altrimenti $d=\operatorname{MCD}(p,a)$ è un divisore positivo di $p$, dunque è $1$ o $|p|$. Il secondo caso implicherebbe $p\mid a$, escluso. Quindi $d=1$ e il lemma di Euclide dà $p\mid b$.
+
+\passomath{\Leftarrow} Supponiamo la proprietà e sia $p=uv$. Allora $p\mid uv$, perciò $p\mid u$ oppure $p\mid v$. Nel primo caso $u=pk$ dà $p=pkv$: cancellando $p\ne0$, $kv=1$, quindi $v=\pm1$. Nel secondo caso, allo stesso modo $u=\pm1$. È la definizione di primo.
+\end{proof}
+
+\begin{osservazione}
+Le esclusioni $p\ne0,\pm1$ sono necessarie: le unità dividono ogni intero, mentre per $p=0$ la proprietà sui prodotti segue dall'assenza di divisori dello zero. Nessuno di questi tre numeri è primo.
+\end{osservazione}
+
+\begin{teorema}[Fondamentale dell'aritmetica]\label{teo:fattorizzazione}
+Ogni intero $n\ne0,\pm1$ si scrive come
+\[
+n=\varepsilon p_1^{a_1}\cdots p_r^{a_r},\qquad
+\varepsilon\in\{1,-1\},\quad a_i\in\N^*,
+\]
+con primi positivi distinti $p_1,\ldots,p_r$. Il segno è quello di $n$ e i primi con i rispettivi esponenti sono unici a meno dell'ordine.
+\end{teorema}
+\begin{proof}
+\textbf{Esistenza: base.} Basta trattare $n\ge2$ ed estrarre poi il segno. Procediamo per induzione forte su $n$. Per $n=2$, la scrittura è il solo primo $2$.
+
+\textbf{Esistenza: ipotesi e passo.} Sia $n>2$ e supponiamo che ogni intero $m$ con $2\le m<n$ sia prodotto di primi positivi. Se $n$ è primo, è già un prodotto con un fattore. Se non lo è, $n=uv$ con $1<u,v<n$. L'ipotesi si applica separatamente a $u$ e $v$; concatenando le due liste si ottiene una lista di primi di prodotto $n$. Il principio d'induzione forte conclude l'esistenza. Raccogliendo i fattori uguali si ottiene la forma con esponenti positivi.
+
+\textbf{Unicità: parametro e base.} Consideriamo due scritture con ripetizioni ammesse,
+\[
+p_1\cdots p_\ell=q_1\cdots q_s,
+\]
+e proviamo per induzione su $\ell\ge0$ che $s=\ell$ e le liste coincidono a meno dell'ordine. Per $\ell=0$ il primo prodotto è $1$; un prodotto non vuoto di primi positivi è almeno $2$, quindi $s=0$.
+
+\textbf{Unicità: passo.} Supponiamo la proprietà per $\ell-1$ e sia $\ell\ge1$. Il prodotto a sinistra è maggiore di $1$, dunque $s\ge1$. Poiché $p_1\mid q_1\cdots q_s$, applicazioni successive della proposizione~\ref{prop:primo-prodotto} mostrano che $p_1$ divide almeno un $q_j$. Infatti, se non divide il primo fattore, deve dividere il prodotto dei successivi, e si ripete fino all'ultimo. Essendo $q_j$ primo positivo e $p_1>1$, si ha $p_1=q_j$. Riordiniamo il secondo prodotto portando $q_j$ al primo posto e cancelliamo il fattore non nullo comune. Restano prodotti con $\ell-1$ e $s-1$ fattori. L'ipotesi induttiva dà $s-1=\ell-1$ e identifica tutte le occorrenze rimanenti.
+
+\textbf{Esponenti e segno.} L'unicità delle liste con ripetizioni determina quante volte compare ciascun primo: sono gli esponenti. Per $n<0$ si applica il risultato a $|n|$ e si antepone il segno meno. Il segno è unico perché ogni prodotto di primi positivi è positivo.
+\end{proof}
+
+\subsection{Formule per MCD e mcm}
+% A–L L11 p. 7: completati i passaggi mediante gli esponenti, senza aggiungere nuovi argomenti.
+\begin{proposizione}\label{prop:mcd-mcm}
+Per $a,b\ne0$ usiamo una stessa lista di primi positivi distinti, ammettendo esponenti nulli:
+\[
+a=\varepsilon\prod_{i=1}^r p_i^{\alpha_i},\qquad
+b=\eta\prod_{i=1}^r p_i^{\beta_i},\qquad \alpha_i,\beta_i\in\N.
+\]
+Allora
+\[
+\operatorname{MCD}(a,b)=\prod_{i=1}^r p_i^{\min(\alpha_i,\beta_i)},\qquad
+\operatorname{mcm}(a,b)=\prod_{i=1}^r p_i^{\max(\alpha_i,\beta_i)}.
+\]
+In particolare il minimo comune multiplo positivo esiste e $\operatorname{MCD}(a,b)\operatorname{mcm}(a,b)=|ab|$.
+\end{proposizione}
+\begin{proof}
+\textbf{Divisibilità ed esponenti.} Per interi non nulli $u,v$, $u\mid v$ se e solo se ogni primo ha in $u$ esponente non maggiore che in $v$. Se $v=uw$, gli esponenti si sommano per l'unicità della fattorizzazione, quindi la disuguaglianza è necessaria. Viceversa le differenze non negative degli esponenti costruiscono un intero $w$ con $v=uw$, scegliendo il segno opportuno.
+
+\textbf{Massimo comune divisore.} Il prodotto $d$ formato usando gli esponenti minimi divide $a$ e $b$. Ogni divisore comune $c$ è non nullo, ha solo primi presenti in entrambi e per ciascuno ha esponente al più il minimo dei due esponenti: quindi $c\mid d$. Le due condizioni della definizione sono soddisfatte e $d>0$.
+
+\textbf{Minimo comune multiplo.} Il prodotto $m$ formato usando gli esponenti massimi è multiplo di $a$ e $b$. Ogni altro multiplo comune non nullo deve avere esponenti almeno pari a quei massimi, quindi è divisibile per $m$. Anche il multiplo comune $0$ è divisibile per $m$. Si ottiene la definizione e $m>0$.
+
+\textbf{Prodotto.} Per ogni $i$, $\min(\alpha_i,\beta_i)+\max(\alpha_i,\beta_i)=\alpha_i+\beta_i$. Moltiplicando le due formule si ottiene quindi $|a||b|=|ab|$.
+\end{proof}
+
+I prodotti vuoti valgono $1$: le formule includono così $a=\pm1$ o $b=\pm1$. Se un solo argomento è nullo, l'identità del prodotto rimane valida con $\operatorname{MCD}(a,0)=|a|$ e $\operatorname{mcm}(a,0)=0$.
+
+\begin{esercizio}[Radice di un primo]
+Dimostrare che per ogni primo positivo $p$, $\sqrt p\notin\Q$.
+\end{esercizio}
+\begin{svolgimento}
+Supponiamo $\sqrt p=a/b$ con $a\in\Z$, $b\in\N^*$. Dividendo entrambi per $\operatorname{MCD}(a,b)$ possiamo scegliere $a,b$ coprimi. Dall'uguaglianza $a^2=pb^2$ segue $p\mid a^2$, quindi $p\mid a$ per la proprietà sui prodotti. Scriviamo $a=pc$: sostituendo e cancellando $p\ne0$, si ottiene $pc^2=b^2$. Allora $p\mid b^2$, quindi $p\mid b$. Ma un primo $p>1$ non può dividere entrambi gli interi coprimi $a,b$. La contraddizione esclude la razionalità.
+\end{svolgimento}

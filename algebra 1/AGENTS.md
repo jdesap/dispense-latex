@@ -14,3 +14,5 @@
 - Verificare le induzioni esplicitando parametro, base, ipotesi e passo; per ricorrenze a due termini servono le due righe iniziali. Distinguere terminazione, correttezza e costruzione dei coefficienti nell'algoritmo di Euclide.
 - Registrare la scelta delle prove e le integrazioni per unità in `lavoro/SCELTA_DIMOSTRAZIONI.csv`; le sole righe di copertura per pagina non sono una verifica dello sviluppo delle prove. Non presentare controlli numerici o compilazione come certificazione matematica.
 - La ricostruzione del 23 ottobre è il nuovo testo di riferimento. Le versioni in `lavoro/storico-*` e le sessioni 1–2 sono storiche. Per i futuri caricamenti integrare il nuovo materiale A–L nel testo corrente, con lo stesso metodo, senza ripartire ogni volta.
+
+- Terminologia richiesta dall’autore: scrivere «congrui modulo m» (o il modulo in uso), non «congruenti», per la congruenza aritmetica.

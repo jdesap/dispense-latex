@@ -1,15 +1,24 @@
 # Appunti di analisi 1
 
 Appunti di **Jude De Sa'Pinto** dal corso del **Prof. Federico Cacciafesta**.
-Revisione editoriale integrale conclusa il 22 ottobre 2026; rifiniture del 23 ottobre: 56 pagine,
-sette capitoli. Resoconto e limiti del controllo in
+Revisione editoriale integrale conclusa il 22 ottobre 2026; lezioni 10–12 integrate
+il 28 ottobre: 75 pagine, otto capitoli. Resoconto e limiti della revisione editoriale in
 `../lavoro/revisione-editoriale/RESOCONTO_FINALE.md`.
+La lezione 9 completa il capitolo di topologia con interno, frontiera,
+punti isolati, aderenza e accumulazione; dettagli e aggiunte redazionali in
+`lavoro/LEZIONE_9_2026-10-23.md`.
+Le lezioni 10–12 completano Topologia con estremi e accumulazione e avviano
+il capitolo «Successioni e limiti»: proprietà definitive e frequenti, estrazioni,
+limiti finiti e infiniti, unicità, permanenza del segno, confronti, algebra e
+avvicinamento da sopra o da sotto. Mappa degli accorpamenti, correzioni e
+aggiunte in `lavoro/LEZIONI_10_12_2026-10-28.md`; controlli in
+`lavoro/VERIFICA_LEZIONI_10_12_2026-10-28.json`.
 Le barre laterali, i numeretti blu delle note, il rientro delle prove e le
 spaziature si regolano nel blocco **STILE MATEMATICO** di `preambolo.tex`,
 I parametri e gli ultimi controlli sono descritti in
 `../lavoro/revisione-editoriale/SESSIONE_15.md`.
 Il documento è organizzato per argomenti. I numeri delle lezioni di
-provenienza sono indicati soltanto sotto i titoli dei sette capitoli.
+provenienza sono indicati soltanto sotto i titoli dei capitoli.
 I riferimenti precisi alle pagine restano nei commenti TeX e nel registro
 di copertura, esclusi dal PDF.
 
@@ -50,7 +59,7 @@ ad aggiornare indice e collegamenti. I commenti `TeX root` permettono di
 compilare il documento principale anche mentre si modifica un capitolo.
 
 La stessa compilazione, anche con Salva/Build in VS Code, esporta
-automaticamente i sette capitoli in `build/capitoli/`, con nomi tematici.
+automaticamente gli otto capitoli in `build/capitoli/`, con nomi tematici.
 I nuovi capitoli saranno riconosciuti senza configurazioni aggiuntive.
 Gli estratti mantengono impaginazione, numeri di pagina e segnalibri
 del volume; possono essere importati singolarmente in Goodnotes.

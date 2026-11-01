@@ -1,0 +1,110 @@
+{
+  "data": "2026-10-23",
+  "pagine_prima": 56,
+  "pagine_dopo": 61,
+  "compilazione_condivisa": "riuscita, nessun Warning/Overfull/Underfull/undefined nel log",
+  "compilazione_integrata": "riuscita anche dopo le ultime rifiniture",
+  "estratti": [
+    {
+      "numero": 1,
+      "file": "01-logica-e-metodi-di-dimostrazione.pdf",
+      "pagine": 3,
+      "numeri_stampati": [
+        "1",
+        "3"
+      ],
+      "testo_flussi_formato_annotazioni_numerazione_rendering_identici_al_volume": true,
+      "segnalibri_e_link_validi": true,
+      "numero_link": 0
+    },
+    {
+      "numero": 2,
+      "file": "02-insiemi-e-relazioni.pdf",
+      "pagine": 3,
+      "numeri_stampati": [
+        "4",
+        "6"
+      ],
+      "testo_flussi_formato_annotazioni_numerazione_rendering_identici_al_volume": true,
+      "segnalibri_e_link_validi": true,
+      "numero_link": 0
+    },
+    {
+      "numero": 3,
+      "file": "03-numeri-naturali-induzione-e-combinatoria.pdf",
+      "pagine": 7,
+      "numeri_stampati": [
+        "7",
+        "13"
+      ],
+      "testo_flussi_formato_annotazioni_numerazione_rendering_identici_al_volume": true,
+      "segnalibri_e_link_validi": true,
+      "numero_link": 0
+    },
+    {
+      "numero": 4,
+      "file": "04-sistemi-numerici-e-completezza.pdf",
+      "pagine": 12,
+      "numeri_stampati": [
+        "14",
+        "25"
+      ],
+      "testo_flussi_formato_annotazioni_numerazione_rendering_identici_al_volume": true,
+      "segnalibri_e_link_validi": true,
+      "numero_link": 2
+    },
+    {
+      "numero": 5,
+      "file": "05-funzioni-definizioni-e-proprieta-generali.pdf",
+      "pagine": 7,
+      "numeri_stampati": [
+        "26",
+        "32"
+      ],
+      "testo_flussi_formato_annotazioni_numerazione_rendering_identici_al_volume": true,
+      "segnalibri_e_link_validi": true,
+      "numero_link": 1
+    },
+    {
+      "numero": 6,
+      "file": "06-funzioni-elementari.pdf",
+      "pagine": 14,
+      "numeri_stampati": [
+        "33",
+        "46"
+      ],
+      "testo_flussi_formato_annotazioni_numerazione_rendering_identici_al_volume": true,
+      "segnalibri_e_link_validi": true,
+      "numero_link": 2
+    },
+    {
+      "numero": 7,
+      "file": "07-topologia-della-retta.pdf",
+      "pagine": 11,
+      "numeri_stampati": [
+        "47",
+        "57"
+      ],
+      "testo_flussi_formato_annotazioni_numerazione_rendering_identici_al_volume": true,
+      "segnalibri_e_link_validi": true,
+      "numero_link": 1
+    }
+  ],
+  "capitoli_1_6": {
+    "pagine_pdf": [
+      5,
+      50
+    ],
+    "numero_pagine": 46,
+    "testo_e_rendering_invariati": true,
+    "numerazione_stampata": [
+      "1",
+      "46"
+    ]
+  },
+  "topologia_pagine_precedenti_48_51_invariate": true,
+  "controllo_visivo": "Indice, apertura capitolo e pagine stampate 52–57 ispezionati; nessuna sovrapposizione o riga tagliata; esercizio e svolgimento consecutivi; ultima pagina contiene la sezione completa.",
+  "copertura_fonte": "Pagine 2–9 integrate; pagina 1 copertina; confronto visivo di tutte le pagine della fonte.",
+  "copie_annotate_modificate": false,
+  "sha256_pdf": "5ac0ab0fd4b53be5d795a7fe7a5c0c73ede284d0cb81adc217148ecf49f8a007"
+}

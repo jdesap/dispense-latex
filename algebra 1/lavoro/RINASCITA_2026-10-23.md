@@ -1,6 +1,6 @@
 # Ricostruzione della dispensa — 23 ottobre 2026
 
-Questo è il registro corrente. I registri delle sessioni 1–2 e i loro giudizi di copertura sono storici. La versione precedente completa, con sorgenti, PDF ed estratti, è conservata in `storico-prima-rinascita-2026-10-23/`.
+Questo è il registro della ricostruzione del 23 ottobre. Per lo stato corrente dopo la lezione 12 leggere `LEZIONE_12_2026-10-24.md`. I registri delle sessioni 1–2 e i loro giudizi di copertura sono storici. La versione precedente completa, con sorgenti, PDF ed estratti, è conservata in `storico-prima-rinascita-2026-10-23/`.
 
 ## Metodo applicato
 
