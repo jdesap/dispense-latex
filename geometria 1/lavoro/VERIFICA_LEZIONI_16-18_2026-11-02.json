@@ -1,0 +1,52 @@
+{
+  "data": "2026-11-02",
+  "fonti_pdf": 13,
+  "pagine_fonti": 65,
+  "pagine_volume": 45,
+  "sha256_volume": "08c2c159848fbaabce510518ca3741bc17ed707f2fe0350f196258a33594b3e5",
+  "capitoli": [
+    {
+      "titolo": "1 Spazi vettoriali",
+      "pagine": 26,
+      "prima_pagina_volume": 4,
+      "sha256": "ae1ca63c9f6bcb09ba47d2072f2ae67754be71f2496348f18c15d24473a92152",
+      "verifiche": "testo, flussi pagina, dimensioni, etichette pagina e rendering pixel identici; segnalibri presenti"
+    },
+    {
+      "titolo": "2 Sistemi lineari e matrici",
+      "pagine": 7,
+      "prima_pagina_volume": 30,
+      "sha256": "67c2d07d67cf22f9179c47530690c868c973c7fed93dd9c987a0fbc005957132",
+      "verifiche": "testo, flussi pagina, dimensioni, etichette pagina e rendering pixel identici; segnalibri presenti"
+    },
+    {
+      "titolo": "3 Applicazioni lineari",
+      "pagine": 9,
+      "prima_pagina_volume": 37,
+      "sha256": "4f37ee4fdf66ecb8adf2be6d143fc8c03d350a10c18af9c0bebc7a6c6e466114",
+      "verifiche": "testo, flussi pagina, dimensioni, etichette pagina e rendering pixel identici; segnalibri presenti"
+    }
+  ],
+  "calcoli_esatti": [
+    "matrice nelle basi assegnate",
+    "immagini dei vettori di base",
+    "matrice canonica",
+    "inversa della matrice delle coordinate",
+    "formula del cambiamento di basi",
+    "idempotenza della proiezione e involutività della simmetria in un esempio obliquo"
+  ],
+  "revisione_teorica": "rilette prove di linearità, nucleo e immagine, iniettività, coordinate, dimensione, proiezioni, simmetrie, matrici associate e composizione e cambio di basi",
+  "correzioni": [
+    "Lezione 17 pagina 5: entrata finale (2,2) uguale a 1 e non -1",
+    "Lezione 17 pagine 2–3: precisazione in nota per caratteristica 2"
+  ],
+  "log": "nessun errore o avviso",
+  "controllo_visivo": "indice, raccordo capitolo 2 e tutte le 9 pagine nuove; tre TikZ ricostruiti",
+  "sorgenti": {
+    "capitoli/03a-linearita-nucleo-immagine.tex": "6b98fca939dfc6acd3515d9776b27ef9bdf49a1479e71b2ad82afb1279238509",
+    "capitoli/03d-cambi-di-base.tex": "10fd8497637212de6653d21153f6cbc24fabe5fa6840e38baf5aeff164c35e84",
+    "capitoli/03-applicazioni-lineari.tex": "4cfbaa554ab150c621fdc067a245aa9d319c3f90174d3c6b01261615ae142d06",
+    "capitoli/03b-proiezioni-simmetrie.tex": "847f16dbf7c892b0ff8bbb99975a13705f83e0bd124c5fcfe1349671fd245224",
+    "capitoli/03c-matrici-associate.tex": "eed2a4f9eedc65751b41bfde6aca46a92b1ed8e75505577ac54931e9b39d8a19"
+  }
+}

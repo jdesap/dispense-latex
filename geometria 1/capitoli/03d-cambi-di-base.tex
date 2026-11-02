@@ -1,0 +1,88 @@
+% !TeX root = ../main.tex
+\section{Cambiamento di base}
+\subsection{La matrice dell'identità in basi diverse}
+Siano $\mathcal B=(v_1,\ldots,v_n)$ e $\mathcal B'=(v'_1,\ldots,v'_n)$ due basi dello stesso spazio $V$. L'identità $\operatorname{id}_V:v\mapsto v$ non cambia il vettore, ma la sua matrice in queste due basi cambia la colonna delle coordinate.
+\begin{definizione}
+La \emph{matrice di cambiamento di base da $\mathcal B$ a $\mathcal B'$} è
+\[
+ P=M_{\mathcal B}^{\mathcal B'}(\operatorname{id}_V).
+\]
+La colonna $i$ di $P$ è $[v_i]_{\mathcal B'}$, e per ogni $v\in V$ vale
+\[
+ [v]_{\mathcal B'}=P[v]_{\mathcal B}.
+\]
+\end{definizione}
+Il verso è precisato dall'uguaglianza: $P$ riceve coordinate nella base $\mathcal B$ e restituisce coordinate nella base $\mathcal B'$. Ponendo $Q=M_{\mathcal B'}^{\mathcal B}(\operatorname{id}_V)$ si ha invece $[v]_{\mathcal B}=Q[v]_{\mathcal B'}$. Componendo i due cambiamenti e usando la matrice dell'identità nella stessa base otteniamo
+\[
+ QP=I_n,\qquad PQ=I_n,\qquad
+ M_{\mathcal B'}^{\mathcal B}(\operatorname{id}_V)=P^{-1}.
+\]
+
+\begin{schema}
+\begin{tikzpicture}[scale=.9]
+ \coordinate (O) at (0,0); \coordinate (V) at (3,2);
+ \coordinate (B) at (3,0); \coordinate (C) at (0,2);
+ \coordinate (Bp) at (3.6,1.2); \coordinate (Cp) at (-.6,.8);
+ \draw[asse] (-.5,0)--(4.2,0) node[right] {$v_1$};
+ \draw[asse] (0,-.4)--(0,2.8) node[above] {$v_2$};
+ \draw[asse,draw=coloreschema] (-.6,-.2)--(4.2,1.4) node[right] {$v'_1$};
+ \draw[asse,draw=coloreschema] (.3,-.4)--(-1.8,2.4) node[above] {$v'_2$};
+ \draw[dashed,black!50] (B)--(V)--(C);
+ \draw[dashed,coloreschema] (Bp)--(V)--(Cp);
+ \draw[vettore] (O)--(V) node[above right] {$v$};
+ \node[below] at (B) {$\lambda_1v_1$};
+ \node[left] at (C) {$\lambda_2v_2$};
+ \node[below right] at (Bp) {$\lambda'_1v'_1$};
+ \node[left] at (Cp) {$\lambda'_2v'_2$};
+\end{tikzpicture}
+
+Lo stesso vettore $v$ ha due scomposizioni: $v=\lambda_1v_1+\lambda_2v_2=\lambda'_1v'_1+\lambda'_2v'_2$.
+\end{schema}
+
+\subsection{Come cambia la matrice di un'applicazione}
+\begin{teorema}[Formula di cambiamento di basi]
+Sia $f:V\to W$ lineare e siano $\mathcal B,\mathcal B'$ due basi di $V$ e $\mathcal C,\mathcal C'$ due basi di $W$. Poniamo
+\[
+ A=M_{\mathcal B}^{\mathcal C}(f),\quad
+ A'=M_{\mathcal B'}^{\mathcal C'}(f),\quad
+ P=M_{\mathcal B}^{\mathcal B'}(\operatorname{id}_V),\quad
+ Q=M_{\mathcal C}^{\mathcal C'}(\operatorname{id}_W).
+\]
+Allora
+\[
+ A'P=QA,\qquad A'=QAP^{-1}.
+\]
+\end{teorema}
+\begin{proof}
+Siano $x=[v]_{\mathcal B}$, $x'=[v]_{\mathcal B'}$, $y=[f(v)]_{\mathcal C}$ e $y'=[f(v)]_{\mathcal C'}$. Le formule dei cambiamenti di coordinate e della matrice associata danno
+\[
+ x'=Px,\qquad y'=Qy,\qquad y=Ax,\qquad y'=A'x'.
+\]
+Calcolando $y'$ nei due modi si ottiene $A'Px=QAx$ per ogni $x\in K^n$. Le due matrici sono uguali perché agiscono allo stesso modo su tutte le colonne della base canonica; quindi $A'P=QA$. Moltiplicando a destra per $P^{-1}$ si conclude $A'=QAP^{-1}$.
+\end{proof}
+Esplicitando le basi, l'ultima formula diventa
+\[
+ M_{\mathcal B'}^{\mathcal C'}(f)
+ =M_{\mathcal C}^{\mathcal C'}(\operatorname{id}_W)\,
+ M_{\mathcal B}^{\mathcal C}(f)\,
+ M_{\mathcal B'}^{\mathcal B}(\operatorname{id}_V).
+\]
+Si leggono i tre passi da destra: dalle nuove coordinate del dominio alle vecchie; applicazione di $f$ nelle vecchie basi; dalle vecchie coordinate del codominio alle nuove.
+
+\begin{esempio}
+Riprendiamo $f(x_1,x_2)=(2x_1-x_2,x_1+3x_2)$ e le basi $\mathcal B,\mathcal C$ dell'esercizio precedente. Le matrici che convertono le loro coordinate in coordinate canoniche sono
+\[
+ S_{\mathcal B}=\begin{pmatrix}1&2\\1&-1\end{pmatrix},\qquad
+ S_{\mathcal C}=\begin{pmatrix}-3&2\\1&0\end{pmatrix}.
+\]
+Le colonne sono i vettori delle rispettive basi. Se $F=M_{\mathcal E}^{\mathcal E}(f)$, allora $S_{\mathcal C}M_{\mathcal B}^{\mathcal C}(f)=FS_{\mathcal B}$, per cui
+\begin{align*}
+ M_{\mathcal B}^{\mathcal C}(f)
+ &=S_{\mathcal C}^{-1}FS_{\mathcal B}\\
+ &=\begin{pmatrix}0&1\\1/2&3/2\end{pmatrix}
+   \begin{pmatrix}2&-1\\1&3\end{pmatrix}
+   \begin{pmatrix}1&2\\1&-1\end{pmatrix}
+ =\begin{pmatrix}4&-1\\13/2&1\end{pmatrix}.
+\end{align*}
+Questo conferma il calcolo effettuato direttamente sulle immagini dei due vettori di base.
+\end{esempio}

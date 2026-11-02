@@ -1,0 +1,87 @@
+% !TeX root = ../main.tex
+\section{Proiezioni e simmetrie rispetto a una somma diretta}
+Sia $V=U\oplus W$. La somma diretta assicura che ogni $v\in V$ si scriva in modo unico come $v=u+w$, con $u\in U$ e $w\in W$. Questa unicità permette di definire applicazioni a partire dalle due componenti.
+
+\subsection{Proiezione su un sottospazio lungo un complementare}
+\begin{definizione}
+La \emph{proiezione su $U$ nella direzione di $W$} è
+\[
+ \pi_U^W:V\longrightarrow V,\qquad \pi_U^W(u+w)=u.
+\]
+\end{definizione}
+\begin{schema}
+\begin{tikzpicture}[scale=.9]
+ \coordinate (O) at (0,0); \coordinate (U) at (3,0);
+ \coordinate (W) at (1,1.6); \coordinate (V) at (4,1.6);
+ \draw[asse] (-.6,0)--(4.6,0) node[right] {$U$};
+ \draw[asse] (-.3,-.48)--(1.5,2.4) node[above] {$W$};
+ \draw[dashed,black!45] (U)--(V)--(W);
+ \draw[vettore] (O)--(V) node[right] {$v=u+w$};
+ \draw[vettore] (O)--(U) node[below] {$u=\pi_U^W(v)$};
+ \draw[vettore] (O)--(W) node[left] {$w$};
+\end{tikzpicture}
+\end{schema}
+Non è richiesta ortogonalità fra $U$ e $W$: la direzione è fissata dal complementare scelto.
+\begin{proposizione}
+La proiezione $\pi=\pi_U^W$ è lineare e soddisfa
+\[
+ \ker\pi=W,\qquad \operatorname{Im}\pi=U,\qquad
+ \pi(u)=u\ (u\in U),\qquad \pi\circ\pi=\pi.
+\]
+\end{proposizione}
+\begin{proof}
+\textbf{Linearità.} Per $v_i=u_i+w_i$, la scomposizione di $\lambda v_1+\mu v_2$ è $(\lambda u_1+\mu u_2)+(\lambda w_1+\mu w_2)$. Dunque
+\[
+ \pi(\lambda v_1+\mu v_2)=\lambda u_1+\mu u_2=\lambda\pi(v_1)+\mu\pi(v_2).
+\]
+\textbf{Nucleo e immagine.} Si ha $\pi(v)=0$ se e solo se $u=0$, ossia $v\in W$. Ogni immagine appartiene a $U$ e ogni $u\in U$ è immagine di se stesso, perché $u=u+0_W$.
+
+\textbf{Idempotenza.} Poiché $\pi(v)\in U$ e la proiezione fissa ogni vettore di $U$, si ha $\pi(\pi(v))=\pi(v)$.
+\end{proof}
+
+\subsection{Simmetria di asse un sottospazio}
+\begin{definizione}
+Su $\R$, la \emph{simmetria di asse $U$ e direzione $W$} è
+\[
+ \sigma_U^W:V\longrightarrow V,\qquad \sigma_U^W(u+w)=u-w.
+\]
+\end{definizione}
+\begin{schema}
+\begin{tikzpicture}[scale=.85]
+ \coordinate (O) at (0,0); \coordinate (U) at (3,0);
+ \coordinate (W) at (.7,1.3); \coordinate (V) at (3.7,1.3);
+ \coordinate (S) at (2.3,-1.3);
+ \draw[asse] (-.5,0)--(4.6,0) node[right] {$U$};
+ \draw[asse] (-.9,-1.67)--(1.05,1.95) node[above] {$W$};
+ \draw[dashed,black!45] (W)--(V)--(S)--(-.7,-1.3);
+ \draw[vettore] (O)--(U) node[below right] {$u$};
+ \draw[vettore] (O)--(V) node[right] {$v=u+w$};
+ \draw[vettore] (O)--(S) node[right] {$\sigma_U^W(v)=u-w$};
+ \draw[vettore] (O)--(W) node[left] {$w$};
+\end{tikzpicture}
+\end{schema}
+\begin{proposizione}
+Posto $\sigma=\sigma_U^W$, la simmetria è un isomorfismo e soddisfa
+\begin{gather*}
+ \ker\sigma=\{0_V\},\qquad \operatorname{Im}\sigma=V,\qquad
+ \sigma(u)=u\quad(u\in U),\\
+ \sigma\circ\sigma=\operatorname{id}_V,\qquad
+ U=\operatorname{Im}(\operatorname{id}_V+\sigma),\qquad
+ W=\ker(\operatorname{id}_V+\sigma).
+\end{gather*}
+\end{proposizione}
+\begin{proof}
+\textbf{Linearità e inversa.} La scomposizione di una combinazione lineare dà
+\[
+ \sigma(\lambda(u_1+w_1)+\mu(u_2+w_2))
+ =\lambda(u_1-w_1)+\mu(u_2-w_2).
+\]
+Inoltre $\sigma(u)=u$ e $\sigma(u-w)=u+w$, quindi $\sigma^2=\operatorname{id}_V$. Ne segue che $\sigma$ è la propria inversa: è iniettiva e suriettiva, con nucleo nullo e immagine $V$.
+
+\textbf{Recupero dei due sottospazi.} Per $v=u+w$ vale
+\[
+ (\operatorname{id}_V+\sigma)(v)=(u+w)+(u-w)=2u.
+\]
+Questi vettori appartengono a $U$, e ogni $u\in U$ si ottiene applicando $\operatorname{id}_V+\sigma$ a $u/2$: l'immagine è esattamente $U$. La stessa uguaglianza mostra che il nucleo è dato da $u=0$, cioè da $W$.\footnote{Le proprietà della simmetria si estendono a ogni campo di caratteristica diversa da $2$. In caratteristica $2$ si ha $u-w=u+w$, quindi la simmetria così definita coincide con l'identità e le ultime due caratterizzazioni in generale non valgono.}
+\end{proof}
+Le due costruzioni sono collegate da $\sigma_U^W=2\pi_U^W-\operatorname{id}_V$ e, su $\R$, da $\pi_U^W=(\operatorname{id}_V+\sigma_U^W)/2$.

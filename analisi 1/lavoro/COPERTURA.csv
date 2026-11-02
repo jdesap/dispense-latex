@@ -106,3 +106,14 @@ lezione,pagine_pdf,argomento,file_destinazione,stato
 12,7,Divergente più inferiormente limitata: esercizio con svolgimento; n+(-1)^n e figura,capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale
 12,8–9,Limitata per infinitesima; prova con due applicazioni dei carabinieri e schema,capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale
 12,10,"Avvicinamento da sopra e da sotto, definizioni e schema; nessun teorema sul quoziente nella fonte",capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva e controllo matematico locale
+13,2–3,Reciproco: limiti finiti e infiniti; segno e dominio; esempi e correzione del reciproco oscillante,capitoli/08c-confronti-e-algebra.tex,integrata; lettura visiva; prove e precisazioni redazionali
+13,4,Limite del quoziente e varianti di segno; forme indeterminate 0/0 e infinito/infinito,capitoli/08c-confronti-e-algebra.tex,integrata; enunciato conservato e prova completata
+13,5,Potenze naturali: divergenza e prova per induzione,capitoli/08d-polinomi-e-razionali.tex,integrata; lettura visiva e controllo matematico locale
+13,6–7,Forma infinito meno infinito: esempi con n e quattro esiti; accorpato n+(-n+3) al caso generale già presente,capitoli/08c-confronti-e-algebra.tex,integrata; accorpamento senza duplicazione
+13,"6,8–10",Polinomi e termine dominante; raccoglimento generale; esempi cubici distinti,capitoli/08d-polinomi-e-razionali.tex,integrata; prova conservata e casi costanti esplicitati
+13,11,Quozienti di polinomi; notazione o(1); rapporto cubico/quartico tendente a zero,capitoli/08d-polinomi-e-razionali.tex,integrata; regola generale dei gradi ricostruita
+13,12,Due rapporti razionali; esponente 4/6 incerto trattato in entrambe le versioni; limite -5/8,capitoli/08d-polinomi-e-razionali.tex,integrata; lettura visiva ingrandita; incertezza dichiarata e calcoli distinti
+13,13,Limite del valore assoluto; triangolare inversa e carabinieri; raccordo alla continuità,capitoli/08d-polinomi-e-razionali.tex,integrata; caso finito conservato e infinito completato
+13,13–15,Continuità tramite successioni; C(A) e C^0(A); esempio del modulo e figura,capitoli/09-continuita.tex,integrata; definizione e figura; raccordo senza duplicare la prova del modulo
+13,16,"Dominio [0,3] unito a {4}; f(4)=5; successione 3-1/n; figura e chiarimenti su estremi e punti isolati",capitoli/09-continuita.tex,integrata; lettura visiva; giustificazioni redazionali
+13,17,Continuità delle elementari assunta; algebra delle funzioni continue; domini dei quozienti,capitoli/09-continuita.tex,integrata; assunzione esplicita e prova redazionale dell’algebra

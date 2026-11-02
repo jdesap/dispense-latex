@@ -1,0 +1,123 @@
+% !TeX root = ../main.tex
+\section{Linearità, composizione e isomorfismi}
+\begin{definizione}
+Siano $V,W$ spazi vettoriali sullo stesso campo $K$. Una funzione $f:V\to W$ è \emph{lineare}, o un \emph{omomorfismo di spazi vettoriali}, se
+\[
+ f(v_1+v_2)=f(v_1)+f(v_2),\qquad f(\lambda v)=\lambda f(v)
+\]
+per ogni $v_1,v_2,v\in V$ e $\lambda\in K$. Equivalentemente, per tutti $v_1,v_2\in V$ e $\lambda_1,\lambda_2\in K$,
+\[
+ f(\lambda_1v_1+\lambda_2v_2)=\lambda_1f(v_1)+\lambda_2f(v_2).
+\]
+\end{definizione}
+L'equivalenza segue applicando prima l'additività e poi l'omogeneità; viceversa, basta scegliere prima $\lambda_1=\lambda_2=1$ e poi $\lambda_2=0$. Iterando, una funzione lineare conserva ogni combinazione lineare finita.
+
+\begin{osservazione}
+Ogni applicazione lineare soddisfa $f(0_V)=0_W$: da $f(0_V)=f(0_V+0_V)=f(0_V)+f(0_V)$ basta sottrarre $f(0_V)$. Inoltre $f(-v)=-f(v)$ e $f(v_1-v_2)=f(v_1)-f(v_2)$. La condizione $f(0_V)=0_W$ è necessaria, ma non sufficiente per la linearità.
+\end{osservazione}
+\begin{esempio}
+Le seguenti funzioni da $\R$ a $\R$ non sono lineari.
+\begin{itemize}
+\item $f(x)=x+1$: si ha $f(0)=1$.
+\item $f(x)=\sin x$: pur essendo $f(0)=0$, scegliendo $x_1=x_2=\pi/2$ si trova $f(x_1+x_2)=0\ne2=f(x_1)+f(x_2)$.
+\item $f(x)=x^2$: si ha $f(1+1)=4\ne2=f(1)+f(1)$. Più in generale $x\mapsto x^k$, per un intero $k\geq2$, non è lineare su $\R$, perché $2^k\ne2$.
+\end{itemize}
+In coordinate reali le applicazioni lineari hanno componenti date da espressioni omogenee di primo grado, senza termine costante; una componente può anche essere identicamente nulla.\footnote{La forma scritta di una funzione polinomiale può ingannare su campi finiti: sul campo $\mathbf F_2=\{0,1\}$ la funzione $x\mapsto x^2$ coincide con l'identità, perché $0^2=0$ e $1^2=1$, ed è quindi lineare.}
+\end{esempio}
+
+\begin{proposizione}
+La composizione di applicazioni lineari è lineare. Se un'applicazione lineare $f:V\to W$ è biiettiva, anche la sua inversa $f^{-1}:W\to V$ è lineare.
+\end{proposizione}
+\begin{proof}
+\passomath{g\circ f} Per $f:V\to W$ e $g:W\to Z$ lineari,
+\begin{align*}
+ (g\circ f)(\lambda v+\mu v')
+ &=g\bigl(\lambda f(v)+\mu f(v')\bigr)\\
+ &=\lambda(g\circ f)(v)+\mu(g\circ f)(v').
+\end{align*}
+\passomath{f^{-1}} Siano $w_1,w_2\in W$ e poniamo $v_i=f^{-1}(w_i)$. Per linearità $f(\lambda v_1+\mu v_2)=\lambda w_1+\mu w_2$. Applicando l'inversa otteniamo
+\[
+ f^{-1}(\lambda w_1+\mu w_2)=\lambda f^{-1}(w_1)+\mu f^{-1}(w_2).
+\]
+\end{proof}
+\begin{definizione}
+Un'applicazione lineare biiettiva si chiama \emph{isomorfismo}. Due spazi si dicono \emph{isomorfi} se esiste un isomorfismo fra essi.
+\end{definizione}
+
+\section{Nucleo, immagine e iniettività}
+\begin{definizione}
+Per $f:V\to W$ lineare, il \emph{nucleo} e l'\emph{immagine} sono
+\[
+ \ker f=\{v\in V:f(v)=0_W\},\qquad
+ \operatorname{Im}f=\{f(v):v\in V\}\subseteq W.
+\]
+Il nucleo si indica anche con $N(f)$. L'applicazione è suriettiva se e solo se $\operatorname{Im}f=W$.
+\end{definizione}
+\begin{teorema}
+Il nucleo è un sottospazio di $V$ e l'immagine è un sottospazio di $W$.
+\end{teorema}
+\begin{proof}
+\passomath{\ker f} Il vettore nullo appartiene al nucleo. Se $v_1,v_2\in\ker f$, allora $f(\lambda v_1+\mu v_2)=\lambda0_W+\mu0_W=0_W$: il nucleo è chiuso per combinazioni lineari.
+
+\passomath{\operatorname{Im}f} L'immagine contiene $0_W=f(0_V)$. Se $w_i=f(v_i)$, allora $\lambda w_1+\mu w_2=f(\lambda v_1+\mu v_2)$ appartiene ancora all'immagine. Vale quindi il criterio di sottospazio anche per $\operatorname{Im}f$.
+\end{proof}
+\begin{teorema}
+Un'applicazione lineare $f:V\to W$ è iniettiva se e solo se $\ker f=\{0_V\}$.
+\end{teorema}
+\begin{proof}
+\passomath{\Rightarrow} Se $v\in\ker f$, allora $f(v)=0_W=f(0_V)$; l'iniettività dà $v=0_V$.
+
+\passomath{\Leftarrow} Se $f(v_1)=f(v_2)$, per linearità $f(v_1-v_2)=0_W$. Dunque $v_1-v_2\in\ker f=\{0_V\}$, ossia $v_1=v_2$.
+\end{proof}
+
+\section{Coordinate e teorema della dimensione}
+\subsection{L'isomorfismo delle coordinate}
+\begin{esempio}
+Lo spazio $\R[X]_{\leq3}$ dei polinomi di grado al più $3$ è isomorfo a $\R^4$ mediante
+\[
+ a_0+a_1X+a_2X^2+a_3X^3\longmapsto(a_0,a_1,a_2,a_3)^T.
+\]
+La somma di polinomi e la moltiplicazione per scalari agiscono sui coefficienti componente per componente, quindi la funzione è lineare. È biiettiva perché ogni quadrupla determina uno e un solo polinomio. Questo formalizza il passaggio alle coordinate già usato per le equazioni dei sottospazi di polinomi.
+\end{esempio}
+\begin{teorema}
+Se $V$ ha dimensione finita $n$ su $K$ e $\mathcal B=(v_1,\ldots,v_n)$ è una base ordinata, la funzione
+\[
+ c_{\mathcal B}:V\longrightarrow K^n,\qquad v\longmapsto[v]_{\mathcal B}
+\]
+è un isomorfismo. In particolare $V$ è isomorfo a $K^n$.
+\end{teorema}
+\begin{proof}
+Se $v=\sum_i\lambda_iv_i$ e $v'=\sum_i\mu_iv_i$, allora $av+bv'=\sum_i(a\lambda_i+b\mu_i)v_i$. Per unicità delle coordinate,
+\[
+ [av+bv']_{\mathcal B}=a[v]_{\mathcal B}+b[v']_{\mathcal B}.
+\]
+La mappa è iniettiva perché coordinate uguali ricostruiscono lo stesso vettore, ed è suriettiva perché ogni colonna $(\lambda_i)$ è immagine di $\sum_i\lambda_iv_i$.
+\end{proof}
+L'isomorfismo dipende dalla base scelta: non è canonico in assenza di una scelta privilegiata di base.
+
+\subsection{Rango e nullità di un'applicazione}
+\begin{teorema}[Teorema della dimensione]
+\label{teo:dimensione-applicazione}
+Sia $f:V\to W$ lineare con $\dim V=n<\infty$. Allora
+\[
+ \dim\ker f+\dim\operatorname{Im}f=n.
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Scelta della base.} Sia $(v_1,\ldots,v_r)$ una base di $\ker f$. Completiamola a una base $(v_1,\ldots,v_r,v_{r+1},\ldots,v_n)$ di $V$.
+
+\textbf{Generazione dell'immagine.} Se $w\in\operatorname{Im}f$, esiste $v=\sum_{i=1}^n\lambda_iv_i$ tale che $w=f(v)$. Le prime $r$ immagini sono nulle, quindi
+\[
+ w=\sum_{i=r+1}^n\lambda_if(v_i).
+\]
+Le immagini $f(v_{r+1}),\ldots,f(v_n)$ generano dunque $\operatorname{Im}f$.
+
+\textbf{Indipendenza.} Supponiamo $\sum_{i=r+1}^n\alpha_if(v_i)=0_W$. Per linearità $\sum_{i=r+1}^n\alpha_iv_i\in\ker f$, quindi si può scrivere come $\sum_{j=1}^r\beta_jv_j$. Ne segue
+\[
+ \sum_{i=r+1}^n\alpha_iv_i-\sum_{j=1}^r\beta_jv_j=0_V.
+\]
+Poiché $(v_1,\ldots,v_n)$ è una base, tutti i coefficienti sono nulli. Le $n-r$ immagini sono pertanto una base dell'immagine e $\dim\operatorname{Im}f=n-r$. Il ragionamento comprende i casi $r=0$ e $r=n$, con le famiglie vuote opportune.
+\end{proof}
+\begin{definizione}
+La \emph{nullità} di $f$ è $\dim\ker f$; il \emph{rango} di $f$ è $\dim\operatorname{Im}f$. Il teorema afferma che nullità e rango sommano alla dimensione del dominio.
+\end{definizione}

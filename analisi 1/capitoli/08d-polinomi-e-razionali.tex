@@ -1,0 +1,160 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 13, pp. 5--13. Casi costanti, quozienti generali e svolgimenti completati.
+\section{Limiti di polinomi e termine dominante}
+\label{sec:polinomi-limiti}
+
+\begin{proposizione}
+Per ogni $k\in\N^*$ si ha $n^k\to+\infty$ e, di conseguenza, $1/n^k\to0^+$.
+\end{proposizione}
+\begin{proof}
+Si procede per induzione su $k$. Per $k=1$, $n\to+\infty$ è già stato verificato dalla definizione. Se $n^k\to+\infty$, allora $n^{k+1}=n^k\cdot n\to+\infty$ per la regola del prodotto. Il limite dei reciproci segue dalla proposizione~\ref{prop:limite-reciproco}.
+\end{proof}
+
+\begin{esempio}
+La successione $3n^3-n+2$ presenta, se si considerano separatamente gli addendi, la forma indeterminata $+\infty-\infty$. Non si può dedurre il risultato dai soli limiti degli addendi. Il termine $3n^3$ cresce però più rapidamente di $n$: raccoglierlo permette di confrontare le due grandezze.
+\end{esempio}
+
+\begin{proposizione}[Termine dominante di un polinomio]
+\label{prop:polinomio-dominante}
+Sia $P(x)=c_0+c_1x+\cdots+c_kx^k$ un polinomio di grado $k\ge1$, con $c_k\ne0$. Allora
+\[
+\frac{P(n)}{c_kn^k}\longrightarrow1,
+\qquad
+P(n)\longrightarrow
+\begin{cases}
++\infty,&c_k>0,\\
+-\infty,&c_k<0.
+\end{cases}
+\]
+Un polinomio costante ha invece come limite il proprio valore, compreso il polinomio nullo.
+\end{proposizione}
+\begin{proof}
+\textbf{Raccoglimento.} Per $n\ge1$,
+\[
+P(n)=c_kn^k\left(1+\sum_{j=0}^{k-1}\frac{c_j}{c_kn^{k-j}}\right).
+\]
+Per ogni $j\le k-1$ l'esponente $k-j$ è un intero positivo, dunque $1/n^{k-j}\to0$. La somma finita nella parentesi tende a $0$, per l'algebra dei limiti. Si ottiene così $P(n)/(c_kn^k)\to1$.
+
+\textbf{Segno del limite.} La parentesi tende a $1$, mentre $c_kn^k$ tende a $+\infty$ se $c_k>0$ e a $-\infty$ se $c_k<0$. La regola del prodotto dà la conclusione.
+\end{proof}
+
+Se i coefficienti non nulli dei termini di grado positivo hanno tutti lo stesso segno, si può usare direttamente la regola della somma. Il raccoglimento funziona anche quando i segni sono diversi: è il coefficiente di grado massimo a decidere il limite.
+
+\begin{esempio}
+Per il polinomio precedente,
+\[
+3n^3-n+2=3n^3\left(1-\frac1{3n^2}+\frac2{3n^3}\right)\longrightarrow+\infty.
+\]
+Analogamente,
+\[
+3n^3-2n^2+4n+1
+=3n^3\left(1-\frac2{3n}+\frac4{3n^2}+\frac1{3n^3}\right)
+\longrightarrow+\infty.
+\]
+In entrambi i casi la parentesi tende a $1$; non si sta assegnando un valore alla forma $+\infty-\infty$.
+\end{esempio}
+
+\subsection{La notazione o piccolo di uno}
+% Fonte: Lezione 13, pp. 11--12; esplicitato il significato della notazione usata nella fonte.
+
+La scrittura $r_n=o(1)$ significa semplicemente che $r_n\to0$. Il risultato sul termine dominante si abbrevia quindi in
+\[
+P(n)=c_kn^k\bigl(1+o(1)\bigr).
+\]
+Il simbolo $o(1)$ rappresenta una successione infinitesima; due sue occorrenze possono indicare successioni diverse. Non è un numero da cancellare fra numeratore e denominatore: si usano i limiti delle espressioni che lo contengono.
+
+\Needspace{22\baselineskip}
+\section{Quozienti di polinomi}
+% Fonte: Lezione 13, pp. 11--12; regola generale ricostruita dai raccoglimenti.
+
+\begin{proposizione}[Confronto dei gradi]
+Siano $P$ e $Q$ polinomi non nulli di gradi $k,h\ge0$ e coefficienti principali $c_k,d_h$. Il quoziente $P(n)/Q(n)$ è definito definitivamente e
+\[
+\frac{P(n)}{Q(n)}\longrightarrow
+\begin{cases}
+0,&k<h,\\
+c_k/d_h,&k=h,\\
++\infty,&k>h\text{ e }c_k/d_h>0,\\
+-\infty,&k>h\text{ e }c_k/d_h<0.
+\end{cases}
+\]
+Se $P$ è il polinomio nullo e $Q$ non lo è, il quoziente è definitivamente nullo.
+\end{proposizione}
+\begin{proof}
+Il raccoglimento dà $P(n)=c_kn^k(1+r_n)$ e $Q(n)=d_hn^h(1+s_n)$, con $r_n,s_n\to0$; per un polinomio costante si pone il resto uguale a zero. Poiché $1+s_n\to1$, definitivamente $1+s_n>1/2$, dunque $Q(n)\ne0$. Si ha
+\[
+\frac{P(n)}{Q(n)}
+=\frac{c_k}{d_h}\,n^{k-h}\,\frac{1+r_n}{1+s_n},
+\qquad \frac{1+r_n}{1+s_n}\longrightarrow1.
+\]
+Se $k<h$, il fattore $n^{k-h}=1/n^{h-k}$ tende a $0$; se $k=h$ è identicamente $1$; se $k>h$ tende a $+\infty$. La regola del prodotto conclude, tenendo conto del segno di $c_k/d_h$.
+\end{proof}
+
+\begin{esempio}
+Per $P(n)=3n^3-n+1$ e $Q(n)=2n^4+n+1$, entrambi i polinomi tendono a $+\infty$: la regola diretta del quoziente non risolve la forma $+\infty/+\infty$. Raccogliendo separatamente,
+\[
+\frac{3n^3-n+1}{2n^4+n+1}
+=\frac3{2n}\,
+\frac{1-\frac1{3n^2}+\frac1{3n^3}}
+{1+\frac1{2n^3}+\frac1{2n^4}}
+\longrightarrow\frac32\cdot0\cdot1=0.
+\]
+Equivalentemente, il quoziente si scrive $\frac3{2n}\frac{1+o(1)}{1+o(1)}$. I due resti non sono uguali, ma il loro contributo al rapporto tende a $1$.
+\end{esempio}
+
+\begin{esercizio}[Individuare il grado effettivo]
+Calcolare i limiti, per $n\to+\infty$, delle tre successioni
+\[
+\frac{-n^6+2n^4+3n}{-n^5+5n^4+9n^2},\qquad
+\frac{-n^6+2n^4+3n}{-n^5+5n^6+9n^2},\qquad
+\frac{n^{37}-5n^{51}+12}{n^{11}-7n^3+8n^{51}-9}.
+\]
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Denominatore di grado cinque.} Nel primo rapporto i termini dominanti sono $-n^6$ e $-n^5$. Infatti
+\[
+\frac{-n^6+2n^4+3n}{-n^5+5n^4+9n^2}
+=n\,\frac{1-2/n^2-3/n^5}{1-5/n-9/n^3}
+\longrightarrow+\infty.
+\]
+
+\textbf{Denominatore di grado sei.} Nel secondo rapporto il termine $5n^6$ domina anche se compare dopo $-n^5$. Dividendo per $n^6$,
+\[
+\frac{-1+2/n^2+3/n^5}{-1/n+5+9/n^4}
+\longrightarrow-\frac15.
+\]
+Conta il grado massimo, non l'ordine in cui sono scritti i monomi.\footnote{Le due versioni distinguono un esponente di lettura incerta nel manoscritto: il risultato cambia se il termine del denominatore è $5n^4$ oppure $5n^6$. Il raccoglimento con $-n^5$ è valido soltanto nella prima versione.}
+
+\Needspace{9\baselineskip}
+\textbf{Gradi uguali.} Nell'ultimo rapporto entrambi i gradi sono $51$. Raccogliendo i rispettivi termini principali,
+\[
+\frac{n^{37}-5n^{51}+12}{n^{11}-7n^3+8n^{51}-9}
+=\frac{-5n^{51}(1+o(1))}{8n^{51}(1+o(1))}
+\longrightarrow-\frac58.
+\]
+\end{svolgimento}
+
+\section{Limite del valore assoluto}
+\label{sec:limite-modulo}
+% Fonte: Lezione 13, p. 13. La fonte prova il caso finito; esplicitato il caso infinito.
+
+\begin{proposizione}
+\label{prop:limite-modulo}
+Se $a_n\to\ell\in\overline\R$, allora $|a_n|\to|\ell|$, dove $|+\infty|=|-\infty|=+\infty$.
+\end{proposizione}
+\begin{proof}
+\textbf{Limite finito.} Dalla disuguaglianza triangolare si ricava
+\[
+|a_n|\le|a_n-\ell|+|\ell|,\qquad
+|\ell|\le|a_n-\ell|+|a_n|,
+\]
+quindi la disuguaglianza triangolare inversa dà
+\[
+0\le\bigl||a_n|-|\ell|\bigr|\le|a_n-\ell|\longrightarrow0.
+\]
+Per i carabinieri la distanza fra $|a_n|$ e $|\ell|$ tende a zero, ossia $|a_n|\to|\ell|$.
+
+\textbf{Limite infinito.} Se $a_n\to+\infty$, definitivamente $|a_n|=a_n$; se $a_n\to-\infty$, definitivamente $|a_n|=-a_n$. In entrambi i casi $|a_n|\to+\infty$.
+\end{proof}
+
+Per $\ell$ finito il risultato si legge anche come $f(a_n)\to f(\ell)$ per la funzione $f(x)=|x|$. Questo suggerisce di studiare quali funzioni conservino il limite delle successioni: è il punto di partenza della continuità.

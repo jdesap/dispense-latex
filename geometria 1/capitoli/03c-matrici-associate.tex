@@ -1,0 +1,165 @@
+% !TeX root = ../main.tex
+\section{Matrice associata a un'applicazione lineare}
+\subsection{Le immagini di una base determinano l'applicazione}
+Sia $\mathcal B=(v_1,\ldots,v_n)$ una base di $V$. Per linearità,
+\[
+ v=\sum_{i=1}^n\lambda_iv_i\quad\Longrightarrow\quad
+ f(v)=\sum_{i=1}^n\lambda_if(v_i).
+\]
+Per conoscere $f$ su tutto $V$ basta quindi conoscere le immagini dei vettori di una base. Viceversa, scelti arbitrariamente $z_1,\ldots,z_n\in W$, la formula $f(\sum_i\lambda_iv_i)=\sum_i\lambda_iz_i$ definisce un'unica applicazione lineare con $f(v_i)=z_i$: è ben definita per l'unicità delle coordinate, e la linearità si verifica sommando le coordinate.
+
+\begin{definizione}
+Fissate le basi ordinate $\mathcal B=(v_1,\ldots,v_n)$ di $V$ e $\mathcal C=(w_1,\ldots,w_m)$ di $W$, scriviamo
+\[
+ f(v_i)=\sum_{h=1}^m a_{hi}w_h.
+\]
+La \emph{matrice di $f$ nelle basi $\mathcal B,\mathcal C$} è
+\[
+ A=M_{\mathcal B}^{\mathcal C}(f)=(a_{hi})\in M(m,n,K).
+\]
+La sua colonna $i$ è $[f(v_i)]_{\mathcal C}$. La base in basso si riferisce al dominio e quella in alto al codominio.\footnote{La notazione $M_{\mathcal B}^{\mathcal C}(f)$ corrisponde alla notazione manoscritta $\psi_{\mathcal B}^{\mathcal C}(f)$. Nel testo di Bertapelle e Candilera è usata anche la notazione $\alpha_{\mathcal B\mid\mathcal C}(f)$.}
+\end{definizione}
+La matrice dipende da entrambe le basi; ha tante colonne quanti sono i vettori della base del dominio e tante righe quanti sono quelli della base del codominio.
+
+\begin{proposizione}[Formula delle coordinate]
+\label{prop:coordinate-applicazione}
+Per ogni $v\in V$,
+\[
+ [f(v)]_{\mathcal C}=M_{\mathcal B}^{\mathcal C}(f)[v]_{\mathcal B}.
+\]
+\end{proposizione}
+\begin{proof}
+Posto $v=\sum_i\lambda_iv_i$, la linearità e le espressioni di $f(v_i)$ danno
+\[
+ f(v)=\sum_i\lambda_i\sum_h a_{hi}w_h
+     =\sum_h\left(\sum_i a_{hi}\lambda_i\right)w_h.
+\]
+Per unicità delle coordinate, se $[f(v)]_{\mathcal C}=(\mu_h)$, allora $\mu_h=\sum_i a_{hi}\lambda_i$. È esattamente la componente $h$ del prodotto $A[v]_{\mathcal B}$.
+\end{proof}
+
+\subsection{Un'applicazione in due coppie di basi}
+\begin{esercizio}
+Sia $f:\R^2\to\R^2$ definita da
+\[
+ f(x_1,x_2)=(2x_1-x_2,\ x_1+3x_2).
+\]
+Determinare la matrice di $f$ rispetto alle basi
+\[
+ \mathcal B=\bigl((1,1),(2,-1)\bigr),\qquad
+ \mathcal C=\bigl((-3,1),(2,0)\bigr),
+\]
+e rispetto alle basi canoniche del dominio e del codominio.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Immagini e coordinate nella base $\mathcal C$.} La formula di $f$ è lineare nelle due variabili, dunque definisce un'applicazione lineare. Le famiglie indicate sono basi: risolvendo $\lambda(1,1)+\mu(2,-1)=0$ si ottiene $\lambda=\mu=0$, e risolvendo $\alpha(-3,1)+\beta(2,0)=0$ si trova $\alpha=\beta=0$; due vettori indipendenti in $\R^2$ formano una base.
+
+Si ha $f(1,1)=(1,4)$. Per esprimerlo come $a_{11}(-3,1)+a_{21}(2,0)$ risolviamo
+\[
+ \begin{cases}-3a_{11}+2a_{21}=1,\\a_{11}=4,\end{cases}
+ \qquad\Longrightarrow\qquad a_{11}=4,\quad a_{21}=\frac{13}{2}.
+\]
+Analogamente $f(2,-1)=(5,-1)$, e
+\[
+ \begin{cases}-3a_{12}+2a_{22}=5,\\a_{12}=-1,\end{cases}
+ \qquad\Longrightarrow\qquad a_{12}=-1,\quad a_{22}=1.
+\]
+Disponendo le due colonne otteniamo
+\[
+ M_{\mathcal B}^{\mathcal C}(f)=\begin{pmatrix}4&-1\\13/2&1\end{pmatrix}.
+\]
+\textbf{Basi canoniche.} Se $\mathcal E=(e_1,e_2)$ è la base canonica, le colonne sono direttamente $f(e_1)=(2,1)$ e $f(e_2)=(-1,3)$, quindi
+\[
+ M_{\mathcal E}^{\mathcal E}(f)=\begin{pmatrix}2&-1\\1&3\end{pmatrix}.
+\]
+Le due matrici rappresentano la stessa funzione, ma agiscono su colonne di coordinate riferite a basi diverse.
+\end{svolgimento}
+
+\section{Nucleo, immagine e controimmagini mediante matrici}
+\subsection{Sistemi per il nucleo e per le fibre}
+Posto $A=M_{\mathcal B}^{\mathcal C}(f)$, la formula delle coordinate dà
+\[
+ v\in\ker f\quad\Longleftrightarrow\quad A[v]_{\mathcal B}=0.
+\]
+Per trovare una base di $\ker f$, risolviamo il sistema omogeneo $Ax=0$, scegliamo una base dello spazio delle soluzioni in $K^n$ e ricostruiamo i vettori di $V$ mediante la base $\mathcal B$. Le colonne risolutive sono coordinate, non necessariamente i vettori del dominio stessi.
+
+\begin{definizione}
+Per $w\in W$, la \emph{controimmagine} di $w$, o \emph{fibra sopra $w$}, è
+\[
+ f^{-1}(w)=\{v\in V:f(v)=w\}.
+\]
+Qui $f^{-1}(w)$ indica un insieme, anche quando $f$ non è invertibile; si incontra anche la scrittura $f^{\leftarrow}(w)$.
+\end{definizione}
+Se $b=[w]_{\mathcal C}$, calcolare $f^{-1}(w)$ equivale a risolvere $Ax=b$. La fibra è vuota se $w\notin\operatorname{Im}f$. Se invece $f(v_0)=w$, allora
+\[
+ f^{-1}(w)=v_0+\ker f.
+\]
+Infatti $f(v)=w=f(v_0)$ equivale a $f(v-v_0)=0$. È la versione astratta della struttura delle soluzioni di un sistema non omogeneo già dimostrata nel capitolo precedente.
+
+\subsection{L'immagine e il rango della matrice}
+\begin{proposizione}
+Se $\mathcal B=(v_1,\ldots,v_n)$ è una base di $V$, allora
+\[
+ \operatorname{Im}f=\operatorname{span}\{f(v_1),\ldots,f(v_n)\}.
+\]
+Per ogni scelta delle basi del dominio e del codominio,
+\[
+ \dim\operatorname{Im}f=\operatorname{rg}M_{\mathcal B}^{\mathcal C}(f).
+\]
+\end{proposizione}
+\begin{proof}
+Ogni $f(v)$ è combinazione delle immagini dei vettori di base; viceversa ogni combinazione $\sum_i\lambda_if(v_i)=f(\sum_i\lambda_iv_i)$ appartiene all'immagine. Le colonne della matrice sono le coordinate di queste immagini. L'isomorfismo delle coordinate conserva le relazioni lineari, dunque la dimensione dello spazio generato dalle immagini è il rango per colonne della matrice, che coincide con il rango per righe.
+\end{proof}
+Le immagini di una base generano sempre l'immagine, ma possono essere dipendenti. Per ricavarne una base si selezionano le colonne pivot nella matrice ridotta e si prendono le immagini $f(v_i)$ corrispondenti alle colonne \emph{originarie}. Inoltre
+\[
+ \dim\ker f=n-\operatorname{rg}A,
+\]
+in accordo sia con il teorema della dimensione sia con il conteggio dei parametri di $Ax=0$.
+
+\section{Operazioni sulle applicazioni e sulle matrici}
+\subsection{Lo spazio delle applicazioni lineari}
+\begin{definizione}
+Si indica con $\operatorname{Hom}_K(V,W)$ l'insieme delle applicazioni lineari da $V$ a $W$. Le operazioni sono definite punto per punto:
+\[
+ (f+g)(v)=f(v)+g(v),\qquad (\lambda f)(v)=\lambda f(v).
+\]
+\end{definizione}
+Queste operazioni rendono $\operatorname{Hom}_K(V,W)$ uno spazio vettoriale. Infatti, per $a,b\in K$,
+\begin{align*}
+ (f+g)(av+bv')&=a(f+g)(v)+b(f+g)(v'),\\
+ (\lambda f)(av+bv')&=a(\lambda f)(v)+b(\lambda f)(v').
+\end{align*}
+La funzione nulla è lineare, l'opposto è $-f$ e gli assiomi dello spazio vettoriale si verificano valutando in ciascun $v$ e usando quelli di $W$.
+
+\begin{proposizione}
+A basi fissate, la somma e la moltiplicazione per scalari corrispondono alle stesse operazioni fra matrici:
+\[
+ M_{\mathcal B}^{\mathcal C}(f+g)=M_{\mathcal B}^{\mathcal C}(f)+M_{\mathcal B}^{\mathcal C}(g),\qquad
+ M_{\mathcal B}^{\mathcal C}(\lambda f)=\lambda M_{\mathcal B}^{\mathcal C}(f).
+\]
+\end{proposizione}
+\begin{proof}
+La colonna $i$ della matrice di $f+g$ è $[f(v_i)+g(v_i)]_{\mathcal C}=[f(v_i)]_{\mathcal C}+[g(v_i)]_{\mathcal C}$. Per gli scalari si usa allo stesso modo $[\lambda f(v_i)]_{\mathcal C}=\lambda[f(v_i)]_{\mathcal C}$.
+\end{proof}
+La corrispondenza $f\mapsto M_{\mathcal B}^{\mathcal C}(f)$ è quindi un isomorfismo fra $\operatorname{Hom}_K(V,W)$ e $M(m,n,K)$: ogni matrice prescrive liberamente le immagini dei vettori di base e determina un'unica applicazione. In particolare, in dimensione finita, $\dim\operatorname{Hom}_K(V,W)=mn$.
+
+\subsection{La composizione corrisponde al prodotto}
+\begin{proposizione}
+Per $f:V\to W$, $g:W\to Z$ lineari e basi $\mathcal B,\mathcal C,\mathcal D$ rispettivamente di $V,W,Z$, si ha
+\[
+ M_{\mathcal B}^{\mathcal D}(g\circ f)
+ =M_{\mathcal C}^{\mathcal D}(g)\,M_{\mathcal B}^{\mathcal C}(f).
+\]
+\end{proposizione}
+\begin{proof}
+Per ogni $v\in V$, applicando due volte la formula delle coordinate,
+\begin{align*}
+ [(g\circ f)(v)]_{\mathcal D}
+ &=M_{\mathcal C}^{\mathcal D}(g)[f(v)]_{\mathcal C}\\
+ &=M_{\mathcal C}^{\mathcal D}(g)M_{\mathcal B}^{\mathcal C}(f)[v]_{\mathcal B}.
+\end{align*}
+Valutando sui vettori $v_i$ della base, le colonne dei due membri coincidono, e quindi coincidono le matrici.
+\end{proof}
+L'applicazione che agisce per prima è il fattore più a destra. La base $\mathcal C$ deve essere la stessa nel codominio di $f$ e nel dominio di $g$. In particolare, se $f$ è un isomorfismo, dalla composizione con $f^{-1}$ si ottiene
+\[
+ M_{\mathcal C}^{\mathcal B}(f^{-1})=\bigl(M_{\mathcal B}^{\mathcal C}(f)\bigr)^{-1}.
+\]

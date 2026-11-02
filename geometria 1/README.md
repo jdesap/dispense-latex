@@ -6,12 +6,15 @@ confrontate con la fonte, compilate e controllate nell'impaginazione.
 
 ## Stato attuale
 
-Sono integrate le **lezioni 5–15** (10 PDF, 47 pagine di fonti).
-Il capitolo 1 raccoglie spazi vettoriali e sottospazi; il nuovo capitolo 2,
+Sono integrate le **lezioni 5–18** (13 PDF, 65 pagine di fonti).
+Il capitolo 1 raccoglie spazi vettoriali e sottospazi; il capitolo 2,
 **Sistemi lineari e matrici**, comprende Gauss, rango, prodotto e trasposta,
 inverse, sistemi omogenei, Rouché–Capelli ed esercizi con parametro.
-Il volume aggiornato al 28 ottobre 2026 ha **36 pagine**, con 3 preliminari,
-26 pagine per il capitolo 1 e 7 per il capitolo 2.
+Il nuovo capitolo 3, **Applicazioni lineari**, comprende linearità,
+isomorfismi, nucleo e immagine, teorema della dimensione, proiezioni e
+simmetrie, matrici associate, operazioni e cambiamento di basi.
+Il volume aggiornato al 2 novembre 2026 ha **45 pagine**, con 3 preliminari,
+26 pagine per il capitolo 1, 7 per il capitolo 2 e 9 per il capitolo 3.
 La parte sui numeri complessi resta in attesa di consegna separata.
 
 La revisione editoriale integrale, svolta in quattro sessioni per Spazi
@@ -54,9 +57,8 @@ latexmk main.tex
 ```
 
 Salva/Build in VS Code e la compilazione da terminale esportano anche
-automaticamente `build/capitoli/01-spazi-vettoriali.pdf`. Gli eventuali
-nuovi capitoli avranno ciascuno il proprio PDF, senza un elenco da
-aggiornare. Gli estratti mantengono impaginazione, numerazione e
+automaticamente un PDF per ciascun capitolo numerato in `build/capitoli/`.
+Anche i nuovi capitoli avranno il proprio PDF, senza un elenco da aggiornare. Gli estratti mantengono impaginazione, numerazione e
 segnalibri del volume e si possono importare singolarmente in Goodnotes.
 Le copie annotate vanno tenute separate dai file generati; una riscrittura
 del capitolo può modificarne l'impaginazione e richiedere il trasferimento

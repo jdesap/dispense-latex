@@ -1,8 +1,8 @@
 # Appunti di analisi 1
 
 Appunti di **Jude De Sa'Pinto** dal corso del **Prof. Federico Cacciafesta**.
-Revisione editoriale integrale conclusa il 22 ottobre 2026; lezioni 10–12 integrate
-il 28 ottobre: 75 pagine, otto capitoli. Resoconto e limiti della revisione editoriale in
+Revisione editoriale integrale conclusa il 22 ottobre 2026; lezione 13 integrata
+il 2 novembre: 83 pagine, nove capitoli. Resoconto e limiti della revisione editoriale in
 `../lavoro/revisione-editoriale/RESOCONTO_FINALE.md`.
 La lezione 9 completa il capitolo di topologia con interno, frontiera,
 punti isolati, aderenza e accumulazione; dettagli e aggiunte redazionali in
@@ -13,6 +13,12 @@ limiti finiti e infiniti, unicità, permanenza del segno, confronti, algebra e
 avvicinamento da sopra o da sotto. Mappa degli accorpamenti, correzioni e
 aggiunte in `lavoro/LEZIONI_10_12_2026-10-28.md`; controlli in
 `lavoro/VERIFICA_LEZIONI_10_12_2026-10-28.json`.
+La lezione 13 completa il capitolo 8 con reciproci, quozienti, termine dominante,
+limiti di polinomi e funzioni razionali e limite del valore assoluto. Apre inoltre
+il capitolo 9 «Continuità», con definizione tramite successioni, ruolo del dominio
+e operazioni fra funzioni continue. Accorpamenti, correzioni e letture alternative
+di un esponente sono documentati in `lavoro/LEZIONE_13_2026-11-02.md`;
+verifiche in `lavoro/VERIFICA_LEZIONE_13_2026-11-02.json`.
 Le barre laterali, i numeretti blu delle note, il rientro delle prove e le
 spaziature si regolano nel blocco **STILE MATEMATICO** di `preambolo.tex`,
 I parametri e gli ultimi controlli sono descritti in
@@ -59,7 +65,7 @@ ad aggiornare indice e collegamenti. I commenti `TeX root` permettono di
 compilare il documento principale anche mentre si modifica un capitolo.
 
 La stessa compilazione, anche con Salva/Build in VS Code, esporta
-automaticamente gli otto capitoli in `build/capitoli/`, con nomi tematici.
+automaticamente i nove capitoli in `build/capitoli/`, con nomi tematici.
 I nuovi capitoli saranno riconosciuti senza configurazioni aggiuntive.
 Gli estratti mantengono impaginazione, numeri di pagina e segnalibri
 del volume; possono essere importati singolarmente in Goodnotes.

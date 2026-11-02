@@ -438,3 +438,79 @@ Compilazione condivisa riuscita senza avvisi: 36 pagine. Estratti di 26 e
 indice, raccordo e tutte le pagine nuove. Capitolo 1: aggiunto un rinvio,
 lunghezza invariata; capitolo 2 nuovo, pagine 27–33. Nessuna copia annotata
 modificata. Risultati in VERIFICA_LEZIONI_13-15_2026-10-28.json.
+
+
+## Lezioni 16–18 — 2 novembre 2026
+
+Fonti: Lezione_16.pdf (7 pagine), Lezione_17.pdf (5), Lezione_18.pdf (6).
+Tutte le 18 pagine sono state lette visivamente; copie originali conservate
+in fonti, con hash SHA-256 verificati e manifest aggiornato. Il corpus
+contiene ora 13 PDF e 65 pagine. Copertura puntuale in COPERTURA.csv.
+
+### Confronto e collocazione
+
+Confrontati i contenuti con tutti i moduli attivi dei capitoli 1 e 2.
+Coordinate e unicità erano già trattate in 01c; somme dirette in 01b e
+complementari in 01h; coordinate dei polinomi e loro passaggi in 01j.
+La nuova teoria usa questi risultati senza riscriverne le prove: formalizza
+l'isomorfismo delle coordinate e applica le somme dirette alle proiezioni.
+Sistemi omogenei, rango e struttura delle soluzioni erano già presenti
+in 02a–02c: conservati lì i metodi di calcolo e le prove; nel nuovo capitolo
+sono reinterpretati come nucleo, immagine e fibre. Aggiunto in 02c un
+rinvio al teorema della dimensione, e tenuto insieme il titolo del successivo
+esercizio con consegna e avvio dello svolgimento.
+
+Creato il capitolo 3 «Applicazioni lineari», macroargomento distinto dai
+sistemi. La definizione di matrice anticipata nella lezione 16 è accorpata
+con la trattazione completa della 17. La generazione dell'immagine tramite
+immagini di una base, ripresa nella 18, è collegata alla prova della dimensione
+e sviluppata nella sezione sul calcolo matriciale, senza duplicare la prova
+astratta. La somma di applicazioni della 18 completa la definizione di Hom
+anticipata nella 16. Il cambio di base comprende la definizione come matrice
+dell'identità, entrambi i versi, le quattro identità delle coordinate e la
+derivazione della formula generale. Provenienza soltanto sotto il capitolo;
+registri e riferimenti alle pagine delle fonti esclusi dal volume.
+
+### Contenuti e correzioni
+
+Conservati definizioni, proprietà, esempi e richieste delle fonti. Esplicitati
+i controesempi seno e potenze; la precisazione sul campo a due elementi resta
+in nota. Svolte le prove lasciate per esercizio: linearità dell'inversa,
+sottospazio immagine, isomorfismo dei coefficienti e delle coordinate,
+proprietà della simmetria e matrice nelle basi canoniche. Teorema della
+dimensione con completamento della base del nucleo e prove di generazione
+e indipendenza. Hom dotato delle operazioni punto per punto; aggiunti la
+compatibilità con gli scalari e il conseguente isomorfismo con le matrici.
+Tre schemi TikZ ricostruiscono proiezione obliqua, simmetria e due sistemi
+di coordinate per lo stesso vettore. La prova del criterio di iniettività
+esplicita in testo le due preimmagini dello zero del disegno della fonte.
+
+Corretto il refuso finale della lezione 17, pagina 5: la matrice nelle basi
+assegnate è ((4;-1);(13/2;1)), con entrata (2,2) uguale a 1, come già risulta
+dal sistema svolto nella stessa fonte. Le proprietà della simmetria sono
+presentate su R; una nota precisa l'eccezione in caratteristica 2 per le
+identità Im(id+sigma)=U e ker(id+sigma)=W. La formula generale di cambio di
+basi è verificata anche riprendendo l'esercizio concreto.
+
+### Verifiche e impaginazione
+
+Controlli con frazioni esatte: immagini dei vettori di base, matrice nelle
+basi assegnate, matrice canonica, inversa della matrice di coordinate,
+formula di cambio di basi. Verificate idempotenza della proiezione,
+involutività della simmetria e id+sigma=2pi in un esempio obliquo.
+Rilette le dimostrazioni generali, incluse le direzioni dei cambi di basi
+e l'ordine dei fattori nella composizione.
+
+Compilazione con configurazione condivisa completata senza errori o avvisi.
+Volume di 45 pagine: 3 preliminari e capitoli di 26, 7 e 9 pagine.
+Verificati tutti gli estratti rispetto al volume: testo, flussi pagina,
+formato, etichette di numerazione e rendering pixel identici; segnalibri
+numerati presenti. Controllo visivo dell'indice, raccordo finale del
+capitolo 2 e tutte le nove pagine nuove; ricontrollate le due pagine del
+raccordo dopo aver eliminato il titolo isolato.
+
+Il capitolo 1 conserva il contenuto e l'impaginazione; nel capitolo 2 cambia
+il raccordo finale alle pagine 32–33, senza cambiare lunghezza. Il capitolo 3
+occupa le pagine 34–42 del testo. Gli estratti sono stati rigenerati; nessuna
+copia annotata modificata. Esiti e impronte correnti in
+VERIFICA_LEZIONI_16-18_2026-11-02.json.

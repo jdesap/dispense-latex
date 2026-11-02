@@ -46,3 +46,21 @@ Lezione 14,4,Seconda disuguaglianza e Rouché-Capelli,verificato,capitoli/02-sis
 Lezione 14,5,Fine dimostrazione e parametri liberi,verificato,capitoli/02-sistemi-lineari-e-matrici.tex
 Lezione 15,1,Matrice parametrica e riduzione e casi zero e uno,verificato,capitoli/02-sistemi-lineari-e-matrici.tex
 Lezione 15,2,Conclusione dei casi e rango generico,verificato,capitoli/02-sistemi-lineari-e-matrici.tex
+Lezione 16,1,Definizione e criterio di linearità e immagine dello zero e traslazione,verificato,capitoli/03a-linearita-nucleo-immagine.tex
+Lezione 16,2,Controesempi e campo a due elementi e composizione e inversa,verificato,capitoli/03a-linearita-nucleo-immagine.tex
+Lezione 16,3,Conclusione composizione e nucleo e immagine e proprietà di sottospazio,verificato,capitoli/03a-linearita-nucleo-immagine.tex
+Lezione 16,4,Criterio di iniettività e isomorfismi e polinomi e inizio coordinate,verificato,capitoli/03a-linearita-nucleo-immagine.tex
+Lezione 16,5,Isomorfismo delle coordinate e inizio teorema della dimensione,verificato,capitoli/03a-linearita-nucleo-immagine.tex
+Lezione 16,6,Fine teorema della dimensione e rango e nullità e Hom,verificato,capitoli/03a-linearita-nucleo-immagine.tex;capitoli/03c-matrici-associate.tex
+Lezione 16,7,Spazio Hom e immagini di una base e anticipazione matrice,verificato,capitoli/03c-matrici-associate.tex
+Lezione 17,1,Proiezione e linearità e nucleo e immagine,verificato,capitoli/03b-proiezioni-simmetrie.tex
+Lezione 17,2,Proprietà della proiezione e simmetria e proprietà,verificato,capitoli/03b-proiezioni-simmetrie.tex
+Lezione 17,3,Fine proprietà simmetria e definizione matrice associata e notazioni,verificato,capitoli/03b-proiezioni-simmetrie.tex;capitoli/03c-matrici-associate.tex
+Lezione 17,4,Formula delle coordinate e inizio esercizio in R2,verificato,capitoli/03c-matrici-associate.tex
+Lezione 17,5,Esercizio nelle due basi e richiesta delle basi canoniche,verificato,capitoli/03c-matrici-associate.tex
+Lezione 18,1,Nucleo e controimmagini e immagini di una base,verificato,capitoli/03c-matrici-associate.tex
+Lezione 18,2,Rango della matrice e somma di applicazioni,verificato,capitoli/03c-matrici-associate.tex
+Lezione 18,3,Fine somma e composizione e inizio cambio di base,verificato,capitoli/03c-matrici-associate.tex;capitoli/03d-cambi-di-base.tex
+Lezione 18,4,Cambio di base e inversa e schema in dimensione due,verificato,capitoli/03d-cambi-di-base.tex
+Lezione 18,5,Cambio delle basi del dominio e codominio e quattro identità,verificato,capitoli/03d-cambi-di-base.tex
+Lezione 18,6,Derivazione della formula di cambio di basi,verificato,capitoli/03d-cambi-di-base.tex

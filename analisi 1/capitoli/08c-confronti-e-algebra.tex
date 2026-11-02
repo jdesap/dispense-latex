@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 % Fonte: Lezione 12, pp. 2--10; caso sin(n) da Lezione 11, p. 14.
 % Completate le prove lasciate implicite: confronti a infinito, prodotto,
-% casi infiniti dell'algebra. Il teorema sui quozienti non è nelle fonti.
+% casi infiniti dell'algebra. Reciproci e quozienti: Lezione 13, pp. 2--4.
 \section{Teoremi di confronto}
 
 \begin{proposizione}[Confronto con una successione divergente]
@@ -179,12 +179,22 @@ la regola della somma già dimostrata dà $a_nb_n-\alpha\beta\to0$, ossia $a_nb_
 \textbf{Due limiti infiniti.} Se $a_n,b_n\to+\infty$, allora per ogni $M>0$ definitivamente entrambi i fattori sono maggiori di $\sqrt M$, dunque $a_nb_n>M$. Gli altri casi si riducono a questo cambiando i segni dei fattori; si ottiene $+\infty$ per segni uguali e $-\infty$ per segni opposti.
 \end{proof}
 
+\Needspace{22\baselineskip}
 \begin{osservazione}[Forme indeterminate]
 Se le operazioni fra limiti non sono definite, i limiti dei singoli fattori o addendi non determinano il risultato. Per esempio, con $c\in\R$,
 \[
 n+(-n+c)=c,
 \]
-benché i due addendi tendano a $+\infty$ e $-\infty$. Per i prodotti con fattori tendenti a $0$ e a $+\infty$ si hanno, per $n\ge1$,
+benché i due addendi tendano a $+\infty$ e $-\infty$.
+% Fonte aggiuntiva: Lezione 13, pp. 6--7; accorpata la cancellazione costante.
+Con lo stesso primo addendo $n$, scegliendo come secondo addendo $-n/2$, $-2n$ oppure $-n+(-1)^n$ si ottengono rispettivamente
+\[
+\frac n2\to+\infty,\qquad -n\to-\infty,\qquad
+(-1)^n\text{ irregolare}.
+\]
+Tutti e tre i secondi addendi tendono a $-\infty$; per l'ultimo basta osservare che $-n+(-1)^n\le-n+1\to-\infty$. La stessa forma può quindi dare un limite finito, un infinito oppure nessun limite: va studiata caso per caso.
+
+Per i prodotti con fattori tendenti a $0$ e a $+\infty$ si hanno, per $n\ge1$,
 \[
 \frac1{n^2}\,n=\frac1n\to0,\qquad
 \frac1n\,n=1,\qquad
@@ -214,7 +224,8 @@ L'altra identità
 
 \Needspace{26\baselineskip}
 \section{Avvicinamento da sopra e da sotto}
-% Fonte: Lezione 12, p. 10. Le fonti terminano qui: nessun teorema del quoziente.
+\label{sec:avvicinamento-laterale}
+% Fonte: Lezione 12, p. 10; prerequisito per Lezione 13, pp. 2--4.
 
 Per descrivere il segno della differenza $a_n-\ell$ occorre aggiungere un'informazione alla sola convergenza.
 
@@ -238,3 +249,70 @@ Per $n\ge1$, $\ell+1/n\to\ell^+$ e $\ell-1/n\to\ell^-$. La successione $\ell+(-1
 \end{tikzpicture}
 \par\smallskip I punti pieni tendono a $\ell$ da sopra, quelli vuoti da sotto. Una convergenza generica può invece attraversare ripetutamente il livello $\ell$.
 \end{schema}
+
+\section{Reciproci e quozienti}
+% Fonte: Lezione 13, pp. 2--4. Prove ricostruite; corretti dominio e segno nell'esempio oscillante.
+
+Il reciproco $1/a_n$ si considera soltanto dove $a_n\ne0$. Per studiarne il limite basta che questa condizione valga definitivamente: si lavora sulla coda in cui tutti i termini sono definiti.
+
+\begin{proposizione}[Limite del reciproco]
+\label{prop:limite-reciproco}
+Per una successione reale valgono le seguenti implicazioni:
+\[
+\begin{aligned}
+a_n\to+\infty&\ \Longrightarrow\ \frac1{a_n}\to0^+,&
+a_n\to-\infty&\ \Longrightarrow\ \frac1{a_n}\to0^-,\\
+a_n\to\ell\in\R\setminus\{0\}&\ \Longrightarrow\ \frac1{a_n}\to\frac1\ell,\\
+a_n\to0^+&\ \Longrightarrow\ \frac1{a_n}\to+\infty,&
+a_n\to0^-&\ \Longrightarrow\ \frac1{a_n}\to-\infty.
+\end{aligned}
+\]
+In tutti questi casi $a_n\ne0$ definitivamente.
+\end{proposizione}
+\begin{proof}
+\textbf{Limite infinito.} Se $a_n\to+\infty$, per ogni $\varepsilon>0$ definitivamente $a_n>1/\varepsilon$, dunque $0<1/a_n<\varepsilon$. Per $a_n\to-\infty$ si cambia segno.
+
+\textbf{Limite finito non nullo.} Dalla convergenza, definitivamente $|a_n-\ell|<|\ell|/2$, quindi $|a_n|>|\ell|/2>0$. Allora
+\[
+\left|\frac1{a_n}-\frac1\ell\right|
+=\frac{|a_n-\ell|}{|a_n|\,|\ell|}
+\le\frac{2}{|\ell|^2}|a_n-\ell|\longrightarrow0.
+\]
+Per ottenere una distanza minore di $\varepsilon$ basta imporre anche $|a_n-\ell|<\varepsilon|\ell|^2/2$.
+
+\textbf{Limite nullo da un lato.} Se $a_n\to0^+$, per ogni $M>0$ definitivamente $0<a_n<1/M$ e perciò $1/a_n>M$. Se $a_n\to0^-$, si ha invece $-1/M<a_n<0$, dunque $1/a_n<-M$.
+\end{proof}
+
+\begin{esempio}
+Per $n\ge1$, $a_n=1/n\to0^+$ ha reciproco $n\to+\infty$; $b_n=-1/n\to0^-$ ha reciproco $-n\to-\infty$.
+
+Se $c_n=(-1)^n/n\to0$, il reciproco è $1/c_n=(-1)^n n$. Le estratte pari e dispari tendono a $+\infty$ e $-\infty$: il reciproco è irregolare. Infatti il limite $0$ da solo non specifica da quale lato si avvicinino i termini.
+\end{esempio}
+
+Più in generale, se $a_n\to0$, $a_n\ne0$ definitivamente e il segno non è definitivamente costante, entrambi i segni ricorrono frequentemente. Estraendo i termini positivi e quelli negativi si ottengono reciproci tendenti ai due infiniti opposti, quindi nessun limite nella retta estesa. Se invece compaiono zeri a indici arbitrariamente grandi, $1/a_n$ non definisce neppure una successione su una coda.
+
+\begin{teorema}[Limite del quoziente]
+\label{teo:limite-quoziente}
+Siano $a_n\to\alpha$ e $b_n\to\beta$, con $b_n\ne0$ definitivamente. Nei seguenti casi si ha
+\[
+\frac{a_n}{b_n}\longrightarrow
+\begin{cases}
+\alpha/\beta,&\alpha\in\R,\ \beta\in\R\setminus\{0\},\\
+0,&\alpha\in\R,\ \beta=\pm\infty.
+\end{cases}
+\]
+Se $\alpha\ne0$ è finito e $b_n\to0^+$ o $0^-$, il quoziente tende a un infinito secondo la regola dei segni. La stessa regola vale quando $\alpha=\pm\infty$ e $\beta$ è finito non nullo, oppure $b_n\to0^+$ o $0^-$.
+\end{teorema}
+\begin{proof}
+Si scrive $a_n/b_n=a_n(1/b_n)$. La proposizione sul reciproco e la regola del prodotto danno tutti i casi elencati: per $\beta=\pm\infty$ e $\alpha$ finito il prodotto dei limiti è $\alpha\cdot0=0$; per $b_n\to0^\pm$ il secondo fattore tende all'infinito del segno indicato. Nessuno dei casi dell'enunciato richiede un prodotto indeterminato.
+\end{proof}
+
+\begin{osservazione}[Quozienti indeterminati]
+Le forme $0/0$ e $(\pm\infty)/(\pm\infty)$ non determinano il risultato. Per esempio $1/n$ e $1/n^2$ sono entrambe infinitesime, ma
+\[
+\frac{1/n^2}{1/n}\to0,\qquad
+\frac{1/n}{1/n}=1,\qquad
+\frac{1/n}{1/n^2}\to+\infty.
+\]
+Anche $n/n^2\to0$, $n/n=1$ e $n^2/n\to+\infty$ hanno tutti la stessa forma $+\infty/+\infty$. Occorre prima trasformare l'espressione. Se il denominatore tende a zero senza segno definitivo, anche con numeratore non nullo può mancare il limite, come mostra il reciproco oscillante appena studiato.
+\end{osservazione}
