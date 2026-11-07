@@ -3,6 +3,8 @@
 Raccolta di appunti organizzata per materia. Ogni sottocartella contiene
 i sorgenti LaTeX, le fonti, la configurazione di compilazione e il PDF.
 
+Indice di studio condiviso: [Dimostrazioni da studiare](DIMOSTRAZIONI_DA_STUDIARE.md), aggiornato insieme alle integrazioni delle dispense.
+
 ## Leggere gli appunti
 
 - [Analisi 1 — PDF](<analisi 1/build/main.pdf>)

@@ -74,6 +74,8 @@ Sessioni per capitolo; più per capitoli lunghi come Spazi vettoriali. «Continu
 
 A fine sessione compila, risolvi errori/avvisi, ispeziona pagine/raccordi, verifica estratti e aggiorna registri. Per modifiche globali controlla tutti i volumi interessati. Verifica conservazione di contenuti, formule, disegni, note e riferimenti; dichiara impedimenti.
 
+Mantenere anche `DIMOSTRAZIONI_DA_STUDIARE.md`, seguendone il protocollo interno, a ogni integrazione di fonti o revisione sostanziale delle prove: aggiornare priorità A/B/C, idee decisive, riferimenti e risultati assunti/rinviati, preservando le annotazioni personali. Le priorità valutano il lavoro necessario per ricostruire la prova, non sostituiscono le richieste ufficiali d’esame.
+
 Registri FUORI dal PDF, eventualmente nei commenti. Riutilizza `lavoro/SESSIONI.md`, `COPERTURA.csv`, manifest e registri: copertura, avanzamento, correzioni, limiti e verifiche. Distingui storico/corrente; niente dati inventati o duplicazioni. Consenti la ripresa in altre chat.
 
 ## 9. Consegna

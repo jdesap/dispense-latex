@@ -29,6 +29,10 @@
 % Indice stampato sintetico; sottosezioni disponibili nei segnalibri PDF.
 \setcounter{tocdepth}{1}
 \setcounter{secnumdepth}{2}
+% Spazio sufficiente anche per numeri di sezione come 10.10 nell'indice.
+\makeatletter
+\renewcommand*{\l@section}{\@dottedtocline{1}{1.5em}{3em}}
+\makeatother
 \setlength{\parindent}{0pt}
 % Un poco più di aria tra il corpo del testo e il separatore delle note.
 \addtolength{\skip\footins}{3pt}

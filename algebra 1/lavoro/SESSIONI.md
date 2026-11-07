@@ -94,3 +94,23 @@ La copertura è relativa ai PDF consegnati; non attesta il programma completo d'
 **Risultato:** 53 pagine,4 preliminari e49 testo; capitolo6 di10 pagine (34–43), capitolo7 di6 (44–49). Capitoli1–5 invariati anche nel rendering di tutte le33 pagine. Compilazione senza avvisi e sette estratti verificati integralmente (pixel, testo, flussi, numerazione, link). Riscontri matematici finiti supplementari:91.871 congruenze,339 sistemi,289 elementi di prodotti,2.401 matrici. Annotazioni separate non toccate.
 
 **Ripresa:** registro corrente LEZIONI_13-15_2026-11-01.md; prossima lezione A–L16. Snapshot precedente storico-prima-lezioni-13-15-2026-11-01/. Confrontare i rinvii D01–D03 al momento opportuno. Nessun commit,push o pubblicazione.
+
+
+## Sessione 6 — 5 novembre 2026: lezione 16
+
+**Completato:** lettura visiva di AL16 e MZ16 (otto pagine), rilettura MZ15 pp.4–6 e8–11 e confronto con il testo corrente prima della scrittura. Capitolo7 ampliato per macroargomento: morfismi unitari, esempi e valutazione, caratteristiche modulo2, mappaCRT e isomorfismo, corollario più fattori, immagini/inversa e fibre dei casi coprimi/non coprimi, esercizio affine modulo36, trasporto delle unità e funzione di Eulero. Accorpate ripetizioni di U(R), unità modulari e tavoleZ6; richiamate le prove già disponibili nei capitoli3 e6. Completati compiti e passaggi impliciti con provenienza registrata. MZ16 completa lo stesso tema Eulero avviatoAL16, senza nuovi argomenti ulteriori.
+
+**Rinvii risolti:** D01–D03 recuperati integralmente; nessun materiale ricevuto resta da integrare. Registro prove126 unità, copertura101 pagineAL e110 MZ,32 PDF originali/211 pagine. Prossima lezioneAL17.
+
+**Risultato:** 58 pagine,4 preliminari e54 testo; capitolo7 di11 pagine stampate44–54. Cambiano capitolo7 e indice; capitoli1–6 invariati nelle43 pagine (sorgenti e rendering). Copie annotate non modificate.
+
+**Verifiche:** compilazioni condivisa e integrata riuscite senza avvisi; sette estratti con tutte54 pagine identiche al volume per pixel/testo/flussi/numerazione/formato e link verificati. Ispezionati indice e tutte11 pagine del capitolo7; rifiniti i raccordi per evitare una valutazione spezzata e una prova breve divisa fra pagine. Riscontri supplementari su999 moduli Eulero,1.448 coppie coprime e256 coppie di sottoinsiemi; controllati integralmente gli esempi nuovi. Dettagli in CONTROLLI_LEZIONE_16_2026-11-05.json e LEZIONE_16_2026-11-05.md.
+
+**Ripresa:** usare il registro corrente LEZIONE_16_2026-11-05.md, verificare sempre il delta con tutti i macroargomenti; snapshot precedente storico-prima-lezione-16-2026-11-05/. Nessun commit,push o pubblicazione.
+
+
+### Riorganizzazione dopo la sessione6 — 5 novembre 2026
+
+L’autore richiede un nuovo capitolo «Funzione di Eulero e gruppi» e precisa di organizzare soltanto le aggiunte già ricavate dalle lezioni, senza iniziare autonomamente la teoria dei gruppi. Spostata integralmente la precedente sezione7.6 nel capitolo8, con la stessa provenienzaA–L16 e gli stessi enunciati, prove ed esempi. Nessuna nuova unità matematica. N21–N25 eD03 ricollocati nel8 nei registri; resto degli anelli/morfismi nel7.
+
+Volume58 pagine: capitolo7 di9 pagine (44–52), capitolo8 di2 (53–54). Otto estratti automatici; compilazioni condivisa e integrata riuscite, nessun avviso della condivisa. Controlli di testo esatto, conservazione dei capitoli1–7 e corrispondenza di tutti gli estratti col volume. Registro corrente `CAPITOLO_EULERO_E_GRUPPI_2026-11-05.md`; snapshot `storico-prima-capitolo-eulero-2026-11-05/`. Prossima lezioneA–L17; nessun rinvio residuo sulle fonti già ricevute.

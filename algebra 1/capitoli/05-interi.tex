@@ -20,10 +20,11 @@ Per $a,b\in\Z$ si dice che $a$ \textbf{divide} $b$, e si scrive $a\mid b$, se $b
 \end{definizione}
 
 \begin{proposizione}
-La divisibilità è riflessiva e transitiva, ma non è né simmetrica né antisimmetrica (quindi in $\Z$ non è una relazione di ordine o di equivalenza\footnote{E in $\N$? Beh è riflessiva, antisym. e transitiva (ma non totale) quindi è un ordine parziale.}). Due interi sono associati se e solo se $a=\pm b$; $\sim$ è un'equivalenza.
+La divisibilità è riflessiva e transitiva, ma non è né simmetrica né antisimmetrica (quindi in $\Z$ non è una relazione di ordine o di equivalenza) \footnote{E in $\N$? Beh è riflessiva, antisym. e transitiva (ma non totale) quindi è un ordine parziale.}. Due interi sono associati se e solo se $a=\pm b$; $\sim$ è un'equivalenza.
 \end{proposizione}
+
 \begin{proof}
-Si ha $a=a\cdot1$; se $b=am$ e $c=bn$, allora $c=a(mn)$. La simmetria fallisce perché $2\mid4$ e $4\nmid2$; l'antisimmetria fallisce perché $1\mid-1$ e $-1\mid1$.
+Si ha $a=a\cdot1$ (riflessiva); se $b=am$ e $c=bn$, allora $c=a(mn)$ (transitiva). La simmetria non vale perché $2\mid4$ e $4\nmid2$; l'antisimmetria non vale perché $1\mid-1$ e $-1\mid1$.
 
 Se $b=am$ e $a=bn$, per $a=0$ segue $b=0$. Se $a\ne0$, sostituendo si ha $a=amn$; cancellando $a$ si ricava $mn=1$, quindi $m=n=1$ oppure $m=n=-1$. Dunque $b=\pm a$. Il viceversa segue moltiplicando per $1$ o $-1$. Infine l'uguaglianza a meno del segno è riflessiva, simmetrica e transitiva: se $a=\varepsilon b$ e $b=\eta c$, con $\varepsilon,\eta\in\{1,-1\}$, allora $a=(\varepsilon\eta)c$.
 \end{proof}
@@ -57,7 +58,7 @@ Essendo un sottoinsieme infinito di $\N$, $P$ è numerabile infinito.
 Il numero $p_1\cdots p_r+1$ non deve essere primo: deve soltanto avere un divisore primo, che non può stare nella lista. La prova non richiede il teorema di fattorizzazione unica.
 \end{osservazione}
 
-\begin{esempio}[Crivello do Eratostene]
+\begin{esempio}[Crivello di Eratostene]
 Per trovare i primi fino a un intero $N\ge2$, si elencano i numeri da $2$ a $N$, si conserva il più piccolo non cancellato e si cancellano i suoi multipli maggiori di esso, ripetendo il procedimento. Un primo non viene cancellato; un composto viene cancellato quando si esamina un suo divisore primo. Per $N=20$ rimangono $2,3,5,7,11,13,17,19$.
 
 Si può interrompere la cancellazione dopo i primi non maggiori di $\sqrt N$: se $n\le N$ è composto, $n=uv$ con $u,v>1$ e almeno uno dei due fattori non supera $\sqrt n\le\sqrt N$. Quel fattore ha a sua volta un divisore primo non maggiore di $\sqrt N$, che fa cancellare $n$.
@@ -114,7 +115,7 @@ Se $a=0$, la condizione $0\mid m$ forza $m=0$; il numero $0$ è multiplo di $b$ 
 \end{proof}
 
 \begin{osservazione}
-«Massimo» e «minimo» si riferiscono alla divisibilità, non inizialmente all'ordine usuale. Per il minimo comune multiplo positivo è necessario $ab\ne0$: la sola esclusione $(a,b)=(0,0)$ non basta, come mostra la coppia $(0,2)$.
+«Massimo» e «minimo» si riferiscono alla divisibilità, non inizialmente all'ordine usuale. Per il minimo comune multiplo positivo è necessario $ab\ne0$: la sola esclusione di $(a,b)=(0,0)$ non basta, come mostra la coppia $(0,2)$.
 \end{osservazione}
 
 \section{Combinazioni intere e coprimalità}
@@ -123,18 +124,18 @@ Se $a=0$, la condizione $0\mid m$ forza $m=0$; il numero $0$ è multiplo di $b$ 
 Se $d\mid a$ e $d\mid b$, allora $d\mid\alpha a+\beta b$ per ogni $\alpha,\beta\in\Z$. Se invece $d\mid a$ e $d'\mid b$, allora $dd'\mid ab$.
 \end{proposizione}
 \begin{proof}
-Nella prima affermazione, $a=du$ e $b=dv$ danno $\alpha a+\beta b=d(\alpha u+\beta v)$. Nella seconda, $a=du$ e $b=d'v$ danno $ab=dd'(uv)$. I quozienti esibiti sono interi.
+Per la prima, $a=du$ e $b=dv$ danno $\alpha a+\beta b=d(\alpha u+\beta v)$. Per la seconda, $a=du$ e $b=d'v$ danno $ab=dd'(uv)$. I quozienti esibiti sono interi.
 \end{proof}
 
 \begin{proposizione}[Criterio tramite una combinazione]\label{prop:criterio-mcd}
 Siano $(a,b)\ne(0,0)$ e $d\mid a,b$. Se $d=\alpha a+\beta b$ per certi interi $\alpha,\beta$, allora $d$ è un massimo comune divisore. Se $d>0$, è $\operatorname{MCD}(a,b)$.
 \end{proposizione}
 \begin{proof}
-La condizione di divisore comune è già un'ipotesi. Se $c\mid a,b$, la proposizione~\ref{prop:combinazioni} dà $c\mid\alpha a+\beta b=d$. Vale quindi anche la condizione universale della definizione.
+Se $c\mid a,b$, per la proposizione~\ref{prop:combinazioni} si ha $c\mid\alpha a+\beta b=d$. Ponendo $c=\operatorname{MCD}(a,b)$, devo avere $c\mid d$, ma $d\mid c$ per definizione del massimo comun divisore da cui $c$ e $d$ sono associati.
 \end{proof}
 
 \begin{definizione}
-Gli interi $a,b$, non entrambi nulli, sono \textbf{coprimi} se $\operatorname{MCD}(a,b)=1$.
+Gli interi $a,b$, non entrambi nulli, sono \textbf{coprimi} se $\operatorname{MCD}(a,b)=1$
 \end{definizione}
 
 \begin{proposizione}

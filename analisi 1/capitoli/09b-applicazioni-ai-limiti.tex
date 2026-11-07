@@ -1,0 +1,66 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 14, pp. 2--6. Accorpati i richiami alla definizione; prova della composizione aggiunta.
+\section{Composizione e calcolo dei limiti}
+
+\begin{proposizione}[Continuità della composta]
+Siano $f\colon A\to B$ e $g\colon B\to\R$, con $A,B\subseteq\R$. Se $f$ è continua in $x_0\in A$ e $g$ è continua in $f(x_0)$, allora $g\circ f$ è continua in $x_0$.
+\end{proposizione}
+\begin{proof}
+Per ogni successione $x_n\in A$ con $x_n\to x_0$, la continuità di $f$ dà $f(x_n)\to f(x_0)$. I valori $f(x_n)$ appartengono a $B$; la continuità di $g$ nel punto $f(x_0)$ implica quindi $g(f(x_n))\to g(f(x_0))$, come richiesto.
+\end{proof}
+
+La stessa definizione si applica direttamente al calcolo di un limite: se $x_n\to x_0$, i termini appartengono al dominio di $f$ e $f$ è continua in $x_0$, allora $f(x_n)\to f(x_0)$. Si può dunque calcolare prima il limite dell'argomento, controllare dominio e continuità, e poi applicare la funzione al limite trovato. Per una successione definita solo definitivamente si lavora sulla sua coda.
+
+\begin{esercizio}[Continuità e fattore oscillante]
+Calcolare, per $n\to+\infty$,
+\[
+\sin\!\left(\left|2\left[\cos\!\left(\frac1{n^2}\right)-1\right]\sin n-\pi\right|\right).
+\]
+\end{esercizio}
+\begin{svolgimento}
+Poiché $1/n^2\to0$ e il coseno è continuo, $\cos(1/n^2)\to1$. Quindi $2[\cos(1/n^2)-1]\to0$. La successione $\sin n$ è limitata, anche se non ha limite, e il prodotto di una limitata per un'infinitesima tende a zero:
+\[
+2[\cos(1/n^2)-1]\sin n-\pi\longrightarrow-\pi.
+\]
+Per la continuità del modulo, i valori assoluti tendono a $\pi$. Infine, per la continuità del seno, la successione richiesta tende a $\sin\pi=0$.
+\end{svolgimento}
+
+\begin{esercizio}[Una composizione di funzioni elementari]
+Calcolare
+\[
+\lim_{n\to+\infty}\sqrt[3]{\cos(1/n+\sin(1/n^3))}.
+\]
+\end{esercizio}
+\begin{svolgimento}
+Si procede dall'argomento più interno verso l'esterno. Poiché $1/n^3\to0$ e il seno è continuo, $\sin(1/n^3)\to0$. Sommando $1/n\to0$ si ottiene $1/n+\sin(1/n^3)\to0$. La continuità del coseno dà
+\[
+\cos(1/n+\sin(1/n^3))\longrightarrow\cos0=1.
+\]
+La radice cubica è definita e continua su tutta $\R$, perciò il limite cercato è $\sqrt[3]1=1$.
+\end{svolgimento}
+
+\section{Quando la sostituzione non è lecita}
+
+\begin{esempio}[Una funzione discontinua]
+Consideriamo
+\[
+f(x)=\begin{cases}1,&x=0,\\0,&x\ne0.\end{cases}
+\]
+Per $n\ge1$, $f(1/n)=0$, quindi $f(1/n)\to0$. Sebbene $1/n\to0$, il limite non è $f(0)=1$: manca la continuità in $0$. La successione costante $x_n=0$ dà invece $f(x_n)=1$, confermando che le immagini di successioni tendenti allo stesso punto possono avere limiti diversi.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=1.6cm,y=1.5cm]
+  \draw[asse] (-2.2,0) -- (2.4,0) node[right] {$x$};
+  \draw[asse] (0,-.3) -- (0,1.55) node[above] {$y$};
+  \draw[intervallo] (-2,0) -- (2.1,0);
+  \draw[estremo] (0,0) circle[radius=2pt];
+  \fill[coloreschema] (0,1) circle[radius=2pt] node[left] {$1$};
+  \node[below left] at (0,0) {$0$};
+\end{tikzpicture}
+\par\smallskip Il punto pieno indica $f(0)=1$; il punto vuoto esclude $(0,0)$ dal grafico. Avvicinarsi a zero attraverso punti non nulli dà sempre valore $0$.
+\end{schema}
+
+\begin{esempio}[Controllare prima il dominio]
+La formula $\sqrt{\cos(1/n^2)-1}$, per $n\ge1$, non definisce una successione reale: infatti $0<1/n^2\le1<2\pi$, dunque $\cos(1/n^2)<1$ e il radicando è negativo. Il fatto che il radicando tenda a zero non rende definita la radice quadrata dei suoi termini. Non è quindi lecito concludere che la successione abbia limite $\sqrt0$ in $\R$.
+\end{esempio}

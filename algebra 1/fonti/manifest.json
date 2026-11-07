@@ -1,7 +1,7 @@
 {
-  "data_inventario": "2026-11-01",
-  "totale_pdf": 30,
-  "totale_pagine": 203,
+  "data_inventario": "2026-11-05",
+  "totale_pdf": 32,
+  "totale_pagine": 211,
   "numerazione": "Numero ricavato dal nome del file; non sono inventate date delle lezioni.",
   "fonti": [
     {
@@ -108,12 +108,19 @@
       "pagine": 9,
       "file": "fonti/Lezione 15.pdf",
       "sha256": "5b2abbe91998fb71bf88b8556f85af63f2b3b50e591035f9e6cb43a8d959ed45"
+    },
+    {
+      "numero": 16,
+      "origine": "/Users/jude/Downloads/lezioni/Algebra-16.pdf",
+      "pagine": 4,
+      "file": "fonti/Lezione 16.pdf",
+      "sha256": "bf7af771ae9a5e209641a48196851df28a033e4f3bfe94ad438c5260f0656efe"
     }
   ],
   "serie_M-Z": {
-    "data_inventario": "2026-11-01",
+    "data_inventario": "2026-11-05",
     "docente": "non identificato nei PDF; indicato dall’autore come altro docente",
-    "pagine": 106,
+    "pagine": 110,
     "fonti": [
       {
         "numero": 1,
@@ -249,6 +256,15 @@
         "sha256": "ba7a3ee9c5d574f1ce05cb0c052601df12623d3402f3d35826c743f67624329f",
         "serie": "M-Z",
         "caratteri": 443
+      },
+      {
+        "numero": 16,
+        "origine": "/Users/jude/Downloads/lezioni/Sedicesima lezione M-Z.pdf",
+        "pagine": 4,
+        "file": "fonti/M-Z/Lezione 16.pdf",
+        "sha256": "a12344b8b65458d1ff0a2541fc7d940509592395f9ff03b03e00cd03f8f80818",
+        "serie": "M-Z",
+        "caratteri": 181
       }
     ],
     "criterio_confronto": "globale per macroargomenti, senza corrispondenza per numero di lezione"
@@ -256,8 +272,8 @@
   "serie_primaria": "A–L",
   "serie_supporto": "M–Z",
   "lettura_visiva": {
-    "A–L": 97,
-    "M–Z": 106
+    "A–L": 101,
+    "M–Z": 110
   },
   "criterio_integrazione": "Ordine A–L; M–Z integra lacune e contenuti omessi di argomenti conclusi. Sviluppi plausibilmente futuri da distinguere e registrare."
 }

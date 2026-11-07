@@ -1,0 +1,41 @@
+{
+  "data": "2026-11-05",
+  "criterio": "Riesame al caricamento A–L16: morfismi ed Eulero ora nel flusso primario; D01–D03 recuperati. Nessun rinvio residuo nelle fonti ricevute.",
+  "unita": [],
+  "unita_recuperate": [
+    {
+      "id": "D01",
+      "fonti_originarie": "MZ15:4-6",
+      "stato": "integrato nel capitolo7 il 2026-11-05",
+      "unita_di_dettaglio": [
+        "N13",
+        "N14",
+        "N15"
+      ]
+    },
+    {
+      "id": "D02",
+      "fonti_originarie": "MZ15:6; MZ15:8-9",
+      "stato": "integrato nel capitolo7 il 2026-11-05",
+      "unita_di_dettaglio": [
+        "N12",
+        "N16",
+        "N17",
+        "N18",
+        "N19"
+      ]
+    },
+    {
+      "id": "D03",
+      "fonti_originarie": "MZ15:10-11",
+      "stato": "integrato nel capitolo7 il 2026-11-05",
+      "unita_di_dettaglio": [
+        "N21",
+        "N22",
+        "N23",
+        "N24",
+        "N25"
+      ]
+    }
+  ]
+}

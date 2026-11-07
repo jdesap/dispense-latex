@@ -1,6 +1,6 @@
 % !TeX root = ../main.tex
 \chapter{Anelli e campi}\label{cap:anelli}
-\fonti{Lezione 15}
+\fonti{Lezioni 15 e 16}
 
 \section{Operazioni e assiomi di anello}
 % A–L L15 pp. 5–6; M–Z L15 p. 1. La convenzione generale segue A–L.
@@ -213,8 +213,72 @@ Poiché entrambi i fattori sono campi, $([a]_p,[b]_q)$ è invertibile se e solo 
 Se la prima coordinata è nulla, il prodotto per $([1]_p,[0]_q)$, che è non nullo, è zero. Se è nulla la seconda, si usa $([0]_p,[1]_q)$. Viceversa, se entrambe sono non nulle, la coppia è invertibile e non può essere divisore dello zero. Pertanto i divisori dello zero sono esattamente le coppie con almeno una coordinata nulla. Il risultato vale anche per $p=q$, senza alcuna ipotesi di coprimalità fra i due primi.
 \end{svolgimento}
 
+\section{Morfismi di anelli}
+% A–L L16 p. 1; M–Z L15 pp. 4–6 (recupero D01).
+Un morfismo confronta due anelli rispettandone le operazioni. In questa sezione gli anelli considerati hanno unità, e richiediamo che anche l'unità sia preservata.
+
+\begin{definizione}
+Siano $R,S$ anelli con unità. Una funzione $f:R\to S$ è un \textbf{morfismo di anelli} se, per ogni $a,b\in R$,
+\[
+f(a+b)=f(a)+f(b),\qquad f(ab)=f(a)f(b),\qquad f(1_R)=1_S.
+\]
+Un morfismo iniettivo si chiama \textbf{monomorfismo}; uno suriettivo, \textbf{epimorfismo}; uno biettivo, \textbf{isomorfismo}. Se esiste un isomorfismo fra $R$ e $S$, diciamo che gli anelli sono \textbf{isomorfi} e scriviamo $R\cong S$.
+\end{definizione}
+
+\begin{proposizione}\label{prop:morfismi-zero}
+Ogni morfismo $f:R\to S$ soddisfa $f(0_R)=0_S$ e $f(-a)=-f(a)$. L'inversa di un isomorfismo è ancora un morfismo.
+\end{proposizione}
+\begin{proof}
+Per additività $f(0_R)=f(0_R+0_R)=f(0_R)+f(0_R)$; cancellando $f(0_R)$ si ottiene $f(0_R)=0_S$. Inoltre $f(a)+f(-a)=f(a-a)=0_S$, quindi $f(-a)$ è l'opposto di $f(a)$.
+
+Se $f$ è biettivo, dati $u,v\in S$ poniamo $a=f^{-1}(u)$ e $b=f^{-1}(v)$. Da $f(a+b)=u+v$ e $f(ab)=uv$ seguono
+\[
+f^{-1}(u+v)=a+b,\qquad f^{-1}(uv)=ab.
+\]
+Infine $f(1_R)=1_S$ implica $f^{-1}(1_S)=1_R$. L'inversa rispetta dunque somma, prodotto e unità.
+\end{proof}
+
+\begin{esempio}[Proiezione e inclusione]
+Per $m\ge2$, la proiezione canonica
+\[
+\pi_m:\Z\to\Z/m\Z,\qquad a\mapsto[a]_m
+\]
+è un epimorfismo: per definizione delle operazioni, $\pi_m(a+b)=[a]_m+[b]_m$, $\pi_m(ab)=[a]_m[b]_m$ e $\pi_m(1)=[1]_m$. Ogni classe ha un rappresentante intero, quindi la mappa è suriettiva; non è iniettiva, perché $\pi_m(0)=\pi_m(m)$.
+
+L'inclusione $\iota:\Z\to\Q$, $a\mapsto a/1$, rispetta le due operazioni e l'unità ed è iniettiva: è un monomorfismo. Non è suriettiva, perché $1/2$ non è l'immagine di alcun intero.
+\end{esempio}
+
+\begin{esempio}[Valutazione di polinomi]
+% M–Z L15 p. 5: completato il compito, interno al tema ora introdotto in A–L.
+Fissato $c\in\R$, la valutazione $v_c:\R[t]\to\R$, $p(t)\mapsto p(c)$, è un morfismo: $(p+q)(c)=p(c)+q(c)$, $(pq)(c)=p(c)q(c)$ e il polinomio costante $1$ vale $1$ in $c$. Le prime due identità seguono dalle regole di somma e prodotto dei polinomi, valutando le somme finite in $c$. È suriettiva, perché ogni reale è il valore del corrispondente polinomio costante. Non è iniettiva: il polinomio non nullo $t-c$ e il polinomio nullo hanno entrambi valore $0$ in $c$.
+\end{esempio}
+
+\subsection{Parti e funzioni caratteristiche}
+% A–L L16 pp. 1–2; M–Z L15 pp. 5–6. La biezione è già nel capitolo 3.
+Identifichiamo $\{0,1\}$ con $\Z/2\Z$: la somma dei valori è ora quella modulo $2$, quindi $1+1=0$. Non è la somma reale delle caratteristiche. Per $A\subseteq X$ poniamo
+\[
+\widehat\chi_A(x)=\begin{cases}[1]_2&x\in A,\\{}[0]_2&x\notin A.\end{cases}
+\]
+
+\begin{proposizione}
+Per $X\ne\varnothing$, la corrispondenza
+\[
+\alpha:(\mathcal P(X),\triangle,\cap)\longrightarrow(\Z/2\Z)^X,
+\qquad A\longmapsto\widehat\chi_A
+\]
+è un isomorfismo di anelli. L'inversa è $\beta(f)=f^*(\{[1]_2\})$.
+\end{proposizione}
+\begin{proof}
+La biezione e la formula dell'inversa sono quelle del teorema~\ref{teo:caratteristiche}, sostituendo ai valori $0,1$ le rispettive classi modulo $2$. Resta da controllare le operazioni, definite punto per punto:
+\[
+\widehat\chi_{A\triangle B}=\widehat\chi_A+\widehat\chi_B,
+\qquad \widehat\chi_{A\cap B}=\widehat\chi_A\widehat\chi_B.
+\]
+Se un punto appartiene a nessuno, a uno solo o a entrambi gli insiemi, la somma dei due valori è rispettivamente $[0]_2$, $[1]_2$ o $[0]_2$: è la caratteristica della differenza simmetrica. Il prodotto vale $[1]_2$ esattamente nei punti comuni ai due insiemi. Infine $\alpha(X)$ è la funzione costante $[1]_2$, unità dell'anello delle funzioni. Dunque $\alpha$ è un morfismo biettivo, e $\beta$ è un morfismo per la proposizione~\ref{prop:morfismi-zero}.
+\end{proof}
+
 \subsection{Le sei classi modulo 6 e le sei coppie}
-% A–L L15 p. 9: tavole avviate; completate, senza anticipare la teoria dei morfismi.
+% A–L L15 p. 9 e L16 p. 2: tavole già presenti, ora raccordate ai morfismi.
 L'anello $\Z/2\Z\times\Z/3\Z$ contiene le sei coppie
 \[
 \begin{gathered}
@@ -255,3 +319,108 @@ $\cdot$&0&1&2&3&4&5\\\hline
 \end{tabular}
 \end{schema}
 I simboli $0,\ldots,5$ nelle tavole rappresentano classi modulo $6$, non interi con le operazioni usuali.
+La corrispondenza preserva anche l'unità, perché $[1]_6$ va in $([1]_2,[1]_3)$. È quindi un isomorfismo di anelli: le due strutture si descrivono con elementi diversi, ma con gli stessi calcoli.
+
+\subsection{Il teorema cinese come isomorfismo}
+% A–L L16 pp. 2–3; M–Z L15 pp. 6 e 8–9 (recupero D02).
+\begin{proposizione}\label{prop:crt-morfismo}
+Siano $m,n\ge2$. L'applicazione
+\[
+\Phi:\Z/mn\Z\longrightarrow\Z/m\Z\times\Z/n\Z,
+\qquad [a]_{mn}\longmapsto([a]_m,[a]_n)
+\]
+è un morfismo di anelli ben definito. Se $\operatorname{MCD}(m,n)=1$, è un isomorfismo.
+\end{proposizione}
+\begin{proof}
+\textbf{Buona definizione.} Se $[a]_{mn}=[b]_{mn}$, allora $mn\mid a-b$, quindi $m\mid a-b$ e $n\mid a-b$. Si ottengono così $[a]_m=[b]_m$ e $[a]_n=[b]_n$: la coppia non dipende dal rappresentante.
+
+\textbf{Operazioni.} Per la somma,
+\[
+\begin{aligned}
+\Phi([a]_{mn}+[b]_{mn})
+ &=([a+b]_m,[a+b]_n)\\
+ &=([a]_m+[b]_m,[a]_n+[b]_n)
+ =\Phi([a]_{mn})+\Phi([b]_{mn}).
+\end{aligned}
+\]
+Per il prodotto si ha analogamente
+\[
+\Phi([ab]_{mn})=([a]_m[b]_m,[a]_n[b]_n)
+              =\Phi([a]_{mn})\Phi([b]_{mn}).
+\]
+Inoltre $\Phi([1]_{mn})=([1]_m,[1]_n)$, unità del prodotto.
+
+\textbf{Biezione per moduli coprimi.} Data una coppia $([u]_m,[v]_n)$, il teorema cinese~\ref{teo:cinese} dà un intero $a$ con $a\equiv u\pmod m$ e $a\equiv v\pmod n$. Quindi $\Phi([a]_{mn})=([u]_m,[v]_n)$: la mappa è suriettiva. L'unicità della soluzione modulo $mn$ dice che tale classe $[a]_{mn}$ è unica, dunque la mappa è anche iniettiva.
+\end{proof}
+
+\begin{osservazione}
+Dominio e codominio hanno entrambi $mn$ elementi: il secondo ha $m\cdot n$ coppie. Perciò, in alternativa al passaggio sull'unicità, basta la suriettività appena dimostrata per concludere che $\Phi$ è biettiva. La sola uguaglianza delle cardinalità non basta: occorre provare almeno una fra iniettività e suriettività.
+\end{osservazione}
+
+\begin{corollario}\label{cor:crt-anelli}
+Se $m_1,\ldots,m_r\ge2$ sono a due a due coprimi e $M=m_1\cdots m_r$, allora
+\[
+\Phi_M:\Z/M\Z\longrightarrow\prod_{i=1}^r\Z/m_i\Z,
+\qquad [a]_M\longmapsto([a]_{m_1},\ldots,[a]_{m_r})
+\]
+è un isomorfismo di anelli.
+\end{corollario}
+\begin{proof}
+Nel prodotto finito le operazioni e l'unità sono definite componente per componente. Se $M\mid a-b$, ogni $m_i$ divide $a-b$, quindi la mappa è ben definita. Le stesse identità della proposizione precedente mostrano che rispetta somma, prodotto e unità in ogni componente. Per il teorema cinese~\ref{teo:cinese}, ogni $r$-upla di classi ha una e una sola controimmagine modulo $M$. Quindi $\Phi_M$ è biettiva.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{esercizio}
+Per l'isomorfismo $\Phi:\Z/12\Z\to\Z/4\Z\times\Z/3\Z$, calcolare $\Phi([5]_{12})$, $\Phi([7]_{12})$ e $\Phi^{-1}(([3]_4,[2]_3))$.
+\end{esercizio}
+\begin{svolgimento}
+Le immagini si ottengono riducendo lo stesso rappresentante nei due moduli:
+\[
+\Phi([5]_{12})=([1]_4,[2]_3),\qquad
+\Phi([7]_{12})=([3]_4,[1]_3).
+\]
+La controimmagine cercata risolve $a\equiv3\pmod4$ e $a\equiv2\pmod3$, sistema già risolto nel capitolo~\ref{cap:modulare}: tutte le soluzioni sono $11+12\Z$. Perciò $\Phi^{-1}(([3]_4,[2]_3))=[11]_{12}$.
+\end{svolgimento}
+
+\Needspace{13\baselineskip}
+\begin{esercizio}
+Determinare tutte le immagini e le fibre di $\Psi:\Z/12\Z\to\Z/2\Z\times\Z/6\Z$, $[a]_{12}\mapsto([a]_2,[a]_6)$. È un isomorfismo?
+\end{esercizio}
+\begin{svolgimento}
+La mappa è un morfismo per la proposizione~\ref{prop:crt-morfismo}, ma i moduli non sono coprimi. La tabella raccoglie tutte le dodici classi del dominio e le rispettive immagini:
+\[
+\begin{array}{c|c}
+\text{classi modulo }12&\text{immagine in }\Z/2\Z\times\Z/6\Z\\\hline
+{[0]_{12}},[6]_{12}&([0]_2,[0]_6)\\
+{[1]_{12}},[7]_{12}&([1]_2,[1]_6)\\
+{[2]_{12}},[8]_{12}&([0]_2,[2]_6)\\
+{[3]_{12}},[9]_{12}&([1]_2,[3]_6)\\
+{[4]_{12}},[10]_{12}&([0]_2,[4]_6)\\
+{[5]_{12}},[11]_{12}&([1]_2,[5]_6)
+\end{array}
+\]
+Ogni coppia a destra ha come fibra le due classi della stessa riga. Per $0\le b<6$, la fibra di $([e]_2,[b]_6)$ è vuota se $e$ e $b$ hanno parità diversa; se hanno la stessa parità è $\{[b]_{12},[b+6]_{12}\}$. Infatti un intero congruo a $b$ modulo $6$ ha la stessa parità di $b$.
+
+L'immagine contiene soltanto sei delle dodici coppie del codominio. La mappa non è suriettiva e non è iniettiva, ad esempio $\Psi([0]_{12})=\Psi([6]_{12})$. Non è un isomorfismo.
+\end{svolgimento}
+
+\subsection{Una funzione sulle classi che non è un morfismo}
+% M–Z L16 pp. 1–2: esercizio, con tutti i punti svolti.
+\Needspace{13\baselineskip}
+\begin{esercizio}
+Si consideri $f:\Z/36\Z\to\Z/36\Z$, $[a]_{36}\mapsto[3a+2]_{36}$. Verificare che sia ben definita, stabilire se sia un morfismo, calcolare $f^*(\{[5]_{36}\})$ e l'immagine. Dire se sia iniettiva e se sia suriettiva.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Buona definizione e morfismo.} Se $36\mid a-b$, allora $36\mid3(a-b)$: $[3a+2]_{36}=[3b+2]_{36}$. Dunque $f$ è ben definita. Non è un morfismo perché $f([0]_{36})=[2]_{36}\ne[0]_{36}$, contro la proposizione~\ref{prop:morfismi-zero}; anche $f([1]_{36})=[5]_{36}\ne[1]_{36}$.
+
+\textbf{Fibra di $[5]_{36}$.} La condizione $[3a+2]_{36}=[5]_{36}$ equivale a $3a\equiv3\pmod{36}$, cioè ad $a\equiv1\pmod{12}$. Gli interi soluzione sono $1+12\Z$; le classi distinte modulo $36$ sono tre:
+\[
+f^*(\{[5]_{36}\})=\{[1]_{36},[13]_{36},[25]_{36}\}.
+\]
+
+\textbf{Immagine.} Una classe $[z]_{36}$ appartiene all'immagine se e solo se $3a\equiv z-2\pmod{36}$ è risolubile. Il criterio del MCD dà $3\mid z-2$, ossia $z\equiv2\pmod3$. Pertanto
+\[
+f_*(\Z/36\Z)=\{[2+3j]_{36}\mid 0\le j<12\}.
+\]
+Sono le dodici classi con rappresentanti $2,5,8,11,14,17,20,23,26,29,32,35$. La funzione non è suriettiva, perché non raggiunge ad esempio $[0]_{36}$; non è iniettiva, perché $[1]_{36}\ne[13]_{36}$ hanno la stessa immagine.
+\end{svolgimento}

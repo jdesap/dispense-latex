@@ -1,0 +1,74 @@
+{
+  "data": "2026-11-05",
+  "stato": "pass",
+  "controlli_finiti_supplementari": {
+    "eulero_conteggio_vs_fattorizzazione": {
+      "intervallo": [
+        2,
+        1000
+      ],
+      "moduli": 999
+    },
+    "moltiplicativita_coprimi": {
+      "moduli": [
+        2,
+        50
+      ],
+      "coppie_ordinate": 1448
+    },
+    "caratteristiche": {
+      "punti": 4,
+      "coppie_sottoinsiemi": 256
+    },
+    "fibra_affine_36": [
+      1,
+      13,
+      25
+    ],
+    "immagine_affine_36": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23,
+      26,
+      29,
+      32,
+      35
+    ],
+    "mappa_Z12_Z2_Z6": {
+      "classi": 12,
+      "coppie_codominio": 12,
+      "fibre_non_vuote": 6,
+      "elementi_per_fibra": 2
+    },
+    "phi600": 160
+  },
+  "conservazione": {
+    "capitoli_1_6_sorgenti_identici": true,
+    "main_e_preambolo_identici": true
+  },
+  "copertura": {
+    "pdf": 32,
+    "pagine": 211,
+    "righe_AL": 101,
+    "righe_MZ": 110,
+    "unita": 126,
+    "rinvii": 0
+  },
+  "struttura": {
+    "capitoli": 7,
+    "sezioni": 40,
+    "sottosezioni": 12,
+    "figure_tikz": 14,
+    "prove": 68,
+    "esercizi": 31,
+    "svolgimenti": 31,
+    "label_uniche": 38,
+    "riferimenti_risolti": 25
+  },
+  "limite": "Verifiche finite e tecniche supplementari: non sostituiscono il riesame manuale delle dimostrazioni per unità."
+}

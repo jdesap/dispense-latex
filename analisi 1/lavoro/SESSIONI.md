@@ -524,3 +524,16 @@ Completato il capitolo 8 con reciproci, quozienti, potenze naturali, termine dom
 Compilazioni condivisa e integrata riuscite senza avvisi LaTeX; pagine nuove e raccordi ispezionati. Tutti e nove gli estratti confrontati con il volume per flussi, testo, formato, numerazione e rendering a 72 dpi; annotazioni conservate, destinazioni dei link e segnalibri verificate. Impronte di tutte le fonti coerenti col manifest. Rapporto in `VERIFICA_LEZIONE_13_2026-11-02.json`.
 
 **Stato corrente:** lezioni 1-13 integrate, 83 pagine e nove capitoli. Capitoli 1-7 invariati per testo, rendering e numerazione stampata (1-59). Capitolo 8: 16 pagine (60-75), prima 11; cambiano pagina 60 per la provenienza e pagine 69-70 per contenuto/impaginazione, mentre 61-68 restano identiche; 71-75 nuove. Capitolo 9: tre pagine (76-78). Indice aggiornato, cinque pagine preliminari complessive. Copie annotate separate e non modificate; restano i limiti delle precedenti revisioni.
+
+
+## Integrazione delle lezioni 14 e 15 - 4 novembre 2026
+
+Lette visivamente tutte le 30 pagine dei due PDF, comprese le copertine. Fonti conservate identiche, inventariate con SHA-256 e mappate in `COPERTURA.csv`. Confrontati i contenuti con la dispensa: definizione di continuità, Bernoulli, Newton, completezza, carabinieri, algebra e notazione o(1) sono riutilizzati senza duplicazione.
+
+Ampliato il capitolo 9 con composizione, strategia di calcolo, due esercizi e controesempi su continuità e dominio. Creato il capitolo 10 «Limiti notevoli e confronti asintotici»: limiti trigonometrici e cancellazioni, geometriche, criterio del rapporto, radici, numero di Nepero, rappresentazioni dell’esponenziale, limiti esponenziale e logaritmico, gerarchie ed esercizi. Nel capitolo 6 la presentazione della base e rimanda alla definizione rigorosa. Conservate le figure precedenti e aggiunti due schemi TikZ.
+
+Ricostruite prove assegnate o lasciate implicite; completato con una stima elementare l’esempio di cancellazione fra seno e argomento. Corretti i passaggi del rapporto con (2n)!: fattore 2n+1 e potenza tendente a 1/e. Dichiarati il rinvio del confronto potenze/logaritmi e l’assunzione sulle rappresentazioni generali dell’esponenziale. Mappa, correzioni e aggiunte redazionali in `LEZIONI_14_15_2026-11-04.md`.
+
+Compilazioni condivisa e integrata riuscite senza avvisi LaTeX. Ispezionati capitoli 9 e 10, raccordi del capitolo 6 e indice. Risolti una formula fuori margine e il contatto fra numerazione 10.10 e titolo nell’indice. Tutti e dieci gli estratti verificati per identità di flussi, testo, formato, numerazione e rendering a 72 dpi; annotazioni conservate e destinazioni di link/segnalibri valide. Rapporto in `VERIFICA_LEZIONI_14_15_2026-11-04.json`.
+
+**Stato corrente:** lezioni 1-15 integrate, 92 pagine e dieci capitoli. Capitolo 6: 14 pagine (33-46), con aggiornamenti a 33 e 40; Continuità: quattro pagine (76-79), prima tre; nuovo capitolo 10: otto pagine (80-87). Capitoli 1-5, 7 e 8 invariati per testo, rendering e numerazione stampata. Cinque pagine preliminari; aggiornato l’indice e il suo spazio per i numeri delle sezioni. Copie annotate separate e non modificate. Restano i limiti delle precedenti revisioni e i risultati assunti/rinviati dichiarati nel testo.

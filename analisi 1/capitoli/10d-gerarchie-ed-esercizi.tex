@@ -1,0 +1,103 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 15, pp. 2, 4--5, 9--12. Corretti i passaggi nel rapporto dell'esempio con (2n)!.
+\section{Gerarchia degli infiniti}
+\label{sec:gerarchia-infiniti}
+
+Per successioni definitivamente positive si scrive $a_n\gg b_n$ quando $a_n/b_n\to+\infty$: $a_n$ cresce più rapidamente di $b_n$ nel senso del rapporto. Equivalentemente $b_n/a_n\to0$. Non si tratta soltanto della disuguaglianza $a_n>b_n$, perché si richiede che il rapporto superi definitivamente ogni soglia positiva.
+
+\begin{proposizione}
+Per ogni $q>1$ e $k>0$ fissati,
+\[
+n^n\gg n!\gg q^n\gg n^k.
+\]
+In particolare,
+\[
+\frac{q^n}{n^k}\to+\infty,\qquad
+\frac{n!}{q^n}\to+\infty,\qquad
+\frac{n^n}{n!}\to+\infty.
+\]
+\end{proposizione}
+\begin{proof}
+\textbf{Esponenziale e potenza.} Per $a_n=q^n/n^k>0$,
+\[
+\frac{a_{n+1}}{a_n}=q\left(\frac n{n+1}\right)^k\longrightarrow q>1.
+\]
+Il limite della potenza segue dalla continuità in $1$; il criterio del rapporto implica $a_n\to+\infty$. Il ragionamento vale anche per $k$ reale positivo, senza interpretare la potenza come un prodotto di $k$ fattori.
+
+\textbf{Fattoriale ed esponenziale.} Per $b_n=n!/q^n$,
+\[
+\frac{b_{n+1}}{b_n}=\frac{n+1}{q}\longrightarrow+\infty.
+\]
+Il criterio del rapporto, nel caso di limite infinito, dà $b_n\to+\infty$.
+
+\textbf{Potenza di esponente variabile e fattoriale.} Per $c_n=n^n/n!$,
+\[
+\frac{c_{n+1}}{c_n}
+=\left(\frac{n+1}{n}\right)^n
+=\left(1+\frac1n\right)^n\longrightarrow e>1.
+\]
+Ancora per il criterio del rapporto, $c_n\to+\infty$.
+\end{proof}
+
+La gerarchia si completa con $n^k\gg(\ln n)^b$ per ogni $b>0$, sempre con $k>0$.\footnote{Il confronto fra potenze e logaritmi è enunciato qui; la sua dimostrazione resta rinviata. Non viene usato per dimostrare gli altri confronti o per risolvere gli esercizi successivi.} Il verso dei confronti riguarda il limite per $n\to+\infty$ e dipende dalle ipotesi sulle basi e sugli esponenti.
+
+\begin{esercizio}[Un rapporto con fattoriale e potenza]
+Calcolare
+\[
+\lim_{n\to+\infty}\frac{(2n)!}{2n^n}.
+\]
+\end{esercizio}
+\begin{svolgimento}
+Poniamo $a_n=(2n)!/(2n^n)>0$. Si ha esattamente
+\[
+\begin{aligned}
+\frac{a_{n+1}}{a_n}
+&=\frac{(2n+2)(2n+1)n^n}{(n+1)^{n+1}}\\
+&=2(2n+1)\left(\frac n{n+1}\right)^n
+=\frac{2(2n+1)}{(1+1/n)^n}.
+\end{aligned}
+\]
+Il fattore $(n/(n+1))^n$ tende a $1/e$, non a $1$: la base e l'esponente variano insieme. Poiché il denominatore dell'ultima espressione tende a $e>0$, il rapporto tende a $+\infty$. Il criterio del rapporto dà quindi $a_n\to+\infty$.
+\end{svolgimento}
+
+\section{Un limite con parametro e termini dominanti}
+% Fonte: Lezione 15, pp. 10--12; conservati tutti i casi a<4, a=4, a>4 e il confronto finale con 7.
+
+\begin{esercizio}
+Determinare, al variare di $a>0$, il limite
+\[
+\lim_{n\to+\infty}
+\frac{a^n+4^n+n^7+\sqrt{n+1}}
+{7^n+n^{53}-\sin(a^{n^2}+n^{11})}.
+\]
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Denominatore.} L'oscillazione del seno resta limitata, qualunque sia il comportamento del suo argomento. Raccogliendo $7^n$,
+\[
+D_n=7^n\left[1+\frac{n^{53}}{7^n}
+-\frac{\sin(a^{n^2}+n^{11})}{7^n}\right]
+=7^n(1+o(1)).
+\]
+Il primo rapporto tende a zero per la gerarchia; il secondo è in modulo al più $1/7^n\to0$. La parentesi tende a $1$, quindi è definitivamente positiva e il quoziente è definito su una coda.
+
+\textbf{Numeratore: base maggiore di quattro.} Se $a>4$, la geometrica $(4/a)^n\to0$ e la gerarchia dà $n^7/a^n\to0$. Inoltre $\sqrt{n+1}\le n+1$ per $n\ge1$, quindi anche $\sqrt{n+1}/a^n\to0$. Pertanto
+\[
+N_n=a^n\left[1+\left(\frac4a\right)^n
++\frac{n^7}{a^n}+\frac{\sqrt{n+1}}{a^n}\right]
+=a^n(1+o(1)).
+\]
+Il rapporto diventa $(a/7)^n$ moltiplicato per un fattore tendente a $1$: tende a zero se $4<a<7$, a $1$ se $a=7$, a $+\infty$ se $a>7$.
+
+\textbf{Numeratore: base minore o uguale a quattro.} Se $0<a<4$, raccogliendo $4^n$ si ottiene $N_n=4^n(1+o(1))$, perché $(a/4)^n\to0$ e i termini di potenza e radice sono trascurabili rispetto a $4^n$. Il quoziente tende quindi a zero come $(4/7)^n$.
+
+Se $a=4$, i due termini esponenziali coincidono e si sommano: $N_n=2\cdot4^n(1+o(1))$. Il quoziente tende ancora a zero, perché $2(4/7)^n\to0$.
+
+Riunendo tutti i casi, il limite è
+\[
+\boxed{\begin{cases}
+0,&0<a<7,\\
+1,&a=7,\\
++\infty,&a>7.
+\end{cases}}
+\]
+\end{svolgimento}

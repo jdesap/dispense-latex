@@ -1,36 +1,41 @@
 {
-  "data": "2026-11-01",
-  "criterio": "Sviluppi nuovi M–Z oltre la copertura A–L15: riesaminare al corrispondente caricamento A–L, senza anticiparli ora.",
-  "unita": [
+  "data": "2026-11-05",
+  "criterio": "D01–D03 recuperati con A–L16; su richiesta dell’autore D03 e la funzione di Eulero ricollocati nel capitolo8. Nessun materiale ricevuto resta rinviato.",
+  "unita": [],
+  "unita_recuperate": [
     {
       "id": "D01",
-      "capitolo": "rinviato",
-      "unita": "Morfismi e esempi",
-      "fonti": "MZ15:4-6",
-      "scelta_e_motivo": "Nuovo argomento MZ non ancora A–L: rinvio motivato",
-      "prerequisiti": "Anelli; operazioni; funzioni",
-      "passaggi_controllati": "Conservati locator: definizione unitaria; f(0); proiezione; inclusioneZQ; valutazione; parti-caratteristiche; mono/epi/iso",
-      "stato": "rinviato esplicitamente: sviluppo successivo A–L"
+      "fonti_originarie": "MZ15:4-6",
+      "stato": "integrato nel capitolo7 il 2026-11-05",
+      "unita_di_dettaglio": [
+        "N13",
+        "N14",
+        "N15"
+      ]
     },
     {
       "id": "D02",
-      "capitolo": "rinviato",
-      "unita": "Mappa CRT come isomorfismo e fibre",
-      "fonti": "MZ15:6; MZ15:8-9",
-      "scelta_e_motivo": "Teoria morfismi e fibre della mappa rinviata; CRT numerico integrato A22/N12",
-      "prerequisiti": "D01; teorema cinese",
-      "passaggi_controllati": "Da recuperare: tutti preimmagini casi2,3 e2,6; corollario isomorfismo; immagini5/7mod12 e inversa(3mod4,2mod3)",
-      "stato": "rinviato esplicitamente: sviluppo successivo A–L"
+      "fonti_originarie": "MZ15:6; MZ15:8-9",
+      "stato": "integrato nel capitolo7 il 2026-11-05",
+      "unita_di_dettaglio": [
+        "N12",
+        "N16",
+        "N17",
+        "N18",
+        "N19"
+      ]
     },
     {
       "id": "D03",
-      "capitolo": "rinviato",
-      "unita": "Trasporto unità tramite isomorfismo; funzione Eulero",
-      "fonti": "MZ15:10-11",
-      "scelta_e_motivo": "Trasporto dipende da morfismi rinviati; Eulero solo annunciato",
-      "prerequisiti": "D01 D02",
-      "passaggi_controllati": "Unità prodotto integrate N11; equivalenza via mappa CRT e sviluppo Eulero rinviati",
-      "stato": "rinviato esplicitamente: sviluppo successivo A–L"
+      "fonti_originarie": "MZ15:10-11",
+      "stato": "integrato il 2026-11-05, ricollocato nel capitolo8 su richiesta dell’autore",
+      "unita_di_dettaglio": [
+        "N21",
+        "N22",
+        "N23",
+        "N24",
+        "N25"
+      ]
     }
   ]
 }

@@ -1,0 +1,92 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 15, pp. 13--15. Prova su e_n e prove dei due limiti notevoli ricostruite.
+\section{Il numero di Nepero}
+\label{sec:numero-nepero}
+
+La successione $u_n=(1+1/n)^n$, per $n\ge1$, ha base tendente a $1$ ed esponente tendente a $+\infty$. Non si può sostituire la base con il suo limite: i due elementi variano contemporaneamente. Questa successione permette di definire rigorosamente la base $e$ già incontrata fra le funzioni elementari.
+
+\begin{proposizione}
+La successione $u_n=(1+1/n)^n$ è strettamente crescente e converge a un limite finito, chiamato \emph{numero di Nepero} e indicato con $e$. Si ha $2<e\le3$, e in particolare $e\in[2,4]$.
+\end{proposizione}
+\begin{proof}
+\textbf{Monotonia.} Per il binomio di Newton,
+\[
+u_n=\sum_{k=0}^n\binom nk\frac1{n^k}
+=\sum_{k=0}^n\frac1{k!}\prod_{j=0}^{k-1}\left(1-\frac jn\right),
+\]
+dove per $k=0$ il prodotto vuoto vale $1$. Per ogni $k\le n$, passando da $n$ a $n+1$ i fattori della corrispondente espressione non diminuiscono; inoltre, in $u_{n+1}$ compare un nuovo termine positivo con $k=n+1$. Quindi $u_{n+1}>u_n$.
+
+\textbf{Limitatezza.} Tutti i fattori del prodotto appartengono a $[0,1]$. Per $k\ge2$, $k!\ge2^{k-1}$, perciò
+\[
+2\le u_n\le\sum_{k=0}^n\frac1{k!}
+\le2+\sum_{k=2}^n\frac1{2^{k-1}}<3.
+\]
+Per $n=1$ la somma finale è vuota; per $n\ge2$ la stima segue dalla formula della somma geometrica finita.
+
+\textbf{Convergenza per completezza.} Poniamo $e=\sup\{u_n:n\ge1\}$. Per ogni $\varepsilon>0$ esiste $N$ con $e-\varepsilon<u_N\le e$. Per la crescita, se $n\ge N$ allora $e-\varepsilon<u_N\le u_n\le e$, quindi $u_n\to e$. Le stime danno $e\le3$; inoltre $e\ge u_2=9/4>2$.
+\end{proof}
+
+La prova usa direttamente il supremo dell'insieme dei valori: la sola limitatezza di una successione, senza monotonia, non garantirebbe la convergenza.
+
+\section{Rappresentazioni dell'esponenziale naturale}
+% Fonte: Lezione 15, pp. 14--15; teorema generale enunciato senza prova nella fonte.
+
+\begin{teorema}[Rappresentazioni per limite]
+\label{teo:rappresentazione-exp}
+Per ogni $x\in\R$, le successioni
+\[
+u_n(x)=\left(1+\frac xn\right)^n,
+\qquad
+v_n(x)=\sum_{k=0}^n\frac{x^k}{k!}
+\]
+convergono allo stesso limite positivo $E(x)$. La funzione così ottenuta soddisfa
+\[
+E(0)=1,\qquad E(1)=e,\qquad E(x+y)=E(x)E(y).
+\]
+Essa coincide con l'esponenziale naturale già introdotto: $E(x)=e^x$.\footnote{Il teorema generale di rappresentazione e la proprietà moltiplicativa sono qui assunti senza dimostrazione completa. La sola convergenza della successione $u_n(1)$ non li dimostra. Le proprietà generali delle potenze reali assunte nel capitolo sulle funzioni elementari restano distinte dalla prova appena svolta per il numero $e$.}
+\end{teorema}
+
+Se $x<0$, per confrontare queste espressioni con potenze reali a base positiva si considera la coda $n>|x|$, dove $1+x/n>0$. Le somme $v_n(x)$ sono invece definite per ogni $n\ge0$; non si tratta di polinomi in una variabile fissata che tende a infinito: qui è il numero di addendi a crescere.
+
+Per gli esponenti razionali la compatibilità si vede già dalla legge moltiplicativa. Da $E(0)=1$ segue $E(-x)=1/E(x)$; per un intero positivo $q$, $E(p/q)^q=E(p)=e^p$. Essendo $E(p/q)>0$, si ottiene $E(p/q)=e^{p/q}$ per $p\in\Z$, $q\in\N^*$. Le proprietà dell'esponenziale e del logaritmo inverso restano quelle della sezione~\ref{sec:exp-log}; in particolare
+\[
+e^{\ln y}=y\quad(y>0),\qquad \ln(e^x)=x\quad(x\in\R).
+\]
+
+\section{Limiti notevoli esponenziale e logaritmico}
+% Fonte: Lezione 15, p. 15; ipotesi sui denominatori e prove aggiunte.
+
+\begin{teorema}
+Se $x_n\to0$ e $x_n\ne0$ definitivamente, allora
+\[
+\frac{e^{x_n}-1}{x_n}\longrightarrow1,
+\qquad
+\frac{\ln(1+x_n)}{x_n}\longrightarrow1.
+\]
+Nel secondo limite $1+x_n>0$ definitivamente, quindi il logaritmo è definito su una coda.
+\end{teorema}
+\begin{proof}
+\textbf{Una disuguaglianza per l'esponenziale.} Per ogni $t\in\R$ fissato e per interi $m>|t|$, Bernoulli dà $(1+t/m)^m\ge1+t$. Passando al limite mediante il teorema~\ref{teo:rappresentazione-exp}, si ottiene $e^t\ge1+t$.
+
+\textbf{Limite esponenziale.} Per $t>0$, applicando la disuguaglianza a $t$ e a $-t$ si ricava
+\[
+1\le\frac{e^t-1}{t}\le e^t.
+\]
+Infatti $e^t\ge1+t$ dà il vincolo inferiore, mentre $e^{-t}\ge1-t$, moltiplicata per $e^t$, dà $e^t-1\le t e^t$. Per $t<0$ le divisioni invertono i versi e si ottiene
+\[
+e^t\le\frac{e^t-1}{t}\le1.
+\]
+Insieme, per ogni $t\ne0$,
+\[
+\min\{1,e^t\}\le\frac{e^t-1}{t}\le\max\{1,e^t\}.
+\]
+La continuità dell'esponenziale dà $e^{x_n}\to1$, quindi entrambi i vincoli tendono a $1$ e il primo limite segue dai carabinieri, anche se $x_n$ cambia segno.
+
+\textbf{Limite logaritmico.} Poniamo $t_n=\ln(1+x_n)$. Per la continuità del logaritmo in $1$, $t_n\to0$; inoltre $t_n\ne0$ dove $x_n\ne0$. Dall'identità $e^{t_n}=1+x_n$,
+\[
+\frac{\ln(1+x_n)}{x_n}
+=\frac{t_n}{e^{t_n}-1}
+\longrightarrow1,
+\]
+prendendo il reciproco del primo limite notevole.
+\end{proof}

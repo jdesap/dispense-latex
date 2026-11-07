@@ -1,0 +1,521 @@
+% !TeX root = ../main.tex
+\chapter{Anelli e campi}\label{cap:anelli}
+\fonti{Lezioni 15 e 16}
+
+\section{Operazioni e assiomi di anello}
+% A–L L15 pp. 5–6; M–Z L15 p. 1. La convenzione generale segue A–L.
+Gli interi e le classi resto hanno suggerito una struttura comune. La definiamo ora per un insieme qualunque, senza richiedere in partenza che il prodotto sia commutativo.
+
+\begin{definizione}
+Un \textbf{anello} è una terna $(R,+,\cdot)$, dove $R\ne\varnothing$ e $+,\cdot:R\times R\to R$ sono operazioni binarie tali che, per ogni $a,b,c\in R$:
+\begin{enumerate}
+\item l'addizione è associativa: $(a+b)+c=a+(b+c)$;
+\item esiste $0\in R$ con $a+0=0+a=a$;
+\item ogni $a$ ha un opposto $-a$ con $a+(-a)=(-a)+a=0$;
+\item l'addizione è commutativa: $a+b=b+a$;
+\item il prodotto è associativo: $(ab)c=a(bc)$;
+\item valgono entrambe le distributività:
+\[
+a(b+c)=ab+ac,\qquad(a+b)c=ac+bc.
+\]
+\end{enumerate}
+L'anello è \textbf{con unità} se esiste $1\in R$ tale che $1a=a1=a$ per ogni $a$. È \textbf{commutativo} se $ab=ba$ per ogni $a,b$.
+\end{definizione}
+
+\begin{osservazione}
+Qui l'unità è una condizione aggiuntiva, secondo la convenzione della lezione A–L. Esiste anche la convenzione che la richiede già nella parola «anello», adottata nella serie M–Z. Le proprietà additive si riassumono dicendo che $(R,+)$ è un \emph{gruppo abeliano}; un'operazione associativa con neutro, come il prodotto di un anello con unità, definisce un \emph{monoide}.
+\end{osservazione}
+
+\Needspace{17\baselineskip}
+\begin{proposizione}[Prime conseguenze]\label{prop:prime-anello}
+In ogni anello lo zero e gli opposti sono unici; valgono la cancellazione additiva e le identità
+\[
+a0=0a=0,\qquad a(-b)=(-a)b=-(ab),\qquad(-a)(-b)=ab.
+\]
+In un anello con unità anche $1$ è unico. Se $1=0$, l'anello contiene soltanto lo zero.
+\end{proposizione}
+\begin{proof}
+Se $0,0'$ sono entrambi neutri additivi, $0=0+0'=0'$. Se $b,c$ sono due opposti di $a$, allora $b=b+0=b+(a+c)=(b+a)+c=c$. Per cancellare $a$ dall'uguaglianza $a+b=a+c$, si somma $-a$ a entrambi i membri e si usa l'associatività.
+
+Per distributività $a0=a(0+0)=a0+a0$; cancellando additivamente $a0$ si ricava $a0=0$. Analogamente $0a=0$. Inoltre
+\[
+ab+a(-b)=a(b-b)=a0=0,
+\]
+quindi $a(-b)$ è l'opposto di $ab$. Allo stesso modo $(-a)b=-(ab)$. Infine $(-a)(-b)=-((-a)b)=-(-(ab))=ab$.
+
+Se $1,1'$ sono entrambi neutri moltiplicativi, $1=1\cdot1'=1'$. Se $1=0$, per ogni $a\in R$ si ha $a=a1=a0=0$.
+\end{proof}
+
+\section{Esempi di anelli}
+% A–L L15 pp. 6–7; M–Z L15 pp. 2–3.
+\begin{esempio}[Numeri e classi resto]
+Con le operazioni usuali, $\Z$, $\Q$, $\R$ e $\C$ sono anelli commutativi con unità. Anche $\Z/m\Z$, per $m\ge2$, lo è, come verificato nel capitolo~\ref{cap:modulare}. L'anello $\Z$ non ha divisori dello zero non nulli, mentre $\Z/6\Z$ ne ha: essere un anello non basta a escluderli.
+\end{esempio}
+
+\begin{esempio}[Polinomi reali]
+L'insieme $\R[x]$ dei polinomi a coefficienti reali è un anello commutativo con unità per la somma e il prodotto usuali. Se
+\[
+f=\sum_{i=0}^n a_ix^i,\qquad g=\sum_{j=0}^s b_jx^j,
+\]
+la somma si ottiene sommando i coefficienti dello stesso grado, e il coefficiente di $x^k$ in $fg$ è $\sum_{i+j=k}a_ib_j$. Queste regole conservano coefficienti reali e un numero finito di termini; associatività, commutatività e distributività seguono dalle corrispondenti proprietà delle somme e dei prodotti reali. Lo zero è il polinomio nullo, l'opposto cambia il segno di tutti i coefficienti, e l'unità è il polinomio costante $1$.
+\end{esempio}
+
+\begin{esempio}[Parti di un insieme]
+Per ogni insieme $X$, $(\mathcal P(X),\triangle,\cap)$ è un anello commutativo con unità. Qui la somma è la differenza simmetrica, lo zero è $\varnothing$, ogni insieme è opposto di se stesso perché $A\triangle A=\varnothing$, e l'unità è $X$.
+
+Associatività e commutatività delle operazioni sono già state verificate per gli insiemi. Per la distributività, un punto appartiene ad $A\cap(B\triangle C)$ esattamente quando appartiene ad $A$ e a uno solo tra $B,C$. È la stessa condizione di appartenenza a $(A\cap B)\triangle(A\cap C)$. L'altra distributività segue dalla commutatività dell'intersezione. Se $X=\varnothing$, si ottiene l'anello con un solo elemento, in cui zero e unità coincidono.
+\end{esempio}
+
+\begin{proposizione}[Anello delle funzioni]
+Siano $X\ne\varnothing$ un insieme e $R$ un anello. L'insieme $R^X$ di tutte le funzioni $X\to R$ è un anello con le operazioni definite punto per punto:
+\[
+(f+g)(x)=f(x)+g(x),\qquad(fg)(x)=f(x)g(x).
+\]
+Se $R$ è commutativo, anche $R^X$ lo è; se $R$ ha unità, anche $R^X$ ha unità.
+\end{proposizione}
+\begin{proof}
+Le operazioni sono interne, perché ogni valore ottenuto appartiene a $R$. Per verificare un'identità tra funzioni basta verificarla in ogni $x\in X$; si applicano quindi gli assiomi di $R$ a $f(x),g(x),h(x)$. Ad esempio,
+\[
+((f+g)+h)(x)=(f(x)+g(x))+h(x)=f(x)+(g(x)+h(x)).
+\]
+Lo zero è la funzione costante $0_R$, l'opposto è $(-f)(x)=-f(x)$, e, se esiste $1_R$, l'unità è la funzione costante $1_R$. La commutatività del prodotto si verifica nello stesso modo sui valori.
+\end{proof}
+
+\begin{esempio}[Matrici quadrate]
+Se $R$ è un anello, anche $M_n(R)$, insieme delle matrici quadrate $n\times n$ a coefficienti in $R$, è un anello per la somma componente per componente e il prodotto riga per colonna:
+\[
+(A+B)_{ij}=a_{ij}+b_{ij},\qquad(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}.
+\]
+Le proprietà additive valgono sulle singole entrate; la distributività si verifica distribuendo i prodotti dentro ogni somma. Per l'associatività del prodotto,
+\[
+((AB)C)_{ij}=\sum_{k,\ell}a_{i\ell}b_{\ell k}c_{kj}
+            =(A(BC))_{ij},
+\]
+riordinando le somme finite, senza scambiare l'ordine dei fattori. Se $R$ ha unità, l'unità di $M_n(R)$ è la matrice identità $I_n$.
+
+Se $n\ge2$ e $1_R\ne0_R$, il prodotto non è commutativo, anche quando lo è in $R$. Già in $M_2(\Z/2\Z)$, ponendo
+\[
+A=\begin{pmatrix}0&1\\0&0\end{pmatrix},\qquad
+B=\begin{pmatrix}1&0\\0&0\end{pmatrix},
+\]
+si ha $AB=0$ ma $BA=A\ne0$. Per dimensioni maggiori lo stesso esempio occupa l'angolo in alto a sinistra, con zeri nelle altre entrate.
+\end{esempio}
+
+\section{Unità, divisori dello zero, domini e campi}
+% A–L L15 pp. 7–9; M–Z L15 pp. 3–4 e 9–10.
+\begin{definizione}
+In un anello con unità, $a\in R$ è \textbf{invertibile}, o è un'\textbf{unità}, se esiste $b\in R$ con $ab=ba=1_R$. Si indica con $U(R)$ l'insieme di tutte le unità.
+
+In un anello commutativo $R$, un elemento $a$ è un \textbf{divisore dello zero} se esiste $b\ne0$ con $ab=0$. Manteniamo la convenzione che ammette anche $a=0$, quando l'anello non è nullo.
+
+Un \textbf{dominio d'integrità} è un anello commutativo con unità $1\ne0$ tale che $ab=0$ implichi $a=0$ oppure $b=0$. Un \textbf{campo} è un anello commutativo con unità $1\ne0$ in cui ogni elemento non nullo è invertibile.
+\end{definizione}
+
+\begin{osservazione}
+In un anello non commutativo, per parlare di inverso richiediamo entrambe le identità $ab=ba=1$. A differenza del caso delle classi resto, la commutatività non è disponibile automaticamente. Per domini e campi escludiamo l'anello nullo, evitando che la condizione sugli elementi non nulli sia soddisfatta soltanto perché non ce ne sono.
+\end{osservazione}
+
+\begin{proposizione}
+L'inverso di un'unità è unico. In un anello non nullo con unità, un elemento invertibile non può annullare, né a destra né a sinistra, un elemento non nullo. Ogni campo è un dominio.
+\end{proposizione}
+\begin{proof}
+Se $ab=ba=1$ e $ac=ca=1$, allora $b=b(ac)=(ba)c=c$: l'inverso è unico e si indica con $a^{-1}$.
+
+Se $ab=0$ e $a$ è invertibile, moltiplicando a sinistra per $a^{-1}$ si ottiene $b=a^{-1}(ab)=a^{-1}0=0$. Se invece $ba=0$, moltiplicando a destra si ottiene ancora $b=0$. Si usa qui lo zero assorbente della proposizione~\ref{prop:prime-anello}.
+
+Infine, in un campo, se $ab=0$ e $a\ne0$, $a$ è invertibile e dunque $b=0$. Non esistono quindi divisori dello zero non nulli: il campo è un dominio.
+\end{proof}
+
+\begin{esempio}[Il viceversa non vale]
+L'anello $\Z$ è un dominio, perché il prodotto di due interi non nulli non è nullo. Non è un campo: $2$ non ha inverso intero. I campi $\Q$, $\R$ e $\C$ sono invece domini e hanno come unità tutti gli elementi non nulli.
+\end{esempio}
+
+\begin{esempio}[Polinomi e matrici]
+Se $f,g\in\R[x]$ sono non nulli e hanno gradi $n,s$, i loro coefficienti principali $a_n,b_s$ sono non nulli. Il coefficiente di grado $n+s$ del prodotto è $a_nb_s\ne0$. Quindi $fg\ne0$ e $\deg(fg)=n+s$. Ne segue che $\R[x]$ è un dominio. Se $fg=1$, allora $n+s=0$, perciò entrambi sono costanti non nulle. Viceversa ogni costante reale non nulla ha inverso costante. Dunque
+\[
+U(\R[x])=\{\text{polinomi costanti reali non nulli}\}.
+\]
+In particolare $\R[x]$ non è un campo, perché $x$ non è invertibile.
+
+L'anello $M_2(\R)$ non è un dominio né un campo, già perché non è commutativo. Le sue unità sono le matrici
+\[
+A=\begin{pmatrix}a&b\\c&d\end{pmatrix}\quad\text{con}\quad ad-bc\ne0.
+\]
+Infatti, posto $D=ad-bc\ne0$, la moltiplicazione diretta verifica
+\[
+A^{-1}=\frac1D\begin{pmatrix}d&-b\\-c&a\end{pmatrix}
+\]
+su entrambi i lati. Se invece $D=0$, $A$ annulla un vettore non nullo: per prima riga $(a,b)\ne(0,0)$ si può prendere $(-b,a)$; se la prima riga è nulla ma la seconda $(c,d)\ne(0,0)$ si prende $(-d,c)$; per $A=0$ si prende $(1,0)$. Un inverso manderebbe l'identità $Av=0$ in $v=0$, assurdo. Si usa anche la notazione $U(M_2(\R))=\operatorname{GL}_2(\R)$.
+\end{esempio}
+
+\begin{esempio}[Quozienti e parti]
+Per $m\ge2$, $\Z/m\Z$ è un campo se $m$ è primo, per il criterio del MCD. Se $m=uv$ con $1<u,v<m$, le classi non nulle $[u]_m,[v]_m$ hanno prodotto zero: non è un dominio né un campo. Quindi, per questi anelli, le condizioni di essere dominio, essere campo e avere modulo primo sono equivalenti. Per esempio
+\[
+U(\Z/12\Z)=\{[1]_{12},[5]_{12},[7]_{12},[11]_{12}\},
+\]
+mentre $U(\Z/7\Z)$ contiene tutte le sei classi non nulle.
+
+Nell'anello $(\mathcal P(X),\triangle,\cap)$, per $X\ne\varnothing$, una parte $A$ è invertibile solo se $A\cap B=X$ per qualche $B\subseteq X$: necessariamente $A=B=X$. Dunque l'unica unità è $X$. Se $X$ ha un solo elemento, le due parti $\varnothing,X$ formano un campo. Se $X$ ha almeno due elementi, scelta una parte non vuota e propria $A$, anche $X\setminus A$ è non vuota e $A\cap(X\setminus A)=\varnothing$: l'anello non è un dominio né un campo.
+\end{esempio}
+
+\begin{esempio}[Funzioni reali]
+Nell'anello $\R^X$, con $X\ne\varnothing$, una funzione $f$ è invertibile se e solo se non si annulla in alcun punto: l'inverso è $x\mapsto1/f(x)$. La necessità segue da $f(x)g(x)=1$ in ogni punto.
+
+Se $X$ è un singoletto, questo anello ha le stesse operazioni di $\R$ ed è un campo. Se $X$ ha almeno due elementi, la funzione caratteristica di un singoletto e quella del suo complementare sono entrambe non nulle e hanno prodotto nullo. Quindi non è un dominio né un campo. Si usano qui le funzioni caratteristiche già definite, con prodotto punto per punto.
+\end{esempio}
+
+\section{Prodotto di anelli}
+% A–L L15 p. 9; M–Z L15 pp. 2–4 e 10.
+\begin{proposizione}
+Se $R,S$ sono anelli, il prodotto cartesiano $R\times S$ è un anello con le operazioni
+\[
+(r,s)+(r',s')=(r+r',s+s'),\qquad
+(r,s)(r',s')=(rr',ss').
+\]
+Lo zero è $(0_R,0_S)$ e l'opposto di $(r,s)$ è $(-r,-s)$. Se entrambi gli anelli hanno unità, l'unità del prodotto è $(1_R,1_S)$. Se entrambi sono commutativi, lo è anche il prodotto.
+\end{proposizione}
+\begin{proof}
+Tutte le identità si verificano sulle due componenti. Per esempio
+\[
+\begin{aligned}
+((r,s)(r',s'))(r'',s'')
+ &=((rr')r'',(ss')s'')\\
+ &=(r(r'r''),s(s's''))=(r,s)((r',s')(r'',s'')).
+\end{aligned}
+\]
+L'associatività additiva e le due distributività seguono nello stesso modo; le formule per zero, opposti e unità si controllano direttamente. La commutatività del prodotto segue dalla commutatività in ciascuna componente.
+\end{proof}
+
+\begin{proposizione}
+Per anelli con unità,
+\[
+U(R\times S)=U(R)\times U(S).
+\]
+Se $R,S$ sono entrambi non nulli, commutativi e con unità, $R\times S$ non è un dominio né un campo.
+\end{proposizione}
+\begin{proof}
+Una coppia $(r,s)$ ha inverso $(u,v)$ se e solo se $ru=ur=1_R$ e $sv=vs=1_S$, cioè se e solo se entrambe le componenti sono invertibili. In quel caso l'inverso è $(r^{-1},s^{-1})$.
+
+Se i fattori sono non nulli, $(1_R,0_S)$ e $(0_R,1_S)$ sono elementi non nulli, ma il loro prodotto è $(0_R,0_S)$. Il prodotto non è dunque un dominio e, poiché ogni campo è un dominio, neppure un campo.
+\end{proof}
+
+\begin{esempio}
+In $\R\times\R$, l'unità è $(1,1)$, non una delle due coppie $(1,0)$ o $(0,1)$. La coppia $(x,y)$ è invertibile esattamente quando $x\ne0$ e $y\ne0$, con inverso $(1/x,1/y)$. Ogni coppia con una coordinata nulla è divisore dello zero, inclusa $(0,0)$; le coppie $(1,0)$ e $(0,1)$ mostrano perché il prodotto di due campi non è in generale un campo.
+\end{esempio}
+
+\Needspace{10\baselineskip}
+\begin{esercizio}
+Siano $p,q$ primi positivi, anche eventualmente uguali. Determinare invertibili e divisori dello zero di $\Z/p\Z\times\Z/q\Z$.
+\end{esercizio}
+\begin{svolgimento}
+Poiché entrambi i fattori sono campi, $([a]_p,[b]_q)$ è invertibile se e solo se $[a]_p\ne[0]_p$ e $[b]_q\ne[0]_q$, con inverso $([a]_p^{-1},[b]_q^{-1})$.
+
+Se la prima coordinata è nulla, il prodotto per $([1]_p,[0]_q)$, che è non nullo, è zero. Se è nulla la seconda, si usa $([0]_p,[1]_q)$. Viceversa, se entrambe sono non nulle, la coppia è invertibile e non può essere divisore dello zero. Pertanto i divisori dello zero sono esattamente le coppie con almeno una coordinata nulla. Il risultato vale anche per $p=q$, senza alcuna ipotesi di coprimalità fra i due primi.
+\end{svolgimento}
+
+\section{Morfismi di anelli}
+% A–L L16 p. 1; M–Z L15 pp. 4–6 (recupero D01).
+Un morfismo confronta due anelli rispettandone le operazioni. In questa sezione gli anelli considerati hanno unità, e richiediamo che anche l'unità sia preservata.
+
+\begin{definizione}
+Siano $R,S$ anelli con unità. Una funzione $f:R\to S$ è un \textbf{morfismo di anelli} se, per ogni $a,b\in R$,
+\[
+f(a+b)=f(a)+f(b),\qquad f(ab)=f(a)f(b),\qquad f(1_R)=1_S.
+\]
+Un morfismo iniettivo si chiama \textbf{monomorfismo}; uno suriettivo, \textbf{epimorfismo}; uno biettivo, \textbf{isomorfismo}. Se esiste un isomorfismo fra $R$ e $S$, diciamo che gli anelli sono \textbf{isomorfi} e scriviamo $R\cong S$.
+\end{definizione}
+
+\begin{proposizione}\label{prop:morfismi-zero}
+Ogni morfismo $f:R\to S$ soddisfa $f(0_R)=0_S$ e $f(-a)=-f(a)$. L'inversa di un isomorfismo è ancora un morfismo.
+\end{proposizione}
+\begin{proof}
+Per additività $f(0_R)=f(0_R+0_R)=f(0_R)+f(0_R)$; cancellando $f(0_R)$ si ottiene $f(0_R)=0_S$. Inoltre $f(a)+f(-a)=f(a-a)=0_S$, quindi $f(-a)$ è l'opposto di $f(a)$.
+
+Se $f$ è biettivo, dati $u,v\in S$ poniamo $a=f^{-1}(u)$ e $b=f^{-1}(v)$. Da $f(a+b)=u+v$ e $f(ab)=uv$ seguono
+\[
+f^{-1}(u+v)=a+b,\qquad f^{-1}(uv)=ab.
+\]
+Infine $f(1_R)=1_S$ implica $f^{-1}(1_S)=1_R$. L'inversa rispetta dunque somma, prodotto e unità.
+\end{proof}
+
+\begin{esempio}[Proiezione e inclusione]
+Per $m\ge2$, la proiezione canonica
+\[
+\pi_m:\Z\to\Z/m\Z,\qquad a\mapsto[a]_m
+\]
+è un epimorfismo: per definizione delle operazioni, $\pi_m(a+b)=[a]_m+[b]_m$, $\pi_m(ab)=[a]_m[b]_m$ e $\pi_m(1)=[1]_m$. Ogni classe ha un rappresentante intero, quindi la mappa è suriettiva; non è iniettiva, perché $\pi_m(0)=\pi_m(m)$.
+
+L'inclusione $\iota:\Z\to\Q$, $a\mapsto a/1$, rispetta le due operazioni e l'unità ed è iniettiva: è un monomorfismo. Non è suriettiva, perché $1/2$ non è l'immagine di alcun intero.
+\end{esempio}
+
+\begin{esempio}[Valutazione di polinomi]
+% M–Z L15 p. 5: completato il compito, interno al tema ora introdotto in A–L.
+Fissato $c\in\R$, la valutazione $v_c:\R[t]\to\R$, $p(t)\mapsto p(c)$, è un morfismo: $(p+q)(c)=p(c)+q(c)$, $(pq)(c)=p(c)q(c)$ e il polinomio costante $1$ vale $1$ in $c$. Le prime due identità seguono dalle regole di somma e prodotto dei polinomi, valutando le somme finite in $c$. È suriettiva, perché ogni reale è il valore del corrispondente polinomio costante. Non è iniettiva: il polinomio non nullo $t-c$ e il polinomio nullo hanno entrambi valore $0$ in $c$.
+\end{esempio}
+
+\subsection{Parti e funzioni caratteristiche}
+% A–L L16 pp. 1–2; M–Z L15 pp. 5–6. La biezione è già nel capitolo 3.
+Identifichiamo $\{0,1\}$ con $\Z/2\Z$: la somma dei valori è ora quella modulo $2$, quindi $1+1=0$. Non è la somma reale delle caratteristiche. Per $A\subseteq X$ poniamo
+\[
+\widehat\chi_A(x)=\begin{cases}[1]_2&x\in A,\\{}[0]_2&x\notin A.\end{cases}
+\]
+
+\begin{proposizione}
+Per $X\ne\varnothing$, la corrispondenza
+\[
+\alpha:(\mathcal P(X),\triangle,\cap)\longrightarrow(\Z/2\Z)^X,
+\qquad A\longmapsto\widehat\chi_A
+\]
+è un isomorfismo di anelli. L'inversa è $\beta(f)=f^*(\{[1]_2\})$.
+\end{proposizione}
+\begin{proof}
+La biezione e la formula dell'inversa sono quelle del teorema~\ref{teo:caratteristiche}, sostituendo ai valori $0,1$ le rispettive classi modulo $2$. Resta da controllare le operazioni, definite punto per punto:
+\[
+\widehat\chi_{A\triangle B}=\widehat\chi_A+\widehat\chi_B,
+\qquad \widehat\chi_{A\cap B}=\widehat\chi_A\widehat\chi_B.
+\]
+Se un punto appartiene a nessuno, a uno solo o a entrambi gli insiemi, la somma dei due valori è rispettivamente $[0]_2$, $[1]_2$ o $[0]_2$: è la caratteristica della differenza simmetrica. Il prodotto vale $[1]_2$ esattamente nei punti comuni ai due insiemi. Infine $\alpha(X)$ è la funzione costante $[1]_2$, unità dell'anello delle funzioni. Dunque $\alpha$ è un morfismo biettivo, e $\beta$ è un morfismo per la proposizione~\ref{prop:morfismi-zero}.
+\end{proof}
+
+\subsection{Le sei classi modulo 6 e le sei coppie}
+% A–L L15 p. 9 e L16 p. 2: tavole già presenti, ora raccordate ai morfismi.
+L'anello $\Z/2\Z\times\Z/3\Z$ contiene le sei coppie
+\[
+\begin{gathered}
+([0]_2,[0]_3),\ ([0]_2,[1]_3),\ ([0]_2,[2]_3),\\
+([1]_2,[0]_3),\ ([1]_2,[1]_3),\ ([1]_2,[2]_3).
+\end{gathered}
+\]
+La corrispondenza $[a]_6\mapsto([a]_2,[a]_3)$ non dipende dal rappresentante: se $6\mid a-b$, allora sia $2$ sia $3$ dividono $a-b$. La tabella è
+\[
+\begin{array}{c|cccccc}
+[a]_6&[0]&[1]&[2]&[3]&[4]&[5]\\\hline
+([a]_2,[a]_3)&(0,0)&(1,1)&(0,2)&(1,0)&(0,1)&(1,2)
+\end{array}
+\]
+dove nelle coppie i numeri indicano le rispettive classi. Ciascuna coppia compare una sola volta: è la corrispondenza fra resti garantita dal teorema cinese per $2$ e $3$.
+
+La corrispondenza rispetta anche i calcoli. Per esempio l'immagine di $[a+b]_6$ è $([a]_2+[b]_2,[a]_3+[b]_3)$ e analogamente per il prodotto. Così $[2]_6[3]_6=[0]_6$ corrisponde a $(0,2)(1,0)=(0,0)$. Le tavole complete modulo $6$ sono:
+\begin{schema}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{c|rrrrrr}
+$+$&0&1&2&3&4&5\\\hline
+0&0&1&2&3&4&5\\
+1&1&2&3&4&5&0\\
+2&2&3&4&5&0&1\\
+3&3&4&5&0&1&2\\
+4&4&5&0&1&2&3\\
+5&5&0&1&2&3&4
+\end{tabular}
+\qquad
+\begin{tabular}{c|rrrrrr}
+$\cdot$&0&1&2&3&4&5\\\hline
+0&0&0&0&0&0&0\\
+1&0&1&2&3&4&5\\
+2&0&2&4&0&2&4\\
+3&0&3&0&3&0&3\\
+4&0&4&2&0&4&2\\
+5&0&5&4&3&2&1
+\end{tabular}
+\end{schema}
+I simboli $0,\ldots,5$ nelle tavole rappresentano classi modulo $6$, non interi con le operazioni usuali.
+La corrispondenza preserva anche l'unità, perché $[1]_6$ va in $([1]_2,[1]_3)$. È quindi un isomorfismo di anelli: le due strutture si descrivono con elementi diversi, ma con gli stessi calcoli.
+
+\subsection{Il teorema cinese come isomorfismo}
+% A–L L16 pp. 2–3; M–Z L15 pp. 6 e 8–9 (recupero D02).
+\begin{proposizione}\label{prop:crt-morfismo}
+Siano $m,n\ge2$. L'applicazione
+\[
+\Phi:\Z/mn\Z\longrightarrow\Z/m\Z\times\Z/n\Z,
+\qquad [a]_{mn}\longmapsto([a]_m,[a]_n)
+\]
+è un morfismo di anelli ben definito. Se $\operatorname{MCD}(m,n)=1$, è un isomorfismo.
+\end{proposizione}
+\begin{proof}
+\textbf{Buona definizione.} Se $[a]_{mn}=[b]_{mn}$, allora $mn\mid a-b$, quindi $m\mid a-b$ e $n\mid a-b$. Si ottengono così $[a]_m=[b]_m$ e $[a]_n=[b]_n$: la coppia non dipende dal rappresentante.
+
+\textbf{Operazioni.} Per la somma,
+\[
+\begin{aligned}
+\Phi([a]_{mn}+[b]_{mn})
+ &=([a+b]_m,[a+b]_n)\\
+ &=([a]_m+[b]_m,[a]_n+[b]_n)
+ =\Phi([a]_{mn})+\Phi([b]_{mn}).
+\end{aligned}
+\]
+Per il prodotto si ha analogamente
+\[
+\Phi([ab]_{mn})=([a]_m[b]_m,[a]_n[b]_n)
+              =\Phi([a]_{mn})\Phi([b]_{mn}).
+\]
+Inoltre $\Phi([1]_{mn})=([1]_m,[1]_n)$, unità del prodotto.
+
+\textbf{Biezione per moduli coprimi.} Data una coppia $([u]_m,[v]_n)$, il teorema cinese~\ref{teo:cinese} dà un intero $a$ con $a\equiv u\pmod m$ e $a\equiv v\pmod n$. Quindi $\Phi([a]_{mn})=([u]_m,[v]_n)$: la mappa è suriettiva. L'unicità della soluzione modulo $mn$ dice che tale classe $[a]_{mn}$ è unica, dunque la mappa è anche iniettiva.
+\end{proof}
+
+\begin{osservazione}
+Dominio e codominio hanno entrambi $mn$ elementi: il secondo ha $m\cdot n$ coppie. Perciò, in alternativa al passaggio sull'unicità, basta la suriettività appena dimostrata per concludere che $\Phi$ è biettiva. La sola uguaglianza delle cardinalità non basta: occorre provare almeno una fra iniettività e suriettività.
+\end{osservazione}
+
+\begin{corollario}\label{cor:crt-anelli}
+Se $m_1,\ldots,m_r\ge2$ sono a due a due coprimi e $M=m_1\cdots m_r$, allora
+\[
+\Phi_M:\Z/M\Z\longrightarrow\prod_{i=1}^r\Z/m_i\Z,
+\qquad [a]_M\longmapsto([a]_{m_1},\ldots,[a]_{m_r})
+\]
+è un isomorfismo di anelli.
+\end{corollario}
+\begin{proof}
+Nel prodotto finito le operazioni e l'unità sono definite componente per componente. Se $M\mid a-b$, ogni $m_i$ divide $a-b$, quindi la mappa è ben definita. Le stesse identità della proposizione precedente mostrano che rispetta somma, prodotto e unità in ogni componente. Per il teorema cinese~\ref{teo:cinese}, ogni $r$-upla di classi ha una e una sola controimmagine modulo $M$. Quindi $\Phi_M$ è biettiva.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{esercizio}
+Per l'isomorfismo $\Phi:\Z/12\Z\to\Z/4\Z\times\Z/3\Z$, calcolare $\Phi([5]_{12})$, $\Phi([7]_{12})$ e $\Phi^{-1}(([3]_4,[2]_3))$.
+\end{esercizio}
+\begin{svolgimento}
+Le immagini si ottengono riducendo lo stesso rappresentante nei due moduli:
+\[
+\Phi([5]_{12})=([1]_4,[2]_3),\qquad
+\Phi([7]_{12})=([3]_4,[1]_3).
+\]
+La controimmagine cercata risolve $a\equiv3\pmod4$ e $a\equiv2\pmod3$, sistema già risolto nel capitolo~\ref{cap:modulare}: tutte le soluzioni sono $11+12\Z$. Perciò $\Phi^{-1}(([3]_4,[2]_3))=[11]_{12}$.
+\end{svolgimento}
+
+\Needspace{13\baselineskip}
+\begin{esercizio}
+Determinare tutte le immagini e le fibre di $\Psi:\Z/12\Z\to\Z/2\Z\times\Z/6\Z$, $[a]_{12}\mapsto([a]_2,[a]_6)$. È un isomorfismo?
+\end{esercizio}
+\begin{svolgimento}
+La mappa è un morfismo per la proposizione~\ref{prop:crt-morfismo}, ma i moduli non sono coprimi. La tabella raccoglie tutte le dodici classi del dominio e le rispettive immagini:
+\[
+\begin{array}{c|c}
+\text{classi modulo }12&\text{immagine in }\Z/2\Z\times\Z/6\Z\\\hline
+{[0]_{12}},[6]_{12}&([0]_2,[0]_6)\\
+{[1]_{12}},[7]_{12}&([1]_2,[1]_6)\\
+{[2]_{12}},[8]_{12}&([0]_2,[2]_6)\\
+{[3]_{12}},[9]_{12}&([1]_2,[3]_6)\\
+{[4]_{12}},[10]_{12}&([0]_2,[4]_6)\\
+{[5]_{12}},[11]_{12}&([1]_2,[5]_6)
+\end{array}
+\]
+Ogni coppia a destra ha come fibra le due classi della stessa riga. Per $0\le b<6$, la fibra di $([e]_2,[b]_6)$ è vuota se $e$ e $b$ hanno parità diversa; se hanno la stessa parità è $\{[b]_{12},[b+6]_{12}\}$. Infatti un intero congruo a $b$ modulo $6$ ha la stessa parità di $b$.
+
+L'immagine contiene soltanto sei delle dodici coppie del codominio. La mappa non è suriettiva e non è iniettiva, ad esempio $\Psi([0]_{12})=\Psi([6]_{12})$. Non è un isomorfismo.
+\end{svolgimento}
+
+\subsection{Una funzione sulle classi che non è un morfismo}
+% M–Z L16 pp. 1–2: esercizio, con tutti i punti svolti.
+\Needspace{13\baselineskip}
+\begin{esercizio}
+Si consideri $f:\Z/36\Z\to\Z/36\Z$, $[a]_{36}\mapsto[3a+2]_{36}$. Verificare che sia ben definita, stabilire se sia un morfismo, calcolare $f^*(\{[5]_{36}\})$ e l'immagine. Dire se sia iniettiva e se sia suriettiva.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Buona definizione e morfismo.} Se $36\mid a-b$, allora $36\mid3(a-b)$: $[3a+2]_{36}=[3b+2]_{36}$. Dunque $f$ è ben definita. Non è un morfismo perché $f([0]_{36})=[2]_{36}\ne[0]_{36}$, contro la proposizione~\ref{prop:morfismi-zero}; anche $f([1]_{36})=[5]_{36}\ne[1]_{36}$.
+
+\textbf{Fibra di $[5]_{36}$.} La condizione $[3a+2]_{36}=[5]_{36}$ equivale a $3a\equiv3\pmod{36}$, cioè ad $a\equiv1\pmod{12}$. Gli interi soluzione sono $1+12\Z$; le classi distinte modulo $36$ sono tre:
+\[
+f^*(\{[5]_{36}\})=\{[1]_{36},[13]_{36},[25]_{36}\}.
+\]
+
+\textbf{Immagine.} Una classe $[z]_{36}$ appartiene all'immagine se e solo se $3a\equiv z-2\pmod{36}$ è risolubile. Il criterio del MCD dà $3\mid z-2$, ossia $z\equiv2\pmod3$. Pertanto
+\[
+f_*(\Z/36\Z)=\{[2+3j]_{36}\mid 0\le j<12\}.
+\]
+Sono le dodici classi con rappresentanti $2,5,8,11,14,17,20,23,26,29,32,35$. La funzione non è suriettiva, perché non raggiunge ad esempio $[0]_{36}$; non è iniettiva, perché $[1]_{36}\ne[13]_{36}$ hanno la stessa immagine.
+\end{svolgimento}
+
+\section{La funzione di Eulero}
+% A–L L16 p. 4; M–Z L15 pp. 10–11 e L16 pp. 2–4 (recupero D03).
+Per contare gli invertibili nelle classi resto possiamo usare la scomposizione in prodotti di anelli. Il passaggio essenziale è che un isomorfismo trasporta esattamente gli elementi invertibili.
+
+\begin{proposizione}\label{prop:trasporto-unita}
+Se $f:R\to S$ è un morfismo e $a\in U(R)$, allora $f(a)\in U(S)$ e $f(a)^{-1}=f(a^{-1})$. Se $f$ è un isomorfismo, la sua restrizione è una biezione $U(R)\to U(S)$.
+\end{proposizione}
+\begin{proof}
+Applicando $f$ alle identità $aa^{-1}=a^{-1}a=1_R$ si ottiene
+\[
+f(a)f(a^{-1})=f(a^{-1})f(a)=1_S.
+\]
+Quindi $f(a^{-1})$ è l'inverso di $f(a)$. Se $f$ è un isomorfismo, anche $f^{-1}$ è un morfismo e manda $U(S)$ in $U(R)$: le due restrizioni sono inverse l'una dell'altra.
+\end{proof}
+
+\begin{definizione}
+La \textbf{funzione di Eulero} è
+\[
+\varphi:\N\setminus\{0,1\}\longrightarrow\N,\qquad
+\varphi(m)=|U(\Z/m\Z)|.
+\]
+Per il criterio delle unità modulo $m$,
+\[
+\varphi(m)=\bigl|\{a\in\Z\mid 0\le a<m,\ \operatorname{MCD}(a,m)=1\}\bigr|.
+\]
+Conta dunque i rappresentanti coprimi con $m$ in un sistema completo di resti.
+\end{definizione}
+
+\begin{esempio}[Primi valori e cautele]
+\[
+\begin{array}{c|rrrrrrr}
+m&2&3&4&5&6&7&8\\\hline
+\varphi(m)&1&2&2&4&2&6&4
+\end{array}
+\]
+Per esempio $U(\Z/8\Z)=\{[1]_8,[3]_8,[5]_8,[7]_8\}$, mentre le quattro unità modulo $12$ già elencate danno $\varphi(12)=4$.
+
+La funzione non è monotona: $\varphi(5)=4>2=\varphi(6)$, ma $\varphi(6)=2<6=\varphi(7)$. Non conserva in generale né somme né prodotti: $\varphi(3+3)=2\ne4=\varphi(3)+\varphi(3)$ e $\varphi(2\cdot2)=2\ne1=\varphi(2)\varphi(2)$.
+\end{esempio}
+
+\begin{proposizione}\label{prop:eulero-potenze}
+Per ogni primo positivo $p$ e ogni intero $k\ge1$,
+\[
+\varphi(p^k)=p^k-p^{k-1}=p^{k-1}(p-1).
+\]
+In particolare $\varphi(p)=p-1$ e $\varphi(p^2)=p^2-p$.
+\end{proposizione}
+\begin{proof}
+Una classe $[a]_{p^k}$ è invertibile se e solo se $\operatorname{MCD}(a,p^k)=1$, cioè se e solo se $p\nmid a$: l'unico primo che divide $p^k$ è $p$. Fra i $p^k$ rappresentanti $0,1,\ldots,p^k-1$, quelli non invertibili sono precisamente
+\[
+0,p,2p,\ldots,(p^{k-1}-1)p.
+\]
+Sono $p^{k-1}$ multipli distinti di $p$, incluso lo zero. Restano $p^k-p^{k-1}$ unità. Per $k=1$ si esclude solo lo zero, come già sappiamo perché $\Z/p\Z$ è un campo.
+\end{proof}
+
+\Needspace{15\baselineskip}
+\begin{proposizione}[Moltiplicatività per moduli coprimi]\label{prop:eulero-coprimi}
+Se $m,n\ge2$ e $\operatorname{MCD}(m,n)=1$, allora
+\[
+\varphi(mn)=\varphi(m)\varphi(n).
+\]
+\end{proposizione}
+\begin{proof}
+Il teorema cinese dà l'isomorfismo $\Phi:\Z/mn\Z\to\Z/m\Z\times\Z/n\Z$. La proposizione~\ref{prop:trasporto-unita} e la descrizione delle unità di un prodotto danno una biezione
+\[
+U(\Z/mn\Z)\longrightarrow U(\Z/m\Z)\times U(\Z/n\Z),
+\qquad [a]_{mn}\longmapsto([a]_m,[a]_n).
+\]
+Contando gli elementi dei due insiemi finiti si ottiene $\varphi(mn)=|U(\Z/m\Z)|\,|U(\Z/n\Z)|=\varphi(m)\varphi(n)$.
+\end{proof}
+
+\begin{corollario}[Formula dalla fattorizzazione]
+% M–Z L16 p. 4 completa il tema avviato in A–L L16 p. 4.
+Se $m=p_1^{k_1}\cdots p_r^{k_r}\ge2$, con $p_i$ primi distinti e $k_i\ge1$, allora
+\[
+\varphi(m)=\prod_{i=1}^r p_i^{k_i-1}(p_i-1).
+\]
+\end{corollario}
+\begin{proof}
+Le potenze $p_i^{k_i}$ sono a due a due coprime, poiché hanno fattori primi distinti. Per il corollario~\ref{cor:crt-anelli}, la restrizione alle unità e la formula delle unità di un prodotto finito, si ha
+\[
+\varphi(m)=\prod_{i=1}^r\varphi(p_i^{k_i}).
+\]
+Applicando la proposizione~\ref{prop:eulero-potenze} a ciascun fattore segue la formula. Per $r=1$ è già la formula per una potenza prima.
+\end{proof}
+
+\begin{esempio}
+Poiché $600=2^3\cdot3\cdot5^2$, con potenze prime a due a due coprime,
+\[
+\varphi(600)=\varphi(2^3)\varphi(3)\varphi(5^2)
+           =\bigl(2^2(2-1)\bigr)\cdot(3-1)\cdot\bigl(5(5-1)\bigr)
+           =4\cdot2\cdot20=160.
+\]
+\end{esempio}

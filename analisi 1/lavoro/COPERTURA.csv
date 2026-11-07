@@ -117,3 +117,24 @@ lezione,pagine_pdf,argomento,file_destinazione,stato
 13,13–15,Continuità tramite successioni; C(A) e C^0(A); esempio del modulo e figura,capitoli/09-continuita.tex,integrata; definizione e figura; raccordo senza duplicare la prova del modulo
 13,16,"Dominio [0,3] unito a {4}; f(4)=5; successione 3-1/n; figura e chiarimenti su estremi e punti isolati",capitoli/09-continuita.tex,integrata; lettura visiva; giustificazioni redazionali
 13,17,Continuità delle elementari assunta; algebra delle funzioni continue; domini dei quozienti,capitoli/09-continuita.tex,integrata; assunzione esplicita e prova redazionale dell’algebra
+14,2–3,"Strategia tramite continuità; limite con seno esterno, modulo e fattore oscillante",capitoli/09b-applicazioni-ai-limiti.tex,integrata; richiami accorpati e svolgimento completo
+14,4,Funzione uguale a 1 solo in zero: controesempio e grafico,capitoli/09b-applicazioni-ai-limiti.tex,integrata; lettura visiva e figura TikZ
+14,5,"Composizione con seno, coseno e radice cubica: limite 1",capitoli/09b-applicazioni-ai-limiti.tex,integrata; prova della composizione aggiunta
+14,6,Radice quadrata di cos(1/n^2)-1: successione non definita in R,capitoli/09b-applicazioni-ai-limiti.tex,integrata; dominio precisato per n>=1
+14,7,Limite sin(x_n)/x_n; confronto geometrico e carabinieri; circonferenza e tangente,capitoli/10a-limiti-trigonometrici.tex,integrata; x_n non nullo e caso negativo esplicitati
+14,8,Limite (1-cos(x_n))/x_n^2; prova col coniugato,capitoli/10a-limiti-trigonometrici.tex,integrata; condizioni di dominio esplicitate
+14,9–10,Rapporto con sin^2(3/n)-1/n^2 e cos(2/n)-1: raccoglimenti e limite -4,capitoli/10a-limiti-trigonometrici.tex,integrata; svolgimento e segni verificati
+14,11–12,Avvertenza sulle sostituzioni in differenze; (sin(1/n)-1/n)/(1/n^4),capitoli/10a-limiti-trigonometrici.tex,integrata; stima conclusiva redazionale con triplo angolo
+14,13–15,"Geometriche: tutti i valori reali di q; Bernoulli, reciproci ed estratte",capitoli/10b-geometriche-rapporti-radici.tex,integrata; distinto q=0 e scelta n>=1
+15,2,"Gerarchia n^n, n!, q^n, n^k e potenze del logaritmo; notazione di dominanza",capitoli/10d-gerarchie-ed-esercizi.tex,integrata; confronto potenze-logaritmi enunciato e rinviato come nella fonte
+15,3,Criterio del rapporto per successioni positive; caso limite 1,capitoli/10b-geometriche-rapporti-radici.tex,integrata; prova ricostruita ed estensione al limite infinito
+15,4–5,Prove della gerarchia tramite rapporti e successione (1+1/n)^n,capitoli/10d-gerarchie-ed-esercizi.tex,integrata; ordine delle dipendenze corretto e k reale trattato per continuità
+15,6,Radice n-esima di q positivo verso 1; prova con Bernoulli,capitoli/10b-geometriche-rapporti-radici.tex,integrata; completati i casi 0<q<1 e q=1
+15,7,Limite del rapporto implica limite della radice; radici n-esime di n e n^k,capitoli/10b-geometriche-rapporti-radici.tex,integrata; prova assegnata per casa ricostruita
+15,8,Forma infinito elevato a zero: confronto fra n^(1/n) e (n^n)^(1/n),capitoli/10b-geometriche-rapporti-radici.tex,integrata; positività delle basi esplicitata
+15,9,Limite (2n)!/(2n^n); rapporto consecutivo e potenza a esponente variabile,capitoli/10d-gerarchie-ed-esercizi.tex,integrata; corretti fattore 2n+1 e limite 1/e
+15,10–12,"Limite con parametro a>0, basi a/4/7, potenze, radice e seno limitato",capitoli/10d-gerarchie-ed-esercizi.tex,integrata; tutti i casi e raccoglimenti conservati
+15,13,"Numero di Nepero: crescita e convergenza di (1+1/n)^n; intervallo [2,4]",capitoli/10c-nepero-esponenziale-logaritmo.tex,integrata; prova redazionale con Newton e supremo
+15,14–15,"Rappresentazioni dell’esponenziale, proprietà moltiplicativa, potenze razionali e logaritmo inverso",capitoli/10c-nepero-esponenziale-logaritmo.tex,integrata; teorema generale assunto e rinvio al capitolo 6
+15,15,Limiti notevoli esponenziale e logaritmico,capitoli/10c-nepero-esponenziale-logaritmo.tex,integrata; prove redazionali e ipotesi di dominio
+15,13–15,Raccordo sulla base e già presentata fra le funzioni elementari,capitoli/06d-esponenziali-e-iperboliche.tex,integrata; riferimento alla definizione rigorosa senza duplicazione

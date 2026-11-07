@@ -1,0 +1,120 @@
+% !TeX root = ../main.tex
+% Fonte: Lezione 14, pp. 7--12. Precisate le ipotesi di dominio e completato l'ultimo esercizio.
+\section{Due limiti trigonometrici fondamentali}
+\label{sec:limiti-trigonometrici}
+
+La continuità permette di calcolare $\sin x_n\to0$ e $\cos x_n\to1$ quando $x_n\to0$. Non risolve però direttamente i rapporti in cui numeratore e denominatore tendono entrambi a zero. In questi casi servono informazioni più precise sulla loro grandezza relativa.
+
+\begin{teorema}
+Se $x_n\to0$ e $x_n\ne0$ definitivamente, con gli angoli misurati in radianti, allora
+\[
+\frac{\sin x_n}{x_n}\longrightarrow1,
+\qquad
+\frac{1-\cos x_n}{x_n^2}\longrightarrow\frac12.
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Il rapporto con il seno.} Per $0<t<\pi/2$, il confronto geometrico fra un triangolo inscritto, un settore circolare e un triangolo tangente dà
+\[
+\sin t<t<\tan t.
+\]
+Più precisamente, nel cerchio unitario le tre aree sono $\sin t/2$, $t/2$ e $\tan t/2$. Dividendo per $\sin t>0$ si ricava
+\[
+1<\frac{t}{\sin t}<\frac1{\cos t},
+\qquad
+\cos t<\frac{\sin t}{t}<1.
+\]
+Il rapporto $\sin t/t$ è pari, quindi la stessa stima vale per $0<|t|<\pi/2$. Definitivamente la si può applicare a $t=x_n$. La continuità del coseno dà $\cos x_n\to1$; per i carabinieri, $\sin x_n/x_n\to1$.
+
+\textbf{Il rapporto con il coseno.} Poiché $\cos x_n\to1$, definitivamente $1+\cos x_n\ne0$. Moltiplicando per il coniugato e usando $1-\cos^2t=\sin^2t$,
+\[
+\frac{1-\cos x_n}{x_n^2}
+=\frac{\sin^2x_n}{x_n^2(1+\cos x_n)}
+=\left(\frac{\sin x_n}{x_n}\right)^2\frac1{1+\cos x_n}
+\longrightarrow1\cdot\frac12.
+\]
+\end{proof}
+
+\begin{schema}
+\begin{tikzpicture}[scale=2.8]
+  \draw[asse] (-1.2,0) -- (1.5,0);
+  \draw[asse] (0,-1.12) -- (0,1.25);
+  \draw[black!55] (0,0) circle[radius=1];
+  \draw[intervallo] (0,0) -- (1,{tan(35)});
+  \draw[black!55] (0,0) -- (1,0);
+  \draw[intervallo] (1,-.15) -- (1,.95);
+  \draw[black!55] (1,0) -- ({cos(35)},{sin(35)});
+  \draw[dashed,coloreschema] ({cos(35)},0) -- ({cos(35)},{sin(35)});
+  \draw[coloreschema] (.3,0) arc[start angle=0,end angle=35,radius=.3];
+  \node at (.4,.12) {$t$};
+  \node[below left] at (0,0) {$O$};
+  \node[below right] at (1,0) {$A$};
+  \node[above left] at ({cos(35)},{sin(35)}) {$B$};
+  \node[above right] at (1,{tan(35)}) {$T$};
+\end{tikzpicture}
+\par\smallskip Nel cerchio unitario, $B=(\cos t,\sin t)$ e $T=(1,\tan t)$. Il triangolo $OAB$ è contenuto nel settore $OAB$, a sua volta contenuto nel triangolo $OAT$.
+\end{schema}
+
+\begin{esercizio}[Riconoscere gli argomenti dei limiti notevoli]
+Calcolare
+\[
+\lim_{n\to+\infty}\frac{\sin^2(3/n)-1/n^2}{\cos(2/n)-1}.
+\]
+\end{esercizio}
+\begin{svolgimento}
+Numeratore e denominatore tendono a zero. Per $n\ge1$ il denominatore è non nullo, perché $0<2/n\le2<2\pi$ e $\cos(2/n)<1$. Riscriviamo separatamente
+\[
+\sin^2(3/n)-\frac1{n^2}
+=\frac1{n^2}\left[9\left(\frac{\sin(3/n)}{3/n}\right)^2-1\right]
+\]
+e
+\[
+\cos(2/n)-1
+=-\frac4{n^2}\,\frac{1-\cos(2/n)}{(2/n)^2}.
+\]
+Il fattore $1/n^2$ si semplifica esattamente, prima di passare al limite. Si ottiene
+\[
+\frac{9\left(\frac{\sin(3/n)}{3/n}\right)^2-1}
+{-4\,\frac{1-\cos(2/n)}{(2/n)^2}}
+\longrightarrow\frac{9-1}{-4\cdot\frac12}=-4.
+\]
+\end{svolgimento}
+
+\section{Equivalenza e cancellazioni}
+% Fonte: Lezione 14, pp. 11--12. L'esito finale dell'esempio non è calcolato nella fonte.
+
+\begin{definizione}[Successioni asintoticamente equivalenti]
+Se $b_n\ne0$ definitivamente, si scrive $a_n\sim b_n$ per indicare che $a_n/b_n\to1$. In particolare, se $x_n\to0$ e $x_n\ne0$ definitivamente, $\sin x_n\sim x_n$.
+\end{definizione}
+
+La relazione $\sin x_n\sim x_n$ riguarda un rapporto: non è un'uguaglianza. Moltiplicare e dividere per l'argomento consente di usare il limite notevole senza cambiare l'espressione. Sostituire direttamente due termini che poi si sottraggono può invece cancellare proprio l'informazione decisiva.
+
+\begin{esercizio}[Una cancellazione fra infinitesime]
+Calcolare
+\[
+\lim_{n\to+\infty}\frac{\sin(1/n)-1/n}{1/n^4},
+\]
+spiegando perché non si possa sostituire semplicemente $\sin(1/n)$ con $1/n$ nel numeratore.
+\end{esercizio}
+\begin{svolgimento}
+Il raccoglimento esatto dà
+\[
+\frac{\sin(1/n)-1/n}{1/n^4}
+=n^3\left[\frac{\sin(1/n)}{1/n}-1\right].
+\]
+La parentesi tende a zero, ma il fattore $n^3$ diverge: rimane una forma indeterminata. La sola equivalenza $\sin(1/n)\sim1/n$ non autorizza a cancellare i due addendi e a concludere che il limite sia zero.
+
+\textbf{Una stima più precisa.} Poniamo $t=1/(3n)$. Dall'identità $\sin(3t)=3\sin t-4\sin^3t$, conseguenza delle formule di addizione, segue
+\[
+\frac1n-\sin\frac1n
+=3(t-\sin t)+4\sin^3t\ge4\sin^3t,
+\]
+perché $0<\sin t<t$. Quindi
+\[
+\frac{\sin(1/n)-1/n}{1/n^4}
+\le-4n^4\sin^3\!\left(\frac1{3n}\right)
+=-\frac{4n}{27}\left(\frac{\sin(1/(3n))}{1/(3n)}\right)^3
+\longrightarrow-\infty.
+\]
+Il confronto con una successione tendente a $-\infty$ conclude che il limite cercato è $-\infty$.
+\end{svolgimento}

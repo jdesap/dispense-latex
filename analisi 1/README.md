@@ -1,8 +1,8 @@
 # Appunti di analisi 1
 
 Appunti di **Jude De Sa'Pinto** dal corso del **Prof. Federico Cacciafesta**.
-Revisione editoriale integrale conclusa il 22 ottobre 2026; lezione 13 integrata
-il 2 novembre: 83 pagine, nove capitoli. Resoconto e limiti della revisione editoriale in
+Revisione editoriale integrale conclusa il 22 ottobre 2026; lezioni 14–15 integrate
+il 4 novembre: 92 pagine, dieci capitoli. Resoconto e limiti della revisione editoriale in
 `../lavoro/revisione-editoriale/RESOCONTO_FINALE.md`.
 La lezione 9 completa il capitolo di topologia con interno, frontiera,
 punti isolati, aderenza e accumulazione; dettagli e aggiunte redazionali in
@@ -19,6 +19,14 @@ il capitolo 9 «Continuità», con definizione tramite successioni, ruolo del do
 e operazioni fra funzioni continue. Accorpamenti, correzioni e letture alternative
 di un esponente sono documentati in `lavoro/LEZIONE_13_2026-11-02.md`;
 verifiche in `lavoro/VERIFICA_LEZIONE_13_2026-11-02.json`.
+Le lezioni 14–15 ampliano Continuità con composizione, esempi di calcolo e
+controesempi. Il capitolo 10 «Limiti notevoli e confronti asintotici» raccoglie
+limiti trigonometrici, geometriche, criteri del rapporto e della radice,
+numero di Nepero, limiti esponenziale e logaritmico, gerarchie ed esercizi.
+La sezione precedente sugli esponenziali rimanda alla definizione rigorosa di e.
+Accorpamenti, prove aggiunte, correzioni e risultati assunti sono descritti in
+`lavoro/LEZIONI_14_15_2026-11-04.md`; controlli in
+`lavoro/VERIFICA_LEZIONI_14_15_2026-11-04.json`.
 Le barre laterali, i numeretti blu delle note, il rientro delle prove e le
 spaziature si regolano nel blocco **STILE MATEMATICO** di `preambolo.tex`,
 I parametri e gli ultimi controlli sono descritti in
@@ -65,7 +73,7 @@ ad aggiornare indice e collegamenti. I commenti `TeX root` permettono di
 compilare il documento principale anche mentre si modifica un capitolo.
 
 La stessa compilazione, anche con Salva/Build in VS Code, esporta
-automaticamente i nove capitoli in `build/capitoli/`, con nomi tematici.
+automaticamente i dieci capitoli in `build/capitoli/`, con nomi tematici.
 I nuovi capitoli saranno riconosciuti senza configurazioni aggiuntive.
 Gli estratti mantengono impaginazione, numeri di pagina e segnalibri
 del volume; possono essere importati singolarmente in Goodnotes.

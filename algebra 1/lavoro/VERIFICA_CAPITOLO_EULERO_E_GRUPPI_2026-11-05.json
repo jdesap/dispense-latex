@@ -1,0 +1,31 @@
+{
+  "data": "2026-11-05",
+  "stato": "pass",
+  "sezione_eulero_spostata_integralmente_senza_modifiche": true,
+  "nessuna_nuova_teoria_dei_gruppi_aggiunta": true,
+  "resto_capitolo7_identico": true,
+  "capitoli_1_6_sorgenti_identici": true,
+  "preambolo_e_manifest_fonti_identici": true,
+  "unita_matematiche_precedenti_conservate": 126,
+  "unita_nuove": 0,
+  "numerazione_e_pixel_identici_capitoli_1_7": {
+    "pagine_testo": 52,
+    "pagine_pdf": [
+      5,
+      56
+    ],
+    "scala_render": 1500
+  },
+  "struttura": {
+    "capitoli": 8,
+    "sezioni": 40,
+    "sottosezioni": 12,
+    "figure_tikz": 14,
+    "prove": 68,
+    "esercizi": 31,
+    "svolgimenti": 31,
+    "label_uniche": 39,
+    "riferimenti_risolti": 25
+  },
+  "snapshot": "lavoro/storico-prima-capitolo-eulero-2026-11-05"
+}

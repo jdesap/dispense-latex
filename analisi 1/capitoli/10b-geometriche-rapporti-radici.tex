@@ -1,0 +1,108 @@
+% !TeX root = ../main.tex
+% Fonti: Lezione 14, pp. 13--15; Lezione 15, pp. 3, 6--8.
+\section{Successioni geometriche}
+\label{sec:successioni-geometriche}
+
+\begin{teorema}
+Per $q\in\R$ e $n\ge1$, la successione geometrica $(q^n)$ ha il seguente comportamento:
+\[
+q^n\longrightarrow
+\begin{cases}
++\infty,&q>1,\\
+1,&q=1,\\
+0,&|q|<1,
+\end{cases}
+\qquad
+(q^n)\text{ è irregolare se }q\le-1.
+\]
+\end{teorema}
+\begin{proof}
+\passomath{q>1} La disuguaglianza di Bernoulli, già dimostrata nel capitolo~\ref{cap:naturali-combinatoria}, dà
+\[
+q^n=(1+(q-1))^n\ge1+n(q-1)\longrightarrow+\infty.
+\]
+Il confronto implica $q^n\to+\infty$.
+
+\passomath{|q|<1} Se $q=0$, tutti i termini sono nulli. Se $0<|q|<1$, allora $1/|q|>1$, dunque $(1/|q|)^n\to+\infty$ e $|q|^n\to0$. Poiché $-|q|^n\le q^n\le|q|^n$, i carabinieri danno $q^n\to0$, anche per $q$ negativo.
+
+\passomath{q=1\text{ oppure }q\le-1} Per $q=1$ la successione è costante. Per $q=-1$ le estratte pari e dispari sono costanti con valori $1$ e $-1$. Per $q<-1$, scrivendo $q^n=(-1)^n|q|^n$, le estratte pari e dispari tendono rispettivamente a $+\infty$ e $-\infty$. Negli ultimi due casi non esiste limite nella retta estesa.
+\end{proof}
+
+\section{Il criterio del rapporto}
+% Fonte: Lezione 15, p. 3; dimostrazione assegnata per esercizio, qui ricostruita.
+
+\begin{proposizione}[Criterio del rapporto per successioni positive]
+\label{prop:criterio-rapporto}
+Sia $a_n>0$ definitivamente e supponiamo che esista
+\[
+\frac{a_{n+1}}{a_n}\longrightarrow\ell\in[0,+\infty].
+\]
+Se $0\le\ell<1$, allora $a_n\to0$. Se $1<\ell\le+\infty$, allora $a_n\to+\infty$. Per $\ell=1$ il criterio non dà una conclusione.
+\end{proposizione}
+\begin{proof}
+\textbf{Rapporto minore di uno.} Scegliamo $r$ con $\ell<r<1$. Esiste $N$ tale che $0<a_{n+1}/a_n\le r$ per $n\ge N$. Iterando la disuguaglianza,
+\[
+0<a_n\le a_Nr^{n-N}\qquad(n\ge N).
+\]
+La maggiorante tende a zero per il teorema sulle geometriche, quindi $a_n\to0$.
+
+\textbf{Rapporto maggiore di uno.} Scegliamo $r>1$ con $r<\ell$, o un qualunque $r>1$ se $\ell=+\infty$. Definitivamente $a_{n+1}\ge r a_n$, da cui $a_n\ge a_Nr^{n-N}\to+\infty$.
+\end{proof}
+
+\begin{esempio}[Il caso inconcludente]
+Le successioni positive $a_n=n$, $b_n=1/n$ e $c_n=1$, per $n\ge1$, hanno tutte rapporto fra termini consecutivi tendente a $1$, ma tendono rispettivamente a $+\infty$, $0$ e $1$. Il limite del rapporto, in questo caso, non determina il limite della successione.
+\end{esempio}
+
+\section{Radici di indice variabile}
+% Fonte: Lezione 15, pp. 6--7; completati i casi e la prova assegnata per casa.
+
+\begin{proposizione}
+\label{prop:radice-costante}
+Per ogni $q>0$, $\sqrt[n]{q}\to1$.
+\end{proposizione}
+\begin{proof}
+Se $q>1$, poniamo $u_n=\sqrt[n]{q}-1>0$. Per Bernoulli,
+\[
+q=(1+u_n)^n\ge1+nu_n,
+\qquad 0\le u_n\le\frac{q-1}{n}\longrightarrow0.
+\]
+I carabinieri danno $u_n\to0$, quindi $\sqrt[n]{q}\to1$. Per $q=1$ la successione è costante; se $0<q<1$, si applica il risultato a $1/q>1$ e poi si prende il reciproco, perché $\sqrt[n]{q}=1/\sqrt[n]{1/q}$.
+\end{proof}
+
+\begin{proposizione}[Dal rapporto alla radice]
+\label{prop:rapporto-radice}
+Se $a_n>0$ definitivamente e $a_{n+1}/a_n\to\ell\in[0,+\infty]$, allora $\sqrt[n]{a_n}\to\ell$.
+\end{proposizione}
+\begin{proof}
+\textbf{Limite positivo finito.} Fissiamo $0<r<\ell<s$. Definitivamente $r\le a_{n+1}/a_n\le s$. Iterando da un indice $N$,
+\[
+a_Nr^{n-N}\le a_n\le a_Ns^{n-N}.
+\]
+Prendendo le radici $n$-esime,
+\[
+r\sqrt[n]{a_Nr^{-N}}\le\sqrt[n]{a_n}\le s\sqrt[n]{a_Ns^{-N}}.
+\]
+I due fattori sotto radice sono costanti positive, dunque le successioni esterne tendono a $r$ e $s$. Poiché si possono scegliere $r$ e $s$ arbitrariamente vicini a $\ell$, la radice tende a $\ell$: dato $\varepsilon>0$, si scelgono prima $r,s$ dentro $(\ell-\varepsilon,\ell+\varepsilon)$, poi una soglia comune per i due confronti.
+
+\textbf{Limite nullo.} Per ogni $s>0$, definitivamente $a_{n+1}/a_n\le s$, e la stessa iterazione dà $0<\sqrt[n]{a_n}\le s\sqrt[n]{a_Ns^{-N}}$. Per $\varepsilon>0$ si sceglie $s=\varepsilon/2$; il fattore sotto radice tende a $1$, quindi la maggiorante è minore di $\varepsilon$ definitivamente.
+
+\textbf{Limite infinito.} Per ogni $r>0$, definitivamente $a_{n+1}/a_n\ge r$, quindi $\sqrt[n]{a_n}\ge r\sqrt[n]{a_Nr^{-N}}$. Dato $M>0$, scegliamo $r=2M$; il fattore sotto radice è definitivamente maggiore di $1/2$, perciò $\sqrt[n]{a_n}>M$.
+\end{proof}
+
+\begin{esempio}
+Per $a_n=n$, il rapporto $(n+1)/n\to1$, dunque $\sqrt[n]{n}\to1$. Più in generale, per $a_n=n^k$, con $k>0$ fissato,
+\[
+\frac{a_{n+1}}{a_n}=\left(1+\frac1n\right)^k\longrightarrow1
+\]
+per continuità della potenza sul dominio positivo; quindi $\sqrt[n]{n^k}\to1$.
+\end{esempio}
+
+\begin{osservazione}[La forma infinito elevato a zero]
+Con una base tendente a $+\infty$ e un esponente tendente a zero, il limite non è determinato dai soli limiti dei due elementi. Infatti
+\[
+n^{1/n}\longrightarrow1,
+\qquad
+(n^n)^{1/n}=n\longrightarrow+\infty.
+\]
+Le basi devono essere positive per considerare senza ambiguità le potenze a esponente reale.
+\end{osservazione}

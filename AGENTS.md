@@ -34,3 +34,5 @@ Le richieste dell'autore e le convenzioni della singola dispensa prevalgono.
   Evitare consegne isolate in fondo pagina prima dello svolgimento.
 
 - A ogni nuovo caricamento verificare le sovrapposizioni con tutte le parti già scritte, scegliere la collocazione per macroargomento e integrare nel testo precedente i contenuti pertinenti. Evitare duplicazioni e registrare le scelte di accorpamento e le prove alternative utili.
+
+- Mantenere aggiornato `DIMOSTRAZIONI_DA_STUDIARE.md` a ogni integrazione di fonti o revisione sostanziale delle dimostrazioni. Seguire il protocollo interno del file: priorità A/B/C motivate dall'idea richiesta, collegamenti ai sorgenti correnti, accorpamento dei metodi comuni e distinzione dei risultati assunti o rinviati. Conservare gli appunti personali dell'autore e non attribuirgli progressi di studio non dichiarati.
