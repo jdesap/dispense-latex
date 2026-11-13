@@ -15,7 +15,7 @@ Il criterio locale consente di dimostrare le seguenti proprietà.
 
 \begin{proposizione}[Operazioni con gli aperti]
 Valgono le seguenti proprietà.
-\begin{enumerate}[label=\alph*)]
+\begin{enumerate}[label=\arabic*.]
   \item $\varnothing$ e $\R$ sono aperti.
   \item L'intersezione di un numero \emph{finito} di aperti è aperta.
   \item L'unione di una famiglia \emph{arbitraria} di aperti è aperta.
@@ -23,11 +23,11 @@ Valgono le seguenti proprietà.
 \end{proposizione}
 
 \begin{proof}
-\textbf{(a) Insiemi vuoto e ambiente.} Per l'insieme vuoto non ci sono punti sui quali verificare il criterio; per $\R$, qualunque intervallo centrato in un suo punto resta in $\R$.
+\textbf{(1) Insiemi vuoto e ambiente.} Per l'insieme vuoto non ci sono punti sui quali verificare il criterio; per $\R$, qualunque intervallo centrato in un suo punto resta in $\R$.
 
-\textbf{(b) Intersezioni finite.} Siano $A_1,\ldots,A_m$ aperti, con $m\ge1$, e sia $x\in\bigcap_{j=1}^{m}A_j$. Per ogni $j$ esiste $\varepsilon_j>0$ per cui $(x-\varepsilon_j,x+\varepsilon_j)\subseteq A_j$. Poiché gli insiemi sono in numero finito, il minimo $\varepsilon=\min\{\varepsilon_1,\ldots,\varepsilon_m\}$ è ancora positivo. L'intervallo $(x-\varepsilon,x+\varepsilon)$ è quindi contenuto in tutti gli $A_j$, e dunque nella loro intersezione. L'intersezione della famiglia vuota si intende uguale a $\R$, già considerato in (a).
+\textbf{(2) Intersezioni finite.} Siano $A_1,\ldots,A_m$ aperti, con $m\ge1$, e sia $x\in\bigcap_{j=1}^{m}A_j$. Per ogni $j$ esiste $\varepsilon_j>0$ per cui $(x-\varepsilon_j,x+\varepsilon_j)\subseteq A_j$. Poiché gli insiemi sono in numero finito, il minimo $\varepsilon=\min\{\varepsilon_1,\ldots,\varepsilon_m\}$ è ancora positivo. L'intervallo $(x-\varepsilon,x+\varepsilon)$ è quindi contenuto in tutti gli $A_j$, e dunque nella loro intersezione. L'intersezione della famiglia vuota si intende uguale a $\R$, già considerato in (1).
 
-\textbf{(c) Unioni arbitrarie.} Se $x$ appartiene a un'unione $\bigcup_{\alpha\in I}A_\alpha$ di aperti, allora appartiene ad almeno uno di essi, diciamo $A_{\alpha_0}$. Un intervallo aperto intorno a $x$ contenuto in $A_{\alpha_0}$ è automaticamente contenuto nell'intera unione. Non serve che la famiglia sia finita.
+\textbf{(3) Unioni arbitrarie.} Se $x$ appartiene a un'unione $\bigcup_{\alpha\in I}A_\alpha$ di aperti, allora appartiene ad almeno uno di essi, diciamo $A_{\alpha_0}$. Un intervallo aperto intorno a $x$ contenuto in $A_{\alpha_0}$ è automaticamente contenuto nell'intera unione. Non serve che la famiglia sia finita.
 \end{proof}
 
 \begin{esempio}[Necessità della finitezza]
@@ -52,7 +52,7 @@ Un insieme $C\subseteq\R$ è \emph{chiuso} quando il suo complemento $C^c$ è ap
 
 \begin{proposizione}[Operazioni con i chiusi]
 \leavevmode
-\begin{enumerate}[label=\alph*)]
+\begin{enumerate}[label=\arabic*.]
   \item $\varnothing$ e $\R$ sono chiusi.
   \item L'intersezione di una famiglia arbitraria di chiusi è chiusa.
   \item L'unione di un numero finito di chiusi è chiusa.
@@ -60,16 +60,16 @@ Un insieme $C\subseteq\R$ è \emph{chiuso} quando il suo complemento $C^c$ è ap
 \end{proposizione}
 
 \begin{proof}
-\textbf{(a) Insiemi vuoto e ambiente.} I complementi di $\varnothing$ e $\R$ sono rispettivamente $\R$ e $\varnothing$, che sono aperti.
+\textbf{(1) Insiemi vuoto e ambiente.} I complementi di $\varnothing$ e $\R$ sono rispettivamente $\R$ e $\varnothing$, che sono aperti.
 
-\textbf{(b) Intersezioni arbitrarie.} Se i $C_\alpha$ sono chiusi, allora
+\textbf{(2) Intersezioni arbitrarie.} Se i $C_\alpha$ sono chiusi, allora
 \[
   \left(\bigcap_{\alpha\in I}C_\alpha\right)^c
   =\bigcup_{\alpha\in I}C_\alpha^c
 \]
 è aperto, perché è un'unione arbitraria di aperti. L'intersezione dei $C_\alpha$ è dunque chiusa.
 
-\textbf{(c) Unioni finite.} Per $C_1,\ldots,C_m$ chiusi,
+\textbf{(3) Unioni finite.} Per $C_1,\ldots,C_m$ chiusi,
 \[
   \left(\bigcup_{j=1}^{m}C_j\right)^c
   =\bigcap_{j=1}^{m}C_j^c

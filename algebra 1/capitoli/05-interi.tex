@@ -9,10 +9,10 @@ Assumiamo le proprietà usuali delle operazioni interne $+,\cdot:\Z^2\to\Z$. L'a
 Inoltre non vi sono divisori dello zero: $ab=0$ implica $a=0$ oppure $b=0$. Ne segue la cancellazione: se $a\ne0$ e $ab=ac$, allora $a(b-c)=0$ e perciò $b=c$.
 
 \begin{definizione}
-Un intero $a$ è un'\textbf{unità}, o è \textbf{invertibile}, se esiste $b\in\Z$ con $ab=1$.
+Un intero $a$ è un'\textbf{unità}, o è \textbf{invertibile}, se esiste $b\in\Z$ con $ab=1$. Indichiamo con $U(\Z)$ l'insieme delle unità di $\Z$.
 \end{definizione}
 
-Si ha $U(\Z)=\{1,-1\}$.: entrambi sono inversi di se stessi; viceversa $ab=1$ implica $|a||b|=1$, quindi i due valori assoluti interi positivi sono entrambi $1$ \footnote{La dimostrazione non é del tutto triviale: posso ragionare sui moduli ma prima devo capire come si comporta la moltiplicazione rispetto al $\leq$.}
+Si ha $U(\Z)=\{1,-1\}$: entrambi sono inversi di se stessi; viceversa $ab=1$ implica $|a||b|=1$, quindi i due valori assoluti interi positivi sono entrambi $1$\footnote{La dimostrazione non é del tutto triviale: posso ragionare sui moduli ma prima devo capire come si comporta la moltiplicazione rispetto al $\leq$.}. Infatti sono entrambi almeno $1$; se uno fosse almeno $2$, moltiplicandolo per l'altro, positivo, il prodotto sarebbe almeno $2$. Qui si usano le usuali proprietà d'ordine degli interi.
 
 \section{Divisibilità}
 \begin{definizione}
@@ -20,13 +20,17 @@ Per $a,b\in\Z$ si dice che $a$ \textbf{divide} $b$, e si scrive $a\mid b$, se $b
 \end{definizione}
 
 \begin{proposizione}
-La divisibilità è riflessiva e transitiva, ma non è né simmetrica né antisimmetrica (quindi in $\Z$ non è una relazione di ordine o di equivalenza) \footnote{E in $\N$? Beh è riflessiva, antisym. e transitiva (ma non totale) quindi è un ordine parziale.}. Due interi sono associati se e solo se $a=\pm b$; $\sim$ è un'equivalenza.
+\begin{enumerate}[label=\arabic*.]
+\item La divisibilità è riflessiva e transitiva, ma non è né simmetrica né antisimmetrica (quindi in $\Z$ non è una relazione di ordine o di equivalenza) \footnote{E in $\N$? Beh è riflessiva, antisym. e transitiva (ma non totale) quindi è un ordine parziale.}.
+\item Due interi sono associati se e solo se $a=\pm b$; $\sim$ è un'equivalenza.
+\end{enumerate}
 \end{proposizione}
 
 \begin{proof}
-Si ha $a=a\cdot1$ (riflessiva); se $b=am$ e $c=bn$, allora $c=a(mn)$ (transitiva). La simmetria non vale perché $2\mid4$ e $4\nmid2$; l'antisimmetria non vale perché $1\mid-1$ e $-1\mid1$.
-
-Se $b=am$ e $a=bn$, per $a=0$ segue $b=0$. Se $a\ne0$, sostituendo si ha $a=amn$; cancellando $a$ si ricava $mn=1$, quindi $m=n=1$ oppure $m=n=-1$. Dunque $b=\pm a$. Il viceversa segue moltiplicando per $1$ o $-1$. Infine l'uguaglianza a meno del segno è riflessiva, simmetrica e transitiva: se $a=\varepsilon b$ e $b=\eta c$, con $\varepsilon,\eta\in\{1,-1\}$, allora $a=(\varepsilon\eta)c$.
+\begin{enumerate}[label=\arabic*.]
+\item Si ha $a=a\cdot1$ (riflessiva); se $b=am$ e $c=bn$, allora $c=a(mn)$ (transitiva). La simmetria non vale perché $2\mid4$ e $4\nmid2$; l'antisimmetria non vale perché $1\mid-1$ e $-1\mid1$.
+\item Se $b=am$ e $a=bn$, per $a=0$ segue $b=0$. Se $a\ne0$, sostituendo si ha $a=amn$; cancellando $a$ si ricava $mn=1$, quindi $m=n=1$ oppure $m=n=-1$. Dunque $b=\pm a$. Il viceversa segue moltiplicando per $1$ o $-1$. Infine l'uguaglianza a meno del segno è riflessiva, simmetrica e transitiva: se $a=\varepsilon b$ e $b=\eta c$, con $\varepsilon,\eta\in\{1,-1\}$, allora $a=(\varepsilon\eta)c$.
+\end{enumerate}
 \end{proof}
 
 \begin{osservazione}
@@ -90,13 +94,19 @@ I divisori comuni sono $\pm1,\pm2,\pm4$. Il numero $4$ divide entrambi e viene d
 \end{esempio}
 
 \begin{proposizione}
-Se $d$ è un massimo comune divisore, anche $-d$ lo è. Due massimi comuni divisori sono associati: ne esiste al più uno positivo. Per $a\ne0$, $\operatorname{MCD}(a,0)=\operatorname{MCD}(0,a)=|a|$.
+\begin{enumerate}[label=\arabic*.]
+\item Se $d$ è un massimo comune divisore, anche $-d$ lo è.
+\item Due massimi comuni divisori sono associati: ne esiste al più uno positivo.
+\item Per $a\ne0$, $\operatorname{MCD}(a,0)=\operatorname{MCD}(0,a)=|a|$.
+\end{enumerate}
 \end{proposizione}
 
 \begin{proof}
-Il segno non modifica i divisori né i multipli di un numero, quindi le due condizioni della definizione valgono per $d$ se e solo se valgono per $-d$. Se $d,d'$ soddisfano entrambe la definizione, ciascuno divide l'altro per la condizione universale: sono associati, dunque uguali a meno del segno. Non sono nulli, perché almeno uno tra $a,b$ è non nullo e $0$ non lo divide. Pertanto i rappresentanti positivi coincidono.
-
-Il numero $|a|$ divide $a$ e $0$; ogni divisore comune divide $a$ e quindi $|a|$. Soddisfa così la definizione per $(a,0)$; lo scambio degli argomenti non cambia le condizioni.
+\begin{enumerate}[label=\arabic*.]
+\item Il segno non modifica i divisori né i multipli di un numero, quindi le due condizioni della definizione valgono per $d$ se e solo se valgono per $-d$.
+\item Se $d,d'$ soddisfano entrambe la definizione, ciascuno divide l'altro per la condizione universale: sono associati, dunque uguali a meno del segno. Non sono nulli, perché almeno uno tra $a,b$ è non nullo e $0$ non lo divide. Pertanto i rappresentanti positivi coincidono.
+\item Il numero $|a|$ divide $a$ e $0$; ogni divisore comune divide $a$ e quindi $|a|$. Soddisfa così la definizione per $(a,0)$; lo scambio degli argomenti non cambia le condizioni.
+\end{enumerate}
 \end{proof}
 
 L'esistenza del massimo comune divisore per ogni coppia non nulla sarà ottenuta dall'algoritmo di Euclide. Fino a quel punto i risultati che lo menzionano si intendono per un massimo comune divisore esistente.
@@ -106,12 +116,16 @@ Un intero $m$ è un \textbf{minimo comune multiplo} di $a,b$ nel senso della div
 \end{definizione}
 
 \begin{proposizione}
-Cambiare il segno di un minimo comune multiplo dà ancora un minimo comune multiplo; due di essi sono associati. Se $ab\ne0$, ne esiste al più uno positivo. Se un argomento è zero, l'unico multiplo comune è $0$, che soddisfa la definizione.
+\begin{enumerate}[label=\arabic*.]
+\item Cambiare il segno di un minimo comune multiplo dà ancora un minimo comune multiplo; due di essi sono associati. Se $ab\ne0$, ne esiste al più uno positivo.
+\item Se un argomento è zero, l'unico multiplo comune è $0$, che soddisfa la definizione.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Il cambio di segno conserva le condizioni di divisibilità. Se $m,m'$ soddisfano la definizione, la condizione universale dà sia $m\mid m'$ sia $m'\mid m$. Quando $ab\ne0$, un minimo comune multiplo non può essere zero: il multiplo comune $ab\ne0$ dovrebbe essere divisibile per $0$. Quindi due rappresentanti positivi coincidono.
-
-Se $a=0$, la condizione $0\mid m$ forza $m=0$; il numero $0$ è multiplo di $b$ e divide l'unico multiplo comune, che è ancora $0$. Lo stesso vale se $b=0$.
+\begin{enumerate}[label=\arabic*.]
+\item Il cambio di segno conserva le condizioni di divisibilità. Se $m,m'$ soddisfano la definizione, la condizione universale dà sia $m\mid m'$ sia $m'\mid m$. Quando $ab\ne0$, un minimo comune multiplo non può essere zero: il multiplo comune $ab\ne0$ dovrebbe essere divisibile per $0$. Quindi due rappresentanti positivi coincidono.
+\item Se $a=0$, la condizione $0\mid m$ forza $m=0$; il numero $0$ è multiplo di $b$ e divide l'unico multiplo comune, che è ancora $0$. Lo stesso vale se $b=0$.\qedhere
+\end{enumerate}
 \end{proof}
 
 \begin{osservazione}
@@ -121,21 +135,27 @@ Se $a=0$, la condizione $0\mid m$ forza $m=0$; il numero $0$ è multiplo di $b$ 
 \section{Combinazioni intere e coprimalità}
 % A–L L10 p. 1; M–Z L9 pp. 8–9.
 \begin{proposizione}\label{prop:combinazioni}
-Se $d\mid a$ e $d\mid b$, allora $d\mid\alpha a+\beta b$ per ogni $\alpha,\beta\in\Z$. Se invece $d\mid a$ e $d'\mid b$, allora $dd'\mid ab$.
+\begin{enumerate}[label=\arabic*.]
+\item Se $d\mid a$ e $d\mid b$, allora $d\mid\alpha a+\beta b$ per ogni $\alpha,\beta\in\Z$.
+\item Se invece $d\mid a$ e $d'\mid b$, allora $dd'\mid ab$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Per la prima, $a=du$ e $b=dv$ danno $\alpha a+\beta b=d(\alpha u+\beta v)$. Per la seconda, $a=du$ e $b=d'v$ danno $ab=dd'(uv)$. I quozienti esibiti sono interi.
+\begin{enumerate}[label=\arabic*.]
+\item Per la prima, $a=du$ e $b=dv$ danno $\alpha a+\beta b=d(\alpha u+\beta v)$.
+\item Per la seconda, $a=du$ e $b=d'v$ danno $ab=dd'(uv)$. I quozienti esibiti sono interi.
+\end{enumerate}
 \end{proof}
 
 \begin{proposizione}[Criterio tramite una combinazione]\label{prop:criterio-mcd}
 Siano $(a,b)\ne(0,0)$ e $d\mid a,b$. Se $d=\alpha a+\beta b$ per certi interi $\alpha,\beta$, allora $d$ è un massimo comune divisore. Se $d>0$, è $\operatorname{MCD}(a,b)$.
 \end{proposizione}
 \begin{proof}
-Se $c\mid a,b$, per la proposizione~\ref{prop:combinazioni} si ha $c\mid\alpha a+\beta b=d$. Ponendo $c=\operatorname{MCD}(a,b)$, devo avere $c\mid d$, ma $d\mid c$ per definizione del massimo comun divisore da cui $c$ e $d$ sono associati.
+Se $c\mid a,b$, per la proposizione~\ref{prop:combinazioni} si ha $c\mid\alpha a+\beta b=d$. Questo verifica la condizione universale; la divisibilità di $a,b$ è un'ipotesi. Dunque $d$ soddisfa già la definizione di massimo comune divisore. Inoltre $d\ne0$, perché divide almeno un argomento non nullo; cambiandone eventualmente il segno si ottiene quello positivo. Ponendo ora $c=\operatorname{MCD}(a,b)$, devo avere $c\mid d$, ma $d\mid c$ per definizione del massimo comun divisore da cui $c$ e $d$ sono associati. Se $d>0$, ne segue $c=d$.
 \end{proof}
 
 \begin{definizione}
-Gli interi $a,b$, non entrambi nulli, sono \textbf{coprimi} se $\operatorname{MCD}(a,b)=1$
+Gli interi $a,b$, non entrambi nulli, sono \textbf{coprimi} se $\operatorname{MCD}(a,b)=1$.
 \end{definizione}
 
 \begin{proposizione}
@@ -200,13 +220,19 @@ Se $a=bq+r$, i divisori comuni di $a,b$ sono esattamente quelli di $b,r$. Di con
 \section{Algoritmo di Euclide e Bézout}
 % A–L L11 pp. 1–2; M–Z L11 pp. 2–4. Separati terminazione, invariante e ricorrenza dei coefficienti.
 \begin{teorema}[Algoritmo di Euclide]\label{teo:euclide}
-Per $(a,b)\ne(0,0)$ esiste il massimo comune divisore positivo. Sostituiti gli argomenti con $A=|a|$, $B=|b|$, se $B=0$ il risultato è $A$; altrimenti è l'ultimo termine non nullo nelle divisioni successive
+Per $(a,b)\ne(0,0)$:
+\begin{enumerate}[label=\arabic*.]
+\item Esiste il massimo comune divisore positivo.
+\item Sostituiti gli argomenti con $A=|a|$, $B=|b|$, se $B=0$ il risultato è $A$; altrimenti è l'ultimo termine non nullo nelle divisioni successive
 \[
 r_0=A,\quad r_1=B,\quad
 r_{i-1}=q_i r_i+r_{i+1},\qquad 0\le r_{i+1}<r_i.
 \]
+\end{enumerate}
 \end{teorema}
 \begin{proof}
+\textbf{Punti 1 e 2 insieme.} Dimostriamo che il procedimento termina e produce un massimo comune divisore: questo ne prova anche l'esistenza.
+
 \textbf{Terminazione.} Se $B=0$, il risultato è già noto. Sia $B>0$. A ogni passo con $r_i>0$ la divisione euclidea esiste e determina il resto. I termini $r_1,r_2,\ldots$, finché positivi, sono strettamente decrescenti. Se fossero tutti positivi, il loro insieme avrebbe per buon ordinamento un minimo, seguito da un termine ancora minore: impossibile. Esiste quindi $k\ge1$ con $r_k>0$ e $r_{k+1}=0$.
 
 \textbf{Invariante, base.} Indichiamo con $\mathcal D_i$ l'insieme dei divisori comuni di $r_{i-1},r_i$, per $1\le i\le k+1$. Per $i=1$ sono esattamente i divisori comuni di $A,B$, quindi di $a,b$, perché il segno non modifica la divisibilità.
@@ -353,12 +379,16 @@ Il quoziente esibito è intero. L'argomento vale anche nei casi nulli consentiti
 \end{proof}
 
 \begin{proposizione}[Primi e divisibilità dei prodotti]\label{prop:primo-prodotto}
-Per $p\in\Z\setminus\{0,1,-1\}$ sono equivalenti: $p$ è primo; per ogni $a,b\in\Z$, da $p\mid ab$ segue $p\mid a$ oppure $p\mid b$.
+Per $p\in\Z\setminus\{0,1,-1\}$ sono equivalenti:
+\begin{enumerate}[label=\arabic*.]
+\item $p$ è primo.
+\item Per ogni $a,b\in\Z$, da $p\mid ab$ segue $p\mid a$ oppure $p\mid b$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\passomath{\Rightarrow} Sia $p$ primo e $p\mid ab$. Se $p\mid a$ abbiamo già concluso. Altrimenti $d=\operatorname{MCD}(p,a)$ è un divisore positivo di $p$, dunque è $1$ o $|p|$. Il secondo caso implicherebbe $p\mid a$, escluso. Quindi $d=1$ e il lemma di Euclide dà $p\mid b$.
+\passomath{1\Rightarrow2} Sia $p$ primo e $p\mid ab$. Se $p\mid a$ abbiamo già concluso. Altrimenti $d=\operatorname{MCD}(p,a)$ è un divisore positivo di $p$, dunque è $1$ o $|p|$. Il secondo caso implicherebbe $p\mid a$, escluso. Quindi $d=1$ e il lemma di Euclide dà $p\mid b$.
 
-\passomath{\Leftarrow} Supponiamo la proprietà e sia $p=uv$. Allora $p\mid uv$, perciò $p\mid u$ oppure $p\mid v$. Nel primo caso $u=pk$ dà $p=pkv$: cancellando $p\ne0$, $kv=1$, quindi $v=\pm1$. Nel secondo caso, allo stesso modo $u=\pm1$. È la definizione di primo.
+\passomath{2\Rightarrow1} Supponiamo la proprietà e sia $p=uv$. Allora $p\mid uv$, perciò $p\mid u$ oppure $p\mid v$. Nel primo caso $u=pk$ dà $p=pkv$: cancellando $p\ne0$, $kv=1$, quindi $v=\pm1$. Nel secondo caso, allo stesso modo $u=\pm1$. È la definizione di primo.
 \end{proof}
 
 \begin{osservazione}
@@ -366,27 +396,30 @@ Le esclusioni $p\ne0,\pm1$ sono necessarie: le unità dividono ogni intero, ment
 \end{osservazione}
 
 \begin{teorema}[Fondamentale dell'aritmetica]\label{teo:fattorizzazione}
-Ogni intero $n\ne0,\pm1$ si scrive come
+\begin{enumerate}[label=\arabic*.]
+\item Ogni intero $n\ne0,\pm1$ si scrive come
 \[
 n=\varepsilon p_1^{a_1}\cdots p_r^{a_r},\qquad
 \varepsilon\in\{1,-1\},\quad a_i\in\N^*,
 \]
-con primi positivi distinti $p_1,\ldots,p_r$. Il segno è quello di $n$ e i primi con i rispettivi esponenti sono unici a meno dell'ordine.
+con primi positivi distinti $p_1,\ldots,p_r$.
+\item Il segno è quello di $n$ e i primi con i rispettivi esponenti sono unici a meno dell'ordine.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-\textbf{Esistenza: base.} Basta trattare $n\ge2$ ed estrarre poi il segno. Procediamo per induzione forte su $n$. Per $n=2$, la scrittura è il solo primo $2$.
+\textbf{1. Esistenza: base.} Basta trattare $n\ge2$ ed estrarre poi il segno. Procediamo per induzione forte su $n$. Per $n=2$, la scrittura è il solo primo $2$.
 
-\textbf{Esistenza: ipotesi e passo.} Sia $n>2$ e supponiamo che ogni intero $m$ con $2\le m<n$ sia prodotto di primi positivi. Se $n$ è primo, è già un prodotto con un fattore. Se non lo è, $n=uv$ con $1<u,v<n$. L'ipotesi si applica separatamente a $u$ e $v$; concatenando le due liste si ottiene una lista di primi di prodotto $n$. Il principio d'induzione forte conclude l'esistenza. Raccogliendo i fattori uguali si ottiene la forma con esponenti positivi.
+\textbf{1. Esistenza: ipotesi e passo.} Sia $n>2$ e supponiamo che ogni intero $m$ con $2\le m<n$ sia prodotto di primi positivi. Se $n$ è primo, è già un prodotto con un fattore. Se non lo è, $n=uv$ con $1<u,v<n$. L'ipotesi si applica separatamente a $u$ e $v$; concatenando le due liste si ottiene una lista di primi di prodotto $n$. Il principio d'induzione forte conclude l'esistenza. Raccogliendo i fattori uguali si ottiene la forma con esponenti positivi.
 
-\textbf{Unicità: parametro e base.} Consideriamo due scritture con ripetizioni ammesse,
+\textbf{2. Unicità: parametro e base.} Consideriamo due scritture con ripetizioni ammesse,
 \[
 p_1\cdots p_\ell=q_1\cdots q_s,
 \]
 e proviamo per induzione su $\ell\ge0$ che $s=\ell$ e le liste coincidono a meno dell'ordine. Per $\ell=0$ il primo prodotto è $1$; un prodotto non vuoto di primi positivi è almeno $2$, quindi $s=0$.
 
-\textbf{Unicità: passo.} Supponiamo la proprietà per $\ell-1$ e sia $\ell\ge1$. Il prodotto a sinistra è maggiore di $1$, dunque $s\ge1$. Poiché $p_1\mid q_1\cdots q_s$, applicazioni successive della proposizione~\ref{prop:primo-prodotto} mostrano che $p_1$ divide almeno un $q_j$. Infatti, se non divide il primo fattore, deve dividere il prodotto dei successivi, e si ripete fino all'ultimo. Essendo $q_j$ primo positivo e $p_1>1$, si ha $p_1=q_j$. Riordiniamo il secondo prodotto portando $q_j$ al primo posto e cancelliamo il fattore non nullo comune. Restano prodotti con $\ell-1$ e $s-1$ fattori. L'ipotesi induttiva dà $s-1=\ell-1$ e identifica tutte le occorrenze rimanenti.
+\textbf{2. Unicità: passo.} Supponiamo la proprietà per $\ell-1$ e sia $\ell\ge1$. Il prodotto a sinistra è maggiore di $1$, dunque $s\ge1$. Poiché $p_1\mid q_1\cdots q_s$, applicazioni successive della proposizione~\ref{prop:primo-prodotto} mostrano che $p_1$ divide almeno un $q_j$. Infatti, se non divide il primo fattore, deve dividere il prodotto dei successivi, e si ripete fino all'ultimo. Essendo $q_j$ primo positivo e $p_1>1$, si ha $p_1=q_j$. Riordiniamo il secondo prodotto portando $q_j$ al primo posto e cancelliamo il fattore non nullo comune. Restano prodotti con $\ell-1$ e $s-1$ fattori. L'ipotesi induttiva dà $s-1=\ell-1$ e identifica tutte le occorrenze rimanenti.
 
-\textbf{Esponenti e segno.} L'unicità delle liste con ripetizioni determina quante volte compare ciascun primo: sono gli esponenti. Per $n<0$ si applica il risultato a $|n|$ e si antepone il segno meno. Il segno è unico perché ogni prodotto di primi positivi è positivo.
+\textbf{2. Esponenti e segno.} L'unicità delle liste con ripetizioni determina quante volte compare ciascun primo: sono gli esponenti. Per $n<0$ si applica il risultato a $|n|$ e si antepone il segno meno. Il segno è unico perché ogni prodotto di primi positivi è positivo.
 \end{proof}
 
 \subsection{Formule per MCD e mcm}
@@ -397,21 +430,21 @@ Per $a,b\ne0$ usiamo una stessa lista di primi positivi distinti, ammettendo esp
 a=\varepsilon\prod_{i=1}^r p_i^{\alpha_i},\qquad
 b=\eta\prod_{i=1}^r p_i^{\beta_i},\qquad \alpha_i,\beta_i\in\N.
 \]
-Allora
-\[
-\operatorname{MCD}(a,b)=\prod_{i=1}^r p_i^{\min(\alpha_i,\beta_i)},\qquad
-\operatorname{mcm}(a,b)=\prod_{i=1}^r p_i^{\max(\alpha_i,\beta_i)}.
-\]
-In particolare il minimo comune multiplo positivo esiste e $\operatorname{MCD}(a,b)\operatorname{mcm}(a,b)=|ab|$.
+Allora:
+\begin{enumerate}[label=\arabic*.]
+\item $\displaystyle\operatorname{MCD}(a,b)=\prod_{i=1}^r p_i^{\min(\alpha_i,\beta_i)}$.
+\item Il minimo comune multiplo positivo esiste e vale $\displaystyle\operatorname{mcm}(a,b)=\prod_{i=1}^r p_i^{\max(\alpha_i,\beta_i)}$.
+\item $\operatorname{MCD}(a,b)\operatorname{mcm}(a,b)=|ab|$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
 \textbf{Divisibilità ed esponenti.} Per interi non nulli $u,v$, $u\mid v$ se e solo se ogni primo ha in $u$ esponente non maggiore che in $v$. Se $v=uw$, gli esponenti si sommano per l'unicità della fattorizzazione, quindi la disuguaglianza è necessaria. Viceversa le differenze non negative degli esponenti costruiscono un intero $w$ con $v=uw$, scegliendo il segno opportuno.
 
-\textbf{Massimo comune divisore.} Il prodotto $d$ formato usando gli esponenti minimi divide $a$ e $b$. Ogni divisore comune $c$ è non nullo, ha solo primi presenti in entrambi e per ciascuno ha esponente al più il minimo dei due esponenti: quindi $c\mid d$. Le due condizioni della definizione sono soddisfatte e $d>0$.
-
-\textbf{Minimo comune multiplo.} Il prodotto $m$ formato usando gli esponenti massimi è multiplo di $a$ e $b$. Ogni altro multiplo comune non nullo deve avere esponenti almeno pari a quei massimi, quindi è divisibile per $m$. Anche il multiplo comune $0$ è divisibile per $m$. Si ottiene la definizione e $m>0$.
-
-\textbf{Prodotto.} Per ogni $i$, $\min(\alpha_i,\beta_i)+\max(\alpha_i,\beta_i)=\alpha_i+\beta_i$. Moltiplicando le due formule si ottiene quindi $|a||b|=|ab|$.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Massimo comune divisore.} Il prodotto $d$ formato usando gli esponenti minimi divide $a$ e $b$. Ogni divisore comune $c$ è non nullo, ha solo primi presenti in entrambi e per ciascuno ha esponente al più il minimo dei due esponenti: quindi $c\mid d$. Le due condizioni della definizione sono soddisfatte e $d>0$.
+\item \textbf{Minimo comune multiplo.} Il prodotto $m$ formato usando gli esponenti massimi è multiplo di $a$ e $b$. Ogni altro multiplo comune non nullo deve avere esponenti almeno pari a quei massimi, quindi è divisibile per $m$. Anche il multiplo comune $0$ è divisibile per $m$. Si ottiene la definizione e $m>0$.
+\item \textbf{Prodotto.} Per ogni $i$, $\min(\alpha_i,\beta_i)+\max(\alpha_i,\beta_i)=\alpha_i+\beta_i$. Moltiplicando le due formule si ottiene quindi $|a||b|=|ab|$.
+\end{enumerate}
 \end{proof}
 
 I prodotti vuoti valgono $1$: le formule includono così $a=\pm1$ o $b=\pm1$. Se un solo argomento è nullo, l'identità del prodotto rimane valida con $\operatorname{MCD}(a,0)=|a|$ e $\operatorname{mcm}(a,0)=0$.

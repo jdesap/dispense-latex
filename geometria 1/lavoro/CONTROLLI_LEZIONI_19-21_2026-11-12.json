@@ -1,0 +1,12 @@
+{
+  "data": "2026-11-12",
+  "aritmetica": "frazioni esatte",
+  "esiti": [
+    "Esempio BA=A′: due matrici intermedie e prodotto finale esatti",
+    "Inversa: tutti gli stadi stampati e AA⁻¹=A⁻¹A=I₃ verificati",
+    "Tre matrici elementari: effetto sulle righe e inverse verificate",
+    "Mappe dei due diagrammi: identità e controesempi delle composizioni verificati",
+    "Base duale non canonica: delta, lettura delle coordinate, espansione di un funzionale",
+    "Annullatore di una retta; matrice trasposta; rango e identità di valutazione verificati"
+  ]
+}

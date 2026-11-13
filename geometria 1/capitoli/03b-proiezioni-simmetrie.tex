@@ -2,6 +2,7 @@
 \section{Proiezioni e simmetrie rispetto a una somma diretta}
 Sia $V=U\oplus W$. La somma diretta assicura che ogni $v\in V$ si scriva in modo unico come $v=u+w$, con $u\in U$ e $w\in W$. Questa unicità permette di definire applicazioni a partire dalle due componenti.
 
+\Needspace{14\baselineskip}
 \subsection{Proiezione su un sottospazio lungo un complementare}
 \begin{definizione}
 La \emph{proiezione su $U$ nella direzione di $W$} è
@@ -23,20 +24,22 @@ La \emph{proiezione su $U$ nella direzione di $W$} è
 \end{schema}
 Non è richiesta ortogonalità fra $U$ e $W$: la direzione è fissata dal complementare scelto.
 \begin{proposizione}
-La proiezione $\pi=\pi_U^W$ è lineare e soddisfa
-\[
- \ker\pi=W,\qquad \operatorname{Im}\pi=U,\qquad
- \pi(u)=u\ (u\in U),\qquad \pi\circ\pi=\pi.
-\]
+La proiezione $\pi=\pi_U^W$ soddisfa:
+\begin{enumerate}[label=\arabic*.]
+\item $\pi$ è lineare.
+\item $\ker\pi=W$, $\operatorname{Im}\pi=U$ e $\pi(u)=u$ per $u\in U$.
+\item $\pi\circ\pi=\pi$ (idempotenza).
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Linearità.} Per $v_i=u_i+w_i$, la scomposizione di $\lambda v_1+\mu v_2$ è $(\lambda u_1+\mu u_2)+(\lambda w_1+\mu w_2)$. Dunque
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Linearità.} Per $v_i=u_i+w_i$, la scomposizione di $\lambda v_1+\mu v_2$ è $(\lambda u_1+\mu u_2)+(\lambda w_1+\mu w_2)$. Dunque
 \[
  \pi(\lambda v_1+\mu v_2)=\lambda u_1+\mu u_2=\lambda\pi(v_1)+\mu\pi(v_2).
 \]
-\textbf{Nucleo e immagine.} Si ha $\pi(v)=0$ se e solo se $u=0$, ossia $v\in W$. Ogni immagine appartiene a $U$ e ogni $u\in U$ è immagine di se stesso, perché $u=u+0_W$.
-
-\textbf{Idempotenza.} Poiché $\pi(v)\in U$ e la proiezione fissa ogni vettore di $U$, si ha $\pi(\pi(v))=\pi(v)$.
+\item \textbf{Nucleo e immagine.} Si ha $\pi(v)=0$ se e solo se $u=0$, ossia $v\in W$. Ogni immagine appartiene a $U$ e ogni $u\in U$ è immagine di se stesso, perché $u=u+0_W$.
+\item \textbf{Idempotenza.} Poiché $\pi(v)\in U$ e la proiezione fissa ogni vettore di $U$, si ha $\pi(\pi(v))=\pi(v)$.
+\end{enumerate}
 \end{proof}
 
 \subsection{Simmetria di asse un sottospazio}
@@ -60,28 +63,27 @@ Su $\R$, la \emph{simmetria di asse $U$ e direzione $W$} è
  \draw[vettore] (O)--(W) node[left] {$w$};
 \end{tikzpicture}
 \end{schema}
+Poniamo $\sigma=\sigma_U^W$. Indichiamo con $\operatorname{id}_V$ l’applicazione identità di $V$, cioè la funzione $v\mapsto v$. La somma $\operatorname{id}_V+\sigma$ è definita punto per punto: $(\operatorname{id}_V+\sigma)(v)=v+\sigma(v)$.
 \begin{proposizione}
-Posto $\sigma=\sigma_U^W$, la simmetria è un isomorfismo e soddisfa
-\begin{gather*}
- \ker\sigma=\{0_V\},\qquad \operatorname{Im}\sigma=V,\qquad
- \sigma(u)=u\quad(u\in U),\\
- \sigma\circ\sigma=\operatorname{id}_V,\qquad
- U=\operatorname{Im}(\operatorname{id}_V+\sigma),\qquad
- W=\ker(\operatorname{id}_V+\sigma).
-\end{gather*}
+La simmetria soddisfa:
+\begin{enumerate}[label=\arabic*.]
+\item $\sigma$ è un isomorfismo, $\ker\sigma=\{0_V\}$, $\operatorname{Im}\sigma=V$, $\sigma(u)=u$ per $u\in U$ e $\sigma\circ\sigma=\operatorname{id}_V$.
+\item $U=\operatorname{Im}(\operatorname{id}_V+\sigma)$ e $W=\ker(\operatorname{id}_V+\sigma)$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Linearità e inversa.} La scomposizione di una combinazione lineare dà
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Linearità e inversa.} La scomposizione di una combinazione lineare dà
 \[
  \sigma(\lambda(u_1+w_1)+\mu(u_2+w_2))
  =\lambda(u_1-w_1)+\mu(u_2-w_2).
 \]
 Inoltre $\sigma(u)=u$ e $\sigma(u-w)=u+w$, quindi $\sigma^2=\operatorname{id}_V$. Ne segue che $\sigma$ è la propria inversa: è iniettiva e suriettiva, con nucleo nullo e immagine $V$.
-
-\textbf{Recupero dei due sottospazi.} Per $v=u+w$ vale
+\item \textbf{Recupero dei due sottospazi.} Per $v=u+w$ vale
 \[
  (\operatorname{id}_V+\sigma)(v)=(u+w)+(u-w)=2u.
 \]
-Questi vettori appartengono a $U$, e ogni $u\in U$ si ottiene applicando $\operatorname{id}_V+\sigma$ a $u/2$: l'immagine è esattamente $U$. La stessa uguaglianza mostra che il nucleo è dato da $u=0$, cioè da $W$.\footnote{Le proprietà della simmetria si estendono a ogni campo di caratteristica diversa da $2$. In caratteristica $2$ si ha $u-w=u+w$, quindi la simmetria così definita coincide con l'identità e le ultime due caratterizzazioni in generale non valgono.}
+Questi vettori appartengono a $U$, e ogni $u\in U$ si ottiene applicando $\operatorname{id}_V+\sigma$ a $u/2$: l'immagine è esattamente $U$. La stessa uguaglianza mostra che il nucleo è dato da $u=0$, cioè da $W$.\footnote{Le proprietà della simmetria si estendono a ogni campo di caratteristica diversa da $2$. Dire che il campo ha caratteristica $2$ significa $1_K+1_K=0_K$. In questo caso si ha $u-w=u+w$, quindi la simmetria così definita coincide con l'identità e le ultime due caratterizzazioni in generale non valgono.}
+\end{enumerate}
 \end{proof}
 Le due costruzioni sono collegate da $\sigma_U^W=2\pi_U^W-\operatorname{id}_V$ e, su $\R$, da $\pi_U^W=(\operatorname{id}_V+\sigma_U^W)/2$.

@@ -26,11 +26,31 @@ P&\times&&\\V&\times&&\\R&\times&&\times\\M&&\times&\times\\T&&\times&
 Una città può essere in relazione con più persone e una persona con più città; una relazione non richiede alcuna unicità.
 \end{esempio}
 
+% M–Z L2 p. 7 e L3 pp. 1–2: esempio distinto, persone per città e righe/colonne vuote.
+\begin{esempio}[Persone e città: nessuna condizione di esistenza]
+Consideriamo invece una relazione dall'insieme delle persone $U$ all'insieme delle città $V$, dove
+\[
+\begin{aligned}
+U&=\{\text{Lidia},\text{Marco},\text{Pietro},\text{Francesca}\},\\
+V&=\{\text{Roma},\text{Parigi},\text{Madrid},\text{Lisbona},\text{Vienna}\}.
+\end{aligned}
+\] Lidia ha visitato Roma e Madrid; Marco Vienna e Parigi; Francesca Roma, Parigi e Madrid; Pietro nessuna delle cinque. Le sette coppie della relazione $\eta\subseteq U\times V$ sono quindi
+\[
+\begin{split}
+\eta=\{&(\text{Lidia},\text{Roma}),(\text{Lidia},\text{Madrid}),\\
+&(\text{Marco},\text{Vienna}),(\text{Marco},\text{Parigi}),\\
+&(\text{Francesca},\text{Roma}),(\text{Francesca},\text{Parigi}),\\
+&(\text{Francesca},\text{Madrid})\}.
+\end{split}
+\]
+Qui la prima coordinata è una persona e la seconda una città, diversamente dall'esempio precedente. Un elemento del primo insieme può non essere in relazione con alcun elemento del secondo (Pietro), e un elemento del secondo può non comparire in alcuna coppia (Lisbona). Una relazione non impone né esistenza né unicità di un elemento associato.
+\end{esempio}
+
 \begin{esercizio}[Grafici di relazioni]
 Rappresentare $\rho=\{(x,y)\in\N\times\Z\mid x+y=1\}$, $\sigma=\{(x,y)\in\R^2\mid x^2+y^2=1\}$ e $\tau=\{(a,b)\in\N^*\times\N\mid b/a\in\N\}$.
 \end{esercizio}
 \begin{svolgimento}
-Per $\rho$ si ottengono i punti $(n,1-n)$, $n\in\N$, a partire da $(0,1)$: è una parte discreta della retta $y=1-x$, non tutta la retta. Il grafico di $\sigma$ è la circonferenza di centro l'origine e raggio $1$. Per $\tau$, fissata un'ascissa intera $a>0$, le ordinate sono $b=ka$, $k\in\N$: tutti i multipli non negativi di $a$, compreso $0$.
+Per $\rho$ si ottengono i punti $(n,1-n)$, $n\in\N$, a partire da $(0,1)$: è una parte discreta della retta $y=1-x$, non tutta la retta. Il grafico di $\sigma$ è la circonferenza di centro l'origine e raggio $1$. Per $\tau$, fissata un'ascissa intera $a>0$, le ordinate sono $b=ka$, $k\in\N$: tutti i multipli non negativi di $a$, compreso $0$. La scrittura $a\mid b$, letta «$a$ divide $b$», significa che $b=ak$ per un intero $k$; per i valori qui considerati tale intero è non negativo.
 \end{svolgimento}
 
 \begin{schema}
@@ -124,7 +144,28 @@ Nella seconda formulazione, prendendo $A=B$, si ricava anche che ogni blocco è 
 \end{definizione}
 
 \begin{esempio}[Scomposizione di un'unione]
-I tre pezzi $A\setminus B$, $A\cap B$, $B\setminus A$ ricoprono $A\cup B$ e sono a due a due disgiunti. Eliminando i pezzi vuoti formano una partizione. Per tre insiemi si ottengono analogamente le sette regioni determinate dalle appartenenze, alcune eventualmente vuote. La decomposizione usata per la differenza simmetrica sceglie quattro di queste regioni.
+I tre pezzi $A\setminus B$, $A\cap B$, $B\setminus A$ ricoprono $A\cup B$ e sono a due a due disgiunti; in particolare
+\[
+A=(A\setminus B)\cup(A\cap B),\qquad
+B=(B\setminus A)\cup(A\cap B).
+\]
+Eliminando i pezzi vuoti si ottiene una partizione di $A\cup B$.
+
+Per tre insiemi, richiamiamo le regioni $A_0=A\setminus(B\cup C)$, $B_0=B\setminus(A\cup C)$, $C_0=C\setminus(A\cup B)$ e $T=A\cap B\cap C$. Le altre tre sono
+\[
+R_{AB}=(A\cap B)\setminus C,\quad
+R_{AC}=(A\cap C)\setminus B,\quad
+R_{BC}=(B\cap C)\setminus A.
+\]
+Le sette regioni sono a due a due disgiunte e ricoprono $A\cup B\cup C$: ogni punto appartiene a esattamente uno, due oppure tutti e tre gli insiemi, e il suo elenco di appartenenze individua la regione. In particolare,
+\[
+\begin{aligned}
+A&=A_0\cup R_{AB}\cup R_{AC}\cup T,\\
+B&=B_0\cup R_{AB}\cup R_{BC}\cup T,\\
+C&=C_0\cup R_{AC}\cup R_{BC}\cup T.
+\end{aligned}
+\]
+Eliminando le regioni vuote si ottiene una partizione dell'unione. Per esempio $A\triangle B=A_0\cup B_0\cup R_{AC}\cup R_{BC}$; facendo poi la differenza simmetrica con $C$ rimangono $A_0,B_0,C_0,T$, come nella dimostrazione dell'associatività.
 \end{esempio}
 
 \begin{definizione}
@@ -143,14 +184,19 @@ Per $x,y\in X$, $x\sim y$ se e solo se $[x]=[y]$.
 \end{proof}
 
 \begin{teorema}\label{teo:partizioni}
-Le classi di un'equivalenza formano una partizione di $X$. Viceversa, se $\mathcal A$ è una partizione, la relazione $x\sim_{\mathcal A}y$ definita dall'appartenenza a uno stesso blocco è un'equivalenza, le cui classi sono i blocchi di $\mathcal A$.
+\begin{enumerate}[label=\arabic*.]
+\item Le classi di un'equivalenza formano una partizione di $X$.
+\item Viceversa, se $\mathcal A$ è una partizione, la relazione $x\sim_{\mathcal A}y$ definita dall'appartenenza a uno stesso blocco è un'equivalenza, le cui classi sono i blocchi di $\mathcal A$.
+\end{enumerate}
 \end{teorema}
+\Needspace{4\baselineskip}
 \begin{proof}
-\textbf{Dall'equivalenza alla partizione.} Ogni classe contiene il proprio rappresentante, dunque non è vuota. Ogni $x\in X$ appartiene a $[x]$, perciò l'unione delle classi contiene $X$; l'altra inclusione vale perché ogni classe è contenuta in $X$. Se $z\in[x]\cap[y]$, si ha $z\sim x$ e $z\sim y$. Per simmetria e transitività segue $x\sim z\sim y$, quindi $[x]=[y]$. Due classi distinte sono pertanto disgiunte.
-
-\textbf{Dalla partizione all'equivalenza.} Ogni $x$ appartiene a un blocco, dunque $x\sim_{\mathcal A}x$. Se $x,y$ stanno nello stesso blocco, vi stanno anche $y,x$, quindi la relazione è simmetrica. Se $x,y\in A$ e $y,z\in B$, i blocchi si incontrano in $y$ e perciò $A=B$; allora $x,z$ stanno nello stesso blocco, ottenendo la transitività.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Dall'equivalenza alla partizione.} Ogni classe contiene il proprio rappresentante, dunque non è vuota. Ogni $x\in X$ appartiene a $[x]$, perciò l'unione delle classi contiene $X$; l'altra inclusione vale perché ogni classe è contenuta in $X$. Se $z\in[x]\cap[y]$, si ha $z\sim x$ e $z\sim y$. Per simmetria e transitività segue $x\sim z\sim y$, quindi $[x]=[y]$. Due classi distinte sono pertanto disgiunte.
+\item \textbf{Dalla partizione all'equivalenza.} Ogni $x$ appartiene a un blocco, dunque $x\sim_{\mathcal A}x$. Se $x,y$ stanno nello stesso blocco, vi stanno anche $y,x$, quindi la relazione è simmetrica. Se $x,y\in A$ e $y,z\in B$, i blocchi si incontrano in $y$ e perciò $A=B$; allora $x,z$ stanno nello stesso blocco, ottenendo la transitività.
 
 \textbf{Identificazione delle classi.} Sia $x\in A\in\mathcal A$. Ogni $y\in A$ è equivalente a $x$, quindi $A\subseteq[x]$. Viceversa, se $y\sim_{\mathcal A}x$, un blocco $B$ contiene entrambi; poiché $x\in A\cap B$, si ha $A=B$ e $y\in A$. Dunque $[x]=A$.
+\end{enumerate}
 \end{proof}
 
 \begin{schema}
@@ -191,6 +237,8 @@ Posto $F=\Z\times\Z^*$ e $(a,b)\sim(c,d)\iff ad=bc$, si definisce $\Q=F/{\sim}$.
 \]
 \end{definizione}
 
+Identifichiamo un intero $n$ con la classe $n/1$: interi distinti restano distinti, perché $n/1=m/1$ equivale a $n=m$ per il criterio dei prodotti incrociati.
+
 Una regola sui rappresentanti dà un'operazione sulle classi solo se il risultato è indipendente dai rappresentanti scelti.
 
 \begin{esempio}[Una regola incompatibile]
@@ -205,17 +253,17 @@ La stessa coppia di razionali produrrebbe due risultati diversi.
 % Mantiene insieme enunciato e sviluppo algebrico sul raccordo finale.
 \Needspace{30\baselineskip}
 \begin{proposizione}[Somma e prodotto]
-Le formule
-\[
-\frac ab+\frac cd=\frac{ad+bc}{bd},\qquad
-\frac ab\cdot\frac cd=\frac{ac}{bd}
-\]
-definiscono operazioni su $\Q$.
+Le seguenti formule definiscono operazioni su $\Q$:
+\begin{enumerate}[label=\arabic*.]
+\item $\displaystyle\frac ab+\frac cd=\frac{ad+bc}{bd}$.
+\item $\displaystyle\frac ab\cdot\frac cd=\frac{ac}{bd}$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
 Siano $ab'=a'b$ e $cd'=c'd$, con $b,b',d,d'\ne0$. I denominatori $bd$ e $b'd'$ sono non nulli, dunque le coppie risultanti sono ammesse.
 
-\textbf{Somma.} Per l'equivalenza delle coppie occorre $(ad+bc)b'd'=(a'd'+b'c')bd$. Le ipotesi danno
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Somma.} Per l'equivalenza delle coppie occorre $(ad+bc)b'd'=(a'd'+b'c')bd$. Le ipotesi danno
 \[
 \begin{aligned}
 (ad+bc)b'd'&=(ab')dd'+bb'(cd')\\
@@ -223,11 +271,12 @@ Siano $ab'=a'b$ e $cd'=c'd$, con $b,b',d,d'\ne0$. I denominatori $bd$ e $b'd'$ s
 &=(a'd'+b'c')bd.
 \end{aligned}
 \]
-\textbf{Prodotto.} Analogamente $(ac)b'd'=(ab')(cd')=(a'b)(c'd)=(a'c')bd$. Entrambi i risultati appartengono quindi alla stessa classe dopo il cambio di rappresentanti.
+\item \textbf{Prodotto.} Analogamente $(ac)b'd'=(ab')(cd')=(a'b)(c'd)=(a'c')bd$. Entrambi i risultati appartengono quindi alla stessa classe dopo il cambio di rappresentanti.
+\end{enumerate}
 \end{proof}
 
 \begin{proposizione}[Criterio di compatibilità]
-Sia $\star$ un'operazione su $X$, cioè una regola che a ogni coppia di elementi di $X$ associa un elemento di $X$. La formula $[x]\mathbin{\overline\star}[y]=[x\star y]$ definisce un'operazione su $X/{\sim}$ se e solo se
+Siano $\sim$ un'equivalenza su $X$ e $\star$ un'operazione su $X$, cioè una regola che a ogni coppia di elementi di $X$ associa un elemento di $X$. La formula $[x]\mathbin{\overline\star}[y]=[x\star y]$ definisce un'operazione su $X/{\sim}$ se e solo se
 \[
 x\sim x',\ y\sim y'\quad\Longrightarrow\quad x\star y\sim x'\star y'
 \]

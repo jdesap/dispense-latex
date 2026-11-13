@@ -1,0 +1,90 @@
+% !TeX root = ../main.tex
+\Needspace{22\baselineskip}
+\section{Morfismi di gruppi}
+% A–L L19 pp. 5–7; M–Z L19 pp. 4–6.
+\begin{definizione}
+Siano $(G,\cdot_G)$ e $(G',\cdot_{G'})$ gruppi. Un \textbf{morfismo}, o \textbf{omomorfismo}, di gruppi è una funzione $f:G\to G'$ tale che
+\[
+f(a\cdot_G b)=f(a)\cdot_{G'}f(b)\qquad\text{per ogni }a,b\in G.
+\]
+Quando le operazioni sono chiare, scriviamo semplicemente $f(ab)=f(a)f(b)$. Se entrambi i gruppi sono additivi, la legge è $f(a+_G b)=f(a)+_{G'}f(b)$; fra un gruppo additivo e uno moltiplicativo diventa $f(a+b)=f(a)f(b)$.
+
+Un morfismo iniettivo si dice \textbf{monomorfismo}, uno suriettivo \textbf{epimorfismo}, uno biiettivo \textbf{isomorfismo}. Se esiste un isomorfismo fra $G$ e $G'$, si scrive $G\cong G'$ e si dice che i gruppi sono \textbf{isomorfi}.
+\end{definizione}
+
+\begin{proposizione}\label{prop:morfismi-gruppi}
+Per un morfismo $f:G\to G'$ valgono:
+\begin{enumerate}[label=\arabic*.]
+\item $f(1_G)=1_{G'}$;
+\item $f(a^{-1})=f(a)^{-1}$ per ogni $a\in G$;
+\item $f(a^n)=f(a)^n$ per ogni $a\in G$ e $n\in\Z$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Da $f(1_G)=f(1_G1_G)=f(1_G)f(1_G)$, cancellando $f(1_G)$ si ottiene $1_{G'}=f(1_G)$.
+\item Applicando $f$ ad $aa^{-1}=a^{-1}a=1_G$ e usando il punto~1, si ha
+\[
+f(a)f(a^{-1})=f(a^{-1})f(a)=1_{G'}.
+\]
+L'unicità dell'inverso conclude.
+\item Per $n\ge0$ si procede per induzione: il caso $n=0$ è il punto~1; se vale per $n$, allora $f(a^{n+1})=f(a^na)=f(a)^nf(a)=f(a)^{n+1}$. Per $n=-k<0$, il punto~2 e il caso non negativo danno $f(a^{-k})=f((a^{-1})^k)=f(a)^{-k}$.
+\end{enumerate}
+\end{proof}
+
+\begin{osservazione}
+Per i gruppi la conservazione del neutro è una conseguenza della legge del morfismo; non occorre aggiungerla come assioma. Per i morfismi di anelli unitari, invece, abbiamo richiesto espressamente $f(1_R)=1_S$.
+\end{osservazione}
+
+\begin{proposizione}\label{prop:inversa-iso-gruppi}
+L'inversa di un isomorfismo di gruppi è ancora un morfismo.
+\end{proposizione}
+\begin{proof}
+Sia $f:G\to G'$ un isomorfismo e siano $y,z\in G'$. Posti $a=f^{-1}(y)$ e $b=f^{-1}(z)$, si ha $f(ab)=f(a)f(b)=yz$. Applicando $f^{-1}$ segue $f^{-1}(yz)=ab=f^{-1}(y)f^{-1}(z)$.
+\end{proof}
+
+\subsection{Pendenza e termine noto delle affinità}
+Richiamiamo $f_{a,b}(x)=ax+b$, con $a\ne0$, e la formula
+\[
+f_{a,b}\circ f_{c,d}=f_{ac,ad+b}.
+\]
+Per un campo $\K$ scriviamo $\K^\times=\K\setminus\{0\}$, considerato come gruppo moltiplicativo. Le due applicazioni
+\[
+\alpha:\operatorname{Aff}(\R)\to\R^\times,\quad f_{a,b}\mapsto a,
+\qquad
+\beta:\operatorname{Aff}(\R)\to\R,\quad f_{a,b}\mapsto b
+\]
+hanno comportamenti diversi.
+
+\begin{esempio}
+La mappa $\alpha$ è un morfismo suriettivo perché $\alpha(f_{a,b}\circ f_{c,d})=ac=\alpha(f_{a,b})\alpha(f_{c,d})$, e ogni $a\ne0$ è immagine di $f_{a,0}$. Non è iniettiva: tutte le traslazioni $f_{1,b}$ hanno immagine $1$.
+
+La mappa $\beta$, verso il gruppo additivo $(\R,+)$, è suriettiva perché $\beta(f_{1,b})=b$, ma non è un morfismo. Infatti
+\[
+\beta(f_{2,1}\circ f_{1,2})=5\ne3=\beta(f_{2,1})+\beta(f_{1,2}).
+\]
+In generale il termine noto della composta è $ad+b$, non $d+b$.
+\end{esempio}
+
+\begin{esempio}[Restrizioni che diventano isomorfismi]
+Per una funzione $f:X\to Y$ e $X_0\subseteq X$, la restrizione $f|_{X_0}:X_0\to Y$ mantiene gli stessi valori ma considera solo gli argomenti in $X_0$. Sui sottogruppi già introdotti
+\[
+\mathcal O=\{f_{a,0}\mid a\ne0\},\qquad
+\mathcal T=\{f_{1,b}\mid b\in\R\},
+\]
+si ottengono gli isomorfismi
+\[
+\alpha|_{\mathcal O}:\mathcal O\longrightarrow(\R^\times,\cdot),
+\qquad
+\beta|_{\mathcal T}:\mathcal T\longrightarrow(\R,+).
+\]
+Ogni omotetia è determinata univocamente dalla pendenza, ogni traslazione dal termine noto; entrambe le restrizioni sono dunque biiettive. Le leggi $f_{a,0}\circ f_{c,0}=f_{ac,0}$ e $f_{1,b}\circ f_{1,d}=f_{1,b+d}$ verificano la proprietà di morfismo. Le inverse sono rispettivamente $a\mapsto f_{a,0}$ e $b\mapsto f_{1,b}$.
+\end{esempio}
+
+\begin{esempio}[L'esponenziale]
+La funzione
+\[
+\exp:(\R,+)\longrightarrow(\R^\times,\cdot),\qquad x\longmapsto e^x
+\]
+è un morfismo perché $e^{x+y}=e^xe^y$. È iniettiva per stretta monotonia, ma non suriettiva su $\R^\times$: la sua immagine è $\R_{>0}=\{t\in\R\mid t>0\}$. Cambiando il codominio in $(\R_{>0},\cdot)$ diventa un isomorfismo.\footnote{Qui si assumono le proprietà analitiche usuali dell'esponenziale reale: legge della somma, stretta monotonia e immagine uguale a tutti i reali positivi. Non sono dedotte dagli assiomi di gruppo.}
+\end{esempio}

@@ -1,5 +1,7 @@
 # Appunti di analisi 1
 
+**Revisione editoriale del 13 novembre 2026:** enunciati distinti e parti delle prove numerati in corrispondenza, senza abbreviazioni. Volume corrente: **93 pagine**; estratti di capitolo: 3, 4, 7, 12, 7, 14, 13, 16, 4, 8 pagine. [Resoconto e verifiche](../strumenti/NUMERAZIONE_ENUNCIATI_2026-11-13.md). I conteggi nei resoconti delle integrazioni precedenti descrivono le rispettive versioni storiche.
+
 Appunti di **Jude De Sa'Pinto** dal corso del **Prof. Federico Cacciafesta**.
 Revisione editoriale integrale conclusa il 22 ottobre 2026; lezioni 14–15 integrate
 il 4 novembre: 92 pagine, dieci capitoli. Resoconto e limiti della revisione editoriale in

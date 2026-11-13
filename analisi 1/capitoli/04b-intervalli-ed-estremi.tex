@@ -119,10 +119,14 @@ quando tali estremi esistono.
 
 \begin{teorema}[Esistenza del supremo e dell'infimo]
 \label{teo:esistenza-estremi}
-Ogni sottoinsieme non vuoto di $\R$ superiormente limitato ha un estremo superiore reale. Ogni sottoinsieme non vuoto di $\R$ inferiormente limitato ha un estremo inferiore reale.
+\begin{enumerate}[label=\arabic*.]
+\item Ogni sottoinsieme non vuoto di $\R$ superiormente limitato ha un estremo superiore reale.
+\item Ogni sottoinsieme non vuoto di $\R$ inferiormente limitato ha un estremo inferiore reale.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-\textbf{Supremo: applicazione di Dedekind.} Sia $A\subseteq\R$ non vuoto e superiormente limitato. L'insieme dei suoi maggioranti
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Supremo: applicazione di Dedekind.} Sia $A\subseteq\R$ non vuoto e superiormente limitato. L'insieme dei suoi maggioranti
 \[
   \mathcal M_A=\{M\in\R:a\le M\ \forall a\in A\}
 \]
@@ -131,11 +135,11 @@ Ogni sottoinsieme non vuoto di $\R$ superiormente limitato ha un estremo superio
   a\le S\le M\qquad\forall a\in A,\ \forall M\in\mathcal M_A.
 \]
 \textbf{Verifica della minimalità.} La prima disuguaglianza dice che $S$ è un maggiorante di $A$; la seconda che è minore o uguale a ogni maggiorante. Dunque $S=\min\mathcal M_A=\sup A$.
-
-\textbf{Infimo: cambio di segno.} Se $A$ è inferiormente limitato, l'insieme $-A=\{-a:a\in A\}$ è non vuoto e superiormente limitato; ha quindi supremo $T$. Per ogni $a\in A$, da $-a\le T$ segue $-T\le a$, dunque $-T$ è un minorante di $A$. Se $m$ è un altro minorante, $-m$ maggiora $-A$, perciò $T\le-m$ e $m\le-T$. Quindi $-T$ è il più grande minorante:
+\item \textbf{Infimo: cambio di segno.} Se $A$ è inferiormente limitato, l'insieme $-A=\{-a:a\in A\}$ è non vuoto e superiormente limitato; ha quindi supremo $T$. Per ogni $a\in A$, da $-a\le T$ segue $-T\le a$, dunque $-T$ è un minorante di $A$. Se $m$ è un altro minorante, $-m$ maggiora $-A$, perciò $T\le-m$ e $m\le-T$. Quindi $-T$ è il più grande minorante:
 \[
   \inf A=-\sup(-A).
 \]
+\end{enumerate}
 \end{proof}
 
 \textbf{Ruolo della completezza.} Il teorema è una conseguenza della completezza. Sostituendo $\R$ con $\Q$ l'enunciato diventa falso: l'insieme
@@ -153,29 +157,32 @@ Per gli insiemi non vuoti si estende la notazione ponendo $\sup A=+\infty$ quand
 
 \begin{proposizione}
 \label{prop:criterio-estremi}
-Sia $A\subseteq\R$ non vuoto. Un numero $S\in\R$ è il suo supremo se e solo se valgono entrambe le condizioni
+Sia $A\subseteq\R$ non vuoto. \begin{enumerate}[label=\arabic*.]
+\item Un numero $S\in\R$ è il suo supremo se e solo se valgono entrambe le condizioni
 \[
   \begin{cases}
     a\le S&\forall a\in A,\\
     \forall\varepsilon>0\ \exists a\in A:\ a>S-\varepsilon.
   \end{cases}
 \]
-Analogamente, $s\in\R$ è l'infimo se e solo se
+\item Analogamente, $s\in\R$ è l'infimo se e solo se
 \[
   \begin{cases}
     s\le a&\forall a\in A,\\
     \forall\varepsilon>0\ \exists a\in A:\ a<s+\varepsilon.
   \end{cases}
 \]
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Supremo}\enspace\passomath{\Rightarrow} Se $S=\sup A$, esso è un maggiorante. Se per qualche $\varepsilon>0$ non esistesse $a\in A$ con $a>S-\varepsilon$, tutti gli elementi soddisferebbero $a\le S-\varepsilon$. Quest'ultimo sarebbe un maggiorante più piccolo di $S$, assurdo.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Supremo}\enspace\passomath{\Rightarrow} Se $S=\sup A$, esso è un maggiorante. Se per qualche $\varepsilon>0$ non esistesse $a\in A$ con $a>S-\varepsilon$, tutti gli elementi soddisferebbero $a\le S-\varepsilon$. Quest'ultimo sarebbe un maggiorante più piccolo di $S$, assurdo.
 
 \textbf{Supremo}\enspace\passomath{\Leftarrow} Supponiamo che valgano le due condizioni. $S$ è un maggiorante e ogni $M<S$ non può esserlo: scegliendo $\varepsilon=S-M>0$ si trova $a\in A$ con $a>M$. Quindi $S$ è il più piccolo maggiorante.
-
-\textbf{Infimo}\enspace\passomath{\Rightarrow} Se $s=\inf A$, esso è un minorante. Se per qualche $\varepsilon>0$ non esistesse $a\in A$ con $a<s+\varepsilon$, tutti gli elementi soddisferebbero $s+\varepsilon\le a$. Si avrebbe un minorante più grande di $s$, assurdo.
+\item \textbf{Infimo}\enspace\passomath{\Rightarrow} Se $s=\inf A$, esso è un minorante. Se per qualche $\varepsilon>0$ non esistesse $a\in A$ con $a<s+\varepsilon$, tutti gli elementi soddisferebbero $s+\varepsilon\le a$. Si avrebbe un minorante più grande di $s$, assurdo.
 
 \textbf{Infimo}\enspace\passomath{\Leftarrow} Supponiamo che valgano le due condizioni per $s$. È un minorante e ogni $m>s$ viene escluso dai minoranti: con $\varepsilon=m-s>0$ si trova $a\in A$ tale che $a<m$. Dunque $s$ è il più grande minorante.
+\end{enumerate}
 \end{proof}
 
 \textbf{Uso del criterio.} Si devono verificare entrambe le condizioni:

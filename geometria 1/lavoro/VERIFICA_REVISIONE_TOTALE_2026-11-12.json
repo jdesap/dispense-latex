@@ -1,0 +1,115 @@
+{
+  "data": "2026-11-12",
+  "obiettivo": "integrazione lezioni 19–21 e successiva revisione totale di correttezza e chiarezza",
+  "pagine_volume": 58,
+  "sha256_volume": "9ee89923bd338e660a7260bcbc44f7445f0c44aabd35424a3a4de69280f5c49c",
+  "capitoli": [
+    {
+      "titolo": "1 Spazi vettoriali",
+      "file": "build/capitoli/01-spazi-vettoriali.pdf",
+      "pagine": 26,
+      "prima_pagina": "1",
+      "ultima_pagina": "26",
+      "pagine_con_rendering_modificato": [
+        "2",
+        "3",
+        "23",
+        "25"
+      ],
+      "sha256": "e1f93b7e60a82c2d59f06ed3e5bbc15b024f9da666e8271efc6431d2a32f6262",
+      "annotazioni_verificate": 8
+    },
+    {
+      "titolo": "2 Sistemi lineari e matrici",
+      "file": "build/capitoli/02-sistemi-lineari-e-matrici.pdf",
+      "pagine": 10,
+      "prima_pagina": "27",
+      "ultima_pagina": "36",
+      "pagine_con_rendering_modificato": [
+        "28",
+        "29",
+        "32",
+        "35",
+        "36"
+      ],
+      "sha256": "2ad522358564854b92262c516d51baafee62cb1b9d9d0a0cf940275800d6ff95",
+      "annotazioni_verificate": 3
+    },
+    {
+      "titolo": "3 Applicazioni lineari",
+      "file": "build/capitoli/03-applicazioni-lineari.pdf",
+      "pagine": 12,
+      "prima_pagina": "37",
+      "ultima_pagina": "48",
+      "pagine_con_rendering_modificato": [
+        "42",
+        "43",
+        "45",
+        "47"
+      ],
+      "sha256": "414cb34930410fa7acc2e27e891440d132535243408407f091a2449ab1877017",
+      "annotazioni_verificate": 5
+    },
+    {
+      "titolo": "4 Dualità e applicazione trasposta",
+      "file": "build/capitoli/04-dualita-e-applicazione-trasposta.pdf",
+      "pagine": 7,
+      "prima_pagina": "49",
+      "ultima_pagina": "55",
+      "pagine_con_rendering_modificato": [
+        "50",
+        "55"
+      ],
+      "sha256": "cfd9956b673e2a0b3047902e1167251bfef6c9b9c776685449fb1900b19c330b",
+      "annotazioni_verificate": 1
+    }
+  ],
+  "sorgenti_attivi": 30,
+  "moduli_matematici_revisionati": 24,
+  "tikz_controllati": 17,
+  "esito_rilettura": "tutti i moduli verificati per ipotesi, prove, casi degeneri, notazione e chiarezza; interventi documentati nel resoconto",
+  "inventario": "INVENTARIO_REVISIONE_TOTALE_2026-11-12.json",
+  "controlli_calcoli": "CONTROLLI_REVISIONE_TOTALE_2026-11-12.json",
+  "verifica_pdf": "Per ogni pagina di tutti gli estratti: testo, flussi, formato, etichette e rendering pixel identici al volume; collegamenti interni e remoti e segnalibri verificati",
+  "verifica_visiva": "Tutte le 58 pagine ispezionate nelle tavole; verifica degli indici, dei 17 diagrammi e dei raccordi modificati",
+  "fonti_pdf": 16,
+  "pagine_fonti": 81,
+  "fonti_originali_integre": true,
+  "copertura_nuove_lezioni": "tutte le 16 pagine, senza duplicati o omissioni",
+  "log_latex": "nessun errore o avviso",
+  "risultati_assunti": "dimensioni infinite del duale; scelta generale di antecedenti: dichiarati e distinti dalle prove finite",
+  "copie_annotate": "nessuna copia modificata",
+  "limiti": "Revisione matematica manuale con calcoli esatti indipendenti; non una verifica formale mediante proof assistant né una lista ufficiale di richieste d’esame",
+  "hash_sorgenti": {
+    "main.tex": "3966ede874ba5dba63a7e1ba6fddea0434ab107f76f11bff898e146676b1cf11",
+    "preambolo.tex": "7cee24c42f94291a842b20a5c4dd3f48bc344b1046b6c45480db94b99a02e2c9",
+    "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+    "capitoli/01a-spazi-e-sottospazi.tex": "b784e5a9dc273f1827e161f253e5afbf74d87d1875fcbca84437171c2540a16a",
+    "capitoli/01b-sottospazio-generato.tex": "05aaed0b739cffa4f741fe4e82d54d7add3747551210e17f74017dc6d0f2db9b",
+    "capitoli/01b-somme-di-sottospazi.tex": "6fa3a4cd2dbc409c34e2d4af45b0fd7cfe2105552f8ea945ad05081beef093d2",
+    "capitoli/01c-indipendenza-basi-coordinate.tex": "748f7b3543bb560e66125b3dab49fe392f5bf9a6c80240203e0aeb29da4c62c1",
+    "capitoli/01c-basi-e-dimensione.tex": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+    "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "bf88f6272ad99b49dbd7f7aa6721f274d2f861f4007ff225bb556304bf190f37",
+    "capitoli/01e-equazioni-cartesiane.tex": "114f13e0c25df18f464b0f95596ebd5cb283f3b245d2f81dc9f598c34b3cacac",
+    "capitoli/01f-prodotti.tex": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+    "capitoli/01g-quozienti.tex": "345603c0023f68acfc78043f17c3d9b0f5b4bcbfa752e3e24625f68044767c5b",
+    "capitoli/01h-grassmann-complementi.tex": "e92ddd82f371ce2f987fa090d19f7aa00287e8a096ed0cebb4cd79934dafbd10",
+    "capitoli/01i-costruzioni-in-r5.tex": "8eef99493e324d53c617623feaed8dbcfe60a27a8d553bae6a9adcfefb57c024",
+    "capitoli/01j-equazioni-di-polinomi.tex": "657020576970f7ef0ff99619b1e30fd6a5c1360c4ec65a1fcdd88e1a1015285a",
+    "capitoli/02-sistemi-lineari-e-matrici.tex": "2c65e6d4ee61cfce8364143e06e5fb693d620173344af1da42b960290ab61ba4",
+    "capitoli/02a-gauss.tex": "6486fc0d173b8ea3b3e44696f49954f840355561d653eb8cd38276f8197de92e",
+    "capitoli/02b-operazioni.tex": "ff38adb0ce6590127286131de3949bbf0efdb761c068db17c3bdfe0a7b92a08f",
+    "capitoli/02d-matrici-elementari.tex": "a4bdf884723546d690a3a6d6fe334cc8b342fc52a459d37cdf85ff68af2dd853",
+    "capitoli/02c-rango-sistemi.tex": "b1403d761e3392bfd4a94cc66e046eec9f5e59e67b4a4e06bd465ae419d853a7",
+    "capitoli/03-applicazioni-lineari.tex": "f36a0656f11a6517a4d93a2296a065c7aff7eb1cc79fd04263356f1ff9221370",
+    "capitoli/03a-linearita-nucleo-immagine.tex": "ff6b6e6406225fd03548e9839890ad31b0f1b7e31e1f69a47eaca10224e53208",
+    "capitoli/03e-invertibilita.tex": "acb4d0c6e5c37665a3f5e3f81387ab125f70b6d970fdb40df791b85557b0b936",
+    "capitoli/03b-proiezioni-simmetrie.tex": "3d246ebc5b5e206a66c7c4100886192a263c15a54bf4bd62fff9d11a0730fcc8",
+    "capitoli/03c-matrici-associate.tex": "046df4a9d7969b9e8d4155ab98c7f336bcf980b3ef5d5f68f7da280b16cccf65",
+    "capitoli/03d-cambi-di-base.tex": "7ee53184a28d3335e8063802d22982dd5854180f4fe9d8f4b343f3a7ef35e34d",
+    "capitoli/04-dualita-e-trasposta.tex": "968902b9dd53e4ac90d6f97aa4cad4a79357028ec5cb6292cd752117388bba34",
+    "capitoli/04a-duale-biduale.tex": "b4aca61f23afc6e5a6e54e98462e20073db8ad8ff93ed886191a54c7a5c9108a",
+    "capitoli/04b-annullatori.tex": "1d216de80624c3f34fb687216fba4e3692f2ae10a71046f9765d2957dc97eed0",
+    "capitoli/04c-trasposta.tex": "aa4a391bf7ca07b2e7e8e3a56051db60a9bef6b9f242f2a7560ffffc925f5140"
+  }
+}

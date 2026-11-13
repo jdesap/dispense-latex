@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 \section{Matrici e sistemi lineari}
 \begin{definizione}
-Una \emph{matrice} $A=(a_{ij})$ di tipo $m\times n$ è una tabella di scalari con $m$ righe e $n$ colonne. L'insieme delle matrici di questo tipo su $K$ si indica con $M(m,n,K)$. Somma e prodotto per scalari sono definiti componente per componente:
+Una \emph{matrice} $A=(a_{ij})$ di tipo $m\times n$ è una tabella di scalari con $m$ righe e $n$ colonne. L’entrata $a_{ij}$ è lo scalare che si trova nella riga $i$ e nella colonna $j$, con $1\leq i\leq m$ e $1\leq j\leq n$. L'insieme delle matrici di questo tipo su $K$ si indica con $M(m,n,K)$. Somma e prodotto per scalari sono definiti componente per componente:
 \[
  (A+B)_{ij}=a_{ij}+b_{ij},\qquad (\lambda A)_{ij}=\lambda a_{ij}.
 \]
@@ -11,10 +11,29 @@ Un sistema di $m$ equazioni lineari nelle $n$ incognite $x_1,\ldots,x_n$ ha la f
 \[
  \sum_{j=1}^n a_{ij}x_j=b_i\qquad(i=1,\ldots,m).
 \]
-La matrice $A=(a_{ij})$ è la \emph{matrice dei coefficienti}, o \emph{incompleta}; affiancando la colonna $b=(b_1,\ldots,b_m)^T$ si ottiene la \emph{matrice completa} $(A\mid b)$. Due sistemi sono equivalenti se hanno lo stesso insieme di soluzioni.
+La matrice $A=(a_{ij})$ è la \emph{matrice dei coefficienti}, o \emph{incompleta}; affiancando la colonna $b=\left(\begin{smallmatrix}b_1\\\vdots\\b_m\end{smallmatrix}\right)$ si ottiene la \emph{matrice completa} $(A\mid b)$. Due sistemi sono equivalenti se hanno lo stesso insieme di soluzioni.
+
+\begin{esempio}[Dal sistema alla matrice e viceversa]
+Il sistema e la sua matrice completa si corrispondono così:
+\[
+ \begin{cases}
+ 0x_1+x_2+2x_3=1,\\
+ 2x_1-x_2+2x_3=2,\\
+ -2x_1+3x_2+5x_3=-6
+ \end{cases}
+ \quad\longleftrightarrow\quad
+ \left(\begin{array}{rrr|r}
+ 0&1&2&1\\2&-1&2&2\\-2&3&5&-6
+ \end{array}\right).
+\]
+Le prime tre colonne contengono, nell'ordine, i coefficienti di $x_1,x_2,x_3$; l'ultima contiene i termini noti. Ogni riga è un'equazione. Per esempio, la seconda riga $(2,-1,2\mid2)$ significa $2x_1-x_2+2x_3=2$. Lo zero iniziale ricorda che nella prima equazione manca il termine in $x_1$.
+
+\end{esempio}
 
 \section{Eliminazione di Gauss e forma a scala}
 \begin{proposizione}
+Indichiamo con $R_i$ la riga $i$ della matrice. Per $i\ne j$, la scrittura $R_i\leftarrow R_i+\lambda R_j$ significa che sostituiamo la riga $i$ con la somma indicata, lasciando invariate le altre righe.
+
 Le seguenti operazioni elementari sulle righe della matrice completa trasformano un sistema in uno equivalente:
 \begin{enumerate}
 \item scambiare due righe;
@@ -23,7 +42,11 @@ Le seguenti operazioni elementari sulle righe della matrice completa trasformano
 \end{enumerate}
 \end{proposizione}
 \begin{proof}
-Scambiare equazioni non cambia le condizioni imposte; moltiplicare un'uguaglianza per uno scalare non nullo è reversibile. Se a un'equazione si somma un multiplo di un'altra, ogni soluzione del sistema iniziale soddisfa quella nuova. L'operazione inversa sottrae lo stesso multiplo, quindi vale anche il viceversa. Tutte le operazioni vanno eseguite anche sui termini noti.
+\begin{enumerate}[label=\arabic*.]
+\item Scambiare equazioni non cambia le condizioni imposte.
+\item Moltiplicare un'uguaglianza per uno scalare non nullo è reversibile.
+\item Se a un'equazione si somma un multiplo di un'altra, ogni soluzione del sistema iniziale soddisfa quella nuova. L'operazione inversa sottrae lo stesso multiplo, quindi vale anche il viceversa. Tutte le operazioni vanno eseguite anche sui termini noti.
+\end{enumerate}
 \end{proof}
 
 \begin{definizione}
@@ -42,18 +65,21 @@ non sono entrambe a scala: nella prima, seconda e terza riga hanno il primo elem
 è invece in forma a scala ridotta.
 \end{esempio}
 
-\textbf{Procedimento di Gauss.} Si cerca una colonna non nulla e si porta in alto, con uno scambio, una riga che abbia lì un elemento non nullo. Usando tale elemento come pivot si annullano le entrate sottostanti mediante somme di multipli di righe. Si ripete sul blocco di righe inferiori e colonne successive. Il procedimento termina perché a ogni passo si avanza di una riga e di almeno una colonna. Dividendo ciascuna riga non nulla per il suo pivot si ottiene la forma speciale; annullando anche sopra i pivot si ottiene la forma ridotta.
+\textbf{Procedimento di Gauss.} Nel blocco ancora da trattare si sceglie la prima colonna non nulla da sinistra, saltando soltanto le colonne tutte nulle in quel blocco. Con uno scambio si porta nella prima riga del blocco una sua entrata non nulla. Usandola come pivot si annullano le entrate sottostanti mediante somme di multipli di righe. Si ripete sul blocco di righe inferiori e colonne successive; se il blocco rimasto è nullo, ci si ferma. Il procedimento termina perché a ogni passo si avanza di una riga e di almeno una colonna. Dividendo ciascuna riga non nulla per il suo pivot si ottiene la forma speciale; annullando anche sopra i pivot si ottiene la forma ridotta.
 
+\Needspace{15\baselineskip}
 \begin{esempio}
-Consideriamo il sistema
-\[
- \begin{cases}x_2+2x_3=1,\\2x_1-x_2+2x_3=2,\\-2x_1+3x_2+5x_3=-6.\end{cases}
-\]
-Scambiando le prime due righe della matrice completa e poi eseguendo $R_3\leftarrow R_3+R_1$ e $R_3\leftarrow R_3-2R_2$, otteniamo
+Riprendiamo il sistema dell’esempio precedente. Scriveremo $M\sim M'$ quando due matrici si ottengono l’una dall’altra mediante operazioni elementari sulle righe; se sono matrici complete, i sistemi corrispondenti sono equivalenti. Scambiando le prime due righe della matrice completa e poi eseguendo $R_3\leftarrow R_3+R_1$ e $R_3\leftarrow R_3-2R_2$, otteniamo
 \[
  \left(\begin{array}{rrr|r}0&1&2&1\\2&-1&2&2\\-2&3&5&-6\end{array}\right)
  \sim\left(\begin{array}{rrr|r}2&-1&2&2\\0&1&2&1\\0&2&7&-4\end{array}\right)
  \sim\left(\begin{array}{rrr|r}2&-1&2&2\\0&1&2&1\\0&0&3&-6\end{array}\right).
+\]
+L'ultima matrice completa rappresenta esplicitamente il sistema equivalente
+\[
+ \begin{cases}
+ 2x_1-x_2+2x_3=2,\\x_2+2x_3=1,\\3x_3=-6.
+ \end{cases}
 \]
 La sostituzione dal basso dà $x_3=-2$, $x_2=5$ e $x_1=11/2$. La terna ottenuta soddisfa tutte le equazioni iniziali.
 \end{esempio}
@@ -61,6 +87,7 @@ La sostituzione dal basso dà $x_3=-2$, $x_2=5$ e $x_1=11/2$. La terna ottenuta 
 \subsection{Operazioni sulle righe e basi di sottospazi}
 Le operazioni elementari conservano anche il sottospazio generato dalle righe: ogni riga nuova è combinazione delle precedenti e, poiché ogni operazione è invertibile, vale anche l'inclusione opposta. Le righe non nulle di una matrice a scala sono indipendenti: in una relazione nulla, la colonna del primo pivot forza a zero il coefficiente della prima riga; si prosegue allo stesso modo per le altre. Formano quindi una base dello spazio delle righe.
 
+Riprendiamo, con il metodo di Gauss, il sottospazio già studiato nel capitolo sulle basi.
 \begin{esercizio}
 Sia $U\subseteq\R^4$ generato da $u_1=(1,-1,0,2)$, $u_2=(-1,-3,2,0)$ e $u_3=(2,0,-1,3)$. Verificare che $\dim U=2$ e trovare una base.
 \end{esercizio}
@@ -74,5 +101,5 @@ Disponiamo i generatori per righe. Con $R_2\leftarrow R_2+R_1$, $R_3\leftarrow R
 Due righe non nulle danno $\dim U=2$. Una base è $(u_1,u_1+u_2)$; equivalentemente è una base anche $(u_1,u_2)$, perché il passaggio fra le due coppie è invertibile. La relazione $2u_3-3u_1+u_2=0$ conferma che il terzo generatore è ridondante.
 \end{svolgimento}
 \begin{osservazione}
-Le righe non nulle della forma a scala sono una base dello stesso sottospazio, ma in generale non sono righe della matrice iniziale. Per estrarre una base fra i generatori originari occorre conservarne le relazioni, come nel metodo con il blocco identità già usato nel capitolo precedente, oppure usare le colonne pivot come spiegato più avanti.
+Le righe non nulle della forma a scala sono una base dello stesso sottospazio, ma in generale non sono righe della matrice iniziale. Per estrarre una base fra i generatori originari occorre conservarne le relazioni, come nel metodo con il blocco identità già usato nel capitolo precedente, oppure disporre i generatori per colonne (trasponendo la matrice che li conteneva per righe) e selezionare le colonne originarie nelle posizioni dei pivot, come spiegato più avanti.
 \end{osservazione}

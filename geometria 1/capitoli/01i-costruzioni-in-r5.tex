@@ -57,7 +57,7 @@ La seconda equazione dà $\alpha_2=3\alpha_3$; sostituendo nella terza si ottien
 
 \subsection{Metodo matriciale per conservare le relazioni}
 \begin{svolgimento}
-Le operazioni elementari qui utilizzate sono giustificate nel capitolo~\ref{cap:sistemi-matrici}. Un modo alternativo di trovare la relazione consiste nel disporre i generatori per righe e affiancare la matrice identità. Il blocco destro registra i coefficienti con cui ogni riga si esprime mediante i tre generatori iniziali:
+Le operazioni elementari qui utilizzate sono giustificate nel capitolo~\ref{cap:sistemi-matrici}. Un modo alternativo di trovare la relazione consiste nel disporre i generatori per righe e affiancare la matrice identità: una matrice quadrata con $1$ sulla diagonale principale (dall’alto a sinistra al basso a destra) e $0$ in tutte le altre posizioni. Il blocco destro registra i coefficienti con cui ogni riga si esprime mediante i tre generatori iniziali:
 \[
   M_0=\left(\begin{array}{rrrrr|rrr}
     3&0&1&-2&-2&1&0&0\\
@@ -65,7 +65,7 @@ Le operazioni elementari qui utilizzate sono giustificate nel capitolo~\ref{cap:
     3&6&-7&-1&-1&0&0&1
   \end{array}\right).
 \]
-Sostituiamo la seconda riga con $R_1-3R_2$ e la terza con $R_3-R_1$, eseguendo le stesse operazioni su entrambi i blocchi:
+Indichiamo con $R_i$ la riga $i$ della matrice e con $R_i\leftarrow R$ la sua sostituzione con la riga $R$, lasciando invariate le altre righe. Sostituiamo la seconda riga con $R_1-3R_2$ e la terza con $R_3-R_1$, eseguendo le stesse operazioni su entrambi i blocchi. La prima sostituzione è la composizione di $R_2\leftarrow-3R_2$ e $R_2\leftarrow R_2+R_1$, entrambe reversibili:
 \[
   M_1=\left(\begin{array}{rrrrr|rrr}
     3&0&1&-2&-2&1&0&0\\

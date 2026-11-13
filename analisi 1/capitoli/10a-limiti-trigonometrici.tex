@@ -6,15 +6,15 @@
 La continuità permette di calcolare $\sin x_n\to0$ e $\cos x_n\to1$ quando $x_n\to0$. Non risolve però direttamente i rapporti in cui numeratore e denominatore tendono entrambi a zero. In questi casi servono informazioni più precise sulla loro grandezza relativa.
 
 \begin{teorema}
-Se $x_n\to0$ e $x_n\ne0$ definitivamente, con gli angoli misurati in radianti, allora
-\[
-\frac{\sin x_n}{x_n}\longrightarrow1,
-\qquad
-\frac{1-\cos x_n}{x_n^2}\longrightarrow\frac12.
-\]
+Se $x_n\to0$ e $x_n\ne0$ definitivamente, con gli angoli misurati in radianti, allora:
+\begin{enumerate}[label=\arabic*.]
+\item $\sin x_n/x_n\to1$.
+\item $(1-\cos x_n)/x_n^2\to1/2$.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-\textbf{Il rapporto con il seno.} Per $0<t<\pi/2$, il confronto geometrico fra un triangolo inscritto, un settore circolare e un triangolo tangente dà
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Il rapporto con il seno.} Per $0<t<\pi/2$, il confronto geometrico fra un triangolo inscritto, un settore circolare e un triangolo tangente dà
 \[
 \sin t<t<\tan t.
 \]
@@ -25,14 +25,14 @@ Più precisamente, nel cerchio unitario le tre aree sono $\sin t/2$, $t/2$ e $\t
 \cos t<\frac{\sin t}{t}<1.
 \]
 Il rapporto $\sin t/t$ è pari, quindi la stessa stima vale per $0<|t|<\pi/2$. Definitivamente la si può applicare a $t=x_n$. La continuità del coseno dà $\cos x_n\to1$; per i carabinieri, $\sin x_n/x_n\to1$.
-
-\textbf{Il rapporto con il coseno.} Poiché $\cos x_n\to1$, definitivamente $1+\cos x_n\ne0$. Moltiplicando per il coniugato e usando $1-\cos^2t=\sin^2t$,
+\item \textbf{Il rapporto con il coseno.} Poiché $\cos x_n\to1$, definitivamente $1+\cos x_n\ne0$. Moltiplicando per il coniugato e usando $1-\cos^2t=\sin^2t$,
 \[
 \frac{1-\cos x_n}{x_n^2}
 =\frac{\sin^2x_n}{x_n^2(1+\cos x_n)}
 =\left(\frac{\sin x_n}{x_n}\right)^2\frac1{1+\cos x_n}
 \longrightarrow1\cdot\frac12.
 \]
+\end{enumerate}
 \end{proof}
 
 \begin{schema}

@@ -114,3 +114,45 @@ La copertura è relativa ai PDF consegnati; non attesta il programma completo d'
 L’autore richiede un nuovo capitolo «Funzione di Eulero e gruppi» e precisa di organizzare soltanto le aggiunte già ricavate dalle lezioni, senza iniziare autonomamente la teoria dei gruppi. Spostata integralmente la precedente sezione7.6 nel capitolo8, con la stessa provenienzaA–L16 e gli stessi enunciati, prove ed esempi. Nessuna nuova unità matematica. N21–N25 eD03 ricollocati nel8 nei registri; resto degli anelli/morfismi nel7.
 
 Volume58 pagine: capitolo7 di9 pagine (44–52), capitolo8 di2 (53–54). Otto estratti automatici; compilazioni condivisa e integrata riuscite, nessun avviso della condivisa. Controlli di testo esatto, conservazione dei capitoli1–7 e corrispondenza di tutti gli estratti col volume. Registro corrente `CAPITOLO_EULERO_E_GRUPPI_2026-11-05.md`; snapshot `storico-prima-capitolo-eulero-2026-11-05/`. Prossima lezioneA–L17; nessun rinvio residuo sulle fonti già ricevute.
+
+
+## Sessione7 — 11 novembre2026: lezioni17–18
+
+**Fonti e confronto:** lette visivamente31 pagine nuove,18A–L e13M–Z. Riprese di phi accorpate, paginaAL18:1 duplicataAL17:9 trattata una volta. Integrazione locale dei termini omomorfismo/endomorfismo nel7; prosecuzione del8 con gruppi, potenze, simmetrico, affini, sottogruppi/generati, coniugati, centralizzanti e centro. Nessun nuovo capitolo numerato; sottomoduli08a–08c inclusi nello stesso8. Tutti i compiti pertinenti sviluppati; esempi distinti conservati. D04 rinvia soltanto l'esempioEnd_K(V), per prerequisiti non introdotti inAlgebra. A–L17–18 interamente integrate.
+
+**Risultato:**66 pagine,4 preliminari e62testo;8 estratti. Capitolo7 di9 pagine44–52 (variano solo44 e49); capitolo8 di10 pagine53–62. Capitoli1–6 invariati nei sorgenti e nei pixel di tutte43pagine. Correzioni esplicite: minimo sottogruppo contenente entrambi per il join; centralizzante della traslazione=T solo per parametro non nullo; composizione distinta dal prodotto puntuale. Diagrammi di composizione e inclusione verificati nel rendering.
+
+**Registri e studio:**36 PDF/242 pagine,119righeA–L e123M–Z;147 unità,146 integrate e1rinvio. Aggiornato DIMOSTRAZIONI_DA_STUDIARE.md: A/B/C per idee richieste, famiglie di prove accorpate e collegamenti correnti, preservando altre materie e annotazioni. Nessuno stato personale di apprendimento assegnato.
+
+**Verifiche:** compilazione condivisa pulita e integrata riuscita; tutti8 estratti verificati su62 pagine (flussi/testo/geometria/numerazione/pixel/link). Originali36 byte-identici; visualizzazione di indice, pagine modificate7 e intero8. Riscontri esatti finiti su permutazioni, sottogruppiS3 e affinità razionali; non equivalgono a certificazione delle prove generali.
+
+**Ripresa:** registro corrente LEZIONI_17-18_2026-11-11.md; prossimaA–L19. Snapshot storico-prima-lezioni-17-18-2026-11-11/. Riesaminare D04 quando i prerequisiti entrano nel corso. Copie annotate non modificate, nessun commit/push/pubblicazione.
+
+
+## 13 novembre 2026 — Enunciati e prove numerati
+
+Riorganizzati i risultati con enunciati distinti mediante punti numerati e corrispondenti parti della prova; prove comuni e implicazioni fra punti segnalate esplicitamente. Contenuti e profondità conservati, senza nuove fonti né variazioni delle priorità di studio. Regola aggiunta al protocollo comune.
+
+Volume: 66 → 69 pagine. Ricompilato senza avvisi; rigenerati e confrontati tutti i 8 estratti con il volume (testo, flussi, pagine e pixel). Ispezionati elenchi e raccordi; nessuna modifica alle copie Goodnotes. Resoconto: `../../strumenti/NUMERAZIONE_ENUNCIATI_2026-11-13.md`; verifica: `../../strumenti/VERIFICA_NUMERAZIONE_ENUNCIATI_2026-11-13.json`.
+
+
+## Sessione8 — 13 novembre2026: lezioni19–20
+
+**Fonti e collocazione:** lette visivamente33 pagine (19A–L,14M–Z), confronto con tutti i macroargomenti prima della scrittura. In08b generalizzato il generato diX, raccordando join/ciclico già presenti; classificati sottogruppiZ e reticoli. Nel medesimo capitolo8 aggiunti morfismi, ordine e due modelli dei ciclici, sottogruppi/divisori, ordine/MCD e generatori/phi, eserciziU16/U17 e primi cicli. Sottomoduli08d–08f, nessun nuovo capitolo numerato. Riprese19/20 accorpate, esempi distinti conservati. Corretto AL20:5 (divisibilità, non uguaglianza); prova di unicità scelta daMZ e completata. Enunciati e prove numerati in corrispondenza.
+
+**Stato e limiti:** lezioni20 integrate; prossimaAL21. D04 resta rinviato per prerequisiti; decomposizione generale in cicli riportata senza prova come nelle fonti, con esempi svolti. Proprietà dell’esponenziale dichiarate assunte. Nessuna anticipazione di Lagrange/Eulero. Inventario40PDF/275pagine, copertura138AL+137MZ,155unità (154integrate,1rinvio). Indice delle dimostrazioni aggiornato per famiglie di metodi A/B/C; altre materie e annotazioni preservate, nessun progresso personale assegnato.
+
+**Risultato e verifica:** volume79pagine (4+75), otto estratti; capitolo8 da12 a22pagine stampate54–75. Cambiano indice e capitolo8; capitoli1–7 con53pagine identiche per pixel/testo e sorgenti invariati. Compilazioni condivisa senza avvisi e integrata riuscite. Tutti75pagine degli estratti identiche al volume per pixel/testo/flussi/geometria/numerazione,26linkinterni+9alvolume verificati;40originali byte-identici. Ispezionati indice e intero8, tutti i diagrammi nuovi. Riscontri matematici finiti supplementari, distinti dal riesame manuale delle prove.
+
+**Ripresa:** registro corrente LEZIONI_19-20_2026-11-13.md e VERIFICA_FINALE.json; snapshot storico-prima-lezioni-19-20-2026-11-13/. Copie annotate non modificate, nessun commit/push/pubblicazione.
+
+
+## Sessione9 — 13 novembre2026: revisione totale di completezza e chiarezza
+
+**Ambito:** tutti gli otto capitoli,155 unità e40 fonti/275 pagine. Rilette visivamente242 pagine1–18; per19–20 riusata la lettura integrale delle33 pagine della fase precedente nella stessa sessione. Confrontati testo corrente, copertura e provenienza;154 unità integrate eD04 motivatamente rinviato. Nessun nuovo tema esterno alle fonti.
+
+**Interventi:** nomi e notazioni locali, esempio persone/città e sette regioni, identificazione dei razionali interi, enumerazioni finite; numerabilità di X^r e cardinalità dell’unione con membro infinito; criterio MCD senza esistenza implicita e appunti personali conservati. Recuperato compito costruttivo MZ14:5, numerati enunciati/prove indipendenti, dimensioni e identità delle matrici esplicite. Nel8 provata la potenza di potenza, definito il caso modulo1 prima dell’uso senza estendere phi(1). Assunti e rinvii conservati, nessuna prova generale sui cicli inventata. Aggiornato indice delle dimostrazioni nelle sole parti pertinenti.
+
+**Risultato:**83 pagine (4+79),8 estratti di5,6,9,6,10,11,10,22 pagine. Tutti gli otto capitoli e l’indice cambiano rispetto alla baseline79; main/preambolo invariati. Compilazioni condivisa e integrata riuscite senza avvisi. Tutte79 pagine degli estratti identiche al volume per pixel/testo/flussi/geometria/numerazione;27 link interni e9 al volume verificati.40 originali byte-identici. Ispezionate tutte83 pagine e ricontrollate le aree rifinite, diagrammi e reticoli.
+
+**Ripresa:** registro corrente revisione-totale-2026-11-13/REVISIONE.md e INVENTARIO.json; risultati finali in VERIFICA_FINALE.json. Snapshot precedente in revisione-totale-2026-11-13/prima/. Registri storici conservati; prossima A–L21. Copie Goodnotes non modificate, altre materie e appunti personali preservati; nessun progresso di studio assegnato, commit o pubblicazione.

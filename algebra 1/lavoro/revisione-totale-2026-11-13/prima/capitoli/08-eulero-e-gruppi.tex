@@ -1,0 +1,116 @@
+% !TeX root = ../main.tex
+\chapter{Funzione di Eulero e gruppi}\label{cap:eulero-gruppi}
+\fonti{Lezioni 16, 17, 18, 19 e 20}
+
+\section{La funzione di Eulero}
+% A–L L16 p. 4; M–Z L15 pp. 10–11 e L16 pp. 2–4 (recupero D03).
+Per contare gli invertibili nelle classi resto possiamo usare la scomposizione in prodotti di anelli. Il passaggio essenziale è che un isomorfismo trasporta esattamente gli elementi invertibili.
+
+\begin{proposizione}\label{prop:trasporto-unita}
+\begin{enumerate}[label=\arabic*.]
+\item Se $f:R\to S$ è un morfismo e $a\in U(R)$, allora $f(a)\in U(S)$ e $f(a)^{-1}=f(a^{-1})$.
+\item Se $f$ è un isomorfismo, la sua restrizione è una biezione $U(R)\to U(S)$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Applicando $f$ alle identità $aa^{-1}=a^{-1}a=1_R$ si ottiene
+\[
+f(a)f(a^{-1})=f(a^{-1})f(a)=1_S.
+\]
+Quindi $f(a^{-1})$ è l'inverso di $f(a)$.
+\item Se $f$ è un isomorfismo, anche $f^{-1}$ è un morfismo e manda $U(S)$ in $U(R)$: le due restrizioni sono inverse l'una dell'altra.
+\end{enumerate}
+\end{proof}
+
+\begin{definizione}
+La \textbf{funzione di Eulero} è
+\[
+\varphi:\N\setminus\{0,1\}\longrightarrow\N,\qquad
+\varphi(m)=|U(\Z/m\Z)|.
+\]
+Per il criterio delle unità modulo $m$,
+\[
+\varphi(m)=\bigl|\{a\in\Z\mid 0\le a<m,\ \operatorname{MCD}(a,m)=1\}\bigr|.
+\]
+Conta dunque i rappresentanti coprimi con $m$ in un sistema completo di resti.
+\end{definizione}
+
+\begin{esempio}[Primi valori e cautele]
+\[
+\begin{array}{c|rrrrrrr}
+m&2&3&4&5&6&7&8\\\hline
+\varphi(m)&1&2&2&4&2&6&4
+\end{array}
+\]
+Per esempio $U(\Z/8\Z)=\{[1]_8,[3]_8,[5]_8,[7]_8\}$, mentre le quattro unità modulo $12$ già elencate danno $\varphi(12)=4$.
+
+La funzione non è monotona: $\varphi(5)=4>2=\varphi(6)$, ma $\varphi(6)=2<6=\varphi(7)$. Non conserva in generale né somme né prodotti: $\varphi(3+3)=2\ne4=\varphi(3)+\varphi(3)$ e $\varphi(2\cdot2)=2\ne1=\varphi(2)\varphi(2)$.
+\end{esempio}
+
+\begin{proposizione}\label{prop:eulero-potenze}
+Per ogni primo positivo $p$ e ogni intero $k\ge1$,
+\[
+\varphi(p^k)=p^k-p^{k-1}=p^{k-1}(p-1).
+\]
+In particolare $\varphi(p)=p-1$ e $\varphi(p^2)=p^2-p$.
+\end{proposizione}
+\begin{proof}
+Una classe $[a]_{p^k}$ è invertibile se e solo se $\operatorname{MCD}(a,p^k)=1$, cioè se e solo se $p\nmid a$: l'unico primo che divide $p^k$ è $p$. Fra i $p^k$ rappresentanti $0,1,\ldots,p^k-1$, quelli non invertibili sono precisamente
+\[
+0,p,2p,\ldots,(p^{k-1}-1)p.
+\]
+Sono $p^{k-1}$ multipli distinti di $p$, incluso lo zero. Restano $p^k-p^{k-1}$ unità. Per $k=1$ si esclude solo lo zero, come già sappiamo perché $\Z/p\Z$ è un campo.
+\end{proof}
+
+\Needspace{15\baselineskip}
+\begin{proposizione}[Moltiplicatività per moduli coprimi]\label{prop:eulero-coprimi}
+Se $m,n\ge2$ e $\operatorname{MCD}(m,n)=1$, allora
+\[
+\varphi(mn)=\varphi(m)\varphi(n).
+\]
+\end{proposizione}
+\begin{proof}
+Il teorema cinese dà l'isomorfismo $\Phi:\Z/mn\Z\to\Z/m\Z\times\Z/n\Z$. La proposizione~\ref{prop:trasporto-unita} e la descrizione delle unità di un prodotto danno una biezione
+\[
+U(\Z/mn\Z)\longrightarrow U(\Z/m\Z)\times U(\Z/n\Z),
+\qquad [a]_{mn}\longmapsto([a]_m,[a]_n).
+\]
+Contando gli elementi dei due insiemi finiti si ottiene $\varphi(mn)=|U(\Z/m\Z)|\,|U(\Z/n\Z)|=\varphi(m)\varphi(n)$.
+\end{proof}
+
+\begin{corollario}[Formula dalla fattorizzazione]
+% M–Z L16 p. 4; A–L L17 pp. 1–2 riprende la stessa prova e l'esempio600.
+Se $m=p_1^{k_1}\cdots p_r^{k_r}\ge2$, con $p_i$ primi distinti e $k_i\ge1$, allora
+\[
+\varphi(m)=\prod_{i=1}^r p_i^{k_i-1}(p_i-1).
+\]
+\end{corollario}
+\begin{proof}
+Le potenze $p_i^{k_i}$ sono a due a due coprime, poiché hanno fattori primi distinti. Per il corollario~\ref{cor:crt-anelli}, la restrizione alle unità e la formula delle unità di un prodotto finito, si ha
+\[
+\varphi(m)=\prod_{i=1}^r\varphi(p_i^{k_i}).
+\]
+Applicando la proposizione~\ref{prop:eulero-potenze} a ciascun fattore segue la formula. Per $r=1$ è già la formula per una potenza prima.
+\end{proof}
+
+\begin{esempio}
+Poiché $600=2^3\cdot3\cdot5^2$, con potenze prime a due a due coprime,
+\[
+\varphi(600)=\varphi(2^3)\varphi(3)\varphi(5^2)
+           =\bigl(2^2(2-1)\bigr)\cdot(3-1)\cdot\bigl(5(5-1)\bigr)
+           =4\cdot2\cdot20=160.
+\]
+\end{esempio}
+
+% A–L L17 p. 2: esempi di unità, senza ripetere la formula o la prova.
+\begin{esempio}[Unità modulo 3, 25 e 75]
+Si ha $U(\Z/3\Z)=\{[1]_3,[2]_3\}$, mentre $U(\Z/25\Z)$ contiene le venti classi con rappresentante fra $0$ e $24$ non divisibile per $5$. Poiché $75=3\cdot25$, il teorema cinese dà una biezione fra $U(\Z/75\Z)$ e $U(\Z/3\Z)\times U(\Z/25\Z)$: una classe modulo $75$ è invertibile esattamente quando il suo rappresentante non è divisibile né per $3$ né per $5$. Quindi $\varphi(75)=2\cdot20=40$.
+\end{esempio}
+
+\input{capitoli/08a-gruppi}
+\input{capitoli/08b-sottogruppi}
+\input{capitoli/08c-centralizzanti}
+\input{capitoli/08d-morfismi-gruppi}
+\input{capitoli/08e-gruppi-ciclici}
+\input{capitoli/08f-cicli-permutazioni}

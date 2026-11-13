@@ -1,0 +1,32 @@
+{
+  "data": "2026-11-13",
+  "esito": "superato",
+  "ordini_additivi_verificati": 13040,
+  "sottogruppi_enumerati_esaustivamente_Zn_n_1_12": 35,
+  "coppie_MCD_mcm": 1600,
+  "coppie_permutazioni_inclusioni": 617,
+  "esempi_permutazioni": "due ordiniS5 e due decomposizioniS5 esatti",
+  "unita16": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15
+  ],
+  "ordini_unita16": [
+    1,
+    4,
+    4,
+    2,
+    2,
+    4,
+    4,
+    2
+  ],
+  "generatore_unita17": 3,
+  "frecce_reticoli_verificate": 7,
+  "limite": "Riscontri finiti esatti supplementari; il riesame delle prove generali è manuale per unità, non certificazione formale."
+}

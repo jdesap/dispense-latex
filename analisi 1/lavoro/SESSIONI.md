@@ -537,3 +537,10 @@ Ricostruite prove assegnate o lasciate implicite; completato con una stima eleme
 Compilazioni condivisa e integrata riuscite senza avvisi LaTeX. Ispezionati capitoli 9 e 10, raccordi del capitolo 6 e indice. Risolti una formula fuori margine e il contatto fra numerazione 10.10 e titolo nell’indice. Tutti e dieci gli estratti verificati per identità di flussi, testo, formato, numerazione e rendering a 72 dpi; annotazioni conservate e destinazioni di link/segnalibri valide. Rapporto in `VERIFICA_LEZIONI_14_15_2026-11-04.json`.
 
 **Stato corrente:** lezioni 1-15 integrate, 92 pagine e dieci capitoli. Capitolo 6: 14 pagine (33-46), con aggiornamenti a 33 e 40; Continuità: quattro pagine (76-79), prima tre; nuovo capitolo 10: otto pagine (80-87). Capitoli 1-5, 7 e 8 invariati per testo, rendering e numerazione stampata. Cinque pagine preliminari; aggiornato l’indice e il suo spazio per i numeri delle sezioni. Copie annotate separate e non modificate. Restano i limiti delle precedenti revisioni e i risultati assunti/rinviati dichiarati nel testo.
+
+
+## 13 novembre 2026 — Enunciati e prove numerati
+
+Riorganizzati i risultati con enunciati distinti mediante punti numerati e corrispondenti parti della prova; prove comuni e implicazioni fra punti segnalate esplicitamente. Contenuti e profondità conservati, senza nuove fonti né variazioni delle priorità di studio. Regola aggiunta al protocollo comune.
+
+Volume: 92 → 93 pagine. Ricompilato senza avvisi; rigenerati e confrontati tutti i 10 estratti con il volume (testo, flussi, pagine e pixel). Ispezionati elenchi e raccordi; nessuna modifica alle copie Goodnotes. Resoconto: `../../strumenti/NUMERAZIONE_ENUNCIATI_2026-11-13.md`; verifica: `../../strumenti/VERIFICA_NUMERAZIONE_ENUNCIATI_2026-11-13.json`.

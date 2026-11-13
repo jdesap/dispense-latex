@@ -19,7 +19,7 @@ Per il teorema~\ref{teo:caratteristiche}, i sottoinsiemi di $X$ corrispondono al
 
 \begin{teorema}\label{teo:infiniti}
 Nel quadro con assioma della scelta, per un insieme $X$ sono equivalenti:
-\begin{enumerate}[label=\alph*)]
+\begin{enumerate}[label=\arabic*.]
 \item $X$ è infinito;
 \item esiste un'iniezione $f:\N\to X$;
 \item esiste un'iniezione $g:X\to X$ non suriettiva;
@@ -28,17 +28,17 @@ Nel quadro con assioma della scelta, per un insieme $X$ sono equivalenti:
 \end{teorema}
 \begin{proof}
 % A–L L7 pp. 2–3 e L8 pp. 1–2, più dettagliata sui tre casi dello spostamento.
-\passomath{a\Rightarrow b} Poiché $X$ è infinito, è non vuoto: scegliamo $x_0\in X$. Scelti $x_0,\ldots,x_{n-1}$ distinti, il complementare $X\setminus\{x_0,\ldots,x_{n-1}\}$ è non vuoto, altrimenti $X$ sarebbe finito. Possiamo dunque scegliere $x_n$ in esso. L'assioma della scelta garantisce la successione di scelte per tutti gli $n$. La funzione $f(n)=x_n$ è iniettiva: per $m<n$, $x_n$ è stato scelto diverso da $x_m$.
+\passomath{1\Rightarrow2} Poiché $X$ è infinito, è non vuoto: scegliamo $x_0\in X$. Scelti $x_0,\ldots,x_{n-1}$ distinti, il complementare $X\setminus\{x_0,\ldots,x_{n-1}\}$ è non vuoto, altrimenti $X$ sarebbe finito. Possiamo dunque scegliere $x_n$ in esso. L'assioma della scelta garantisce la successione di scelte per tutti gli $n$. La funzione $f(n)=x_n$ è iniettiva: per $m<n$, $x_n$ è stato scelto diverso da $x_m$.
 
-\passomath{b\Rightarrow c} Posto $S=f(\N)$, definiamo
+\passomath{2\Rightarrow3} Posto $S=f(\N)$, definiamo
 \[
 g(x)=\begin{cases}f(n+1)&x=f(n)\in S,\\x&x\notin S.\end{cases}
 \]
 L'indice $n$ è unico perché $f$ è iniettiva; la regola è quindi ben definita. Per l'iniettività distinguiamo i casi. Se $x=f(n)$ e $x'=f(m)$, da $g(x)=g(x')$ segue $f(n+1)=f(m+1)$, dunque $n=m$ e $x=x'$. Se entrambi sono fuori da $S$, sono lasciati fissi, quindi immagini uguali impongono punti uguali. Se solo uno è in $S$, anche solo una delle immagini è in $S$: non possono coincidere. Infine $f(0)$ non è raggiunto: gli elementi fuori da $S$ rimangono fuori, e quelli in $S$ vengono mandati nei punti $f(n+1)\ne f(0)$. Dunque $g$ non è suriettiva.
 
-\passomath{c\Rightarrow d} Restringendo il codominio di $g$ a $g(X)$ si ottiene una biezione $X\to g(X)$. La mancata suriettività dice esattamente $g(X)\subsetneq X$.
+\passomath{3\Rightarrow4} Restringendo il codominio di $g$ a $g(X)$ si ottiene una biezione $X\to g(X)$. La mancata suriettività dice esattamente $g(X)\subsetneq X$.
 
-\passomath{d\Rightarrow a} Una biezione $h:X\to S\subsetneq X$, composta con l'inclusione $S\hookrightarrow X$, dà un'iniezione non suriettiva $X\to X$. Questo è impossibile per un insieme finito, per il fatto di conteggio assunto sopra. Quindi $X$ è infinito.
+\passomath{4\Rightarrow1} Una biezione $h:X\to S\subsetneq X$, composta con l'inclusione $S\hookrightarrow X$, dà un'iniezione non suriettiva $X\to X$. Questo è impossibile per un insieme finito, per il fatto di conteggio assunto sopra. Quindi $X$ è infinito.
 \end{proof}
 
 \begin{schema}
@@ -49,6 +49,10 @@ L'indice $n$ è unico perché $f$ è iniettiva; la regola è quindi ben definita
   \node[below=2pt] at (y0.south) {omesso};\node at (4,-1.6) {fuori da $f(\N)$ ogni elemento resta fisso};
 \end{tikzpicture}
 \end{schema}
+
+\begin{esempio}
+L'applicazione $n\mapsto n+1$ è un'iniezione $\N\to\N$ che non raggiunge $0$; cambiando il codominio dà una biezione $\N\to\N^*$. Anche $n\mapsto2n$ dà una biezione fra $\N$ e il sottoinsieme proprio $2\N$ dei naturali pari. Sono esempi concreti di una possibilità esclusa per gli insiemi finiti.
+\end{esempio}
 
 \section{Equipotenza e confronto di cardinalità}
 % A–L L8 pp. 2–3; M–Z L8 pp. 5–6.
@@ -78,16 +82,20 @@ Un insieme $X$ è \textbf{numerabile} se $|X|\le|\N|$; è \textbf{numerabile inf
 Un insieme numerabile infinito è in biezione con $\N$: se $X\hookrightarrow\N$ e $X$ è infinito, il teorema~\ref{teo:infiniti} dà anche $\N\hookrightarrow X$, e si applica Cantor--Schröder--Bernstein.
 
 \begin{proposizione}
-$|\N\times\N|=\aleph_0$ e $|\N^r|=\aleph_0$ per ogni intero $r\ge1$.
+\begin{enumerate}[label=\arabic*.]
+\item $|\N\times\N|=\aleph_0$.
+\item $|X^r|=\aleph_0$ per ogni insieme $X$ con $|X|=\aleph_0$ e ogni intero $r\ge1$; in particolare $|\N^r|=\aleph_0$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Coppie.} Consideriamo $p:\N\times\N\to\N$, $p(m,n)=2^m(2n+1)-1$. Se $p(m,n)=p(m',n')$, allora
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Coppie.} Consideriamo $p:\N\times\N\to\N$, $p(m,n)=2^m(2n+1)-1$. Se $p(m,n)=p(m',n')$, allora
 \[
 2^m(2n+1)=2^{m'}(2n'+1).
 \]
 Se $m<m'$, cancellando $2^m$ si avrebbe un numero dispari uguale a uno pari, impossibile. Lo stesso esclude $m>m'$ scambiando i ruoli. Quindi $m=m'$, e cancellando la potenza di $2$ si ricava $n=n'$. L'applicazione è iniettiva; nell'altro verso $m\mapsto(m,0)$ è un'iniezione. Cantor--Schröder--Bernstein dà l'equipotenza. Non si è usata la fattorizzazione unica in primi.
-
-\textbf{Prodotti finiti, induzione su $r$.} Per $r=1$ vale l'identità. Supponiamo data una biezione $u_r:\N^r\to\N$. L'applicazione $(a_1,\ldots,a_{r+1})\mapsto(u_r(a_1,\ldots,a_r),a_{r+1})$ è una biezione $\N^{r+1}\to\N^2$: l'inversa applica $u_r^{-1}$ alla prima coordinata. Componendola con una biezione $\N^2\to\N$ si ottiene il passo $r+1$. Il principio d'induzione conclude.
+\item \textbf{Prodotti finiti, induzione su $r$.} Per $r=1$ vale l'identità. Supponiamo data una biezione $u_r:\N^r\to\N$. L'applicazione $(a_1,\ldots,a_{r+1})\mapsto(u_r(a_1,\ldots,a_r),a_{r+1})$ è una biezione $\N^{r+1}\to\N^2$: l'inversa applica $u_r^{-1}$ alla prima coordinata. Componendola con una biezione $\N^2\to\N$ si ottiene il passo $r+1$. Il principio d'induzione conclude. Per un insieme $X$ con $|X|=\aleph_0$, una biezione $v:\N\to X$ induce la biezione $(n_1,\ldots,n_r)\mapsto(v(n_1),\ldots,v(n_r))$ da $\N^r$ a $X^r$, con inversa coordinata per coordinata. Quindi anche $|X^r|=\aleph_0$.
+\end{enumerate}
 \end{proof}
 
 \begin{osservazione}[Enumerazione per diagonali]
@@ -104,25 +112,35 @@ Un secondo metodo consiste nel percorrere successivamente le diagonali $m+n=0,1,
 \end{schema}
 
 \begin{teorema}[Unione numerabile di numerabili]\label{teo:unione-numerabile}
-Se $I$ è numerabile e ogni $A_i$, $i\in I$, è numerabile, allora $\bigcup_{i\in I}A_i$ è numerabile, nel quadro con assioma della scelta.
+Nel quadro con assioma della scelta, siano $I$ numerabile e $A_i$ numerabile per ogni $i\in I$.
+\begin{enumerate}[label=\arabic*.]
+\item $\bigcup_{i\in I}A_i$ è numerabile.
+\item Se almeno un $A_j$ è infinito, l'unione è numerabile infinita: $|\bigcup_{i\in I}A_i|=\aleph_0$.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-\textbf{Riduzione ai membri non vuoti.} Se l'unione è vuota, la conclusione vale. Altrimenti poniamo $I'=\{i\in I\mid A_i\ne\varnothing\}$. È numerabile e non vuoto, quindi esiste una suriezione $e:\N\to I'$: se $I'$ è infinito si usa una biezione, se è finito si ripete un elenco dei suoi elementi.
+\textbf{1. Riduzione ai membri non vuoti.} Se l'unione è vuota, la conclusione vale. Altrimenti poniamo $I'=\{i\in I\mid A_i\ne\varnothing\}$. È numerabile e non vuoto, quindi esiste una suriezione $e:\N\to I'$: se $I'$ è infinito si usa una biezione, se è finito si ripete un elenco dei suoi elementi.
 
 \textbf{Costruzione della suriezione.} Ogni $A_i$ non vuoto è a sua volta immagine di una suriezione $\varphi_i:\N\to A_i$. Scegliamo una tale funzione per ciascun $i\in I'$: è qui che occorre la scelta simultanea. Definiamo
 \[
 \Phi:\N^2\to\bigcup_{i\in I}A_i,\qquad \Phi(k,n)=\varphi_{e(k)}(n).
 \]
 Per ogni $a$ dell'unione, esiste $i\in I'$ con $a\in A_i$; esiste $k$ con $e(k)=i$ e poi $n$ con $\varphi_i(n)=a$. Quindi $\Phi$ è suriettiva. Componendo con una biezione $\N\to\N^2$ si ha una suriezione da $\N$ sull'unione, dunque un'iniezione dell'unione in $\N$ per il criterio già provato. L'unione è numerabile.
+
+\textbf{2.} Se $A_j$ è infinito, l'inclusione $A_j\hookrightarrow\bigcup_i A_i$ e il teorema~\ref{teo:infiniti} danno un'iniezione di $\N$ nell'unione. Il punto~1 dà l'iniezione opposta verso $\N$, quindi l'uguaglianza delle cardinalità segue da Cantor--Schröder--Bernstein. In particolare si recupera il caso in cui $I$ e tutti gli $A_i$ sono numerabili infiniti.
 \end{proof}
 
 \begin{corollario}
-$|\Z|=|\Q|=\aleph_0$.
+\begin{enumerate}[label=\arabic*.]
+\item $|\Z|=\aleph_0$.
+\item $|\Q|=\aleph_0$.
+\end{enumerate}
 \end{corollario}
 \begin{proof}
-\textbf{Interi.} Le formule $e(2k)=k$ ed $e(2k+1)=-(k+1)$ definiscono una biezione $\N\to\Z$: i due rami raggiungono rispettivamente tutti i non negativi e tutti i negativi, senza ripetizioni.
-
-\textbf{Razionali.} Il prodotto $\Z\times\N^*$ è numerabile perché si inietta in $\N^2$, usando una biezione $\Z\to\N$ e l'inclusione $\N^*\subseteq\N$. La funzione $(a,b)\mapsto a/b$ è suriettiva su $\Q$: ogni razionale ammette un denominatore positivo cambiando entrambi i segni, se necessario. Dunque $|\Q|\le\aleph_0$. L'inclusione $\N\hookrightarrow\Q$ dà la disuguaglianza opposta e si conclude per Cantor--Schröder--Bernstein.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Interi.} Le formule $e(2k)=k$ ed $e(2k+1)=-(k+1)$ definiscono una biezione $\N\to\Z$: i due rami raggiungono rispettivamente tutti i non negativi e tutti i negativi, senza ripetizioni.
+\item \textbf{Razionali.} Il prodotto $\Z\times\N^*$ è numerabile perché si inietta in $\N^2$, usando una biezione $\Z\to\N$ e l'inclusione $\N^*\subseteq\N$. La funzione $(a,b)\mapsto a/b$ è suriettiva su $\Q$: ogni razionale ammette un denominatore positivo cambiando entrambi i segni, se necessario. Dunque $|\Q|\le\aleph_0$. L'iniezione $\N\hookrightarrow\Q$, $n\mapsto n/1$, dà la disuguaglianza opposta e si conclude per Cantor--Schröder--Bernstein.
+\end{enumerate}
 \end{proof}
 
 \section{Cantor e la cardinalità del continuo}

@@ -7,12 +7,16 @@
 La caratterizzazione operativa degli estremi si può ora leggere in termini di accumulazione. La sola esistenza del supremo non garantisce però che esso sia un punto di accumulazione: se è un massimo isolato, l'approssimazione richiesta dal criterio può essere ottenuta scegliendo sempre quel massimo.
 
 \begin{proposizione}[Estremo non raggiunto]
-Sia $A\subseteq\R$ non vuoto e superiormente limitato. Se $S=\sup A$ non appartiene ad $A$, allora $S\in\operatorname{Acc}(A)$. Analogamente, se $s=\inf A\in\R$ e $s\notin A$, allora $s\in\operatorname{Acc}(A)$.
+\begin{enumerate}[label=\arabic*.]
+\item Sia $A\subseteq\R$ non vuoto e superiormente limitato. Se $S=\sup A$ non appartiene ad $A$, allora $S\in\operatorname{Acc}(A)$.
+\item Analogamente, se $s=\inf A\in\R$ e $s\notin A$, allora $s\in\operatorname{Acc}(A)$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Per ogni $r>0$, il criterio del supremo fornisce $a\in A$ con $S-r<a\le S$. Poiché $S\notin A$, si ha in realtà $S-r<a<S$, dunque $0<|a-S|<r$. Questo è il criterio di accumulazione.
-
-Per l'infimo il ragionamento è simmetrico: per ogni $r>0$ esiste $a\in A$ con $s\le a<s+r$ e, non essendo $s$ in $A$, la prima disuguaglianza è stretta.
+\begin{enumerate}[label=\arabic*.]
+\item Per ogni $r>0$, il criterio del supremo fornisce $a\in A$ con $S-r<a\le S$. Poiché $S\notin A$, si ha in realtà $S-r<a<S$, dunque $0<|a-S|<r$. Questo è il criterio di accumulazione.
+\item Per l'infimo il ragionamento è simmetrico: per ogni $r>0$ esiste $a\in A$ con $s\le a<s+r$ e, non essendo $s$ in $A$, la prima disuguaglianza è stretta.
+\end{enumerate}
 \end{proof}
 
 \begin{esempio}[Un massimo isolato]

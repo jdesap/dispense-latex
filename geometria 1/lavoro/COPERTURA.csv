@@ -64,3 +64,19 @@ Lezione 18,3,Fine somma e composizione e inizio cambio di base,verificato,capito
 Lezione 18,4,Cambio di base e inversa e schema in dimensione due,verificato,capitoli/03d-cambi-di-base.tex
 Lezione 18,5,Cambio delle basi del dominio e codominio e quattro identità,verificato,capitoli/03d-cambi-di-base.tex
 Lezione 18,6,Derivazione della formula di cambio di basi,verificato,capitoli/03d-cambi-di-base.tex
+Lezione 19,1,Inverse sinistre e destre per funzioni e due schemi,verificato,capitoli/03e-invertibilita.tex
+Lezione 19,2,Criterio di invertibilità e rango massimo e scambio di righe come prodotto,verificato,capitoli/03e-invertibilita.tex;capitoli/02d-matrici-elementari.tex
+Lezione 19,3,Matrici di riscalamento e somma di righe e composizione delle operazioni,verificato,capitoli/02d-matrici-elementari.tex
+Lezione 19,4,Blocco identità e inizio esempio della matrice B,verificato,capitoli/02d-matrici-elementari.tex
+Lezione 19,5,Fine esempio BA=A′ e riduzione della matrice da invertire,verificato,capitoli/02d-matrici-elementari.tex
+Lezione 19,6,Conclusione esercizio inversa e duale e base duale e indipendenza,verificato,capitoli/02d-matrici-elementari.tex;capitoli/04a-duale-biduale.tex
+Lezione 19,7,Base duale: indipendenza e generazione e dimensione,verificato,capitoli/04a-duale-biduale.tex
+Lezione 20,1,Funzionali come righe e dualità canonica bilineare,verificato,capitoli/04a-duale-biduale.tex
+Lezione 20,2,Biduale e mappa canonica e iniettività e dimensioni,verificato,capitoli/04a-duale-biduale.tex
+Lezione 20,3,Suriettività e canonicità e prodotto scalare e dimensione infinita e annullatore,verificato,capitoli/04a-duale-biduale.tex;capitoli/04b-annullatori.tex
+Lezione 20,4,Annullatori nei due versi e doppio annullatore e dimensione,verificato,capitoli/04b-annullatori.tex
+Lezione 20,5,Conclusione della prova della dimensione dell’annullatore,verificato,capitoli/04b-annullatori.tex
+Lezione 21,1,Definizione della trasposta e diagramma e identità di valutazione e nucleo,verificato,capitoli/04c-trasposta.tex
+Lezione 21,2,Nucleo della trasposta e immagine: inclusione e dimensioni,verificato,capitoli/04c-trasposta.tex
+Lezione 21,3,Conclusione uguaglianza immagine e matrice nelle basi duali,verificato,capitoli/04c-trasposta.tex
+Lezione 21,4,Conclusione matrice della trasposta uguale alla matrice trasposta,verificato,capitoli/04c-trasposta.tex

@@ -1,0 +1,133 @@
+% !TeX root = ../main.tex
+\section{Coniugati, centralizzanti e centro}
+% A–L L18 pp. 6–8; M–Z L18 pp. 4–6.
+\begin{definizione}
+Per $a,b\in G$, il \textbf{coniugato di $b$ tramite $a$} è
+\[
+b^a:=aba^{-1}.
+\]
+Qui l'esponente è un elemento del gruppo e indica un coniugato; non è la potenza intera $b^n$. Moltiplicando a destra per $a$ si vede che
+\[
+ab=ba\quad\Longleftrightarrow\quad aba^{-1}=b\quad\Longleftrightarrow\quad b^a=b.
+\]
+Quindi $G$ è abeliano se e solo se ogni coniugato di ogni elemento coincide con l'elemento stesso.
+\end{definizione}
+
+\begin{esempio}[Coniugati nel gruppo affine]
+Per una traslazione $f_{1,b}$ e un'omotetia $f_{a,0}$, con $a\ne0$,
+\[
+(f_{1,b})^{f_{a,0}}=f_{a,0}\circ f_{1,b}\circ f_{1/a,0}=f_{1,ab}.
+\]
+Il percorso $x\mapsto x/a\mapsto x/a+b\mapsto x+ab$ dà ancora una traslazione; coincide con $f_{1,b}$ se e solo se $(a-1)b=0$.
+
+Invertendo i ruoli, invece,
+\[
+(f_{a,0})^{f_{1,b}}=f_{1,b}\circ f_{a,0}\circ f_{1,-b}=f_{a,\,b(1-a)}.
+\]
+Infatti $x\mapsto x-b\mapsto a(x-b)\mapsto ax+b(1-a)$. In generale il termine noto non è nullo, quindi il risultato non è un'omotetia con centro nell'origine.
+\end{esempio}
+
+\Needspace{12\baselineskip}
+\begin{esercizio}
+In $S_4$, per
+\[
+s=\begin{pmatrix}1&2&3&4\\2&3&4&1\end{pmatrix},\qquad
+t=\begin{pmatrix}1&2&3&4\\1&4&3&2\end{pmatrix},
+\]
+calcolare i coniugati $s^t$ e $t^s$.
+\end{esercizio}
+\begin{svolgimento}
+Si calcolano $s^t=t\circ s\circ t^{-1}$ e $t^s=s\circ t\circ s^{-1}$, sempre applicando per prima la funzione più a destra. Qui $t^{-1}=t$ e $s^{-1}=\left(\begin{smallmatrix}1&2&3&4\\4&1&2&3\end{smallmatrix}\right)$. Seguendo i quattro argomenti si ottiene
+\[
+s^t=\begin{pmatrix}1&2&3&4\\4&1&2&3\end{pmatrix},\qquad
+t^s=\begin{pmatrix}1&2&3&4\\3&2&1&4\end{pmatrix}.
+\]
+Per esempio $s^t(1)=t(s(t^{-1}(1)))=t(s(1))=t(2)=4$.
+\end{svolgimento}
+
+\Needspace{18\baselineskip}
+\subsection{Gli elementi che commutano}
+\begin{definizione}
+Per $x\in G$, il \textbf{centralizzante} di $x$ in $G$ è
+\[
+C_G(x)=\{g\in G\mid gx=xg\}=\{g\in G\mid gxg^{-1}=x\}.
+\]
+Per $X\subseteq G$, si pone
+\[
+C_G(X)=\{g\in G\mid gx=xg\text{ per ogni }x\in X\}
+      =\bigcap_{x\in X}C_G(x).
+\]
+Se $X=\varnothing$, la condizione è vacua e $C_G(\varnothing)=G$. Il \textbf{centro} del gruppo è
+\[
+Z(G)=C_G(G)=\{g\in G\mid gx=xg\text{ per ogni }x\in G\}.
+\]
+\end{definizione}
+
+\begin{osservazione}
+Il neutro appartiene a ogni centralizzante e al centro. Se $G$ è abeliano, $C_G(X)=G$ per ogni $X\subseteq G$. Inoltre ogni potenza di $g$ commuta con $g$, per la proposizione~\ref{prop:potenze-gruppo}, quindi $\langle g\rangle\subseteq C_G(g)$. Il centralizzante di un elemento, tuttavia, non è necessariamente abeliano: $C_G(1_G)=G$.
+\end{osservazione}
+
+\begin{proposizione}\label{prop:centralizzante-sottogruppo}
+\begin{enumerate}[label=\arabic*.]
+\item Per ogni $X\subseteq G$, $C_G(X)$ è un sottogruppo di $G$.
+\item Il centro $Z(G)$ è un sottogruppo abeliano, e $Z(G)=G$ se e solo se $G$ è abeliano.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Il caso $X=\varnothing$ dà $G$. Altrimenti il neutro appartiene a $C_G(X)$. Siano $u,v\in C_G(X)$. Per ogni $x\in X$, da $vx=xv$ segue $v^{-1}xv=x$, moltiplicando a sinistra per $v^{-1}$. Perciò
+\[
+(uv^{-1})x(uv^{-1})^{-1}
+ =u(v^{-1}xv)u^{-1}=uxu^{-1}=x.
+\]
+Quindi $uv^{-1}\in C_G(X)$, e il criterio della proposizione~\ref{prop:criterio-sottogruppo} conclude la prova.
+\item Per $X=G$ si ottiene $Z(G)\le G$. Due elementi del centro commutano perché ciascuno commuta con tutti gli elementi di $G$: il sottogruppo è abeliano. Infine $Z(G)=G$ significa esattamente che tutti gli elementi di $G$ commutano fra loro.
+\end{enumerate}
+\end{proof}
+
+\subsection{Calcoli nel gruppo affine e in \texorpdfstring{$S_3$}{S3}}
+\Needspace{12\baselineskip}
+\begin{esercizio}
+In $G=\operatorname{Aff}(\R)$ determinare $C_G(f_{1,b})$, la sua intersezione con il sottogruppo $\mathcal O$ delle omotetie e il centro $Z(G)$. Distinguere i valori del parametro $b$.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Centralizzante di una traslazione.} Per $a\ne0$,
+\[
+f_{a,c}\circ f_{1,b}=f_{a,ab+c},\qquad
+f_{1,b}\circ f_{a,c}=f_{a,c+b}.
+\]
+Le due funzioni coincidono se e solo se $(a-1)b=0$. Se $b\ne0$, questo impone $a=1$, mentre $c$ è arbitrario: $C_G(f_{1,b})=\mathcal T$, il sottogruppo di tutte le traslazioni. In questo caso $\mathcal O\cap C_G(f_{1,b})=\{f_{1,0}\}$.
+
+Se invece $b=0$, $f_{1,b}=1_G$ commuta con tutto $G$: il centralizzante è $G$ e l'intersezione con $\mathcal O$ è $\mathcal O$. L'ipotesi di traslazione non identica è dunque necessaria per ottenere il primo risultato.
+
+\textbf{Centro.} Un elemento del centro commuta in particolare con $f_{1,1}$, quindi deve essere una traslazione $f_{1,c}$. Deve poi commutare con $f_{2,0}$: le composte hanno termini noti rispettivamente $c$ e $2c$, quindi $c=0$. Viceversa l'identità commuta con tutti. Si conclude
+\[
+Z(\operatorname{Aff}(\R))=\{f_{1,0}\}.
+\]
+\end{svolgimento}
+
+\Needspace{12\baselineskip}
+\begin{esercizio}
+Elencare gli elementi di $S_3$, determinare il centralizzante di
+$\tau_1=\left(\begin{smallmatrix}1&2&3\\2&1&3\end{smallmatrix}\right)$ e calcolare $Z(S_3)$.
+\end{esercizio}
+\begin{svolgimento}
+Le sei permutazioni sono l'identità $e$ e
+\[
+\begin{gathered}
+\tau_1=\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix},\quad
+\tau_2=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix},\quad
+\tau_3=\begin{pmatrix}1&2&3\\1&3&2\end{pmatrix},\\
+\sigma_1=\begin{pmatrix}1&2&3\\2&3&1\end{pmatrix},\quad
+\sigma_2=\begin{pmatrix}1&2&3\\3&1&2\end{pmatrix}.
+\end{gathered}
+\]
+Per commutare con $\tau_1$, una permutazione $g$ deve fissare $3$: infatti $\tau_1(g(3))=g(\tau_1(3))=g(3)$, e $3$ è l'unico punto fisso di $\tau_1$. Le sole permutazioni che fissano $3$ sono $e$ e $\tau_1$, e ambedue commutano con $\tau_1$. Dunque
+\[
+C_{S_3}(\tau_1)=\{e,\tau_1\}=\langle\tau_1\rangle.
+\]
+Il centro è contenuto in questo insieme. Ma $\tau_1$ non commuta con $\tau_3$: $(\tau_1\circ\tau_3)(1)=2$, mentre $(\tau_3\circ\tau_1)(1)=3$. Quindi
+\[
+Z(S_3)=\{e\}.
+\]
+\end{svolgimento}

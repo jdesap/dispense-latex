@@ -1,7 +1,18 @@
 {
-  "data": "2026-11-05",
-  "criterio": "D01–D03 recuperati con A–L16; su richiesta dell’autore D03 e la funzione di Eulero ricollocati nel capitolo8. Nessun materiale ricevuto resta rinviato.",
-  "unita": [],
+  "data": "2026-11-13",
+  "criterio": "D01–D03 recuperati; D04 resta rinviato dopo il confronto con AL19–20 e MZ19–20: mancano spazi vettoriali e linearità nel flusso di Algebra. Tutte le pagine AL19–20 integrate; enunciato generale sui cicli riportato senza prova come nelle fonti.",
+  "unita": [
+    {
+      "id": "D04",
+      "capitolo": "rinviato",
+      "unita": "Esempio anello End_K(V) e gruppo degli automorfismi lineari",
+      "fonti": "MZ17:3",
+      "scelta_e_motivo": "Prerequisiti spazi vettoriali e linearità non introdotti nel flusso A–L di Algebra; conservare per ripresa, senza importare teoria esterna",
+      "prerequisiti": "Spazi vettoriali; applicazioni lineari; dimensione",
+      "passaggi_controllati": "Somma puntuale e prodotto composizione; identità; unità=automorfismi; non abelianità per dimensione>1",
+      "stato": "rinviato esplicitamente: esempio con prerequisiti successivi"
+    }
+  ],
   "unita_recuperate": [
     {
       "id": "D01",

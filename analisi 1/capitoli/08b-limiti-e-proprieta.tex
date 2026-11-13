@@ -179,24 +179,36 @@ La limitatezza non implica convergenza, come mostra $(-1)^n$. Neppure l'illimita
 
 \begin{teorema}[Permanenza del segno]
 \label{teo:permanenza-segno}
-Se $a_n\to\ell\in\R$ e $\ell>0$, allora $a_n>0$ definitivamente. Se $\ell<0$, allora $a_n<0$ definitivamente.
+\begin{enumerate}[label=\arabic*.]
+\item Se $a_n\to\ell\in\R$ e $\ell>0$, allora $a_n>0$ definitivamente.
+\item Se $\ell<0$, allora $a_n<0$ definitivamente.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-Per $\ell>0$, scegliamo $\varepsilon=\ell/2$. Definitivamente
+\begin{enumerate}[label=\arabic*.]
+\item Per $\ell>0$, scegliamo $\varepsilon=\ell/2$. Definitivamente
 \[
 |a_n-\ell|<\ell/2
 \quad\Longrightarrow\quad \ell/2<a_n<3\ell/2,
 \]
-quindi $a_n>0$. Per $\ell<0$, scegliendo $\varepsilon=|\ell|/2$ si ottiene definitivamente $a_n<\ell+|\ell|/2=\ell/2<0$.
+quindi $a_n>0$.
+\item Per $\ell<0$, scegliendo $\varepsilon=|\ell|/2$ si ottiene definitivamente $a_n<\ell+|\ell|/2=\ell/2<0$.
+\end{enumerate}
 \end{proof}
 
 La conclusione vale anche per i limiti infiniti: se $a_n\to+\infty$, definitivamente $a_n>1>0$; se $a_n\to-\infty$, definitivamente $a_n<-1<0$.
 
 \begin{corollario}[Segno del limite]
-Se $a_n\ge0$ definitivamente e $a_n\to\ell\in\R$, allora $\ell\ge0$. Analogamente, da $a_n\le0$ definitivamente segue $\ell\le0$.
+\begin{enumerate}[label=\arabic*.]
+\item Se $a_n\ge0$ definitivamente e $a_n\to\ell\in\R$, allora $\ell\ge0$.
+\item Analogamente, da $a_n\le0$ definitivamente segue $\ell\le0$.
+\end{enumerate}
 \end{corollario}
 \begin{proof}
-Se il limite fosse negativo, per la permanenza del segno i termini sarebbero definitivamente negativi, in contraddizione con l'ipotesi. Il secondo caso è simmetrico.
+\begin{enumerate}[label=\arabic*.]
+\item Se il limite fosse negativo, per la permanenza del segno i termini sarebbero definitivamente negativi, in contraddizione con l'ipotesi.
+\item Il secondo caso è simmetrico.
+\end{enumerate}
 \end{proof}
 
 Non si può concludere la stretta positività del limite dalla stretta positività dei termini: $1/n>0$ per ogni $n\ge1$, ma $1/n\to0$.

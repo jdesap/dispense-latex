@@ -26,19 +26,24 @@ In coordinate reali le applicazioni lineari hanno componenti date da espressioni
 \end{esempio}
 
 \begin{proposizione}
-La composizione di applicazioni lineari è lineare. Se un'applicazione lineare $f:V\to W$ è biiettiva, anche la sua inversa $f^{-1}:W\to V$ è lineare.
+\begin{enumerate}[label=\arabic*.]
+\item La composizione di applicazioni lineari è lineare.
+\item Se un'applicazione lineare $f:V\to W$ è biiettiva, anche la sua inversa $f^{-1}:W\to V$ è lineare.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\passomath{g\circ f} Per $f:V\to W$ e $g:W\to Z$ lineari,
+\begin{enumerate}[label=\arabic*.]
+\item \passomath{g\circ f} Per $f:V\to W$ e $g:W\to Z$ lineari,
 \begin{align*}
  (g\circ f)(\lambda v+\mu v')
  &=g\bigl(\lambda f(v)+\mu f(v')\bigr)\\
  &=\lambda(g\circ f)(v)+\mu(g\circ f)(v').
 \end{align*}
-\passomath{f^{-1}} Siano $w_1,w_2\in W$ e poniamo $v_i=f^{-1}(w_i)$. Per linearità $f(\lambda v_1+\mu v_2)=\lambda w_1+\mu w_2$. Applicando l'inversa otteniamo
+\item \passomath{f^{-1}} Siano $w_1,w_2\in W$ e poniamo $v_i=f^{-1}(w_i)$. Per linearità $f(\lambda v_1+\mu v_2)=\lambda w_1+\mu w_2$. Applicando l'inversa otteniamo
 \[
  f^{-1}(\lambda w_1+\mu w_2)=\lambda f^{-1}(w_1)+\mu f^{-1}(w_2).
 \]
+\end{enumerate}
 \end{proof}
 \begin{definizione}
 Un'applicazione lineare biiettiva si chiama \emph{isomorfismo}. Due spazi si dicono \emph{isomorfi} se esiste un isomorfismo fra essi.
@@ -54,12 +59,17 @@ Per $f:V\to W$ lineare, il \emph{nucleo} e l'\emph{immagine} sono
 Il nucleo si indica anche con $N(f)$. L'applicazione è suriettiva se e solo se $\operatorname{Im}f=W$.
 \end{definizione}
 \begin{teorema}
-Il nucleo è un sottospazio di $V$ e l'immagine è un sottospazio di $W$.
+Per un'applicazione lineare $f:V\to W$:
+\begin{enumerate}[label=\arabic*.]
+\item il nucleo è un sottospazio di $V$;
+\item l'immagine è un sottospazio di $W$.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-\passomath{\ker f} Il vettore nullo appartiene al nucleo. Se $v_1,v_2\in\ker f$, allora $f(\lambda v_1+\mu v_2)=\lambda0_W+\mu0_W=0_W$: il nucleo è chiuso per combinazioni lineari.
-
-\passomath{\operatorname{Im}f} L'immagine contiene $0_W=f(0_V)$. Se $w_i=f(v_i)$, allora $\lambda w_1+\mu w_2=f(\lambda v_1+\mu v_2)$ appartiene ancora all'immagine. Vale quindi il criterio di sottospazio anche per $\operatorname{Im}f$.
+\begin{enumerate}[label=\arabic*.]
+\item \passomath{\ker f} Il vettore nullo appartiene al nucleo. Se $v_1,v_2\in\ker f$, allora $f(\lambda v_1+\mu v_2)=\lambda0_W+\mu0_W=0_W$: il nucleo è chiuso per combinazioni lineari.
+\item \passomath{\operatorname{Im}f} L'immagine contiene $0_W=f(0_V)$. Se $w_i=f(v_i)$, allora $\lambda w_1+\mu w_2=f(\lambda v_1+\mu v_2)$ appartiene ancora all'immagine. Vale quindi il criterio di sottospazio anche per $\operatorname{Im}f$.
+\end{enumerate}
 \end{proof}
 \begin{teorema}
 Un'applicazione lineare $f:V\to W$ è iniettiva se e solo se $\ker f=\{0_V\}$.
@@ -79,21 +89,62 @@ Lo spazio $\R[X]_{\leq3}$ dei polinomi di grado al più $3$ è isomorfo a $\R^4$
 \]
 La somma di polinomi e la moltiplicazione per scalari agiscono sui coefficienti componente per componente, quindi la funzione è lineare. È biiettiva perché ogni quadrupla determina uno e un solo polinomio. Questo formalizza il passaggio alle coordinate già usato per le equazioni dei sottospazi di polinomi.
 \end{esempio}
-\begin{teorema}
-Se $V$ ha dimensione finita $n$ su $K$ e $\mathcal B=(v_1,\ldots,v_n)$ è una base ordinata, la funzione
+\textbf{Il vettore e la sua colonna di coordinate.} Fissata una base ordinata $\mathcal B=(v_1,\ldots,v_n)$ di $V$, ogni $v\in V$ si scrive in modo unico come
 \[
- c_{\mathcal B}:V\longrightarrow K^n,\qquad v\longmapsto[v]_{\mathcal B}
+ v=\lambda_1v_1+\cdots+\lambda_nv_n.
 \]
-è un isomorfismo. In particolare $V$ è isomorfo a $K^n$.
+La notazione $[v]_{\mathcal B}$, introdotta nel capitolo sulle basi, indica precisamente la colonna di questi coefficienti:
+\[
+ [v]_{\mathcal B}=\begin{pmatrix}\lambda_1\\\vdots\\\lambda_n\end{pmatrix}\in K^n.
+\]
+Il pedice indica la base usata; le parentesi non indicano qui una classe del quoziente. Il vettore $v$ appartiene a $V$, mentre $[v]_{\mathcal B}$ appartiene allo spazio $K^n$ delle colonne di $n$ scalari di $K$. Per esempio, per un polinomio la colonna contiene coefficienti e non è essa stessa un polinomio.
+
+\begin{teorema}
+Se $V$ ha dimensione finita $n$ su $K$ e $\mathcal B=(v_1,\ldots,v_n)$ è una base ordinata, la funzione delle coordinate
+\[
+ c_{\mathcal B}:V\longrightarrow K^n,\qquad
+ c_{\mathcal B}(v)=[v]_{\mathcal B}
+\]
+è un isomorfismo. La sua inversa ricostruisce il vettore dai coefficienti:
+\[
+ r_{\mathcal B}:K^n\longrightarrow V,\qquad
+ \begin{pmatrix}\lambda_1\\\vdots\\\lambda_n\end{pmatrix}
+ \longmapsto\sum_{i=1}^n\lambda_iv_i.
+\]
+In particolare $V$ è isomorfo a $K^n$.
 \end{teorema}
 \begin{proof}
-Se $v=\sum_i\lambda_iv_i$ e $v'=\sum_i\mu_iv_i$, allora $av+bv'=\sum_i(a\lambda_i+b\mu_i)v_i$. Per unicità delle coordinate,
+\textbf{Linearità.} Se $v=\sum_i\lambda_iv_i$ e $v'=\sum_i\mu_iv_i$, allora $av+bv'=\sum_i(a\lambda_i+b\mu_i)v_i$. Per unicità delle coordinate,
 \[
- [av+bv']_{\mathcal B}=a[v]_{\mathcal B}+b[v']_{\mathcal B}.
+ c_{\mathcal B}(av+bv')=a\,c_{\mathcal B}(v)+b\,c_{\mathcal B}(v').
 \]
-La mappa è iniettiva perché coordinate uguali ricostruiscono lo stesso vettore, ed è suriettiva perché ogni colonna $(\lambda_i)$ è immagine di $\sum_i\lambda_iv_i$.
+\textbf{Le due mappe sono inverse.} Ricostruire un vettore a partire dalle sue coordinate restituisce il vettore stesso: $r_{\mathcal B}(c_{\mathcal B}(v))=v$. Viceversa, partendo da una colonna $x=(\lambda_i)$, i coefficienti del vettore $r_{\mathcal B}(x)=\sum_i\lambda_iv_i$ sono proprio $\lambda_i$, per l'unicità della rappresentazione nella base. Quindi $c_{\mathcal B}(r_{\mathcal B}(x))=x$.
+
+La prima identità assicura l'iniettività di $c_{\mathcal B}$, la seconda la suriettività. Essendo anche lineare, $c_{\mathcal B}$ è un isomorfismo e $c_{\mathcal B}^{-1}=r_{\mathcal B}$.
 \end{proof}
-L'isomorfismo dipende dalla base scelta: non è canonico in assenza di una scelta privilegiata di base.
+\begin{schema}
+\begin{tikzpicture}[font=\small]
+ \node (v) at (0,0) {$\displaystyle v=\sum_{i=1}^n\lambda_iv_i\in V$};
+ \node (c) at (7,0) {$\displaystyle [v]_{\mathcal B}=\begin{pmatrix}\lambda_1\\\vdots\\\lambda_n\end{pmatrix}\in K^n$};
+ \draw[-{Stealth},coloreschema] ([yshift=4mm]v.east)--node[above] {$c_{\mathcal B}$: leggi i coefficienti} ([yshift=4mm]c.west);
+ \draw[-{Stealth},coloreschema] ([yshift=-4mm]c.west)--node[below] {$r_{\mathcal B}$: ricostruisci il vettore} ([yshift=-4mm]v.east);
+\end{tikzpicture}
+\end{schema}
+L'isomorfismo dipende dalla base scelta: non è canonico in assenza di una scelta privilegiata di base. L'ordine è essenziale: $c_{\mathcal B}(v_i)=e_i$, dove $e_i$ è la colonna con $1$ nella posizione $i$ e $0$ altrove, cioè il vettore $i$ della base canonica di $K^n$.
+
+\begin{esempio}
+Nella base $\mathcal B=(1,X,X^2,X^3)$, il polinomio $p(X)=2-3X+X^2$ ha quarta coordinata nulla perché manca il termine in $X^3$:\nopagebreak
+\[
+ c_{\mathcal B}(p)=[p]_{\mathcal B}=\begin{pmatrix}2\\-3\\1\\0\end{pmatrix},\qquad
+ r_{\mathcal B}\!\begin{pmatrix}2\\-3\\1\\0\end{pmatrix}=2\cdot1-3X+X^2=p(X).
+\]
+\end{esempio}
+
+\begin{osservazione}[Generatori e dimensione non sono la stessa cosa]
+Se $V$ è generato da $n$ vettori, sappiamo soltanto che $\dim V\leq n$. Per concludere $V\simeq K^n$, dove $\simeq$ significa «è isomorfo a», quei $n$ vettori devono essere anche indipendenti, cioè una base. In generale si estrae una base di $d$ elementi e si ottiene $V\simeq K^d$.
+
+Per esempio $\R^2$ è generato da $e_1,e_2,e_1+e_2$, ma ha dimensione $2$, non $3$. La mappa $\R^3\to\R^2$ che manda $(a,b,c)$ in $ae_1+be_2+c(e_1+e_2)$ è suriettiva, ma non iniettiva: $(1,1,0)$ e $(0,0,1)$ hanno la stessa immagine. Una famiglia di generatori dà l'esistenza dei coefficienti; l'indipendenza ne assicura l'unicità, che serve per definire la funzione delle coordinate.
+\end{osservazione}
 
 \subsection{Rango e nullità di un'applicazione}
 \begin{teorema}[Teorema della dimensione]

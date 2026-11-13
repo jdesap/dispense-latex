@@ -1,4 +1,5 @@
 % !TeX root = ../main.tex
+\Needspace{16\baselineskip}
 \section{Prodotto di matrici e trasposizione}
 \begin{definizione}
 Se $A\in M(m,n,K)$ e $B\in M(n,p,K)$, il \emph{prodotto righe per colonne} $AB\in M(m,p,K)$ è definito da
@@ -7,11 +8,38 @@ Se $A\in M(m,n,K)$ e $B\in M(n,p,K)$, il \emph{prodotto righe per colonne} $AB\i
 \]
 Il numero di colonne del primo fattore deve coincidere con il numero di righe del secondo.
 \end{definizione}
-Per una colonna $x=(x_1,\ldots,x_n)^T$, la componente $i$ di $Ax$ è $\sum_j a_{ij}x_j$. Un sistema lineare si scrive dunque $Ax=b$. Se $A_1,\ldots,A_n$ sono le colonne di $A$, vale inoltre
+\begin{schema}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+ % Ogni tabella è una matrice schematica: le righe estreme sono omesse.
+ \fill[coloreschema!13] (-.42,-.28) rectangle (2.12,.28);
+ \fill[coloreDefinizioni!13] (4.15,-.98) rectangle (4.85,.98);
+ \fill[coloreschema!18] (7.35,-.28) rectangle (8.05,.28);
+ \foreach \xx/\top/\mid/\bot in {0/\vdots/a_{i1}/\vdots,.85/\vdots/\cdots/\vdots,1.7/\vdots/a_{in}/\vdots}{
+  \node at (\xx,.7) {$\top$};\node at (\xx,0) {$\mid$};\node at (\xx,-.7) {$\bot$};}
+ \foreach \yy/\entry in {.7/b_{1j},0/\vdots,-.7/b_{nj}}{
+  \node at (3.65,\yy) {$\cdots$};\node at (4.5,\yy) {$\entry$};\node at (5.35,\yy) {$\cdots$};}
+ \foreach \xx in {6.85,7.7,8.55}{\node at (\xx,.7) {$\vdots$};\node at (\xx,-.7) {$\vdots$};}
+ \node at (6.85,0) {$\cdots$};\node at (7.7,0) {$c_{ij}$};\node at (8.55,0) {$\cdots$};
+ \foreach \left/\right in {-.52/2.22,3.13/5.87,6.33/9.07}{
+  \draw (\left+.12,1.02)--(\left,1.02)--(\left,-1.02)--(\left+.12,-1.02);
+  \draw (\right-.12,1.02)--(\right,1.02)--(\right,-1.02)--(\right-.12,-1.02);}
+ \node at (2.67,0) {$\cdot$};\node at (6.1,0) {$=$};
+ \node at (.85,1.45) {$A\ (m\times n)$};
+ \node at (4.5,1.45) {$B\ (n\times p)$};
+ \node at (7.7,1.45) {$C=AB\ (m\times p)$};
+ \node[text=coloreschema] at (.85,-1.4) {riga $i$};
+ \node[text=coloreDefinizioni] at (4.5,-1.4) {colonna $j$};
+ \node at (7.7,-1.4) {posizione $(i,j)$};
+\end{tikzpicture}
+
+$c_{ij}=a_{i1}b_{1j}+\cdots+a_{in}b_{nj}$: si moltiplicano le entrate corrispondenti della riga $i$ di $A$ e della colonna $j$ di $B$, poi si sommano i prodotti. Lo schema omette le altre righe e colonne; il risultato si chiama $c_{ij}$ perché appartiene a $C=AB$, mentre $a_{ij}$ indica un'entrata di $A$.
+\end{schema}
+
+Per una colonna $x=\left(\begin{smallmatrix}x_1\\\vdots\\x_n\end{smallmatrix}\right)$, la componente $i$ di $Ax$ è $\sum_j a_{ij}x_j$. Un sistema lineare si scrive dunque $Ax=b$. Se $A_1,\ldots,A_n$ sono le colonne di $A$, vale inoltre
 \[
  Ax=x_1A_1+\cdots+x_nA_n.
 \]
-Il prodotto di una riga $(a_1,\ldots,a_n)$ per una colonna $(b_1,\ldots,b_n)^T$ è lo scalare $\sum_h a_hb_h$; su $\R$ è il prodotto scalare usuale.
+Il prodotto di una riga $(a_1,\ldots,a_n)$ per una colonna $\left(\begin{smallmatrix}b_1\\\vdots\\b_n\end{smallmatrix}\right)$ è lo scalare $\sum_h a_hb_h$; su $\R$ è il prodotto scalare usuale.
 
 \begin{esempio}
 Per
@@ -24,18 +52,30 @@ si ottiene
  AB=\begin{pmatrix}4&7\\3&-15\end{pmatrix},\qquad
  BA=\begin{pmatrix}-10&13\\7&-1\end{pmatrix}.
 \]
-Anche quando entrambi i prodotti sono definiti, in generale $AB\ne BA$.
+Per esempio, $c_{12}=2\cdot4+1\cdot(-1)=7$: si usa la prima riga di $A$ e la seconda colonna di $B$. Anche quando entrambi i prodotti sono definiti, in generale $AB\ne BA$.
 \end{esempio}
 
-\begin{proposizione}
-Per matrici di dimensioni compatibili valgono l'associatività $(AB)C=A(BC)$ e le distributività
+\textbf{La matrice identità.} Con $I_n$ indichiamo la matrice quadrata di tipo $n\times n$ definita da
 \[
- A(B+C)=AB+AC,\qquad (A+B)C=AC+BC.
+ I_n=\begin{pmatrix}
+ 1&0&\cdots&0\\0&1&\cdots&0\\
+ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1
+ \end{pmatrix},\qquad
+ (I_n)_{ij}=\begin{cases}1,&i=j,\\0,&i\ne j.\end{cases}
 \]
-La matrice identità $I_n=(\delta_{ij})$, con $1$ sulla diagonale e $0$ altrove, soddisfa $AI_n=A$ e $I_mA=A$ per $A\in M(m,n,K)$.
+Il pedice $n$ ne specifica il numero di righe e di colonne: per esempio $I_2=\left(\begin{smallmatrix}1&0\\0&1\end{smallmatrix}\right)$. Moltiplicare per l'identità conserva la matrice, purché le dimensioni siano compatibili.
+
+\begin{proposizione}
+Per matrici di dimensioni compatibili valgono:
+\begin{enumerate}[label=\arabic*.]
+\item l'associatività $(AB)C=A(BC)$;
+\item le distributività $A(B+C)=AB+AC$ e $(A+B)C=AC+BC$;
+\item le identità $AI_n=A$ e $I_mA=A$ per $A\in M(m,n,K)$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Se $A$ è $m\times n$, $B$ è $n\times p$ e $C$ è $p\times q$, allora
+\begin{enumerate}[label=\arabic*.]
+\item Se $A$ è $m\times n$, $B$ è $n\times p$ e $C$ è $p\times q$, allora
 \begin{align*}
  ((AB)C)_{ij}
  &=\sum_{\ell=1}^p\left(\sum_{h=1}^n a_{ih}b_{h\ell}\right)c_{\ell j}
@@ -43,7 +83,9 @@ Se $A$ è $m\times n$, $B$ è $n\times p$ e $C$ è $p\times q$, allora
  &=\sum_{h=1}^n a_{ih}\left(\sum_{\ell=1}^p b_{h\ell}c_{\ell j}\right)
  =(A(BC))_{ij}.
 \end{align*}
-Per la prima distributività, $\sum_h a_{ih}(b_{hj}+c_{hj})=\sum_h a_{ih}b_{hj}+\sum_h a_{ih}c_{hj}$; l'altra segue allo stesso modo. Nel prodotto con l'identità sopravvive soltanto il termine con indice coincidente, che è l'entrata corrispondente di $A$.
+\item Per la prima distributività, $\sum_h a_{ih}(b_{hj}+c_{hj})=\sum_h a_{ih}b_{hj}+\sum_h a_{ih}c_{hj}$; l'altra segue allo stesso modo.
+\item Nel prodotto con l'identità sopravvive soltanto il termine con indice coincidente, che è l'entrata corrispondente di $A$.
+\end{enumerate}
 \end{proof}
 
 \begin{definizione}
@@ -57,15 +99,22 @@ La \emph{trasposta} di $A\in M(m,n,K)$ è $A^T\in M(n,m,K)$, definita da $(A^T)_
 \]
 \end{esempio}
 \begin{proposizione}
-Valgono $(A^T)^T=A$, $(A+B)^T=A^T+B^T$ e $(AB)^T=B^TA^T$.
+Valgono le seguenti proprietà:
+\begin{enumerate}[label=\arabic*.]
+\item $(A^T)^T=A$ e $(A+B)^T=A^T+B^T$;
+\item $(AB)^T=B^TA^T$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Le prime due uguaglianze seguono scambiando gli indici una o due volte. Per la terza,
+\begin{enumerate}[label=\arabic*.]
+\item Le prime due uguaglianze seguono scambiando gli indici una o due volte.
+\item Per il prodotto,
 \[
  ((AB)^T)_{ij}=(AB)_{ji}=\sum_h a_{jh}b_{hi}
  =\sum_h (B^T)_{ih}(A^T)_{hj}=(B^TA^T)_{ij}.
 \]
 La trasposizione inverte quindi l'ordine dei fattori.
+\end{enumerate}
 \end{proof}
 
 \section{Matrici inverse}
@@ -80,8 +129,4 @@ Per associatività, $B=B(AC)=(BA)C=C$.
 \end{proof}
 Se $A$ è invertibile, il sistema $Ax=b$ ha l'unica soluzione $x=A^{-1}b$: moltiplicando per $A^{-1}$ si ottiene necessariamente questa espressione e, viceversa, $A(A^{-1}b)=b$.
 
-\textbf{Calcolo mediante Gauss.} Si affianca $I_n$ ad $A$ e si applicano le stesse operazioni ai due blocchi. Se il blocco sinistro si riduce a $I_n$, il blocco destro è $A^{-1}$:
-\[
- (A\mid I_n)\ \sim\ (I_n\mid A^{-1}).
-\]
-Infatti le operazioni rappresentano una composizione invertibile $E$ sulle righe, e il risultato è $(EA\mid E)$. Da $EA=I_n$ e dall'invertibilità di $E$ segue $A=E^{-1}$, dunque anche $AE=I_n$. Se la forma a scala di $A$ ha una riga nulla, esiste una soluzione non nulla di $Ax=0$, incompatibile con l'esistenza di un'inversa.
+\input{capitoli/02d-matrici-elementari}

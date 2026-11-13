@@ -33,29 +33,25 @@ f(x),&f(x)\ge0,\\
 Graficamente si conserva la parte del grafico sopra l'asse $x$ e si riflette rispetto a tale asse la parte che sta sotto.
 
 \begin{proposizione}
-Per ogni $a\in\R$ e ogni $b\ge0$ valgono
-\begin{gather*}
-a\le|a|,\qquad |a|=0\ \Longleftrightarrow\ a=0,\\
-|a|\le b\ \Longleftrightarrow\ -b\le a\le b,\\
-|a|\ge b\ \Longleftrightarrow\ a\ge b\ \text{ oppure }\ a\le-b.
-\end{gather*}
-Per ogni $a,b\in\R$ vale inoltre la \emph{disuguaglianza triangolare}
-\[
-|a+b|\le|a|+|b|.
-\]
+Per ogni $a\in\R$ e $b\ge0$ valgono:
+\begin{enumerate}[label=\arabic*.]
+\item $a\le|a|$ e $|a|=0\Longleftrightarrow a=0$.
+\item $|a|\le b\Longleftrightarrow-b\le a\le b$.
+\item $|a|\ge b\Longleftrightarrow a\ge b\text{ oppure }a\le-b$.
+\item Per ogni $a,b\in\R$, $|a+b|\le|a|+|b|$ (disuguaglianza triangolare).
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Confronto e annullamento.} Poiché $|a|=\max\{a,-a\}$, si ha sia $a\le|a|$ sia $-a\le|a|$; il massimo è zero esattamente quando $a=0$.
-
-\passomath{|a|\le b} Significa contemporaneamente $a\le b$ e $-a\le b$, cioè $-b\le a\le b$.
-
-\passomath{|a|\ge b} Significa che almeno uno tra $a$ e $-a$ è maggiore o uguale a $b$, dando la seconda equivalenza.
-
-\textbf{Disuguaglianza triangolare.} Da $-|a|\le a\le|a|$ e $-|b|\le b\le|b|$, sommando si ottiene
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Confronto e annullamento.} Poiché $|a|=\max\{a,-a\}$, si ha sia $a\le|a|$ sia $-a\le|a|$; il massimo è zero esattamente quando $a=0$.
+\item \passomath{|a|\le b} Significa contemporaneamente $a\le b$ e $-a\le b$, cioè $-b\le a\le b$.
+\item \passomath{|a|\ge b} Significa che almeno uno tra $a$ e $-a$ è maggiore o uguale a $b$, dando la seconda equivalenza.
+\item \textbf{Disuguaglianza triangolare.} Da $-|a|\le a\le|a|$ e $-|b|\le b\le|b|$, sommando si ottiene
 \[
 -(|a|+|b|)\le a+b\le|a|+|b|.
 \]
 La caratterizzazione della condizione $|a|\le b$, con soglia non negativa $|a|+|b|$, conclude la prova della disuguaglianza triangolare.
+\end{enumerate}
 \end{proof}
 
 \textbf{Versioni strette.} Si ha $|a|<b\iff-b<a<b$ e $|a|>b\iff a>b\text{ oppure }a<-b$, per $b\ge0$. Nelle disequazioni è essenziale distinguere l'intersezione delle due condizioni nel primo caso dall'unione nel secondo.

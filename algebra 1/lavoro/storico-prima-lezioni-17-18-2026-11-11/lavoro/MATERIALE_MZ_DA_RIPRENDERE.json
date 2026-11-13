@@ -1,0 +1,41 @@
+{
+  "data": "2026-11-05",
+  "criterio": "D01–D03 recuperati con A–L16; su richiesta dell’autore D03 e la funzione di Eulero ricollocati nel capitolo8. Nessun materiale ricevuto resta rinviato.",
+  "unita": [],
+  "unita_recuperate": [
+    {
+      "id": "D01",
+      "fonti_originarie": "MZ15:4-6",
+      "stato": "integrato nel capitolo7 il 2026-11-05",
+      "unita_di_dettaglio": [
+        "N13",
+        "N14",
+        "N15"
+      ]
+    },
+    {
+      "id": "D02",
+      "fonti_originarie": "MZ15:6; MZ15:8-9",
+      "stato": "integrato nel capitolo7 il 2026-11-05",
+      "unita_di_dettaglio": [
+        "N12",
+        "N16",
+        "N17",
+        "N18",
+        "N19"
+      ]
+    },
+    {
+      "id": "D03",
+      "fonti_originarie": "MZ15:10-11",
+      "stato": "integrato il 2026-11-05, ricollocato nel capitolo8 su richiesta dell’autore",
+      "unita_di_dettaglio": [
+        "N21",
+        "N22",
+        "N23",
+        "N24",
+        "N25"
+      ]
+    }
+  ]
+}

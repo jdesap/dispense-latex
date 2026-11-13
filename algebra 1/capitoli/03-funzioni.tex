@@ -23,7 +23,7 @@ Useremo le seguenti applicazioni:
 \item $c:\C\to\C$, $c(z)=0$;
 \item $\operatorname{id}_{\R}:\R\to\R$, $x\mapsto x$;
 \item $s:\R_{\ge0}\to\R_{\ge0}$, $s(x)=x^2$;
-\item $a:T\to\R$, che associa a un triangolo non degenere del piano la sua area;
+\item $a:T\to\R$, dove $T$ è l'insieme dei triangoli non degeneri del piano e $a$ associa a ciascun triangolo la sua area;
 \item $d:\N\times\N\to\Z$, $d(m,n)=m-n$;
 \item $J:\N^*\to\mathcal P(P)$, $J(n)=\{p\in P\mid p\mid n\}$, dove $P$ è l'insieme dei primi positivi e $p\mid n$ significa che $n$ è un multiplo intero di $p$.
 \end{enumerate}
@@ -165,7 +165,7 @@ f_*:\mathcal P(X)&\to\mathcal P(Y),& f_*(A)&=\{f(a)\mid a\in A\},\\
 f^*:\mathcal P(Y)&\to\mathcal P(X),& f^*(B)&=\{x\in X\mid f(x)\in B\},
 \end{aligned}
 \]
-dette \textbf{immagine diretta} e \textbf{controimmagine}. La scrittura $f(A)$ denota spesso $f_*(A)$; la fibra sopra $y$ è $f^*(\{y\})$. La controimmagine esiste per qualunque funzione, senza supporre invertibilità.
+dette \textbf{immagine diretta} e \textbf{controimmagine} (o \textbf{retroimmagine}). La scrittura $f(A)$ denota spesso $f_*(A)$; la fibra sopra $y$ è $f^*(\{y\})$. La controimmagine esiste per qualunque funzione, senza supporre invertibilità.
 \end{definizione}
 
 \begin{esempio}[Il quadrato]
@@ -229,26 +229,29 @@ L'uguaglianza in ogni punto conclude la prova.
 \end{proof}
 
 \begin{proposizione}
-Per $f:X\to Y$ e $g:Y\to Z$ valgono
-\[
-(g\circ f)_*=g_*\circ f_*:\mathcal P(X)\to\mathcal P(Z),\qquad
-(g\circ f)^*=f^*\circ g^*:\mathcal P(Z)\to\mathcal P(X).
-\]
+Per $f:X\to Y$ e $g:Y\to Z$ valgono:
+\begin{enumerate}[label=\arabic*.]
+\item $(g\circ f)_*=g_*\circ f_*:\mathcal P(X)\to\mathcal P(Z)$.
+\item $(g\circ f)^*=f^*\circ g^*:\mathcal P(Z)\to\mathcal P(X)$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Per ogni $A\subseteq X$, $z\in g_*(f_*(A))$ significa che $z=g(y)$ per qualche $y=f(a)$ con $a\in A$: equivale a $z\in(g\circ f)_*(A)$.
-
-Per ogni $C\subseteq Z$,
+\begin{enumerate}[label=\arabic*.]
+\item Per ogni $A\subseteq X$, $z\in g_*(f_*(A))$ significa che $z=g(y)$ per qualche $y=f(a)$ con $a\in A$: equivale a $z\in(g\circ f)_*(A)$.
+\item Per ogni $C\subseteq Z$,
 \[
 x\in(g\circ f)^*(C)\iff g(f(x))\in C
 \iff f(x)\in g^*(C)\iff x\in f^*(g^*(C)).
 \]
 La controimmagine inverte dunque l'ordine delle due applicazioni.
+\end{enumerate}
 \end{proof}
+
+L'immagine diretta si dice \textbf{covariante} perché conserva l'ordine della composizione; la controimmagine si dice \textbf{controvariante} perché lo inverte. Sono precisamente le due identità appena dimostrate.
 
 \begin{proposizione}\label{prop:composte}
 Per $f:X\to Y$ e $g:Y\to Z$:
-\begin{enumerate}[label=\alph*)]
+\begin{enumerate}[label=\arabic*.]
 \item se $f,g$ sono iniettive, anche $g\circ f$ è iniettiva;
 \item se $f,g$ sono suriettive, anche $g\circ f$ è suriettiva;
 \item se $g\circ f$ è iniettiva, $f$ è iniettiva;
@@ -256,13 +259,13 @@ Per $f:X\to Y$ e $g:Y\to Z$:
 \end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{a).} Da $g(f(x))=g(f(x'))$, l'iniettività di $g$ dà $f(x)=f(x')$; quella di $f$ dà $x=x'$.
+\textbf{(1)} Da $g(f(x))=g(f(x'))$, l'iniettività di $g$ dà $f(x)=f(x')$; quella di $f$ dà $x=x'$.
 
-\textbf{b).} Dato $z\in Z$, esiste $y\in Y$ con $g(y)=z$; esiste poi $x\in X$ con $f(x)=y$. Allora $(g\circ f)(x)=z$.
+\textbf{(2)} Dato $z\in Z$, esiste $y\in Y$ con $g(y)=z$; esiste poi $x\in X$ con $f(x)=y$. Allora $(g\circ f)(x)=z$.
 
-\textbf{c).} Se $f(x)=f(x')$, applicando $g$ si ottiene $(g\circ f)(x)=(g\circ f)(x')$. L'iniettività della composta dà $x=x'$.
+\textbf{(3)} Se $f(x)=f(x')$, applicando $g$ si ottiene $(g\circ f)(x)=(g\circ f)(x')$. L'iniettività della composta dà $x=x'$.
 
-\textbf{d).} Dato $z\in Z$, la suriettività della composta fornisce $x\in X$ con $g(f(x))=z$. Il valore $f(x)\in Y$ è una preimmagine di $z$ per $g$.
+\textbf{(4)} Dato $z\in Z$, la suriettività della composta fornisce $x\in X$ con $g(f(x))=z$. Il valore $f(x)\in Y$ è una preimmagine di $z$ per $g$.
 \end{proof}
 
 \begin{esempio}[Quattro implicazioni che non valgono]
@@ -280,7 +283,7 @@ Per $f:X\to Y$ e $g:Y\to Z$:
 L'\textbf{identità} di $X$ è $\operatorname{id}_X:X\to X$, $x\mapsto x$. Per ogni $f:X\to Y$, $\operatorname{id}_Y\circ f=f=f\circ\operatorname{id}_X$, perché i valori delle tre funzioni sono $f(x)$.
 
 \begin{definizione}
-Per $f:X\to Y$, una funzione $g:Y\to X$ è un'\textbf{inversa a sinistra} di $f$ se $g\circ f=\operatorname{id}_X$, ed è un'\textbf{inversa a destra} se $f\circ g=\operatorname{id}_Y$. La funzione $f$ è \textbf{invertibile} se ammette un'inversa da entrambi i lati, detta \textbf{inversa bilatera} e indicata con $f^{-1}$.
+Per $f:X\to Y$, una funzione $g:Y\to X$ è un'\textbf{inversa a sinistra} di $f$ se $g\circ f=\operatorname{id}_X$, ed è un'\textbf{inversa a destra} se $f\circ g=\operatorname{id}_Y$. Si parla anche di inverse \textbf{a un lato}, o \textbf{unilatere}. La funzione $f$ è \textbf{invertibile} se ammette un'inversa da entrambi i lati, detta \textbf{inversa bilatera} e indicata con $f^{-1}$.
 \end{definizione}
 
 \begin{proposizione}[Unicità dell'inversa bilatera]
@@ -301,30 +304,30 @@ Per $f:\R\to\R_{\ge0}$, $f(x)=x^2$, le funzioni $g_+(y)=\sqrt y$ e $g_-(y)=-\sqr
 
 \begin{teorema}\label{teo:inverse}
 Sia $f:X\to Y$ con $X\ne\varnothing$.
-\begin{enumerate}[label=\alph*)]
+\begin{enumerate}[label=\arabic*.]
 \item $f$ è iniettiva se e solo se ammette un'inversa a sinistra.
 \item $f$ è suriettiva se e solo se ammette un'inversa a destra, nel quadro con assioma della scelta.
 \item $f$ è biettiva se e solo se è invertibile.
 \end{enumerate}
 \end{teorema}
 \begin{proof}
-\textbf{a), costruzione.} Supponiamo $f$ iniettiva. Per ogni $y\in\operatorname{Im}(f)$ esiste un'unica preimmagine $x_y$. Fissiamo $x_0\in X$ e definiamo su tutto $Y$
+\textbf{(1), costruzione.} Supponiamo $f$ iniettiva. Per ogni $y\in\operatorname{Im}(f)$ esiste un'unica preimmagine $x_y$. Fissiamo $x_0\in X$ e definiamo su tutto $Y$
 \[
 g(y)=\begin{cases}x_y&y\in\operatorname{Im}(f),\\x_0&y\notin\operatorname{Im}(f).\end{cases}
 \]
 Il primo valore esiste ed è unico, il secondo è un elemento ammesso di $X$, dunque $g:Y\to X$ è ben definita. Per ogni $x\in X$, la preimmagine unica di $f(x)$ è $x$, quindi $g(f(x))=x$.
 
-\textbf{a), necessità.} Se $g\circ f=\operatorname{id}_X$, la composta è iniettiva e la proposizione~\ref{prop:composte} implica che $f$ è iniettiva. Inoltre $g$ è suriettiva: ogni $x$ è $g(f(x))$.
+\textbf{(1), necessità.} Se $g\circ f=\operatorname{id}_X$, la composta è iniettiva e la proposizione~\ref{prop:composte} implica che $f$ è iniettiva. Inoltre $g$ è suriettiva: ogni $x$ è $g(f(x))$.
 
-\textbf{b), costruzione.} Supponiamo $f$ suriettiva. Ogni fibra $f^*(\{y\})$, $y\in Y$, è non vuota. Scegliendo simultaneamente un elemento $x_y$ in ciascuna fibra si pone $g(y)=x_y$. Questa è precisamente la scelta richiesta per una famiglia arbitraria di fibre. Per costruzione $f(g(y))=f(x_y)=y$, dunque $f\circ g=\operatorname{id}_Y$.
+\textbf{(2), costruzione.} Supponiamo $f$ suriettiva. Ogni fibra $f^*(\{y\})$, $y\in Y$, è non vuota. Scegliendo simultaneamente un elemento $x_y$ in ciascuna fibra si pone $g(y)=x_y$. Questa è precisamente la scelta richiesta per una famiglia arbitraria di fibre. Per costruzione $f(g(y))=f(x_y)=y$, dunque $f\circ g=\operatorname{id}_Y$.
 
-\textbf{b), necessità.} Se $f\circ g=\operatorname{id}_Y$, per ogni $y$ l'elemento $g(y)$ è una sua preimmagine, quindi $f$ è suriettiva. L'inversa destra $g$ è iniettiva: da $g(y)=g(y')$, applicando $f$, segue $y=y'$.
+\textbf{(2), necessità.} Se $f\circ g=\operatorname{id}_Y$, per ogni $y$ l'elemento $g(y)$ è una sua preimmagine, quindi $f$ è suriettiva. L'inversa destra $g$ è iniettiva: da $g(y)=g(y')$, applicando $f$, segue $y=y'$.
 
-\textbf{c).} Se $f$ è biettiva, ogni $y$ ha un'unica preimmagine $x_y$: ponendo $g(y)=x_y$ si verificano entrambe le identità precedenti, senza scelte arbitrarie. Viceversa un'inversa bilatera è sia inversa a sinistra sia inversa a destra, e i due versi necessari già provati danno iniettività e suriettività.
+\textbf{(3)} Se $f$ è biettiva, ogni $y$ ha un'unica preimmagine $x_y$: ponendo $g(y)=x_y$ si verificano entrambe le identità precedenti, senza scelte arbitrarie. Viceversa un'inversa bilatera è sia inversa a sinistra sia inversa a destra, e i due versi necessari già provati danno iniettività e suriettività.
 \end{proof}
 
 \begin{osservazione}[Il dominio vuoto]
-L'ipotesi $X\ne\varnothing$ serve in a) per il valore fuori dall'immagine. La funzione vuota $\varnothing\to Y$ è iniettiva, ma per $Y\ne\varnothing$ non esiste alcuna funzione $Y\to\varnothing$. Per $X=Y=\varnothing$ la funzione vuota è biettiva e inversa di se stessa. La definizione generale ammette questi casi, anche se le costruzioni precedenti sono state formulate per domini non vuoti.
+L'ipotesi $X\ne\varnothing$ serve nel punto~1 per il valore fuori dall'immagine. La funzione vuota $\varnothing\to Y$ è iniettiva, ma per $Y\ne\varnothing$ non esiste alcuna funzione $Y\to\varnothing$. Per $X=Y=\varnothing$ la funzione vuota è biettiva e inversa di se stessa. La definizione generale ammette questi casi, anche se le costruzioni precedenti sono state formulate per domini non vuoti.
 \end{osservazione}
 
 Per una biezione, $f^{-1}(y)=x$ equivale a $f(x)=y$: il grafico dell'inversa si ottiene scambiando le due coordinate del grafico di $f$. Nel piano è la riflessione rispetto alla retta $y=x$. La funzione del piano studiata sopra ha quindi inversa
@@ -355,7 +358,7 @@ Le due funzioni sono distinte perché $g_1(0)=0$ e $g_2(0)=\pi$. Non esiste un'i
 \section{Insiemi di funzioni e caratteristiche}
 % A–L L6 pp. 6–7 e L7 p. 1; M–Z L7 pp. 5–9.
 \begin{definizione}
-L'insieme di tutte le funzioni da $X$ a $\Omega$ si indica con $\Omega^X$. Per $X=\{1,\ldots,n\}$, una funzione è determinata dalla $n$-upla $(\varphi(1),\ldots,\varphi(n))$, quindi $\Omega^X$ si identifica con $\Omega^n$. Per esempio $\R^{\{1,2,3,4\}}$ si identifica con $\R^4$.
+L'insieme di tutte le funzioni da $X$ a $\Omega$ si indica con $\Omega^X$. Per $X=\{1,\ldots,n\}$, una funzione è determinata dalla $n$-upla $(\varphi(1),\ldots,\varphi(n))$, quindi $\Omega^X$ si identifica con $\Omega^n$. Per esempio $\R^{\{1,2,3,4\}}$ si identifica con $\R^4$. Più in generale, se $X=\{x_1,\ldots,x_n\}$ con elementi distinti, fissare questo elenco identifica $\varphi:X\to\Omega$ con la tupla $(\varphi(x_1),\ldots,\varphi(x_n))$. L’identificazione dipende dall’ordine scelto per gli elementi di $X$.
 \end{definizione}
 
 Una successione reale $(x_0,x_1,\ldots)$ è una funzione $\N\to\R$, $i\mapsto x_i$, dunque appartiene a $\R^\N$. Più in generale una famiglia $(x_i)_{i\in I}$ di elementi di $\Omega$ è una funzione $I\to\Omega$: a ogni indice è assegnato un unico valore, mentre indici distinti possono avere lo stesso valore.
@@ -367,6 +370,7 @@ Per $A\subseteq X$, la \textbf{funzione caratteristica} è
 \]
 \end{definizione}
 
+\Needspace{23\baselineskip}
 \begin{teorema}\label{teo:caratteristiche}
 Le applicazioni
 \[

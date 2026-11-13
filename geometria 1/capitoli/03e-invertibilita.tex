@@ -1,0 +1,60 @@
+% !TeX root = ../main.tex
+\section{Invertibilità e inverse da un solo lato}
+\label{sec:invertibilita-applicazioni}
+\subsection{Perché una sola composizione non basta}
+Ricordiamo che $\operatorname{id}_A$ è la funzione identità $a\mapsto a$ su un insieme $A$. Per funzioni $f:A\to B$ e $g:B\to A$, si dice che $g$ è un'\emph{inversa sinistra} di $f$ se $g\circ f=\operatorname{id}_A$, e un'\emph{inversa destra} se $f\circ g=\operatorname{id}_B$. Un'inversa soddisfa entrambe le identità: esiste precisamente quando $f$ è biiettiva.
+
+L'identità $g\circ f=\operatorname{id}_A$ impone l'iniettività di $f$: se $f(a)=f(a')$, applicando $g$ si trova $a=a'$. L'identità $f\circ g=\operatorname{id}_B$ impone invece la suriettività: ogni $b$ è immagine di $g(b)$. Una sola delle due identità non dà in generale l'altra.
+Se $A$ è non vuoto e $f$ è iniettiva, un'inversa sinistra si costruisce mandando ogni $f(a)$ nel suo unico antecedente $a$ e mandando i punti fuori dall'immagine in un elemento fissato $a_0\in A$. Se $f$ è suriettiva, per ottenere un'inversa destra si sceglie un antecedente $a_b$ per ogni $b\in B$ e si pone $g(b)=a_b$.\footnote{Per insiemi arbitrari la scelta simultanea di un antecedente in ogni fibra usa l'assioma della scelta; per gli insiemi finiti dei disegni si fa esplicitamente. L'ipotesi $A\ne\varnothing$ evita il caso dell'iniezione dall'insieme vuoto a un insieme non vuoto, che non ammette inversa sinistra.}
+
+\begin{schema}
+\begin{tikzpicture}[font=\small,scale=.9]
+ \foreach \shift in {0,6}{
+  \draw (\shift,0) ellipse (.65 and 1.8);
+  \draw (\shift+2.8,0) ellipse (.65 and 1.8);
+  \node at (\shift,2.1) {$A$};\node at (\shift+2.8,2.1) {$B$};
+  \node at (\shift+1.4,1.8) {$f$};}
+ \foreach \i/\yy in {1/1.2,2/.4,3/-.4}{
+  \node (a\i) at (0,\yy) {$a_\i$};\node (b\i) at (2.8,\yy) {$b_\i$};
+  \draw[-{Stealth},coloreschema] (a\i)--(b\i);}
+ \node[text=coloreEsercizi] at (2.8,-1.2) {$b_4$};
+ \foreach \i/\yy in {1/1.2,2/.4,3/-.4,4/-1.2}{\node (c\i) at (6,\yy) {$a_\i$};}
+ \foreach \i/\yy in {1/1.2,2/.4,3/-.4}{
+  \node (d\i) at (8.8,\yy) {$b_\i$};\draw[-{Stealth},coloreschema] (c\i)--(d\i);}
+ \draw[-{Stealth},coloreschema] (c4)--(d3);
+ \node at (1.4,-2.2) {iniettiva, non suriettiva};
+ \node at (7.4,-2.2) {suriettiva, non iniettiva};
+\end{tikzpicture}
+\end{schema}
+\begin{esempio}
+Nel primo schema $f(a_i)=b_i$ per $i=1,2,3$. Definiamo $g(b_i)=a_i$ per questi tre indici e $g(b_4)=a_1$. Allora $g\circ f=\operatorname{id}_A$, ma $f(g(b_4))=b_1\ne b_4$: $g$ è soltanto inversa sinistra.
+
+Nel secondo schema $f(a_i)=b_i$ per $i=1,2,3$ e $f(a_4)=b_3$. Ponendo $g(b_i)=a_i$ si ottiene $f\circ g=\operatorname{id}_B$, ma $g(f(a_4))=a_3\ne a_4$: $g$ è soltanto inversa destra. I due esempi non richiedono alcuna struttura vettoriale.
+\end{esempio}
+
+\subsection{Il criterio in dimensione finita}
+\begin{teorema}
+Sia $f:V\to W$ lineare fra spazi di dimensione finita. \begin{enumerate}[label=\arabic*.]
+\item L'applicazione è invertibile se e solo se
+\[
+ \ker f=\{0_V\},\qquad \operatorname{Im}f=W.
+\]
+In tal caso $\dim V=\dim W$.
+\item Se questa dimensione comune è $n$, sono equivalenti l'iniettività, la suriettività e l'invertibilità di $f$. Per la matrice $A$ di $f$ in due basi, ciò equivale a
+\[
+ A\in M(n,n,K),\qquad \operatorname{rg}A=n.
+\]
+\end{enumerate}
+\end{teorema}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item La prima equivalenza è il criterio di biiettività, usando $f$ iniettiva se e solo se il nucleo è nullo. Se $f$ è invertibile, il teorema della dimensione dà
+\[
+ \dim V=\dim\ker f+\dim\operatorname{Im}f=0+\dim W.
+\]
+\item Quando entrambe le dimensioni valgono $n$, lo stesso teorema mostra che nucleo nullo equivale a immagine di dimensione $n$, e quindi a immagine uguale a $W$. Il rango di $f$ è il rango della sua matrice: $\operatorname{rg}A=n$ esprime esattamente queste condizioni.
+\end{enumerate}
+\end{proof}
+Una matrice quadrata è pertanto invertibile se e solo se ha rango massimo. Una matrice rettangolare può avere rango massimo senza avere un'inversa da entrambi i lati: le dimensioni devono essere compatibili con entrambe le identità.
+
+Inoltre, per una matrice quadrata basta un'inversa da un solo lato. Infatti $BA=I_n$ rende $x\mapsto Ax$ iniettiva, mentre $AB=I_n$ la rende suriettiva; in dimensione $n$ ciascuna condizione implica la biiettività. L'inversa unilatera coincide allora con l'inversa. Questo completa la distinzione introdotta nel capitolo sulle matrici; non vale in generale per funzioni fra insiemi o per matrici rettangolari.

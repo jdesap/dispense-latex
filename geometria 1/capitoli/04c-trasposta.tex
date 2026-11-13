@@ -1,0 +1,130 @@
+% !TeX root = ../main.tex
+\section{La trasposta di un'applicazione lineare}
+\begin{definizione}
+Per $f:V\to W$ lineare, la sua \emph{trasposta} è
+\[
+ f^*:W^*\longrightarrow V^*,\qquad f^*(\psi)=\psi\circ f.
+\]
+Il verso si inverte: un funzionale su $W$ diventa un funzionale su $V$ precomponendolo con $f$. Qui l'asterisco indica la trasposta algebrica, senza coniugazione complessa e senza scegliere un prodotto scalare.
+\end{definizione}
+\begin{schema}
+\begin{tikzpicture}[font=\small]
+ \node (v) at (0,0) {$V$};\node (w) at (4,0) {$W$};\node (k) at (2,-1.6) {$K$};
+ \draw[-{Stealth},coloreschema] (v)--node[above] {$f$} (w);
+ \draw[-{Stealth}] (w)--node[below right] {$\psi$} (k);
+ \draw[-{Stealth},coloreschema] (v)--node[below left] {$\psi\circ f=f^*(\psi)$} (k);
+ \node (ws) at (9,0) {$W^*$};\node (vs) at (6.5,0) {$V^*$};
+ \draw[-{Stealth},coloreschema] (ws)--node[above] {$f^*$} (vs);
+ \node[align=center] at (7.75,-1.2) {un funzionale su $W$\\diventa un funzionale su $V$};
+\end{tikzpicture}
+\end{schema}
+La funzione $f^*(\psi)$ è lineare perché è una composizione di funzioni lineari. Anche $f^*$ è lineare: per $a,b\in K$ e $\psi,\eta\in W^*$,
+\[
+ f^*(a\psi+b\eta)=(a\psi+b\eta)\circ f=a(\psi\circ f)+b(\eta\circ f).
+\]
+L'uguaglianza fra funzionali si verifica valutando i due membri su ciascun $v\in V$.
+
+\begin{proposizione}
+La trasposta è caratterizzata dall'identità
+\[
+ \langle v,f^*(\psi)\rangle=\langle f(v),\psi\rangle
+ \qquad(v\in V,\ \psi\in W^*).
+\]
+\end{proposizione}
+\begin{proof}
+Per definizione di valutazione e di composizione,
+\[
+ \langle v,f^*(\psi)\rangle=f^*(\psi)(v)=(\psi\circ f)(v)
+ =\psi(f(v))=\langle f(v),\psi\rangle.
+\]
+Viceversa, se un funzionale ha questi valori per ogni $v$, coincide con $\psi\circ f$: la formula determina univocamente $f^*(\psi)$.
+\end{proof}
+
+\Needspace{20\baselineskip}
+\subsection{Nucleo e immagine della trasposta}
+\begin{teorema}
+\begin{enumerate}[label=\arabic*.]
+\item Per ogni applicazione lineare $f:V\to W$,
+\[
+ \ker f^*=(\operatorname{Im}f)^\perp\subseteq W^*.
+\]
+\item Se $V,W$ hanno dimensione finita, vale inoltre
+\[
+ \operatorname{Im}f^*=(\ker f)^\perp\subseteq V^*,\qquad
+ \operatorname{rg}f^*=\operatorname{rg}f.
+\]
+\end{enumerate}
+\end{teorema}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Nucleo.} Per $\psi\in W^*$, la condizione $\psi\in\ker f^*$ significa che $f^*(\psi)$ è il funzionale nullo su $V$, cioè
+\[
+ \psi(f(v))=0\quad\text{per ogni }v\in V.
+\]
+Questo equivale a dire che $\psi$ annulla tutti i vettori di $\operatorname{Im}f$, ossia che $\psi\in(\operatorname{Im}f)^\perp$. Le due implicazioni danno l'uguaglianza.
+\item \textbf{Inclusione per l'immagine.} Se $\varphi=f^*(\psi)$ e $u\in\ker f$, allora
+\[
+ \varphi(u)=\psi(f(u))=\psi(0_W)=0.
+\]
+Dunque $\operatorname{Im}f^*\subseteq(\ker f)^\perp$.
+
+\textbf{Uguaglianza delle dimensioni.} Supponiamo ora $\dim V=n$, $\dim W=m$ e poniamo $r=\dim\operatorname{Im}f$. Dal risultato sul nucleo e dalla dimensione dell'annullatore,
+\[
+ \dim\ker f^*=m-r.
+\]
+Applicando il teorema della dimensione a $f^*:W^*\to V^*$ si trova
+\[
+ \dim\operatorname{Im}f^*=\dim W^*-\dim\ker f^*=m-(m-r)=r.
+\]
+D'altra parte $\dim\ker f=n-r$, quindi
+\[
+ \dim(\ker f)^\perp=n-\dim\ker f=n-(n-r)=r.
+\]
+L'inclusione già dimostrata è fra sottospazi della stessa dimensione finita e perciò è un'uguaglianza. Il conteggio dà anche $\operatorname{rg}f^*=\operatorname{rg}f$.
+\end{enumerate}
+\end{proof}
+
+\Needspace{37\baselineskip}
+\section{La matrice della trasposta nelle basi duali}
+Siano $\mathcal B=(v_1,\ldots,v_n)$ una base di $V$ e $\mathcal C=(w_1,\ldots,w_m)$ una base di $W$, con basi duali $\mathcal B^*$ e $\mathcal C^*$. Ricordiamo che la colonna $j$ di $M_{\mathcal B}^{\mathcal C}(f)$ contiene le coordinate di $f(v_j)$ in $\mathcal C$.
+\begin{teorema}
+Se $A=M_{\mathcal B}^{\mathcal C}(f)\in M(m,n,K)$, allora
+\[
+ M_{\mathcal C^*}^{\mathcal B^*}(f^*)=A^T\in M(n,m,K).
+\]
+\end{teorema}
+\begin{proof}
+Scriviamo le immagini dei vettori delle due basi:
+\[
+ f(v_j)=\sum_{i=1}^m a_{ij}w_i,\qquad
+ f^*(w_i^*)=\sum_{j=1}^n b_{ji}v_j^*.
+\]
+Per leggere il coefficiente $b_{hi}$ valutiamo il secondo funzionale in $v_h$. Usando la dualità e la definizione di trasposta otteniamo
+\[
+ b_{hi}=f^*(w_i^*)(v_h)=w_i^*(f(v_h))
+ =w_i^*\!\left(\sum_{\ell=1}^m a_{\ell h}w_\ell\right)=a_{ih}.
+\]
+Quindi l'entrata $(h,i)$ della matrice di $f^*$ è l'entrata $(i,h)$ di $A$, esattamente la definizione della matrice trasposta.
+\end{proof}
+La precisazione «nelle basi duali» è essenziale: scegliendo basi arbitrarie di $V^*,W^*$ intervengono anche matrici di cambiamento di base.
+
+\Needspace{18\baselineskip}
+\begin{esempio}
+Sia $f:\R^2\to\R^3$ definita da
+\[
+ f(x_1,x_2)=(x_1+2x_2,\ 3x_2,\ -x_1+x_2),\qquad
+ A=\begin{pmatrix}1&2\\0&3\\-1&1\end{pmatrix}
+\]
+nelle basi canoniche $\mathcal B=(e_1,e_2)$ del dominio e $\mathcal C=(e_1,e_2,e_3)$ del codominio. Se $\psi(y_1,y_2,y_3)=ay_1+by_2+cy_3$, allora
+\[
+ f^*(\psi)(x_1,x_2)=(a-c)x_1+(2a+3b+c)x_2.
+\]
+Nelle basi duali ciò diventa
+\[
+ [f^*(\psi)]_{\mathcal B^*}
+ =\begin{pmatrix}a-c\\2a+3b+c\end{pmatrix}
+ =\underbrace{\begin{pmatrix}1&0&-1\\2&3&1\end{pmatrix}}_{A^T}
+ \begin{pmatrix}a\\b\\c\end{pmatrix}.
+\]
+Il dominio di $f^*$ ha dimensione $3$ e il codominio dimensione $2$, nel verso opposto a $f$. Anche le dimensioni della matrice si sono scambiate.
+\end{esempio}

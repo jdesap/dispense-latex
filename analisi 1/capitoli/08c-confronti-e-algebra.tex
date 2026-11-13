@@ -5,12 +5,16 @@
 \section{Teoremi di confronto}
 
 \begin{proposizione}[Confronto con una successione divergente]
-Siano $a_n\le b_n$ definitivamente. Se $a_n\to+\infty$, allora $b_n\to+\infty$. Se $b_n\to-\infty$, allora $a_n\to-\infty$.
+Siano $a_n\le b_n$ definitivamente. \begin{enumerate}[label=\arabic*.]
+\item Se $a_n\to+\infty$, allora $b_n\to+\infty$.
+\item Se $b_n\to-\infty$, allora $a_n\to-\infty$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Nel primo caso fissiamo $M>0$. Definitivamente si hanno sia $a_n>M$ sia $a_n\le b_n$; oltre la massima delle due soglie risulta $b_n\ge a_n>M$. Questo è il criterio per $b_n\to+\infty$.
-
-Nel secondo caso si hanno definitivamente $b_n<-M$ e $a_n\le b_n$, quindi $a_n<-M$ definitivamente, per ogni $M>0$.
+\begin{enumerate}[label=\arabic*.]
+\item Nel primo caso fissiamo $M>0$. Definitivamente si hanno sia $a_n>M$ sia $a_n\le b_n$; oltre la massima delle due soglie risulta $b_n\ge a_n>M$. Questo è il criterio per $b_n\to+\infty$.
+\item Nel secondo caso si hanno definitivamente $b_n<-M$ e $a_n\le b_n$, quindi $a_n<-M$ definitivamente, per ogni $M>0$.
+\end{enumerate}
 \end{proof}
 
 \begin{teorema}[Teorema dei carabinieri]
@@ -257,30 +261,25 @@ Il reciproco $1/a_n$ si considera soltanto dove $a_n\ne0$. Per studiarne il limi
 
 \begin{proposizione}[Limite del reciproco]
 \label{prop:limite-reciproco}
-Per una successione reale valgono le seguenti implicazioni:
-\[
-\begin{aligned}
-a_n\to+\infty&\ \Longrightarrow\ \frac1{a_n}\to0^+,&
-a_n\to-\infty&\ \Longrightarrow\ \frac1{a_n}\to0^-,\\
-a_n\to\ell\in\R\setminus\{0\}&\ \Longrightarrow\ \frac1{a_n}\to\frac1\ell,\\
-a_n\to0^+&\ \Longrightarrow\ \frac1{a_n}\to+\infty,&
-a_n\to0^-&\ \Longrightarrow\ \frac1{a_n}\to-\infty.
-\end{aligned}
-\]
-In tutti questi casi $a_n\ne0$ definitivamente.
+Per una successione reale valgono le seguenti implicazioni; in tutti questi casi $a_n\ne0$ definitivamente:
+\begin{enumerate}[label=\arabic*.]
+\item $a_n\to+\infty\Rightarrow1/a_n\to0^+$ e $a_n\to-\infty\Rightarrow1/a_n\to0^-$.
+\item $a_n\to\ell\in\R\setminus\{0\}\Rightarrow1/a_n\to1/\ell$.
+\item $a_n\to0^+\Rightarrow1/a_n\to+\infty$ e $a_n\to0^-\Rightarrow1/a_n\to-\infty$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Limite infinito.} Se $a_n\to+\infty$, per ogni $\varepsilon>0$ definitivamente $a_n>1/\varepsilon$, dunque $0<1/a_n<\varepsilon$. Per $a_n\to-\infty$ si cambia segno.
-
-\textbf{Limite finito non nullo.} Dalla convergenza, definitivamente $|a_n-\ell|<|\ell|/2$, quindi $|a_n|>|\ell|/2>0$. Allora
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Limite infinito.} Se $a_n\to+\infty$, per ogni $\varepsilon>0$ definitivamente $a_n>1/\varepsilon$, dunque $0<1/a_n<\varepsilon$. Per $a_n\to-\infty$ si cambia segno.
+\item \textbf{Limite finito non nullo.} Dalla convergenza, definitivamente $|a_n-\ell|<|\ell|/2$, quindi $|a_n|>|\ell|/2>0$. Allora
 \[
 \left|\frac1{a_n}-\frac1\ell\right|
 =\frac{|a_n-\ell|}{|a_n|\,|\ell|}
 \le\frac{2}{|\ell|^2}|a_n-\ell|\longrightarrow0.
 \]
 Per ottenere una distanza minore di $\varepsilon$ basta imporre anche $|a_n-\ell|<\varepsilon|\ell|^2/2$.
-
-\textbf{Limite nullo da un lato.} Se $a_n\to0^+$, per ogni $M>0$ definitivamente $0<a_n<1/M$ e perciò $1/a_n>M$. Se $a_n\to0^-$, si ha invece $-1/M<a_n<0$, dunque $1/a_n<-M$.
+\item \textbf{Limite nullo da un lato.} Se $a_n\to0^+$, per ogni $M>0$ definitivamente $0<a_n<1/M$ e perciò $1/a_n>M$. Se $a_n\to0^-$, si ha invece $-1/M<a_n<0$, dunque $1/a_n<-M$.
+\end{enumerate}
 \end{proof}
 
 \begin{esempio}

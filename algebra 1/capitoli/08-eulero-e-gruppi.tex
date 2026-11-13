@@ -1,20 +1,26 @@
 % !TeX root = ../main.tex
 \chapter{Funzione di Eulero e gruppi}\label{cap:eulero-gruppi}
-\fonti{Lezione 16}
+\fonti{Lezioni 16, 17, 18, 19 e 20}
 
 \section{La funzione di Eulero}
 % A–L L16 p. 4; M–Z L15 pp. 10–11 e L16 pp. 2–4 (recupero D03).
 Per contare gli invertibili nelle classi resto possiamo usare la scomposizione in prodotti di anelli. Il passaggio essenziale è che un isomorfismo trasporta esattamente gli elementi invertibili.
 
 \begin{proposizione}\label{prop:trasporto-unita}
-Se $f:R\to S$ è un morfismo e $a\in U(R)$, allora $f(a)\in U(S)$ e $f(a)^{-1}=f(a^{-1})$. Se $f$ è un isomorfismo, la sua restrizione è una biezione $U(R)\to U(S)$.
+\begin{enumerate}[label=\arabic*.]
+\item Se $f:R\to S$ è un morfismo e $a\in U(R)$, allora $f(a)\in U(S)$ e $f(a)^{-1}=f(a^{-1})$.
+\item Se $f$ è un isomorfismo, la sua restrizione è una biezione $U(R)\to U(S)$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Applicando $f$ alle identità $aa^{-1}=a^{-1}a=1_R$ si ottiene
+\begin{enumerate}[label=\arabic*.]
+\item Applicando $f$ alle identità $aa^{-1}=a^{-1}a=1_R$ si ottiene
 \[
 f(a)f(a^{-1})=f(a^{-1})f(a)=1_S.
 \]
-Quindi $f(a^{-1})$ è l'inverso di $f(a)$. Se $f$ è un isomorfismo, anche $f^{-1}$ è un morfismo e manda $U(S)$ in $U(R)$: le due restrizioni sono inverse l'una dell'altra.
+Quindi $f(a^{-1})$ è l'inverso di $f(a)$.
+\item Se $f$ è un isomorfismo, anche $f^{-1}$ è un morfismo e manda $U(S)$ in $U(R)$: le due restrizioni sono inverse l'una dell'altra.
+\end{enumerate}
 \end{proof}
 
 \begin{definizione}
@@ -74,7 +80,7 @@ Contando gli elementi dei due insiemi finiti si ottiene $\varphi(mn)=|U(\Z/m\Z)|
 \end{proof}
 
 \begin{corollario}[Formula dalla fattorizzazione]
-% M–Z L16 p. 4 completa il tema avviato in A–L L16 p. 4.
+% M–Z L16 p. 4; A–L L17 pp. 1–2 riprende la stessa prova e l'esempio600.
 Se $m=p_1^{k_1}\cdots p_r^{k_r}\ge2$, con $p_i$ primi distinti e $k_i\ge1$, allora
 \[
 \varphi(m)=\prod_{i=1}^r p_i^{k_i-1}(p_i-1).
@@ -96,3 +102,15 @@ Poiché $600=2^3\cdot3\cdot5^2$, con potenze prime a due a due coprime,
            =4\cdot2\cdot20=160.
 \]
 \end{esempio}
+
+% A–L L17 p. 2: esempi di unità, senza ripetere la formula o la prova.
+\begin{esempio}[Unità modulo 3, 25 e 75]
+Si ha $U(\Z/3\Z)=\{[1]_3,[2]_3\}$, mentre $U(\Z/25\Z)$ contiene le venti classi con rappresentante fra $0$ e $24$ non divisibile per $5$. Poiché $75=3\cdot25$, il teorema cinese dà una biezione fra $U(\Z/75\Z)$ e $U(\Z/3\Z)\times U(\Z/25\Z)$: una classe modulo $75$ è invertibile esattamente quando il suo rappresentante non è divisibile né per $3$ né per $5$. Quindi $\varphi(75)=2\cdot20=40$.
+\end{esempio}
+
+\input{capitoli/08a-gruppi}
+\input{capitoli/08b-sottogruppi}
+\input{capitoli/08c-centralizzanti}
+\input{capitoli/08d-morfismi-gruppi}
+\input{capitoli/08e-gruppi-ciclici}
+\input{capitoli/08f-cicli-permutazioni}

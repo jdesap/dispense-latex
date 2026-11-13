@@ -1,0 +1,224 @@
+% !TeX root = ../main.tex
+\section{Ordine degli elementi e gruppi ciclici}
+% A–L L19 pp. 7–9 e L20 pp. 1–2; M–Z L19 pp. 6–7 e L20 pp. 1–2.
+\subsection{Dalle potenze a un morfismo}
+Per $g\in G$, l'applicazione
+\[
+\theta_g:(\Z,+)\longrightarrow G,\qquad n\longmapsto g^n
+\]
+è un morfismo, perché $g^{n+k}=g^ng^k$, e ha immagine esattamente $\langle g\rangle$. Perciò è sempre suriettiva se si considera come codominio $\langle g\rangle$.
+
+\begin{definizione}
+Un elemento $g\in G$ è \textbf{aperiodico}, o di \textbf{ordine infinito}, se $g^n\ne1_G$ per ogni intero $n\ne0$. Altrimenti è \textbf{periodico}; il suo \textbf{ordine} è
+\[
+\operatorname{ord}(g)=\min\{m\in\N^*\mid g^m=1_G\}.
+\]
+Il minimo esiste: se una potenza con esponente negativo è $1_G$, lo è anche quella con esponente opposto. L'\textbf{ordine del gruppo} $G$ è invece la sua cardinalità $|G|$. La notazione $|g|$ per l'ordine di un elemento è un'abbreviazione di $\operatorname{ord}(g)$.
+\end{definizione}
+
+\begin{osservazione}[Il caso del gruppo banale]
+Per includere il caso di ordine $1$, estendiamo qui al modulo $1$ la notazione delle classi: ogni differenza di interi è divisibile per $1$, quindi vi è un'unica classe $[0]_1=\Z$ e $\Z/\Z=\{[0]_1\}$. La somma di quest'unica classe con se stessa è ancora $[0]_1$: si ottiene il gruppo banale. Tutti gli interi sono congrui modulo $1$. La funzione $\varphi$ resta definita per moduli almeno $2$.
+\end{osservazione}
+
+\Needspace{22\baselineskip}
+\begin{proposizione}\label{prop:ordine-potenze}
+Sia $g\in G$.
+\begin{enumerate}[label=\arabic*.]
+\item $\theta_g:\Z\to\langle g\rangle$ è iniettiva se e solo se $g$ è aperiodico; in questo caso è un isomorfismo.
+\item Se $g$ ha ordine finito $m$, per ogni $k,a,b\in\Z$ si ha
+\[
+g^k=1_G\ \Longleftrightarrow\ m\mid k,
+\qquad
+g^a=g^b\ \Longleftrightarrow\ a\equiv b\pmod m.
+\]
+In particolare $\langle g\rangle=\{1_G,g,\ldots,g^{m-1}\}$ ha $m$ elementi e la mappa
+\[
+\overline\theta_g:(\Z/m\Z,+)\longrightarrow\langle g\rangle,
+\qquad[n]_m\longmapsto g^n
+\]
+è un isomorfismo. Per $m=1$ entrambi i gruppi sono banali.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Il morfismo è già suriettivo. Se $g$ è aperiodico e $g^a=g^b$, moltiplicando per $g^{-b}$ si ottiene $g^{a-b}=1_G$; l'aperiodicità forza $a=b$. Quindi è iniettivo. Viceversa, se $\theta_g$ è iniettiva e $g^n=1_G=g^0$, allora $n=0$, quindi $g$ è aperiodico.
+\item Per ogni $k\in\Z$, anche negativo, scriviamo $k=mq+r$ con $0\le r<m$. Allora $g^k=(g^m)^qg^r=g^r$. Se $g^k=1_G$, anche $g^r=1_G$; la minimalità di $m$ forza $r=0$. Viceversa $m\mid k$ dà subito $g^k=1_G$. Applicando questa equivalenza a $a-b$ si ottiene la seconda equivalenza: le due potenze coincidono esattamente quando $a,b$ sono congrui modulo $m$.
+
+La riduzione mostra che tutte le potenze appartengono all'elenco $1_G,g,\ldots,g^{m-1}$. Sono distinte: per $0\le a,b<m$, $m\mid(a-b)$ implica $a=b$. Quindi $|\langle g\rangle|=m$, senza aver supposto prima la cardinalità. La mappa sulle classi è ben definita per l'equivalenza appena provata; è un morfismo perché $g^{a+b}=g^ag^b$, è suriettiva per definizione del generato ed è iniettiva perché $g^a=g^b$ implica $[a]_m=[b]_m$. Per $m=1$, $g=1_G$ e la stessa costruzione dà l'unica biezione fra gruppi banali.
+\end{enumerate}
+\end{proof}
+
+\begin{osservazione}
+In un gruppo finito non esistono elementi aperiodici: altrimenti $\theta_g$ sarebbe un'iniezione di $\Z$ in un insieme finito. Se $g$ è periodico, $\operatorname{ord}(g)=|\langle g\rangle|$; se è aperiodico, $\langle g\rangle$ è infinito numerabile, perché isomorfo a $\Z$. In particolare $\operatorname{ord}(g)=1$ se e solo se $g=1_G$.
+\end{osservazione}
+
+\begin{esempio}[Un gruppo con due elementi]
+Se $G=\{1_G,a\}$ con $a\ne1_G$, allora $a^2$ è $1_G$ oppure $a$. Il secondo caso darebbe $a=1_G$ per cancellazione. Quindi $a^2=1_G$ e $a$ ha ordine $2$. La mappa $\Z/2\Z\to G$ data da $[0]_2\mapsto1_G$, $[1]_2\mapsto a$ è un isomorfismo.
+\end{esempio}
+
+\begin{esempio}[Due ordini in $S_5$]
+La permutazione
+\[
+\sigma=\begin{pmatrix}1&2&3&4&5\\4&3&2&1&5\end{pmatrix}
+\]
+non è l'identità e soddisfa $\sigma^2=\operatorname{id}$: ha ordine $2$, $\sigma^3=\sigma$ e $\langle\sigma\rangle\cong\Z/2\Z$.
+
+Un esempio distinto è
+\[
+\rho=\begin{pmatrix}1&2&3&4&5\\5&1&2&4&3\end{pmatrix},\qquad
+\rho^2=\begin{pmatrix}1&2&3&4&5\\3&5&1&4&2\end{pmatrix},\qquad
+\rho^3=\begin{pmatrix}1&2&3&4&5\\2&3&5&4&1\end{pmatrix}.
+\]
+Poiché $\rho^4=\operatorname{id}$ e le prime quattro potenze sono distinte, $\rho$ ha ordine $4$. Da $25=4\cdot6+1$ segue $\rho^{25}=\rho$.
+\end{esempio}
+
+\subsection{I due modelli dei gruppi ciclici}
+\begin{definizione}
+Un gruppo $G$ è \textbf{ciclico} se esiste $g\in G$ tale che $G=\langle g\rangle$. In questo caso $g$ si dice \textbf{generatore di $G$}.
+\end{definizione}
+
+\begin{esempio}
+Il gruppo additivo $\Z$ è ciclico e ha generatori $1$ e $-1$: $\langle n\rangle=n\Z$ è tutto $\Z$ esattamente per $n=\pm1$. Il gruppo $(\Z/m\Z,+)$ è ciclico con generatore $[1]_m$, per ogni $m\ge1$; per $m=1$ è il gruppo banale e l'unico elemento ne è generatore.
+\end{esempio}
+
+\begin{teorema}[Classificazione dei gruppi ciclici]\label{teo:classificazione-ciclici}
+\begin{enumerate}[label=\arabic*.]
+\item Ogni gruppo ciclico infinito è isomorfo a $(\Z,+)$.
+\item Ogni gruppo ciclico finito di ordine $m$ è isomorfo a $(\Z/m\Z,+)$.
+\end{enumerate}
+\end{teorema}
+\begin{proof}
+Scriviamo $G=\langle g\rangle$ e applichiamo la proposizione~\ref{prop:ordine-potenze}.
+\begin{enumerate}[label=\arabic*.]
+\item Se $G$ è infinito, $g$ non può essere periodico, perché in quel caso il punto~2 della proposizione renderebbe finito $\langle g\rangle$. Quindi $g$ è aperiodico e il punto~1 dà l'isomorfismo con $\Z$.
+\item Se $G$ è finito, $g$ non può essere aperiodico, altrimenti il punto~1 darebbe un isomorfismo con l'infinito $\Z$. Quindi $g$ è periodico e il punto~2 dà $|G|=\operatorname{ord}(g)=m$ e l'isomorfismo $[n]_m\mapsto g^n$.
+\end{enumerate}
+\end{proof}
+
+\subsection{Sottogruppi di un gruppo ciclico}
+% A–L L20 pp. 2–5; M–Z L20 pp. 2–5.
+\begin{teorema}\label{teo:sottogruppi-ciclici}
+Ogni sottogruppo di un gruppo ciclico è ciclico.
+\end{teorema}
+\begin{proof}
+Siano $G=\langle g\rangle$ e $H\le G$. Se $H=\{1_G\}$, allora $H=\langle g^0\rangle$. Altrimenti contiene una potenza $g^a\ne1_G$, con $a\ne0$; passando all'inverso se necessario, esiste un esponente positivo la cui potenza appartiene a $H$. Sia
+\[
+r=\min\{k\in\N^*\mid g^k\in H\}.
+\]
+Poiché $g^r\in H$, si ha $\langle g^r\rangle\subseteq H$. Viceversa, per $g^a\in H$, dividiamo $a=qr+s$ con $0\le s<r$. Allora $g^s=g^a(g^r)^{-q}\in H$. Se $s>0$ si contraddice la minimalità di $r$; quindi $s=0$ e $g^a=(g^r)^q\in\langle g^r\rangle$. Questo dà l'altra inclusione.
+\end{proof}
+
+\begin{teorema}[Sottogruppi e divisori]\label{teo:ciclici-divisori}
+Sia $G=\langle g\rangle$ di ordine finito $N\ge1$.
+\begin{enumerate}[label=\arabic*.]
+\item Ogni sottogruppo $H\le G$ ha ordine che divide $N$.
+\item Per ogni divisore positivo $d$ di $N$, esiste un unico sottogruppo di ordine $d$, ed è $\langle g^{N/d}\rangle$.
+\end{enumerate}
+\end{teorema}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Poiché $g^N=1_G\in H$, esiste sempre un minimo positivo $r$ tale che $g^r\in H$, anche se $H$ è banale. La stessa divisione usata nel teorema precedente dà $H=\langle g^r\rangle$. Dividendo inoltre $N=qr+s$, con $0\le s<r$, si trova $g^s=g^N(g^r)^{-q}\in H$, quindi $s=0$ e $r\mid N$. Scriviamo $N=r d$. Per ogni intero $k$,
+\[
+(g^r)^k=1_G\ \Longleftrightarrow\ N\mid rk
+\ \Longleftrightarrow\ d\mid k.
+\]
+Perciò $g^r$ ha ordine $d=N/r$, e $|H|=d$ divide $N$.
+\item Dato $d\mid N$, poniamo $q=N/d$. Il calcolo $N\mid qk\Longleftrightarrow d\mid k$ mostra che $g^q$ ha ordine $d$: il sottogruppo cercato esiste. Se $K\le G$ ha ordine $d$, il punto~1, applicato al minimo positivo $r$ con $g^r\in K$, dà $K=\langle g^r\rangle$ e $d=N/r$. Quindi $r=N/d=q$ e $K=\langle g^q\rangle$. L'unicità è dimostrata.
+\end{enumerate}
+\end{proof}
+
+\Needspace{26\baselineskip}
+\begin{esempio}[Il reticolo di $\Z/12\Z$]
+Scriviamo $[a]=[a]_{12}$ e consideriamo sempre l'operazione additiva. I divisori di $12$ sono $1,2,3,4,6,12$; i sei sottogruppi sono quelli del diagramma, dove le frecce indicano inclusioni verso l'alto e i numeri fra parentesi sono gli ordini.
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+\node (a) at (0,3.9) {$\langle[1]\rangle=\Z/12\Z\quad(12)$};
+\node (b) at (-2.2,2.6) {$\langle[2]\rangle\ (6)$}; \node (c) at (2.2,2.6) {$\langle[3]\rangle\ (4)$};
+\node (d) at (-2.2,1.3) {$\langle[4]\rangle\ (3)$}; \node (e) at (2.2,1.3) {$\langle[6]\rangle\ (2)$};
+\node (f) at (0,0) {$\{[0]\}=\langle[0]\rangle\quad(1)$};
+\draw[->] (f)--(d); \draw[->] (f)--(e); \draw[->] (d)--(b);
+\draw[->] (e)--(b); \draw[->] (e)--(c); \draw[->] (b)--(a); \draw[->] (c)--(a);
+\end{tikzpicture}
+\end{center}
+Per esempio $\langle[2]\rangle=\{[0],[2],[4],[6],[8],[10]\}$ e $\langle[4]\rangle=\{[0],[4],[8]\}$. Il diagramma ha la stessa forma di quello dei sottogruppi di $\Z$ contenenti $12\Z$, ma gli oggetti sono diversi: qui i sottogruppi sono finiti e formati da classi resto, là sono insiemi infiniti di interi. La notazione $C_d$ indica un gruppo ciclico di ordine $d$ a meno di isomorfismo; non distingue i vari insiemi che lo realizzano.
+\end{esempio}
+
+\subsection{Ordine di una classe e numero dei generatori}
+% A–L L20 pp. 6–7; M–Z L20 pp. 5–6.
+\begin{proposizione}\label{prop:ordine-classe}
+Siano $N\ge1$ e $a\in\Z$.
+\begin{enumerate}[label=\arabic*.]
+\item Nel gruppo additivo $\Z/N\Z$, la classe $[a]_N$ ha ordine $N/\operatorname{MCD}(a,N)$.
+\item Se $G=\langle g\rangle$ ha ordine $N$, allora $\operatorname{ord}(g^a)=N/\operatorname{MCD}(a,N)$.
+\item Per $N\ge2$, un gruppo ciclico di ordine $N$ ha $\varphi(N)$ generatori: in $\Z/N\Z$ sono le classi $[a]_N$ con $\operatorname{MCD}(a,N)=1$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Posto $d=\operatorname{MCD}(a,N)$, scriviamo $a=da'$, $N=dN'$ con $\operatorname{MCD}(a',N')=1$. Per ogni $k\in\N^*$,
+\[
+k[a]_N=[0]_N\ \Longleftrightarrow\ N\mid ka
+\ \Longleftrightarrow\ N'\mid ka'
+\ \Longleftrightarrow\ N'\mid k.
+\]
+L'ultimo passaggio è il lemma di Euclide per fattori coprimi. Il minimo $k>0$ è dunque $N'=N/d$. La formula comprende $a=0$, per cui $d=N$ e l'ordine è $1$.
+\item L'isomorfismo $[n]_N\mapsto g^n$ identifica $k[a]_N=[0]_N$ con $(g^a)^k=1_G$. I minimi positivi, quindi gli ordini, coincidono; si applica il punto~1.
+\item Un elemento è generatore se e solo se il sottogruppo che genera ha tutti gli $N$ elementi del gruppo, cioè se e solo se il suo ordine è $N$. Per il punto~1 questo equivale a $\operatorname{MCD}(a,N)=1$. Le classi con questa proprietà sono esattamente le unità dell'anello $\Z/N\Z$, e sono $\varphi(N)$. Negli altri gruppi ciclici dello stesso ordine si trasportano attraverso l'isomorfismo. Per $N=1$ l'unico elemento è l'unico generatore; non occorre estendere a $1$ la funzione $\varphi$ qui definita per $N\ge2$.
+\end{enumerate}
+\end{proof}
+
+\begin{esempio}
+In $\Z/12\Z$, $\operatorname{ord}([8]_{12})=12/\operatorname{MCD}(8,12)=3$, e infatti
+\[
+\langle[8]_{12}\rangle=\{[0]_{12},[8]_{12},[4]_{12}\}=\langle[4]_{12}\rangle.
+\]
+Il criterio per essere generatore riguarda l'operazione additiva, anche se coincide con l'invertibilità per l'operazione moltiplicativa dell'anello: le due operazioni restano distinte.
+\end{esempio}
+
+\Needspace{11\baselineskip}
+\begin{esercizio}
+Quanti e quali sono i generatori dei gruppi additivi $\Z/15\Z$ e $\Z/16\Z$?
+\end{esercizio}
+\begin{svolgimento}
+Nel primo caso $\varphi(15)=(3-1)(5-1)=8$: i generatori sono le classi con rappresentanti $1,2,4,7,8,11,13,14$. Nel secondo $\varphi(16)=16-8=8$: sono le classi con rappresentanti dispari $1,3,5,7,9,11,13,15$. In ciascun elenco sono esclusi esattamente i rappresentanti che hanno un fattore primo in comune con il modulo.
+\end{svolgimento}
+
+\subsection{Un gruppo di unità non ciclico e uno ciclico}
+% A–L L20 p. 7; M–Z L20 pp. 6–7. Svolgimento completato.
+\Needspace{13\baselineskip}
+\begin{esercizio}
+Elencare gli elementi di $U(\Z/16\Z)$ e calcolare gli ordini moltiplicativi di $[3]_{16}$ e $[5]_{16}$. Verificare che
+\[
+U(\Z/16\Z)=\langle[3]_{16},[5]_{16}\rangle
+\]
+e che questo gruppo non è ciclico. Verificare invece che $U(\Z/17\Z)$ è ciclico, trovandone un generatore.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Unità modulo $16$.} Sono le otto classi dei numeri dispari fra $0$ e $15$. In questa parte scriviamo $[a]=[a]_{16}$. Si ha
+\[
+[3]^2=[9],\quad[3]^3=[11],\quad[3]^4=[1],\qquad
+[5]^2=[9],\quad[5]^3=[13],\quad[5]^4=[1].
+\]
+In entrambi i casi le quattro potenze da esponente $0$ a $3$ sono distinte, dunque gli ordini sono $4$. Il sottogruppo generato da $[3],[5]$ contiene tutti gli elementi delle due righe
+\[
+\begin{array}{c|rrrr}
+i&0&1&2&3\\\hline
+[3]^i &[1]&[3]&[9]&[11]\\
+{[5][3]^i} &[5]&[15]&[13]&[7]
+\end{array}
+\]
+che esauriscono le otto unità; quindi il generato è l'intero gruppo. Gli ordini di tutti gli elementi sono
+\[
+\begin{array}{c|rrrrrrrr}
+[a]&[1]&[3]&[5]&[7]&[9]&[11]&[13]&[15]\\\hline
+\operatorname{ord}([a])&1&4&4&2&2&4&4&2
+\end{array}
+\]
+Per $[7],[9],[15]$ basta calcolare il quadrato, che è $[1]$, escludendo che siano $[1]$. Per $[11]=[3]^{-1}$ e $[13]=[5]^{-1}$ l'ordine resta $4$, perché una potenza dell'inverso è $1$ esattamente quando lo è la corrispondente potenza dell'elemento. Nessun elemento ha ordine $8$, quindi il gruppo non è ciclico.
+
+\textbf{Unità modulo $17$.} Poiché $17$ è primo, sono tutte le $16$ classi non nulle. Ora tutte le classi hanno modulo $17$. Per quadrati successivi,
+\[
+[3]^2=[9],\qquad[3]^4=[13],\qquad[3]^8=[16]=[-1],\qquad[3]^{16}=[1].
+\]
+L'ordine di $[3]$ divide $16$ per la proposizione~\ref{prop:ordine-potenze}. Se fosse un divisore proprio, sarebbe fra $1,2,4,8$ e quindi dividerebbe $8$, contro $[3]^8\ne[1]$. L'ordine è dunque $16$: le sue potenze sono $16$ unità distinte e le esauriscono. Pertanto $U(\Z/17\Z)=\langle[3]_{17}\rangle$.
+\end{svolgimento}

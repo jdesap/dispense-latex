@@ -1,0 +1,71 @@
+% !TeX root = ../main.tex
+\Needspace{20\baselineskip}
+\section{Annullatori di sottospazi}
+\begin{definizione}
+Per un sottospazio $U\subseteq V$ si definisce il suo \emph{annullatore}
+\[
+ U^\perp=\{\varphi\in V^*: \varphi(u)=0\text{ per ogni }u\in U\}\subseteq V^*.
+\]
+Per un sottospazio $L\subseteq V^*$ si definisce invece
+\[
+ L^\perp=\{v\in V:\varphi(v)=0\text{ per ogni }\varphi\in L\}\subseteq V.
+\]
+Questi spazi sono detti anche \emph{ortogonali} rispetto alla dualità canonica. Il simbolo $\perp$ non presuppone un prodotto scalare: per capire in quale spazio si trova l'annullatore bisogna guardare se si parte da vettori o da funzionali.
+\end{definizione}
+\begin{proposizione}
+\begin{enumerate}[label=\arabic*.]
+\item $U^\perp$ è un sottospazio di $V^*$.
+\item $L^\perp$ è un sottospazio di $V$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item \passomath{U^\perp} Il funzionale nullo annulla $U$. Per $\varphi,\psi\in U^\perp$ e $a,b\in K$, ogni $u\in U$ soddisfa $(a\varphi+b\psi)(u)=a\varphi(u)+b\psi(u)=0$. Quindi $a\varphi+b\psi\in U^\perp$.
+\item \passomath{L^\perp} Il vettore nullo è annullato da tutti gli elementi di $L$. Se $v,w\in L^\perp$, allora $\varphi(av+bw)=a\varphi(v)+b\varphi(w)=0$ per ogni $\varphi\in L$. Pertanto $av+bw\in L^\perp$.
+\end{enumerate}
+\end{proof}
+
+\begin{teorema}[Dimensione dell'annullatore]
+\label{teo:dimensione-annullatore}
+Se $\dim V=n<\infty$ e $\dim U=r$, allora $\dim U^\perp=n-r$.
+\end{teorema}
+\begin{proof}
+Scegliamo una base $(u_1,\ldots,u_r)$ di $U$ e completiamola a una base
+\[
+ \mathcal B=(u_1,\ldots,u_r,v_{r+1},\ldots,v_n)
+\]
+di $V$. La base duale è $\mathcal B^*=(u_1^*,\ldots,u_r^*,v_{r+1}^*,\ldots,v_n^*)$. Ogni $\varphi\in V^*$ si scrive in modo unico come
+\[
+ \varphi=\sum_{i=1}^r a_iu_i^*+\sum_{j=r+1}^n b_jv_j^*.
+\]
+Annullare tutto $U$ equivale ad annullare ciascun vettore della sua base, cioè a imporre $\varphi(u_i)=a_i=0$ per $i=1,\ldots,r$. Ne segue
+\[
+ U^\perp=\operatorname{span}\{v_{r+1}^*,\ldots,v_n^*\}.
+\]
+Questi $n-r$ funzionali sono indipendenti perché fanno parte di una base; costituiscono quindi una base di $U^\perp$. Nei casi estremi $U=\{0\}$ e $U=V$ si ottengono rispettivamente $U^\perp=V^*$ e $U^\perp=\{0\}$.
+\end{proof}
+
+\begin{proposizione}[Doppio annullatore]
+Se $V$ ha dimensione finita, allora $(U^\perp)^\perp=U$, dove il secondo annullatore è inteso come sottospazio di $V$.
+\end{proposizione}
+\begin{proof}
+\passomath{\supseteq} Per definizione ogni funzionale in $U^\perp$ si annulla su ogni vettore di $U$, quindi $U\subseteq(U^\perp)^\perp$.
+
+\passomath{\subseteq} Se $v\notin U$, una base $(u_1,\ldots,u_r)$ di $U$, seguita da $v$, è indipendente e può essere completata a una base di $V$. Il funzionale della base duale corrispondente a $v$ vale $1$ su $v$ e $0$ su tutti gli $u_i$. Appartiene dunque a $U^\perp$ ma non annulla $v$: pertanto $v\notin(U^\perp)^\perp$. Nessun vettore esterno a $U$ appartiene al doppio annullatore.
+\end{proof}
+Questa verifica esplicita il modo in cui un funzionale può distinguere un vettore esterno da un sottospazio. Se il secondo annullatore viene invece costruito nel biduale, l'uguaglianza va letta come identificazione mediante l'isomorfismo canonico $\alpha$.
+
+\Needspace{13\baselineskip}
+\begin{esempio}
+In $V=\R^3$, sia $U=\operatorname{span}\{(1,1,0)\}$. Un funzionale generico è $\varphi(x_1,x_2,x_3)=ax_1+bx_2+cx_3$; appartiene a $U^\perp$ se e solo se $a+b=0$. Quindi
+\[
+ U^\perp=\operatorname{span}\{\varphi_1,\varphi_2\},\qquad
+ \varphi_1(x)=x_1-x_2,\quad\varphi_2(x)=x_3.
+\]
+Si vede sia $\dim U^\perp=2=3-1$, sia il recupero del sottospazio mediante le equazioni:
+\[
+ (U^\perp)^\perp=\{x:x_1-x_2=0,\ x_3=0\}
+ =\{(t,t,0):t\in\R\}=U.
+\]
+Le equazioni cartesiane di un sottospazio possono così essere interpretate come funzionali che lo annullano.
+\end{esempio}

@@ -1,0 +1,415 @@
+{
+  "data": "2026-11-12",
+  "ambito": "tutti i 24 moduli matematici correnti inclusi dai quattro capitoli; non bozze o archivi",
+  "moduli": [
+    {
+      "file": "capitoli/01a-spazi-e-sottospazi.tex",
+      "sha256": "b784e5a9dc273f1827e161f253e5afbf74d87d1875fcbca84437171c2540a16a",
+      "conteggi": {
+        "definizione": 3,
+        "teorema": 0,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 4,
+        "esercizio": 1,
+        "proof": 3,
+        "svolgimento": 1,
+        "tikzpicture": 3
+      },
+      "revisione": "Assiomi, proprietà derivate, esempi, criterio di sottospazio, intersezione e controesempi: prove corrette; esplicitata la convenzione K^0.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01b-sottospazio-generato.tex",
+      "sha256": "05aaed0b739cffa4f741fe4e82d54d7add3747551210e17f74017dc6d0f2db9b",
+      "conteggi": {
+        "definizione": 1,
+        "teorema": 1,
+        "proposizione": 0,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 2,
+        "proof": 2,
+        "svolgimento": 2,
+        "tikzpicture": 1
+      },
+      "revisione": "Costruzione per intersezione, minimalità, due inclusioni e somme vuote: corrette; esercizi verificati.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01b-somme-di-sottospazi.tex",
+      "sha256": "6fa3a4cd2dbc409c34e2d4af45b0fd7cfe2105552f8ea945ad05081beef093d2",
+      "conteggi": {
+        "definizione": 2,
+        "teorema": 2,
+        "proposizione": 0,
+        "corollario": 0,
+        "esempio": 1,
+        "esercizio": 1,
+        "proof": 3,
+        "svolgimento": 1,
+        "tikzpicture": 0
+      },
+      "revisione": "Somma finita, unicità, criterio di intersezione nulla e criterio per più sottospazi: entrambi i versi ricostruiti; controesempio delle tre rette corretto.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01c-indipendenza-basi-coordinate.tex",
+      "sha256": "748f7b3543bb560e66125b3dab49fe392f5bf9a6c80240203e0aeb29da4c62c1",
+      "conteggi": {
+        "definizione": 3,
+        "teorema": 1,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 3,
+        "esercizio": 2,
+        "proof": 2,
+        "svolgimento": 2,
+        "tikzpicture": 2
+      },
+      "revisione": "Famiglie e insiemi distinti, coefficiente non nullo, unicità e coordinate: corretti, comprese famiglie vuote e dipendenze con coefficienti nulli.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01c-basi-e-dimensione.tex",
+      "sha256": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+      "conteggi": {
+        "definizione": 2,
+        "teorema": 1,
+        "proposizione": 0,
+        "corollario": 1,
+        "esempio": 2,
+        "esercizio": 0,
+        "proof": 2,
+        "svolgimento": 0,
+        "tikzpicture": 0
+      },
+      "revisione": "Estrazione finita, polinomi di grado arbitrario, scambio con invariante di generazione e cardinalità delle basi: prove complete senza circolarità.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01d-estrazione-e-basi-di-sottospazi.tex",
+      "sha256": "bf88f6272ad99b49dbd7f7aa6721f274d2f861f4007ff225bb556304bf190f37",
+      "conteggi": {
+        "definizione": 0,
+        "teorema": 0,
+        "proposizione": 0,
+        "corollario": 2,
+        "esempio": 0,
+        "esercizio": 3,
+        "proof": 2,
+        "svolgimento": 3,
+        "tikzpicture": 0
+      },
+      "revisione": "Eliminazione con coefficienti espliciti, completamento e terminazione; tre esercizi in R4 corretti.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01e-equazioni-cartesiane.tex",
+      "sha256": "114f13e0c25df18f464b0f95596ebd5cb283f3b245d2f81dc9f598c34b3cacac",
+      "conteggi": {
+        "definizione": 0,
+        "teorema": 0,
+        "proposizione": 0,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 1,
+        "proof": 0,
+        "svolgimento": 1,
+        "tikzpicture": 0
+      },
+      "revisione": "Necessità e sufficienza dell’eliminazione dei parametri entrambe presenti e verificate.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01f-prodotti.tex",
+      "sha256": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+      "conteggi": {
+        "definizione": 0,
+        "teorema": 0,
+        "proposizione": 2,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 0,
+        "proof": 2,
+        "svolgimento": 0,
+        "tikzpicture": 0
+      },
+      "revisione": "Assiomi per componenti e base del prodotto con generazione/indipendenza: corretti.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01g-quozienti.tex",
+      "sha256": "345603c0023f68acfc78043f17c3d9b0f5b4bcbfa752e3e24625f68044767c5b",
+      "conteggi": {
+        "definizione": 2,
+        "teorema": 1,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 1,
+        "esercizio": 0,
+        "proof": 4,
+        "svolgimento": 0,
+        "tikzpicture": 1
+      },
+      "revisione": "Equivalenza, uguaglianza delle classi, indipendenza dai rappresentanti, assiomi e dimensione: prove corrette; finitezza della base del sottospazio giustificata prima di usarla.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01h-grassmann-complementi.tex",
+      "sha256": "e92ddd82f371ce2f987fa090d19f7aa00287e8a096ed0cebb4cd79934dafbd10",
+      "conteggi": {
+        "definizione": 1,
+        "teorema": 1,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 0,
+        "proof": 2,
+        "svolgimento": 0,
+        "tikzpicture": 1
+      },
+      "revisione": "Base adattata all’intersezione, indipendenza, dimensioni, esistenza e non unicità dei complementari: corretti.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01i-costruzioni-in-r5.tex",
+      "sha256": "8eef99493e324d53c617623feaed8dbcfe60a27a8d553bae6a9adcfefb57c024",
+      "conteggi": {
+        "definizione": 0,
+        "teorema": 0,
+        "proposizione": 0,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 1,
+        "proof": 0,
+        "svolgimento": 6,
+        "tikzpicture": 0
+      },
+      "revisione": "Relazione, matrici del registro, cartesiane nei due versi, complementare e intersezioni: corretti; esplicitata la composizione R2←R1−3R2 in due operazioni reversibili.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/01j-equazioni-di-polinomi.tex",
+      "sha256": "657020576970f7ef0ff99619b1e30fd6a5c1360c4ec65a1fcdd88e1a1015285a",
+      "conteggi": {
+        "definizione": 0,
+        "teorema": 0,
+        "proposizione": 0,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 1,
+        "proof": 0,
+        "svolgimento": 3,
+        "tikzpicture": 0
+      },
+      "revisione": "Equazioni, base del nucleo, cambio di coefficienti e inverse: corretti; incluso esplicitamente il polinomio nullo.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/02a-gauss.tex",
+      "sha256": "6486fc0d173b8ea3b3e44696f49954f840355561d653eb8cd38276f8197de92e",
+      "conteggi": {
+        "definizione": 2,
+        "teorema": 0,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 3,
+        "esercizio": 1,
+        "proof": 1,
+        "svolgimento": 1,
+        "tikzpicture": 0
+      },
+      "revisione": "Operazioni equivalenti e basi per righe corrette; precisata la scelta della prima colonna non nulla del blocco. Distinti i generatori per righe dalle colonne della trasposta da selezionare; riconosciuta la ripresa dell’esercizio precedente.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/02b-operazioni.tex",
+      "sha256": "ff38adb0ce6590127286131de3949bbf0efdb761c068db17c3bdfe0a7b92a08f",
+      "conteggi": {
+        "definizione": 3,
+        "teorema": 0,
+        "proposizione": 3,
+        "corollario": 0,
+        "esempio": 2,
+        "esercizio": 0,
+        "proof": 3,
+        "svolgimento": 0,
+        "tikzpicture": 1
+      },
+      "revisione": "Dimensioni dei prodotti, associatività per somme finite, distributività, identità e trasposizione: indici e prove corretti; entrambe le moltiplicazioni numeriche verificate.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/02d-matrici-elementari.tex",
+      "sha256": "a4bdf884723546d690a3a6d6fe334cc8b342fc52a459d37cdf85ff68af2dd853",
+      "conteggi": {
+        "definizione": 0,
+        "teorema": 0,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 1,
+        "esercizio": 1,
+        "proof": 1,
+        "svolgimento": 1,
+        "tikzpicture": 1
+      },
+      "revisione": "Effetto del prodotto a sinistra, inversi delle tre operazioni, registro BA=A′ e calcolo inversa: corretti. Aggiunta la formula dell’inversa del prodotto per giustificare la reversibilità accumulata.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/02c-rango-sistemi.tex",
+      "sha256": "b1403d761e3392bfd4a94cc66e046eec9f5e59e67b4a4e06bd465ae419d853a7",
+      "conteggi": {
+        "definizione": 2,
+        "teorema": 2,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 1,
+        "proof": 3,
+        "svolgimento": 1,
+        "tikzpicture": 0
+      },
+      "revisione": "Invarianza di tutte le relazioni fra colonne, due disuguaglianze, sistemi e parametri: corretti. Esplicitata l’indipendenza delle colonne pivot risalendo dalle ultime righe, senza presupporre determinanti. Riduzione del parametro verificata simbolicamente.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/03a-linearita-nucleo-immagine.tex",
+      "sha256": "ff6b6e6406225fd03548e9839890ad31b0f1b7e31e1f69a47eaca10224e53208",
+      "conteggi": {
+        "definizione": 4,
+        "teorema": 4,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 3,
+        "esercizio": 0,
+        "proof": 5,
+        "svolgimento": 0,
+        "tikzpicture": 1
+      },
+      "revisione": "Linearità, eccezione F2, inversa, nucleo/immagine, coordinate e rango–nullità: corretti; i casi di base vuota sono coerenti con K^0. Nessuna generalizzazione indebita da n generatori a dimensione n.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/03e-invertibilita.tex",
+      "sha256": "acb4d0c6e5c37665a3f5e3f81387ab125f70b6d970fdb40df791b85557b0b936",
+      "conteggi": {
+        "definizione": 0,
+        "teorema": 1,
+        "proposizione": 0,
+        "corollario": 0,
+        "esempio": 1,
+        "esercizio": 0,
+        "proof": 1,
+        "svolgimento": 0,
+        "tikzpicture": 1
+      },
+      "revisione": "Inverse unilatere, dominio vuoto, scelta e criterio finito: corretti; due esempi e tutte le composizioni verificati.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/03b-proiezioni-simmetrie.tex",
+      "sha256": "3d246ebc5b5e206a66c7c4100886192a263c15a54bf4bd62fff9d11a0730fcc8",
+      "conteggi": {
+        "definizione": 2,
+        "teorema": 0,
+        "proposizione": 2,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 0,
+        "proof": 2,
+        "svolgimento": 0,
+        "tikzpicture": 2
+      },
+      "revisione": "Buona definizione dalla somma diretta, nuclei/immagini e identità: corrette. Anticipato l’alias sigma prima dell’uso e spiegata la caratteristica 2 nella nota.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/03c-matrici-associate.tex",
+      "sha256": "046df4a9d7969b9e8d4155ab98c7f336bcf980b3ef5d5f68f7da280b16cccf65",
+      "conteggi": {
+        "definizione": 3,
+        "teorema": 0,
+        "proposizione": 4,
+        "corollario": 0,
+        "esempio": 0,
+        "esercizio": 1,
+        "proof": 4,
+        "svolgimento": 1,
+        "tikzpicture": 0
+      },
+      "revisione": "Immagini di una base, formula coordinate, esercizio, fibre, rango, Hom e composizione: corretti. Esplicitate ipotesi finite e distinta la fibra f^{-1}({w}) dal valore della funzione inversa.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/03d-cambi-di-base.tex",
+      "sha256": "7ee53184a28d3335e8063802d22982dd5854180f4fe9d8f4b343f3a7ef35e34d",
+      "conteggi": {
+        "definizione": 1,
+        "teorema": 1,
+        "proposizione": 0,
+        "corollario": 0,
+        "esempio": 1,
+        "esercizio": 0,
+        "proof": 1,
+        "svolgimento": 0,
+        "tikzpicture": 1
+      },
+      "revisione": "Verso delle matrici dell’identità e formula QAP^{-1}: corretto; aggiunto richiamo alla dimensione finita; esempio verificato anche con una coppia ulteriore di basi.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/04a-duale-biduale.tex",
+      "sha256": "b4aca61f23afc6e5a6e54e98462e20073db8ad8ff93ed886191a54c7a5c9108a",
+      "conteggi": {
+        "definizione": 4,
+        "teorema": 2,
+        "proposizione": 0,
+        "corollario": 0,
+        "esempio": 1,
+        "esercizio": 0,
+        "proof": 2,
+        "svolgimento": 0,
+        "tikzpicture": 1
+      },
+      "revisione": "Base duale e delta, righe/colonne, bilinearità, buona definizione di alpha, iniettività e suriettività finite: corrette. Basi canoniche esplicite nell’esempio. Catena infinita mantenuta come assunta, non usata come prova.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/04b-annullatori.tex",
+      "sha256": "1d216de80624c3f34fb687216fba4e3692f2ae10a71046f9765d2957dc97eed0",
+      "conteggi": {
+        "definizione": 1,
+        "teorema": 1,
+        "proposizione": 2,
+        "corollario": 0,
+        "esempio": 1,
+        "esercizio": 0,
+        "proof": 3,
+        "svolgimento": 0,
+        "tikzpicture": 0
+      },
+      "revisione": "Ambienti V/V*, sottospazi, dimensione e doppio annullatore tramite separazione: corretti; nessun prodotto scalare implicito e nessuna identificazione illegittima di V con V**.",
+      "stato": "riletto integralmente e verificato"
+    },
+    {
+      "file": "capitoli/04c-trasposta.tex",
+      "sha256": "aa4a391bf7ca07b2e7e8e3a56051db60a9bef6b9f242f2a7560ffffc925f5140",
+      "conteggi": {
+        "definizione": 1,
+        "teorema": 2,
+        "proposizione": 1,
+        "corollario": 0,
+        "esempio": 1,
+        "esercizio": 0,
+        "proof": 3,
+        "svolgimento": 0,
+        "tikzpicture": 1
+      },
+      "revisione": "Verso contravariato, composizione, nucleo e inclusione dell’immagine più dimensioni, matrice A^T nelle basi duali: corretti. Esplicitate le basi nell’esempio rettangolare.",
+      "stato": "riletto integralmente e verificato"
+    }
+  ],
+  "criterio": "rilettura manuale di ipotesi, definizioni, direzioni e dipendenze; calcoli indipendenti a frazioni; i test non sostituiscono le prove generali"
+}

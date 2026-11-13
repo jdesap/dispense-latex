@@ -1,0 +1,21 @@
+{
+  "data": "2026-11-12",
+  "ambito": "calcoli e diagrammi della dispensa corrente; le prove generali sono state rilette separatamente",
+  "controlli": [
+    "01a: controesempi retta affine, quadrante, parabola e unione degli assi",
+    "01b: formule dei generatori di R² e piano contenente i due generatori di R³",
+    "01c: entrambe le relazioni in R³ e coordinate di (3,2) con formula inversa",
+    "01d–01e: basi, indipendenza e uguaglianza fra descrizioni parametriche e cartesiane in R⁴",
+    "01f–01h: modelli del prodotto/quoziente e identità della famiglia di complementari",
+    "01i: relazione, matrici del registro, equazioni, complementare e due intersezioni in R⁵",
+    "01j: entrambe le basi, formule inverse, due equazioni e base del sottospazio di polinomi",
+    "02a: tutti gli stadi del sistema e della riduzione dei generatori di R⁴",
+    "02b: due prodotti non commutativi e esempio rettangolare della trasposta",
+    "02c: riduzione polinomiale simbolica per ogni a e casi 0/1/generico; sistemi compatibile/incompatibile",
+    "03a–03b: eccezione F₂ e proiezione/simmetria oblique con identità dei disegni",
+    "03c–03d: matrice nelle due basi e formula completa del cambio di basi indipendente dal calcolo precedente",
+    "04: doppio annullatore in R⁴ e matrice della trasposta in basi duali non canoniche"
+  ],
+  "controlli_19_21": "CONTROLLI_LEZIONI_19-21_2026-11-12.json",
+  "esito": "tutti superati"
+}

@@ -89,10 +89,14 @@ Le funzioni elementari già introdotte, potenze, funzioni trigonometriche, espon
 L'affermazione riguarda soltanto punti del dominio: per esempio, il logaritmo è continuo per argomenti positivi; la tangente nei punti in cui il coseno non si annulla. Per le radici di indice pari la continuità in $0$ si valuta nel dominio $[0,+\infty)$.
 
 \begin{teorema}[Algebra delle funzioni continue]
-Siano $f,g\colon A\subseteq\R\to\R$ continue in $x_0\in A$. Allora $f+g$, $f-g$ e $fg$ sono continue in $x_0$. Se inoltre $g(x_0)\ne0$, anche $f/g$, definita su $B=\{x\in A:g(x)\ne0\}$, è continua in $x_0$.
+Siano $f,g\colon A\subseteq\R\to\R$ continue in $x_0\in A$. \begin{enumerate}[label=\arabic*.]
+\item Allora $f+g$, $f-g$ e $fg$ sono continue in $x_0$.
+\item Se inoltre $g(x_0)\ne0$, anche $f/g$, definita su $B=\{x\in A:g(x)\ne0\}$, è continua in $x_0$.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-\textbf{Somma, differenza e prodotto.} Per ogni successione $x_n\in A$ tendente a $x_0$, la continuità dà $f(x_n)\to f(x_0)$ e $g(x_n)\to g(x_0)$. L'algebra dei limiti finiti implica
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Somma, differenza e prodotto.} Per ogni successione $x_n\in A$ tendente a $x_0$, la continuità dà $f(x_n)\to f(x_0)$ e $g(x_n)\to g(x_0)$. L'algebra dei limiti finiti implica
 \[
 \begin{aligned}
 f(x_n)\pm g(x_n)&\longrightarrow f(x_0)\pm g(x_0),\\
@@ -100,12 +104,12 @@ f(x_n)g(x_n)&\longrightarrow f(x_0)g(x_0).
 \end{aligned}
 \]
 Sono esattamente le condizioni di continuità delle tre funzioni in $x_0$.
-
-\textbf{Quoziente.} Poiché $g(x_0)\ne0$, si ha $x_0\in B$. Se $x_n\in B$ e $x_n\to x_0$, valgono gli stessi limiti dei valori di $f$ e $g$; il teorema~\ref{teo:limite-quoziente} dà
+\item \textbf{Quoziente.} Poiché $g(x_0)\ne0$, si ha $x_0\in B$. Se $x_n\in B$ e $x_n\to x_0$, valgono gli stessi limiti dei valori di $f$ e $g$; il teorema~\ref{teo:limite-quoziente} dà
 \[
 \frac{f(x_n)}{g(x_n)}\longrightarrow\frac{f(x_0)}{g(x_0)}.
 \]
 Questa è la continuità di $f/g$ in $x_0$ sul suo dominio $B$.
+\end{enumerate}
 \end{proof}
 
 \begin{esempio}

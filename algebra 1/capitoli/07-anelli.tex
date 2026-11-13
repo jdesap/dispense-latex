@@ -1,6 +1,6 @@
 % !TeX root = ../main.tex
 \chapter{Anelli e campi}\label{cap:anelli}
-\fonti{Lezioni 15 e 16}
+\fonti{Lezioni 15, 16 e 17}
 
 \section{Operazioni e assiomi di anello}
 % A–L L15 pp. 5–6; M–Z L15 p. 1. La convenzione generale segue A–L.
@@ -28,22 +28,23 @@ Qui l'unità è una condizione aggiuntiva, secondo la convenzione della lezione 
 
 \Needspace{17\baselineskip}
 \begin{proposizione}[Prime conseguenze]\label{prop:prime-anello}
-In ogni anello lo zero e gli opposti sono unici; valgono la cancellazione additiva e le identità
-\[
-a0=0a=0,\qquad a(-b)=(-a)b=-(ab),\qquad(-a)(-b)=ab.
-\]
-In un anello con unità anche $1$ è unico. Se $1=0$, l'anello contiene soltanto lo zero.
+In ogni anello valgono le seguenti proprietà:
+\begin{enumerate}[label=\arabic*.]
+\item Lo zero e gli opposti sono unici; vale la cancellazione additiva.
+\item $a0=0a=0$, $a(-b)=(-a)b=-(ab)$ e $(-a)(-b)=ab$.
+\item In un anello con unità anche $1$ è unico. Se $1=0$, l\textquotesingle anello contiene soltanto lo zero.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Se $0,0'$ sono entrambi neutri additivi, $0=0+0'=0'$. Se $b,c$ sono due opposti di $a$, allora $b=b+0=b+(a+c)=(b+a)+c=c$. Per cancellare $a$ dall'uguaglianza $a+b=a+c$, si somma $-a$ a entrambi i membri e si usa l'associatività.
-
-Per distributività $a0=a(0+0)=a0+a0$; cancellando additivamente $a0$ si ricava $a0=0$. Analogamente $0a=0$. Inoltre
+\begin{enumerate}[label=\arabic*.]
+\item Se $0,0'$ sono entrambi neutri additivi, $0=0+0'=0'$. Se $b,c$ sono due opposti di $a$, allora $b=b+0=b+(a+c)=(b+a)+c=c$. Per cancellare $a$ dall'uguaglianza $a+b=a+c$, si somma $-a$ a entrambi i membri e si usa l'associatività.
+\item Per distributività $a0=a(0+0)=a0+a0$; cancellando additivamente $a0$ si ricava $a0=0$. Analogamente $0a=0$. Inoltre
 \[
 ab+a(-b)=a(b-b)=a0=0,
 \]
 quindi $a(-b)$ è l'opposto di $ab$. Allo stesso modo $(-a)b=-(ab)$. Infine $(-a)(-b)=-((-a)b)=-(-(ab))=ab$.
-
-Se $1,1'$ sono entrambi neutri moltiplicativi, $1=1\cdot1'=1'$. Se $1=0$, per ogni $a\in R$ si ha $a=a1=a0=0$.
+\item Se $1,1'$ sono entrambi neutri moltiplicativi, $1=1\cdot1'=1'$. Se $1=0$, per ogni $a\in R$ si ha $a=a1=a0=0$.
+\end{enumerate}
 \end{proof}
 
 \section{Esempi di anelli}
@@ -67,22 +68,30 @@ Associatività e commutatività delle operazioni sono già state verificate per 
 \end{esempio}
 
 \begin{proposizione}[Anello delle funzioni]
-Siano $X\ne\varnothing$ un insieme e $R$ un anello. L'insieme $R^X$ di tutte le funzioni $X\to R$ è un anello con le operazioni definite punto per punto:
+Siano $X\ne\varnothing$ un insieme e $R$ un anello.
+\begin{enumerate}[label=\arabic*.]
+\item L'insieme $R^X$ di tutte le funzioni $X\to R$ è un anello con le operazioni definite punto per punto:
 \[
 (f+g)(x)=f(x)+g(x),\qquad(fg)(x)=f(x)g(x).
 \]
-Se $R$ è commutativo, anche $R^X$ lo è; se $R$ ha unità, anche $R^X$ ha unità.
+\item Se $R$ è commutativo, anche $R^X$ lo è.
+\item Se $R$ ha unità, anche $R^X$ ha unità.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Le operazioni sono interne, perché ogni valore ottenuto appartiene a $R$. Per verificare un'identità tra funzioni basta verificarla in ogni $x\in X$; si applicano quindi gli assiomi di $R$ a $f(x),g(x),h(x)$. Ad esempio,
+\textbf{1.} Le operazioni sono interne, perché ogni valore ottenuto appartiene a $R$. Per verificare un'identità tra funzioni basta verificarla in ogni $x\in X$; si applicano quindi gli assiomi di $R$ a $f(x),g(x),h(x)$. Ad esempio,
 \[
 ((f+g)+h)(x)=(f(x)+g(x))+h(x)=f(x)+(g(x)+h(x)).
 \]
-Lo zero è la funzione costante $0_R$, l'opposto è $(-f)(x)=-f(x)$, e, se esiste $1_R$, l'unità è la funzione costante $1_R$. La commutatività del prodotto si verifica nello stesso modo sui valori.
+Lo zero è la funzione costante $0_R$ e l'opposto è $(-f)(x)=-f(x)$.
+
+\textbf{2.} La commutatività del prodotto si verifica nello stesso modo sui valori, usando quella di $R$.
+
+\textbf{3.} Se esiste $1_R$, l'unità è la funzione costante $1_R$: per ogni $x$ i prodotti $1_Rf(x)$ e $f(x)1_R$ valgono $f(x)$.
 \end{proof}
 
 \begin{esempio}[Matrici quadrate]
-Se $R$ è un anello, anche $M_n(R)$, insieme delle matrici quadrate $n\times n$ a coefficienti in $R$, è un anello per la somma componente per componente e il prodotto riga per colonna:
+Per $n\ge1$, se $R$ è un anello, anche $M_n(R)$, insieme delle matrici quadrate $n\times n$ a coefficienti in $R$, è un anello per la somma componente per componente e il prodotto riga per colonna:
 \[
 (A+B)_{ij}=a_{ij}+b_{ij},\qquad(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}.
 \]
@@ -91,7 +100,7 @@ Le proprietà additive valgono sulle singole entrate; la distributività si veri
 ((AB)C)_{ij}=\sum_{k,\ell}a_{i\ell}b_{\ell k}c_{kj}
             =(A(BC))_{ij},
 \]
-riordinando le somme finite, senza scambiare l'ordine dei fattori. Se $R$ ha unità, l'unità di $M_n(R)$ è la matrice identità $I_n$.
+riordinando le somme finite, senza scambiare l'ordine dei fattori. Se $R$ ha unità, l'unità di $M_n(R)$ è la matrice identità $I_n$, con $1_R$ sulla diagonale e $0_R$ nelle altre entrate.
 
 Se $n\ge2$ e $1_R\ne0_R$, il prodotto non è commutativo, anche quando lo è in $R$. Già in $M_2(\Z/2\Z)$, ponendo
 \[
@@ -116,14 +125,18 @@ In un anello non commutativo, per parlare di inverso richiediamo entrambe le ide
 \end{osservazione}
 
 \begin{proposizione}
-L'inverso di un'unità è unico. In un anello non nullo con unità, un elemento invertibile non può annullare, né a destra né a sinistra, un elemento non nullo. Ogni campo è un dominio.
+\begin{enumerate}[label=\arabic*.]
+\item L'inverso di un'unità è unico.
+\item In un anello non nullo con unità, un elemento invertibile non può annullare, né a destra né a sinistra, un elemento non nullo.
+\item Ogni campo è un dominio.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Se $ab=ba=1$ e $ac=ca=1$, allora $b=b(ac)=(ba)c=c$: l'inverso è unico e si indica con $a^{-1}$.
-
-Se $ab=0$ e $a$ è invertibile, moltiplicando a sinistra per $a^{-1}$ si ottiene $b=a^{-1}(ab)=a^{-1}0=0$. Se invece $ba=0$, moltiplicando a destra si ottiene ancora $b=0$. Si usa qui lo zero assorbente della proposizione~\ref{prop:prime-anello}.
-
-Infine, in un campo, se $ab=0$ e $a\ne0$, $a$ è invertibile e dunque $b=0$. Non esistono quindi divisori dello zero non nulli: il campo è un dominio.
+\begin{enumerate}[label=\arabic*.]
+\item Se $ab=ba=1$ e $ac=ca=1$, allora $b=b(ac)=(ba)c=c$: l'inverso è unico e si indica con $a^{-1}$.
+\item Se $ab=0$ e $a$ è invertibile, moltiplicando a sinistra per $a^{-1}$ si ottiene $b=a^{-1}(ab)=a^{-1}0=0$. Se invece $ba=0$, moltiplicando a destra si ottiene ancora $b=0$. Si usa qui lo zero assorbente della proposizione~\ref{prop:prime-anello}.
+\item Infine, in un campo, se $ab=0$ e $a\ne0$, $a$ è invertibile e dunque $b=0$. Non esistono quindi divisori dello zero non nulli: il campo è un dominio.
+\end{enumerate}
 \end{proof}
 
 \begin{esempio}[Il viceversa non vale]
@@ -145,7 +158,7 @@ Infatti, posto $D=ad-bc\ne0$, la moltiplicazione diretta verifica
 \[
 A^{-1}=\frac1D\begin{pmatrix}d&-b\\-c&a\end{pmatrix}
 \]
-su entrambi i lati. Se invece $D=0$, $A$ annulla un vettore non nullo: per prima riga $(a,b)\ne(0,0)$ si può prendere $(-b,a)$; se la prima riga è nulla ma la seconda $(c,d)\ne(0,0)$ si prende $(-d,c)$; per $A=0$ si prende $(1,0)$. Un inverso manderebbe l'identità $Av=0$ in $v=0$, assurdo. Si usa anche la notazione $U(M_2(\R))=\operatorname{GL}_2(\R)$.
+su entrambi i lati. Se invece $D=0$, $A$ annulla una colonna non nulla $v\in\R^2$, moltiplicata riga per colonna: per prima riga $(a,b)\ne(0,0)$ si può prendere $v=\left(\begin{smallmatrix}-b\\a\end{smallmatrix}\right)$; se la prima riga è nulla ma la seconda $(c,d)\ne(0,0)$ si prende $v=\left(\begin{smallmatrix}-d\\c\end{smallmatrix}\right)$; per $A=0$ si prende $v=\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$. Un inverso manderebbe l'identità $Av=0$ in $v=0$, assurdo. Si usa anche la notazione $U(M_2(\R))=\operatorname{GL}_2(\R)$.
 \end{esempio}
 
 \begin{esempio}[Quozienti e parti]
@@ -167,15 +180,20 @@ Se $X$ è un singoletto, questo anello ha le stesse operazioni di $\R$ ed è un 
 \section{Prodotto di anelli}
 % A–L L15 p. 9; M–Z L15 pp. 2–4 e 10.
 \begin{proposizione}
-Se $R,S$ sono anelli, il prodotto cartesiano $R\times S$ è un anello con le operazioni
+Siano $R,S$ anelli.
+\begin{enumerate}[label=\arabic*.]
+\item Il prodotto cartesiano $R\times S$ è un anello con le operazioni
 \[
 (r,s)+(r',s')=(r+r',s+s'),\qquad
 (r,s)(r',s')=(rr',ss').
 \]
-Lo zero è $(0_R,0_S)$ e l'opposto di $(r,s)$ è $(-r,-s)$. Se entrambi gli anelli hanno unità, l'unità del prodotto è $(1_R,1_S)$. Se entrambi sono commutativi, lo è anche il prodotto.
+Lo zero è $(0_R,0_S)$ e l'opposto di $(r,s)$ è $(-r,-s)$.
+\item Se entrambi gli anelli hanno unità, l'unità del prodotto è $(1_R,1_S)$.
+\item Se entrambi sono commutativi, lo è anche il prodotto.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Tutte le identità si verificano sulle due componenti. Per esempio
+\textbf{1.} Tutte le identità si verificano sulle due componenti. Per esempio
 \[
 \begin{aligned}
 ((r,s)(r',s'))(r'',s'')
@@ -183,20 +201,28 @@ Tutte le identità si verificano sulle due componenti. Per esempio
  &=(r(r'r''),s(s's''))=(r,s)((r',s')(r'',s'')).
 \end{aligned}
 \]
-L'associatività additiva e le due distributività seguono nello stesso modo; le formule per zero, opposti e unità si controllano direttamente. La commutatività del prodotto segue dalla commutatività in ciascuna componente.
+L'associatività additiva e le due distributività seguono nello stesso modo; le formule per zero e opposti si controllano direttamente.
+
+\textbf{2.} La moltiplicazione per $(1_R,1_S)$, su ciascun lato, lascia invariata ogni componente.
+
+\textbf{3.} La commutatività del prodotto segue dalla commutatività in ciascuna componente.
 \end{proof}
 
 \begin{proposizione}
-Per anelli con unità,
+\begin{enumerate}[label=\arabic*.]
+\item Per anelli con unità,
 \[
 U(R\times S)=U(R)\times U(S).
 \]
-Se $R,S$ sono entrambi non nulli, commutativi e con unità, $R\times S$ non è un dominio né un campo.
+\item Se $R,S$ sono entrambi non nulli, commutativi e con unità, $R\times S$ non è un dominio né un campo.
+\end{enumerate}
 \end{proposizione}
+\Needspace{4\baselineskip}
 \begin{proof}
-Una coppia $(r,s)$ ha inverso $(u,v)$ se e solo se $ru=ur=1_R$ e $sv=vs=1_S$, cioè se e solo se entrambe le componenti sono invertibili. In quel caso l'inverso è $(r^{-1},s^{-1})$.
-
-Se i fattori sono non nulli, $(1_R,0_S)$ e $(0_R,1_S)$ sono elementi non nulli, ma il loro prodotto è $(0_R,0_S)$. Il prodotto non è dunque un dominio e, poiché ogni campo è un dominio, neppure un campo.
+\begin{enumerate}[label=\arabic*.]
+\item Una coppia $(r,s)$ ha inverso $(u,v)$ se e solo se $ru=ur=1_R$ e $sv=vs=1_S$, cioè se e solo se entrambe le componenti sono invertibili. In quel caso l'inverso è $(r^{-1},s^{-1})$.
+\item Se i fattori sono non nulli, $(1_R,0_S)$ e $(0_R,1_S)$ sono elementi non nulli, ma il loro prodotto è $(0_R,0_S)$. Il prodotto non è dunque un dominio e, poiché ogni campo è un dominio, neppure un campo.
+\end{enumerate}
 \end{proof}
 
 \begin{esempio}
@@ -218,24 +244,28 @@ Se la prima coordinata è nulla, il prodotto per $([1]_p,[0]_q)$, che è non nul
 Un morfismo confronta due anelli rispettandone le operazioni. In questa sezione gli anelli considerati hanno unità, e richiediamo che anche l'unità sia preservata.
 
 \begin{definizione}
-Siano $R,S$ anelli con unità. Una funzione $f:R\to S$ è un \textbf{morfismo di anelli} se, per ogni $a,b\in R$,
+Siano $R,S$ anelli con unità. Una funzione $f:R\to S$ è un \textbf{morfismo}, o \textbf{omomorfismo}, di anelli se, per ogni $a,b\in R$,
 \[
 f(a+b)=f(a)+f(b),\qquad f(ab)=f(a)f(b),\qquad f(1_R)=1_S.
 \]
-Un morfismo iniettivo si chiama \textbf{monomorfismo}; uno suriettivo, \textbf{epimorfismo}; uno biettivo, \textbf{isomorfismo}. Se esiste un isomorfismo fra $R$ e $S$, diciamo che gli anelli sono \textbf{isomorfi} e scriviamo $R\cong S$.
+Un morfismo iniettivo si chiama \textbf{monomorfismo}; uno suriettivo, \textbf{epimorfismo}; uno biettivo, \textbf{isomorfismo}. Un morfismo $R\to R$ si chiama \textbf{endomorfismo}. Se esiste un isomorfismo fra $R$ e $S$, diciamo che gli anelli sono \textbf{isomorfi} e scriviamo $R\cong S$.
 \end{definizione}
 
 \begin{proposizione}\label{prop:morfismi-zero}
-Ogni morfismo $f:R\to S$ soddisfa $f(0_R)=0_S$ e $f(-a)=-f(a)$. L'inversa di un isomorfismo è ancora un morfismo.
+\begin{enumerate}[label=\arabic*.]
+\item Ogni morfismo $f:R\to S$ soddisfa $f(0_R)=0_S$ e $f(-a)=-f(a)$.
+\item L'inversa di un isomorfismo è ancora un morfismo.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Per additività $f(0_R)=f(0_R+0_R)=f(0_R)+f(0_R)$; cancellando $f(0_R)$ si ottiene $f(0_R)=0_S$. Inoltre $f(a)+f(-a)=f(a-a)=0_S$, quindi $f(-a)$ è l'opposto di $f(a)$.
-
-Se $f$ è biettivo, dati $u,v\in S$ poniamo $a=f^{-1}(u)$ e $b=f^{-1}(v)$. Da $f(a+b)=u+v$ e $f(ab)=uv$ seguono
+\begin{enumerate}[label=\arabic*.]
+\item Per additività $f(0_R)=f(0_R+0_R)=f(0_R)+f(0_R)$; cancellando $f(0_R)$ si ottiene $f(0_R)=0_S$. Inoltre $f(a)+f(-a)=f(a-a)=0_S$, quindi $f(-a)$ è l'opposto di $f(a)$.
+\item Se $f$ è biettivo, dati $u,v\in S$ poniamo $a=f^{-1}(u)$ e $b=f^{-1}(v)$. Da $f(a+b)=u+v$ e $f(ab)=uv$ seguono
 \[
 f^{-1}(u+v)=a+b,\qquad f^{-1}(uv)=ab.
 \]
-Infine $f(1_R)=1_S$ implica $f^{-1}(1_S)=1_R$. L'inversa rispetta dunque somma, prodotto e unità.
+Infine $f(1_R)=1_S$ implica $f^{-1}(1_S)=1_R$. L'inversa rispetta dunque somma, prodotto e unità.\qedhere
+\end{enumerate}
 \end{proof}
 
 \begin{esempio}[Proiezione e inclusione]
@@ -329,12 +359,16 @@ Siano $m,n\ge2$. L'applicazione
 \Phi:\Z/mn\Z\longrightarrow\Z/m\Z\times\Z/n\Z,
 \qquad [a]_{mn}\longmapsto([a]_m,[a]_n)
 \]
-è un morfismo di anelli ben definito. Se $\operatorname{MCD}(m,n)=1$, è un isomorfismo.
+ha le seguenti proprietà:
+\begin{enumerate}[label=\arabic*.]
+\item È un morfismo di anelli ben definito.
+\item Se $\operatorname{MCD}(m,n)=1$, è un isomorfismo.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Buona definizione.} Se $[a]_{mn}=[b]_{mn}$, allora $mn\mid a-b$, quindi $m\mid a-b$ e $n\mid a-b$. Si ottengono così $[a]_m=[b]_m$ e $[a]_n=[b]_n$: la coppia non dipende dal rappresentante.
+\textbf{1. Buona definizione.} Se $[a]_{mn}=[b]_{mn}$, allora $mn\mid a-b$, quindi $m\mid a-b$ e $n\mid a-b$. Si ottengono così $[a]_m=[b]_m$ e $[a]_n=[b]_n$: la coppia non dipende dal rappresentante.
 
-\textbf{Operazioni.} Per la somma,
+\textbf{1. Operazioni.} Per la somma,
 \[
 \begin{aligned}
 \Phi([a]_{mn}+[b]_{mn})
@@ -350,7 +384,7 @@ Per il prodotto si ha analogamente
 \]
 Inoltre $\Phi([1]_{mn})=([1]_m,[1]_n)$, unità del prodotto.
 
-\textbf{Biezione per moduli coprimi.} Data una coppia $([u]_m,[v]_n)$, il teorema cinese~\ref{teo:cinese} dà un intero $a$ con $a\equiv u\pmod m$ e $a\equiv v\pmod n$. Quindi $\Phi([a]_{mn})=([u]_m,[v]_n)$: la mappa è suriettiva. L'unicità della soluzione modulo $mn$ dice che tale classe $[a]_{mn}$ è unica, dunque la mappa è anche iniettiva.
+\textbf{2. Biezione per moduli coprimi.} Data una coppia $([u]_m,[v]_n)$, il teorema cinese~\ref{teo:cinese} dà un intero $a$ con $a\equiv u\pmod m$ e $a\equiv v\pmod n$. Quindi $\Phi([a]_{mn})=([u]_m,[v]_n)$: la mappa è suriettiva. L'unicità della soluzione modulo $mn$ dice che tale classe $[a]_{mn}$ è unica, dunque la mappa è anche iniettiva.
 \end{proof}
 
 \begin{osservazione}
@@ -404,9 +438,9 @@ Ogni coppia a destra ha come fibra le due classi della stessa riga. Per $0\le b<
 L'immagine contiene soltanto sei delle dodici coppie del codominio. La mappa non è suriettiva e non è iniettiva, ad esempio $\Psi([0]_{12})=\Psi([6]_{12})$. Non è un isomorfismo.
 \end{svolgimento}
 
+\Needspace{18\baselineskip}
 \subsection{Una funzione sulle classi che non è un morfismo}
 % M–Z L16 pp. 1–2: esercizio, con tutti i punti svolti.
-\Needspace{13\baselineskip}
 \begin{esercizio}
 Si consideri $f:\Z/36\Z\to\Z/36\Z$, $[a]_{36}\mapsto[3a+2]_{36}$. Verificare che sia ben definita, stabilire se sia un morfismo, calcolare $f^*(\{[5]_{36}\})$ e l'immagine. Dire se sia iniettiva e se sia suriettiva.
 \end{esercizio}

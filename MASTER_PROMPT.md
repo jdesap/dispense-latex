@@ -29,6 +29,8 @@ Autore: `Jude De Sa'Pinto`. Analisi: `Appunti di analisi 1`, sotto `Prof. Federi
 
 ## 4. Dimostrazioni
 
+- Nei risultati con più enunciati distinti (proposizioni, teoremi, lemmi e corollari), numerare gli enunciati e organizzare la dimostrazione con gli stessi numeri, rendendo immediata la corrispondenza. Per equivalenze usare i numeri dei punti nelle implicazioni; per prove comuni indicare esplicitamente i punti trattati insieme. Conservare integralmente ipotesi, passaggi, profondità e provenienza: la numerazione serve a separare le idee, non a riassumere le prove o frammentare un ragionamento unitario. Applicare la regola a tutte le dispense e verificare il rendering degli elenchi.
+
 Prove divise per idee: inclusioni, versi d'equivalenza, esistenza/unicità, base/passo induttivo, costruzione/verifica. Mantieni continue quelle con un unico ragionamento; niente micro-passaggi banali né omissioni.
 
 Usa `\passomath{A\subseteq B}`, `\passomath{\Rightarrow}`, ecc.: formula direttamente in riquadro sottile neutro, senza titoli prolissi come «Inclusione A sottoinsieme di B». Altre fasi in grassetto; separa idee con una riga vuota.

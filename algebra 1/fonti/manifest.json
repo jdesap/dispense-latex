@@ -1,7 +1,7 @@
 {
-  "data_inventario": "2026-11-05",
-  "totale_pdf": 32,
-  "totale_pagine": 211,
+  "data_inventario": "2026-11-13",
+  "totale_pdf": 40,
+  "totale_pagine": 275,
   "numerazione": "Numero ricavato dal nome del file; non sono inventate date delle lezioni.",
   "fonti": [
     {
@@ -115,12 +115,40 @@
       "pagine": 4,
       "file": "fonti/Lezione 16.pdf",
       "sha256": "bf7af771ae9a5e209641a48196851df28a033e4f3bfe94ad438c5260f0656efe"
+    },
+    {
+      "numero": 17,
+      "origine": "/Users/jude/Downloads/Algebra-17.pdf",
+      "pagine": 10,
+      "file": "fonti/Lezione 17.pdf",
+      "sha256": "c2f237f667140ad46af3da3dcaa2bbc1aca780ce064f7e53602235eb432d6bf7"
+    },
+    {
+      "numero": 18,
+      "origine": "/Users/jude/Downloads/Algebra-18.pdf",
+      "pagine": 8,
+      "file": "fonti/Lezione 18.pdf",
+      "sha256": "858e91c4e448971779c04ea92a61f76569a7d2aa24e62088aa7c200c617475f2"
+    },
+    {
+      "numero": 19,
+      "origine": "/Users/jude/Downloads/Algebra-19.pdf",
+      "pagine": 9,
+      "file": "fonti/Lezione 19.pdf",
+      "sha256": "636e57731fd1176020d95cc840e7116e7f2b0e5de6022dfd30c392cb1fe7fc7d"
+    },
+    {
+      "numero": 20,
+      "origine": "/Users/jude/Downloads/Algebra-20.pdf",
+      "pagine": 10,
+      "file": "fonti/Lezione 20.pdf",
+      "sha256": "f15fab3c321656d6b6cf7e70ae1a32acbb98bef0cfee757bd801f610e1e2d9ea"
     }
   ],
   "serie_M-Z": {
-    "data_inventario": "2026-11-05",
+    "data_inventario": "2026-11-13",
     "docente": "non identificato nei PDF; indicato dall’autore come altro docente",
-    "pagine": 110,
+    "pagine": 137,
     "fonti": [
       {
         "numero": 1,
@@ -265,6 +293,42 @@
         "sha256": "a12344b8b65458d1ff0a2541fc7d940509592395f9ff03b03e00cd03f8f80818",
         "serie": "M-Z",
         "caratteri": 181
+      },
+      {
+        "numero": 17,
+        "origine": "/Users/jude/Downloads/Diciasettesima lezione M-Z.pdf",
+        "pagine": 7,
+        "file": "fonti/M-Z/Lezione 17.pdf",
+        "sha256": "c33ba92f6ac593bebd64198cdf9a84f7dcb3b35172afd8f4af6940d8a11f6a8f",
+        "serie": "M-Z",
+        "caratteri": 313
+      },
+      {
+        "numero": 18,
+        "origine": "/Users/jude/Downloads/Diciottesima lezione M-Z.pdf",
+        "pagine": 6,
+        "file": "fonti/M-Z/Lezione 18.pdf",
+        "sha256": "e81aefc1d04e33a69a7d724aa0a6c3209b656adf0161355feb196a4fadb599ab",
+        "serie": "M-Z",
+        "caratteri": 261
+      },
+      {
+        "numero": 19,
+        "origine": "/Users/jude/Downloads/Diciannovesima lezione M-Z.pdf",
+        "pagine": 7,
+        "file": "fonti/M-Z/Lezione 19.pdf",
+        "sha256": "5ed43d79a356c4705ac6f15f3be0354d927125f52ff6a8a3cf5ac34c7e023ff8",
+        "serie": "M-Z",
+        "caratteri": 316
+      },
+      {
+        "numero": 20,
+        "origine": "/Users/jude/Downloads/Ventesima lezione M-Z.pdf",
+        "pagine": 7,
+        "file": "fonti/M-Z/Lezione 20.pdf",
+        "sha256": "f6ba6242b181e2031d8e3f81c1505753bf191a47ec6afd6c279b7e7bf08f0812",
+        "serie": "M-Z",
+        "caratteri": 274
       }
     ],
     "criterio_confronto": "globale per macroargomenti, senza corrispondenza per numero di lezione"
@@ -272,8 +336,8 @@
   "serie_primaria": "A–L",
   "serie_supporto": "M–Z",
   "lettura_visiva": {
-    "A–L": 101,
-    "M–Z": 110
+    "A–L": 138,
+    "M–Z": 137
   },
   "criterio_integrazione": "Ordine A–L; M–Z integra lacune e contenuti omessi di argomenti conclusi. Sviluppi plausibilmente futuri da distinguere e registrare."
 }

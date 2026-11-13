@@ -1,0 +1,907 @@
+{
+  "data": "2026-11-13",
+  "materie": {
+    "analisi 1": {
+      "pagine_prima": 92,
+      "pagine_dopo": 93,
+      "capitoli": [
+        {
+          "titolo": "1 Logica e metodi di dimostrazione",
+          "file": "analisi 1/build/capitoli/01-logica-e-metodi-di-dimostrazione.pdf",
+          "pagine": 3,
+          "impaginazione_cambiata": false
+        },
+        {
+          "titolo": "2 Insiemi e relazioni",
+          "file": "analisi 1/build/capitoli/02-insiemi-e-relazioni.pdf",
+          "pagine": 4,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "3 Numeri naturali, induzione e combinatoria",
+          "file": "analisi 1/build/capitoli/03-numeri-naturali-induzione-e-combinatoria.pdf",
+          "pagine": 7,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "4 Sistemi numerici e completezza",
+          "file": "analisi 1/build/capitoli/04-sistemi-numerici-e-completezza.pdf",
+          "pagine": 12,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "5 Funzioni: definizioni e proprietà generali",
+          "file": "analisi 1/build/capitoli/05-funzioni-definizioni-e-proprieta-generali.pdf",
+          "pagine": 7,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "6 Funzioni elementari",
+          "file": "analisi 1/build/capitoli/06-funzioni-elementari.pdf",
+          "pagine": 14,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "7 Topologia della retta",
+          "file": "analisi 1/build/capitoli/07-topologia-della-retta.pdf",
+          "pagine": 13,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "8 Successioni e limiti",
+          "file": "analisi 1/build/capitoli/08-successioni-e-limiti.pdf",
+          "pagine": 16,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "9 Continuità",
+          "file": "analisi 1/build/capitoli/09-continuita.pdf",
+          "pagine": 4,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "10 Limiti notevoli e confronti asintotici",
+          "file": "analisi 1/build/capitoli/10-limiti-notevoli-e-confronti-asintotici.pdf",
+          "pagine": 8,
+          "impaginazione_cambiata": true
+        }
+      ],
+      "pagine_testo_modificato": [
+        "i",
+        "i",
+        "ii",
+        "iii",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88"
+      ],
+      "compilazione_senza_avvisi": true,
+      "sha256_volume": "dd398536749df326d1f2571a465b53ff5b717dde58df6a861f0b5d717d8928a2"
+    },
+    "algebra 1": {
+      "pagine_prima": 66,
+      "pagine_dopo": 69,
+      "capitoli": [
+        {
+          "titolo": "1 Insiemi e operazioni",
+          "file": "algebra 1/build/capitoli/01-insiemi-e-operazioni.pdf",
+          "pagine": 5,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "2 Relazioni, equivalenze e quozienti",
+          "file": "algebra 1/build/capitoli/02-relazioni-equivalenze-e-quozienti.pdf",
+          "pagine": 6,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "3 Funzioni",
+          "file": "algebra 1/build/capitoli/03-funzioni.pdf",
+          "pagine": 8,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "4 Insiemi finiti, infiniti e cardinalità",
+          "file": "algebra 1/build/capitoli/04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+          "pagine": 5,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "5 Aritmetica degli interi",
+          "file": "algebra 1/build/capitoli/05-aritmetica-degli-interi.pdf",
+          "pagine": 10,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "6 Aritmetica modulare",
+          "file": "algebra 1/build/capitoli/06-aritmetica-modulare.pdf",
+          "pagine": 10,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "7 Anelli e campi",
+          "file": "algebra 1/build/capitoli/07-anelli-e-campi.pdf",
+          "pagine": 9,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "8 Funzione di Eulero e gruppi",
+          "file": "algebra 1/build/capitoli/08-funzione-di-eulero-e-gruppi.pdf",
+          "pagine": 12,
+          "impaginazione_cambiata": true
+        }
+      ],
+      "pagine_testo_modificato": [
+        "i",
+        "i",
+        "ii",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65"
+      ],
+      "compilazione_senza_avvisi": true,
+      "sha256_volume": "8ef1be0233e5afd5c5c46433841ec8f8d5234634591fef6c609c943f9d40f9a3"
+    },
+    "geometria 1": {
+      "pagine_prima": 58,
+      "pagine_dopo": 60,
+      "capitoli": [
+        {
+          "titolo": "1 Spazi vettoriali",
+          "file": "geometria 1/build/capitoli/01-spazi-vettoriali.pdf",
+          "pagine": 26,
+          "impaginazione_cambiata": false
+        },
+        {
+          "titolo": "2 Sistemi lineari e matrici",
+          "file": "geometria 1/build/capitoli/02-sistemi-lineari-e-matrici.pdf",
+          "pagine": 11,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "3 Applicazioni lineari",
+          "file": "geometria 1/build/capitoli/03-applicazioni-lineari.pdf",
+          "pagine": 13,
+          "impaginazione_cambiata": true
+        },
+        {
+          "titolo": "4 Dualità e applicazione trasposta",
+          "file": "geometria 1/build/capitoli/04-dualita-e-applicazione-trasposta.pdf",
+          "pagine": 7,
+          "impaginazione_cambiata": true
+        }
+      ],
+      "pagine_testo_modificato": [
+        "i",
+        "i",
+        "28",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57"
+      ],
+      "compilazione_senza_avvisi": true,
+      "sha256_volume": "135fb00a6879c76a043d0ca0540fb32656b6a7b537e39bcc00bf6dad51806d18"
+    }
+  },
+  "sorgenti": [
+    {
+      "file": "algebra 1/capitoli/01-insiemi.tex",
+      "sha256": "7b4f301142ece38b5987eb5359e8d205e09c7a212de9cc8b986669f4a888660b",
+      "prove": 3,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/02-relazioni.tex",
+      "sha256": "0cbacff005c6d33d60a123918be00e917bee0c72b50120a173edd56d63574afa",
+      "prove": 4,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/03-funzioni.tex",
+      "sha256": "ecd2c8e805efd4a52e499a70f66aae4b4b9b1ee405fe593b4704497e3e60c186",
+      "prove": 9,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/04-cardinalita.tex",
+      "sha256": "5bb76d69e95bb104b47e4a67984b4c05c925bd68ef89428223761850bf404477",
+      "prove": 8,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/05-interi.tex",
+      "sha256": "6401a6e6c0c7e2e808038404322f2f857f85e7ed597368de27c2f83a4fd8fa90",
+      "prove": 20,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/06-aritmetica-modulare.tex",
+      "sha256": "aef41dac238f1805f544b6fbc885f64c02a1bc8a3431e073c6e899e24095b06e",
+      "prove": 11,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/07-anelli.tex",
+      "sha256": "57a3a058d78e2d42cceb65b58de5e3c1f61869253dbf06f3724dc3a821a8f535",
+      "prove": 9,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/08-eulero-e-gruppi.tex",
+      "sha256": "6eaf7ea6868297b7f54f34a6f6dffefcbdc62796fdd512806a566200c6076609",
+      "prove": 4,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/08a-gruppi.tex",
+      "sha256": "b1f98067c3e10e29bc64f6b926f82d99f192053f6a46b6d241906f01898dce22",
+      "prove": 5,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/08b-sottogruppi.tex",
+      "sha256": "f3cc6c1ad0b7cf1eb53f798ee877a20f31035b7af2b4bb0edbe601c2b813292e",
+      "prove": 5,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/capitoli/08c-centralizzanti.tex",
+      "sha256": "b581066731bf7f047fb43b1eee0ce98079d10a13a0f355d68e891f6ef7951b04",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "algebra 1/preambolo.tex",
+      "sha256": "48fb02cd58fe59b7d79ed037abf794601a3dca6321e2ba71841a83d0272a3f24",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/02-insiemi-e-relazioni.tex",
+      "sha256": "80143cec38370405d07d53a6683c55776f654733c7b987d71ee285cc2b566788",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/03-numeri-naturali-e-combinatoria.tex",
+      "sha256": "4bcd8940ceffdb79ca297a740bd1d19b0b0816f3ef88afc936f0ea70a854f364",
+      "prove": 5,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/04b-intervalli-ed-estremi.tex",
+      "sha256": "d1a676a852546ae92fca809439286c0cbaf871d324d59000266cf7e1ba175be8",
+      "prove": 3,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/05a-funzioni-reali.tex",
+      "sha256": "62bb2358b8428f1ba16283e2a5430dd1b8c464e3c3d43d61931e7370c891da0e",
+      "prove": 2,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/06b-modulo-e-distanza.tex",
+      "sha256": "b7743e6c2125ab7d6ff5cc1cd4e12c2669ac50d05ed80184b66d2da390f7a78a",
+      "prove": 2,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/07-topologia.tex",
+      "sha256": "7c5352f3f11c4970522767f5f9335f3dc6e358b106276576d25ff88a091bd3bb",
+      "prove": 5,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/07c-estremi-e-accumulazione.tex",
+      "sha256": "080b103c687eab1b31bcccfc278a7aae4bd497ce36271202778406ad32d6403d",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/08b-limiti-e-proprieta.tex",
+      "sha256": "2ff4b0486f62a8390572442b233e8f5bf2fb7837d7aed35de10fbc24c0e83271",
+      "prove": 6,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/08c-confronti-e-algebra.tex",
+      "sha256": "a6b80f2e2131457471ec8d558e8d49b3f0e66ed5b59bdcd6478f231f2b2b1966",
+      "prove": 7,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/09-continuita.tex",
+      "sha256": "66b25a066a1cea2e38c29208e7593ae6f70a4c0ac71a637408265eae3ad1f69b",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/10a-limiti-trigonometrici.tex",
+      "sha256": "3dff752f148e7f384384c29da8e39bb4e5352da0278a2a357f0dfdb2a64c6094",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/10b-geometriche-rapporti-radici.tex",
+      "sha256": "b8f8ad074bc2f4a3e13dcaca899e9174c5291c4aac29ecd85dfd70eb1e397679",
+      "prove": 4,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/capitoli/10c-nepero-esponenziale-logaritmo.tex",
+      "sha256": "b4ecc5e03bdb72a5d66399f4d63ed81920eabe2c6a9b8025582053f8e878630a",
+      "prove": 2,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "analisi 1/preambolo.tex",
+      "sha256": "a93d1f09b8dbf12caafce010963b7e8f012e733d72c957a3f847f30851579be6",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/02a-gauss.tex",
+      "sha256": "522778d4707e97fd240b811a4c71753f6ee894eb3863c3f3cd3d358e880579ed",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/02b-operazioni.tex",
+      "sha256": "71d51af35a5b2f632febc42b08908966fdc0be3fb998d982b36b63af2c6dcd87",
+      "prove": 3,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/02c-rango-sistemi.tex",
+      "sha256": "bbc6c2c24a4a4c23d5c07246c16d8ae4243ea0233212d29f82186efe7b747011",
+      "prove": 3,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/02d-matrici-elementari.tex",
+      "sha256": "8ab1dd83ee5129106e693c4ead5610b326db86c9d65bed06d0e3242eeeafd8fb",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/03a-linearita-nucleo-immagine.tex",
+      "sha256": "2c0ea4fafb17d1bd1d4677a49348a4c3182ac9d5e526af6d5797fdc6e2fd116b",
+      "prove": 5,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/03b-proiezioni-simmetrie.tex",
+      "sha256": "4bbce1725479a5719db24bb6a2a50a0bf2e67738005e33fb5430d10ae8f304c8",
+      "prove": 2,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/03c-matrici-associate.tex",
+      "sha256": "c94ab5f57cbae36541bc0ffd3dfabbddb91838f80725745968cd53e34efe3476",
+      "prove": 4,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/03e-invertibilita.tex",
+      "sha256": "267fecd6a4179abeecc660908540e7011916d31a59563971f8bbfeb7ead35188",
+      "prove": 1,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/04b-annullatori.tex",
+      "sha256": "7fccfbcd28a25258fb80d5775ba5b6c35c11bf5aae4a9aaf0548cd3aaad01c57",
+      "prove": 3,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/capitoli/04c-trasposta.tex",
+      "sha256": "a69e895013fa79a5f2ef6b9f4e6f70113d0ba8ee3938c03e2a3fb8c4af4111fe",
+      "prove": 3,
+      "formule_prove_conservate": true
+    },
+    {
+      "file": "geometria 1/preambolo.tex",
+      "sha256": "5b1f1bd46d9aec875e2509645c7d12b4ef9e088b9a264960e5badbc5191c1215",
+      "prove": 1,
+      "formule_prove_conservate": true
+    }
+  ],
+  "controlli": "numerazione corrispondente; conservazione delle formule nelle prove; estratti identici al volume per testo, flussi, numeri di pagina e pixel",
+  "risultati_riorganizzati": [
+    {
+      "file": "geometria 1/capitoli/03a-linearita-nucleo-immagine.tex",
+      "riga": 28,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/03a-linearita-nucleo-immagine.tex",
+      "riga": 61,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "geometria 1/capitoli/02b-operazioni.tex",
+      "riga": 68,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/02b-operazioni.tex",
+      "riga": 101,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/04c-trasposta.tex",
+      "riga": 45,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "geometria 1/capitoli/02c-rango-sistemi.tex",
+      "riga": 50,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "geometria 1/capitoli/03e-invertibilita.tex",
+      "riga": 36,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "geometria 1/capitoli/02a-gauss.tex",
+      "riga": 34,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/02d-matrici-elementari.tex",
+      "riga": 17,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/04b-annullatori.tex",
+      "riga": 15,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/03b-proiezioni-simmetrie.tex",
+      "riga": 26,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/03b-proiezioni-simmetrie.tex",
+      "riga": 67,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/03c-matrici-associate.tex",
+      "riga": 101,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "geometria 1/capitoli/03c-matrici-associate.tex",
+      "riga": 140,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/09-continuita.tex",
+      "riga": 91,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "analisi 1/capitoli/10c-nepero-esponenziale-logaritmo.tex",
+      "riga": 59,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "analisi 1/capitoli/04b-intervalli-ed-estremi.tex",
+      "riga": 120,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "analisi 1/capitoli/04b-intervalli-ed-estremi.tex",
+      "riga": 158,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/02-insiemi-e-relazioni.tex",
+      "riga": 111,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/10b-geometriche-rapporti-radici.tex",
+      "riga": 34,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/08c-confronti-e-algebra.tex",
+      "riga": 7,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/08c-confronti-e-algebra.tex",
+      "riga": 262,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/03-numeri-naturali-e-combinatoria.tex",
+      "riga": 194,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/07-topologia.tex",
+      "riga": 16,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/07-topologia.tex",
+      "riga": 53,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/07c-estremi-e-accumulazione.tex",
+      "riga": 9,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/06b-modulo-e-distanza.tex",
+      "riga": 35,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/08b-limiti-e-proprieta.tex",
+      "riga": 180,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "analisi 1/capitoli/08b-limiti-e-proprieta.tex",
+      "riga": 201,
+      "ambiente": "corollario"
+    },
+    {
+      "file": "analisi 1/capitoli/10a-limiti-trigonometrici.tex",
+      "riga": 8,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "analisi 1/capitoli/05a-funzioni-reali.tex",
+      "riga": 68,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "analisi 1/capitoli/05a-funzioni-reali.tex",
+      "riga": 88,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/06-aritmetica-modulare.tex",
+      "riga": 83,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/06-aritmetica-modulare.tex",
+      "riga": 105,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/06-aritmetica-modulare.tex",
+      "riga": 186,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "algebra 1/capitoli/06-aritmetica-modulare.tex",
+      "riga": 322,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "algebra 1/capitoli/01-insiemi.tex",
+      "riga": 37,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/01-insiemi.tex",
+      "riga": 64,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/01-insiemi.tex",
+      "riga": 178,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/05-interi.tex",
+      "riga": 22,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/05-interi.tex",
+      "riga": 96,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/05-interi.tex",
+      "riga": 118,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/05-interi.tex",
+      "riga": 137,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/05-interi.tex",
+      "riga": 414,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08a-gruppi.tex",
+      "riga": 16,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08a-gruppi.tex",
+      "riga": 46,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08a-gruppi.tex",
+      "riga": 64,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08a-gruppi.tex",
+      "riga": 99,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08a-gruppi.tex",
+      "riga": 159,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/02-relazioni.tex",
+      "riga": 145,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "algebra 1/capitoli/02-relazioni.tex",
+      "riga": 211,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08-eulero-e-gruppi.tex",
+      "riga": 9,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08c-centralizzanti.tex",
+      "riga": 70,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08b-sottogruppi.tex",
+      "riga": 28,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/08b-sottogruppi.tex",
+      "riga": 74,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/07-anelli.tex",
+      "riga": 30,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/07-anelli.tex",
+      "riga": 119,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/07-anelli.tex",
+      "riga": 194,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/07-anelli.tex",
+      "riga": 236,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/03-funzioni.tex",
+      "riga": 231,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/03-funzioni.tex",
+      "riga": 250,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/03-funzioni.tex",
+      "riga": 303,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "algebra 1/capitoli/04-cardinalita.tex",
+      "riga": 20,
+      "ambiente": "teorema"
+    },
+    {
+      "file": "algebra 1/capitoli/04-cardinalita.tex",
+      "riga": 80,
+      "ambiente": "proposizione"
+    },
+    {
+      "file": "algebra 1/capitoli/04-cardinalita.tex",
+      "riga": 123,
+      "ambiente": "corollario"
+    }
+  ],
+  "numero_risultati_riorganizzati": 65,
+  "verifica_visiva": "Panoramica di tutte le pagine dei tre volumi; controllo ingrandito degli elenchi e dei raccordi modificati. Spaziatura delle etichette corretta nei preamboli; risolti gli avvisi di spezzatura dei riquadri."
+}

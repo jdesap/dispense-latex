@@ -1,0 +1,2523 @@
+{
+  "data": "2026-11-13",
+  "obiettivo": "Aggiunta19–20 e revisione totale di completezza e chiarezza dei contenuti di Algebra",
+  "turno_precedente": "integrazione19–20 conclusa prima del riesame totale; i relativi registri restano storici",
+  "baseline": {
+    "pagine": 79,
+    "capitoli": 8,
+    "unita": 155,
+    "fonti_pdf": 40,
+    "fonti_pagine": 275
+  },
+  "criteri": [
+    "confronto contenuti con pagine originali di entrambe le serie",
+    "nessuna omissione non motivata di definizioni/prove/esempi/esercizi",
+    "rigore e prerequisiti locali; assunti e rinvii distinti",
+    "simboli definiti, esposizione autonoma, punti enunciato/prova corrispondenti",
+    "compilazione e rendering finale, estratti e registri aggiornati"
+  ],
+  "capitoli": [
+    {
+      "numero": 1,
+      "stato": "riesame contenutistico e visivo completato; compilazione ed estratto finale verificati",
+      "unita": [
+        "I01",
+        "I02",
+        "I03",
+        "I04",
+        "I05",
+        "I06",
+        "I07",
+        "I08",
+        "I09",
+        "I10"
+      ]
+    },
+    {
+      "numero": 2,
+      "stato": "riesame contenutistico e visivo completato; compilazione ed estratto finale verificati",
+      "unita": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10"
+      ]
+    },
+    {
+      "numero": 3,
+      "stato": "riesame contenutistico e visivo completato; compilazione ed estratto finale verificati",
+      "unita": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16",
+        "F17",
+        "F18",
+        "F19"
+      ]
+    },
+    {
+      "numero": 4,
+      "stato": "riesame contenutistico e visivo completato; compilazione ed estratto finale verificati",
+      "unita": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14"
+      ]
+    },
+    {
+      "numero": 5,
+      "stato": "riesame contenutistico e visivo completato; compilazione ed estratto finale verificati",
+      "unita": [
+        "Z01",
+        "Z02",
+        "Z03",
+        "Z04",
+        "Z05",
+        "Z06",
+        "Z07",
+        "Z08",
+        "Z09",
+        "Z10",
+        "Z11",
+        "Z12",
+        "Z13",
+        "Z14",
+        "Z15",
+        "Z16",
+        "Z17",
+        "Z18",
+        "Z19",
+        "Z20",
+        "Z21",
+        "Z22"
+      ]
+    },
+    {
+      "numero": 6,
+      "stato": "riesame contenutistico e visivo completato; compilazione ed estratto finale verificati",
+      "unita": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23"
+      ]
+    },
+    {
+      "numero": 7,
+      "stato": "riesame contenutistico e visivo completato; compilazione ed estratto finale verificati",
+      "unita": [
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "N09",
+        "N10",
+        "N11",
+        "N12",
+        "D01",
+        "D02",
+        "N13",
+        "N14",
+        "N15",
+        "N16",
+        "N17",
+        "N18",
+        "N19",
+        "N20"
+      ]
+    },
+    {
+      "numero": 8,
+      "stato": "riesame contenutistico e visivo completato; compilazione ed estratto finale verificati",
+      "unita": [
+        "D03",
+        "N21",
+        "N22",
+        "N23",
+        "N24",
+        "N25",
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "G17",
+        "G18",
+        "G19",
+        "G20",
+        "G21",
+        "G22",
+        "G23",
+        "G24",
+        "G25",
+        "G26",
+        "G27",
+        "G28"
+      ]
+    }
+  ],
+  "unita": [
+    {
+      "id": "I01",
+      "capitolo": "1",
+      "titolo": "Operazioni e associatività unione/intersezione",
+      "fonti": "AL1:1-2; MZ1:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "I02",
+      "capitolo": "1",
+      "titolo": "Famiglie e proprietà universali",
+      "fonti": "AL1:2; MZ1:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati.",
+        "Recuperati i nomi estremo superiore/inferiore da MZ1:2, con proprietà già provate; nessuna nuova teoria."
+      ]
+    },
+    {
+      "id": "I03",
+      "capitolo": "1",
+      "titolo": "Non associatività della differenza",
+      "fonti": "AL1:3; MZ1:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "I04",
+      "capitolo": "1",
+      "titolo": "Associatività differenza simmetrica",
+      "fonti": "AL1:3; AL3:1-2; MZ2:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "I05",
+      "capitolo": "1",
+      "titolo": "Prodotti e parti",
+      "fonti": "AL1:3-4; AL2:1; MZ2:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati.",
+        "Nominati descrizione estensionale/intensionale (MZ2:3-4); specificato n>=1 per il prodotto finito. Esempi cartesiani3×2 e parti3elementi accorpati a quelliAL perché stesso contenuto."
+      ]
+    },
+    {
+      "id": "I06",
+      "capitolo": "1",
+      "titolo": "Implicazione e inclusione",
+      "fonti": "MZ2:3-5; MZ3:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "I07",
+      "capitolo": "1",
+      "titolo": "Negazione implicazione: esercizio",
+      "fonti": "MZ2:5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "I08",
+      "capitolo": "1",
+      "titolo": "De Morgan e complementazione",
+      "fonti": "AL2:1-2; MZ2:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "I09",
+      "capitolo": "1",
+      "titolo": "Tre distributività",
+      "fonti": "AL2:2; MZ2:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "I10",
+      "capitolo": "1",
+      "titolo": "Neutri e annullamento",
+      "fonti": "AL2:2; MZ2:6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "R01",
+      "capitolo": "2",
+      "titolo": "Relazioni e grafici",
+      "fonti": "AL2:3-4; MZ3:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati.",
+        "Recuperato l’esempio distinto MZ2:7/MZ3:1-2, persona×città con Pietro e Lisbona non associati; direzione chiarita e sette coppie conservate. Introdotto il simbolo di divisibilità prima del grafico."
+      ]
+    },
+    {
+      "id": "R02",
+      "capitolo": "2",
+      "titolo": "Equivalenze concrete",
+      "fonti": "AL2:4; MZ3:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "R03",
+      "capitolo": "2",
+      "titolo": "Cinque classificazioni",
+      "fonti": "AL2:5; MZ3:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "R04",
+      "capitolo": "2",
+      "titolo": "Ordini e confrontabilità",
+      "fonti": "AL2:5-6; MZ3:3-5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "R05",
+      "capitolo": "2",
+      "titolo": "Partizioni",
+      "fonti": "AL3:1; MZ3:7",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati.",
+        "Completate tutte le sette regioni e scomposizioni di A,B,C daAL3:1-2, comprese le tre regioni doppie; quattro regioni finali dell’associatività già corrette."
+      ]
+    },
+    {
+      "id": "R06",
+      "capitolo": "2",
+      "titolo": "Uguaglianza delle classi",
+      "fonti": "AL3:3-4; MZ3:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "R07",
+      "capitolo": "2",
+      "titolo": "Equivalenze e partizioni",
+      "fonti": "AL3:5-7; MZ3:8-9",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "R08",
+      "capitolo": "2",
+      "titolo": "Costruzioni inverse e quozienti",
+      "fonti": "AL3:7; AL4:1; MZ3:9",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati."
+      ]
+    },
+    {
+      "id": "R09",
+      "capitolo": "2",
+      "titolo": "Razionali e buona definizione",
+      "fonti": "AL3:8; AL4:1-3; MZ4:1-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati.",
+        "Numeri delle varianti MZ della stessa regola incompatibile accorpati al controesempioAL; mantenuto doppio cambio di rappresentante per somma/prodotto. Errore della fonte F scritto come frazioni risolto usando coppie formali."
+      ]
+    },
+    {
+      "id": "R10",
+      "capitolo": "2",
+      "titolo": "Compatibilità sul quoziente",
+      "fonti": "MZ4:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove, esercizi ed esempi confrontati direttamente con le pagine originali; ipotesi e prerequisiti verificati.",
+        "Esplicitata nell’enunciato l’ipotesi che sim sia un’equivalenza suX."
+      ]
+    },
+    {
+      "id": "F01",
+      "capitolo": "3",
+      "titolo": "Definizione e grafico",
+      "fonti": "AL4:3-5; MZ4:4-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F02",
+      "capitolo": "3",
+      "titolo": "Sei esempi di funzioni",
+      "fonti": "AL4:4-5; MZ4:5-7",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Precisato T insieme dei triangoli; sei funzioniAL conservate e varianti quadratoMZ integrate."
+      ]
+    },
+    {
+      "id": "F03",
+      "capitolo": "3",
+      "titolo": "Funzione a tratti",
+      "fonti": "AL4:5; MZ5:3; MZ7:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Quattro casi per iniettività e immagine esatta dei due rami;3escluso, confronto AL4:5/MZ7:1-2."
+      ]
+    },
+    {
+      "id": "F04",
+      "capitolo": "3",
+      "titolo": "Funzione del piano",
+      "fonti": "AL4:6; MZ5:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Sistema dal punto arbitrario del codominio e denominatore positivo; inversa già esplicita, confrontoMZ5:2-3."
+      ]
+    },
+    {
+      "id": "F05",
+      "capitolo": "3",
+      "titolo": "Fibre e iniettività",
+      "fonti": "AL2:5; AL4:6; MZ5:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F06",
+      "capitolo": "3",
+      "titolo": "J estesa a zero e fibre",
+      "fonti": "AL4:7; AL6:1-2; MZ5:4-5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Conservati J0=P e immagine finiti unitaP; Pmeno2 non raggiunto; sette classi, inclusa168; FTA/infinità primi dichiarate assunte prima del5."
+      ]
+    },
+    {
+      "id": "F07",
+      "capitolo": "3",
+      "titolo": "Proiezione canonica",
+      "fonti": "AL5:1; MZ5:5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F08",
+      "capitolo": "3",
+      "titolo": "Immagine e controimmagine: esempi",
+      "fonti": "AL5:2; MZ5:6-7",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Recuperati i sinonimi retroimmagine/covariante/controvariante daMZ5:6 eAL5:4; identità già complete."
+      ]
+    },
+    {
+      "id": "F09",
+      "capitolo": "3",
+      "titolo": "Inclusioni e uguaglianze per tutti i sottoinsiemi",
+      "fonti": "MZ5:7-8",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F10",
+      "capitolo": "3",
+      "titolo": "Composizione e associatività",
+      "fonti": "AL5:3; MZ6:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F11",
+      "capitolo": "3",
+      "titolo": "Composizione immagine e controimmagine",
+      "fonti": "AL5:4; MZ6:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Recuperati i sinonimi retroimmagine/covariante/controvariante daMZ5:6 eAL5:4; identità già complete."
+      ]
+    },
+    {
+      "id": "F12",
+      "capitolo": "3",
+      "titolo": "Quattro proprietà delle composte",
+      "fonti": "AL5:4-6; MZ6:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F13",
+      "capitolo": "3",
+      "titolo": "Unicità inversa bilatera",
+      "fonti": "AL5:7; MZ7:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F14",
+      "capitolo": "3",
+      "titolo": "Inverse del quadrato",
+      "fonti": "AL5:7; AL6:1-2; MZ6:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F15",
+      "capitolo": "3",
+      "titolo": "Iniettiva iff inversa sinistra",
+      "fonti": "AL6:2-3; MZ7:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Scelta e casoXvuoto già corretti; riferimenti da a) a punto1 riallineati; termine unilatera esplicitato daMZ6:6."
+      ]
+    },
+    {
+      "id": "F16",
+      "capitolo": "3",
+      "titolo": "Suriettiva iff inversa destra; biezione",
+      "fonti": "AL6:2-4; MZ7:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Scelta e casoXvuoto già corretti; riferimenti da a) a punto1 riallineati; termine unilatera esplicitato daMZ6:6."
+      ]
+    },
+    {
+      "id": "F17",
+      "capitolo": "3",
+      "titolo": "Esistenza iniezione iff suriezione opposta",
+      "fonti": "AL6:5; MZ7:5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F18",
+      "capitolo": "3",
+      "titolo": "Seno: inverse destre",
+      "fonti": "MZ6:6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "F19",
+      "capitolo": "3",
+      "titolo": "Funzioni indicizzate e caratteristiche",
+      "fonti": "AL6:6-7; MZ7:5-9",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Precisata identificazione di funzioni suX arbitrario finito con tuple dopo un ordine scelto; caratteristiche già complete ancheXvuoto."
+      ]
+    },
+    {
+      "id": "C01",
+      "capitolo": "4",
+      "titolo": "Finiti e potenza delle parti",
+      "fonti": "AL7:2; MZ8:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "C02",
+      "capitolo": "4",
+      "titolo": "Quattro caratterizzazioni infinito",
+      "fonti": "AL7:2-3; AL8:1-2; MZ8:3-5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Corretti 1⇒b,2⇒c,3⇒d,4⇒a in1⇒2,2⇒3,3⇒4,4⇒1; aggiunti esempi n→n+1 e n→2n espliciti daAL7:2/AL8:2. Tutti tre casi dell’iniettività dello spostamento conservati."
+      ]
+    },
+    {
+      "id": "C03",
+      "capitolo": "4",
+      "titolo": "Equipotenza e confronto",
+      "fonti": "AL8:2-3; MZ8:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "C04",
+      "capitolo": "4",
+      "titolo": "Confronto totale",
+      "fonti": "MZ8:6; autorizzazione autore",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Enunciati assunti distinti da prove: confronto totale con scelta, indipendenzaCH condizionata a coerenza e aritmetica infinita con fattori nonnulli. Nessuna importazione di prove estranee."
+      ]
+    },
+    {
+      "id": "C05",
+      "capitolo": "4",
+      "titolo": "Numerabilità e N²",
+      "fonti": "AL8:3-4; MZ9:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "C06",
+      "capitolo": "4",
+      "titolo": "Prodotti finiti numerabili",
+      "fonti": "AL8:4; MZ9:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Esplicitato il caso generale X numerabile infinito con biezioni coordinate daMZ9:1-2; non soltantoN^r."
+      ]
+    },
+    {
+      "id": "C07",
+      "capitolo": "4",
+      "titolo": "Unione numerabile di numerabili",
+      "fonti": "AL8:4-5; MZ9:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Aggiunta conclusione cardinalitàaleph0 quando almeno un membro è infinito; seconda disuguaglianza daMZ9:4; prova numerata1/2. Famiglie con membri vuoti e scelta già corrette."
+      ]
+    },
+    {
+      "id": "C08",
+      "capitolo": "4",
+      "titolo": "Z e Q numerabili",
+      "fonti": "AL8:4-5; MZ9:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Iniezione dei naturali nei razionali esplicitata n→n/1; conservata correzione del dominio Z×N* rispetto aN×N* nella fonteAL."
+      ]
+    },
+    {
+      "id": "C09",
+      "capitolo": "4",
+      "titolo": "Cantor",
+      "fonti": "AL8:5-6; MZ8:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "C10",
+      "capitolo": "4",
+      "titolo": "Continuo e CH",
+      "fonti": "AL8:6; MZ8:7",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Enunciati assunti distinti da prove: confronto totale con scelta, indipendenzaCH condizionata a coerenza e aritmetica infinita con fattori nonnulli. Nessuna importazione di prove estranee."
+      ]
+    },
+    {
+      "id": "C11",
+      "capitolo": "4",
+      "titolo": "A finito B numerabile: unione prodotto B^A",
+      "fonti": "AL8:6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "C12",
+      "capitolo": "4",
+      "titolo": "Parti di equipotenti",
+      "fonti": "AL9:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze."
+      ]
+    },
+    {
+      "id": "C13",
+      "capitolo": "4",
+      "titolo": "Cardinalità R",
+      "fonti": "AL9:1; MZ9:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Tagli razionali verificati con densità; collisione binaria corretta in nota; iniezione opposta assunta comeMZ9:3, senza inventare prova analitica."
+      ]
+    },
+    {
+      "id": "C14",
+      "capitolo": "4",
+      "titolo": "Somma e prodotto cardinali",
+      "fonti": "MZ9:4-5; autorizzazione autore",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Confronto diretto con tutte le pagine delle fonti relative; verificati domini/codomini, quantificatori, casi vuoti, due versi/composte e dipendenze.",
+        "Enunciati assunti distinti da prove: confronto totale con scelta, indipendenzaCH condizionata a coerenza e aritmetica infinita con fattori nonnulli. Nessuna importazione di prove estranee."
+      ]
+    },
+    {
+      "id": "Z01",
+      "capitolo": "5",
+      "titolo": "Anello e unità",
+      "fonti": "AL9:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z02",
+      "capitolo": "5",
+      "titolo": "Divisibilità e associati",
+      "fonti": "AL9:3; MZ9:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z03",
+      "capitolo": "5",
+      "titolo": "Primi infiniti",
+      "fonti": "AL9:3-4; MZ12:3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z04",
+      "capitolo": "5",
+      "titolo": "Crivello",
+      "fonti": "AL9:4; MZ9:6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z05",
+      "capitolo": "5",
+      "titolo": "MCD: definizione e unicità",
+      "fonti": "AL9:4-6; MZ9:7",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z06",
+      "capitolo": "5",
+      "titolo": "mcm: definizione e segni",
+      "fonti": "AL10:1; MZ9:7",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z07",
+      "capitolo": "5",
+      "titolo": "Combinazioni, prodotto e criterio MCD",
+      "fonti": "AL10:1; MZ9:8",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z08",
+      "capitolo": "5",
+      "titolo": "Dividere per MCD",
+      "fonti": "AL10:1; MZ9:8-9",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z09",
+      "capitolo": "5",
+      "titolo": "Divisione euclidea",
+      "fonti": "AL10:2-3; MZ10:1-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z10",
+      "capitolo": "5",
+      "titolo": "Esempi e resto zero",
+      "fonti": "AL10:3; MZ10:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z11",
+      "capitolo": "5",
+      "titolo": "Passo euclideo",
+      "fonti": "AL10:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z12",
+      "capitolo": "5",
+      "titolo": "Algoritmo di Euclide",
+      "fonti": "AL11:1; MZ11:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z13",
+      "capitolo": "5",
+      "titolo": "Bézout e algoritmo esteso",
+      "fonti": "AL11:1-2; MZ11:2-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z14",
+      "capitolo": "5",
+      "titolo": "Esempio 72,420 e 72,-420",
+      "fonti": "AL11:2; MZ11:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z15",
+      "capitolo": "5",
+      "titolo": "Coprimalità e combinazioni",
+      "fonti": "AL11:2; MZ11:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z16",
+      "capitolo": "5",
+      "titolo": "Minima combinazione positiva",
+      "fonti": "AL11:2-3; MZ10:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z17",
+      "capitolo": "5",
+      "titolo": "Lemma Euclide e divisori coprimi",
+      "fonti": "AL11:3; MZ11:5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z18",
+      "capitolo": "5",
+      "titolo": "Caratterizzazione primi",
+      "fonti": "AL11:4; MZ11:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z19",
+      "capitolo": "5",
+      "titolo": "Fattorizzazione: esistenza",
+      "fonti": "AL11:4-5; MZ11:6-7",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z20",
+      "capitolo": "5",
+      "titolo": "Fattorizzazione: unicità",
+      "fonti": "AL11:6; MZ12:1-2 (sviluppo rinviato in MZ11:7)",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z21",
+      "capitolo": "5",
+      "titolo": "Formule MCD/mcm",
+      "fonti": "AL11:7; MZ12:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "Z22",
+      "capitolo": "5",
+      "titolo": "Irrazionalità radice di un primo",
+      "fonti": "AL11:7; MZ12:3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A01",
+      "capitolo": "6",
+      "titolo": "Congruenza e differenza divisibile",
+      "fonti": "AL12:1; MZ12:4-5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A02",
+      "capitolo": "6",
+      "titolo": "Equivalenza e funzione resto",
+      "fonti": "AL12:2; MZ12:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A03",
+      "capitolo": "6",
+      "titolo": "Classi resto e cardinalità del quoziente",
+      "fonti": "AL12:2-3; MZ12:4-5; AL13:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A04",
+      "capitolo": "6",
+      "titolo": "Buona definizione somma e prodotto",
+      "fonti": "AL12:3-4; MZ12:5; MZ13:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A05",
+      "capitolo": "6",
+      "titolo": "Proprietà ereditate e opposti",
+      "fonti": "AL12:4; MZ12:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A06",
+      "capitolo": "6",
+      "titolo": "Esempi moduli 2 4 5 6 12",
+      "fonti": "AL12:3-6; MZ12:4-6; MZ13:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A07",
+      "capitolo": "6",
+      "titolo": "Unità e divisori dello zero",
+      "fonti": "AL12:5-6; MZ12:6; MZ13:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A08",
+      "capitolo": "6",
+      "titolo": "Criterio unità tramite MCD",
+      "fonti": "AL12:6-8; MZ12:6; MZ13:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A09",
+      "capitolo": "6",
+      "titolo": "Criterio divisori zero tramite MCD",
+      "fonti": "AL12:6-7; MZ13:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A10",
+      "capitolo": "6",
+      "titolo": "Campo per modulo primo",
+      "fonti": "AL12:5; AL12:6-8",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A11",
+      "capitolo": "6",
+      "titolo": "Calcoli modulo 84",
+      "fonti": "AL12:8-9; MZ12:7; MZ13:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A12",
+      "capitolo": "6",
+      "titolo": "Resti 2026 modulo 10 e 3",
+      "fonti": "AL12:9",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A13",
+      "capitolo": "6",
+      "titolo": "Equazioni e criterio esistenza congruenza",
+      "fonti": "AL13:1-2; MZ13:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A14",
+      "capitolo": "6",
+      "titolo": "Tutte le soluzioni intere",
+      "fonti": "AL13:3-5; MZ13:7-8",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A15",
+      "capitolo": "6",
+      "titolo": "Numero delle classi risolventi",
+      "fonti": "AL14:3; MZ14:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A16",
+      "capitolo": "6",
+      "titolo": "Esercizio 15x=6 mod84",
+      "fonti": "AL13:2-3; AL14:1; MZ13:6; MZ14:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A17",
+      "capitolo": "6",
+      "titolo": "Esempi mod12",
+      "fonti": "AL14:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A18",
+      "capitolo": "6",
+      "titolo": "Riduzione coefficienti modulo m",
+      "fonti": "AL14:3-4; MZ14:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A19",
+      "capitolo": "6",
+      "titolo": "Divisione coefficienti e modulo",
+      "fonti": "AL14:4-6; MZ14:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A20",
+      "capitolo": "6",
+      "titolo": "Esempi di riduzione e compito mod30",
+      "fonti": "AL14:5-6; MZ14:2-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A21",
+      "capitolo": "6",
+      "titolo": "Sistemi per sostituzione",
+      "fonti": "AL14:6-7; MZ14:4-5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A22",
+      "capitolo": "6",
+      "titolo": "Teorema cinese costruttivo",
+      "fonti": "AL14:8; AL15:1-3; MZ15:7-8",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "A23",
+      "capitolo": "6",
+      "titolo": "Esempi del teorema cinese e due metodi",
+      "fonti": "AL14:8-9; AL15:3-5; MZ14:5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N01",
+      "capitolo": "7",
+      "titolo": "Assiomi anello e convenzioni",
+      "fonti": "AL15:5-6; MZ15:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N02",
+      "capitolo": "7",
+      "titolo": "Neutri opposti e zero assorbente",
+      "fonti": "AL15:8; completamenti necessari dagli assiomi",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N03",
+      "capitolo": "7",
+      "titolo": "Anelli numerici e polinomi reali",
+      "fonti": "AL15:6; MZ15:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N04",
+      "capitolo": "7",
+      "titolo": "Anello delle parti",
+      "fonti": "AL15:6; MZ15:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N05",
+      "capitolo": "7",
+      "titolo": "Anello delle funzioni",
+      "fonti": "AL15:7; MZ15:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N06",
+      "capitolo": "7",
+      "titolo": "Anello matrici e non commutatività",
+      "fonti": "AL15:7; MZ15:3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N07",
+      "capitolo": "7",
+      "titolo": "Unità divisori zero domini e campi",
+      "fonti": "AL15:7-8; MZ15:3-4; MZ15:9-10; AL16:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N08",
+      "capitolo": "7",
+      "titolo": "Unicità inverso e campo implica dominio",
+      "fonti": "AL15:8-9; MZ15:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N09",
+      "capitolo": "7",
+      "titolo": "Classificazione esempi e unità",
+      "fonti": "MZ15:2-4; MZ15:9-10; AL15:6-8; AL16:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N10",
+      "capitolo": "7",
+      "titolo": "Prodotto di anelli",
+      "fonti": "AL15:9; MZ15:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N11",
+      "capitolo": "7",
+      "titolo": "Unità e divisori zero nei prodotti",
+      "fonti": "AL15:9; MZ15:2-4; MZ15:10",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N12",
+      "capitolo": "7",
+      "titolo": "Z6 e Z2×Z3; tavole",
+      "fonti": "AL15:9; MZ15:3; raccordo concreto MZ15:6; AL16:2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "D01",
+      "capitolo": "7",
+      "titolo": "Morfismi e esempi",
+      "fonti": "MZ15:4-6; AL16:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "D02",
+      "capitolo": "7",
+      "titolo": "Mappa CRT come isomorfismo e fibre",
+      "fonti": "MZ15:6; MZ15:8-9; AL16:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "D03",
+      "capitolo": "8",
+      "titolo": "Trasporto unità tramite isomorfismo; funzione Eulero",
+      "fonti": "MZ15:10-11; AL16:4; MZ16:2-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "N13",
+      "capitolo": "7",
+      "titolo": "Morfismi e conservazione zero/opposti; inversa",
+      "fonti": "AL16:1; MZ15:4-6; AL17:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N14",
+      "capitolo": "7",
+      "titolo": "Proiezione inclusione valutazione",
+      "fonti": "AL16:1; MZ15:5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N15",
+      "capitolo": "7",
+      "titolo": "Isomorfismo parti e caratteristiche",
+      "fonti": "AL16:1-2; MZ15:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N16",
+      "capitolo": "7",
+      "titolo": "Mappa CRT come morfismo e biezione",
+      "fonti": "AL16:2-3; MZ15:6; MZ15:8-9",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N17",
+      "capitolo": "7",
+      "titolo": "CRT isomorfismo per più fattori",
+      "fonti": "AL16:3; MZ15:8-9",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N18",
+      "capitolo": "7",
+      "titolo": "Immagini e inversa perZ12→Z4×Z3",
+      "fonti": "MZ15:9",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N19",
+      "capitolo": "7",
+      "titolo": "Mappa non coprimaZ12→Z2×Z6 e fibre",
+      "fonti": "MZ15:6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N20",
+      "capitolo": "7",
+      "titolo": "Applicazione affine modulo36",
+      "fonti": "MZ16:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Definizioni, enunciati, prove ed esempi riletti; confronto diretto con AL9–16 e MZ9–16; ipotesi, segni e casi degeneri verificati."
+      ]
+    },
+    {
+      "id": "N21",
+      "capitolo": "8",
+      "titolo": "Trasporto delle unità",
+      "fonti": "MZ15:10; MZ16:3; raccordoAL16:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "N22",
+      "capitolo": "8",
+      "titolo": "Funzione di Eulero e primi valori",
+      "fonti": "AL16:4; MZ16:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "N23",
+      "capitolo": "8",
+      "titolo": "Unità modulo potenze prime",
+      "fonti": "AL16:4; MZ16:3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "N24",
+      "capitolo": "8",
+      "titolo": "Moltiplicatività Eulero per coprimi",
+      "fonti": "MZ16:3; raccordoAL16:3-4; AL17:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "N25",
+      "capitolo": "8",
+      "titolo": "Formula generale Eulero ed esempio600",
+      "fonti": "MZ16:4; AL16:4 fattorizzazione avviata; AL17:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G01",
+      "capitolo": "8",
+      "titolo": "Definizione di gruppo e gruppo abeliano",
+      "fonti": "AL17:3; MZ17:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G02",
+      "capitolo": "8",
+      "titolo": "Proprietà elementari e inverso del prodotto",
+      "fonti": "AL17:3-5; MZ17:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G03",
+      "capitolo": "8",
+      "titolo": "Potenze intere e notazione additiva",
+      "fonti": "AL17:5; AL18:2; MZ17:2; MZ18:3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati.",
+        "Esplicitata (a^m)^n=a^(mn): induzione su n>=0 e inversi per n<0, passaggio usato da ordine e ciclici."
+      ]
+    },
+    {
+      "id": "G04",
+      "capitolo": "8",
+      "titolo": "Gruppi additivi e unità di anelli/campi",
+      "fonti": "AL17:4,6; MZ17:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G05",
+      "capitolo": "8",
+      "titolo": "Gruppo simmetrico e cardinalità",
+      "fonti": "AL17:7-8; MZ17:4-5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G06",
+      "capitolo": "8",
+      "titolo": "Due esempi di prodotti di permutazioni",
+      "fonti": "AL17:8; MZ17:5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G07",
+      "capitolo": "8",
+      "titolo": "Gruppo affine reale e commutazione",
+      "fonti": "AL17:9-10; AL18:1; MZ17:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G08",
+      "capitolo": "8",
+      "titolo": "Criteri di sottogruppo",
+      "fonti": "AL18:2-3; MZ18:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G09",
+      "capitolo": "8",
+      "titolo": "Intersezioni e sottogruppi banali",
+      "fonti": "AL18:3-4; MZ18:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G10",
+      "capitolo": "8",
+      "titolo": "Unione di sottogruppi",
+      "fonti": "AL18:4; MZ18:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G11",
+      "capitolo": "8",
+      "titolo": "Sottogruppo generato da due sottogruppi",
+      "fonti": "AL18:4-5; MZ18:1-2; AL19:1; MZ19:1",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G12",
+      "capitolo": "8",
+      "titolo": "Omotetie traslazioni e sottogruppi razionali",
+      "fonti": "AL18:4-5; MZ17:7; MZ18:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G13",
+      "capitolo": "8",
+      "titolo": "Sottogruppo delle permutazioni che fissano punti",
+      "fonti": "AL18:5; MZ18:3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G14",
+      "capitolo": "8",
+      "titolo": "Ciclico e potenze in S5",
+      "fonti": "AL18:5; MZ18:3; AL19:3-4; MZ19:2-3",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G15",
+      "capitolo": "8",
+      "titolo": "Coniugati ed esempi affini/S4",
+      "fonti": "AL18:6; MZ18:4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G16",
+      "capitolo": "8",
+      "titolo": "Centralizzante e centro: definizioni",
+      "fonti": "AL18:6-7; MZ18:4-5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G17",
+      "capitolo": "8",
+      "titolo": "Centralizzante sottogruppo",
+      "fonti": "AL18:7-8; MZ18:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G18",
+      "capitolo": "8",
+      "titolo": "Centro abeliano e caratterizzazione gruppi abeliani",
+      "fonti": "AL18:8; MZ18:6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G19",
+      "capitolo": "8",
+      "titolo": "Centralizzanti di traslazioni e centro affine",
+      "fonti": "AL18:8; MZ18:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G20",
+      "capitolo": "8",
+      "titolo": "Centralizzante di scambio e centro S3",
+      "fonti": "AL18:8; MZ18:6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "D04",
+      "capitolo": "rinviato",
+      "titolo": "Esempio anello End_K(V) e gruppo degli automorfismi lineari",
+      "fonti": "MZ17:3",
+      "stato": "rinvio confermato nel riesame totale",
+      "esito": [
+        "MZ17:3 riletto; spazi vettoriali e linearita ancora assenti dal flusso A–L; esempio conservato nel registro per ripresa, senza importare la teoria."
+      ]
+    },
+    {
+      "id": "G21",
+      "capitolo": "8",
+      "titolo": "Generato di un insieme: parole e combinazioni intere",
+      "fonti": "AL19:1-3; MZ19:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G22",
+      "capitolo": "8",
+      "titolo": "Sottogruppi di Z, divisibilità, join e intersezione",
+      "fonti": "AL19:4-5; MZ19:3-4",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G23",
+      "capitolo": "8",
+      "titolo": "Morfismi di gruppi ed esempi affini/esponenziale",
+      "fonti": "AL19:5-7; MZ19:4-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G24",
+      "capitolo": "8",
+      "titolo": "Ordine, morfismo n→g^n e classificazione ciclica",
+      "fonti": "AL19:7-9; AL20:1-2; MZ19:6-7; MZ20:1-2",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati.",
+        "Definite le classi modulo1 prima dell’uso; gruppo banale, senza estendere phi(1); distinto infinito numerabile da ordine finito."
+      ]
+    },
+    {
+      "id": "G25",
+      "capitolo": "8",
+      "titolo": "Sottogruppi ciclici e corrispondenza con divisori",
+      "fonti": "AL20:2-5; MZ20:2-5",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G26",
+      "capitolo": "8",
+      "titolo": "Ordine di classi/potenze e generatori",
+      "fonti": "AL20:6-7; MZ20:5-6",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G27",
+      "capitolo": "8",
+      "titolo": "Esercizio unità modulo16 e17",
+      "fonti": "AL20:7; MZ20:6-7",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    },
+    {
+      "id": "G28",
+      "capitolo": "8",
+      "titolo": "Inclusioni fra simmetrici e cicli",
+      "fonti": "AL20:8-10",
+      "stato": "riesame contenutistico completato",
+      "esito": [
+        "Riletto testo completo di phi e08a–08f; confronto con originali AL16–18/MZ15–18 e inventario/prove19–20 della stessa sessione; tutte le prove, tabelle ed esempi distinti verificati."
+      ]
+    }
+  ],
+  "fonti": [
+    {
+      "serie": "AL",
+      "lezione": 1,
+      "pagine": 4,
+      "file": "fonti/Lezione 1.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 2,
+      "pagine": 6,
+      "file": "fonti/Lezione 2.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 3,
+      "pagine": 8,
+      "file": "fonti/Lezione 3.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 4,
+      "pagine": 7,
+      "file": "fonti/Lezione 4.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 5,
+      "pagine": 7,
+      "file": "fonti/Lezione 5.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 6,
+      "pagine": 7,
+      "file": "fonti/Lezione 6.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 7,
+      "pagine": 3,
+      "file": "fonti/Lezione 7.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 8,
+      "pagine": 6,
+      "file": "fonti/Lezione 8.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 9,
+      "pagine": 6,
+      "file": "fonti/Lezione 9.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 10,
+      "pagine": 4,
+      "file": "fonti/Lezione 10.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 11,
+      "pagine": 7,
+      "file": "fonti/Lezione 11.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 12,
+      "pagine": 9,
+      "file": "fonti/Lezione 12.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 13,
+      "pagine": 5,
+      "file": "fonti/Lezione 13.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 14,
+      "pagine": 9,
+      "file": "fonti/Lezione 14.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 15,
+      "pagine": 9,
+      "file": "fonti/Lezione 15.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 16,
+      "pagine": 4,
+      "file": "fonti/Lezione 16.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 17,
+      "pagine": 10,
+      "file": "fonti/Lezione 17.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 18,
+      "pagine": 8,
+      "file": "fonti/Lezione 18.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "AL",
+      "lezione": 19,
+      "pagine": 9,
+      "file": "fonti/Lezione 19.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evidenza": "Lettura visiva integrale nella fase integrazione19–20 della stessa sessione; schemi preventivi e riesame G21–G28 in LEZIONI_19-20_2026-11-13.md; contenuti correnti riletti nel riesame totale; originali invariati."
+    },
+    {
+      "serie": "AL",
+      "lezione": 20,
+      "pagine": 10,
+      "file": "fonti/Lezione 20.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "evidenza": "Lettura visiva integrale nella fase integrazione19–20 della stessa sessione; schemi preventivi e riesame G21–G28 in LEZIONI_19-20_2026-11-13.md; contenuti correnti riletti nel riesame totale; originali invariati."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 1,
+      "pagine": 2,
+      "file": "fonti/M-Z/Lezione 1.pdf",
+      "pagine_riesaminate": [
+        1,
+        2
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 2,
+      "pagine": 7,
+      "file": "fonti/M-Z/Lezione 2.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 3,
+      "pagine": 9,
+      "file": "fonti/M-Z/Lezione 3.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 4,
+      "pagine": 7,
+      "file": "fonti/M-Z/Lezione 4.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 5,
+      "pagine": 8,
+      "file": "fonti/M-Z/Lezione 5.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 6,
+      "pagine": 6,
+      "file": "fonti/M-Z/Lezione 6.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 7,
+      "pagine": 9,
+      "file": "fonti/M-Z/Lezione 7.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 8,
+      "pagine": 7,
+      "file": "fonti/M-Z/Lezione 8.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 9,
+      "pagine": 9,
+      "file": "fonti/M-Z/Lezione 9.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 10,
+      "pagine": 4,
+      "file": "fonti/M-Z/Lezione 10.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 11,
+      "pagine": 7,
+      "file": "fonti/M-Z/Lezione 11.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 12,
+      "pagine": 7,
+      "file": "fonti/M-Z/Lezione 12.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 13,
+      "pagine": 8,
+      "file": "fonti/M-Z/Lezione 13.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 14,
+      "pagine": 5,
+      "file": "fonti/M-Z/Lezione 14.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 15,
+      "pagine": 11,
+      "file": "fonti/M-Z/Lezione 15.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 16,
+      "pagine": 4,
+      "file": "fonti/M-Z/Lezione 16.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 17,
+      "pagine": 7,
+      "file": "fonti/M-Z/Lezione 17.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 18,
+      "pagine": 6,
+      "file": "fonti/M-Z/Lezione 18.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "evidenza": "Rilettura visiva diretta nel riesame totale; confronto con testo attivo."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 19,
+      "pagine": 7,
+      "file": "fonti/M-Z/Lezione 19.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Lettura visiva integrale nella fase integrazione19–20 della stessa sessione; schemi preventivi e riesame G21–G28 in LEZIONI_19-20_2026-11-13.md; contenuti correnti riletti nel riesame totale; originali invariati."
+    },
+    {
+      "serie": "MZ",
+      "lezione": 20,
+      "pagine": 7,
+      "file": "fonti/M-Z/Lezione 20.pdf",
+      "pagine_riesaminate": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidenza": "Lettura visiva integrale nella fase integrazione19–20 della stessa sessione; schemi preventivi e riesame G21–G28 in LEZIONI_19-20_2026-11-13.md; contenuti correnti riletti nel riesame totale; originali invariati."
+    }
+  ],
+  "problemi": [
+    {
+      "id": "RT01",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Scomposizione7regioni abbreviata, nomi estensionale/intensionale e sup/inf omessi"
+    },
+    {
+      "id": "RT02",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "EsempioMZrelazione con righe/colonne vuote omesso"
+    },
+    {
+      "id": "RT03",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Notazione divisibilità in figura prima della definizione; equivalenza implicita nel criterio di compatibilità"
+    },
+    {
+      "id": "RT04",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Termini retroimmagine/covarianza/controvarianza/unilatera e riferimentoa) non aggiornato nel3"
+    },
+    {
+      "id": "RT05",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Quattro implicazioni della prova sugli infiniti con lettere residue"
+    },
+    {
+      "id": "RT06",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Caso X^r generale e cardinalità infinita dell’unione daMZ9 non espliciti nel4"
+    },
+    {
+      "id": "RT07",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "U(Z) prima non definito, refuso e passaggio di ordine; criterio MCD con esistenza implicita; numerazione primo/prodotto e fattorizzazione"
+    },
+    {
+      "id": "RT08",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Compito costruttivo MZ14:5 omesso e descritto erroneamente come altro metodo nel registro; recuperato prima del teorema cinese"
+    },
+    {
+      "id": "RT09",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Parti indipendenti delle proposizioni su funzioni e prodotto di anelli numerate; n>=1 e entrate di I_n espliciti, colonne anziche vettori non definiti"
+    },
+    {
+      "id": "RT10",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Potenza di potenza usata nelle lezioni19–20 senza formula esplicita; notazione modulo1 usata prima di definire il caso; aggiunte precisazioni locali e corretti spazi in svolgimentoU16"
+    },
+    {
+      "id": "RT11",
+      "stato": "risolto; testo e rendering verificati",
+      "contenuto": "Titoli di prova isolati, simboli QED a pagina successiva e sottosezione separata dal compito; risolti con Needspace prima dei blocchi e qedhere, senza abbreviare prove."
+    }
+  ],
+  "verifiche_finali": {
+    "compilazioni": "condivisa e compilatore integrato riuscite sul sorgente finale; nessun Warning/Overfull/Underfull",
+    "pagine_volume": 83,
+    "estratti": 8,
+    "pagine_testo_verificate": 79,
+    "link_interni": 27,
+    "link_al_volume": 9,
+    "confronto": "pixel, testo, flussi, geometria, numerazione e tutte le annotazioni identici al volume",
+    "originali_byte_identici": 40,
+    "riesame_fonti": "242 pagine1–18 rilette visivamente;33 pagine19–20 gia lette integralmente nella precedente fase della stessa sessione e confrontate col testo corrente;275 complessive",
+    "revisione_visiva_volume": "Tutte83 pagine ispezionate mediante21 tavole; aree rifinite e diagrammi mirati ricontrollati a piena risoluzione. Ultimo controllo dopo qedhere in7.9: PDF57–58.",
+    "sorgenti_modificati": [
+      "capitoli/01-insiemi.tex",
+      "capitoli/02-relazioni.tex",
+      "capitoli/03-funzioni.tex",
+      "capitoli/04-cardinalita.tex",
+      "capitoli/05-interi.tex",
+      "capitoli/06-aritmetica-modulare.tex",
+      "capitoli/07-anelli.tex",
+      "capitoli/08a-gruppi.tex",
+      "capitoli/08e-gruppi-ciclici.tex"
+    ],
+    "main_preambolo_invariati": true,
+    "copie_annotate_modificate": false,
+    "pdf_sha256": "f4eef97c167f16e6f8b9db046c2d8d9dd72e01d7e1ef523ee3a960c200173278",
+    "indice_dimostrazioni": "aggiornato nelle sole parti di Algebra e nella cronologia; annotazioni e altre materie preservate",
+    "limiti": "riesame manuale e riscontri finiti, senza certificazione formale; D04 motivatamente rinviato; assunti e risultato generale sui cicli senza prova distinti"
+  },
+  "stato": "revisione totale completata"
+}

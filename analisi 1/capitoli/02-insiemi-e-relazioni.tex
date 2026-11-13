@@ -110,15 +110,16 @@ Con $A=\{1,2,3\}$ e $B=\{3,4\}$ si ha $A\cup B=\{1,2,3,4\}$, $A\cap B=\{3\}$ e $
 
 \begin{proposizione}[Leggi di De Morgan]
 Per $A,B\subseteq U$, con i complementi calcolati nello stesso ambiente,
-\[
-  (A\cup B)^c=A^c\cap B^c,\qquad
-  (A\cap B)^c=A^c\cup B^c.
-\]
+\begin{enumerate}[label=\arabic*.]
+\item $(A\cup B)^c=A^c\cap B^c$.
+\item $(A\cap B)^c=A^c\cup B^c$.
+\end{enumerate}
 \end{proposizione}
 % Evita che la sola frase conclusiva della seconda identità passi alla pagina seguente.
 \enlargethispage{\baselineskip}
 \begin{proof}
-\textbf{Prima identità.} Per ogni $x\in U$,
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Prima identità.} Per ogni $x\in U$,
 \[
   \begin{aligned}
     x\in(A\cup B)^c
@@ -128,8 +129,7 @@ Per $A,B\subseteq U$, con i complementi calcolati nello stesso ambiente,
   \end{aligned}
 \]
 Le due condizioni di appartenenza sono equivalenti per ogni elemento dell'ambiente, quindi i due insiemi sono uguali.
-
-\textbf{Seconda identità.} Analogamente, per ogni $x\in U$,
+\item \textbf{Seconda identità.} Analogamente, per ogni $x\in U$,
 \[
   \begin{aligned}
     x\in(A\cap B)^c
@@ -139,6 +139,7 @@ Le due condizioni di appartenenza sono equivalenti per ogni elemento dell'ambien
   \end{aligned}
 \]
 Si ottiene anche la seconda uguaglianza.
+\end{enumerate}
 \end{proof}
 
 Le formule esprimono a livello di insiemi le equivalenze logiche $\neg(P\lor Q)\Leftrightarrow(\neg P\land\neg Q)$ e $\neg(P\land Q)\Leftrightarrow(\neg P\lor\neg Q)$. Saranno utili per passare dalle proprietà degli aperti a quelle dei chiusi.

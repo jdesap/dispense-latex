@@ -22,3 +22,6 @@ Confrontare esattamente il corpo spostato con la precedente sezione7.6; conserva
 - Confronto grafico con lo snapshot: le52 pagine dei capitoli1–7 (PDF5–56) hanno pixel e numerazione identici. Ispezionati l’indice, il raccordo finale7 e tutte le pagine8: nessun problema visivo aperto.
 - Risultati: `VERIFICA_CAPITOLO_EULERO_E_GRUPPI_2026-11-05.json`, `../../strumenti/VERIFICA_ESPORTAZIONE_2026-11-05.json`, stato corrente `VERIFICA_FINALE.json`. Verifica della conservazione riproducibile con `verifiche/verifica_ricollocazione_eulero.py`, dopo la verifica PDF condivisa.
 - Prossima lezioneA–L17. Nessun materiale ricevuto pendente; nessuna copia annotata modificata, nessun commit/push/pubblicazione.
+
+
+**Aggiornamento11 novembre2026:** questo è il registro storico della sola ricollocazione. Le lezioni17–18 sono ora integrate, inclusa la teoria dei gruppi effettivamente presente nelle nuove fonti. Stato corrente in `LEZIONI_17-18_2026-11-11.md` e `VERIFICA_FINALE.json`.

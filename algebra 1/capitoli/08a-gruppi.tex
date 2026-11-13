@@ -1,0 +1,185 @@
+% !TeX root = ../main.tex
+\section{Gruppi: assiomi e prime proprietà}
+% A–L L17 pp. 3–6 e L18 p. 2; M–Z L17 pp. 1–3.
+Un anello possiede due operazioni; un gruppo ne considera una sola. La struttura dipende sia dall'insieme sia dall'operazione scelta: gli interi sono un gruppo per la somma, ma non per il prodotto.
+
+\begin{definizione}
+Un \textbf{gruppo} è una coppia $(G,\cdot)$ con $G\ne\varnothing$ e un'operazione binaria $\cdot:G\times G\to G$ tale che:
+\begin{enumerate}
+\item $(ab)c=a(bc)$ per ogni $a,b,c\in G$;
+\item esiste un \textbf{elemento neutro} $1_G\in G$ con $1_Ga=a1_G=a$ per ogni $a\in G$;
+\item per ogni $a\in G$ esiste un \textbf{inverso} $b\in G$ con $ab=ba=1_G$.
+\end{enumerate}
+Il gruppo è \textbf{abeliano}, o \textbf{commutativo}, se inoltre $ab=ba$ per ogni $a,b\in G$. Il prodotto $ab$ abbrevia $a\cdot b$; la commutatività non è richiesta negli assiomi di gruppo.
+\end{definizione}
+
+\begin{proposizione}\label{prop:gruppo-prime}
+In un gruppo valgono:
+\begin{enumerate}[label=\arabic*.]
+\item Il neutro e l\textquotesingle inverso di ciascun elemento sono unici. Indicato l\textquotesingle inverso di $a$ con $a^{-1}$, si ha $(a^{-1})^{-1}=a$.
+\item $ac=bc\Rightarrow a=b$ e $ca=cb\Rightarrow a=b$ (cancellazione).
+\item $(ab)^{-1}=b^{-1}a^{-1}$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Se $e,e'$ sono neutri, $e=ee'=e'$. Se $b,c$ sono inversi di $a$, allora $b=b(ac)=(ba)c=c$. Le identità $aa^{-1}=a^{-1}a=1_G$ mostrano anche che $a$ è l'inverso di $a^{-1}$.
+\item Da $ac=bc$ si ottiene $(ac)c^{-1}=(bc)c^{-1}$ e, per associatività, $a=b$. Da $ca=cb$ si moltiplica invece a sinistra per $c^{-1}$. Non si scambia l'ordine dei fattori.
+\item Infine
+\[
+(ab)(b^{-1}a^{-1})=a(bb^{-1})a^{-1}=1_G,
+\qquad (b^{-1}a^{-1})(ab)=b^{-1}(a^{-1}a)b=1_G.
+\]
+L'unicità dell'inverso dà la formula per $(ab)^{-1}$: occorre invertire anche l'ordine.
+\end{enumerate}
+\end{proof}
+
+\subsection{Potenze e notazione additiva}
+\begin{definizione}
+Per $a\in G$ e $n\ge1$, $a^n$ è il prodotto di $n$ fattori uguali ad $a$. Si pone inoltre
+\[
+a^0=1_G,\qquad a^{-n}=(a^{-1})^n\quad(n\ge1).
+\]
+In un gruppo abeliano si può usare la \textbf{notazione additiva}: l'operazione si scrive $+$, il neutro $0$, l'inverso di $a$ si scrive $-a$, e la potenza $a^n$ diventa il multiplo $na$. Per esempio, in $(\Z,+)$, $3a=a+a+a$.
+\end{definizione}
+
+\begin{proposizione}\label{prop:potenze-gruppo}
+Per ogni $a\in G$ e $m,n\in\Z$,
+\begin{enumerate}[label=\arabic*.]
+\item $a^ma^n=a^{m+n}$.
+\item $(a^n)^{-1}=a^{-n}$.
+\item $(a^m)^n=a^{mn}$.
+\end{enumerate}
+In particolare due potenze dello stesso elemento commutano, anche se $G$ non è abeliano.
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item La concatenazione dei fattori dà la prima identità per $m,n\ge0$. Ripetendo la formula dell'inverso di un prodotto si ha $(a^k)^{-1}=(a^{-1})^k$ per $k\ge1$.
+
+Se $m\ge0$ e $n=-k<0$, per $m\ge k$ si scrive $a^m=a^{m-k}a^k$ e si cancella $a^k$ con $(a^k)^{-1}$. Per $m<k$ si scrive $a^k=a^{k-m}a^m$, quindi $a^m(a^k)^{-1}=(a^{k-m})^{-1}=a^{m-k}$. Il caso $m<0,n\ge0$ si ottiene con le stesse cancellazioni sull'altro lato. Se entrambi sono negativi, si applica la concatenazione alle potenze di $a^{-1}$. La formula vale così per tutti gli interi.
+\item Ponendo $m=-n$ nel punto~1 si verifica l'identità sull'inverso.
+\item Fissato $m\in\Z$, per $n=0$ entrambi i membri valgono $1_G$. Se la formula vale per $n\ge0$, allora
+\[
+(a^m)^{n+1}=(a^m)^na^m=a^{mn}a^m=a^{m(n+1)}
+\]
+per il punto~1. L'induzione dà il risultato per ogni $n\ge0$. Se $n=-k<0$, la definizione, il caso non negativo e il punto~2 danno $(a^m)^{-k}=((a^m)^k)^{-1}=(a^{mk})^{-1}=a^{-mk}$.
+\end{enumerate}
+Infine $m+n=n+m$ nel punto~1 dà la commutazione delle potenze di $a$.
+\end{proof}
+
+\subsection{Gruppi ottenuti dagli anelli}
+\begin{proposizione}
+\begin{enumerate}[label=\arabic*.]
+\item Se $R$ è un anello, $(R,+)$ è un gruppo abeliano.
+\item Se $R$ ha unità, $(U(R),\cdot)$ è un gruppo, abeliano quando $R$ è commutativo.
+\item Se $K$ è un campo, $U(K)=K\setminus\{0\}$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Gli assiomi additivi di anello sono esattamente quelli di un gruppo abeliano.
+\item Per il prodotto delle unità, l'operazione è interna perché, per $a,b\in U(R)$, $b^{-1}a^{-1}$ è un inverso bilatero di $ab$. L'associatività è ereditata da $R$, $1_R$ è invertibile e l'inverso di un'unità è ancora un'unità. Se $R$ è commutativo lo è anche il prodotto ristretto.
+\item In un campo ogni elemento non nullo è invertibile, mentre lo zero non lo è perché $1_K\ne0_K$.
+\end{enumerate}
+\end{proof}
+
+\begin{esempio}
+$(\Z,+)$, $(\Z/25\Z,+)$ e $(U(\Z/25\Z),\cdot)$ sono gruppi abeliani. I due gruppi modulo $25$ hanno rispettivamente $25$ e $20$ elementi: cambiano sia l'insieme sia l'operazione. In generale $U(\Z/m\Z)$ ha $\varphi(m)$ elementi. Poiché $13$ è primo, $U(\Z/13\Z)$ è il gruppo moltiplicativo delle dodici classi non nulle.
+
+$(\Z,\cdot)$, $(\Q,\cdot)$ e $(\R,\cdot)$ non sono gruppi: contengono lo zero, che non ha inverso moltiplicativo. Sono invece gruppi abeliani $(\Q\setminus\{0\},\cdot)$ e $(\R\setminus\{0\},\cdot)$.
+\end{esempio}
+
+\section{Permutazioni e trasformazioni affini}
+\subsection{Il gruppo simmetrico}
+% A–L L17 pp. 7–8; M–Z L17 pp. 3–5.
+Le operazioni puntuali sulle funzioni e la composizione sono operazioni diverse. Nell'anello $\R^{\R}$ con prodotto puntuale, le unità sono le funzioni che non si annullano mai e formano un gruppo abeliano; per la composizione, invece, le funzioni invertibili sono esattamente le biezioni. Tutte le funzioni $\R\to\R$ con la sola composizione formano un monoide: la composizione è associativa e ha neutro $\operatorname{id}_{\R}$, ma non tutte le funzioni hanno inversa.
+
+\begin{definizione}
+Per un insieme non vuoto $X$, si indica con
+\[
+S_X=\operatorname{Sym}(X)=\operatorname{Perm}(X)
+   =\{\sigma:X\to X\mid\sigma\text{ è biettiva}\}
+\]
+l'insieme delle \textbf{permutazioni} di $X$. Con la composizione forma il \textbf{gruppo simmetrico} su $X$. Se $X=\{1,\ldots,n\}$, si scrive $S_n$.
+\end{definizione}
+
+\begin{proposizione}\label{prop:simmetrico}
+\begin{enumerate}[label=\arabic*.]
+\item $S_X$ è un gruppo con neutro $\operatorname{id}_X$ e inversa la funzione inversa.
+\item Per $n\ge1$, $|S_n|=n!$.
+\item Se $X$ ha almeno tre elementi, $S_X$ non è abeliano.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item La composta di due biezioni è biettiva; la composizione è associativa, l'identità è biettiva e l'inversa di una biezione è biettiva. Sono le proprietà già dimostrate per le funzioni.
+\item Per scegliere una biezione di $\{1,\ldots,n\}$, l'immagine di $1$ ha $n$ possibilità, quella di $2$ ne ha $n-1$ perché deve essere diversa, e così via fino all'ultima scelta obbligata. Il conteggio è $n(n-1)\cdots1=n!$.
+\item Scelti tre punti distinti $x,y,z$, siano $s$ lo scambio di $x,y$ e $t$ lo scambio di $y,z$, lasciando fissi gli altri punti. Allora $(s\circ t)(x)=y$, mentre $(t\circ s)(x)=z$: le due composte sono diverse. Per uno o due punti, invece, il gruppo è abeliano (rispettivamente il solo neutro, oppure neutro e unico scambio).
+\end{enumerate}
+\end{proof}
+
+\Needspace{30\baselineskip}
+\begin{esempio}[Leggere e comporre le permutazioni]
+La notazione su due righe elenca sopra gli argomenti e sotto le immagini. In $S_4$, siano
+\[
+\sigma=\begin{pmatrix}1&2&3&4\\1&3&2&4\end{pmatrix},\qquad
+\tau=\begin{pmatrix}1&2&3&4\\4&2&1&3\end{pmatrix}.
+\]
+Si ha $\sigma^2=\operatorname{id}$, quindi $\sigma^{-1}=\sigma$. Nella composta $\sigma\circ\tau$ si applica prima $\tau$, poi $\sigma$:
+\[
+\begin{array}{c|rrrr}
+x&1&2&3&4\\\hline
+\tau(x)&4&2&1&3\\
+\sigma(\tau(x))&4&3&1&2
+\end{array}
+\]
+Per seguire un singolo punto, il percorso è
+\begin{center}
+\begin{tikzpicture}[>=Stealth,baseline]
+\node (a) at (0,0) {$2$}; \node (b) at (2.2,0) {$2$}; \node (c) at (4.4,0) {$3$};
+\draw[->] (a)--node[above]{$\tau$}(b); \draw[->] (b)--node[above]{$\sigma$}(c);
+\end{tikzpicture}
+\end{center}
+Invertendo l'ordine si ottiene invece
+\[
+\sigma\circ\tau=\begin{pmatrix}1&2&3&4\\4&3&1&2\end{pmatrix},\qquad
+\tau\circ\sigma=\begin{pmatrix}1&2&3&4\\4&1&2&3\end{pmatrix}.
+\]
+Un secondo esempio, con $\rho=\left(\begin{smallmatrix}1&2&3&4\\3&2&4&1\end{smallmatrix}\right)$, dà
+\[
+\rho\circ\sigma=\begin{pmatrix}1&2&3&4\\3&4&2&1\end{pmatrix},\qquad
+\sigma\circ\rho=\begin{pmatrix}1&2&3&4\\2&3&4&1\end{pmatrix}.
+\]
+Anche qui l'ordine delle applicazioni modifica il risultato.
+\end{esempio}
+
+\subsection{Il gruppo affine reale}
+% A–L L17 pp. 9–10 e L18 p. 1 (pagina ripetuta); M–Z L17 pp. 5–6.
+\begin{definizione}
+Per $a\in\R\setminus\{0\}$ e $b\in\R$, poniamo $f_{a,b}(x)=ax+b$. L'insieme
+\[
+\operatorname{Aff}(\R)=\{f_{a,b}:\R\to\R\mid a\ne0,\ b\in\R\}
+\]
+è l'insieme delle \textbf{trasformazioni affini reali invertibili}; lo consideriamo con la composizione. I coefficienti sono univoci: $b=f_{a,b}(0)$ e $a=f_{a,b}(1)-f_{a,b}(0)$.
+\end{definizione}
+
+\begin{proposizione}\label{prop:affini}
+\begin{enumerate}[label=\arabic*.]
+\item $\operatorname{Aff}(\R)$ è un gruppo non abeliano e
+\[
+f_{a,b}\circ f_{a',b'}=f_{aa',\,ab'+b},\qquad
+1_{\operatorname{Aff}(\R)}=f_{1,0},\qquad
+f_{a,b}^{-1}=f_{a^{-1},\,-ba^{-1}}.
+\]
+\item Due trasformazioni $f_{a,b}$ e $f_{a',b'}$ commutano se e solo se
+\[
+(1-a')b=(1-a)b'.
+\]
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Applicando prima $f_{a',b'}$ e poi $f_{a,b}$ si ottiene $a(a'x+b')+b=aa'x+ab'+b$. Poiché $aa'\ne0$, la composizione appartiene ancora all'insieme. L'associatività è quella della composizione di funzioni e $f_{1,0}$ è l'identità. Risolvendo $y=ax+b$ si trova $x=a^{-1}y-ba^{-1}$; sostituendo, questa funzione è inversa su entrambi i lati. Quindi ogni elemento è una biezione e gli assiomi di gruppo sono verificati.
+\item Le due composte hanno lo stesso coefficiente $aa'=a'a$; coincidono se e solo se $ab'+b=a'b+b'$, equivalente al criterio enunciato. Non vale per ogni coppia: $f_{2,1}\circ f_{1,2}$ manda $x$ in $2x+5$, mentre $f_{1,2}\circ f_{2,1}$ lo manda in $2x+3$.
+\end{enumerate}
+\end{proof}

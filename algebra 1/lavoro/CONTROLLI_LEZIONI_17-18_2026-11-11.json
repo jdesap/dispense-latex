@@ -1,0 +1,55 @@
+{
+  "data": "2026-11-11",
+  "stato": "pass",
+  "controlli_supplementari": {
+    "prodotti_S4": 576,
+    "sottoinsiemi_S3": 64,
+    "sottogruppi_S3": 6,
+    "coppie_sottogruppi_S3": 36,
+    "centralizzanti_S3": 64,
+    "identita_potenze_S3": 486,
+    "affinita_razionali": 30,
+    "coppie_affinita": 900,
+    "esempi_permutazioni_e_affini": "tutti i valori scritti verificati esattamente",
+    "unità_moduli": {
+      "3": 2,
+      "25": 20,
+      "75": 40,
+      "13": 12
+    }
+  },
+  "conservazione": {
+    "capitoli_1_6_sorgenti_identici": true,
+    "main_e_preambolo_identici": true,
+    "vecchia_parte_phi_preservata": true,
+    "altre_materie_indice_dimostrazioni_identiche": true,
+    "capitoli_1_6_pixel_identici_pagine": 43,
+    "pagine_variate_capitolo7": [
+      44,
+      49
+    ]
+  },
+  "copertura": {
+    "pdf": 36,
+    "pagine": 242,
+    "AL": 119,
+    "MZ": 123,
+    "unita_totali": 147,
+    "unita_integrate": 146,
+    "rinvii": [
+      "D04"
+    ]
+  },
+  "struttura": {
+    "capitoli": 8,
+    "sezioni": 44,
+    "sottosezioni": 21,
+    "figure_tikz": 16,
+    "prove": 79,
+    "esercizi": 35,
+    "svolgimenti": 35,
+    "label_uniche": 49,
+    "riferimenti_risolti": 28
+  },
+  "limite": "Riscontri finiti e tecnici supplementari, non certificazione delle dimostrazioni generali; riesame manuale per unità nel registro prove."
+}

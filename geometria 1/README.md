@@ -1,20 +1,33 @@
 # Appunti di geometria 1
 
+**Revisione editoriale del 13 novembre 2026:** enunciati distinti e parti delle prove numerati in corrispondenza, senza abbreviazioni. Volume corrente: **60 pagine**; estratti di capitolo: 26, 11, 13, 7 pagine. [Resoconto e verifiche](../strumenti/NUMERAZIONE_ENUNCIATI_2026-11-13.md). I conteggi nei resoconti delle integrazioni precedenti descrivono le rispettive versioni storiche.
+
 Appunti di **Jude De Sa'Pinto** dal corso del **Prof. Francesco Bottacin**.
 La dispensa cresce per sessioni: nel PDF attivo entrano soltanto le parti
 confrontate con la fonte, compilate e controllate nell'impaginazione.
 
 ## Stato attuale
 
-Sono integrate le **lezioni 5–18** (13 PDF, 65 pagine di fonti).
+Sono integrate le **lezioni 5–21** (16 PDF, 81 pagine di fonti).
 Il capitolo 1 raccoglie spazi vettoriali e sottospazi; il capitolo 2,
 **Sistemi lineari e matrici**, comprende Gauss, rango, prodotto e trasposta,
-inverse, sistemi omogenei, Rouché–Capelli ed esercizi con parametro.
-Il nuovo capitolo 3, **Applicazioni lineari**, comprende linearità,
-isomorfismi, nucleo e immagine, teorema della dimensione, proiezioni e
-simmetrie, matrici associate, operazioni e cambiamento di basi.
-Il volume aggiornato al 2 novembre 2026 ha **45 pagine**, con 3 preliminari,
-26 pagine per il capitolo 1, 7 per il capitolo 2 e 9 per il capitolo 3.
+matrici elementari, inverse, sistemi omogenei, Rouché–Capelli ed esercizi.
+Il capitolo 3, **Applicazioni lineari**, comprende linearità, isomorfismi,
+nucleo e immagine, teorema della dimensione, criterio di invertibilità,
+proiezioni e simmetrie, matrici associate e cambiamento di basi.
+Il nuovo capitolo 4, **Dualità e applicazione trasposta**, sviluppa duale,
+base duale, valutazione, biduale, annullatori e trasposta nelle basi duali.
+Il volume aggiornato al 13 novembre 2026 ha **60 pagine**, con 3 preliminari,
+26 pagine per il capitolo 1, 11 per il capitolo 2, 13 per il capitolo 3
+e 7 per il capitolo 4. Gli enunciati sulle dimensioni distinguono il caso
+finito dal risultato infinito citato senza prova.
+Chiarite le notazioni e verificati i diagrammi del prodotto, delle mappe
+inverse e della dualità. L'indice delle dimostrazioni da studiare è
+aggiornato nel file comune `../DIMOSTRAZIONI_DA_STUDIARE.md`.
+Conclusa anche la **revisione totale di correttezza e chiarezza** dei quattro
+capitoli: prove rilette, calcoli esatti ricontrollati e 17 TikZ verificati.
+Ambito, interventi ed evidenze in
+`lavoro/REVISIONE_TOTALE_2026-11-12.md`.
 La parte sui numeri complessi resta in attesa di consegna separata.
 
 La revisione editoriale integrale, svolta in quattro sessioni per Spazi

@@ -1,0 +1,557 @@
+% !TeX root = ../main.tex
+\chapter{Aritmetica modulare}\label{cap:modulare}
+\fonti{Lezioni 12, 13, 14 e 15}
+
+\section{Congruenza e classi resto}
+% A–L L12 pp. 1–2; M–Z L12 pp. 4–5.
+Fissiamo un intero $m\ge2$, detto \textbf{modulo}.
+\begin{definizione}
+Due interi $x,y$ sono \textbf{congrui modulo $m$} se hanno lo stesso resto nella divisione euclidea per $m$. Si scrive $x\equiv_m y$, oppure $x\equiv y\pmod m$.
+\end{definizione}
+
+\begin{proposizione}\label{prop:congruenza-divisibilita}
+Per ogni $x,y\in\Z$,
+\[
+x\equiv y\pmod m\quad\Longleftrightarrow\quad m\mid x-y.
+\]
+\end{proposizione}
+\begin{proof}
+Scriviamo le divisioni $x=mq_1+r_1$, $y=mq_2+r_2$, con $0\le r_1,r_2<m$. Sottraendo,
+\[
+x-y=m(q_1-q_2)+(r_1-r_2).
+\]
+Se $r_1=r_2$, la differenza è multipla di $m$. Viceversa, se $m\mid x-y$, allora $m\mid r_1-r_2$. Poiché $|r_1-r_2|<m$, tale multiplo di $m$ deve essere zero: $r_1=r_2$.
+\end{proof}
+
+\begin{proposizione}
+La congruenza modulo $m$ è una relazione di equivalenza su $\Z$.
+\end{proposizione}
+\begin{proof}
+È riflessiva perché $m\mid x-x=0$. È simmetrica perché da $x-y=mk$ segue $y-x=m(-k)$. È transitiva perché da $x-y=mk$ e $y-z=mh$ segue $x-z=m(k+h)$.
+\end{proof}
+
+La stessa equivalenza è quella indotta dalla funzione resto
+\[
+\rho_m:\Z\longrightarrow\{0,1,\ldots,m-1\},\qquad
+\rho_m(x)=\text{resto della divisione di $x$ per $m$}:
+\]
+due interi sono equivalenti esattamente quando hanno la stessa immagine.
+
+\begin{definizione}
+La \textbf{classe resto} di $x$ modulo $m$ è
+\[
+[x]_m=\{y\in\Z\mid m\mid x-y\}
+     =\{x+mk\mid k\in\Z\}=x+m\Z.
+\]
+L'insieme quoziente si indica con $\Z/m\Z$. Quando il modulo è chiaro, scriviamo semplicemente $[x]$; si usa anche la notazione $\overline{x}$.
+\end{definizione}
+
+L'uguaglianza delle due descrizioni della classe segue da $m\mid x-y\iff y=x+mk$ per qualche $k\in\Z$.
+
+\begin{proposizione}
+Ogni classe ha un unico rappresentante in $\{0,1,\ldots,m-1\}$. In particolare
+\[
+\Z/m\Z=\{[0]_m,[1]_m,\ldots,[m-1]_m\},\qquad |\Z/m\Z|=m.
+\]
+\end{proposizione}
+\begin{proof}
+La divisione $x=mq+r$, $0\le r<m$, dà $[x]_m=[r]_m$, quindi ogni classe ha un tale rappresentante. Se $r,s$ sono entrambi in quell'intervallo e $[r]_m=[s]_m$, allora $m\mid r-s$ e $|r-s|<m$, dunque $r=s$. Le $m$ classi elencate sono perciò distinte ed esauriscono il quoziente.
+\end{proof}
+
+\begin{esempio}
+Per $m=2$, $[0]_2=2\Z$ è l'insieme dei pari e $[1]_2=1+2\Z$ quello dei dispari. Per $m=3$ le classi sono $3\Z$, $1+3\Z$ e $2+3\Z$: per esempio $[-3]_3=[0]_3=[6]_3$ e $[8]_3=[5]_3=[2]_3$.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[x=1.7cm,y=.65cm]
+\draw[asse] (-2.35,0)--(2.5,0);
+\foreach \k/\testo in {-2/{x-2m},-1/{x-m},0/{x},1/{x+m},2/{x+2m}}{
+  \fill[coloreschema] (\k,0) circle (2pt);
+  \node[below=5pt] at (\k,0) {$\testo$};
+}
+\foreach \k in {-2,-1,0,1}{\draw[coloreschema] (\k,.15) to[bend left=30] (\k+1,.15);}
+\node at (0,1.1) {Rappresentanti della stessa classe $[x]_m$};
+\end{tikzpicture}
+\end{schema}
+
+\begin{osservazione}
+Tra classi si scrive un'\emph{uguaglianza}; tra interi, una \emph{congruenza}. Per esempio $[-2]_3=[1]_3$ e $-2\equiv1\pmod3$, mentre $-2\ne1$ in $\Z$.
+\end{osservazione}
+
+\section{Operazioni sul quoziente}
+% A–L L12 pp. 3–4: scelta la prova esplicita, lasciata per esercizio in M–Z p. 5.
+\begin{proposizione}\label{prop:operazioni-modulari}
+Le seguenti regole definiscono operazioni su $\Z/m\Z$, indipendenti dai rappresentanti scelti:
+\begin{enumerate}[label=\arabic*.]
+\item $[a]_m+[b]_m=[a+b]_m$.
+\item $[a]_m[b]_m=[ab]_m$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+Siano $[a]_m=[a']_m$ e $[b]_m=[b']_m$, cioè $m\mid a-a'$ e $m\mid b-b'$. \begin{enumerate}[label=\arabic*.]
+\item Per la somma,
+\[
+(a+b)-(a'+b')=(a-a')+(b-b')
+\]
+è divisibile per $m$, quindi $[a+b]_m=[a'+b']_m$.
+\item Per il prodotto,
+\[
+ab-a'b'=a(b-b')+(a-a')b'
+\]
+è ancora divisibile per $m$, quindi $[ab]_m=[a'b']_m$. Entrambe le operazioni sono dunque ben definite.
+\end{enumerate}
+\end{proof}
+
+\begin{proposizione}
+Le operazioni su $\Z/m\Z$ hanno le seguenti proprietà:
+\begin{enumerate}[label=\arabic*.]
+\item Somma e prodotto sono associativi e commutativi.
+\item Il prodotto è distributivo rispetto alla somma.
+\item I neutri sono $[0]_m$ e $[1]_m$, rispettivamente; ogni $[a]_m$ ha opposto $[-a]_m$.
+\end{enumerate}
+Pertanto $\Z/m\Z$ è un anello commutativo con unità.
+\end{proposizione}
+\begin{proof}
+Omettiamo il pedice $m$. Le proprietà si verificano sui rappresentanti usando quelle degli interi:
+\begin{enumerate}[label=\arabic*.]
+\item
+\[
+\begin{aligned}
+[a]+[b]&=[a+b]=[b+a]=[b]+[a],\\
+([a]+[b])+[c]&=[(a+b)+c]=[a+(b+c)]=[a]+([b]+[c]),\\
+[a][b]&=[ab]=[ba]=[b][a],\\
+([a][b])[c]&=[(ab)c]=[a(bc)]=[a]([b][c]),
+\end{aligned}
+\]
+\item
+\[
+\begin{aligned}
+[a]([b]+[c])&=[a(b+c)]=[ab+ac]=[a][b]+[a][c].
+\end{aligned}
+\]
+La distributività dall'altro lato segue dalla commutatività del prodotto.
+\item Inoltre $[a]+[0]=[a]$, $[a]+[-a]=[0]$ e $[a][1]=[a]$. Infine $[0]\ne[1]$, perché $m\ge2$ non divide $1$.
+\end{enumerate}
+\end{proof}
+
+\begin{esempio}[Parità e orologio]
+In $\Z/2\Z$, $[0]+[0]=[0]$, $[0]+[1]=[1]$ e $[1]+[1]=[0]$: sono le regole della parità. Inoltre $[1]=[-1]=[-3]$, perciò una classe può coincidere con il proprio opposto.
+
+In $\Z/12\Z$ si calcola come su un orologio con lo zero al posto del dodici: ad esempio $[9]+[5]=[14]=[2]$. L'opposto di $[7]_{12}$ è $[-7]_{12}=[5]_{12}$.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[scale=.85]
+\draw[spazio] (0,0) circle (1.45);
+\foreach \k in {0,...,11}{
+  \fill[coloreschema] ({90-30*\k}:1.45) circle (1.5pt);
+  \node at ({90-30*\k}:1.8) {$\k$};
+}
+\draw[-{Stealth},coloreschema,line width=.9pt] (90:1.15) arc (90:-60:1.15);
+\node at (0,-2.35) {Le dodici classi di $\Z/12\Z$};
+\end{tikzpicture}
+\end{schema}
+
+\section{Invertibili e divisori dello zero}
+% A–L L12 pp. 5–6; integrazioni M–Z L12 p. 6.
+\begin{esempio}
+In $\Z/4\Z$ si ha $[2]+[2]=[0]$ e $[2][2]=[0]$, pur essendo $[2]\ne[0]$. In $\Z/6\Z$, $[2][3]=[0]$ con entrambi i fattori non nulli. L'assenza di divisori dello zero in $\Z$ non passa quindi a tutti i quozienti.
+
+In $\Z/5\Z$, invece, $[2][3]=[6]=[1]$: le classi $[2]$ e $[3]$ sono inverse l'una dell'altra. Le altre classi non nulle sono $[1]$, inversa di sé, e $[4]=[-1]$, anch'essa inversa di sé. Anche in $\Z/2\Z$ ogni classe non nulla è invertibile.
+\end{esempio}
+
+\begin{definizione}
+Una classe $[a]_m$ è \textbf{invertibile}, o è un'\textbf{unità}, se esiste $[b]_m$ tale che $[a]_m[b]_m=[1]_m$. Tale classe $[b]_m$ si chiama \textbf{inverso} di $[a]_m$.
+
+Seguendo la convenzione della lezione, $[a]_m$ è un \textbf{divisore dello zero} se esiste una classe $[b]_m\ne[0]_m$ con $[a]_m[b]_m=[0]_m$. Questa definizione include $[0]_m$.
+\end{definizione}
+
+\begin{osservazione}
+La classe nulla rientra nella definizione perché $[0]_m[1]_m=[0]_m$ e $[1]_m\ne[0]_m$. Quando si richiede anche $[a]_m\ne[0]_m$, si parla di divisore dello zero \emph{non nullo}; questa condizione aggiuntiva va tenuta presente confrontando convenzioni diverse.
+\end{osservazione}
+
+L'inverso, quando esiste, è unico: se $[a][b]=[1]=[a][c]$, allora
+\[
+[b]=[b][1]=[b]([a][c])=([b][a])[c]=[1][c]=[c].
+\]
+Lo indichiamo con $[a]_m^{-1}$. Per esempio $[5]_{12}^{-1}=[5]_{12}$, perché $25\equiv1\pmod{12}$.
+
+\begin{esempio}
+In $\Z/6\Z$, $[1]$ e $[5]=[-1]$ sono invertibili. Le classi $[0],[2],[3],[4]$ sono divisori dello zero: oltre al prodotto $[2][3]=[0]$, si ha $[4][3]=[12]=[0]$. Qui ogni classe è un'unità oppure un divisore dello zero. Il prossimo risultato mostra che ciò vale per ogni modulo.
+\end{esempio}
+
+\Needspace{17\baselineskip}
+\subsection{Il criterio del massimo comune divisore}
+% A–L L12 pp. 6–8; M–Z L12 p. 6 per la costruzione dell'inverso con Bézout.
+\begin{teorema}\label{teo:unita-modulari}
+Siano $m\ge2$ e $a\in\Z$. Allora:
+\begin{enumerate}
+\item $[a]_m$ è invertibile se e solo se $\operatorname{MCD}(a,m)=1$;
+\item $[a]_m$ è divisore dello zero, nella convenzione che include $[0]_m$, se e solo se $\operatorname{MCD}(a,m)>1$.
+\end{enumerate}
+In particolare ogni classe appartiene esattamente a una delle due categorie.
+\end{teorema}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Invertibilità: necessità.} Se $[a]_m[b]_m=[1]_m$, esiste $q\in\Z$ con $ab-1=mq$. Quindi $1=ab-mq$ è una combinazione intera di $a,m$. Ogni divisore comune divide $1$, perciò $\operatorname{MCD}(a,m)=1$.
+
+\textbf{Invertibilità: sufficienza e costruzione.} Se $\operatorname{MCD}(a,m)=1$, Bézout dà $\alpha a+\beta m=1$. Passando alle classi,
+\[
+[\alpha]_m[a]_m+[\beta]_m[m]_m=[1]_m.
+\]
+Poiché $[m]_m=[0]_m$, segue $[\alpha]_m[a]_m=[1]_m$: dunque $[a]_m^{-1}=[\alpha]_m$.
+\item \textbf{Divisori dello zero: esclusione del caso coprimo.} Se $\operatorname{MCD}(a,m)=1$ e $[a]_m[b]_m=[0]_m$, allora $m\mid ab$. Il lemma di Euclide applicato a $m,a$ dà $m\mid b$, cioè $[b]_m=[0]_m$. Non esiste quindi un annullatore non nullo.
+
+\textbf{Divisori dello zero: costruzione dell'annullatore.} Se $d=\operatorname{MCD}(a,m)>1$, scriviamo $a=da'$ e $m=dm'$. Si ha $m'=m/d\in\Z$ e $1\le m'<m$, quindi $[m']_m\ne[0]_m$. Inoltre
+\[
+[a]_m[m']_m=[da'm']_m=[ma']_m=[0]_m.
+\]
+Quindi $[a]_m$ è divisore dello zero, con annullatore non nullo $[m/d]_m$. La costruzione include $a\equiv0\pmod m$: in quel caso $d=m$ e l'annullatore è $[1]_m$.
+\end{enumerate}
+\end{proof}
+
+\begin{osservazione}
+Il criterio non dipende dal rappresentante: se $a'=a+km$, un intero divide $a,m$ se e solo se divide $a',m$, mediante le combinazioni $a'=a+km$ e $a=a'-km$. I due massimi comuni divisori positivi coincidono.
+
+Se $m=p$ è primo, ogni classe non nulla ha $\operatorname{MCD}(a,p)=1$ ed è invertibile. Dunque $\Z/p\Z$ è un \textbf{campo}: un anello commutativo con $[0]\ne[1]$ in cui ogni elemento non nullo è invertibile. Questo spiega gli esempi dei moduli $2$ e $5$.
+\end{osservazione}
+
+\subsection{Cancellazione e calcolo degli inversi}
+\begin{osservazione}
+Si può cancellare un fattore invertibile: moltiplicando $[a][b]=[a][c]$ per $[a]^{-1}$ si ottiene $[b]=[c]$. Un divisore dello zero, invece, può impedire la cancellazione. In $\Z/6\Z$,
+\[
+[2][1]=[2]=[2][4],\qquad [1]\ne[4].
+\]
+Dalla sola uguaglianza del prodotto a zero non segue che uno dei fattori sia nullo: $[2][3]=[0]$ è già un controesempio.
+\end{osservazione}
+
+\Needspace{10\baselineskip}
+\begin{esercizio}[Calcoli modulo 84]
+In $\Z/84\Z$, determinare tutte le classi invertibili e i divisori dello zero. Trovare una classe non nulla che annulli $[30]_{84}$ e calcolare $[65]_{84}^{-1}$.
+\end{esercizio}
+\begin{svolgimento}
+Poiché $84=2^2\cdot3\cdot7$, una classe $[a]_{84}$ è divisore dello zero se e solo se almeno uno tra $2,3,7$ divide $a$. È invertibile se nessuno dei tre divide $a$.
+
+% M–Z L13 p. 4: la richiesta di elenco completa l'esercizio già presente.
+Le unità sono le classi dei seguenti rappresentanti:
+\[
+\begin{gathered}
+1,5,11,13,17,19,23,25,29,31,37,41,\\
+43,47,53,55,59,61,65,67,71,73,79,83.
+\end{gathered}
+\]
+I divisori dello zero sono tutte le altre classi, ossia quelle dei numeri in $\{0,\ldots,83\}$ multipli di $2$, $3$ o $7$, compreso $0$.
+
+Si ha $\operatorname{MCD}(30,84)=6$. La costruzione del teorema dà l'annullatore $[84/6]_{84}=[14]_{84}$, non nullo, e infatti $30\cdot14=420=5\cdot84$. Anche $[28]_{84}$ e $[42]_{84}$ sono annullatori non nulli, perché $30\cdot28=10\cdot84$ e $30\cdot42=15\cdot84$. Ogni loro multiplo annulla ancora $[30]$, ma il multiplo scelto può essere la classe nulla.
+
+Per $65$ e $84$ le divisioni sono
+\[
+\begin{aligned}
+84&=65+19,&65&=3\cdot19+8,\\
+19&=2\cdot8+3,&8&=2\cdot3+2,\\
+3&=2+1,&2&=2\cdot1.
+\end{aligned}
+\]
+L'ultimo resto non nullo è $1$. Risalendo,
+\[
+\begin{aligned}
+1&=3-2=3-(8-2\cdot3)=3\cdot3-8\\
+ &=3(19-2\cdot8)-8=3\cdot19-7\cdot8\\
+ &=3\cdot19-7(65-3\cdot19)=24\cdot19-7\cdot65\\
+ &=24(84-65)-7\cdot65=24\cdot84-31\cdot65.
+\end{aligned}
+\]
+Quindi $[65]_{84}^{-1}=[-31]_{84}=[53]_{84}$. La verifica diretta è $65\cdot53=3445=41\cdot84+1$.
+\end{svolgimento}
+
+\Needspace{9\baselineskip}
+\begin{esercizio}
+Trovare l'inverso di $[5]_{84}$. Stabilire se $[8]_{84}$ è invertibile.
+\end{esercizio}
+\begin{svolgimento}
+Le divisioni $84=16\cdot5+4$ e $5=4+1$ danno
+\[
+1=5-4=5-(84-16\cdot5)=17\cdot5-84.
+\]
+Pertanto $[5]_{84}^{-1}=[17]_{84}$. Invece $\operatorname{MCD}(8,84)=4>1$, quindi $[8]_{84}$ non è invertibile. È un divisore dello zero: ad esempio $[8]_{84}[21]_{84}=[168]_{84}=[0]_{84}$ e $[21]_{84}\ne[0]_{84}$.
+\end{svolgimento}
+
+\section{Calcoli con le classi resto}
+% A–L L12 p. 9.
+\begin{esempio}[Il numero 2026]
+In $\Z/10\Z$, $2026=202\cdot10+6$ dà $[2026]_{10}=[6]_{10}$.
+
+In $\Z/3\Z$, poiché $[10]_3=[1]_3$, per le proprietà del prodotto si ha anche $[1000]_3=[10]_3^3=[1]_3$. Quindi
+\[
+\begin{aligned}
+[2026]_3&=[2\cdot1000+2\cdot10+6]_3\\
+&=[2]_3[1]_3+[2]_3[1]_3+[0]_3\\
+&=[4]_3=[1]_3.
+\end{aligned}
+\]
+Equivalentemente, $[2]_3=[-1]_3$ permette di ottenere $[-1]_3+[-1]_3=[-2]_3=[1]_3$. Il resto della divisione di $2026$ per $3$ è perciò $1$.
+\end{esempio}
+
+\section{Congruenze lineari}
+% A–L L13 pp. 1–5; L14 pp. 1–3. M–Z L13 pp. 5–8; L14 p. 1.
+L'equazione $ax=b$ cambia comportamento secondo l'insieme in cui si cerca $x$. In $\Q$, $\R$ e $\C$, se $a\ne0$, ha l'unica soluzione $a^{-1}b$. Se $a=0$, ha tutte le soluzioni quando $b=0$ e nessuna quando $b\ne0$. In $\Z$, per $a\ne0$, la soluzione esiste se e solo se $a\mid b$, ed è allora unica; i casi con $a=0$ sono gli stessi appena descritti.
+
+Nel quoziente $\Z/m\Z$, invece, studiare $[a]_m[x]_m=[b]_m$ significa studiare la \textbf{congruenza lineare}
+\[
+ax\equiv b\pmod m,\qquad\text{ossia}\qquad m\mid ax-b.
+\]
+Distinguiamo le soluzioni intere $x$ dalle loro classi modulo $m$.
+
+\begin{teorema}[Esistenza delle soluzioni]\label{teo:congruenza-lineare}
+Siano $m\ge2$, $a,b\in\Z$ e $d=\operatorname{MCD}(a,m)$. La congruenza $ax\equiv b\pmod m$ ammette soluzioni se e solo se $d\mid b$. Se
+\[
+d=\alpha a+\beta m,\qquad b=db',
+\]
+una soluzione particolare è $x_0=\alpha b'$.
+\end{teorema}
+\begin{proof}
+\passomath{\Rightarrow} Se $ax\equiv b\pmod m$, esiste $k\in\Z$ con $ax-b=mk$, cioè $b=ax-mk$. Poiché $d$ divide $a$ e $m$, divide anche questa combinazione, dunque $d\mid b$.
+
+\passomath{\Leftarrow} Se $d\mid b$, scriviamo $b=db'$ e scegliamo con Bézout $d=\alpha a+\beta m$. Moltiplicando per $b'$ otteniamo
+\[
+b=a(\alpha b')+m(\beta b').
+\]
+Quindi $a(\alpha b')-b$ è multiplo di $m$, e $x_0=\alpha b'$ è una soluzione.
+\end{proof}
+
+\begin{teorema}[Tutte le soluzioni]\label{teo:tutte-congruenza}
+Supponiamo che $x_0$ risolva $ax\equiv b\pmod m$, e poniamo $d=\operatorname{MCD}(a,m)$. \begin{enumerate}[label=\arabic*.]
+\item Tutte e sole le soluzioni intere sono
+\[
+x=x_0+\frac{m}{d}k,\qquad k\in\Z.
+\]
+\item Nel quoziente $\Z/m\Z$ le soluzioni sono esattamente le $d$ classi distinte
+\[
+\left[x_0+j\frac{m}{d}\right]_m,\qquad j=0,1,\ldots,d-1.
+\]
+In particolare, se esistono soluzioni, la soluzione modulo $m$ è unica se e solo se $d=1$.
+\end{enumerate}
+\end{teorema}
+\begin{proof}
+Scriviamo $a=da'$, $m=dm'$, dove $m'=m/d\ge1$ e $\operatorname{MCD}(a',m')=1$.
+
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Ogni termine indicato è soluzione.} Per $k\in\Z$,
+\[
+a(x_0+m'k)-b=(ax_0-b)+ma'k.
+\]
+Entrambi gli addendi sono divisibili per $m$, quindi $x_0+m'k$ è soluzione.
+
+\textbf{Ogni soluzione ha la forma indicata.} Se anche $x$ è soluzione, sottraendo le due congruenze si ha $m\mid a(x-x_0)$. Esiste dunque $h\in\Z$ con $da'(x-x_0)=dm'h$. Cancellando $d\ne0$, segue $m'\mid a'(x-x_0)$. Dal lemma di Euclide e dalla coprimalità segue $m'\mid x-x_0$, cioè $x=x_0+m'k$. L'argomento vale anche per $m'=1$, quando ogni intero è divisibile per $m'$.
+\item \textbf{Conteggio delle classi.} Se $0\le i,j<d$, l'uguaglianza $[x_0+im']_m=[x_0+jm']_m$ equivale a $dm'\mid(i-j)m'$, quindi a $d\mid i-j$. Il vincolo $|i-j|<d$ implica $i=j$: le classi sono distinte. Infine ogni $k\in\Z$ si scrive $k=dq+j$, con $0\le j<d$; allora $x_0+m'k=x_0+m'j+mq$ appartiene alla classe di indice $j$. Nessuna soluzione resta esclusa.
+\end{enumerate}
+\end{proof}
+
+\begin{osservazione}
+Se esiste una soluzione, in $\Z$ ce ne sono infinite, perché $m/d\ge1$. In $\Z/m\Z$, invece, ce ne sono $d$. Il caso $a=0$ è incluso: $d=m$, quindi esistono soluzioni esattamente quando $m\mid b$, e allora ogni intero è soluzione e tutte le $m$ classi risolvono l'equazione.
+\end{osservazione}
+
+\Needspace{10\baselineskip}
+\begin{esercizio}
+Trovare tutte le soluzioni intere di $15x\equiv6\pmod{84}$ e tutte le soluzioni di $[15]_{84}[x]_{84}=[6]_{84}$ nel quoziente.
+\end{esercizio}
+\begin{svolgimento}
+Le divisioni euclidee sono
+\[
+84=5\cdot15+9,\quad 15=9+6,\quad 9=6+3,\quad 6=2\cdot3.
+\]
+Dunque $d=3$ divide $6$, e le soluzioni esistono. La tabella estesa riporta per ogni resto $r$ i coefficienti $s,t$ tali che $r=s\cdot84+t\cdot15$:
+\[
+\begin{array}{r|r|r}
+r&s&t\\\hline
+84&1&0\\15&0&1\\9&1&-5\\6&-1&6\\3&2&-11\\0&-5&28
+\end{array}
+\]
+Si ritrova la stessa identità risalendo nelle divisioni:
+\[
+3=9-6=9-(15-9)=2(84-5\cdot15)-15=2\cdot84-11\cdot15.
+\]
+Moltiplicando per $2$, $6=4\cdot84-22\cdot15$, perciò $x_0=-22$ è una soluzione particolare; è anche $x_0\equiv62\pmod{84}$. La progressione $62+84\Z$ dà solo una parte delle soluzioni intere. Il teorema fornisce la famiglia completa:
+\[
+x=-22+28k,\quad k\in\Z,\qquad\text{equivalentemente}\quad x=6+28k.
+\]
+Le tre classi risolventi modulo $84$ sono $[6]_{84},[34]_{84},[62]_{84}$. In termini di progressioni di passo $84$, tutte le soluzioni intere sono l'unione di $6+84\Z$, $34+84\Z$ e $62+84\Z$.
+\end{svolgimento}
+
+\begin{esempio}[Esistenza e numero di classi]
+La congruenza $3x\equiv2\pmod{12}$ non ha soluzioni, perché $\operatorname{MCD}(3,12)=3\nmid2$. Invece $3x\equiv6\pmod{12}$ ha la soluzione particolare $x_0=2$ e tutte le soluzioni sono $2+4\Z$. Le tre classi modulo $12$ sono $[2]_{12},[6]_{12},[10]_{12}$. L'ultima si può rappresentare anche con $-2$, poiché $10\equiv-2\pmod{12}$.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[scale=.8]
+\draw[spazio] (0,0) circle (1.35);
+\foreach \k in {0,...,11}{\fill[black!45] ({90-30*\k}:1.35) circle (1.2pt);\node at ({90-30*\k}:1.7) {$\k$};}
+\foreach \k in {2,6,10}{\draw[coloreschema,line width=1pt] ({90-30*\k}:1.35) circle (.12);}
+\node at (0,-2.25) {Le tre classi che risolvono $3x\equiv6\pmod{12}$};
+\end{tikzpicture}
+\end{schema}
+
+\section{Semplificare una congruenza}
+% A–L L14 pp. 3–6; M–Z L14 pp. 2–4.
+\begin{proposizione}[Riduzione dei coefficienti]
+Se $a\equiv a'\pmod m$ e $b\equiv b'\pmod m$, le congruenze $ax\equiv b\pmod m$ e $a'x\equiv b'\pmod m$ hanno le stesse soluzioni intere e le stesse classi risolventi in $\Z/m\Z$.
+\end{proposizione}
+\begin{proof}
+Scriviamo $a=a'+hm$ e $b=b'+km$. Allora
+\[
+ax-b=(a'x-b')+m(hx-k).
+\]
+Quindi $m\mid ax-b$ se e solo se $m\mid a'x-b'$. Il modulo non cambia, perciò coincidono anche le classi risolventi.
+\end{proof}
+
+\begin{proposizione}[Divisione di coefficienti e modulo]\label{prop:riduzione-modulo}
+Sia $d=\operatorname{MCD}(a,m)$ e supponiamo $d\mid b$. Posti $a=da'$, $b=db'$ e $m=dm'$, si ha
+\[
+ax\equiv b\pmod m\quad\Longleftrightarrow\quad
+m'\mid a'x-b'.
+\]
+Se $m'\ge2$, l'ultima condizione si scrive $a'x\equiv b'\pmod{m'}$. Se $m'=1$, è soddisfatta da ogni intero.
+\end{proposizione}
+\begin{proof}
+La condizione $ax\equiv b\pmod m$ equivale all'esistenza di $k\in\Z$ con $d(a'x-b')=dm'k$. Cancellando il fattore intero non nullo $d$, equivale a $a'x-b'=m'k$ per qualche $k$, ossia a $m'\mid a'x-b'$.
+\end{proof}
+
+\begin{esempio}
+Si può risolvere
+\[
+21x\equiv15\pmod{18}\quad\Longleftrightarrow\quad
+3x\equiv15\pmod{18}\quad\Longleftrightarrow\quad
+x\equiv5\pmod6.
+\]
+Il primo passaggio riduce $21$ modulo $18$; il secondo divide coefficienti e modulo per $3$. Le soluzioni intere sono $5+6\Z$. Modulo $6$ c'è l'unica classe $[5]_6$; modulo $18$ ci sono invece $[5]_{18},[11]_{18},[17]_{18}$. La riduzione conserva gli interi risolventi, ma cambia il quoziente in cui se ne contano le classi.
+\end{esempio}
+
+\begin{osservazione}
+Non si può dividere per un fattore non invertibile mantenendo invariato il modulo. Da $3x\equiv-3\pmod{18}$ segue $x\equiv-1\pmod6$, non $x\equiv-1\pmod{18}$. Per esempio $x=5$ risolve la prima congruenza, ma non è congruo a $-1$ modulo $18$. La classe $[3]_{18}$ non ha inverso: $\operatorname{MCD}(3,18)=3$.
+\end{osservazione}
+
+\Needspace{8\baselineskip}
+\begin{esercizio}
+Calcolare tutte le soluzioni di $21x\equiv6\pmod{30}$ in $\Z$ e tutte le classi risolventi modulo $30$.
+\end{esercizio}
+\begin{svolgimento}
+Si ha $\operatorname{MCD}(21,30)=3$ e $3\mid6$: le soluzioni esistono. Dividendo per $3$ si ottiene $7x\equiv2\pmod{10}$. Poiché $3\cdot7=21\equiv1\pmod{10}$, moltiplicando per $3$ segue $x\equiv6\pmod{10}$. Le soluzioni intere sono quindi $6+10\Z$ e le tre classi modulo $30$ sono $[6]_{30},[16]_{30},[26]_{30}$.
+\end{svolgimento}
+
+\section{Sistemi di congruenze}
+% A–L L14 pp. 6–9; M–Z L14 pp. 4–5.
+Una soluzione di un sistema deve risolvere tutte le congruenze contemporaneamente. Si può risolvere la prima, scrivere l'intera progressione delle sue soluzioni e sostituirla nella seconda; si ripete poi il procedimento sulle eventuali congruenze successive.
+
+\Needspace{9\baselineskip}
+\begin{esercizio}
+Risolvere in $\Z$ il sistema
+\[
+\begin{cases}
+21x\equiv15\pmod{18},\\
+35x\equiv21\pmod{42}.
+\end{cases}
+\]
+\end{esercizio}
+\begin{svolgimento}
+La prima congruenza equivale a $x\equiv5\pmod6$; la seconda, dividendo coefficienti e modulo per $7$, a $5x\equiv3\pmod6$. Sostituendo $x=5+6k$, si avrebbe
+\[
+5(5+6k)\equiv25\equiv1\pmod6,
+\]
+che non può essere congruo a $3$. Il sistema non ha soluzioni, anche se ciascuna congruenza, presa singolarmente, ne ha.
+\end{svolgimento}
+
+\Needspace{9\baselineskip}
+\begin{esercizio}
+Risolvere in $\Z$ il sistema
+\[
+\begin{cases}
+3x\equiv1\pmod7,\\
+5x\equiv3\pmod6.
+\end{cases}
+\]
+\end{esercizio}
+\begin{svolgimento}
+L'identità $1=-2\cdot3+7$ dà $x\equiv-2\pmod7$. Scriviamo quindi $x=-2+7k$ e sostituiamo nella seconda congruenza:
+\[
+5(-2+7k)\equiv3\pmod6
+\quad\Longleftrightarrow\quad 2-k\equiv3\pmod6.
+\]
+Dunque $k\equiv-1\pmod6$, cioè $k=-1+6h$. Tornando a $x$,
+\[
+x=-2+7(-1+6h)=-9+42h,\qquad h\in\Z.
+\]
+Tutti i passaggi sono equivalenze: queste sono tutte le soluzioni. Si verifica anche direttamente che $3(-9)=1-4\cdot7$ e $5(-9)=3-8\cdot6$.
+\end{svolgimento}
+
+\subsection{Il teorema cinese del resto}
+% A–L L14 p. 8 (enunciato), L15 pp. 1–3 (prova); M–Z L15 pp. 7–8.
+\begin{teorema}[Cinese del resto]\label{teo:cinese}
+Siano $m_1,\ldots,m_r\ge2$ interi a due a due coprimi, cioè $\operatorname{MCD}(m_i,m_j)=1$ per $i\ne j$. Per ogni scelta di $b_1,\ldots,b_r\in\Z$, il sistema
+\[
+x\equiv b_i\pmod{m_i},\qquad i=1,\ldots,r,
+\]
+ha soluzione, unica modulo $M=m_1\cdots m_r$.
+\end{teorema}
+\begin{proof}
+\textbf{Costruzione.} Poniamo $A_i=M/m_i=\prod_{j\ne i}m_j$. Si ha $\operatorname{MCD}(A_i,m_i)=1$: altrimenti un primo $p$ dividerebbe sia $m_i$ sia $A_i$, e quindi almeno un $m_j$ con $j\ne i$, contro la coprimalità dei moduli. Questo usa la proprietà dei primi sui prodotti, già dimostrata.
+
+Per ogni $i$, Bézout fornisce $u_i,v_i\in\Z$ con $u_iA_i+v_im_i=1$. Posto $t_i=u_ib_i$, si ha $A_it_i\equiv b_i\pmod{m_i}$. Definiamo
+\[
+x_0=\sum_{i=1}^r A_it_i=\sum_{i=1}^r A_iu_ib_i.
+\]
+\textbf{Verifica.} Fissiamo $j$. Se $i\ne j$, $m_j$ divide $A_i$, dunque tutti gli addendi con indice diverso da $j$ si annullano modulo $m_j$. Rimane
+\[
+x_0\equiv A_jt_j\equiv b_j\pmod{m_j}.
+\]
+Questo vale per ciascun $j$, quindi $x_0$ è soluzione del sistema.
+
+\textbf{Unicità modulo $M$.} Se $x,y$ sono soluzioni, ogni $m_i$ divide $x-y$. Per $x-y=0$ anche $M\mid x-y$. Altrimenti, i moduli a due a due coprimi hanno fattori primi disgiunti; la fattorizzazione di $x-y$ contiene quindi tutti i fattori primi di $M$ con esponente almeno uguale. Dunque $M\mid x-y$. Viceversa ogni $x_0+Mk$ risolve il sistema, poiché ogni $m_i$ divide $M$. Le soluzioni sono esattamente $x_0+M\Z$.
+\end{proof}
+
+\begin{osservazione}
+Il teorema richiede coefficiente di $x$ uguale a $1$. Per coefficienti arbitrari occorre prima la risolubilità di ogni equazione: $2x\equiv1\pmod4$, $x\equiv0\pmod3$ è impossibile pur avendo moduli coprimi, perché la prima equazione non ha soluzioni.
+
+Se ogni $a_ix\equiv b_i\pmod{m_i}$ è risolubile, le sue soluzioni sono $x_i+(m_i/d_i)\Z$, dove $d_i=\operatorname{MCD}(a_i,m_i)$. Per moduli originari a due a due coprimi, i moduli ridotti maggiori di $1$ restano a due a due coprimi. Il teorema si applica quindi alle congruenze ridotte; i moduli ridotti uguali a $1$ non impongono vincoli.
+\end{osservazione}
+
+\begin{esempio}[Due moduli]
+Per risolvere $x\equiv3\pmod4$, $x\equiv2\pmod3$, scriviamo $x=3+4k$. La seconda congruenza equivale a $k\equiv2\pmod3$, quindi $k=2+3h$ e
+\[
+x=11+12h,\qquad h\in\Z.
+\]
+Infatti $11\equiv3\pmod4$ e $11\equiv2\pmod3$; il passo è $12=4\cdot3$. Nella variante $x\equiv1\pmod4$, $x\equiv2\pmod3$, si ottiene invece $x=5+12h$.
+\end{esempio}
+
+\Needspace{10\baselineskip}
+\begin{esercizio}
+Risolvere il sistema
+\[
+\begin{cases}
+x\equiv2\pmod3,\\
+x\equiv3\pmod5,\\
+x\equiv2\pmod7
+\end{cases}
+\]
+mediante sostituzioni successive e mediante la costruzione del teorema cinese.
+\end{esercizio}
+\begin{svolgimento}
+I moduli $3,5,7$ sono a due a due coprimi: esiste una sola classe risolvente modulo $105$.
+
+\textbf{Sostituzioni.} Dalla prima, $x=2+3k$. La seconda diventa $3k\equiv1\pmod5$. Poiché $2\cdot3-5=1$, segue $k\equiv2\pmod5$, dunque $k=2+5h$. Si ha $x=8+15h$; la terza congruenza diventa $1+h\equiv2\pmod7$. Quindi $h=1+7t$, da cui
+\[
+x=8+15(1+7t)=23+105t,\qquad t\in\Z.
+\]
+\textbf{Costruzione diretta.} Per $M=105$ prendiamo $A_1=35$, $A_2=21$, $A_3=15$. Modulo $3,5,7$ i loro inversi sono rispettivamente $2,1,1$. La formula del teorema dà
+\[
+x_0=35\cdot2\cdot2+21\cdot1\cdot3+15\cdot1\cdot2=233\equiv23\pmod{105}.
+\]
+I due metodi danno quindi la stessa famiglia. La verifica dei resti è $23=7\cdot3+2=4\cdot5+3=3\cdot7+2$.
+\end{svolgimento}
+
+\begin{esempio}[Costruzione diretta nel sistema con due equazioni]
+Il sistema $3x\equiv1\pmod7$, $5x\equiv3\pmod6$ equivale a $x\equiv5\pmod7$, $x\equiv3\pmod6$. Nella costruzione diretta $M=42$, $A_1=6$, $A_2=7$. Gli inversi sono $6$ modulo $7$ e $1$ modulo $6$, perciò
+\[
+x_0=6\cdot6\cdot5+7\cdot1\cdot3=201\equiv33\equiv-9\pmod{42}.
+\]
+Si ritrova $-9+42\Z$ senza sostituire una progressione nell'altra.
+\end{esempio}

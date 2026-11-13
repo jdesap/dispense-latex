@@ -4,7 +4,7 @@
 
 \section{Operazioni e appartenenza}
 % A–L L1 pp. 1–2; M–Z L1. La logica resta proposizionale, senza funzioni caratteristiche.
-Un insieme è determinato dai suoi elementi: $A=B$ significa che, per ogni $x$, $x\in A$ se e solo se $x\in B$. Equivalentemente si provano le due inclusioni $A\subseteq B$ e $B\subseteq A$. Si può descrivere un insieme per elenco, come $\{2,3,4\}$, oppure mediante una proprietà: $\Z=\{\ldots,-2,-1,0,1,2,\ldots\}$ e $\Q=\{a/b\mid a,b\in\Z,\ b\ne0\}$.
+Un insieme è determinato dai suoi elementi: $A=B$ significa che, per ogni $x$, $x\in A$ se e solo se $x\in B$. Equivalentemente si provano le due inclusioni $A\subseteq B$ e $B\subseteq A$. Si può descrivere un insieme per elenco (\textbf{descrizione estensionale}), come $\{2,3,4\}$, oppure mediante una proprietà (\textbf{descrizione intensionale}): $\Z=\{\ldots,-2,-1,0,1,2,\ldots\}$ e $\Q=\{a/b\mid a,b\in\Z,\ b\ne0\}$.
 
 \begin{definizione}
 Per due insiemi $A,B$ si definiscono
@@ -35,20 +35,19 @@ Sono, rispettivamente, \textbf{unione}, \textbf{intersezione}, \textbf{differenz
 \end{schema}
 
 \begin{proposizione}
-Unione e intersezione sono commutative e associative:
-\[
-\begin{gathered}
-A\cup B=B\cup A,\qquad A\cap B=B\cap A,\\
-(A\cup B)\cup C=A\cup(B\cup C),\qquad
-(A\cap B)\cap C=A\cap(B\cap C).
-\end{gathered}
-\]
-Inoltre $A\triangle B=(A\cup B)\setminus(A\cap B)=B\triangle A$.
+Per insiemi $A,B,C$ valgono:
+\begin{enumerate}[label=\arabic*.]
+\item $A\cup B=B\cup A$ e $A\cap B=B\cap A$ (commutatività).
+\item $(A\cup B)\cup C=A\cup(B\cup C)$ e $(A\cap B)\cap C=A\cap(B\cap C)$ (associatività).
+\item $A\triangle B=(A\cup B)\setminus(A\cap B)=B\triangle A$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Scambiare le due proposizioni «$x\in A$» e «$x\in B$» non cambia né la loro disgiunzione né la loro congiunzione: si ottiene la commutatività. Per l'associatività, entrambi i membri della prima identità richiedono che $x$ appartenga ad almeno uno tra $A,B,C$; entrambi i membri della seconda richiedono che appartenga a tutti e tre.
-
-Infine, appartenere a uno solo fra $A$ e $B$ equivale ad appartenere alla loro unione, ma non alla loro intersezione. Anche questa condizione è invariata scambiando $A$ e $B$.
+\begin{enumerate}[label=\arabic*.]
+\item Scambiare le due proposizioni «$x\in A$» e «$x\in B$» non cambia né la loro disgiunzione né la loro congiunzione: si ottiene la commutatività.
+\item Per l'associatività, entrambi i membri dell'identità relativa all'unione richiedono che $x$ appartenga ad almeno uno tra $A,B,C$; entrambi i membri dell'identità relativa all'intersezione richiedono che appartenga a tutti e tre.
+\item Infine, appartenere a uno solo fra $A$ e $B$ equivale ad appartenere alla loro unione, ma non alla loro intersezione. Anche questa condizione è invariata scambiando $A$ e $B$.
+\end{enumerate}
 \end{proof}
 
 \subsection{Unioni e intersezioni di famiglie}
@@ -63,12 +62,16 @@ Per l'intersezione si suppone $I\ne\varnothing$, oppure si fissa un ambiente $X$
 
 % Integrazione M–Z L1 p. 2: proprietà dell'unione e dell'intersezione.
 \begin{proposizione}
-L'unione è il più piccolo insieme che contiene ogni $A_i$; l'intersezione è il più grande insieme contenuto in ogni $A_i$, nell'ambiente fissato.
+\begin{enumerate}[label=\arabic*.]
+\item L'unione è il più piccolo insieme che contiene ogni $A_i$: è l'\textbf{estremo superiore} della famiglia per l'inclusione.
+\item L'intersezione è il più grande insieme contenuto in ogni $A_i$, nell'ambiente fissato: è l'\textbf{estremo inferiore} per l'inclusione.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Unione.} Ogni $x\in A_j$ appartiene all'unione scegliendo $i=j$, dunque $A_j\subseteq\bigcup_i A_i$. Se $A_i\subseteq B$ per ogni $i$, un elemento dell'unione sta in qualche $A_i$ e quindi in $B$: ne segue $\bigcup_i A_i\subseteq B$.
-
-\textbf{Intersezione.} Ogni elemento dell'intersezione appartiene a ogni $A_j$. Se $B\subseteq A_i$ per ogni $i$, ciascun $x\in B$ appartiene a tutti gli $A_i$, dunque $B\subseteq\bigcap_i A_i$. Le convenzioni fissate danno le stesse proprietà anche per $I=\varnothing$.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Unione.} Ogni $x\in A_j$ appartiene all'unione scegliendo $i=j$, dunque $A_j\subseteq\bigcup_i A_i$. Se $A_i\subseteq B$ per ogni $i$, un elemento dell'unione sta in qualche $A_i$ e quindi in $B$: ne segue $\bigcup_i A_i\subseteq B$.
+\item \textbf{Intersezione.} Ogni elemento dell'intersezione appartiene a ogni $A_j$. Se $B\subseteq A_i$ per ogni $i$, ciascun $x\in B$ appartiene a tutti gli $A_i$, dunque $B\subseteq\bigcap_i A_i$. Le convenzioni fissate danno le stesse proprietà anche per $I=\varnothing$.
+\end{enumerate}
 \end{proof}
 
 \begin{esercizio}[Associatività delle differenze]
@@ -99,7 +102,7 @@ A_0=A\setminus(B\cup C),\quad B_0=B\setminus(A\cup C),\quad C_0=C\setminus(A\cup
 \section{Prodotti cartesiani}
 % A–L L1 pp. 3–4. Le potenze con insieme di indici sono rinviate alle funzioni.
 \begin{definizione}
-Il \textbf{prodotto cartesiano} è $A\times B=\{(a,b)\mid a\in A,\ b\in B\}$. Le coppie sono ordinate: $(a,b)=(a',b')$ se e solo se $a=a'$ e $b=b'$. Più in generale,
+Il \textbf{prodotto cartesiano} è $A\times B=\{(a,b)\mid a\in A,\ b\in B\}$. Le coppie sono ordinate: $(a,b)=(a',b')$ se e solo se $a=a'$ e $b=b'$. Più in generale, per $n\ge1$,
 \[
 A_1\times\cdots\times A_n=\{(a_1,\ldots,a_n)\mid a_i\in A_i\text{ per }i=1,\ldots,n\}.
 \]
@@ -173,21 +176,19 @@ Tutte le appartenenze sono considerate per $x\in X$. Non appartenere al compleme
 \end{svolgimento}
 
 \begin{proposizione}[Distributività]
-Per insiemi $A,B,C$ valgono
-\[
-\begin{aligned}
-(A\cup B)\cap C&=(A\cap C)\cup(B\cap C),\\
-(A\cap B)\cup C&=(A\cup C)\cap(B\cup C),\\
-(A\triangle B)\cap C&=(A\cap C)\triangle(B\cap C).
-\end{aligned}
-\]
+Per insiemi $A,B,C$ valgono:
+\begin{enumerate}[label=\arabic*.]
+\item $(A\cup B)\cap C=(A\cap C)\cup(B\cap C)$.
+\item $(A\cap B)\cup C=(A\cup C)\cap(B\cup C)$.
+\item $(A\triangle B)\cap C=(A\cap C)\triangle(B\cap C)$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Per la prima, $x$ deve appartenere a $C$ e ad almeno uno tra $A,B$: questo equivale a stare in $A\cap C$ oppure in $B\cap C$.
-
-Per la seconda, se $x\in C$, appartiene a entrambi i membri. Se $x\notin C$, il primo richiede $x\in A\cap B$, e il secondo richiede simultaneamente $x\in A$ e $x\in B$: ancora la stessa condizione.
-
-Per la terza, se $x\notin C$, non sta in nessuno dei due membri. Se $x\in C$, in entrambi i membri si richiede che stia in uno solo fra $A$ e $B$. I casi esauriscono le possibilità.
+\begin{enumerate}[label=\arabic*.]
+\item Per la prima, $x$ deve appartenere a $C$ e ad almeno uno tra $A,B$: questo equivale a stare in $A\cap C$ oppure in $B\cap C$.
+\item Per la seconda, se $x\in C$, appartiene a entrambi i membri. Se $x\notin C$, il primo richiede $x\in A\cap B$, e il secondo richiede simultaneamente $x\in A$ e $x\in B$: ancora la stessa condizione.
+\item Per la terza, se $x\notin C$, non sta in nessuno dei due membri. Se $x\in C$, in entrambi i membri si richiede che stia in uno solo fra $A$ e $B$. I casi esauriscono le possibilità.
+\end{enumerate}
 \end{proof}
 
 \begin{esercizio}[Elementi neutri e annullamento]

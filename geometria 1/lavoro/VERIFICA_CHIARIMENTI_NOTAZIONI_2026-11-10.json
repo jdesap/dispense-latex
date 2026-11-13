@@ -1,0 +1,62 @@
+{
+  "data": "2026-11-10",
+  "pagine_volume": 47,
+  "sha256_volume": "bf0e5c8ceeede7205d81057e04700a23ea76f97f123e52b5d6d5558fef517e34",
+  "capitoli": [
+    {
+      "capitolo": "1 Spazi vettoriali",
+      "pagine": 26,
+      "prima_pagina": "1",
+      "ultima_pagina": "26",
+      "sha256": "c8c8773051b923eae41fc384196e49ca0d4e316a10fb11c31f8a258e0a75c187",
+      "annotazioni": 8
+    },
+    {
+      "capitolo": "2 Sistemi lineari e matrici",
+      "pagine": 8,
+      "prima_pagina": "27",
+      "ultima_pagina": "34",
+      "sha256": "a480e67a97af242042a5f564fb5ec31ed2bf2ed0ccd7d8cda11eb135bee91148",
+      "annotazioni": 2
+    },
+    {
+      "capitolo": "3 Applicazioni lineari",
+      "pagine": 10,
+      "prima_pagina": "35",
+      "ultima_pagina": "44",
+      "sha256": "7ba6ddd16f763f5d6eea62a5d111b7aa9ba8f8455447e61f86406f60ef4ad2ef",
+      "annotazioni": 3
+    }
+  ],
+  "verifica_estratti": "Tutte le pagine: testo, flussi, formato, etichette e rendering pixel identici al volume; segnalibri presenti; link remoti puntano a ../main.pdf",
+  "calcoli": "Due sistemi e soluzione esatta; prodotto riga-colonna; ricostruzione del polinomio; esempio di generatori ridondanti",
+  "controllo_tikz": "Ispezione visiva dei due diagrammi nuovi: riga i e colonna j evidenziate e c_ij in posizione (i,j); mappe coordinate e ricostruzione con frecce opposte e domini corretti. Ricontrollati i tre schemi preesistenti del capitolo 3",
+  "controllo_editoriale": "Indice, tutte le pagine dei capitoli 2–3, raccordo del metodo matriciale nel capitolo 1; eliminati titoli isolati",
+  "log": "Nessun errore o avviso",
+  "fonti": "Tutte le impronte originali invariate",
+  "sorgenti_sha256": {
+    "main.tex": "b45ce7647216e097ff779a84bde72f096df419e5483cbbd54c61196db9694caf",
+    "capitoli/01-spazi-vettoriali.tex": "9204c953af6ef94d620a6767db50c4613e0645e0ebff91f1c394601322e0b288",
+    "capitoli/01a-spazi-e-sottospazi.tex": "535bfeb172f84080bd3645d3a00a12577f58f80af390ff07c53424607195c147",
+    "capitoli/01b-somme-di-sottospazi.tex": "6fa3a4cd2dbc409c34e2d4af45b0fd7cfe2105552f8ea945ad05081beef093d2",
+    "capitoli/01b-sottospazio-generato.tex": "05aaed0b739cffa4f741fe4e82d54d7add3747551210e17f74017dc6d0f2db9b",
+    "capitoli/01c-basi-e-dimensione.tex": "feb7ded6dd6d3583ce62acb3edfa79bc13ba6196c34a42b0c892ece94a3ec799",
+    "capitoli/01c-indipendenza-basi-coordinate.tex": "748f7b3543bb560e66125b3dab49fe392f5bf9a6c80240203e0aeb29da4c62c1",
+    "capitoli/01d-estrazione-e-basi-di-sottospazi.tex": "bf88f6272ad99b49dbd7f7aa6721f274d2f861f4007ff225bb556304bf190f37",
+    "capitoli/01e-equazioni-cartesiane.tex": "114f13e0c25df18f464b0f95596ebd5cb283f3b245d2f81dc9f598c34b3cacac",
+    "capitoli/01f-prodotti.tex": "e3d4ea1530bcbe503462b27eb7e7cf9e35f3d227c5047cb15995b089953c197d",
+    "capitoli/01g-quozienti.tex": "345603c0023f68acfc78043f17c3d9b0f5b4bcbfa752e3e24625f68044767c5b",
+    "capitoli/01h-grassmann-complementi.tex": "e92ddd82f371ce2f987fa090d19f7aa00287e8a096ed0cebb4cd79934dafbd10",
+    "capitoli/01i-costruzioni-in-r5.tex": "29295c105275b44c35038cbb757801ca52e4ae30175d4cef652a226c65dee2c3",
+    "capitoli/01j-equazioni-di-polinomi.tex": "402c572b810fb79195cddaa70972202fbfec1bc2e17de5b0c08a6a8751d1b04b",
+    "capitoli/02-sistemi-lineari-e-matrici.tex": "e38a81cebebbffc5ceed659c01a173886a197b70540dfab83b614b94e0cf360a",
+    "capitoli/02a-gauss.tex": "65897676e1f5feaff66a4656c1baa5723b987adb3f46a0204717c6e2a0023c3a",
+    "capitoli/02b-operazioni.tex": "9853c7fc52638ab36b803f9af090310825859c3274e655cade5123efef8c2b6d",
+    "capitoli/02c-rango-sistemi.tex": "0b7470dd3f69c8d24decdae1bf9576fa42cf818ceb86ceda6cdbfe8a052af0b2",
+    "capitoli/03-applicazioni-lineari.tex": "792ffee5519099d13bf3364c236fea8c62182fd5e64a5d24e36c64a8d8577412",
+    "capitoli/03a-linearita-nucleo-immagine.tex": "ff6b6e6406225fd03548e9839890ad31b0f1b7e31e1f69a47eaca10224e53208",
+    "capitoli/03b-proiezioni-simmetrie.tex": "431f067aa682072d335f1d70e07da2a600e821df893eda2ac1237352306401c1",
+    "capitoli/03c-matrici-associate.tex": "eed2a4f9eedc65751b41bfde6aca46a92b1ed8e75505577ac54931e9b39d8a19",
+    "capitoli/03d-cambi-di-base.tex": "10fd8497637212de6653d21153f6cbc24fabe5fa6840e38baf5aeff164c35e84"
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "data": "2026-11-05",
+  "stato": "lezione16 integrata; su richiesta dell’autore funzione di Eulero nel nuovo capitolo8 Funzione di Eulero e gruppi; nessuna aggiunta autonoma sui gruppi; prossima lezione17",
+  "criterio": "A–L determina ordine e copertura; prove scelte da entrambe le serie per qualità e prerequisiti. M–Z integra omissioni di temi conclusi.",
+  "fonti": {
+    "pdf": 32,
+    "pagine": 211,
+    "serie_A-L": {
+      "pdf": 16,
+      "pagine": 101,
+      "ruolo": "ossatura e futuri caricamenti"
+    },
+    "serie_M-Z": {
+      "pdf": 16,
+      "pagine": 110,
+      "ruolo": "confronto delle prove e integrazione"
+    },
+    "riesame_visivo_pagine": 211,
+    "originali_byte_identici": 32,
+    "righe_copertura_A-L": 101,
+    "righe_confronto_M-Z": 110,
+    "unita_riesame": 126,
+    "unita_integrate": 126,
+    "rinvii_didattici": 0
+  },
+  "compilazione": {
+    "latexmk": "success con configurazione condivisa",
+    "avvisi_latex": [],
+    "pagine_volume": 58,
+    "preliminari": 4,
+    "pagine_testo": 54,
+    "pdf_sha256": "724d2337c5ad2dff83af87d6ce615c9d64bd960307ea0d064935b96f751bb0b3",
+    "compilatore_integrato": "success sul sorgente finale dopo ricollocazione"
+  },
+  "struttura": {
+    "capitoli": 8,
+    "sezioni": 40,
+    "sottosezioni": 12,
+    "figure_tikz": 14,
+    "prove": 68,
+    "esercizi": 31,
+    "svolgimenti": 31,
+    "label_uniche": 39,
+    "riferimenti_risolti": 25,
+    "registri_esclusi_dal_pdf": true
+  },
+  "estratti": [
+    {
+      "numero": 1,
+      "file": "01-insiemi-e-operazioni.pdf",
+      "pagine": 4,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 0,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 2,
+      "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+      "pagine": 6,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 2,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 3,
+      "file": "03-funzioni.pdf",
+      "pagine": 8,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 1,
+      "link_al_volume": 2,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 4,
+      "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+      "pagine": 5,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 4,
+      "link_al_volume": 1,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 5,
+      "file": "05-aritmetica-degli-interi.pdf",
+      "pagine": 10,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 7,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 6,
+      "file": "06-aritmetica-modulare.pdf",
+      "pagine": 10,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 0,
+      "link_al_volume": 0,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 7,
+      "file": "07-anelli-e-campi.pdf",
+      "pagine": 9,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 4,
+      "link_al_volume": 5,
+      "altre_annotazioni": 0
+    },
+    {
+      "numero": 8,
+      "file": "08-funzione-di-eulero-e-gruppi.pdf",
+      "pagine": 2,
+      "flussi_testo_formato_numerazione_identici": true,
+      "pixel_identici_tutte_le_pagine": true,
+      "link_interni": 2,
+      "link_al_volume": 1,
+      "altre_annotazioni": 0
+    }
+  ],
+  "capitoli_correnti": [
+    {
+      "numero": 1,
+      "titolo": "Insiemi e operazioni",
+      "file": "01-insiemi-e-operazioni.pdf",
+      "pagine": 4,
+      "pagina_pdf_iniziale": 5,
+      "pagina_pdf_finale": 8,
+      "numero_stampato_iniziale": "1",
+      "numero_stampato_finale": "4",
+      "sha256": "683adbe54f5ae0e0db47042656c4985fa956c367ba9f7c19140239aa1fca6c89"
+    },
+    {
+      "numero": 2,
+      "titolo": "Relazioni, equivalenze e quozienti",
+      "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+      "pagine": 6,
+      "pagina_pdf_iniziale": 9,
+      "pagina_pdf_finale": 14,
+      "numero_stampato_iniziale": "5",
+      "numero_stampato_finale": "10",
+      "sha256": "873e3e2031ba99b8ab027f76060e3dfd9caf961e13fa4709154c86e7df61f8f1"
+    },
+    {
+      "numero": 3,
+      "titolo": "Funzioni",
+      "file": "03-funzioni.pdf",
+      "pagine": 8,
+      "pagina_pdf_iniziale": 15,
+      "pagina_pdf_finale": 22,
+      "numero_stampato_iniziale": "11",
+      "numero_stampato_finale": "18",
+      "sha256": "5aa2d89accccfa370abb62b35c22fc22b4fa5bc6503207d052e352564bf0f4bc"
+    },
+    {
+      "numero": 4,
+      "titolo": "Insiemi finiti, infiniti e cardinalità",
+      "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+      "pagine": 5,
+      "pagina_pdf_iniziale": 23,
+      "pagina_pdf_finale": 27,
+      "numero_stampato_iniziale": "19",
+      "numero_stampato_finale": "23",
+      "sha256": "0115a3791eabdedd147fae8561bcc3f9bbbdaef11e9a623169932d86a8ab4fd8"
+    },
+    {
+      "numero": 5,
+      "titolo": "Aritmetica degli interi",
+      "file": "05-aritmetica-degli-interi.pdf",
+      "pagine": 10,
+      "pagina_pdf_iniziale": 28,
+      "pagina_pdf_finale": 37,
+      "numero_stampato_iniziale": "24",
+      "numero_stampato_finale": "33",
+      "sha256": "3456eb2ed300fffc38e88851579dcf5e3fd8c082fb80b389331567c3063069d1"
+    },
+    {
+      "numero": 6,
+      "titolo": "Aritmetica modulare",
+      "file": "06-aritmetica-modulare.pdf",
+      "pagine": 10,
+      "pagina_pdf_iniziale": 38,
+      "pagina_pdf_finale": 47,
+      "numero_stampato_iniziale": "34",
+      "numero_stampato_finale": "43",
+      "sha256": "fc39a454d6da6a55af34a7802fa6aec0f5dade0c975a0185466bcecafe0db86a"
+    },
+    {
+      "numero": 7,
+      "titolo": "Anelli e campi",
+      "file": "07-anelli-e-campi.pdf",
+      "pagine": 9,
+      "pagina_pdf_iniziale": 48,
+      "pagina_pdf_finale": 56,
+      "numero_stampato_iniziale": "44",
+      "numero_stampato_finale": "52",
+      "sha256": "38c648598b6ce939a5e5f580923ead82134583c4301bf46ce0c56b07399a8aaf"
+    },
+    {
+      "numero": 8,
+      "titolo": "Funzione di Eulero e gruppi",
+      "file": "08-funzione-di-eulero-e-gruppi.pdf",
+      "pagine": 2,
+      "pagina_pdf_iniziale": 57,
+      "pagina_pdf_finale": 58,
+      "numero_stampato_iniziale": "53",
+      "numero_stampato_finale": "54",
+      "sha256": "9e0dcb8db420b896da2d416ab44bc2fef6e2825762f3eec848943a7520be622b"
+    }
+  ],
+  "revisione_visiva": {
+    "fonti_nuove": "nessuna nuova fonte in questa riorganizzazione; restano32 PDF/211 pagine già inventariate e lette",
+    "versione_finale": "indice PDF3; finecapitolo7 PDF56; intero nuovo capitolo8 PDF57–58",
+    "controlli": "titolo e provenienza, formule, tabelle, enunciati/prove interi, numerazione e riferimenti",
+    "estratti": "54 pagine in8 estratti, flussi/testo/formato/numerazione/link e pixel identici al volume",
+    "capitoli_1_7": "52 pagine graficamente identiche alla versione prima della ricollocazione; sorgenti1–6 identici e restante corpo7 esattamente conservato",
+    "anomalie_aperte": []
+  },
+  "controlli_matematici_correnti": [
+    "CONTROLLI_RINASCITA_2026-10-23.json",
+    "CONTROLLI_INTEGRAZIONE_MZ_2026-10-23.json",
+    "CONTROLLI_LEZIONE_12_2026-10-24.json",
+    "CONTROLLI_LEZIONI_13-15_2026-11-01.json",
+    "CONTROLLI_LEZIONE_16_2026-11-05.json"
+  ],
+  "registro_corrente": "CAPITOLO_EULERO_E_GRUPPI_2026-11-05.md",
+  "scelta_prove": "SCELTA_DIMOSTRAZIONI.csv",
+  "snapshot_precedente": "storico-prima-capitolo-eulero-2026-11-05/",
+  "verifica_condivisa": "../../strumenti/VERIFICA_ESPORTAZIONE_2026-11-05.json",
+  "sorgenti_sha256": {
+    "main.tex": "39f50dbe95f9dd58f31ebab04348b171a54b1c5ef29a506545de0f4cb942a8d1",
+    "preambolo.tex": "33dc6ef968d685c47e8790592eba95c58c93d8573e99cfc12de8a290fb3b048f",
+    "capitoli/01-insiemi.tex": "ec252433f9a7e2d00a8bb99ad5876c86c7f9b01650c147af3b44bf6d681d0d30",
+    "capitoli/02-relazioni.tex": "1f42f367c4acc687cf81cbe76b74698c17b9deac3d717558320c97dc8166fa42",
+    "capitoli/03-funzioni.tex": "afaad6da16beb6cdd3ab541e4b14cfc2367fb969ba1da6664e3740a351351f65",
+    "capitoli/04-cardinalita.tex": "0ce1c76f6e9a227bba5867a895f9913b244253fcbb5e6843ddcf973551247e2e",
+    "capitoli/05-interi.tex": "8a8eaa0cb4e1fbdb1c11b82ba670c27450291938c9bc72e3a39e8bcea36b2e8c",
+    "capitoli/06-aritmetica-modulare.tex": "e616ba6d572048f8a86a5ff15af17841689690218ce23ff8e3516f51cae4177b",
+    "capitoli/07-anelli.tex": "2c39f99b0989230070c80c9ef5fa7e9f02cfa63d445888bfaa55b7e7d8c48ea3",
+    "capitoli/08-eulero-e-gruppi.tex": "8a2e35dfeede620f91f7ee6cdb15e9bc4e024e88d8ebc38a6ee293dd6d8da494"
+  },
+  "limiti": [
+    "Riesame manuale delle prove per unità; controlli finiti supplementari, senza certificazione formale o attestazione dell’intero programma d’esame.",
+    "CSB, confronto totale e aritmetica cardinale generale assunti senza dimostrazione.",
+    "Passo analitico della cardinalità di R e indipendenza di CH assunti; CH non viene assunta.",
+    "Conteggio finito e proprietà numeriche usuali assunti; uso della scelta dichiarato.",
+    "J usa temporaneamente infinità dei primi e fattorizzazione, dimostrate successivamente; seno/arcoseno usano proprietà analitiche dichiarate.",
+    "Riorganizzazione richiesta dall’autore: sezioneEulero spostata integralmente dal7 al nuovo8; nessuna nuova teoria dei gruppi aggiunta. Numerazione dei risultati spostati aggiornata;52 pagine dei capitoli1–7 invariate. Copie annotate separate non modificate."
+  ],
+  "capitoli_modificati": [
+    7
+  ],
+  "copie_annotate_modificate": false,
+  "commit_push_pubblicazioni": false,
+  "lavori_pendenti_sulle_fonti_ricevute": [],
+  "capitoli_nuovi": [
+    8
+  ],
+  "prossima_lezione_A-L": 17,
+  "rinvii_didattici": [],
+  "rinvii_recuperati": [
+    "D01",
+    "D02",
+    "D03"
+  ],
+  "verifica_riorganizzazione": "VERIFICA_CAPITOLO_EULERO_E_GRUPPI_2026-11-05.json",
+  "ultimo_intervento": {
+    "tipo": "ricollocazione senza aggiunte matematiche",
+    "capitolo": "8 Funzione di Eulero e gruppi",
+    "pagine_stampate": [
+      53,
+      54
+    ],
+    "unita_matematiche_nuove": 0,
+    "testo_sezione_spostata_esattamente_conservato": true,
+    "definizioni_o_prove_gruppi_aggiunte": false
+  }
+}

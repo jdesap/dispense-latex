@@ -1,0 +1,256 @@
+% !TeX root = ../main.tex
+\section{Sottogruppi e sottogruppi generati}
+% A–L L18 pp. 2–5; M–Z L17 p. 7 e L18 pp. 1–3.
+\begin{definizione}
+Un \textbf{sottogruppo} di un gruppo $G$ è un sottoinsieme non vuoto $H\subseteq G$ tale che la restrizione dell'operazione di $G$ definisca su $H$ una struttura di gruppo. Si scrive $H\le G$. La restrizione deve essere un'operazione $H\times H\to H$: per ogni $h,k\in H$ deve quindi risultare $hk\in H$.
+\end{definizione}
+
+\begin{proposizione}[Criteri di sottogruppo]\label{prop:criterio-sottogruppo}
+Per $\varnothing\ne H\subseteq G$, sono equivalenti:
+\begin{enumerate}
+\item $H\le G$;
+\item per ogni $h,k\in H$, $hk\in H$, e per ogni $h\in H$, $h^{-1}\in H$;
+\item per ogni $h,k\in H$, $hk^{-1}\in H$.
+\end{enumerate}
+In tal caso il neutro di $H$ è $1_G$ e l'inverso di un elemento in $H$ coincide con quello calcolato in $G$.
+\end{proposizione}
+\begin{proof}
+\textbf{1 implica 2.} Sia $e_H$ il neutro di $H$. Scelto $h\in H$, da $he_H=h=h1_G$ e dalla cancellazione in $G$ segue $e_H=1_G$. L'inverso in $H$ è dunque anche inverso in $G$, e coincide con $h^{-1}$ per unicità. La chiusura del prodotto è parte della definizione.
+
+\textbf{2 implica 1.} Scelto $h\in H$, le due chiusure danno $1_G=hh^{-1}\in H$. Associatività, neutro e inversi sono quelli di $G$, e valgono anche sugli elementi di $H$.
+
+\textbf{2 implica 3.} Si applicano in successione la chiusura rispetto all'inverso e quella rispetto al prodotto.
+
+\textbf{3 implica 2.} Per $h\in H$, $hh^{-1}=1_G\in H$. Quindi, per ogni $k\in H$, $1_Gk^{-1}=k^{-1}\in H$; infine $hk=h(k^{-1})^{-1}\in H$. La condizione $H\ne\varnothing$ serve per partire da un suo elemento.
+\end{proof}
+
+\subsection{Intersezioni, unioni ed estremo superiore}
+\begin{proposizione}\label{prop:intersezione-sottogruppi}
+\begin{enumerate}[label=\arabic*.]
+\item L'intersezione di una famiglia non vuota di sottogruppi di $G$ è un sottogruppo. In particolare $H_1\cap H_2$ è il più grande sottogruppo contenuto sia in $H_1$ sia in $H_2$.
+\item Anche $\{1_G\}$ e $G$ sono sottogruppi di $G$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Il neutro appartiene a tutti i sottogruppi, quindi all'intersezione. Se $h,k$ appartengono all'intersezione, $hk^{-1}$ appartiene a ogni sottogruppo della famiglia, dunque ancora all'intersezione. Si applica il criterio precedente. Ogni sottogruppo contenuto nei due fattori è contenuto nella loro intersezione, che è quindi il più grande fra questi.
+\item Per $\{1_G\}$ e $G$ lo stesso criterio si verifica direttamente.
+\end{enumerate}
+\end{proof}
+
+\begin{proposizione}\label{prop:unione-sottogruppi}
+Per $H_1,H_2\le G$, l'unione $H_1\cup H_2$ è un sottogruppo se e solo se $H_1\subseteq H_2$ oppure $H_2\subseteq H_1$.
+\end{proposizione}
+\begin{proof}
+Se uno dei due contiene l'altro, l'unione coincide con il più grande ed è un sottogruppo. Viceversa, se nessuno contiene l'altro, scegliamo $a\in H_1\setminus H_2$ e $b\in H_2\setminus H_1$. Se l'unione fosse un sottogruppo, conterrebbe $ab$. Se $ab\in H_1$, allora $b=a^{-1}(ab)\in H_1$, assurdo. Se $ab\in H_2$, allora $a=(ab)b^{-1}\in H_2$, ancora assurdo. Le due possibilità esauriscono l'unione.
+\end{proof}
+
+% A–L L19 pp. 1–3; M–Z L19 pp. 1–2: generalizzazione integrata qui.
+\begin{definizione}
+Per $X\subseteq G$, il \textbf{sottogruppo generato da $X$} è
+\[
+\langle X\rangle=\bigcap\{H\le G\mid X\subseteq H\}.
+\]
+La famiglia contiene $G$, quindi è non vuota; la sua intersezione è un sottogruppo che contiene $X$ ed è contenuto in ogni sottogruppo contenente $X$. È dunque il più piccolo sottogruppo contenente $X$. Gli elementi di $X$ si chiamano \textbf{generatori} di $\langle X\rangle$; si scrive anche $\langle x_1,\ldots,x_r\rangle$ quando $X=\{x_1,\ldots,x_r\}$. In particolare $\langle\varnothing\rangle=\{1_G\}$.
+\end{definizione}
+
+\begin{proposizione}[Descrizione mediante parole]\label{prop:generato-parole}
+Sia $X\subseteq G$.
+\begin{enumerate}[label=\arabic*.]
+\item $\langle X\rangle$ è l'insieme dei prodotti finiti
+\[
+x_1^{\varepsilon_1}\cdots x_r^{\varepsilon_r},\qquad
+r\in\N,\quad x_i\in X,\quad\varepsilon_i\in\{1,-1\}.
+\]
+Il prodotto con $r=0$, detto \emph{parola vuota}, vale $1_G$.
+\item Se $G$ è abeliano, gli stessi elementi si possono scrivere come prodotti finiti $x_1^{n_1}\cdots x_r^{n_r}$ con $n_i\in\Z$. In notazione additiva sono le combinazioni intere finite $n_1x_1+\cdots+n_rx_r$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Indichiamo con $W$ l'insieme delle parole descritte. Contiene $1_G$; il prodotto di due parole è la loro concatenazione, quindi appartiene a $W$. Inoltre
+\[
+(x_1^{\varepsilon_1}\cdots x_r^{\varepsilon_r})^{-1}
+=x_r^{-\varepsilon_r}\cdots x_1^{-\varepsilon_1}\in W.
+\]
+Quindi $W\le G$ e contiene $X$, da cui $\langle X\rangle\subseteq W$. Viceversa ogni sottogruppo contenente $X$ contiene gli inversi delle sue lettere e tutti i loro prodotti finiti: contiene dunque $W$. Applicando questo a $\langle X\rangle$ si ottiene $W\subseteq\langle X\rangle$. Per $X=\varnothing$ resta soltanto la parola vuota.
+\item Se il prodotto è commutativo, si possono riordinare le lettere di una parola e raccogliere quelle uguali in potenze intere. Viceversa ogni potenza intera è un prodotto di lettere o dei loro inversi (oppure il prodotto vuoto). In notazione additiva il prodotto diventa somma e la potenza $x^n$ diventa $nx$.
+\end{enumerate}
+\end{proof}
+
+\begin{osservazione}
+La scrittura mediante parole non è in generale unica: per esempio, se $x_1=x_2x_3$, un elemento ha già due espressioni diverse. Nei gruppi non abeliani l'ordine dei fattori va conservato. Se $\sigma\in S_{10}$ manda $1\mapsto2\mapsto3\mapsto1$ e fissa gli altri punti, allora $\sigma^3=\operatorname{id}$. Per ogni $\tau\in S_{10}$,
+\[
+\sigma\sigma\sigma\tau=\tau,\qquad
+\sigma\tau\sigma^3\tau=\sigma\tau^2.
+\]
+Si cancellano blocchi adiacenti, senza scambiare arbitrariamente $\sigma$ e $\tau$.
+\end{osservazione}
+
+\begin{definizione}
+Per $H_1,H_2\le G$, il \textbf{sottogruppo generato da $H_1$ e $H_2$}, indicato con $\langle H_1,H_2\rangle$ o $H_1\vee H_2$, è $\langle H_1\cup H_2\rangle$, cioè
+\[
+H_1\vee H_2=\bigcap\{H\le G\mid H_1\cup H_2\subseteq H\}.
+\]
+La famiglia è non vuota perché contiene $G$; l'intersezione è un sottogruppo e contiene entrambi. Per costruzione è il \emph{più piccolo} sottogruppo che li contiene: è l'estremo superiore per l'inclusione, mentre $H_1\cap H_2$ è l'estremo inferiore.
+\end{definizione}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+\node (b) at (0,0) {$H_1\cap H_2$};
+\node (l) at (-2,1.25) {$H_1$}; \node (r) at (2,1.25) {$H_2$};
+\node (t) at (0,2.5) {$H_1\vee H_2$};
+\draw[->] (b)--(l); \draw[->] (b)--(r); \draw[->] (l)--(t); \draw[->] (r)--(t);
+\end{tikzpicture}
+\end{center}
+Le frecce indicano inclusioni dal basso verso l'alto; alcuni nodi possono coincidere. L'unione insiemistica è contenuta nel sottogruppo generato, ma in generale non coincide con esso.
+
+\subsection{Esempi nelle trasformazioni affini e nelle permutazioni}
+Richiamiamo $f_{a,b}(x)=ax+b$ con $a\ne0$, e il prodotto dato dalla composizione. In $\operatorname{Aff}(\R)$ consideriamo
+\[
+\mathcal O=\{f_{a,0}\mid a\in\R\setminus\{0\}\},\qquad
+\mathcal T=\{f_{1,b}\mid b\in\R\}.
+\]
+Sono rispettivamente le \textbf{omotetie con centro nell'origine} (inclusi i rapporti negativi) e le \textbf{traslazioni}.
+
+\begin{proposizione}\label{prop:sottogruppi-affini}
+\begin{enumerate}[label=\arabic*.]
+\item $\mathcal O$ e $\mathcal T$ sono sottogruppi abeliani di $\operatorname{Aff}(\R)$; inoltre
+\[
+\mathcal O\cap\mathcal T=\{f_{1,0}\},\qquad
+\mathcal O\vee\mathcal T=\operatorname{Aff}(\R).
+\]
+\item Sono sottogruppi anche
+\[
+H=\{f_{a,b}\mid a\in\Q\setminus\{0\},\ b\in\R\},\qquad
+\operatorname{Aff}(\Q)=\{f_{a,b}\mid a\in\Q\setminus\{0\},\ b\in\Q\},
+\]
+qui entrambi considerati come insiemi di funzioni $\R\to\R$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Per le omotetie, $f_{a,0}\circ f_{c,0}=f_{ac,0}$ e $f_{a,0}^{-1}=f_{1/a,0}$. Per le traslazioni, $f_{1,b}\circ f_{1,d}=f_{1,b+d}$ e $f_{1,b}^{-1}=f_{1,-b}$. Entrambi gli insiemi contengono $f_{1,0}$, sono chiusi e hanno operazione commutativa perché $ac=ca$ e $b+d=d+b$.
+
+Un'affinità è in entrambi esattamente quando $a=1,b=0$. Ogni affinità si scrive invece $f_{a,b}=f_{1,b}\circ f_{a,0}$, prodotto di una traslazione e un'omotetia. Ogni sottogruppo che contiene $\mathcal O$ e $\mathcal T$ contiene quindi tutte le affinità: il loro generato è l'intero gruppo, che non è abeliano pur essendolo i due sottogruppi.
+\item Per $H$, prodotto e inverso hanno ancora pendenza razionale non nulla: $ac\in\Q\setminus\{0\}$ e $1/a\in\Q\setminus\{0\}$, mentre i termini noti possono essere reali. Per $\operatorname{Aff}(\Q)$, le formule $ad+b$ e $-b/a$ conservano anche la razionalità del termine noto. Il criterio di sottogruppo si applica a entrambi. I due esempi sono distinti: $f_{1,\sqrt2}$ appartiene a $H$, ma non a $\operatorname{Aff}(\Q)$. Inoltre $\mathcal T\subsetneq H$, perché $f_{2,0}\in H\setminus\mathcal T$, e $H\ne\mathcal O$, perché $f_{1,1}\in H\setminus\mathcal O$.
+\end{enumerate}
+\end{proof}
+
+\begin{esempio}[Permutazioni che fissano dei punti]
+Per $\varnothing\ne X_0\subseteq X$, l'insieme
+\[
+\operatorname{Fix}(X_0)=\{\sigma\in S_X\mid\sigma(x)=x\text{ per ogni }x\in X_0\}
+\]
+è un sottogruppo: contiene l'identità; se $\sigma,\tau$ fissano ogni $x\in X_0$, $(\sigma\circ\tau)(x)=\sigma(x)=x$; da $\sigma(x)=x$, applicando $\sigma^{-1}$ si ricava $\sigma^{-1}(x)=x$. Si tratta di fissare ogni punto singolarmente, non soltanto di mandare $X_0$ in se stesso. Per $X_0=\{x_0\}$ si ottiene il sottogruppo delle permutazioni che fissano il punto $x_0$.
+\end{esempio}
+
+\subsection{Il sottogruppo ciclico generato da un elemento}
+\begin{proposizione}\label{prop:ciclico}
+Per $g\in G$, l'insieme
+\[
+\langle g\rangle=\{g^n\mid n\in\Z\}
+\]
+ha le seguenti proprietà:
+\begin{enumerate}[label=\arabic*.]
+\item è un sottogruppo abeliano;
+\item è il più piccolo sottogruppo di $G$ contenente $g$.
+\end{enumerate}
+Si chiama \textbf{sottogruppo ciclico generato da $g$}.
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Contiene $1_G=g^0$; per la proposizione~\ref{prop:potenze-gruppo}, $g^mg^n=g^{m+n}$ e $(g^n)^{-1}=g^{-n}$, dunque è un sottogruppo. È abeliano perché $m+n=n+m$.
+\item Se $H\le G$ contiene $g$, contiene $g^{-1}$ e tutti i loro prodotti finiti, quindi tutte le potenze intere di $g$. Perciò $\langle g\rangle\subseteq H$.
+\end{enumerate}
+\end{proof}
+
+\begin{esempio}
+In notazione additiva, $\langle g\rangle=\{ng\mid n\in\Z\}$. In $(\Z,+)$ si ha quindi $\langle3\rangle=3\Z$ e, più in generale, $\langle m\rangle=m\Z$ per $m\in\Z$; per $m=0$ si ottiene il sottogruppo $\{0\}$.
+\end{esempio}
+
+\Needspace{11\baselineskip}
+\begin{esercizio}
+In $S_5$, determinare tutti gli elementi di $\langle\pi\rangle$ per
+$\pi=\left(\begin{smallmatrix}1&2&3&4&5\\4&3&1&2&5\end{smallmatrix}\right)$.
+\end{esercizio}
+\begin{svolgimento}
+Componendo la permutazione con se stessa si trova
+\[
+\pi^2=\begin{pmatrix}1&2&3&4&5\\2&1&4&3&5\end{pmatrix},\qquad
+\pi^3=\begin{pmatrix}1&2&3&4&5\\3&4&2&1&5\end{pmatrix},\qquad
+\pi^4=\operatorname{id}.
+\]
+Le quattro permutazioni $\operatorname{id},\pi,\pi^2,\pi^3$ sono distinte. Ogni esponente intero si riduce modulo $4$, perché $\pi^4=1$ e anche $\pi^{-1}=\pi^3$. Dunque sono tutti e soli gli elementi di $\langle\pi\rangle$.
+\end{svolgimento}
+
+\Needspace{23\baselineskip}
+\subsection{Tutti i sottogruppi degli interi}
+% A–L L19 pp. 4–5; M–Z L19 pp. 3–4.
+\begin{proposizione}\label{prop:sottogruppi-Z}
+Ogni sottogruppo di $(\Z,+)$ è $m\Z$ per un unico $m\in\N$.
+\end{proposizione}
+\begin{proof}
+Se $H=\{0\}$, si prende $m=0$. Se $H\ne\{0\}$, contiene un intero non nullo e il suo opposto, dunque contiene un positivo. Per buon ordinamento esiste
+\[
+m=\min(H\cap\N^*)>0.
+\]
+Poiché $m\in H$, tutti i suoi multipli interi appartengono a $H$, quindi $m\Z\subseteq H$. Per $n\in H$, la divisione euclidea dà $n=mq+r$, con $q\in\Z$ e $0\le r<m$. Ma $r=n-mq\in H$: se fosse positivo contraddirebbe la scelta di $m$. Quindi $r=0$ e $n\in m\Z$, da cui l'inclusione opposta. L'unicità segue perché per un sottogruppo non nullo $m$ è il suo minimo elemento positivo; $0\Z$ è invece l'unico caso senza positivi.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{proposizione}\label{prop:reticolo-Z}
+\begin{enumerate}[label=\arabic*.]
+\item Per $m,n\in\N$, $m\Z\subseteq n\Z$ se e solo se $n\mid m$.
+\item Per $m,n>0$,
+\[
+m\Z\vee n\Z=\langle m,n\rangle=\operatorname{MCD}(m,n)\Z,
+\qquad m\Z\cap n\Z=\operatorname{mcm}(m,n)\Z.
+\]
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item L'inclusione implica $m\in n\Z$, quindi $n\mid m$. Viceversa, se $m=nq$, ogni multiplo $mk=n(qk)$ appartiene a $n\Z$. Il ragionamento comprende lo zero: $0$ divide soltanto $0$.
+\item Un sottogruppo contiene $m,n$ esattamente quando contiene $m\Z,n\Z$, dunque i due generati coincidono. Nel gruppo abeliano $(\Z,+)$ essi sono l'insieme delle combinazioni $am+bn$, con $a,b\in\Z$. Posto $d=\operatorname{MCD}(m,n)$, ciascuna combinazione è multipla di $d$; viceversa Bézout dà una combinazione uguale a $d$, quindi il generato contiene tutti i multipli di $d$. L'intersezione consiste invece negli interi multipli sia di $m$ sia di $n$: per la caratterizzazione aritmetica del minimo comune multiplo sono esattamente i multipli di $\operatorname{mcm}(m,n)$, incluso zero e i negativi.
+\end{enumerate}
+\end{proof}
+
+\begin{esempio}[MCD, mcm e inclusione]
+Si ha $m\Z=(-m)\Z$ per ogni intero $m$. Per $m=12$ e $n=21$,
+\[
+12\Z\vee21\Z=3\Z,\qquad12\Z\cap21\Z=84\Z.
+\]
+Per $m,n>0$ le inclusioni si dispongono come nel diagramma seguente; le frecce vanno dal sottogruppo contenuto a quello contenente e alcuni nodi possono coincidere.
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+\node (z) at (0,4.5) {$\Z$};
+\node (d) at (0,3.6) {$\operatorname{MCD}(m,n)\Z$};
+\node (m) at (-2.1,2.5) {$m\Z$}; \node (n) at (2.1,2.5) {$n\Z$};
+\node (l) at (0,1.3) {$\operatorname{mcm}(m,n)\Z$};
+\node (o) at (0,.2) {$\{0\}$};
+\draw[->] (o)--(l); \draw[->] (l)--(m); \draw[->] (l)--(n);
+\draw[->] (m)--(d); \draw[->] (n)--(d); \draw[->] (d)--(z);
+\end{tikzpicture}
+\end{center}
+\end{esempio}
+
+\Needspace{12\baselineskip}
+\begin{esercizio}
+Determinare tutti i sottogruppi di $(\Z,+)$ contenenti $12\Z$ e disegnarne il reticolo delle inclusioni.
+\end{esercizio}
+\begin{svolgimento}
+Ogni sottogruppo è $m\Z$, con $m\ge0$, e $12\Z\subseteq m\Z$ equivale a $m\mid12$. I soli valori sono $1,2,3,4,6,12$; il valore $0$ non è ammesso perché $12\notin\{0\}$.
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+\node (a) at (0,3.4) {$\Z$};
+\node (b) at (-1.9,2.3) {$2\Z$}; \node (c) at (1.9,2.3) {$3\Z$};
+\node (d) at (-1.9,1.2) {$4\Z$}; \node (e) at (1.9,1.2) {$6\Z$};
+\node (f) at (0,.1) {$12\Z$};
+\draw[->] (f)--(d); \draw[->] (f)--(e); \draw[->] (d)--(b);
+\draw[->] (e)--(b); \draw[->] (e)--(c); \draw[->] (b)--(a); \draw[->] (c)--(a);
+\end{tikzpicture}
+\end{center}
+Le frecce rappresentano inclusioni dal basso verso l'alto; tutte le altre inclusioni si ottengono per transitività.
+\end{svolgimento}
+

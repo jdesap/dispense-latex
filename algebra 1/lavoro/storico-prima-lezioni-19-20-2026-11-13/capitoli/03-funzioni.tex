@@ -1,0 +1,391 @@
+% !TeX root = ../main.tex
+\chapter{Funzioni}
+\fonti{Lezioni 2, 4, 5, 6 e 7}
+
+\section{Dominio, codominio e grafico}
+% A–L L4 pp. 3–5; M–Z L4 pp. 4–7. L'ordine resta A–L.
+\begin{definizione}
+Una \textbf{funzione} $f:X\to Y$ consiste di un dominio $X$, un codominio $Y$ e una regola che associa a ogni $x\in X$ un unico elemento $f(x)\in Y$. L'\textbf{immagine} e il \textbf{grafico} sono
+\[
+\operatorname{Im}(f)=\{f(x)\mid x\in X\}\subseteq Y,\qquad
+\operatorname{Gr}(f)=\{(x,f(x))\mid x\in X\}\subseteq X\times Y.
+\]
+Due funzioni sono uguali quando coincidono dominio, codominio e valori in ciascun punto del dominio.
+\end{definizione}
+
+\begin{esempio}[Regole sui rappresentanti]
+La formula $f:\Q\to\Q$, $a/b\mapsto a+b$, non definisce una funzione: la stessa classe $1/2=2/4$ darebbe $3$ e $6$. Anche $(a/b,c/d)\mapsto(a+c)/(bd)$ fallisce per il controesempio del capitolo precedente. Una formula non basta: deve assegnare un unico risultato all'elemento del dominio, indipendentemente da come lo si scrive.
+\end{esempio}
+
+\begin{esempio}[Sei funzioni]
+Useremo le seguenti applicazioni:
+\begin{enumerate}[label=\alph*)]
+\item $c:\C\to\C$, $c(z)=0$;
+\item $\operatorname{id}_{\R}:\R\to\R$, $x\mapsto x$;
+\item $s:\R_{\ge0}\to\R_{\ge0}$, $s(x)=x^2$;
+\item $a:T\to\R$, che associa a un triangolo non degenere del piano la sua area;
+\item $d:\N\times\N\to\Z$, $d(m,n)=m-n$;
+\item $J:\N^*\to\mathcal P(P)$, $J(n)=\{p\in P\mid p\mid n\}$, dove $P$ è l'insieme dei primi positivi e $p\mid n$ significa che $n$ è un multiplo intero di $p$.
+\end{enumerate}
+Per l'ultima, $J(1)=\varnothing$, $J(4)=\{2\}$, $J(12)=\{2,3\}$, $J(30)=\{2,3,5\}$, $J(7)=\{7\}$. In questo esempio si usano le proprietà aritmetiche usuali dei primi come fatti assunti: la loro infinità e la fattorizzazione saranno dimostrate nel capitolo~\ref{cap:interi}.
+\end{esempio}
+
+Il grafico è una relazione particolare: per ogni $x\in X$ deve esistere esattamente un $y\in Y$ con $(x,y)$ nel grafico. La condizione riguarda tutti i punti del dominio, ma non impone che ogni punto del codominio sia raggiunto. Nel piano, ogni retta verticale relativa a un'ascissa del dominio deve incontrare il grafico una sola volta.
+
+\begin{schema}
+\begin{tikzpicture}[scale=.72]
+\begin{scope}
+\draw[asse] (-1.8,0)--(1.8,0) node[right] {$x$};\draw[asse] (0,-.3)--(0,2.6) node[above] {$y$};
+\draw[coloreschema,thick,domain=-1.45:1.45,samples=50] plot (\x,{\x*\x});\draw[dashed] (1,-.15)--(1,2.3);\fill (1,1) circle (2pt);\node at (0,-.8) {Un unico punto per ascissa};
+\end{scope}
+\begin{scope}[shift={(7,1)}]
+\draw[asse] (-1.8,0)--(1.8,0) node[right] {$x$};\draw[asse] (0,-1.4)--(0,1.7) node[above] {$y$};
+\draw[coloreschema,thick] (0,0) circle (1);\draw[dashed] (.5,-1.3)--(.5,1.3);\fill (.5,.866) circle (2pt);\fill (.5,-.866) circle (2pt);\node at (0,-1.8) {La circonferenza non è un grafico};
+\end{scope}
+\end{tikzpicture}
+\end{schema}
+
+\begin{definizione}
+Una funzione $f:X\to Y$ è \textbf{iniettiva} se, per ogni $x,x'\in X$, $f(x)=f(x')$ implica $x=x'$. È \textbf{suriettiva} se per ogni $y\in Y$ esiste $x\in X$ con $f(x)=y$, ossia $\operatorname{Im}(f)=Y$.
+\end{definizione}
+
+\begin{esercizio}[Immagine, iniettività e suriettività]
+Determinare l'immagine e discutere iniettività e suriettività delle sei funzioni precedenti. Per il quadrato considerare anche i domini $\R$ e $\R_{\le0}$ e il codominio $\R$.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Costante.} L'immagine è $\{0\}$, diversa da $\C$, e $c(0)=c(1)$: non è né iniettiva né suriettiva.
+
+\textbf{Identità.} $\operatorname{id}_{\R}(x)=\operatorname{id}_{\R}(x')$ è già $x=x'$, e ogni $y$ è immagine di se stesso. È iniettiva e suriettiva.
+
+\textbf{Quadrato.} Per $x,x'\ge0$, da $x^2=(x')^2$ segue $(x-x')(x+x')=0$. Se $x+x'=0$, entrambi sono $0$; altrimenti si cancella il secondo fattore e si ha $x=x'$. Ogni $y\ge0$ è immagine di $\sqrt y$, perciò $s$ è iniettiva e suriettiva. Anche $\R_{\le0}\to\R_{\ge0}$, $x\mapsto x^2$, è iniettiva: due numeri non positivi con lo stesso quadrato coincidono; è suriettiva perché $y$ è immagine di $-\sqrt y$. Su tutto $\R$ non è iniettiva, dato che $1$ e $-1$ hanno la stessa immagine; con codominio $\R$ non è suriettiva, perché l'immagine rimane $[0,+\infty)$.
+
+\textbf{Area.} Due triangoli distinti ottenuti per traslazione hanno la stessa area, quindi non c'è iniettività. Ogni $t>0$ è area di un triangolo di base $2$ e altezza $t$, mentre un triangolo non degenere ha area positiva. L'immagine è $(0,+\infty)$, diversa dal codominio $\R$.
+
+\textbf{Differenza.} $d(0,0)=d(1,1)$, quindi non è iniettiva. Ogni $z\ge0$ è $d(z,0)$ e ogni $z<0$ è $d(0,-z)$: l'immagine è $\Z$ e la funzione è suriettiva.
+
+\textbf{Divisori primi.} $J(2)=J(4)$, quindi non è iniettiva. Per $n>0$, i primi che dividono $n$ sono compresi tra $2$ e $n$, dunque $J(n)$ è finito. Viceversa un insieme finito $\{p_1,\ldots,p_r\}$ di primi è immagine del prodotto $p_1\cdots p_r$; per l'insieme vuoto si usa $n=1$. Quindi l'immagine è l'insieme dei sottoinsiemi finiti di $P$, non tutto $\mathcal P(P)$, poiché $P$ è infinito. Non è suriettiva.
+\end{svolgimento}
+
+\begin{esercizio}[Funzione a tratti sugli interi]
+Studiare $f:\Z\to\Z$ definita da
+\[
+f(n)=\begin{cases}2n-3&n\text{ pari},\\n+1&n\text{ dispari}.\end{cases}
+\]
+\end{esercizio}
+\begin{svolgimento}
+% A–L L4 p. 5; svolgimento M–Z L7 pp. 1–2, ripresa effettiva.
+\textbf{Iniettività.} Un intero pari $n=2k$ ha immagine $4k-3$, dispari; un intero dispari $n=2k+1$ ha immagine $2k+2$, pari. Se due elementi hanno immagini uguali, devono quindi appartenere allo stesso ramo. Nel ramo pari, $2n-3=2n'-3$ implica $n=n'$; in quello dispari, $n+1=n'+1$ implica ancora $n=n'$. Anche i casi misti sono così esclusi.
+
+\textbf{Immagine.} Il ramo dispari percorre tutti gli interi pari: dato $y$ pari, $n=y-1$ è dispari e $f(n)=y$. Il ramo pari percorre esattamente gli interi $4k-3$, $k\in\Z$. Non raggiunge $3$, perché $4k-3=3$ richiederebbe $4k=6$. Dunque $f$ è iniettiva ma non suriettiva.
+\end{svolgimento}
+
+\begin{esercizio}[Funzione del piano]
+Studiare $F:\R^2\to\R^2$, $F(x,y)=(y^3,x(y^2+1))$.
+\end{esercizio}
+\begin{svolgimento}
+% A–L L4 p. 6; prova completa M–Z L5 pp. 2–3.
+\textbf{Iniettività.} Se $F(x,y)=F(x',y')$, l'uguaglianza della prima coordinata dà $y^3=(y')^3$, quindi $y=y'$. La seconda diventa $x(y^2+1)=x'(y^2+1)$. Poiché $y^2+1>0$, si cancella e si ricava $x=x'$.
+
+\textbf{Suriettività.} Fissato un punto arbitrario $(u,v)$ del codominio, le equazioni da risolvere sono $y^3=u$ e $x(y^2+1)=v$. Poniamo
+\[
+y=\sqrt[3]u,\qquad x=\frac{v}{1+(\sqrt[3]u)^2}.
+\]
+Sono numeri reali ben definiti, perché il denominatore è positivo. Sostituendo si ottiene $F(x,y)=(u,v)$: ogni punto ha una preimmagine.
+\end{svolgimento}
+
+\section{Fibre e proiezione canonica}
+% A–L L4 pp. 6–7 e L5 p. 1; ritorno J su N in A–L L6 pp. 1–2.
+\begin{definizione}
+La \textbf{fibra} di $f:X\to Y$ sopra $y\in Y$ è $\{x\in X\mid f(x)=y\}$. L'equivalenza $x\sim_f x'\iff f(x)=f(x')$ ha come classe di $x$ la fibra sopra $f(x)$:
+\[
+[x]_{\sim_f}=\{x'\in X\mid f(x')=f(x)\}.
+\]
+Le fibre non vuote formano una partizione di $X$. Quelle sopra i punti di $Y\setminus\operatorname{Im}(f)$ sono vuote e non sono classi.
+\end{definizione}
+
+\begin{schema}
+\begin{tikzpicture}[>=Stealth]
+  \draw (0,0) ellipse (1.4 and 1.15);\draw (5,0) ellipse (1.1 and 1.15);
+  \node at (-1.3,1.2) {$X$};\node at (6,1.2) {$Y$};
+  \draw[dashed,coloreschema] (-.2,.25) ellipse (.8 and .65);
+  \node (a) at (-.35,.6) {$x_1$};\node (b) at (-.15,-.1) {$x_2$};\node (c) at (0,-.8) {$x_3$};
+  \node (u) at (4.8,.6) {$y_0$};\node (v) at (5,-.15) {$y_1$};\node at (5,-.85) {$y_2$};
+  \draw[->,coloreschema] (a)--(u);\draw[->,coloreschema] (b)--(u);\draw[->,coloreschema] (c)--(v);
+  \node at (2.5,-1.65) {Una fibra può contenere più punti; un valore può non avere preimmagini.};
+\end{tikzpicture}
+\end{schema}
+
+\begin{proposizione}
+La funzione $f$ è iniettiva se e solo se $\sim_f$ è l'uguaglianza su $X$.
+\end{proposizione}
+\begin{proof}
+Se $f$ è iniettiva, $x\sim_f x'$ implica $x=x'$; il viceversa vale sempre, quindi le due relazioni coincidono. Se invece coincidono, da $f(x)=f(x')$ segue $x\sim_f x'$, cioè $x=x'$: è l'iniettività.
+\end{proof}
+
+\begin{esempio}
+Per $x\mapsto x^2$ su $\R$, le fibre non vuote sono $\{0\}$ e $\{-\sqrt y,\sqrt y\}$ per $y>0$. In particolare $[2]=[-2]=\{2,-2\}$. Sopra $-1$ la fibra è vuota.
+\end{esempio}
+
+\begin{esercizio}[Le fibre dei divisori primi]
+Estendere $J$ a $\N$ con la stessa formula. Determinarne l'immagine, l'iniettività, la suriettività e le classi di $0,1,4,5,6,12,168$.
+\end{esercizio}
+\begin{svolgimento}
+Ogni primo divide $0$, quindi $J(0)=P$. Le altre immagini sono quelle già trovate: tutti e soli i sottoinsiemi finiti di $P$. Pertanto $\operatorname{Im}(J)=\{A\subseteq P\mid A\text{ finito}\}\cup\{P\}$. Rimane non iniettiva perché $J(2)=J(4)$, e non suriettiva perché $P\setminus\{2\}$ è infinito e diverso da $P$.
+
+Usando la fattorizzazione in primi, qui ancora assunta, si ottengono
+\[
+\begin{gathered}
+[0]=\{0\},\qquad [1]=\{1\},\qquad [4]=\{2^k\mid k\ge1\},\qquad
+[5]=\{5^k\mid k\ge1\},\\
+[6]=[12]=\{2^a3^b\mid a,b\ge1\},\\
+[168]=\{2^a3^b7^c\mid a,b,c\ge1\}.
+\end{gathered}
+\]
+Infatti $168=2^3\cdot3\cdot7$. In ogni classe devono comparire tutti i primi indicati, dunque gli esponenti sono positivi, e non possono comparire primi diversi. La classe di $0$ è un singoletto perché ogni $n>0$ ha solo un numero finito di divisori primi.
+\end{svolgimento}
+
+\begin{definizione}
+Una funzione è \textbf{biettiva}, o una \textbf{biezione}, quando è sia iniettiva sia suriettiva.
+\end{definizione}
+
+\begin{proposizione}[Proiezione canonica]
+Se $\sim$ è un'equivalenza su $X$, la funzione $\pi:X\to X/{\sim}$, $x\mapsto[x]$, è suriettiva. Le sue fibre sono le classi dell'equivalenza iniziale; in particolare $\sim_\pi$ coincide con $\sim$.
+\end{proposizione}
+\begin{proof}
+Ogni elemento del quoziente è una classe $[x]$, dunque è immagine di $x$. Inoltre $\pi(x')=\pi(x)$ equivale a $[x']=[x]$, cioè a $x'\sim x$ per la proposizione~\ref{prop:classi}. La fibra sopra $[x]$ è proprio il sottoinsieme $[x]\subseteq X$, e l'equivalenza indotta è quella di partenza.
+\end{proof}
+
+\section{Immagine diretta e controimmagine}
+% A–L L5 p. 2; M–Z L5 pp. 6–8.
+\begin{definizione}
+A $f:X\to Y$ si associano le applicazioni
+\[
+\begin{aligned}
+f_*:\mathcal P(X)&\to\mathcal P(Y),& f_*(A)&=\{f(a)\mid a\in A\},\\
+f^*:\mathcal P(Y)&\to\mathcal P(X),& f^*(B)&=\{x\in X\mid f(x)\in B\},
+\end{aligned}
+\]
+dette \textbf{immagine diretta} e \textbf{controimmagine}. La scrittura $f(A)$ denota spesso $f_*(A)$; la fibra sopra $y$ è $f^*(\{y\})$. La controimmagine esiste per qualunque funzione, senza supporre invertibilità.
+\end{definizione}
+
+\begin{esempio}[Il quadrato]
+Per $f:\R\to\R$, $f(x)=x^2$, si ha
+\[
+f_*([-1,2])=f_*([-2,0])=[0,4],\qquad
+f^*([0,4])=f^*((-\infty,4])=[-2,2].
+\]
+I quadrati nei due intervalli percorrono $[0,4]$; la condizione $x^2\le4$ equivale a $-2\le x\le2$, mentre $x^2\ge0$ è automatica. Le varianti $[-2,1]$ per l'immagine e $[-2,4]$ per la controimmagine danno gli stessi risultati. Invece $f^*([-3,-1])=\varnothing$, perché un quadrato non è negativo.
+
+Per $A=[-1,2]$ si ottiene $f^*(f_*(A))=[-2,2]\ne A$: la controimmagine recupera tutte le fibre che incontrano $A$, anche dove esse escono da $A$.
+\end{esempio}
+
+\begin{schema}
+\begin{tikzpicture}[scale=.85]
+  \draw[asse] (-2.8,0)--(2.8,0) node[right] {$x$};\draw[asse] (0,-.3)--(0,4.9) node[above] {$y$};
+  \draw[coloreschema,thick,domain=-2.1:2.1,samples=60] plot (\x,{\x*\x});
+  \draw[densely dashed] (-2,4)--(2,4);\draw[densely dashed] (-2,0)--(-2,4);\draw[densely dashed] (2,0)--(2,4);
+  \node[below] at (-2,0) {$-2$};\node[below] at (-1,0) {$-1$};\node[below] at (2,0) {$2$};\node[above left] at (0,4) {$4$};
+  \draw[coloreschema,line width=2pt] (-1,-.35)--(2,-.35);\node[right] at (2.2,-.35) {$A$};
+\end{tikzpicture}
+\end{schema}
+
+\begin{esercizio}[Confronto fra immagini e controimmagini]
+Dimostrare, per ogni $A\subseteq X$ e $B\subseteq Y$,
+\[
+A\subseteq f^*(f_*(A)),\qquad f_*(f^*(B))\subseteq B.
+\]
+Quando la prima è un'uguaglianza per ogni $A$? Quando la seconda è un'uguaglianza per ogni $B$?
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Inclusioni.} Se $x\in A$, allora $f(x)\in f_*(A)$, dunque $x\in f^*(f_*(A))$. Per l'altra inclusione si ha più precisamente
+\[
+y\in f_*(f^*(B))\iff \exists x\in X:\ y=f(x)\in B
+\iff y\in B\cap\operatorname{Im}(f).
+\]
+Quindi $f_*(f^*(B))=B\cap\operatorname{Im}(f)\subseteq B$.
+
+\textbf{Prima uguaglianza.} Se $f$ è iniettiva e $x\in f^*(f_*(A))$, esiste $a\in A$ con $f(x)=f(a)$, quindi $x=a\in A$. Vale anche l'inclusione inversa, dunque l'uguaglianza. Viceversa, supponiamo l'uguaglianza per ogni $A$ e siano $f(x)=f(x')$. Per $A=\{x\}$, $x'\in f^*(f_*(A))=A$, quindi $x'=x$. La condizione equivale all'iniettività.
+
+\textbf{Seconda uguaglianza.} Se $f$ è suriettiva, $\operatorname{Im}(f)=Y$ e la formula precedente dà l'uguaglianza per ogni $B$. Viceversa basta applicarla a $B=Y$: si ricava $f_*(X)=Y$. La condizione equivale alla suriettività.
+\end{svolgimento}
+
+\section{Composizione}
+% A–L L5 pp. 3–6; M–Z L6 pp. 1–4.
+\begin{definizione}
+Se $f:X\to Y$ e $g:Y\to Z$, si definisce la \textbf{composizione} $g\circ f:X\to Z$ mediante $(g\circ f)(x)=g(f(x))$: si applica prima $f$, poi $g$.
+\end{definizione}
+
+Il codominio della prima funzione è il dominio della seconda, quindi il valore $f(x)$ è sempre un argomento ammesso per $g$. Per esempio, ponendo $f:\{1,2,3\}\to\N$ con $f(1)=0$, $f(2)=f(3)=1$, e $g:\N\to\R$, $g(n)=n$, la composta ha gli stessi valori, ma codominio $\R$.
+
+\begin{proposizione}[Associatività]
+Per $f:X\to Y$, $g:Y\to Z$ e $h:Z\to T$, si ha $h\circ(g\circ f)=(h\circ g)\circ f$.
+\end{proposizione}
+\begin{proof}
+Le due funzioni hanno dominio $X$ e codominio $T$. Per ogni $x\in X$,
+\[
+(h\circ(g\circ f))(x)=h(g(f(x)))=((h\circ g)\circ f)(x).
+\]
+L'uguaglianza in ogni punto conclude la prova.
+\end{proof}
+
+\begin{proposizione}
+Per $f:X\to Y$ e $g:Y\to Z$ valgono:
+\begin{enumerate}[label=\arabic*.]
+\item $(g\circ f)_*=g_*\circ f_*:\mathcal P(X)\to\mathcal P(Z)$.
+\item $(g\circ f)^*=f^*\circ g^*:\mathcal P(Z)\to\mathcal P(X)$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item Per ogni $A\subseteq X$, $z\in g_*(f_*(A))$ significa che $z=g(y)$ per qualche $y=f(a)$ con $a\in A$: equivale a $z\in(g\circ f)_*(A)$.
+\item Per ogni $C\subseteq Z$,
+\[
+x\in(g\circ f)^*(C)\iff g(f(x))\in C
+\iff f(x)\in g^*(C)\iff x\in f^*(g^*(C)).
+\]
+La controimmagine inverte dunque l'ordine delle due applicazioni.
+\end{enumerate}
+\end{proof}
+
+\begin{proposizione}\label{prop:composte}
+Per $f:X\to Y$ e $g:Y\to Z$:
+\begin{enumerate}[label=\arabic*.]
+\item se $f,g$ sono iniettive, anche $g\circ f$ è iniettiva;
+\item se $f,g$ sono suriettive, anche $g\circ f$ è suriettiva;
+\item se $g\circ f$ è iniettiva, $f$ è iniettiva;
+\item se $g\circ f$ è suriettiva, $g$ è suriettiva.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\textbf{(1)} Da $g(f(x))=g(f(x'))$, l'iniettività di $g$ dà $f(x)=f(x')$; quella di $f$ dà $x=x'$.
+
+\textbf{(2)} Dato $z\in Z$, esiste $y\in Y$ con $g(y)=z$; esiste poi $x\in X$ con $f(x)=y$. Allora $(g\circ f)(x)=z$.
+
+\textbf{(3)} Se $f(x)=f(x')$, applicando $g$ si ottiene $(g\circ f)(x)=(g\circ f)(x')$. L'iniettività della composta dà $x=x'$.
+
+\textbf{(4)} Dato $z\in Z$, la suriettività della composta fornisce $x\in X$ con $g(f(x))=z$. Il valore $f(x)\in Y$ è una preimmagine di $z$ per $g$.
+\end{proof}
+
+\begin{esempio}[Quattro implicazioni che non valgono]
+\textbf{$f$ iniettiva non basta per la composta.} Per $f,g:\R\to\R$, $f(x)=x^3$ e $g(y)=y^2$, la prima è iniettiva ma $(g\circ f)(x)=x^6$ non lo è, avendo lo stesso valore in $1$ e $-1$.
+
+\textbf{La composta suriettiva non forza $f$ suriettiva.} Siano $f:\R\to\R$, $f(x)=x^2$, e $g:\R\to\R_{\ge0}$, $g(y)=|y|$. La composta è $x^2$ ed è suriettiva su $\R_{\ge0}$, ma $f$ non raggiunge i negativi del proprio codominio.
+
+\textbf{La composta iniettiva non forza $g$ iniettiva.} L'inclusione $f:\R_{\ge0}\to\R$, seguita da $g:\R\to\R$, $g(y)=y^2$, dà una composta iniettiva. La funzione $g$ sull'intero dominio reale non lo è.
+
+\textbf{$g$ suriettiva non basta per la composta.} L'inclusione $f:[0,1]\to\R$, seguita da $g:\R\to\R_{\ge0}$, $g(y)=y^2$, ha composta di immagine $[0,1]$, benché $g$ sia suriettiva.
+\end{esempio}
+
+\section{Inverse a sinistra e a destra}
+% A–L L5 p. 7 e L6 pp. 1–5; M–Z L6 pp. 5–6 e L7 pp. 2–5.
+L'\textbf{identità} di $X$ è $\operatorname{id}_X:X\to X$, $x\mapsto x$. Per ogni $f:X\to Y$, $\operatorname{id}_Y\circ f=f=f\circ\operatorname{id}_X$, perché i valori delle tre funzioni sono $f(x)$.
+
+\begin{definizione}
+Per $f:X\to Y$, una funzione $g:Y\to X$ è un'\textbf{inversa a sinistra} di $f$ se $g\circ f=\operatorname{id}_X$, ed è un'\textbf{inversa a destra} se $f\circ g=\operatorname{id}_Y$. La funzione $f$ è \textbf{invertibile} se ammette un'inversa da entrambi i lati, detta \textbf{inversa bilatera} e indicata con $f^{-1}$.
+\end{definizione}
+
+\begin{proposizione}[Unicità dell'inversa bilatera]
+Se $g\circ f=\operatorname{id}_X$ e $f\circ h=\operatorname{id}_Y$, allora $g=h$. Quindi un'inversa a sinistra e una a destra, se esistono entrambe, coincidono e costituiscono un'inversa bilatera unica.
+\end{proposizione}
+\begin{proof}
+Per associatività e proprietà dell'identità,
+\[
+g=g\circ\operatorname{id}_Y=g\circ(f\circ h)
+=(g\circ f)\circ h=\operatorname{id}_X\circ h=h.
+\]
+La stessa uguaglianza prova l'unicità applicandola a due inverse bilatere.
+\end{proof}
+
+\begin{esempio}[Quadrato e radici]
+Per $f:\R\to\R_{\ge0}$, $f(x)=x^2$, le funzioni $g_+(y)=\sqrt y$ e $g_-(y)=-\sqrt y$, da $\R_{\ge0}$ a $\R$, sono inverse a destra: $f(g_\pm(y))=y$. Sono distinte, per esempio in $y=1$. Invece $g_+(f(x))=|x|$ e $g_-(f(x))=-|x|$, perciò nessuna delle due è inversa a sinistra su tutto $\R$. Restringendo il dominio del quadrato a $\R_{\ge0}$ si ottiene l'inversa bilatera $\sqrt{\phantom{x}}$; restringendolo a $\R_{\le0}$ si ottiene $-\sqrt{\phantom{x}}$.
+\end{esempio}
+
+\begin{teorema}\label{teo:inverse}
+Sia $f:X\to Y$ con $X\ne\varnothing$.
+\begin{enumerate}[label=\arabic*.]
+\item $f$ è iniettiva se e solo se ammette un'inversa a sinistra.
+\item $f$ è suriettiva se e solo se ammette un'inversa a destra, nel quadro con assioma della scelta.
+\item $f$ è biettiva se e solo se è invertibile.
+\end{enumerate}
+\end{teorema}
+\begin{proof}
+\textbf{(1), costruzione.} Supponiamo $f$ iniettiva. Per ogni $y\in\operatorname{Im}(f)$ esiste un'unica preimmagine $x_y$. Fissiamo $x_0\in X$ e definiamo su tutto $Y$
+\[
+g(y)=\begin{cases}x_y&y\in\operatorname{Im}(f),\\x_0&y\notin\operatorname{Im}(f).\end{cases}
+\]
+Il primo valore esiste ed è unico, il secondo è un elemento ammesso di $X$, dunque $g:Y\to X$ è ben definita. Per ogni $x\in X$, la preimmagine unica di $f(x)$ è $x$, quindi $g(f(x))=x$.
+
+\textbf{(1), necessità.} Se $g\circ f=\operatorname{id}_X$, la composta è iniettiva e la proposizione~\ref{prop:composte} implica che $f$ è iniettiva. Inoltre $g$ è suriettiva: ogni $x$ è $g(f(x))$.
+
+\textbf{(2), costruzione.} Supponiamo $f$ suriettiva. Ogni fibra $f^*(\{y\})$, $y\in Y$, è non vuota. Scegliendo simultaneamente un elemento $x_y$ in ciascuna fibra si pone $g(y)=x_y$. Questa è precisamente la scelta richiesta per una famiglia arbitraria di fibre. Per costruzione $f(g(y))=f(x_y)=y$, dunque $f\circ g=\operatorname{id}_Y$.
+
+\textbf{(2), necessità.} Se $f\circ g=\operatorname{id}_Y$, per ogni $y$ l'elemento $g(y)$ è una sua preimmagine, quindi $f$ è suriettiva. L'inversa destra $g$ è iniettiva: da $g(y)=g(y')$, applicando $f$, segue $y=y'$.
+
+\textbf{(3)} Se $f$ è biettiva, ogni $y$ ha un'unica preimmagine $x_y$: ponendo $g(y)=x_y$ si verificano entrambe le identità precedenti, senza scelte arbitrarie. Viceversa un'inversa bilatera è sia inversa a sinistra sia inversa a destra, e i due versi necessari già provati danno iniettività e suriettività.
+\end{proof}
+
+\begin{osservazione}[Il dominio vuoto]
+L'ipotesi $X\ne\varnothing$ serve in a) per il valore fuori dall'immagine. La funzione vuota $\varnothing\to Y$ è iniettiva, ma per $Y\ne\varnothing$ non esiste alcuna funzione $Y\to\varnothing$. Per $X=Y=\varnothing$ la funzione vuota è biettiva e inversa di se stessa. La definizione generale ammette questi casi, anche se le costruzioni precedenti sono state formulate per domini non vuoti.
+\end{osservazione}
+
+Per una biezione, $f^{-1}(y)=x$ equivale a $f(x)=y$: il grafico dell'inversa si ottiene scambiando le due coordinate del grafico di $f$. Nel piano è la riflessione rispetto alla retta $y=x$. La funzione del piano studiata sopra ha quindi inversa
+\[
+F^{-1}(u,v)=\left(\frac{v}{1+(\sqrt[3]u)^2},\sqrt[3]u\right).
+\]
+
+\begin{corollario}
+Per insiemi non vuoti $X,Y$, esiste un'iniezione $X\to Y$ se e solo se esiste una suriezione $Y\to X$, nel quadro con assioma della scelta.
+\end{corollario}
+\begin{proof}
+Un'iniezione $X\to Y$ ha un'inversa a sinistra $Y\to X$, che è suriettiva. Viceversa una suriezione $Y\to X$ ha un'inversa a destra $X\to Y$, che è iniettiva. Sono esattamente i due versi richiesti.
+\end{proof}
+
+Si scrive $X\hookrightarrow Y$ per un'iniezione, $X\twoheadrightarrow Y$ per una suriezione e $X\xrightarrow{\sim}Y$ per una biezione. Se $X\subseteq Y$, l'\textbf{inclusione} è $i:X\hookrightarrow Y$, $i(x)=x$.
+
+\begin{esercizio}[Inverse destre del seno]
+Trovare due inverse a destra distinte di $s:\R\to[-1,1]$, $s(x)=\sin x$. Può esistere un'inversa a sinistra?
+\end{esercizio}
+\begin{svolgimento}
+Si assume la proprietà analitica usuale che la restrizione del seno a $[-\pi/2,\pi/2]$ sia una biezione su $[-1,1]$, con inversa $\arcsin$. Ponendo $g_1(y)=\arcsin y$ e $g_2(y)=\pi-\arcsin y$, si ottiene
+\[
+\sin(g_1(y))=y,\qquad \sin(g_2(y))=\sin(\arcsin y)=y.
+\]
+Le due funzioni sono distinte perché $g_1(0)=0$ e $g_2(0)=\pi$. Non esiste un'inversa a sinistra, poiché $s(0)=s(\pi)$ rende $s$ non iniettiva.
+\end{svolgimento}
+
+\section{Insiemi di funzioni e caratteristiche}
+% A–L L6 pp. 6–7 e L7 p. 1; M–Z L7 pp. 5–9.
+\begin{definizione}
+L'insieme di tutte le funzioni da $X$ a $\Omega$ si indica con $\Omega^X$. Per $X=\{1,\ldots,n\}$, una funzione è determinata dalla $n$-upla $(\varphi(1),\ldots,\varphi(n))$, quindi $\Omega^X$ si identifica con $\Omega^n$. Per esempio $\R^{\{1,2,3,4\}}$ si identifica con $\R^4$.
+\end{definizione}
+
+Una successione reale $(x_0,x_1,\ldots)$ è una funzione $\N\to\R$, $i\mapsto x_i$, dunque appartiene a $\R^\N$. Più in generale una famiglia $(x_i)_{i\in I}$ di elementi di $\Omega$ è una funzione $I\to\Omega$: a ogni indice è assegnato un unico valore, mentre indici distinti possono avere lo stesso valore.
+
+\begin{definizione}
+Per $A\subseteq X$, la \textbf{funzione caratteristica} è
+\[
+\chi_A:X\to\{0,1\},\qquad \chi_A(x)=\begin{cases}1&x\in A,\\0&x\notin A.\end{cases}
+\]
+\end{definizione}
+
+\begin{teorema}\label{teo:caratteristiche}
+Le applicazioni
+\[
+\begin{aligned}
+\alpha:\{0,1\}^X&\to\mathcal P(X),&\alpha(\varphi)&=\varphi^*(\{1\}),\\
+\beta:\mathcal P(X)&\to\{0,1\}^X,&\beta(A)&=\chi_A
+\end{aligned}
+\]
+sono biezioni inverse.
+\end{teorema}
+\begin{proof}
+Le applicazioni sono ben definite: $\varphi^*(\{1\})$ è un sottoinsieme di $X$ e $\chi_A$ è una funzione a valori in $\{0,1\}$.
+
+\passomath{\alpha\circ\beta=\operatorname{id}_{\mathcal P(X)}} Per ogni $A\subseteq X$,
+\[
+\alpha(\beta(A))=\{x\in X\mid\chi_A(x)=1\}=A.
+\]
+\passomath{\beta\circ\alpha=\operatorname{id}_{\{0,1\}^X}} Fissata $\varphi:X\to\{0,1\}$, la caratteristica di $\varphi^*(\{1\})$ vale $1$ dove $\varphi(x)=1$ e vale $0$ negli altri punti. In questi ultimi $\varphi(x)=0$, perché non sono ammessi altri valori. Le due funzioni coincidono in ogni punto.
+
+Le identità danno inverse bilatere e quindi biezioni. Per $X=\varnothing$ l'argomento resta valido: sia $\mathcal P(X)$ sia $\{0,1\}^X$ hanno un unico elemento.
+\end{proof}

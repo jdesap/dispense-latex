@@ -81,39 +81,57 @@ Tra classi si scrive un'\emph{uguaglianza}; tra interi, una \emph{congruenza}. P
 \section{Operazioni sul quoziente}
 % A–L L12 pp. 3–4: scelta la prova esplicita, lasciata per esercizio in M–Z p. 5.
 \begin{proposizione}\label{prop:operazioni-modulari}
-Le regole
-\[
-[a]_m+[b]_m=[a+b]_m,\qquad [a]_m[b]_m=[ab]_m
-\]
-definiscono operazioni su $\Z/m\Z$: il risultato non dipende dai rappresentanti scelti.
+Le seguenti regole definiscono operazioni su $\Z/m\Z$, indipendenti dai rappresentanti scelti:
+\begin{enumerate}[label=\arabic*.]
+\item $[a]_m+[b]_m=[a+b]_m$.
+\item $[a]_m[b]_m=[ab]_m$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Siano $[a]_m=[a']_m$ e $[b]_m=[b']_m$, cioè $m\mid a-a'$ e $m\mid b-b'$. Per la somma,
+Siano $[a]_m=[a']_m$ e $[b]_m=[b']_m$, cioè $m\mid a-a'$ e $m\mid b-b'$. \begin{enumerate}[label=\arabic*.]
+\item Per la somma,
 \[
 (a+b)-(a'+b')=(a-a')+(b-b')
 \]
-è divisibile per $m$, quindi $[a+b]_m=[a'+b']_m$. Per il prodotto,
+è divisibile per $m$, quindi $[a+b]_m=[a'+b']_m$.
+\item Per il prodotto,
 \[
 ab-a'b'=a(b-b')+(a-a')b'
 \]
 è ancora divisibile per $m$, quindi $[ab]_m=[a'b']_m$. Entrambe le operazioni sono dunque ben definite.
+\end{enumerate}
 \end{proof}
 
 \begin{proposizione}
-Le operazioni sul quoziente sono associative e commutative; il prodotto è distributivo rispetto alla somma. I neutri sono $[0]_m$ e $[1]_m$, rispettivamente; ogni $[a]_m$ ha opposto $[-a]_m$. Pertanto $\Z/m\Z$ è un anello commutativo con unità.
+Le operazioni su $\Z/m\Z$ hanno le seguenti proprietà:
+\begin{enumerate}[label=\arabic*.]
+\item Somma e prodotto sono associativi e commutativi.
+\item Il prodotto è distributivo rispetto alla somma.
+\item I neutri sono $[0]_m$ e $[1]_m$, rispettivamente; ogni $[a]_m$ ha opposto $[-a]_m$.
+\end{enumerate}
+Pertanto $\Z/m\Z$ è un anello commutativo con unità.
 \end{proposizione}
 \begin{proof}
 Omettiamo il pedice $m$. Le proprietà si verificano sui rappresentanti usando quelle degli interi:
+\begin{enumerate}[label=\arabic*.]
+\item
 \[
 \begin{aligned}
 [a]+[b]&=[a+b]=[b+a]=[b]+[a],\\
 ([a]+[b])+[c]&=[(a+b)+c]=[a+(b+c)]=[a]+([b]+[c]),\\
 [a][b]&=[ab]=[ba]=[b][a],\\
-([a][b])[c]&=[(ab)c]=[a(bc)]=[a]([b][c]),\\
+([a][b])[c]&=[(ab)c]=[a(bc)]=[a]([b][c]),
+\end{aligned}
+\]
+\item
+\[
+\begin{aligned}
 [a]([b]+[c])&=[a(b+c)]=[ab+ac]=[a][b]+[a][c].
 \end{aligned}
 \]
-Inoltre $[a]+[0]=[a]$, $[a]+[-a]=[0]$ e $[a][1]=[a]$. La distributività dall'altro lato segue dalla commutatività del prodotto. Infine $[0]\ne[1]$, perché $m\ge2$ non divide $1$.
+La distributività dall'altro lato segue dalla commutatività del prodotto.
+\item Inoltre $[a]+[0]=[a]$, $[a]+[-a]=[0]$ e $[a][1]=[a]$. Infine $[0]\ne[1]$, perché $m\ge2$ non divide $1$.
+\end{enumerate}
 \end{proof}
 
 \begin{esempio}[Parità e orologio]
@@ -174,21 +192,22 @@ Siano $m\ge2$ e $a\in\Z$. Allora:
 In particolare ogni classe appartiene esattamente a una delle due categorie.
 \end{teorema}
 \begin{proof}
-\textbf{Invertibilità: necessità.} Se $[a]_m[b]_m=[1]_m$, esiste $q\in\Z$ con $ab-1=mq$. Quindi $1=ab-mq$ è una combinazione intera di $a,m$. Ogni divisore comune divide $1$, perciò $\operatorname{MCD}(a,m)=1$.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Invertibilità: necessità.} Se $[a]_m[b]_m=[1]_m$, esiste $q\in\Z$ con $ab-1=mq$. Quindi $1=ab-mq$ è una combinazione intera di $a,m$. Ogni divisore comune divide $1$, perciò $\operatorname{MCD}(a,m)=1$.
 
 \textbf{Invertibilità: sufficienza e costruzione.} Se $\operatorname{MCD}(a,m)=1$, Bézout dà $\alpha a+\beta m=1$. Passando alle classi,
 \[
 [\alpha]_m[a]_m+[\beta]_m[m]_m=[1]_m.
 \]
 Poiché $[m]_m=[0]_m$, segue $[\alpha]_m[a]_m=[1]_m$: dunque $[a]_m^{-1}=[\alpha]_m$.
-
-\textbf{Divisori dello zero: esclusione del caso coprimo.} Se $\operatorname{MCD}(a,m)=1$ e $[a]_m[b]_m=[0]_m$, allora $m\mid ab$. Il lemma di Euclide applicato a $m,a$ dà $m\mid b$, cioè $[b]_m=[0]_m$. Non esiste quindi un annullatore non nullo.
+\item \textbf{Divisori dello zero: esclusione del caso coprimo.} Se $\operatorname{MCD}(a,m)=1$ e $[a]_m[b]_m=[0]_m$, allora $m\mid ab$. Il lemma di Euclide applicato a $m,a$ dà $m\mid b$, cioè $[b]_m=[0]_m$. Non esiste quindi un annullatore non nullo.
 
 \textbf{Divisori dello zero: costruzione dell'annullatore.} Se $d=\operatorname{MCD}(a,m)>1$, scriviamo $a=da'$ e $m=dm'$. Si ha $m'=m/d\in\Z$ e $1\le m'<m$, quindi $[m']_m\ne[0]_m$. Inoltre
 \[
 [a]_m[m']_m=[da'm']_m=[ma']_m=[0]_m.
 \]
 Quindi $[a]_m$ è divisore dello zero, con annullatore non nullo $[m/d]_m$. La costruzione include $a\equiv0\pmod m$: in quel caso $d=m$ e l'annullatore è $[1]_m$.
+\end{enumerate}
 \end{proof}
 
 \begin{osservazione}
@@ -301,28 +320,31 @@ Quindi $a(\alpha b')-b$ è multiplo di $m$, e $x_0=\alpha b'$ è una soluzione.
 \end{proof}
 
 \begin{teorema}[Tutte le soluzioni]\label{teo:tutte-congruenza}
-Supponiamo che $x_0$ risolva $ax\equiv b\pmod m$, e poniamo $d=\operatorname{MCD}(a,m)$. Tutte e sole le soluzioni intere sono
+Supponiamo che $x_0$ risolva $ax\equiv b\pmod m$, e poniamo $d=\operatorname{MCD}(a,m)$. \begin{enumerate}[label=\arabic*.]
+\item Tutte e sole le soluzioni intere sono
 \[
 x=x_0+\frac{m}{d}k,\qquad k\in\Z.
 \]
-Nel quoziente $\Z/m\Z$ le soluzioni sono esattamente le $d$ classi distinte
+\item Nel quoziente $\Z/m\Z$ le soluzioni sono esattamente le $d$ classi distinte
 \[
 \left[x_0+j\frac{m}{d}\right]_m,\qquad j=0,1,\ldots,d-1.
 \]
 In particolare, se esistono soluzioni, la soluzione modulo $m$ è unica se e solo se $d=1$.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
 Scriviamo $a=da'$, $m=dm'$, dove $m'=m/d\ge1$ e $\operatorname{MCD}(a',m')=1$.
 
-\textbf{Ogni termine indicato è soluzione.} Per $k\in\Z$,
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Ogni termine indicato è soluzione.} Per $k\in\Z$,
 \[
 a(x_0+m'k)-b=(ax_0-b)+ma'k.
 \]
 Entrambi gli addendi sono divisibili per $m$, quindi $x_0+m'k$ è soluzione.
 
 \textbf{Ogni soluzione ha la forma indicata.} Se anche $x$ è soluzione, sottraendo le due congruenze si ha $m\mid a(x-x_0)$. Esiste dunque $h\in\Z$ con $da'(x-x_0)=dm'h$. Cancellando $d\ne0$, segue $m'\mid a'(x-x_0)$. Dal lemma di Euclide e dalla coprimalità segue $m'\mid x-x_0$, cioè $x=x_0+m'k$. L'argomento vale anche per $m'=1$, quando ogni intero è divisibile per $m'$.
-
-\textbf{Conteggio delle classi.} Se $0\le i,j<d$, l'uguaglianza $[x_0+im']_m=[x_0+jm']_m$ equivale a $dm'\mid(i-j)m'$, quindi a $d\mid i-j$. Il vincolo $|i-j|<d$ implica $i=j$: le classi sono distinte. Infine ogni $k\in\Z$ si scrive $k=dq+j$, con $0\le j<d$; allora $x_0+m'k=x_0+m'j+mq$ appartiene alla classe di indice $j$. Nessuna soluzione resta esclusa.
+\item \textbf{Conteggio delle classi.} Se $0\le i,j<d$, l'uguaglianza $[x_0+im']_m=[x_0+jm']_m$ equivale a $dm'\mid(i-j)m'$, quindi a $d\mid i-j$. Il vincolo $|i-j|<d$ implica $i=j$: le classi sono distinte. Infine ogni $k\in\Z$ si scrive $k=dq+j$, con $0\le j<d$; allora $x_0+m'k=x_0+m'j+mq$ appartiene alla classe di indice $j$. Nessuna soluzione resta esclusa.
+\end{enumerate}
 \end{proof}
 
 \begin{osservazione}
@@ -459,6 +481,16 @@ Dunque $k\equiv-1\pmod6$, cioè $k=-1+6h$. Tornando a $x$,
 x=-2+7(-1+6h)=-9+42h,\qquad h\in\Z.
 \]
 Tutti i passaggi sono equivalenze: queste sono tutte le soluzioni. Si verifica anche direttamente che $3(-9)=1-4\cdot7$ e $5(-9)=3-8\cdot6$.
+\end{svolgimento}
+
+% M–Z L14 p. 5: recupero del compito di costruzione di un sistema.
+\Needspace{11\baselineskip}
+\begin{esercizio}[Costruire un sistema]
+Trovare un sistema di due congruenze, diverso dai precedenti, con moduli coprimi $m,n$ e insieme delle soluzioni della forma $x_0+mn\Z$.
+\end{esercizio}
+\begin{svolgimento}
+Una possibilità è $2x\equiv2\pmod3$, $3x\equiv3\pmod4$. Poiché $2$ è invertibile modulo $3$ e $3$ lo è modulo $4$, il sistema equivale a $x\equiv1\pmod3$, $x\equiv1\pmod4$.
+Scrivendo $x=1+3k$, la seconda congruenza dà $3k\equiv0\pmod4$, cioè $k=4t$ con $t\in\Z$. Le soluzioni sono quindi esattamente $x=1+12t$, della forma richiesta con $m=3$, $n=4$ e $x_0=1$.
 \end{svolgimento}
 
 \subsection{Il teorema cinese del resto}

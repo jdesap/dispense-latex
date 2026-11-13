@@ -57,16 +57,15 @@ e^{\ln y}=y\quad(y>0),\qquad \ln(e^x)=x\quad(x\in\R).
 % Fonte: Lezione 15, p. 15; ipotesi sui denominatori e prove aggiunte.
 
 \begin{teorema}
-Se $x_n\to0$ e $x_n\ne0$ definitivamente, allora
-\[
-\frac{e^{x_n}-1}{x_n}\longrightarrow1,
-\qquad
-\frac{\ln(1+x_n)}{x_n}\longrightarrow1.
-\]
-Nel secondo limite $1+x_n>0$ definitivamente, quindi il logaritmo è definito su una coda.
+Se $x_n\to0$ e $x_n\ne0$ definitivamente, allora:
+\begin{enumerate}[label=\arabic*.]
+\item $(e^{x_n}-1)/x_n\to1$.
+\item $\ln(1+x_n)/x_n\to1$. Nel secondo limite $1+x_n>0$ definitivamente, quindi il logaritmo è definito su una coda.
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-\textbf{Una disuguaglianza per l'esponenziale.} Per ogni $t\in\R$ fissato e per interi $m>|t|$, Bernoulli dà $(1+t/m)^m\ge1+t$. Passando al limite mediante il teorema~\ref{teo:rappresentazione-exp}, si ottiene $e^t\ge1+t$.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Una disuguaglianza per l'esponenziale.} Per ogni $t\in\R$ fissato e per interi $m>|t|$, Bernoulli dà $(1+t/m)^m\ge1+t$. Passando al limite mediante il teorema~\ref{teo:rappresentazione-exp}, si ottiene $e^t\ge1+t$.
 
 \textbf{Limite esponenziale.} Per $t>0$, applicando la disuguaglianza a $t$ e a $-t$ si ricava
 \[
@@ -81,12 +80,12 @@ Insieme, per ogni $t\ne0$,
 \min\{1,e^t\}\le\frac{e^t-1}{t}\le\max\{1,e^t\}.
 \]
 La continuità dell'esponenziale dà $e^{x_n}\to1$, quindi entrambi i vincoli tendono a $1$ e il primo limite segue dai carabinieri, anche se $x_n$ cambia segno.
-
-\textbf{Limite logaritmico.} Poniamo $t_n=\ln(1+x_n)$. Per la continuità del logaritmo in $1$, $t_n\to0$; inoltre $t_n\ne0$ dove $x_n\ne0$. Dall'identità $e^{t_n}=1+x_n$,
+\item \textbf{Limite logaritmico.} Poniamo $t_n=\ln(1+x_n)$. Per la continuità del logaritmo in $1$, $t_n\to0$; inoltre $t_n\ne0$ dove $x_n\ne0$. Dall'identità $e^{t_n}=1+x_n$,
 \[
 \frac{\ln(1+x_n)}{x_n}
 =\frac{t_n}{e^{t_n}-1}
 \longrightarrow1,
 \]
 prendendo il reciproco del primo limite notevole.
+\end{enumerate}
 \end{proof}

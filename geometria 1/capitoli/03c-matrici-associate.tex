@@ -1,5 +1,6 @@
 % !TeX root = ../main.tex
 \section{Matrice associata a un'applicazione lineare}
+In questa sezione e nei calcoli matriciali che seguono, $V$ e $W$ hanno dimensione finita: $n=\dim V$ e $m=\dim W$. Le basi sono sempre ordinate.
 \subsection{Le immagini di una base determinano l'applicazione}
 Sia $\mathcal B=(v_1,\ldots,v_n)$ una base di $V$. Per linearità,
 \[
@@ -37,6 +38,7 @@ Posto $v=\sum_i\lambda_iv_i$, la linearità e le espressioni di $f(v_i)$ danno
 Per unicità delle coordinate, se $[f(v)]_{\mathcal C}=(\mu_h)$, allora $\mu_h=\sum_i a_{hi}\lambda_i$. È esattamente la componente $h$ del prodotto $A[v]_{\mathcal B}$.
 \end{proof}
 
+\Needspace{16\baselineskip}
 \subsection{Un'applicazione in due coppie di basi}
 \begin{esercizio}
 Sia $f:\R^2\to\R^2$ definita da
@@ -85,29 +87,34 @@ Per trovare una base di $\ker f$, risolviamo il sistema omogeneo $Ax=0$, sceglia
 \begin{definizione}
 Per $w\in W$, la \emph{controimmagine} di $w$, o \emph{fibra sopra $w$}, è
 \[
- f^{-1}(w)=\{v\in V:f(v)=w\}.
+ f^{-1}(\{w\})=\{v\in V:f(v)=w\}.
 \]
-Qui $f^{-1}(w)$ indica un insieme, anche quando $f$ non è invertibile; si incontra anche la scrittura $f^{\leftarrow}(w)$.
+La fibra è un insieme, definito anche quando $f$ non è invertibile. Si incontra anche l’abbreviazione $f^{-1}(w)$, oppure $f^{\leftarrow}(w)$; qui usiamo le parentesi graffe per distinguerla dal valore della funzione inversa. Se $f$ è invertibile, infatti, $f^{-1}(\{w\})=\{f^{-1}(w)\}$ è il singoletto che contiene quell’unico valore.
 \end{definizione}
-Se $b=[w]_{\mathcal C}$, calcolare $f^{-1}(w)$ equivale a risolvere $Ax=b$. La fibra è vuota se $w\notin\operatorname{Im}f$. Se invece $f(v_0)=w$, allora
+Se $b=[w]_{\mathcal C}$, calcolare $f^{-1}(\{w\})$ equivale a risolvere $Ax=b$. La fibra è vuota se $w\notin\operatorname{Im}f$. Se invece $f(v_0)=w$, allora
 \[
- f^{-1}(w)=v_0+\ker f.
+ f^{-1}(\{w\})=v_0+\ker f.
 \]
 Infatti $f(v)=w=f(v_0)$ equivale a $f(v-v_0)=0$. È la versione astratta della struttura delle soluzioni di un sistema non omogeneo già dimostrata nel capitolo precedente.
 
 \subsection{L'immagine e il rango della matrice}
 \begin{proposizione}
-Se $\mathcal B=(v_1,\ldots,v_n)$ è una base di $V$, allora
+\begin{enumerate}[label=\arabic*.]
+\item Se $\mathcal B=(v_1,\ldots,v_n)$ è una base di $V$, allora
 \[
  \operatorname{Im}f=\operatorname{span}\{f(v_1),\ldots,f(v_n)\}.
 \]
-Per ogni scelta delle basi del dominio e del codominio,
+\item Per ogni scelta delle basi del dominio e del codominio,
 \[
  \dim\operatorname{Im}f=\operatorname{rg}M_{\mathcal B}^{\mathcal C}(f).
 \]
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-Ogni $f(v)$ è combinazione delle immagini dei vettori di base; viceversa ogni combinazione $\sum_i\lambda_if(v_i)=f(\sum_i\lambda_iv_i)$ appartiene all'immagine. Le colonne della matrice sono le coordinate di queste immagini. L'isomorfismo delle coordinate conserva le relazioni lineari, dunque la dimensione dello spazio generato dalle immagini è il rango per colonne della matrice, che coincide con il rango per righe.
+\begin{enumerate}[label=\arabic*.]
+\item Ogni $f(v)$ è combinazione delle immagini dei vettori di base; viceversa ogni combinazione $\sum_i\lambda_if(v_i)=f(\sum_i\lambda_iv_i)$ appartiene all'immagine.
+\item Le colonne della matrice sono le coordinate di queste immagini. L'isomorfismo delle coordinate conserva le relazioni lineari, dunque la dimensione dello spazio generato dalle immagini è il rango per colonne della matrice, che coincide con il rango per righe.
+\end{enumerate}
 \end{proof}
 Le immagini di una base generano sempre l'immagine, ma possono essere dipendenti. Per ricavarne una base si selezionano le colonne pivot nella matrice ridotta e si prendono le immagini $f(v_i)$ corrispondenti alle colonne \emph{originarie}. Inoltre
 \[
@@ -131,16 +138,19 @@ Queste operazioni rendono $\operatorname{Hom}_K(V,W)$ uno spazio vettoriale. Inf
 La funzione nulla è lineare, l'opposto è $-f$ e gli assiomi dello spazio vettoriale si verificano valutando in ciascun $v$ e usando quelli di $W$.
 
 \begin{proposizione}
-A basi fissate, la somma e la moltiplicazione per scalari corrispondono alle stesse operazioni fra matrici:
-\[
- M_{\mathcal B}^{\mathcal C}(f+g)=M_{\mathcal B}^{\mathcal C}(f)+M_{\mathcal B}^{\mathcal C}(g),\qquad
- M_{\mathcal B}^{\mathcal C}(\lambda f)=\lambda M_{\mathcal B}^{\mathcal C}(f).
-\]
+A basi fissate:
+\begin{enumerate}[label=\arabic*.]
+\item $M_{\mathcal B}^{\mathcal C}(f+g)=M_{\mathcal B}^{\mathcal C}(f)+M_{\mathcal B}^{\mathcal C}(g)$;
+\item $M_{\mathcal B}^{\mathcal C}(\lambda f)=\lambda M_{\mathcal B}^{\mathcal C}(f)$.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-La colonna $i$ della matrice di $f+g$ è $[f(v_i)+g(v_i)]_{\mathcal C}=[f(v_i)]_{\mathcal C}+[g(v_i)]_{\mathcal C}$. Per gli scalari si usa allo stesso modo $[\lambda f(v_i)]_{\mathcal C}=\lambda[f(v_i)]_{\mathcal C}$.
+\begin{enumerate}[label=\arabic*.]
+\item La colonna $i$ della matrice di $f+g$ è $[f(v_i)+g(v_i)]_{\mathcal C}=[f(v_i)]_{\mathcal C}+[g(v_i)]_{\mathcal C}$.
+\item Per gli scalari si usa allo stesso modo $[\lambda f(v_i)]_{\mathcal C}=\lambda[f(v_i)]_{\mathcal C}$.
+\end{enumerate}
 \end{proof}
-La corrispondenza $f\mapsto M_{\mathcal B}^{\mathcal C}(f)$ è quindi un isomorfismo fra $\operatorname{Hom}_K(V,W)$ e $M(m,n,K)$: ogni matrice prescrive liberamente le immagini dei vettori di base e determina un'unica applicazione. In particolare, in dimensione finita, $\dim\operatorname{Hom}_K(V,W)=mn$.
+La corrispondenza $f\mapsto M_{\mathcal B}^{\mathcal C}(f)$ è quindi un isomorfismo fra $\operatorname{Hom}_K(V,W)$ e $M(m,n,K)$: ogni matrice prescrive liberamente le immagini dei vettori di base e determina un'unica applicazione. In particolare, in dimensione finita, $\dim\operatorname{Hom}_K(V,W)=mn$. Il caso $W=K$ dà lo spazio duale $V^*=\operatorname{Hom}_K(V,K)$, sviluppato nel capitolo~\ref{cap:dualita}.
 
 \subsection{La composizione corrisponde al prodotto}
 \begin{proposizione}

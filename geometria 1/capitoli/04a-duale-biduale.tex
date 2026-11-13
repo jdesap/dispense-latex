@@ -1,0 +1,115 @@
+% !TeX root = ../main.tex
+\section{Spazio duale e base duale}
+\begin{definizione}
+Il \emph{duale} di uno spazio vettoriale $V$ su $K$ è
+\[
+ V^*=\operatorname{Hom}_K(V,K)=\{\varphi:V\to K:\varphi\text{ è lineare}\}.
+\]
+I suoi elementi sono detti \emph{funzionali lineari} o \emph{forme lineari}. Lo zero di $V^*$ è la funzione che vale $0_K$ su ogni vettore; le operazioni sono $(\varphi+\psi)(v)=\varphi(v)+\psi(v)$ e $(\lambda\varphi)(v)=\lambda\varphi(v)$.
+\end{definizione}
+\begin{definizione}
+Sia $\mathcal B=(v_1,\ldots,v_n)$ una base di $V$. Il funzionale $v_i^*\in V^*$ legge la coordinata $i$:
+\[
+ v_i^*\!\left(\sum_{j=1}^n\lambda_jv_j\right)=\lambda_i.
+\]
+In particolare $v_i^*(v_j)=\delta_{ij}$, dove il \emph{delta di Kronecker} è lo scalare
+\[
+ \delta_{ij}=\begin{cases}1,&i=j,\\0,&i\ne j.\end{cases}
+\]
+La famiglia ordinata $\mathcal B^*=(v_1^*,\ldots,v_n^*)$ si chiama \emph{base duale} di $\mathcal B$.
+\end{definizione}
+La funzione $v_i^*$ è ben definita per l'unicità delle coordinate ed è lineare perché la coordinata $i$ di $av+bw$ è la combinazione con coefficienti $a,b$ delle coordinate $i$ di $v,w$. Un elemento $v_i^*$ è una funzione, non un vettore di $V$ ottenuto modificando $v_i$.
+
+\Needspace{12\baselineskip}
+\begin{teorema}
+La base duale è una base di $V^*$. Se $\dim V=n$, allora $\dim V^*=n$, e per ogni $\varphi\in V^*$ vale
+\[
+ \varphi=\sum_{i=1}^n\varphi(v_i)v_i^*.
+\]
+\end{teorema}
+\begin{proof}
+\textbf{Indipendenza.} Se $\sum_i\alpha_iv_i^*=0$ come funzionale, valutando sul vettore $v_j$ si ottiene
+\[
+ 0=\sum_i\alpha_iv_i^*(v_j)=\sum_i\alpha_i\delta_{ij}=\alpha_j.
+\]
+Questo vale per ogni $j$, quindi tutti i coefficienti sono nulli.
+
+\textbf{Generazione.} Per $\varphi\in V^*$, i coefficienti dell'eventuale espressione nella base duale devono essere $\varphi(v_i)$, come mostra la stessa valutazione. Poniamo dunque $\psi=\sum_i\varphi(v_i)v_i^*$. Le applicazioni $\psi$ e $\varphi$ coincidono su ogni $v_j$, quindi coincidono su tutto $V$: una funzione lineare è determinata dalle immagini di una base. La famiglia duale genera ed è indipendente, e perciò ha dimensione $n$.
+\end{proof}
+
+\begin{esempio}[Vettori come colonne e funzionali come righe]
+Per $V=\R^n$ nella base canonica $\mathcal B=(e_1,\ldots,e_n)$, un vettore è una colonna $x=(x_1,\ldots,x_n)^T$ e un funzionale ha la forma
+\[
+ \varphi(x)=a_1x_1+\cdots+a_nx_n
+ =\begin{pmatrix}a_1&\cdots&a_n\end{pmatrix}
+ \begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}.
+\]
+La matrice di $\varphi:\R^n\to\R$ è una riga di tipo $1\times n$. Invece la colonna delle sue coordinate \emph{nella base duale} è $[\varphi]_{\mathcal B^*}=(a_1,\ldots,a_n)^T$: riga della matrice e colonna delle coordinate contengono gli stessi scalari ma hanno ruoli diversi. Per esempio, in $\R^2$, il funzionale $\varphi(x_1,x_2)=2x_1-3x_2$ applicato a $(4,1)^T$ restituisce lo scalare $5$.
+\end{esempio}
+
+\section{Dualità canonica e spazio biduale}
+\subsection{Valutare un funzionale su un vettore}
+\begin{definizione}
+La \emph{dualità canonica} fra $V$ e $V^*$ è la funzione di valutazione
+\[
+ V\times V^*\longrightarrow K,\qquad (v,\varphi)\longmapsto
+ \langle v,\varphi\rangle=\varphi(v).
+\]
+È \emph{bilineare}, cioè lineare in ciascun argomento quando l'altro è fissato.
+\end{definizione}
+Infatti la linearità di $\varphi$ e le operazioni punto per punto in $V^*$ danno
+\begin{align*}
+ \langle av+bw,\varphi\rangle&=a\langle v,\varphi\rangle+b\langle w,\varphi\rangle,\\
+ \langle v,a\varphi+b\psi\rangle&=a\langle v,\varphi\rangle+b\langle v,\psi\rangle.
+\end{align*}
+Qui i due argomenti appartengono a spazi diversi: la scrittura non presuppone un prodotto scalare su $V$. In una base e nella sua duale si ha $\langle v,\varphi\rangle=[\varphi]_{\mathcal B^*}^{\,T}[v]_{\mathcal B}$.
+
+\subsection{L'isomorfismo canonico con il biduale}
+\begin{definizione}
+Il \emph{biduale} è $V^{**}=(V^*)^*=\operatorname{Hom}_K(V^*,K)$. Per ogni $v\in V$ definiamo
+\[
+ \alpha_v:V^*\longrightarrow K,\qquad \alpha_v(\varphi)=\varphi(v),
+\]
+e la funzione $\alpha:V\to V^{**}$ data da $\alpha(v)=\alpha_v$. Un elemento di $V^{**}$ riceve dunque un funzionale come argomento e restituisce uno scalare.
+\end{definizione}
+\begin{teorema}
+Se $V$ ha dimensione finita, $\alpha:V\to V^{**}$ è un isomorfismo canonico, ossia definito senza scegliere una base.
+\end{teorema}
+\begin{proof}
+\textbf{Buona definizione e linearità.} Per $v$ fissato, la linearità nel secondo argomento della dualità dà
+\[
+ \alpha_v(a\varphi+b\psi)=a\alpha_v(\varphi)+b\alpha_v(\psi),
+\]
+quindi $\alpha_v\in V^{**}$. Inoltre, per ogni $\varphi\in V^*$,
+\[
+ \alpha_{av+bw}(\varphi)=\varphi(av+bw)
+ =a\alpha_v(\varphi)+b\alpha_w(\varphi).
+\]
+Si tratta dell'uguaglianza di due funzionali su $V^*$: pertanto $\alpha$ è lineare.
+
+\textbf{Iniettività.} Scelta una base $\mathcal B=(v_1,\ldots,v_n)$, scriviamo $v=\sum_i\lambda_iv_i$. Se $\alpha(v)=0$, valutando sui funzionali della base duale otteniamo
+\[
+ 0=\alpha_v(v_i^*)=v_i^*(v)=\lambda_i\qquad(i=1,\ldots,n).
+\]
+Quindi $v=0$ e il nucleo di $\alpha$ è nullo.
+
+\textbf{Suriettività.} Applicando due volte il risultato sulla dimensione del duale si trova $\dim V^{**}=\dim V^*=\dim V=n$. Una funzione lineare iniettiva fra spazi della stessa dimensione finita è suriettiva, dunque $\alpha$ è un isomorfismo. La base è servita nella prova, ma la formula $\alpha_v(\varphi)=\varphi(v)$ non ne usa alcuna: per questo l'isomorfismo è canonico.
+\end{proof}
+\begin{schema}
+\begin{tikzpicture}[font=\small]
+ \node (v) at (0,0) {$v\in V$};
+ \node (a) at (5,0) {$\alpha_v\in V^{**}$};
+ \node (ph) at (5,-1.3) {$\varphi\in V^*$};
+ \node (s) at (9,-1.3) {$\varphi(v)\in K$};
+ \draw[-{Stealth},coloreschema] (v)--node[above] {$\alpha$} (a);
+ \draw[-{Stealth},coloreschema] (ph)--node[below] {$\alpha_v$} (s);
+\end{tikzpicture}
+
+$\alpha$ trasforma un vettore nell'operazione «valuta un funzionale su quel vettore».
+\end{schema}
+
+\begin{osservazione}
+In dimensione finita anche $V$ e $V^*$ sono isomorfi, perché hanno la stessa dimensione, ma la sola struttura di spazio vettoriale non specifica un isomorfismo privilegiato fra loro. Una base ne permette la scelta; su uno spazio reale di dimensione finita, un prodotto scalare $g$ fornisce invece la mappa $v\mapsto\varphi_v$, con $\varphi_v(w)=g(v,w)$.\footnote{Qui un prodotto scalare reale è una funzione bilineare simmetrica $g:V\times V\to\R$ tale che $g(v,v)>0$ per $v\ne0$. La mappa indicata è lineare e iniettiva, perché $g(v,w)=0$ per ogni $w$ implica $g(v,v)=0$ e quindi $v=0$. In dimensione finita è allora un isomorfismo, per l'uguaglianza delle dimensioni.} Senza aver scelto $g$, questa formula non determina una funzione. L'identificazione con il biduale, al contrario, è data direttamente dalla valutazione.
+
+In dimensione infinita le conclusioni sulle dimensioni non si trasferiscono. Per il duale algebrico, con le usuali ipotesi di scelta, si ha $\dim V<\dim V^*<\dim V^{**}$. Le dimensioni sono qui intese come cardinalità di basi; questo risultato generale è citato senza dimostrazione; non viene usato nelle prove in dimensione finita.
+\end{osservazione}

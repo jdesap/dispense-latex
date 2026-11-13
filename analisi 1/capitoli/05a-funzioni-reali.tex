@@ -66,32 +66,40 @@ Si dice \emph{monotona} se è crescente oppure decrescente.
 \end{schema}
 
 \begin{proposizione}
-La composizione di due funzioni monotone è monotona: se hanno lo stesso verso è crescente, se hanno versi opposti è decrescente. Se entrambe sono strettamente monotone, anche la composta è strettamente monotona.
+\begin{enumerate}[label=\arabic*.]
+\item La composizione di due funzioni monotone è monotona: se hanno lo stesso verso è crescente, se hanno versi opposti è decrescente.
+\item Se entrambe sono strettamente monotone, anche la composta è strettamente monotona.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
 Scriviamo la composta come $g\circ f$ e scegliamo $x_1<x_2$ nel suo dominio.
 
-\textbf{Stesso verso.} Se $f$ e $g$ sono crescenti, da $f(x_1)\le f(x_2)$ segue $g(f(x_1))\le g(f(x_2))$. Se entrambe sono decrescenti, si ha $f(x_1)\ge f(x_2)$; applicando $g$ si inverte nuovamente l'ordine e si ottiene ancora $g(f(x_1))\le g(f(x_2))$.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Stesso verso.} Se $f$ e $g$ sono crescenti, da $f(x_1)\le f(x_2)$ segue $g(f(x_1))\le g(f(x_2))$. Se entrambe sono decrescenti, si ha $f(x_1)\ge f(x_2)$; applicando $g$ si inverte nuovamente l'ordine e si ottiene ancora $g(f(x_1))\le g(f(x_2))$.
 
 \textbf{Versi opposti.} Se $f$ è crescente e $g$ decrescente, da $f(x_1)\le f(x_2)$ segue $g(f(x_1))\ge g(f(x_2))$. Se $f$ è decrescente e $g$ crescente, da $f(x_1)\ge f(x_2)$ si ottiene la stessa conclusione. La composta è quindi decrescente.
-
-\textbf{Caso stretto.} Quando entrambe le funzioni sono strettamente monotone, tutte le disuguaglianze corrispondenti sono strette.
+\item \textbf{Caso stretto.} Quando entrambe le funzioni sono strettamente monotone, tutte le disuguaglianze corrispondenti sono strette.
+\end{enumerate}
 \end{proof}
 
 \section{Stretta monotonia e invertibilità}
 % Fonte: Lezione 6, pp.~7--8
 
 \begin{proposizione}
-Ogni funzione strettamente monotona è iniettiva. Se una funzione monotona è iniettiva, è strettamente monotona e la sua inversa sull'immagine ha lo stesso verso di monotonia.
+\begin{enumerate}[label=\arabic*.]
+\item Ogni funzione strettamente monotona è iniettiva.
+\item Se una funzione monotona è iniettiva, è strettamente monotona e la sua inversa sull'immagine ha lo stesso verso di monotonia.
+\end{enumerate}
 \end{proposizione}
 \begin{proof}
-\textbf{Iniettività.} Per $x_1\ne x_2$, uno dei due punti è minore dell'altro. La stretta monotonia impone valori distinti: questo prova l'iniettività.
-
-\textbf{Stretta monotonia.} In una funzione monotona iniettiva, l'uguaglianza fra due valori in punti distinti è esclusa, quindi le disuguaglianze diventano strette.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Iniettività.} Per $x_1\ne x_2$, uno dei due punti è minore dell'altro. La stretta monotonia impone valori distinti: questo prova l'iniettività.
+\item \textbf{Stretta monotonia.} In una funzione monotona iniettiva, l'uguaglianza fra due valori in punti distinti è esclusa, quindi le disuguaglianze diventano strette.
 
 \textbf{Inversa crescente.} Supponiamo $f$ strettamente crescente e siano $y_1<y_2$ nella sua immagine. Posti $x_i=f^{-1}(y_i)$, non può essere $x_1\ge x_2$: si avrebbe $y_1=f(x_1)\ge f(x_2)=y_2$. Dunque $x_1<x_2$ e l'inversa è strettamente crescente.
 
 \textbf{Inversa decrescente.} Se $f$ è strettamente decrescente e $y_1<y_2$, non può essere $x_1\le x_2$: si avrebbe $y_1=f(x_1)\ge f(x_2)=y_2$. Dunque $x_1>x_2$ e l'inversa è strettamente decrescente.
+\end{enumerate}
 \end{proof}
 
 \begin{osservazione}

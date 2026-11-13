@@ -1,0 +1,112 @@
+% !TeX root = ../main.tex
+\subsection{Le operazioni sulle righe come prodotti di matrici}
+Il procedimento con il blocco identità usato per conservare le relazioni fra generatori ha una spiegazione generale. Per operare sulle righe di una matrice $A\in M(m,n,K)$ si moltiplica \emph{a sinistra} per opportune matrici quadrate di ordine $m$.
+
+Indichiamo con $E_{ij}\in M(m,m,K)$ la matrice che ha $1$ nella posizione $(i,j)$ e $0$ in tutte le altre. Per $i\ne j$ le tre \emph{matrici elementari} corrispondenti alle operazioni di Gauss sono
+\begin{align*}
+ P_{ij}&=I_m-E_{ii}-E_{jj}+E_{ij}+E_{ji},\\
+ M_i(\lambda)&=I_m+(\lambda-1)E_{ii}\quad(\lambda\ne0),\\
+ S_{ij}(\alpha)&=I_m+\alpha E_{ij}.
+\end{align*}
+Si ottengono da $I_m$ effettuando, rispettivamente, lo scambio delle righe $i,j$, la moltiplicazione della riga $i$ per $\lambda$, e la sostituzione $R_i\leftarrow R_i+\alpha R_j$. Per esempio, in ordine $3$,
+\[
+ P_{12}=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad
+ M_2(\lambda)=\begin{pmatrix}1&0&0\\0&\lambda&0\\0&0&1\end{pmatrix},\quad
+ S_{21}(\alpha)=\begin{pmatrix}1&0&0\\\alpha&1&0\\0&0&1\end{pmatrix}.
+\]
+\begin{proposizione}
+\begin{enumerate}[label=\arabic*.]
+\item Il prodotto $P_{ij}A$ scambia le righe $i,j$ di $A$; $M_i(\lambda)A$ moltiplica la riga $i$ per $\lambda$; $S_{ij}(\alpha)A$ somma alla riga $i$ il multiplo $\alpha$ della riga $j$. Le altre righe restano invariate.
+\item Tutte queste matrici sono invertibili:
+\[
+ P_{ij}^{-1}=P_{ij},\qquad M_i(\lambda)^{-1}=M_i(1/\lambda),\qquad
+ S_{ij}(\alpha)^{-1}=S_{ij}(-\alpha).
+\]
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+\item La riga $h$ di un prodotto $EA$ è la combinazione delle righe di $A$ i cui coefficienti sono le entrate della riga $h$ di $E$. Una riga uguale alla riga $h$ di $I_m$ riproduce dunque la riga $h$ di $A$. Le righe modificate nelle tre matrici danno precisamente le tre operazioni indicate.
+\item Le formule delle inverse corrispondono a ripetere lo scambio, moltiplicare per $1/\lambda$ e sottrarre lo stesso multiplo: in ciascun caso si torna alla matrice iniziale.
+\end{enumerate}
+\end{proof}
+
+\subsection{Registrare tutte le operazioni nel blocco destro}
+Se le operazioni elementari sono rappresentate, nell'ordine, da $E_1,\ldots,E_s$, il risultato è
+\[
+ A'=E_s\cdots E_2E_1A=BA,\qquad B=E_s\cdots E_2E_1.
+\]
+La prima operazione è il fattore più vicino ad $A$; la matrice $B$ è invertibile, con $B^{-1}=E_1^{-1}E_2^{-1}\cdots E_s^{-1}$: i fattori si annullano a coppie in ordine inverso. Per calcolare $B$ non occorre moltiplicare separatamente tutti i fattori: basta ridurre il blocco sinistro di $(A\mid I_m)$, effettuando le stesse operazioni sull'intera riga. Infatti
+\[
+ B(A\mid I_m)=(BA\mid B)=(A'\mid B).
+\]
+\begin{schema}
+\begin{tikzpicture}[font=\small]
+ \node (l) at (0,0) {$\displaystyle(A\mid I_m)$};
+ \node (r) at (7,0) {$\displaystyle(A'\mid B)$};
+ \draw[-{Stealth},coloreschema] (l)--node[above] {stesse operazioni su entrambi i blocchi} (r);
+ \node at (0,-.7) {coefficienti \quad registro iniziale};
+ \node at (7,-.7) {forma a scala \quad operazioni accumulate};
+\end{tikzpicture}
+\end{schema}
+
+\Needspace{14\baselineskip}
+\begin{esempio}
+Cerchiamo una matrice $B$ tale che $BA$ sia una forma a scala di
+\[
+ A=\begin{pmatrix}1&3&-2\\2&5&1\\-1&0&3\end{pmatrix}.
+\]
+Partiamo da $(A\mid I_3)$ e applichiamo $R_2\leftarrow R_2-2R_1$ e $R_3\leftarrow R_3+R_1$:
+\[
+ \left(\begin{array}{rrr|rrr}1&3&-2&1&0&0\\2&5&1&0&1&0\\-1&0&3&0&0&1\end{array}\right)
+ \sim\left(\begin{array}{rrr|rrr}1&3&-2&1&0&0\\0&-1&5&-2&1&0\\0&3&1&1&0&1\end{array}\right).
+\]
+Poi $R_3\leftarrow R_3+3R_2$ dà
+\[
+ \left(\begin{array}{rrr|rrr}1&3&-2&1&0&0\\0&-1&5&-2&1&0\\0&0&16&-5&3&1\end{array}\right).
+\]
+Quindi
+\[
+ B=\begin{pmatrix}1&0&0\\-2&1&0\\-5&3&1\end{pmatrix},\qquad
+ BA=\begin{pmatrix}1&3&-2\\0&-1&5\\0&0&16\end{pmatrix}=A'.
+\]
+L'ultima uguaglianza si verifica anche direttamente con il prodotto righe per colonne. La forma a scala non è unica: questa $B$ registra la particolare sequenza di operazioni scelta.
+\end{esempio}
+
+\subsection{Calcolare l'inversa con il blocco identità}
+Per una matrice quadrata $A\in M(n,n,K)$ proseguiamo la riduzione fino alla forma a scala ridotta. Se il blocco sinistro diventa $I_n$, il blocco destro è l'inversa:
+\[
+ (A\mid I_n)\sim(I_n\mid B),\qquad BA=I_n\quad\Longrightarrow\quad B=A^{-1}.
+\]
+Infatti $B$ è un prodotto di matrici elementari, dunque è invertibile. Moltiplicando $BA=I_n$ a sinistra per $B^{-1}$ si trova $A=B^{-1}$, e quindi anche $AB=I_n$. Se invece la riduzione produce una riga nulla nel blocco sinistro, il sistema omogeneo $Ax=0$ ha una variabile libera e una soluzione non nulla: un'inversa darebbe $x=A^{-1}0=0$, una contraddizione. Il criterio in termini di rango sarà ripreso nella sezione~\ref{sec:invertibilita-applicazioni}.
+
+\begin{esercizio}
+Verificare se la matrice
+\[
+ A=\begin{pmatrix}2&-1&3\\-6&2&-5\\0&1&-3\end{pmatrix}
+\]
+è invertibile e, in caso affermativo, calcolarne l'inversa.
+\end{esercizio}
+\begin{svolgimento}
+\textbf{Riduzione a scala.} Applichiamo $R_2\leftarrow R_2+3R_1$ e poi $R_3\leftarrow R_3+R_2$:
+\begin{align*}
+ (A\mid I_3)&=
+ \left(\begin{array}{rrr|rrr}2&-1&3&1&0&0\\-6&2&-5&0&1&0\\0&1&-3&0&0&1\end{array}\right)\\
+ &\sim\left(\begin{array}{rrr|rrr}2&-1&3&1&0&0\\0&-1&4&3&1&0\\0&1&-3&0&0&1\end{array}\right)
+ \sim\left(\begin{array}{rrr|rrr}2&-1&3&1&0&0\\0&-1&4&3&1&0\\0&0&1&3&1&1\end{array}\right).
+\end{align*}
+\textbf{Eliminazione sopra i pivot.} Con $R_2\leftarrow R_2-4R_3$ e $R_1\leftarrow R_1-3R_3$ si ottiene
+\[
+ \left(\begin{array}{rrr|rrr}2&-1&0&-8&-3&-3\\0&-1&0&-9&-3&-4\\0&0&1&3&1&1\end{array}\right).
+\]
+Cambiamo segno a $R_2$, sommiamola a $R_1$ e dividiamo infine $R_1$ per $2$:
+\[
+ \left(\begin{array}{rrr|rrr}2&0&0&1&0&1\\0&1&0&9&3&4\\0&0&1&3&1&1\end{array}\right)
+ \sim\left(\begin{array}{rrr|rrr}1&0&0&1/2&0&1/2\\0&1&0&9&3&4\\0&0&1&3&1&1\end{array}\right).
+\]
+La matrice è dunque invertibile e
+\[
+ A^{-1}=\begin{pmatrix}1/2&0&1/2\\9&3&4\\3&1&1\end{pmatrix}.
+\]
+Moltiplicando si verifica $AA^{-1}=A^{-1}A=I_3$: questo controlla il risultato indipendentemente dalla sequenza di riduzione.
+\end{svolgimento}

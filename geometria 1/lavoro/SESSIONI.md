@@ -514,3 +514,224 @@ il raccordo finale alle pagine 32–33, senza cambiare lunghezza. Il capitolo 3
 occupa le pagine 34–42 del testo. Gli estratti sono stati rigenerati; nessuna
 copia annotata modificata. Esiti e impronte correnti in
 VERIFICA_LEZIONI_16-18_2026-11-02.json.
+
+
+## Chiarimenti di notazione e diagrammi — 10 novembre 2026
+
+Richiesta dell'autore: rendere espliciti simboli e oggetti introdotti,
+mostrare la corrispondenza sistema–matrice, illustrare il prodotto righe per
+colonne e chiarire l'isomorfismo delle coordinate, controllando sempre il
+significato matematico e il rendering dei disegni.
+
+Verificate le definizioni già esistenti: [v]_B era introdotto nella sezione
+sulle coordinate del capitolo 1; I_n era descritto brevemente nelle proprietà
+del prodotto nel capitolo 2. Rafforzate le definizioni locali per non imporre
+la ricerca di un richiamo lontano. Nel capitolo 1 definiti anche l'alias
+span e, al primo uso nel metodo matriciale, matrice identità e notazione R_i.
+Nel capitolo 2 precisati a_ij, righe e colonne, R_i e sostituzioni di riga,
+e il significato di ~ fra matrici. Evitato l'uso anticipato dell'apice T per
+le colonne; la trasposta rimane definita nella sua sezione. I_n presentata
+con matrice generale, dimensioni, definizione delle entrate e caso I_2,
+senza introdurre il delta di Kronecker come ulteriore simbolo non spiegato.
+Nel capitolo 3 definiti id_V e somma punto per punto prima delle proprietà
+della simmetria; promemoria iniziale di I_n e [v]_B utile anche nell'estratto.
+
+Riutilizzato il sistema già presente per mostrare, senza duplicare un
+esercizio, la corrispondenza fra ogni riga della matrice completa e ogni
+equazione. Spiegati barra dei termini noti, ordine delle incognite e
+coefficienti nulli. Dopo Gauss riportato anche il sistema equivalente
+rappresentato dall'ultima matrice.
+
+Nuovo TikZ del prodotto: fattori di tipo m×n e n×p, riga i del primo fattore,
+colonna j del secondo e posizione (i,j) nel risultato m×p evidenziate.
+Il risultato è chiamato c_ij per distinguerlo dalle entrate a_ij del primo
+fattore. Mostrati somma dei prodotti e calcolo numerico di c_12=7.
+Le omissioni di righe e colonne sono dichiarate; la tabella non pretende
+di essere una matrice numerica di tre righe e tre colonne.
+
+Esplicitate la mappa c_B che legge i coefficienti e la sua inversa r_B
+che ricostruisce il vettore. Verificate entrambe le composizioni e la
+linearità. Distinti vettore in V e colonna in K^n e chiarito che le
+parentesi con pedice non sono classi del quoziente. Nuovo schema delle
+due mappe con domini, frecce e operazioni inverse; esempio del polinomio
+2−3X+X² in entrambe le direzioni. Distinti n generatori da una base di n
+elementi: esempio di R² generato da e1,e2,e1+e2 e due terne con la stessa
+immagine. L'enunciato precedente richiedeva già dim V=n: l'ampliamento
+chiarisce l'ipotesi e non sostituisce una dimostrazione errata.
+
+Rilette le prove pertinenti e aggiornato DIMOSTRAZIONI_DA_STUDIARE.md:
+isomorfismo delle coordinate ancora C, ricostruibile da esistenza e unicità;
+collegamenti ai sorgenti e distinzione dai generatori ridondanti. Nessuna
+priorità A/B modificata, nessun nuovo risultato assunto o rinviato e nessun
+progresso di studio attribuito all'autore. Inserita in AGENTS.md la regola
+per definizioni preventive e verifica dei diagrammi richiesta dall'autore.
+
+Verifiche: calcoli con frazioni esatte per sistema e sistema ridotto,
+esempio numerico del prodotto, ricostruzione dei coefficienti e controesempio
+dei generatori. Riletti gli indici simbolici del prodotto e controllate
+le direzioni delle mappe del TikZ. Ispezione visiva dei due nuovi disegni
+ad alta risoluzione e del flusso di tutte le pagine dei capitoli 2–3;
+ricontrollati i tre disegni preesistenti del capitolo 3, indice e raccordo
+matriciale nel capitolo 1. Corretti titoli isolati e code di esempi.
+
+Compilazione condivisa senza errori o avvisi: 47 pagine. Estratti di 26,
+8 e 10 pagine. Testo, flussi pagina, formato, etichette e rendering pixel
+di ogni estratto identici alle corrispondenti pagine del volume; segnalibri
+presenti e percorsi dei link remoti controllati. Fonti originali integre.
+Il capitolo 1 mantiene 26 pagine ma cambia l'impaginazione interna delle
+parti chiarite; il capitolo 2 occupa le pagine 27–34 e il capitolo 3 le
+35–44. Tutti gli estratti sono rigenerati, nessuna copia annotata modificata.
+Esiti in VERIFICA_CHIARIMENTI_NOTAZIONI_2026-11-10.json.
+
+## 10 novembre 2026 — Chiarimento locale della prova sui ranghi
+
+Su richiesta dell’autore, esplicitato nel teorema 2.11 il passaggio dalla conservazione delle relazioni alla conservazione del rango per colonne e dal sottospazio delle colonne accorciate in K^r alla disuguaglianza c ≤ r. Nessun nuovo risultato o fonte; priorità A invariata nell’indice delle dimostrazioni, la cui idea decisiva è stata precisata. Compilazione senza avvisi, 47 pagine; estratti rigenerati (26, 8, 10 pagine). Controllate visivamente pagina 32 e successiva; rendering della pagina modificata identico nell’estratto del capitolo 2. Numerazione e confini dei capitoli invariati; cambia il testo di pagina 32.
+
+
+## Lezioni 19–21 — 12 novembre 2026
+
+Fonti lette visivamente pagina per pagina: Lezione_19.pdf (7 pagine),
+Lezione_20.pdf (5), Lezione_21.pdf (4). Copie in fonti con impronte nel
+manifest; tutte le 16 pagine registrate in COPERTURA.csv. Il corpus
+contiene ora 16 PDF e 81 pagine; nessuna istruzione contenuta nei documenti
+è stata trattata come richiesta dell'autore.
+
+### Confronto integrale e collocazione
+
+Confrontati tutti i moduli attivi dei tre capitoli, seguendo gli input dei
+main. Il blocco identità era già usato nel capitolo 1 per conservare le
+relazioni; il capitolo 2 definiva inverse, operazioni elementari e una breve
+giustificazione del calcolo mediante Gauss. Quella giustificazione è stata
+accorpata con la nuova spiegazione mediante matrici elementari, senza
+conservarne un doppione. Definite E_ij e le tre matrici; provati effetto
+sulle righe, inverse e ordine dei fattori; registrato BA=A′ mediante
+(A affiancata a I). Conservati entrambi gli esempi numerici, con tutti gli
+stadi della riduzione e la verifica dei prodotti.
+
+Il criterio di invertibilità usa nucleo, immagine e teorema della dimensione
+appena sviluppati nel capitolo 3: collocato dopo il teorema della dimensione,
+con due schemi di funzioni finite e distinzione fra inverse unilatere e
+bilatere. Il criterio del rango massimo per matrici quadrate è dedotto qui;
+la parte computazionale nel capitolo 2 rinvia a questa sezione. La breve
+anticipazione del duale in Hom è collegata al nuovo capitolo.
+
+Il duale non è un nuovo spazio Hom da ricostruire: si usa la struttura già
+provata, specializzando W=K. Base duale, biduale, annullatori e trasposta
+formano il nuovo macroargomento «Dualità e applicazione trasposta» nel
+capitolo 4. Le riprese di duale e base duale fra lezioni 19 e 20 sono fuse;
+la dimensione del biduale usa la dimensione del duale, l'immagine della
+trasposta usa la dimensione degli annullatori e rango–nullità. Il teorema
+sulla matrice della trasposta rinvia alla trasposizione già definita nel
+capitolo 2: nessuna nuova prova dell'uguaglianza dei ranghi per righe e
+colonne. Le equazioni cartesiane studiate prima sono interpretate, con un
+nuovo esempio in R³, come funzionali che annullano un sottospazio.
+
+### Chiarimenti, completamenti e ambito
+
+Definiti prima dell'uso E_ij, delta di Kronecker, funzionale lineare, base
+duale, dualità bilineare, biduale e mappa alpha, annullatori nei due versi
+e trasposta algebrica. Distinti funzionale, sua matrice-riga e sua colonna
+di coordinate. La dualità non è un prodotto scalare; il simbolo perpendicolare
+non identifica da solo l'ambiente. L'asterisco della trasposta non denota
+una coniugazione complessa. Le basi duali e le dimensioni sono esplicitate
+nel teorema che dà la matrice A^T.
+
+Svolte le verifiche lasciate per esercizio: L-perpendicolare sottospazio
+di V e doppio annullatore. La prova del doppio annullatore completa una
+base di U aggiungendo il vettore esterno da separare, poi sceglie il suo
+funzionale duale. Questa alternativa costruttiva è accorpata nell'indice
+di studio al metodo della base adattata; non richiede una seconda prova
+per dimensioni. Esplicitate buona definizione e linearità di alpha e f*.
+
+Precisate le ipotesi finite per il criterio dimensionale di invertibilità,
+l'isomorfismo con il biduale e le prove dimensionali degli annullatori e
+dell'immagine della trasposta. La catena stretta delle dimensioni infinite
+è riportata come risultato assunto, con dimensioni cardinali e usuali
+ipotesi di scelta, e non è usata per le dimostrazioni finite. La costruzione
+di un'inversa sinistra fra insiemi richiede dominio non vuoto; la scelta
+generale di un'inversa destra è distinta dai due esempi finiti e segnalata
+in nota. Per il prodotto scalare reale scelto, una nota ne dà definizione
+e spiega perché induce un isomorfismo in dimensione finita.
+
+Aggiornato DIMOSTRAZIONI_DA_STUDIARE.md con famiglie B motivate per registro
+delle operazioni, valutazione su basi, annullatori e inclusione più dimensioni;
+conseguenze C accorpate. Distinti i risultati assunti; preservati appunti
+personali, altre materie e assenza di dichiarazioni di studio dell'autore.
+
+### Verifiche
+
+Controlli esatti riproducibili in lavoro/verifiche/lezioni_19_21.py, con esiti
+in CONTROLLI_LEZIONI_19-21_2026-11-12.json: ogni matrice intermedia stampata,
+BA=A′, entrambe le moltiplicazioni dell'inversa, tre matrici elementari e
+relative inverse, due diagrammi di funzioni finite, base duale non canonica,
+annullatore concreto e matrice della trasposta con identità di valutazione.
+Rilette le prove astratte e gli indici, senza usare il solo calcolo di esempi
+come prova dei risultati generali.
+
+Quattro nuovi TikZ: registro delle operazioni sui due blocchi, due esempi
+finiti nello stesso schema, mappa canonica al biduale con valutazione,
+composizione che definisce la trasposta e verso contrario sui duali.
+Verificati matematicamente e nel rendering; eliminate una freccia di
+annotazione ambigua e spezzature segnalate da mdframed. Ricontrollati i
+raccordi dopo le rifiniture; indice stampato in corpo piccolo per conservare
+una pagina leggibile invece di una seconda pagina con le sole voci del
+capitolo nuovo. Sottomoduli nei segnalibri, non esportati come capitoli.
+
+Compilazione condivisa completata senza errori o avvisi. Volume di 58 pagine:
+3 preliminari; capitoli di 26, 10, 12 e 7 pagine. Il capitolo 1 mantiene
+contenuto e impaginazione; cambiano il capitolo 2 dalla sezione inverse,
+il capitolo 3 dalla nuova sezione invertibilità, la numerazione di alcuni
+enunciati e i rimandi. Il capitolo 4 è nuovo. Pagine di testo 1–26, 27–36,
+37–48, 49–55. Tutti gli estratti rigenerati; nessuna copia annotata modificata.
+Verifiche finali e impronte in VERIFICA_LEZIONI_19-21_2026-11-12.json.
+
+
+## Revisione totale successiva all'integrazione — 12 novembre 2026
+
+Eseguita la seconda parte della richiesta: revisione di correttezza e
+chiarezza dell'intera dispensa corrente, non soltanto delle lezioni 19–21.
+Riletti tutti i 24 moduli matematici inclusi dai quattro capitoli, con
+ricostruzione delle prove generali. Inventario per modulo, conteggi e hash
+in INVENTARIO_REVISIONE_TOTALE_2026-11-12.json; resoconto leggibile in
+REVISIONE_TOTALE_2026-11-12.md.
+
+Precisati la scelta della prima colonna non nulla nel blocco di Gauss,
+la disposizione dei generatori per usare le colonne pivot e la prova
+della loro indipendenza risalendo le righe. Esplicitati inversa del
+prodotto delle matrici elementari, reversibilità della sostituzione nel
+registro in R5, convenzione K^0, inclusione del polinomio nullo, dimensioni
+finite e basi degli esempi. Distinte la fibra f^{-1}({w}) e la valutazione
+della funzione inversa; definiti sigma e caratteristica 2 prima dell'uso.
+Riconosciuta la ripresa del medesimo esercizio in R4 con metodo alternativo,
+lasciando nel riquadro rosa soltanto dati e richieste.
+
+Tutti i calcoli sono stati ricontrollati mediante frazioni esatte, compresi
+i capitoli precedenti e il cambio di basi dei polinomi. La riduzione del
+parametro è verificata simbolicamente sui coefficienti, non soltanto su
+valori campione. Aggiunti controlli delle basi duali non canoniche e del
+doppio annullatore. Script riproducibile in
+verifiche/revisione_totale_2026_11_12.py ed esiti in
+CONTROLLI_REVISIONE_TOTALE_2026-11-12.json. I test numerici non sono usati
+come prova dei teoremi generali, che sono stati riletti separatamente.
+
+Riesaminati tutti i 17 TikZ per corrispondenza matematica e rendering;
+ispezionate le tavole di tutte le 58 pagine e le viste ingrandite dei
+passaggi più densi. Ricompilazione condivisa e verifica finale degli
+estratti; aggiornati README, indice comune delle dimostrazioni e registri.
+Le priorità A/B/C restano motivate dai medesimi metodi, senza attribuire
+progressi di studio. I risultati infiniti e le ipotesi di scelta rimangono
+distinti dalle prove finite complete.
+
+Il volume resta di 58 pagine, con estratti di 26, 10, 12 e 7 pagine; cambia
+la disposizione interna di alcune pagine di tutti i capitoli, senza nuove
+modifiche alla numerazione degli enunciati rispetto all'integrazione 19–21.
+Fonti originali integre; copie annotate separate e non modificate.
+Esiti correnti in VERIFICA_REVISIONE_TOTALE_2026-11-12.json; la verifica
+precedente delle lezioni 19–21 resta storica e documenta quella versione.
+
+
+## 13 novembre 2026 — Enunciati e prove numerati
+
+Riorganizzati i risultati con enunciati distinti mediante punti numerati e corrispondenti parti della prova; prove comuni e implicazioni fra punti segnalate esplicitamente. Contenuti e profondità conservati, senza nuove fonti né variazioni delle priorità di studio. Regola aggiunta al protocollo comune.
+
+Volume: 58 → 60 pagine. Ricompilato senza avvisi; rigenerati e confrontati tutti i 4 estratti con il volume (testo, flussi, pagine e pixel). Ispezionati elenchi e raccordi; nessuna modifica alle copie Goodnotes. Resoconto: `../../strumenti/NUMERAZIONE_ENUNCIATI_2026-11-13.md`; verifica: `../../strumenti/VERIFICA_NUMERAZIONE_ENUNCIATI_2026-11-13.json`.

@@ -17,15 +17,15 @@ Il rango per righe e il rango per colonne di ogni matrice sono uguali. Il valore
 \[
  x_1A_1+\cdots+x_nA_n=0,\qquad\text{cioè }Ax=0.
 \]
-Se $A'$ è ottenuta da $A$ per operazioni elementari sulle righe, i sistemi $Ax=0$ e $A'x=0$ hanno le stesse soluzioni. Ogni sottofamiglia di colonne ha dunque le medesime relazioni prima e dopo la riduzione: è indipendente in una matrice se e solo se lo è nell'altra. Il rango per colonne resta invariato.
+Se $A'$ è ottenuta da $A$ per operazioni elementari sulle righe, i sistemi $Ax=0$ e $A'x=0$ hanno le stesse soluzioni. Ogni sottofamiglia di colonne ha dunque le medesime relazioni prima e dopo la riduzione: è indipendente in una matrice se e solo se lo è nell'altra. Si conserva quindi il massimo numero di colonne linearmente indipendenti, cioè il rango per colonne.
 
-\textbf{Prima disuguaglianza.} Siano $r$ il rango per righe e $c$ quello per colonne di $A$. Riduciamo $A$ a scala: rimangono $r$ righe non nulle. Cancellando le righe nulle, senza cambiare le relazioni fra colonne, queste diventano vettori di $K^r$; quindi $c\leq r$.
+\textbf{Prima disuguaglianza.} Siano $r$ il rango per righe e $c$ quello per colonne di $A$. Riduciamo $A$ a scala: rimangono $r$ righe non nulle. Cancellando le righe nulle, le colonne diventano vettori di $K^r$. Questa cancellazione non cambia le relazioni fra colonne: nelle coordinate eliminate ogni combinazione lineare ha comunque valore zero. Lo spazio generato dalle colonne così accorciate ha dunque ancora dimensione $c$. Poiché è un sottospazio di $K^r$, la sua dimensione non può superare quella dello spazio che lo contiene, cioè $r$. Pertanto $c\leq r$.
 
 \textbf{Disuguaglianza opposta.} Applichiamo lo stesso ragionamento ad $A^T$: le sue righe sono le colonne di $A$ e viceversa. Si ottiene $r\leq c$, e quindi $r=c$. I limiti sulle dimensioni e l'uguaglianza con il rango della trasposta seguono immediatamente.
 \end{proof}
 
 \begin{osservazione}
-Le colonne che occupano le posizioni dei pivot nella forma a scala sono indipendenti: limitandosi alle righe non nulle, formano una matrice triangolare con diagonale non nulla. Sono tante quanto il rango, quindi formano una base dello spazio delle colonne. Poiché le operazioni sulle righe conservano tutte le relazioni fra colonne, le colonne \emph{originarie} nelle stesse posizioni formano una base dello spazio delle colonne della matrice iniziale. Il procedimento permette così di estrarre una base da una famiglia di generatori disposti per colonne.
+Le colonne che occupano le posizioni dei pivot nella forma a scala sono indipendenti. Infatti, in una loro combinazione nulla, l’ultima riga non nulla contiene, fra queste colonne, soltanto l’ultimo pivot: il suo coefficiente deve essere zero. Risalendo una riga alla volta si annullano tutti gli altri coefficienti. Le colonne scelte sono tante quanto il rango, quindi formano una base dello spazio delle colonne. Poiché le operazioni sulle righe conservano tutte le relazioni fra colonne, le colonne \emph{originarie} nelle stesse posizioni formano una base dello spazio delle colonne della matrice iniziale. Il procedimento permette così di estrarre una base da una famiglia di generatori disposti per colonne.
 \end{osservazione}
 
 \section{Sistemi omogenei e struttura delle soluzioni}
@@ -48,16 +48,19 @@ Se $b\ne0$, l'insieme delle soluzioni, quando non vuoto, è dunque un traslato d
 
 \section{Il teorema di Rouché--Capelli}
 \begin{teorema}[Rouché--Capelli]
-Il sistema $Ax=b$, con $A$ di tipo $m\times n$, ha soluzione se e solo se
+\begin{enumerate}[label=\arabic*.]
+\item Il sistema $Ax=b$, con $A$ di tipo $m\times n$, ha soluzione se e solo se
 \[
  \operatorname{rg}A=\operatorname{rg}(A\mid b).
 \]
-Quando il sistema è compatibile, posto $r=\operatorname{rg}A$, se $r=n$ la soluzione è unica; se $r<n$ le soluzioni dipendono da $n-r$ parametri liberi. Su $\R$, in quest'ultimo caso le soluzioni sono infinite.\footnote{Su un campo arbitrario la parametrizzazione resta valida; se il campo ha $q$ elementi, le soluzioni di un sistema compatibile sono esattamente $q^{n-r}$.}
+\item Quando il sistema è compatibile, posto $r=\operatorname{rg}A$, se $r=n$ la soluzione è unica; se $r<n$ le soluzioni dipendono da $n-r$ parametri liberi. Su $\R$, in quest'ultimo caso le soluzioni sono infinite.\footnote{Su un campo arbitrario la parametrizzazione resta valida; se il campo ha $q$ elementi, le soluzioni di un sistema compatibile sono esattamente $q^{n-r}$.}
+\end{enumerate}
 \end{teorema}
 \begin{proof}
-\textbf{Compatibilità.} Scrivere $Ax=b$ equivale a chiedere che $b$ sia combinazione lineare delle colonne di $A$. Aggiungendo $b$ a tali colonne, la dimensione dello spazio generato resta $\operatorname{rg}A$ precisamente quando $b$ appartiene già a quello spazio; altrimenti aumenta di uno. Usando l'uguaglianza fra rango per righe e per colonne otteniamo il criterio enunciato.
-
-\textbf{Parametri.} Riduciamo la matrice completa a scala. Se il sistema è compatibile non vi sono righe del tipo $(0,\ldots,0\mid c)$ con $c\ne0$, e ci sono esattamente $r$ pivot nelle colonne delle incognite. Assegniamo valori arbitrari alle $n-r$ incognite senza pivot. Partendo dall'ultima equazione non nulla e risalendo, ogni incognita pivot è determinata univocamente, perché il suo coefficiente è diverso da zero. Otteniamo così una corrispondenza biunivoca fra $K^{n-r}$ e l'insieme delle soluzioni. Se $r=n$ non resta alcuna scelta; se $r<n$, su $\R$ vi sono infinite scelte.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Compatibilità.} Scrivere $Ax=b$ equivale a chiedere che $b$ sia combinazione lineare delle colonne di $A$. Aggiungendo $b$ a tali colonne, la dimensione dello spazio generato resta $\operatorname{rg}A$ precisamente quando $b$ appartiene già a quello spazio; altrimenti aumenta di uno. Usando l'uguaglianza fra rango per righe e per colonne otteniamo il criterio enunciato.
+\item \textbf{Parametri.} Riduciamo la matrice completa a scala. Se il sistema è compatibile non vi sono righe del tipo $(0,\ldots,0\mid c)$ con $c\ne0$, e ci sono esattamente $r$ pivot nelle colonne delle incognite. Assegniamo valori arbitrari alle $n-r$ incognite senza pivot. Partendo dall'ultima equazione non nulla e risalendo, ogni incognita pivot è determinata univocamente, perché il suo coefficiente è diverso da zero. Otteniamo così una corrispondenza biunivoca fra $K^{n-r}$ e l'insieme delle soluzioni. Se $r=n$ non resta alcuna scelta; se $r<n$, su $\R$ vi sono infinite scelte.
+\end{enumerate}
 \end{proof}
 Per il sistema omogeneo la compatibilità è automatica. Se $n>r$ esistono soluzioni non nulle; inoltre $\dim S_0=n-r$. Infatti le soluzioni dipendono linearmente dai parametri liberi: scegliendo a turno un parametro uguale a $1$ e gli altri a $0$ si ottengono $n-r$ soluzioni che generano $S_0$ e sono indipendenti, come si vede dalle loro coordinate libere. Questo conteggio è un caso particolare del teorema della dimensione per le applicazioni lineari (teorema~\ref{teo:dimensione-applicazione}).
 

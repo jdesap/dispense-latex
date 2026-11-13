@@ -37,16 +37,21 @@ Sia $a_n>0$ definitivamente e supponiamo che esista
 \[
 \frac{a_{n+1}}{a_n}\longrightarrow\ell\in[0,+\infty].
 \]
-Se $0\le\ell<1$, allora $a_n\to0$. Se $1<\ell\le+\infty$, allora $a_n\to+\infty$. Per $\ell=1$ il criterio non dà una conclusione.
+\begin{enumerate}[label=\arabic*.]
+\item Se $0\le\ell<1$, allora $a_n\to0$.
+\item Se $1<\ell\le+\infty$, allora $a_n\to+\infty$.
+\end{enumerate}
+Per $\ell=1$ il criterio non dà una conclusione.
 \end{proposizione}
 \begin{proof}
-\textbf{Rapporto minore di uno.} Scegliamo $r$ con $\ell<r<1$. Esiste $N$ tale che $0<a_{n+1}/a_n\le r$ per $n\ge N$. Iterando la disuguaglianza,
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Rapporto minore di uno.} Scegliamo $r$ con $\ell<r<1$. Esiste $N$ tale che $0<a_{n+1}/a_n\le r$ per $n\ge N$. Iterando la disuguaglianza,
 \[
 0<a_n\le a_Nr^{n-N}\qquad(n\ge N).
 \]
 La maggiorante tende a zero per il teorema sulle geometriche, quindi $a_n\to0$.
-
-\textbf{Rapporto maggiore di uno.} Scegliamo $r>1$ con $r<\ell$, o un qualunque $r>1$ se $\ell=+\infty$. Definitivamente $a_{n+1}\ge r a_n$, da cui $a_n\ge a_Nr^{n-N}\to+\infty$.
+\item \textbf{Rapporto maggiore di uno.} Scegliamo $r>1$ con $r<\ell$, o un qualunque $r>1$ se $\ell=+\infty$. Definitivamente $a_{n+1}\ge r a_n$, da cui $a_n\ge a_Nr^{n-N}\to+\infty$.
+\end{enumerate}
 \end{proof}
 
 \begin{esempio}[Il caso inconcludente]
