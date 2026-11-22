@@ -156,3 +156,9 @@ Volume: 66 → 69 pagine. Ricompilato senza avvisi; rigenerati e confrontati tut
 **Risultato:**83 pagine (4+79),8 estratti di5,6,9,6,10,11,10,22 pagine. Tutti gli otto capitoli e l’indice cambiano rispetto alla baseline79; main/preambolo invariati. Compilazioni condivisa e integrata riuscite senza avvisi. Tutte79 pagine degli estratti identiche al volume per pixel/testo/flussi/geometria/numerazione;27 link interni e9 al volume verificati.40 originali byte-identici. Ispezionate tutte83 pagine e ricontrollate le aree rifinite, diagrammi e reticoli.
 
 **Ripresa:** registro corrente revisione-totale-2026-11-13/REVISIONE.md e INVENTARIO.json; risultati finali in VERIFICA_FINALE.json. Snapshot precedente in revisione-totale-2026-11-13/prima/. Registri storici conservati; prossima A–L21. Copie Goodnotes non modificate, altre materie e appunti personali preservati; nessun progresso di studio assegnato, commit o pubblicazione.
+
+## Sessione 10 — 22 novembre 2026 · Lezioni 21–24 e riesame del volume
+
+Integrate 33 pagine A–L e 33 pagine M–Z. Il capitolo 8 passa dai cicli ai quozienti, con compiti svolti e dimostrazioni registrate nelle unità G28–G40. La ripresa sulle unità modulo 16 è ricondotta a G27. Rivisti gli otto capitoli e corrette convenzioni o formulazioni nei capitoli 1, 5, 6 e 7. Il nuovo titolo del §8.8 è soltanto proposto. Il nuovo volume ha 90 pagine e otto estratti. Prossima lezione A–L 25. [Resoconto e collocazione delle fonti](LEZIONI_21-24_2026-11-22.md).
+
+22 novembre 2026, revisione tipografica del capitolo 8. Quattro osservazioni senza titolo passano nel corpo del testo. Verificati il confronto letterale con la versione precedente, il volume di 90 pagine e gli otto estratti.

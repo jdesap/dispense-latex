@@ -72,6 +72,8 @@ Nelle tabelle, argomenti strettamente dipendenti sono raggruppati per evitare di
 | Teorema fondamentale dell'aritmetica | Esistenza per induzione; unicità usando il lemma sui primi che dividono un prodotto. Non confondere i due ragionamenti. | [Fattorizzazione](<algebra 1/capitoli/05-interi.tex>) |
 | Tutte le soluzioni di una congruenza lineare e loro numero | Sottrarre una soluzione particolare, dividere per il MCD e usare coprimalità; contare le classi distinte modulo il modulo originario. | [Congruenze](<algebra 1/capitoli/06-aritmetica-modulare.tex>) |
 | Teorema cinese del resto | Costruire i fattori M/m_i e i loro inversi locali, sommarli con i resti richiesti; separare verifica e unicità. | [Teorema cinese](<algebra 1/capitoli/06-aritmetica-modulare.tex>) |
+| Teorema di Lagrange | Identificare la partizione in classi laterali e costruire la biezione di ciascun blocco con H. Solo allora si possono sommare le cardinalità. | [Classi laterali](<algebra 1/capitoli/08g-diedrali-laterali.tex>) |
+| Congruenze e sottogruppi normali | Ritrovare H come classe del neutro, ricostruire i laterali e usare entrambi i lati per provare la compatibilità del prodotto. Per passare dall’inclusione all’uguaglianza applicare l’ipotesi a g inverso. | [Normalità e quozienti](<algebra 1/capitoli/08h-quozienti.tex>) |
 
 ### B — Ricordare il passaggio decisivo
 
@@ -93,6 +95,10 @@ Nelle tabelle, argomenti strettamente dipendenti sono raggruppati per evitare di
 | Centralizzanti e calcolo dei centri | Per C_G(X) applicare il criterio hk⁻¹ e verificare che il coniugato di ogni x resti x; il centro è il caso X=G. Negli esempi bastano elementi opportuni: traslazione e omotetia in Aff(R), oppure il punto fisso unico di uno scambio in S3. Ricordare la scelta che forza i parametri, non tutte le moltiplicazioni. | [Centralizzanti e centri](<algebra 1/capitoli/08c-centralizzanti.tex>) |
 | Ordine e classificazione dei gruppi ciclici | Usare n↦g^n. Nel caso aperiodico una collisione forza a−b=0; nel caso periodico dividere per il minimo m con g^m=1, ottenere g^k=1 se e solo se m divide k e distinguere i resti. Provare così cardinalità e buona definizione dell'isomorfismo sulle classi, senza supporle a vicenda. Il passaggio sulle classi riusa il metodo del cinese come isomorfismo. | [Ordine e due modelli](<algebra 1/capitoli/08e-gruppi-ciclici.tex>) |
 | Ordine di [a] modulo N e delle potenze; generatori | Da N\|ka dividere per d=MCD(a,N), poi usare coprimalità per ottenere N/d\|k. Il minimo k dà l'ordine; il criterio dei generatori e il loro numero phi(N) sono conseguenze, non nuove prove. L'esercizio U16/U17 applica questi criteri con calcoli di potenze, senza Lagrange o teorema di Eulero. | [Ordine e generatori](<algebra 1/capitoli/08e-gruppi-ciclici.tex>) |
+| Cicli disgiunti e coniugio | Il primo ritorno costruisce il ciclo e il complemento è stabile. Per il coniugio scegliere una corrispondenza fra cicli ugualmente lunghi e il punto di partenza di ognuno. L’ordine si ricava dai tempi di ritorno simultanei. | [Calcolo con i cicli](<algebra 1/capitoli/08f-cicli-permutazioni.tex>) |
+| Segnatura | Seguendo una coppia di punti attraverso due permutazioni, ciascuna inversione cambia il verso. Il conteggio modulo 2 dà la moltiplicatività, da cui segue la parità di ogni scrittura in trasposizioni. | [Segnatura](<algebra 1/capitoli/08f-cicli-permutazioni.tex>) |
+| Simmetrie e centro del diedrale | Fissare l’immagine di un vertice e il verso. Per il centro basta commutare con rotazione e riflessione, e quindi risolvere la divisibilità di 2i per n. | [Gruppi diedrali](<algebra 1/capitoli/08g-diedrali-laterali.tex>) |
+| Assenza di sottogruppi di ordine 6 in A₄ | Un sottogruppo di indice due sarebbe normale. Nel quoziente di ordine due tutti gli otto 3-cicli dovrebbero finire nel neutro. | [Esercizio su A₄](<algebra 1/capitoli/08h-quozienti.tex>) |
 
 ### C — Non memorizzare separatamente
 
@@ -110,6 +116,8 @@ Nelle tabelle, argomenti strettamente dipendenti sono raggruppati per evitare di
 - Generato di X mediante parole: concatenazione, inversa in ordine rovesciato e minimalità; includere la parola vuota. Combinazioni intere nel caso abeliano, join=MCD e intersezione=mcm in Z riusano risultati già studiati. [Generati e Z](<algebra 1/capitoli/08b-sottogruppi.tex>).
 - Morfismi di gruppi: neutro da cancellazione, inversi applicando f al prodotto, potenze per induzione; inversa di un isomorfismo usando le preimmagini. Pendenza, restrizioni a omotetie/traslazioni e inclusioni S_m→S_n sono verifiche della legge, da ricostruire. [Morfismi](<algebra 1/capitoli/08d-morfismi-gruppi.tex>), [permutazioni](<algebra 1/capitoli/08f-cicli-permutazioni.tex>).
 - Reticoli dei sottogruppi contenenti 12Z e di Z/12Z, liste di generatori e decomposizioni concrete in cicli: applicazioni dei criteri o della definizione. Saper distinguere gli oggetti dei due reticoli; nessuna nuova prova generale da memorizzare per i disegni.
+- Ordine degli elementi, ciclicità in ordine primo, Eulero e Fermat si ricostruiscono da Lagrange scegliendo rispettivamente il sottogruppo generato o il gruppo delle unità. Per Fermat separare il caso in cui il primo divide la base. [Corollari di Lagrange](<algebra 1/capitoli/08g-diedrali-laterali.tex>).
+- Per un sottogruppo di indice due, la classe laterale di un elemento esterno è tutto il complemento da entrambi i lati. Per la proiezione canonica, prodotto, suriettività e fibra del neutro si leggono dalla definizione. [Quozienti](<algebra 1/capitoli/08h-quozienti.tex>).
 
 ### Risultati assunti o parzialmente dimostrati
 
@@ -117,9 +125,7 @@ Nelle tabelle, argomenti strettamente dipendenti sono raggruppati per evitare di
 - Aritmetica generale delle cardinalità infinite: assunta.
 - Cardinalità di R uguale a quella di P(N): il verso mediante tagli razionali è svolto; l'iniezione delle successioni binarie in R è assunta. Capire la mappa x ↦ {q razionale : q < x}; non cercare una prova completa nel testo attuale.
 - L’esempio M–Z dell’anello End_K(V) e del gruppo degli automorfismi lineari è rinviato (D04): spazi vettoriali e linearità non sono introdotti nel flusso attuale di Algebra. Non è una prova già inclusa da studiare.
-- Il teorema di Eulero e quello di Lagrange non sono ancora sviluppati nelle fonti integrate: la funzione phi e i gruppi ora presenti non bastano a considerarli dimostrati.
 - Per l'esempio dell'esponenziale sono assunte legge della somma, stretta monotonia e immagine uguale ai reali positivi. [Esponenziale](<algebra 1/capitoli/08d-morfismi-gruppi.tex>).
-- La decomposizione generale di una permutazione in cicli disgiunti è enunciata senza prova nelle fonti 20 e nel testo corrente. Gli esempi sono svolti, ma non sostituiscono la dimostrazione generale, da riprendere. [Cicli](<algebra 1/capitoli/08f-cicli-permutazioni.tex>).
 
 ## Geometria 1
 
@@ -200,3 +206,5 @@ Enunciati distinti e relative prove numerati in tutte e tre le dispense, con cor
 - 2026-11-13 — Algebra19–20: metodo minimo positivo/divisione accorpato con sottogruppi di Z e ciclici; B per classificazione tramite potenze e ordine/MCD, conseguenze e verifiche dirette inC. Assunte esplicitamente le proprietà dell’esponenziale; decomposizione generale in cicli solo enunciata, non conteggiata come prova. Collegamenti correnti, nessuna modifica alle altre materie o attribuzione di progressi personali.
 
 - 2026-11-13 — Revisione totale di Algebra: completate le conseguenze sulla numerabilità inA, precisato il criterio MCD prima dell’esistenza generale, conservati entrambi i metodi Euclide/minimo positivo. InC esplicitata la prova della potenza di potenza usata nei ciclici; gruppo banale definito senza estendere phi(1). Le nuove precisazioni riusano metodi già classificati, senza nuove priorità o progressi personali; altre materie e appunti preservati.
+
+- 2026-11-22 — Algebra 21–24. Inserite le prove di Lagrange e dei criteri di normalità, le idee di cicli, coniugio, segnatura e diedrali e le applicazioni di Eulero e Fermat. Il precedente enunciato sulla decomposizione in cicli è ora accompagnato da una prova per primo ritorno. D04 rimane rinviato.

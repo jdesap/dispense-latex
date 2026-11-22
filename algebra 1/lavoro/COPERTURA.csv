@@ -137,3 +137,36 @@ Lezione 20,7,Ordine potenze e phi; generatori15/16; esercizioU16/U17 svolto,inte
 Lezione 20,8,InclusioneSm→Sn; ciclo e punti fissi,integrato e riesaminato; accorpamenti e completamenti nel registro prove,capitoli/08f-cicli-permutazioni.tex,G28,Revisione totale 2026-11-13; INVENTARIO.json per unita e controllo delle fonti; registri storici conservati
 Lezione 20,9,Rotazioni dello stesso ciclo; diagramma; decomposizione generale enunciata senza prova,integrato e riesaminato; accorpamenti e completamenti nel registro prove,capitoli/08f-cicli-permutazioni.tex,G28,Revisione totale 2026-11-13; INVENTARIO.json per unita e controllo delle fonti; registri storici conservati
 Lezione 20,10,Due decomposizioni distinte in cicli disgiuntiS5,integrato e riesaminato; accorpamenti e completamenti nel registro prove,capitoli/08f-cicli-permutazioni.tex,G28,Revisione totale 2026-11-13; INVENTARIO.json per unita e controllo delle fonti; registri storici conservati
+Lezione 21,1,Prodotti di cicli disgiunti,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G29,Integrazione e riesame del 22 novembre 2026
+Lezione 21,2,Composizioni nei due versi e compito sui coniugati,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G29; G30,Integrazione e riesame del 22 novembre 2026
+Lezione 21,3,Inverse e potenze di cicli,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G29,Integrazione e riesame del 22 novembre 2026
+Lezione 21,4,Ordine di un ciclo e potenze,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G29,Integrazione e riesame del 22 novembre 2026
+Lezione 21,5,Ordine di cicli disgiunti e coniugazione,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G30; G29,Integrazione e riesame del 22 novembre 2026
+Lezione 21,6,Formula di coniugio sui simboli,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G30,Integrazione e riesame del 22 novembre 2026
+Lezione 21,7,Automorfismo di coniugio,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G30,Integrazione e riesame del 22 novembre 2026
+Lezione 21,8,Inversa e coniugazione di un prodotto,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G30,Integrazione e riesame del 22 novembre 2026
+Lezione 21,9,Esempi in S7 e problema in S12,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G31,Integrazione e riesame del 22 novembre 2026
+Lezione 21,10,Unità modulo 16 e due generatori,Integrato o accorpato nel punto indicato,capitoli/08e-gruppi-ciclici.tex,G27,Integrazione e riesame del 22 novembre 2026
+Lezione 22,1,Abbinamento dei cicli nel problema in S12,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G31,Integrazione e riesame del 22 novembre 2026
+Lezione 22,2,Conteggio dei coniugatori e centralizzanti,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G31,Integrazione e riesame del 22 novembre 2026
+Lezione 22,3,Scomposizione in trasposizioni,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G32,Integrazione e riesame del 22 novembre 2026
+Lezione 22,4,Numero delle inversioni,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G32,Integrazione e riesame del 22 novembre 2026
+Lezione 22,5,Segnatura e parità,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G32,Integrazione e riesame del 22 novembre 2026
+Lezione 22,6,Il sottogruppo delle permutazioni pari,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G33,Integrazione e riesame del 22 novembre 2026
+Lezione 22,7,Cardinalità del gruppo alterno,Integrato o accorpato nel punto indicato,capitoli/08f-cicli-permutazioni.tex,G33,Integrazione e riesame del 22 novembre 2026
+Lezione 22,8,Gruppo delle simmetrie del triangolo,Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex,G34,Integrazione e riesame del 22 novembre 2026
+Lezione 23,1,"Quadrato, rotazioni e riflessioni",Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex,G34,Integrazione e riesame del 22 novembre 2026
+Lezione 23,2,Sottogruppi diedrali e centro del simmetrico,Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex,G35; G34,Integrazione e riesame del 22 novembre 2026
+Lezione 23,3,Centro del diedrale e classi laterali,Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex,G36; G35,Integrazione e riesame del 22 novembre 2026
+Lezione 23,4,Quando coincidono due classi,Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex,G36,Integrazione e riesame del 22 novembre 2026
+Lezione 23,5,"Partizione, esempio in Z, biezione con H",Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex,G36,Integrazione e riesame del 22 novembre 2026
+Lezione 23,6,"Lagrange, indice e classi in S3",Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex,G37; G36,Integrazione e riesame del 22 novembre 2026
+Lezione 23,7,Classi di un sottogruppo di indice due in S3,Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex,G36,Integrazione e riesame del 22 novembre 2026
+Lezione 24,1,"Ordini e conversi, compiti su S4 e A4, applicazione alle unità",Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex; capitoli/08h-quozienti.tex,G37; G38; G40,Integrazione e riesame del 22 novembre 2026
+Lezione 24,2,Fermat e compatibilità con il prodotto,Integrato o accorpato nel punto indicato,capitoli/08g-diedrali-laterali.tex; capitoli/08h-quozienti.tex,G38; G39,Integrazione e riesame del 22 novembre 2026
+Lezione 24,3,Classe del neutro e classi laterali,Integrato o accorpato nel punto indicato,capitoli/08h-quozienti.tex,G39,Integrazione e riesame del 22 novembre 2026
+Lezione 24,4,Ordine primo e criteri sulle classi,Integrato o accorpato nel punto indicato,capitoli/08h-quozienti.tex; capitoli/08g-diedrali-laterali.tex,G39; G37,Integrazione e riesame del 22 novembre 2026
+Lezione 24,5,Compatibilità bilatera e normalità,Integrato o accorpato nel punto indicato,capitoli/08h-quozienti.tex,G39,Integrazione e riesame del 22 novembre 2026
+Lezione 24,6,Coniugazione e corrispondenza delle congruenze,Integrato o accorpato nel punto indicato,capitoli/08h-quozienti.tex,G39; G40,Integrazione e riesame del 22 novembre 2026
+Lezione 24,7,"Esempi, indice due e compiti di normalità",Integrato o accorpato nel punto indicato,capitoli/08h-quozienti.tex,G39; G40,Integrazione e riesame del 22 novembre 2026
+Lezione 24,8,"Proiezione, proprietà dei morfismi, nucleo e immagine",Integrato o accorpato nel punto indicato,capitoli/08h-quozienti.tex; capitoli/08d-morfismi-gruppi.tex,G40; G23; G39,Integrazione e riesame del 22 novembre 2026

@@ -52,9 +52,13 @@ Cambiare il punto da cui si comincia a leggere la stessa successione circolare n
 I cicli di lunghezza $1$ possono essere omessi: $(1\ 2\ 3)(4)=(1\ 2\ 3)$ in $S_4$. L'insieme ambientale va comunque specificato, perché determina quali altri punti vengono fissati.
 \end{esempio}
 
-\begin{osservazione}[Decomposizione in cicli disgiunti]
-Si enuncia senza dimostrazione il risultato generale: ogni permutazione di un insieme finito si può scrivere come prodotto di cicli disgiunti, omettendo eventualmente i punti fissi. I prodotti sono sempre composizioni, applicate da destra verso sinistra. I due esempi seguenti verificano concretamente questa scrittura; la dimostrazione generale resta da riprendere.
-\end{osservazione}
+% Enunciato A–L 20:9 e M–Z 21:2. Sviluppo del procedimento usato negli esempi.
+\begin{teorema}[Decomposizione in cicli disgiunti]
+Ogni permutazione $s$ di un insieme finito è un prodotto di cicli disgiunti. Si possono omettere i punti fissi, intendendo il prodotto vuoto come l'identità.
+\end{teorema}
+\begin{proof}
+Se l’insieme è vuoto basta il prodotto vuoto. Altrimenti, scelto un punto $a$, si seguano $a,s(a),s^2(a),\ldots$. Per finitezza un valore si ripete. Se $s^j(a)=s^i(a)$ con $0\le i<j$, applicando $s^{-i}$ si ottiene $s^{j-i}(a)=a$. Sia $k$ il minimo tempo positivo di ritorno ad $a$. I primi $k$ punti sono distinti, altrimenti la stessa cancellazione darebbe un ritorno prima di $k$. Su di essi $s$ agisce come il ciclo $(a\ s(a)\ \ldots\ s^{k-1}(a))$. Questo insieme è mandato su sé stesso, quindi per biettività anche il suo complemento è mandato su sé stesso. Se il complemento è non vuoto si ripete la costruzione su un suo punto. Ogni passo esaurisce almeno un punto nuovo, perciò il procedimento termina. Ciascun punto appartiene a un solo elenco e su di esso il prodotto dei cicli agisce esattamente come $s$. In qualunque decomposizione disgiunta, per ogni punto $a$ che $s$ muove, il ciclo che lo contiene deve seguire proprio questa successione fino al primo ritorno. I cicli di lunghezza maggiore di uno sono dunque determinati a meno del punto iniziale e dell’ordine dei fattori.
+\end{proof}
 
 \begin{esempio}[Due decomposizioni in $S_5$]
 Per
@@ -76,4 +80,119 @@ si trovano $1\mapsto2\mapsto1$, $3\mapsto4\mapsto3$ e il punto fisso $5$. Dunque
 \tau=(1\ 2)(3\ 4)(5)=(1\ 2)(3\ 4).
 \]
 Anche qui ciascun ciclo lascia fermi i punti degli altri, e le immagini della composta coincidono con la matrice.
+\end{esempio}
+
+% A–L 21:1–6; M–Z 21:1–5.
+\subsection{Calcolare con i cicli}
+\begin{proposizione}
+\begin{enumerate}
+\item Cicli disgiunti commutano.
+\item Per un ciclo $c=(a_1\ \ldots\ a_k)$ vale $c^m(a_i)=a_{i+m}$, leggendo gli indici modulo $k$, per ogni $m\in\Z$. In particolare $c^{-1}=(a_1\ a_k\ \ldots\ a_2)$ per $k\ge2$ e $c$ ha ordine $k$.
+\item L'ordine di una permutazione diversa dall'identità è il minimo comune multiplo delle lunghezze dei suoi cicli disgiunti.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\textbf{1.} Su ogni punto del primo ciclo il secondo fissa sia il punto sia la sua immagine. Vale lo stesso scambiando i due cicli. Fuori dai due elenchi entrambi fissano il punto. I prodotti nei due ordini coincidono dunque ovunque.
+
+\textbf{2.} Per $m=0$ la formula dà l'identità. Ogni applicazione di $c$ avanza di un posto e ogni applicazione dell'inversa arretra di uno. Iterando si ha la formula anche per esponenti negativi. Il primo ritorno di $a_1$ avviene dopo $k$ passi, quando anche tutti gli altri punti sono tornati al punto di partenza.
+
+\textbf{3.} Sia $s=c_1\cdots c_t$. Per il punto 1, $s^m=c_1^m\cdots c_t^m$. Sul ciclo $c_i$ soltanto il fattore $c_i^m$ può muovere un punto. Quindi $s^m=1$ equivale alla divisibilità di $m$ per \emph{ciascuna} lunghezza. Il minimo intero positivo con tale proprietà è il loro minimo comune multiplo.
+\end{proof}
+\begin{esempio}
+In $S_{12}$ il ciclo $(2\ 4\ 7\ 9\ 3\ 1\ 5)$ si legge anche $(4\ 7\ 9\ 3\ 1\ 5\ 2)$, iniziando da $4$. In $S_5$, $(1\ 3\ 5)(2\ 4)$ ha immagini $3,4,5,2,1$ in entrambi gli ordini dei fattori. L'inversa di $(1\ 2\ 3)(4\ 5)$ è $(1\ 3\ 2)(4\ 5)$. Per $c=(1\ 2\ 3\ 4\ 5)$, i salti di due, tre e quattro posti danno rispettivamente $(1\ 3\ 5\ 2\ 4)$, $(1\ 4\ 2\ 5\ 3)$ e $(1\ 5\ 4\ 3\ 2)$. La quinta potenza riporta ogni punto al posto iniziale.
+
+In $S_6$ poniamo $u=(2\ 4\ 1\ 5)$, $v=(2\ 6\ 3)$, $w=(2\ 3)(1\ 6\ 4)$. Percorrendo i rispettivi cicli si trova
+\[
+ u^2=(2\ 1)(4\ 5),\quad u^3=(2\ 5\ 1\ 4),\quad
+ v^2=(2\ 3\ 6),\quad u^4=v^3=1.
+\]
+Per $w$, le potenze da $1$ a $6$ sono, nell'ordine,
+\[
+ w,\quad (1\ 4\ 6),\quad (2\ 3),\quad (1\ 6\ 4),\quad
+ (2\ 3)(1\ 4\ 6),\quad 1 .
+\]
+Per esempio $u^5=u$, perché $5$ e $1$ sono congrui modulo $4$.
+\end{esempio}
+
+\subsection{Coniugazione e struttura ciclica}
+% A–L 21:5–9, 22:1–2; M–Z 21:4–8.
+\begin{proposizione}
+\begin{enumerate}
+\item In un gruppo $G$, fissato $h\in G$, la coniugazione $c_h(x)=hxh^{-1}$ è un automorfismo, cioè un isomorfismo da $G$ a sé.
+\item In $S_n$, coniugare un ciclo mediante $h$ sostituisce ogni simbolo con la sua immagine:
+\[
+ c_h((a_1\ \ldots\ a_k))=(h(a_1)\ \ldots\ h(a_k)).
+\]
+\item Due permutazioni di $S_n$ sono coniugate se e solo se hanno la stessa \textbf{struttura ciclica}, ossia le stesse lunghezze con le stesse molteplicità, contando anche i punti fissi.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\textbf{1.} Inserendo $h^{-1}h$ tra $x$ e $y$ si ottiene $c_h(xy)=c_h(x)c_h(y)$. Le composizioni di $c_h$ e $c_{h^{-1}}$ in entrambi gli ordini si riducono all'identità. In particolare $(x^m)^h=(x^h)^m$.
+
+\textbf{2.} Il prodotto $hch^{-1}$ manda $h(a_i)$ in $h(a_{i+1})$, con ritorno al primo simbolo. Se $j$ è fuori da questo elenco, $h^{-1}(j)$ è fissato da $c$, quindi $hch^{-1}(j)=j$.
+
+\textbf{3.} Per i punti 1 e 2 si trasformano i fattori uno alla volta. La biettività di $h$ conserva lunghezze e disgiunzione. Viceversa, si abbinino cicli di pari lunghezza, scegliendo in ciascuno un punto di partenza. Mandando il primo simbolo nel primo, il secondo nel secondo e così via, si definisce una biezione su tutti gli $n$ punti. Per il punto 2 essa coniuga la prima permutazione nella seconda.
+\end{proof}
+\begin{esempio}
+Il coniugato di $(1\ 2\ 3)$ tramite $(3\ 1\ 4)$ è $(4\ 2\ 1)$. In $S_7$ la permutazione $(6\ 4\ 5\ 2)$ trasforma $(1\ 2\ 3)(4\ 5)$ in $(1\ 6\ 3)(5\ 2)$. In $S_6$, coniugando $(6\ 1\ 3)(2\ 4)$ tramite $(1\ 3)(2\ 4\ 5)$, si ottiene $(6\ 3\ 1)(4\ 5)$.
+\end{esempio}
+\Needspace{9\baselineskip}
+\begin{esercizio}
+In $S_6$ siano $s=(1\ 4\ 2\ 5\ 3)$ e $t=(1\ 3\ 5)(2\ 6)$. Calcolare $st,ts,s^t,t^s$.
+\end{esercizio}
+\begin{svolgimento}
+Applicando prima il fattore di destra, $st$ percorre $2,6,5,4$ e fissa $1,3$. Invece $ts$ percorre $1,4,6,2$ e fissa $3,5$. Quindi $st=(2\ 6\ 5\ 4)$ e $ts=(1\ 4\ 6\ 2)$. Sostituendo i simboli di $s$ con le loro immagini tramite $t$ si ottiene $s^t=(3\ 4\ 6\ 1\ 5)$. Analogamente $t^s=(4\ 1\ 3)(5\ 6)$. Cicli con simboli comuni possono anche commutare, per esempio un ciclo e la sua inversa.
+\end{svolgimento}
+\Needspace{11\baselineskip}
+\begin{esercizio}
+In $S_{12}$ siano $s=(1\ 3)(2\ 5\ 7)(11\ 4\ 9\ 8)$ e $t$ la permutazione di immagini successive $3,4,1,2,5,9,7,6,8,11,10,12$. Scrivere $t$ e $s^t$ in cicli disgiunti. Determinare quante $h$ soddisfano
+$s^h=(7\ 8)(1\ 4\ 3)(2\ 9\ 11\ 6)$.
+\end{esercizio}
+\begin{svolgimento}
+Seguendo le immagini si ha $t=(1\ 3)(2\ 4)(6\ 9\ 8)(10\ 11)$ e quindi $s^t=(3\ 1)(4\ 5\ 7)(10\ 2\ 8\ 6)$. Per costruire $h$, un possibile elenco di immagini è
+\[
+ 7,1,8,9,4,5,3,6,11,10,2,12 .
+\]
+Infatti manda in ordine i simboli di ciascun ciclo di $s$ nei simboli del ciclo richiesto. Per le tre lunghezze distinte $2,3,4$ si hanno rispettivamente $2,3,4$ scelte del primo simbolo, che fissano per intero la corrispondenza sul ciclo. Sui tre punti fissi resta una biezione arbitraria. In tutto si ottengono $2\cdot3\cdot4\cdot3!=144$ soluzioni distinte.
+\end{svolgimento}
+\Needspace{10\baselineskip}
+\begin{esercizio}
+In $S_6$ determinare il centralizzante di $(1\ 4\ 5)$, di $(1\ 2)(5\ 6\ 3)$ e di $(1\ 3)(2\ 4)$.
+\end{esercizio}
+\begin{svolgimento}
+Una permutazione $h$ centralizza $s$ se $s^h=s$. Dunque può scambiare cicli della stessa lunghezza e scegliere il punto di partenza su ciascuno.
+\begin{enumerate}
+\item Sul ciclo $(1\ 4\ 5)$ si può agire con una delle tre potenze. Sui punti $2,3,6$ si agisce con una qualunque delle sei permutazioni. I prodotti di queste scelte sono tutti e soli i $18$ elementi cercati.
+\item Le lunghezze distinte impongono di conservare separatamente i due cicli e fissare $4$. Il centralizzante consiste nei sei prodotti $(1\ 2)^i(5\ 6\ 3)^j$, $0\le i<2$, $0\le j<3$.
+\item Si possono scambiare i due cicli con $(1\ 2)(3\ 4)$, invertire indipendentemente le due coppie e permutare $5,6$. Tutti gli elementi si scrivono $(1\ 3)^i(2\ 4)^j((1\ 2)(3\ 4))^k(5\ 6)^l$ con esponenti in $\{0,1\}$. Le quattro scelte binarie danno $16$ elementi.
+\end{enumerate}
+\end{svolgimento}
+
+\subsection{Trasposizioni, segnatura e gruppo alterno}
+% A–L 22:3–7; M–Z 22:1–6.
+Una \textbf{trasposizione} è un ciclo di lunghezza due. Per $k\ge2$,
+\[
+ (a_1\ a_2\ \ldots\ a_k)=(a_1\ a_k)(a_1\ a_{k-1})\cdots(a_1\ a_2).
+\]
+Il primo simbolo va in $a_2$. Per $2\le i<k$ il simbolo $a_i$ passa prima in $a_1$, poi in $a_{i+1}$, dove resta. Infine $a_k$ va in $a_1$. Gli altri punti sono fissi. Decomponendo ogni ciclo in questo modo si vede che le trasposizioni generano $S_n$. Per esempio $(4\ 5\ 3\ 2)=(4\ 2)(4\ 3)(4\ 5)$ e $(1\ 2\ 3)=(1\ 3)(1\ 2)=(4\ 5)(1\ 3)(4\ 5)(1\ 2)$.
+
+\begin{definizione}
+Un'\textbf{inversione} di $s\in S_n$ è una coppia $i<j$ con $s(i)>s(j)$. Se $I(s)$ è il numero delle inversioni, la \textbf{segnatura} è $\operatorname{sgn}(s)=(-1)^{I(s)}$. La permutazione è \textbf{pari} se il segno è $+1$, \textbf{dispari} se è $-1$.
+\end{definizione}
+\begin{proposizione}
+\begin{enumerate}
+\item La segnatura è un morfismo da $S_n$ a $\{1,-1\}$ con il prodotto. Ogni trasposizione ha segno $-1$.
+\item Ogni scrittura di $s$ come prodotto di $r$ trasposizioni dà $\operatorname{sgn}(s)=(-1)^r$. Per cicli disgiunti di lunghezze $k_i$, il segno è $(-1)^{\sum_i(k_i-1)}$.
+\item Il \textbf{gruppo alterno} $A_n=\{s\in S_n:\operatorname{sgn}(s)=1\}$ è un sottogruppo. Per $n\ge2$ ha $n!/2$ elementi.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\textbf{1.} Per ogni coppia non ordinata di punti, $st$ inverte l'ordine se e solo se esattamente uno dei due passaggi lo inverte: prima $t$ sulla coppia iniziale, poi $s$ sulla coppia immagine. Poiché $t$ permuta le coppie, contando modulo $2$ segue $I(st)\equiv I(t)+I(s)\pmod2$. Per $(i\ j)$ con $i<j$ le inversioni sono $(i,j)$ e le due coppie $(i,h),(h,j)$ per ogni $i<h<j$. Il totale $1+2(j-i-1)$ è dispari.
+
+\textbf{2.} Applicare il punto 1 ai fattori. Un $k$-ciclo richiede nella scrittura precedente $k-1$ trasposizioni. La parità è dunque indipendente dalla scrittura.
+
+\textbf{3.} L'identità ha zero inversioni. Se $s,t$ sono pari, anche $st^{-1}$ ha segno positivo, perché $\operatorname{sgn}(t^{-1})=\operatorname{sgn}(t)^{-1}$. Per $n\ge2$ la moltiplicazione a destra per $(1\ 2)$ scambia pari e dispari ed è inversa di se stessa. Le due parti hanno perciò la stessa cardinalità. Per $n=1$ si ha $A_1=S_1$. Il complemento di $A_n$ non contiene l'identità.
+\end{proof}
+\begin{esempio}
+In $S_4$, $(1\ 2\ 3)$ inverte $(1,3),(2,3)$ ed è pari. La trasposizione $(2\ 4)$ inverte $(2,3),(2,4),(3,4)$. Il prodotto $(1\ 2)(1\ 2\ 3)=(2\ 3)$ è dispari. In $S_{12}$, $(1\ 4\ 7)(2\ 3)(5\ 9\ 11\ 6\ 8)$ ha segno $(-1)^{2+1+4}=-1$.
 \end{esempio}

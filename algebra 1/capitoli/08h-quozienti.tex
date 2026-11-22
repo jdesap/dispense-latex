@@ -1,0 +1,70 @@
+% !TeX root = ../main.tex
+% A–L 24:2–8; M–Z 24:3–9.
+\section{Sottogruppi normali e gruppi quoziente}
+Una \textbf{congruenza} su $G$ è un'equivalenza $\sim$ compatibile con il prodotto: se $a\sim a'$ e $b\sim b'$, allora $ab\sim a'b'$. È esattamente la condizione perché $[a][b]=[ab]$ sia ben definito. Quali partizioni di un gruppo hanno questa proprietà?
+\begin{proposizione}
+Per una congruenza su $G$, posto $H=[1]$, si ha:
+\begin{enumerate}
+\item $H$ è un sottogruppo;
+\item $a\sim b\iff Ha=Hb\iff aH=bH$, e in particolare $[a]=Ha=aH$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+\textbf{1.} Per riflessività $1\in H$. Se $x,y\sim1$, la compatibilità dà $xy\sim1$. Moltiplicando $x\sim1$ per $x^{-1}$ a destra si ottiene $1\sim x^{-1}$, dunque $x^{-1}\in H$.
+
+\textbf{2.} Moltiplicando $a\sim b$ a destra per $b^{-1}$ si ottiene $ab^{-1}\sim1$, e viceversa basta rimoltiplicare per $b$. Pertanto $a\sim b\iff ab^{-1}\in H\iff Ha=Hb$. Moltiplicando a sinistra per $b^{-1}$ si ottiene il criterio $b^{-1}a\in H\iff aH=bH$. Le due descrizioni della classe di $a$ coincidono.
+\end{proof}
+\begin{teorema}[Criteri di normalità]
+Per un sottogruppo $H$ di $G$ sono equivalenti:
+\begin{enumerate}
+\item la relazione $Ha=Hb$ è una congruenza;
+\item $gH=Hg$ per ogni $g\in G$;
+\item la relazione $aH=bH$ è una congruenza;
+\item $gHg^{-1}=H$ per ogni $g\in G$;
+\item $gHg^{-1}\subseteq H$ per ogni $g\in G$.
+\end{enumerate}
+In tal caso $H$ si dice \textbf{normale} in $G$ e si scrive $H\trianglelefteq G$.
+\end{teorema}
+\begin{proof}
+\textbf{$1\Rightarrow2$ e $3\Rightarrow2$.} Per entrambe le relazioni la classe del neutro è $H$. La proposizione precedente identifica ogni classe sia con $Hg$ sia con $gH$.
+
+\textbf{$2\Rightarrow1,3$.} Le due relazioni coincidono. Se $a\sim a'$ e $b\sim b'$, allora $ab\sim a'b$ usando le classi destre, perché $(ab)(a'b)^{-1}=aa'^{-1}\in H$. Inoltre $a'b\sim a'b'$ usando le sinistre, perché $(a'b)^{-1}(a'b')=b^{-1}b'\in H$. La transitività dà la compatibilità.
+
+\textbf{$2\Leftrightarrow4\Rightarrow5$.} Moltiplicare $gH=Hg$ a destra per $g^{-1}$, o l'uguaglianza risultante per $g$. L'uguaglianza implica l'inclusione.
+
+\textbf{$5\Rightarrow4$.} Il punto 5 vale anche per $g^{-1}$. Quindi per ogni $h\in H$ si ha $g^{-1}hg\in H$ e $h=g(g^{-1}hg)g^{-1}\in gHg^{-1}$. Questa è l'inclusione mancante.
+\end{proof}
+Le congruenze su $G$ corrispondono dunque biunivocamente ai suoi sottogruppi normali: da una congruenza si prende la classe del neutro e da $N\trianglelefteq G$ si prende l'uguaglianza delle classi laterali modulo $N$. I due risultati precedenti mostrano che le costruzioni sono inverse.
+
+\begin{definizione}
+Il \textbf{gruppo quoziente} è $G/N=\{gN:g\in G\}$ con $(gN)(hN)=(gh)N$. La normalità garantisce l'indipendenza dai rappresentanti. L'associatività viene da quella di $G$, il neutro è $N$ e l'inverso di $gN$ è $g^{-1}N$. La \textbf{proiezione canonica} $\pi:G\to G/N$, $g\mapsto gN$, è un morfismo per la formula del prodotto ed è suriettiva per definizione. È iniettiva precisamente per $N=\{1\}$: la fibra di $N$ è $N$, e nel caso banale tutte le classi sono singoletti.
+\end{definizione}
+In un gruppo abeliano ogni sottogruppo è normale. In particolare il quoziente additivo di $\Z$ per $m\Z$, $m\ge1$, ha le classi $[0]_m,\ldots,[m-1]_m$. Per indice due le classi destra e sinistra di ogni elemento esterno coincidono col complemento del sottogruppo. Quindi ogni sottogruppo di indice due è normale, in particolare $A_n\trianglelefteq S_n$ per $n\ge2$.
+
+\Needspace{12\baselineskip}
+\begin{esercizio}
+Stabilire se sono normali $\langle(1\ 2)\rangle$ in $S_3$, $\langle(1\ 2\ 3)\rangle$ in $S_3$ e in $S_4$, e $\langle(1\ 2\ 3\ 4)\rangle$ in $S_4$. Verificare che $V=\{1,(1\ 2)(3\ 4),(1\ 3)(2\ 4),(1\ 4)(2\ 3)\}$ è un sottogruppo normale di $S_4$ contenuto in $A_4$.
+\end{esercizio}
+\begin{svolgimento}
+Il coniugato di $(1\ 2)$ tramite $(2\ 3)$ è $(1\ 3)$, esterno al primo sottogruppo. Il sottogruppo del $3$-ciclo ha indice due in $S_3$, mentre in $S_4$ il coniugio tramite $(1\ 4)$ produce $(4\ 2\ 3)$, che muove $4$. Infine il coniugato di $(1\ 2\ 3\ 4)$ tramite $(1\ 2)$ è $(2\ 1\ 3\ 4)$, diverso sia dal generatore sia dalla sua inversa, le sole potenze di ordine quattro.
+
+In $V$ ciascun elemento non banale è il proprio inverso. Detti $x,y,z$ i tre elementi nell'ordine indicato, il calcolo dà $xy=z$. Invertendo si ha anche $yx=z$, e quindi $xz=zx=y$, $yz=zy=x$. Questo prova la chiusura. La coniugazione permuta le doppie trasposizioni perché conserva la struttura ciclica. Perciò $V$ è normale e la segnatura dei suoi elementi è positiva.
+\end{svolgimento}
+\Needspace{9\baselineskip}
+\begin{esercizio}
+Dimostrare che $A_4$ non contiene un sottogruppo di ordine $6$.
+\end{esercizio}
+\begin{svolgimento}
+Un tale $H$ avrebbe indice due. La proiezione su $A_4/H$, di ordine due, manderebbe ogni $3$-ciclo nel neutro: la sua immagine avrebbe cubo uguale al neutro e, per Lagrange, anche quadrato uguale al neutro. Quindi $H$ conterrebbe tutti gli otto $3$-cicli (quattro scelte del punto fisso e due versi), impossibile per $|H|=6$.
+\end{svolgimento}
+
+\Needspace{10\baselineskip}
+\begin{esercizio}
+In $\operatorname{Aff}(\R)$ verificare la normalità delle traslazioni e stabilire se le omotetie centrate nell'origine sono normali. In $D_n$ esaminare $\langle r\rangle$ e $\langle s\rangle$.
+\end{esercizio}
+\begin{svolgimento}
+Per $f(x)=ax+b$, $a\ne0$, e $t_c(x)=x+c$ si ha $ft_cf^{-1}(x)=x+ac$, ancora una traslazione. Invece il coniugato di $x\mapsto2x$ tramite $x\mapsto x+1$ è $x\mapsto2x-1$, che non fissa l'origine. In $D_n$ il sottogruppo delle rotazioni ha indice due. Per $n\ge3$ risulta $rsr^{-1}=r^2s\ne s$, poiché $r^2\ne1$. Questo coniugato è una riflessione diversa da $s$, quindi esterna a $\langle s\rangle$.
+\end{svolgimento}
+\begin{definizione}
+Per un morfismo di gruppi $f:G\to K$, il \textbf{nucleo} è $\ker f=\{g\in G:f(g)=1_K\}=f^*(\{1_K\})$ e l'\textbf{immagine} è $\operatorname{Im}f=\{f(g):g\in G\}$. Per la proiezione canonica si ottengono $\ker\pi=N$ e $\operatorname{Im}\pi=G/N$.
+\end{definizione}

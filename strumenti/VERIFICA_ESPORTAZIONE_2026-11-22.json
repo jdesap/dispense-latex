@@ -1,0 +1,100 @@
+{
+  "data": "2026-11-22",
+  "materie": [
+    {
+      "materia": "algebra 1",
+      "pagine_volume": 90,
+      "volume_sha256": "d1f8f25c19aef99596457885c01a56c7fb2a0ba8ba6e2a0f333a4cc4c5a46e1c",
+      "avvisi_latex": [],
+      "estratti": [
+        {
+          "numero": 1,
+          "file": "01-insiemi-e-operazioni.pdf",
+          "pagine": 5,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 0,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 2,
+          "file": "02-relazioni-equivalenze-e-quozienti.pdf",
+          "pagine": 6,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 2,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 3,
+          "file": "03-funzioni.pdf",
+          "pagine": 9,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 1,
+          "link_al_volume": 2,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 4,
+          "file": "04-insiemi-finiti-infiniti-e-cardinalita.pdf",
+          "pagine": 6,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 5,
+          "link_al_volume": 1,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 5,
+          "file": "05-aritmetica-degli-interi.pdf",
+          "pagine": 10,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 7,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 6,
+          "file": "06-aritmetica-modulare.pdf",
+          "pagine": 11,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 0,
+          "link_al_volume": 0,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 7,
+          "file": "07-anelli-e-campi.pdf",
+          "pagine": 10,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 4,
+          "link_al_volume": 5,
+          "altre_annotazioni": 0
+        },
+        {
+          "numero": 8,
+          "file": "08-funzione-di-eulero-e-gruppi.pdf",
+          "pagine": 29,
+          "flussi_testo_formato_numerazione_identici": true,
+          "pixel_identici_tutte_le_pagine": true,
+          "link_interni": 8,
+          "link_al_volume": 2,
+          "altre_annotazioni": 0
+        }
+      ]
+    }
+  ],
+  "confronto": "tutte le pagine e tutte le annotazioni",
+  "fonti_algebra": {
+    "pdf_identici_agli_originali": 48,
+    "serie_primaria": "A–L",
+    "serie_supporto": "M–Z",
+    "pagine_inventariate": 341
+  }
+}

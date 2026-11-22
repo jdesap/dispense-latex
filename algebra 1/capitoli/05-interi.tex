@@ -6,7 +6,7 @@
 % A–L L9 pp. 2–3; M–Z L9 pp. 5–6.
 Assumiamo le proprietà usuali delle operazioni interne $+,\cdot:\Z^2\to\Z$. L'addizione è associativa e commutativa, ha neutro $0$ e ogni $z$ ha opposto $-z$; la moltiplicazione è associativa e commutativa, ha neutro $1$ ed è distributiva rispetto all'addizione: $(a+b)c=ac+bc$. Queste proprietà fanno di $\Z$ un \textbf{anello commutativo con unità}.
 
-Inoltre non vi sono divisori dello zero: $ab=0$ implica $a=0$ oppure $b=0$. Ne segue la cancellazione: se $a\ne0$ e $ab=ac$, allora $a(b-c)=0$ e perciò $b=c$.
+Inoltre non vi sono divisori dello zero non nulli: $ab=0$ implica $a=0$ oppure $b=0$. Ne segue la cancellazione: se $a\ne0$ e $ab=ac$, allora $a(b-c)=0$ e perciò $b=c$.
 
 \begin{definizione}
 Un intero $a$ è un'\textbf{unità}, o è \textbf{invertibile}, se esiste $b\in\Z$ con $ab=1$. Indichiamo con $U(\Z)$ l'insieme delle unità di $\Z$.
@@ -392,7 +392,7 @@ Per $p\in\Z\setminus\{0,1,-1\}$ sono equivalenti:
 \end{proof}
 
 \begin{osservazione}
-Le esclusioni $p\ne0,\pm1$ sono necessarie: le unità dividono ogni intero, mentre per $p=0$ la proprietà sui prodotti segue dall'assenza di divisori dello zero. Nessuno di questi tre numeri è primo.
+Le esclusioni $p\ne0,\pm1$ sono necessarie: le unità dividono ogni intero, mentre per $p=0$ da $0\mid ab$ segue $ab=0$, dunque $a=0$ oppure $b=0$. Nessuno di questi tre numeri è primo.
 \end{osservazione}
 
 \begin{teorema}[Fondamentale dell'aritmetica]\label{teo:fattorizzazione}

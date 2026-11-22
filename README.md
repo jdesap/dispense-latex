@@ -17,7 +17,7 @@ Ogni compilazione aggiorna automaticamente anche i PDF in:
 
 - `analisi 1/build/capitoli/`: un PDF per ciascuno degli otto capitoli attuali.
 - `geometria 1/build/capitoli/`: attualmente `01-spazi-vettoriali.pdf`.
-- `algebra 1/build/capitoli/`: cinque capitoli, dagli insiemi all'aritmetica degli interi.
+- `algebra 1/build/capitoli/`: otto capitoli, dagli insiemi alla funzione di Eulero e ai gruppi.
 
 Su iPad importare in Goodnotes soltanto il PDF del capitolo che si vuole
 studiare. I file hanno nomi riconoscibili e mantengono le pagine e la
